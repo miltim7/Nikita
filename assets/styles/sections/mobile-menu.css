@@ -1,0 +1,12 @@
+.mobile-menu {
+    position: fixed; inset: 0;
+    z-index: 1000;
+    background: rgba(14, 39, 69, .96);
+    color: #fff;
+    padding: 80px 32px 32px;
+    backdrop-filter: blur(6px);
+}
+.mobile-menu__nav { display: flex; flex-direction: column; gap: 18px; font-size: 20px; }
+.mobile-menu__nav a { padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.mobile-menu__login { color: var(--c-orange); }
+body.is-menu-open { overflow: hidden; }

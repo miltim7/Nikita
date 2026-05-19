@@ -1,0 +1,88 @@
+/* ============================================================
+   CASES (photo cards)
+   ============================================================ */
+.cases { padding: 48px 0 63px; background: #fff; }
+.cases .section-title { }
+.cases__lead {
+    text-align: center;
+    color: var(--c-text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 12px auto 36px;
+    max-width: 880px;
+}
+.cases__carousel {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    align-items: center;
+    gap: 16px;
+}
+.cases__arrow {
+    align-self: center;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--c-blue);
+    color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 16px rgba(30, 111, 186, .35);
+    transition: background-color .2s, transform .15s, box-shadow .2s;
+    z-index: 2;
+}
+.cases__arrow:hover { background: var(--c-blue-dark); transform: translateY(-1px); }
+.cases__track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 12px 4px 24px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.cases__track::-webkit-scrollbar { display: none; }
+.case-card {
+    flex: 0 0 calc((100% - 72px) / 4);
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(20, 50, 100, .10);
+    transition: box-shadow .2s, transform .2s;
+    display: flex;
+    flex-direction: column;
+}
+.case-card:hover { box-shadow: 0 12px 30px rgba(20, 50, 100, .16); transform: translateY(-3px); }
+.case-card__photo {
+    width: 100%;
+    aspect-ratio: 320 / 220;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, #e0e6f0, #c9d3e3);
+}
+.case-card__body {
+    padding: 14px 16px 18px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.case-card__title { font-size: 14px; font-weight: 600; letter-spacing: 0.02em; color: var(--c-text); line-height: 1.2; }
+.case-card__text  { font-size: 12px; font-weight: 300; color: var(--c-text-muted); line-height: 1.4; }
+.cases__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+.cases__dots button {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #C9D3E3;
+    transition: background-color .2s, width .2s;
+}
+.cases__dots button.is-active {
+    background: var(--c-blue);
+    width: 28px;
+    border-radius: 4px;
+}

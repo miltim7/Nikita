@@ -1,0 +1,36 @@
+/* ============================================================
+   Nikita CRM — main landing
+   Source: Figma vOnR1oprdfQh5up5F1zxii / node 185:10
+   Breakpoints: desktop >=1200 | tablet 768-1199 | mobile <768
+   ------------------------------------------------------------
+   This file is just an orchestrator. All rules live in
+   base/, components/, sections/, and responsive.css.
+   ============================================================ */
+
+/* ---------------- base ---------------- */
+@import url('./base/variables.css');
+@import url('./base/reset.css');
+@import url('./base/layout.css');
+
+/* ---------------- components ---------------- */
+@import url('./components/button.css');
+@import url('./components/section-title.css');
+
+/* ---------------- sections ---------------- */
+@import url('./sections/topbar.css');
+@import url('./sections/header.css');
+@import url('./sections/mobile-menu.css');
+@import url('./sections/hero.css');
+@import url('./sections/why.css');
+@import url('./sections/how.css');
+@import url('./sections/cases.css');
+@import url('./sections/recommend.css');
+@import url('./sections/stats.css');
+@import url('./sections/features.css');
+@import url('./sections/cases-ex.css');
+@import url('./sections/cta.css');
+@import url('./sections/footer.css');
+
+/* ---------------- responsive ---------------- */
+@import url('./responsive.css');
+

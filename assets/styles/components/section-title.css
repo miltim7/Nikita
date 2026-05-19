@@ -1,0 +1,12 @@
+/* ---------------- Section title ---------------- */
+.section-title {
+    font-family: var(--font);
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--c-navy);
+}
+.section-title--light { color: #fff; }

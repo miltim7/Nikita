@@ -1,0 +1,9 @@
+{
+  "name": "nikita",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nikita CRM landing page (Kyrgyzstan) — static HTML/CSS/JS site.",
+  "scripts": {
+    "start": "npx --yes serve ."
+  }
+}

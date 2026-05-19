@@ -1,0 +1,46 @@
+/* ============================================================
+   RECOMMEND
+   ============================================================ */
+.recommend {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 0 85px;
+    color: #fff;
+}
+.recommend__bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, #1B5DA8 0%, #2873C0 50%, #4C5DC4 100%);
+}
+.recommend .container-xxl { position: relative; z-index: 1; }
+.recommend .section-title { color: #fff; margin-bottom: 48px; }
+.recommend__marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    position: relative;
+    z-index: 1;
+}
+.recommend__track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: marquee 36s linear infinite;
+}
+.recommend__track li {
+    flex-shrink: 0;
+    width: 180px;
+    height: 90px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-text-muted);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .12);
+}
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}

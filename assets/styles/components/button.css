@@ -1,0 +1,34 @@
+/* ---------------- Buttons ---------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 56px;
+    padding: 0 30px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    transition: background-color .2s, color .2s, transform .15s, box-shadow .2s, border-color .2s;
+    white-space: nowrap;
+    border: 1.5px solid transparent;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-cta {
+    background: var(--c-orange);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(242, 104, 34, .35);
+}
+.btn-cta:hover { background: var(--c-orange-hover); color: #fff; box-shadow: 0 8px 22px rgba(242, 104, 34, .45); }
+.btn-ghost {
+    background: transparent;
+    color: var(--c-text);
+    border-color: rgba(110, 122, 160, .6);
+}
+.btn-ghost:hover { border-color: var(--c-blue); color: var(--c-blue); }
+.btn-ghost--light { color: #fff; border-color: rgba(255, 255, 255, .55); }
+.btn-ghost--light:hover { border-color: #fff; background: rgba(255, 255, 255, .08); color: #fff; }
+
+.text-accent { color: var(--c-blue); font-weight: 600; }

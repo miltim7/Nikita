@@ -1,0 +1,25 @@
+/* ============================================================
+   CTA
+   ============================================================ */
+.cta { position: relative; overflow: hidden; padding: 56px 0; color: #fff; }
+.cta__bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, #1A6DB8 0%, #1E7FCC 50%, #2B92DC 100%);
+}
+.cta .container-xxl { position: relative; z-index: 1; }
+.cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.cta__title {
+    font-size: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+}
+.cta__sub { font-size: 15px; color: rgba(255, 255, 255, .8); }
+.cta__buttons { display: flex; gap: 14px; flex-wrap: wrap; }

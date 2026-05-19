@@ -1,0 +1,89 @@
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: 56px 0 64px;
+    min-height: 600px;
+}
+.hero__bg {
+    position: absolute; inset: 0;
+    background-image: url('../../images/hero-map.png');
+    background-image: image-set(
+        url('../../images/hero-map.webp') type('image/webp'),
+        url('../../images/hero-map.png')  type('image/png')
+    );
+    background-size: cover;
+    background-position: center;
+}
+.hero .container-xxl { position: relative; z-index: 1; }
+
+.hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 40px;
+    align-items: center;
+}
+.hero__title {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.hero__subtitle {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 36px;
+    color: rgba(255, 255, 255, .96);
+}
+.hero__lead {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 520px;
+}
+.hero__buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+.hero__buttons .btn-ghost {
+    color: #fff;
+    border-color: rgba(255, 255, 255, .6);
+}
+.hero__buttons .btn-ghost:hover { background: rgba(255, 255, 255, .08); border-color: #fff; }
+
+.hero__budget-title {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .55);
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+    line-height: 1.15;
+}
+.hero__budget-text { font-size: 16px; color: rgba(255, 255, 255, .7); }
+.hero__media {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 78%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    display: none;
+}
+.hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+}

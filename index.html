@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — SMS, Telegram, WhatsApp, Viber рассылки в Кыргызстане</title>
+    <meta name="description" content="Прямые каналы с операторами КР, международный охват и прозрачная цена. 0% комиссии. Пополнение от 100 сом.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body>
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Дополнительная навигация">
+                <a href="#pricing" class="topbar__link topbar__link--active">Условия и цены</a>
+                <a href="#tech" class="topbar__link">Технические возможности</a>
+                <a href="#security" class="topbar__link">Надёжность и безопасность</a>
+                <a href="#faq" class="topbar__link">Вопросы и ответы</a>
+                <a href="#contacts" class="topbar__link">Контакты</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <svg class="topbar__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <a href="#login" class="topbar__login">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M12 2L4 5v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V5l-8-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Войти&nbsp;/&nbsp;Зарегистрироваться</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="/" class="header__logo" aria-label="Nikita — главная">
+                <img src="assets/images/logo.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 13a8 8 0 0116 0v3a3 3 0 01-3 3h-1v-7h4M4 13v3a3 3 0 003 3h1v-7H4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="header__link-text">Обратиться<br>в техподдержку</span>
+                    </a>
+                    <a href="#manager" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 6h16v10H7l-3 3V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span class="header__link-text">Связаться<br>с менеджером</span>
+                    </a>
+                </div>
+                <a href="#demo" class="btn btn-cta header__cta">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <rect x="3" y="6" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                        <path d="M17 10l4-2v8l-4-2v-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="header__cta-text">Попробовать демо&nbsp;бесплатно</span>
+                    <span class="header__cta-short">Демо</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Меню" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Главное меню">
+        <a href="#pricing">Условия и цены</a>
+        <a href="#tech">Технические возможности</a>
+        <a href="#security">Надёжность и безопасность</a>
+        <a href="#faq">Вопросы и ответы</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#login" class="mobile-menu__login">Войти / Зарегистрироваться</a>
+    </nav>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <div class="hero__grid">
+            <div class="hero__content">
+                <h1 class="hero__title">Общайтесь с клиентами там, где им удобно:</h1>
+                <p class="hero__subtitle">SMS, Telegram, WhatsApp или Viber.</p>
+                <p class="hero__lead">
+                    Прямые каналы с операторами&nbsp;КР,<br>
+                    международный охват и прозрачная цена, 0% комиссии
+                </p>
+                <div class="hero__buttons">
+                    <a href="#try" class="btn btn-cta">
+                        Попробовать бесплатно
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                            <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#api" class="btn btn-ghost">
+                        Получить API
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                            <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero__budget">
+                    <h2 class="hero__budget-title">Начните с любым бюджетом:</h2>
+                    <p class="hero__budget-text">пополнение от 100&nbsp;сом, деньги на балансе не сгорают</p>
+                </div>
+            </div>
+            <div class="hero__media">
+                <picture>
+                    <source srcset="assets/images/hero-map.webp" type="image/webp">
+                    <img src="assets/images/hero-map.png" alt="" loading="eager" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why">
+    <div class="container-xxl">
+        <div class="why__grid">
+            <div class="why__content">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <p class="why__lead">
+                    <span class="text-accent">Помогаем</span> сотням компаний
+                    <span class="text-accent">информировать своих клиентов,</span>
+                    и делаем это на высоком уровне.
+                </p>
+
+                <ul class="why__list">
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path d="M6 8h20v14H12l-6 5V8z" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="why-card__title">Весь мир на связи:</h3>
+                            <p class="why-card__text">Доставка сообщений в любую точку планеты по выгодным тарифам.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <circle cx="8" cy="10" r="2.5" stroke="#1E6FBA" stroke-width="2"/>
+                                <path d="M8 12.5V26M8 2v5.5" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="16" cy="20" r="2.5" stroke="#1E6FBA" stroke-width="2"/>
+                                <path d="M16 22.5V26M16 2v15" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="14" r="2.5" stroke="#1E6FBA" stroke-width="2"/>
+                                <path d="M24 16.5V26M24 2v9" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="why-card__title">Не только SMS:</h3>
+                            <p class="why-card__text">Каскадные рассылки (WhatsApp&nbsp;→&nbsp;Viber&nbsp;→&nbsp;SMS) для максимального охвата и экономии.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path d="M6 4v24M16 4v24M26 4v24" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="3" y="9" width="6" height="6" rx="1" stroke="#1E6FBA" stroke-width="2"/>
+                                <rect x="13" y="17" width="6" height="6" rx="1" stroke="#1E6FBA" stroke-width="2"/>
+                                <rect x="23" y="11" width="6" height="6" rx="1" stroke="#1E6FBA" stroke-width="2"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="why-card__title">Готовая интеграция:</h3>
+                            <p class="why-card__text">API и модули для CRM, позволяющие автоматизировать отправку кодов (OTP) и уведомлений.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <rect x="5" y="6" width="22" height="20" rx="2" stroke="#1E6FBA" stroke-width="2"/>
+                                <path d="M10 13h12M10 18h8" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="22" cy="20" r="4" fill="#fff" stroke="#1E6FBA" stroke-width="2"/>
+                                <path d="M20.5 20l1.2 1.2 2.3-2.3" stroke="#1E6FBA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="why-card__title">Всё легально!</h3>
+                            <p class="why-card__text">Используем только официальные каналы доставки сообщений</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path d="M10 14V8a3 3 0 116 0c0 2-1 4-1 6h8a2 2 0 012 2l-2 9a2 2 0 01-2 2H10V14z" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/>
+                                <rect x="3" y="14" width="7" height="13" rx="1" stroke="#1E6FBA" stroke-width="2"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="why-card__title">Дорожим репутацией</h3>
+                            <p class="why-card__text">Поэтому не занимаемся SPAM'ом и нелегальными рассылками.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <aside class="why__phone" aria-label="Пример уведомлений на смартфоне">
+                <div class="why-phone">
+                    <div class="why-phone__inner">
+                        <span class="why-phone__notch" aria-hidden="true"></span>
+                        <ul class="why-phone__list">
+                            <li class="why-msg">
+                                <p class="why-msg__brand">BANK</p>
+                                <p class="why-msg__text">Айбек, 12 500 сом которуу ийгиликтүү аткарылды.</p>
+                                <p class="why-msg__time">12:00</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">FOOD</p>
+                                <p class="why-msg__text">Оксана, сиздин буйрутмаңыз 248 берүүгө даяр.</p>
+                                <p class="why-msg__time">14:46</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">STORE</p>
+                                <p class="why-msg__text">31-майга чейин бардык кызматтарга 20% арзандатуу!<br>Кененирээк колдонмодо.</p>
+                                <p class="why-msg__time">22:09</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">TAXI</p>
+                                <p class="why-msg__text">Айдоочу сизди кире бериште күтүп жатат.</p>
+                                <p class="why-msg__time">10:15</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand why-msg__brand--ru">Сиздин кызмат</p>
+                                <p class="why-msg__text">Сиздин ырастоо кодуңуз: 7777<br>Бул кодду эч ким менен бөлүшпөңүз.</p>
+                                <p class="why-msg__time">22:13</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how" data-active="cabinet">
+    <div class="how__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">Запуск рассылки&nbsp;-&nbsp;это просто!</h2>
+        <p class="how__lead">Как сделать рассылку клиентам?</p>
+
+        <div class="how__tabs" role="tablist">
+            <button type="button" class="how-tab is-active" role="tab" aria-selected="true" data-tab="cabinet">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="8" cy="6" r="2" fill="currentColor"/>
+                    <circle cx="16" cy="12" r="2" fill="currentColor"/>
+                    <circle cx="10" cy="18" r="2" fill="currentColor"/>
+                </svg>
+                Из личного кабинета
+            </button>
+            <button type="button" class="how-tab" role="tab" aria-selected="false" data-tab="api">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M8 9l-2 3 2 3M16 9l2 3-2 3M13 8l-2 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Через API
+            </button>
+        </div>
+        <p class="how__note">
+            Для запуска рассылки через API и интеграции с вашим сайтом или CRM<br>
+            вам может понадобиться помощь программиста
+        </p>
+
+        <div class="how__steps" role="list">
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">01</span>
+                    <p class="how-step__text">Зарегистрируйтесь<br>за 2&nbsp;минуты<br>и&nbsp;пополните баланс</p>
+                </div>
+                <div class="how-step__center">
+                    <span class="how-step__icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                            <rect x="3" y="3" width="26" height="26" rx="5" stroke="#fff" stroke-width="1.8"/>
+                            <text x="16" y="20" text-anchor="middle" font-family="Inter" font-size="9" font-weight="700" fill="#fff" letter-spacing="0.3">API</text>
+                        </svg>
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">01</span>
+                    <p class="how-step__text">Получите API-ключ<br>и&nbsp;примените<br>в&nbsp;вашей программе</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">02</span>
+                    <p class="how-step__text">Выберите имя отправителя,<br>напишите текст<br>и&nbsp;выберите время отправки</p>
+                </div>
+                <div class="how-step__center">
+                    <span class="how-step__icon">
+                        <svg width="32" height="40" viewBox="0 0 32 40" fill="none" aria-hidden="true">
+                            <path d="M5 4h14l8 8v24a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+                            <path d="M19 4v8h8" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+                            <circle cx="22" cy="25" r="4" stroke="#fff" stroke-width="1.6"/>
+                            <path d="M22 21v-1.5M22 30v-1.5M26 25h-1.5M19.5 25H18M24.8 22.2l-1 1M21.2 26.8l-1 1M24.8 27.8l-1-1M21.2 23.2l-1-1" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">02</span>
+                    <p class="how-step__text">Изучите документацию,<br>выберите один из готовых модулей, классов<br>или напишите свой скрипт</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">03</span>
+                    <p class="how-step__text">Готово!<br>Сообщения отправлены<br>вашим клиентам!</p>
+                </div>
+                <div class="how-step__center how-step__center--last">
+                    <span class="how-step__icon">
+                        <svg width="36" height="40" viewBox="0 0 36 40" fill="none" aria-hidden="true">
+                            <rect x="4" y="6" width="20" height="30" rx="3" stroke="#fff" stroke-width="1.8"/>
+                            <circle cx="14" cy="13" r="3.5" stroke="#fff" stroke-width="1.4"/>
+                            <text x="14" y="15.5" text-anchor="middle" font-family="Inter" font-size="5" font-weight="700" fill="#fff">%</text>
+                            <path d="M9 22h14M9 26h10M9 30h8" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+                            <path d="M26 18l4 1.2-1.4 4M30 19.2c-1 4-4 7-8 8" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">03</span>
+                    <p class="how-step__text">Готово!<br>Отправляйте SMS из&nbsp;вашей программы<br>меньше чем за 5&nbsp;минут</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how__cta">
+            <a href="#create" class="btn btn-cta">
+                Создать рассылку
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                    <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section class="cases">
+    <div class="container-xxl">
+        <h2 class="section-title">Кому мы приносим пользу</h2>
+        <p class="cases__lead">
+            Уже более 25 лет мы помогаем банкам, платёжным системам, интернет-магазинам и тысячам компаний по всему миру информировать своих клиентов с помощью массовых рассылок.
+        </p>
+
+        <div class="cases__carousel">
+            <button type="button" class="cases__arrow cases__arrow--prev" aria-label="Назад">
+                <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M12 2L2 10l10 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="cases__track">
+                <article class="case-card">
+                    <img class="case-card__photo" src="assets/images/cases/retail.jpg" alt="Ритейл и E-commerce" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Ритейл и E-commerce</h3>
+                        <p class="case-card__text">Акции, брошенные корзины, статусы заказов и программы лояльности.</p>
+                    </div>
+                </article>
+                <article class="case-card">
+                    <img class="case-card__photo" src="assets/images/cases/resto.jpg" alt="Рестораны и Кафе" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Рестораны и Кафе</h3>
+                        <p class="case-card__text">Бронирования, акции и напоминания для постоянных гостей.</p>
+                    </div>
+                </article>
+                <article class="case-card">
+                    <img class="case-card__photo" src="assets/images/cases/travel.jpg" alt="Международные компании / Travel-индустрия" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Международные компании /<br>Travel-индустрия</h3>
+                        <p class="case-card__text">Подтверждения бронирования, уведомления о рейсах и изменениях в расписании.</p>
+                    </div>
+                </article>
+                <article class="case-card">
+                    <img class="case-card__photo" src="assets/images/cases/logistics.jpg" alt="Логистика и Доставка" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Логистика и Доставка</h3>
+                        <p class="case-card__text">Статусы посылок, коды получения и уведомления о доставке в режиме реального времени.</p>
+                    </div>
+                </article>
+                <article class="case-card">
+                    <img class="case-card__photo" src="assets/images/cases/resto.jpg" alt="Финансы и Сервисы" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Финансы и Сервисы<br>(Крупный бизнес)</h3>
+                        <p class="case-card__text">OTP-коды, уведомления о транзакциях и напоминания о платежах.</p>
+                    </div>
+                </article>
+            </div>
+            <button type="button" class="cases__arrow cases__arrow--next" aria-label="Вперёд">
+                <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M2 2l10 8-10 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+        </div>
+        <div class="cases__dots" role="tablist" aria-label="Слайды"></div>
+    </div>
+</section>
+
+<!-- ============ RECOMMEND ============ -->
+<section class="recommend">
+    <div class="recommend__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">Нас рекомендуют</h2>
+    </div>
+    <div class="recommend__marquee" aria-hidden="true">
+        <ul class="recommend__track">
+            <li>Mobil</li><li>Pepsi</li><li>amazon</li><li>CNN</li><li>Yamaha</li><li>Nestle</li>
+            <li>Mobil</li><li>Pepsi</li><li>amazon</li><li>CNN</li><li>Yamaha</li><li>Nestle</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+    <div class="container-xxl">
+        <h2 class="section-title">Мы в цифрах</h2>
+        <p class="stats__lead">Нашу эффективность можно измерить</p>
+        <ul class="stats__list">
+            <li class="stat">
+                <span class="stat__pre">Все&nbsp;операторы</span>
+                <span class="stat__main">Кыргызстана</span>
+                <span class="stat__sub">+ ближнее и&nbsp;дальнее зарубежье</span>
+            </li>
+            <li class="stat">
+                <span class="stat__pre">Более</span>
+                <span class="stat__main">20&nbsp;лет</span>
+                <span class="stat__sub">на рынке профессиональных услуг</span>
+            </li>
+            <li class="stat">
+                <span class="stat__pre">Более</span>
+                <span class="stat__main">2&nbsp;000+</span>
+                <span class="stat__sub">компаний-клиентов в&nbsp;Кыргызстане и&nbsp;за&nbsp;рубежом</span>
+            </li>
+            <li class="stat">
+                <span class="stat__pre">Более</span>
+                <span class="stat__main">100&nbsp;000+</span>
+                <span class="stat__sub">сообщений отправляется ежедневно</span>
+            </li>
+            <li class="stat">
+                <span class="stat__pre">Доставляемость</span>
+                <span class="stat__main">99.9%</span>
+                <span class="stat__sub">с&nbsp;гарантией доставки в&nbsp;течение секунд</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section class="features">
+    <div class="features__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">Что вы получите, выбрав нас</h2>
+        <p class="features__lead">Запустите SMS-рассылку за 5 минут без заключения договора</p>
+
+        <ul class="features__list">
+            <li class="feature">
+                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="14" y="10" width="28" height="36" rx="2" stroke="#fff" stroke-width="2.5"/><path d="M20 20h16M20 28h16M20 36h10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="34" cy="38" r="6" fill="#3E66B3" stroke="#fff" stroke-width="2"/><path d="M31 38l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <h3 class="feature__title">Лицензия на услуги связи</h3>
+                <p class="feature__text">Работаем только в&nbsp;рамках закона</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M20 44h-6V20h28v8M14 14h28v6H14zM34 34c0-3 3-6 6-6s6 3 6 6-3 6-6 6-6-3-6-6z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M40 28v6l4 2" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+                <h3 class="feature__title">Контроль расходов</h3>
+                <p class="feature__text">Пластичные и&nbsp;понятные настройки</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M30 8l-14 22h12l-4 18 16-24H30l4-16z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/></svg></span>
+                <h3 class="feature__title">Доставка за секунды</h3>
+                <p class="feature__text">Мгновенная доставка сообщений</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M12 44V28M22 44V18M32 44V24M42 44V12" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></svg></span>
+                <h3 class="feature__title">Отчёты и аналитика</h3>
+                <p class="feature__text">Удобная статистика в&nbsp;личном кабинете</p>
+            </li>
+        </ul>
+
+        <div class="features__buttons">
+            <a href="#register" class="btn btn-cta">
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true"><path d="M9 1L2 4v6c0 4 3 7.5 7 9 4-1.5 7-5 7-9V4L9 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                Зарегистрироваться
+            </a>
+            <a href="#try" class="btn btn-ghost btn-ghost--light">
+                Попробовать бесплатно
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CASES EXAMPLES ============ -->
+<section class="cases-ex">
+    <div class="container-xxl">
+        <h2 class="section-title">Кейсы наших клиентов</h2>
+        <p class="cases-ex__lead">
+            Мы не просто отправляем SMS — мы помогаем бизнесу расти.<br>
+            Вот примеры, когда грамотно выстроенная рассылка увеличивала конверсию и доход.
+        </p>
+
+        <div class="cases-ex__list">
+            <article class="case-ex">
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg width="36" height="36" viewBox="0 0 32 32" fill="none"><path d="M5 7h3l2 14h14l2-9H10" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/><circle cx="13" cy="26" r="2" fill="#1E6FBA"/><circle cx="23" cy="26" r="2" fill="#1E6FBA"/></svg></span>
+                    <h3 class="case-ex__title">Ритейл и E-commerce <span>(Малый и средний бизнес)</span></h3>
+                </header>
+                <p class="case-ex__task"><span>Задача:</span> Вернуть покупателя и увеличить продажи.</p>
+                <p class="case-ex__scenario">Сценарий:</p>
+                <ul class="case-ex__rows">
+                    <li class="case-ex__row case-ex__row--pink">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5z" stroke="#E37166" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+                        <div><strong>Рассылка:</strong><br>«Скучаем по вам! Скидка 15% на новую коллекцию по промокоду "FRIEND" до воскресенья».</div>
+                    </li>
+                    <li class="case-ex__row case-ex__row--green">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7CA661" stroke-width="1.8"/><path d="M7 9h10M7 13h6" stroke="#7CA661" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        <div><strong>Инструмент:</strong><br>Каскадная рассылка. Сначала отправляем в WhatsApp (с фото товара), а тем, кто не прочитал в течение 3 часов&nbsp;— досылаем короткое SMS.</div>
+                    </li>
+                    <li class="case-ex__row case-ex__row--blue">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 5h12v4a6 6 0 11-12 0V5zM8 21h8M12 15v6" stroke="#5586BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <div><strong>Результат:</strong><br>Экономия бюджета до 40% за счёт дешёвых мессенджеров и рост конверсии.</div>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="case-ex">
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg width="36" height="36" viewBox="0 0 32 32" fill="none"><path d="M3 9h13v13H3zM16 13h7l5 4v5h-12v-9z" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="24" r="2.5" stroke="#1E6FBA" stroke-width="2"/><circle cx="22" cy="24" r="2.5" stroke="#1E6FBA" stroke-width="2"/></svg></span>
+                    <h3 class="case-ex__title">Логистика и Доставка <span>(Средний бизнес)</span></h3>
+                </header>
+                <p class="case-ex__task"><span>Задача:</span> Информирование о статусе заказа.</p>
+                <p class="case-ex__scenario">Сценарий:</p>
+                <ul class="case-ex__rows">
+                    <li class="case-ex__row case-ex__row--pink">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5z" stroke="#E37166" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+                        <div><strong>Рассылка:</strong><br>«Ваш заказ №1234 передан курьеру. Телефон курьера: +996…».</div>
+                    </li>
+                    <li class="case-ex__row case-ex__row--green">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7CA661" stroke-width="1.8"/><path d="M7 9h10M7 13h6" stroke="#7CA661" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        <div><strong>Инструмент:</strong><br>SMS-уведомления через API.</div>
+                    </li>
+                    <li class="case-ex__row case-ex__row--blue">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 5h12v4a6 6 0 11-12 0V5zM8 21h8M12 15v6" stroke="#5586BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <div><strong>Результат:</strong><br>Снижение нагрузки на колл-центр — клиенты не звонят «где мой заказ?».</div>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="case-ex">
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg width="36" height="36" viewBox="0 0 32 32" fill="none"><rect x="5" y="6" width="22" height="20" rx="2" stroke="#1E6FBA" stroke-width="2"/><path d="M10 12h12M10 16h8M10 20h6" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <h3 class="case-ex__title">Финансы и Сервисы <span>(Крупный бизнес)</span></h3>
+                </header>
+                <p class="case-ex__task"><span>Задача:</span> Безопасность и уведомления.</p>
+                <p class="case-ex__scenario">Сценарий:</p>
+                <ul class="case-ex__rows">
+                    <li class="case-ex__row case-ex__row--pink">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5z" stroke="#E37166" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+                        <div><strong>Рассылка:</strong><br>Одноразовых паролей (OTP) для входа в личный кабинет или подтверждения транзакции.</div>
+                    </li>
+                    <li class="case-ex__row case-ex__row--green">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7CA661" stroke-width="1.8"/><path d="M7 9h10M7 13h6" stroke="#7CA661" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                        <div><strong>Инструмент:</strong><br>SMS с приоритетной доставкой (до 5-10 секунд).</div>
+                    </li>
+                    <li class="case-ex__row case-ex__row--blue">
+                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 5h12v4a6 6 0 11-12 0V5zM8 21h8M12 15v6" stroke="#5586BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <div><strong>Результат:</strong><br>Безопасность клиентов и выполнение требований безопасности.</div>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+    <div class="cta__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <div class="cta__inner">
+            <div class="cta__text">
+                <h2 class="cta__title">Хотите такие же результаты?</h2>
+                <p class="cta__sub">Начните оптимизировать свой бизнес с нами!</p>
+            </div>
+            <div class="cta__buttons">
+                <a href="#register" class="btn btn-cta">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true"><path d="M9 1L2 4v6c0 4 3 7.5 7 9 4-1.5 7-5 7-9V4L9 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                    Зарегистрироваться
+                </a>
+                <a href="#try" class="btn btn-ghost btn-ghost--light">
+                    Попробовать бесплатно
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <h3 class="footer__company">ОсОО "Никита Онлайн"</h3>
+                <p class="footer__muted">Лицензия ГАС КР №15-1425-КР от&nbsp;18.09.2015</p>
+                <h3 class="footer__company">ОсОО "Никита Мобайл"</h3>
+                <p class="footer__sub">(на основании договора аренды программно-аппаратной платформы с&nbsp;ОсОО&nbsp;"Никита&nbsp;Онлайн" от&nbsp;15.04.2022)</p>
+                <p class="footer__muted">Лицензия ГАС КР №11-828-КР от&nbsp;21.04.2011</p>
+                <p class="footer__address">
+                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true"><path d="M8 19s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                    г. Бишкек, ул. Шопокова 89, 5 эт., 9 каб.
+                </p>
+                <p class="footer__copy">© ОсОО "Никита Онлайн", ОсОО "Никита Мобайл", 2014-2025 г.</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Подвал">
+                <a href="#pricing">Условия и цены</a>
+                <a href="#tech">Технические возможности</a>
+                <a href="#security">Надёжность и безопасность</a>
+                <a href="#faq">Вопросы и ответы</a>
+                <a href="#contacts">Контакты</a>
+                <a href="#terms" class="footer__muted-link">Пользовательское соглашение</a>
+                <a href="#privacy" class="footer__muted-link">Политика конфиденциальности</a>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Подключение и коммерческие вопросы:</h4>
+                    <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><rect x="1" y="1" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M1 3l8 6 8-6" stroke="currentColor" stroke-width="1.5"/></svg>
+                        <span>info@nikita.kg</span>
+                    </a>
+                    <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 1.5l2 3-2 2c1 2 2.5 3.5 4.5 4.5l2-2 3 2v3c0 1-1 2-2 2C5.5 16 2 12.5 2 5c0-1 1-2 2-2 .5 0 .8.2 1 .5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                        <span>+996 (700) 89-21-88</span>
+                        <svg class="footer-contact__send" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Техническая поддержка:</h4>
+                    <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><rect x="1" y="1" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M1 3l8 6 8-6" stroke="currentColor" stroke-width="1.5"/></svg>
+                        <span>info@nikita.kg</span>
+                    </a>
+                    <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 1.5l2 3-2 2c1 2 2.5 3.5 4.5 4.5l2-2 3 2v3c0 1-1 2-2 2C5.5 16 2 12.5 2 5c0-1 1-2 2-2 .5 0 .8.2 1 .5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                        <span>+996 (779) 37-78-88</span>
+                        <svg class="footer-contact__send" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="assets/scripts/main.js"></script>
+</body>
+</html>

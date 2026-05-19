@@ -1,0 +1,132 @@
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+.how { position: relative; overflow: hidden; padding: 58px 0; color: #fff; }
+.how__bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, #1A6DB8 0%, #1E7FCC 50%, #2B92DC 100%);
+}
+.how .container-xxl { position: relative; z-index: 1; max-width: 1348px; }
+.how .section-title { color: #fff; }
+.how__lead {
+    text-align: center;
+    color: rgba(255, 255, 255, .85);
+    font-size: 26px;
+    font-weight: 200;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 12px 0 36px;
+}
+.how__tabs {
+    display: flex;
+    margin: 0 auto;
+    gap: 0;
+    width: 424px;
+    max-width: 100%;
+    background: rgba(255, 255, 255, .14);
+    border-radius: 10px;
+    padding: 0;
+}
+.how-tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 10px;
+    padding: 8px 18px;
+    height: 40px;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, .85);
+    font-weight: 300;
+    font-size: 14px;
+    transition: background-color .25s, color .25s;
+}
+.how-tab.is-active { background: #fff; color: var(--c-text); }
+.how__note {
+    text-align: center;
+    color: rgba(255, 255, 255, .7);
+    font-size: 14px;
+    font-weight: 300;
+    margin: 6px 0 42px;
+    line-height: 1.2;
+}
+
+/* steps */
+.how__steps { display: flex; flex-direction: column; gap: 55px; margin-bottom: 36px; }
+.how-step {
+    display: grid;
+    grid-template-columns: 552fr 83fr 552fr;
+    column-gap: 20px;
+    align-items: flex-start;
+}
+.how-step__col {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 8px;
+}
+.how-step__col--left {
+    justify-content: flex-end;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+.how-step__col--right {
+    justify-content: flex-start;
+    text-align: left;
+}
+.how-step__num {
+    font-size: 42px;
+    font-weight: 200;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: currentColor;
+    flex-shrink: 0;
+    font-family: var(--font);
+}
+.how-step__col--left  .how-step__num { color: rgba(255, 255, 255, .35); }
+.how-step__col--right .how-step__num { color: #fff; }
+.how-step__text {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.how-step__col--left  .how-step__text { color: rgba(255, 255, 255, .45); }
+.how-step__col--right .how-step__text { color: #fff; }
+
+.how-step__center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    min-height: 51px;
+}
+.how-step__center::before,
+.how-step__center::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    border-left: 2px dashed rgba(255, 255, 255, .35);
+    height: 28px;
+}
+.how-step__center::before { top: -28px; }
+.how-step__center::after  { bottom: -28px; }
+.how-step:first-child .how-step__center::before { display: none; }
+.how-step:last-child  .how-step__center::after  { display: none; }
+.how-step__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.how__cta { text-align: center; }
+.how__cta .btn { height: 40px; font-size: 14px; padding: 0 24px; }

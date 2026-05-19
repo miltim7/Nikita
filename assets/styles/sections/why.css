@@ -1,0 +1,135 @@
+/* ============================================================
+   WHY US
+   ============================================================ */
+.why { padding: 60px 0; background: #fff; }
+.why .container-xxl { max-width: 1348px; }
+.why__grid {
+    display: grid;
+    grid-template-columns: 603px 1fr;
+    gap: 72px;
+    align-items: start;
+}
+.why .section-title { text-align: left; margin-bottom: 8px; }
+.why__lead {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 36px;
+    color: var(--c-navy);
+}
+.why__list { display: flex; flex-direction: column; gap: 12px; }
+.why-card {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(20, 50, 100, .07);
+    border: 1px solid rgba(230, 236, 244, .8);
+    transition: box-shadow .2s, transform .2s;
+}
+.why-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.why-card__icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--c-blue);
+}
+.why-card__icon svg { width: 100%; height: 100%; }
+.why-card__title { font-size: 14px; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 2px; color: var(--c-text); }
+.why-card__text  { font-size: 12px; font-weight: 300; letter-spacing: 0.02em; color: var(--c-text-muted); line-height: 1.4; }
+.why__phone {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* ---------- Phone mockup (HTML/CSS, 1:1 with Figma node 2179:34107) ----------
+   Размеры из Figma (Phone 498×1005):
+     • Рамка: вертикальный градиент #0C6EBF 0% → #7756C2 65%
+     • Внутренний экран: 446×975, белый + 10% #0C6EBF ≈ #E7F0F9
+     • Нотч: 114×8 px, radius 12, цвет #0C6EBF, 27px от верха внешнего
+     • Карточки: 418×83, radius 10, 5 шт, gap 8 px
+     • Inner card padding: 16 px горизонталь + 16 px вертикаль
+     • Шрифты: Geologica 14/600 (бренд), 12/300 (текст), 10/300 (время)
+   В CSS пропорции сохранены в процентах от ширины телефона (max-width 420 px).
+*/
+.why-phone {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 498 / 1005;
+    /* Радиусы скейлятся: 60/498 ≈ 12% */
+    border-radius: 12%;
+    /* Боковая рамка ≈ 26/498 = 5.2%, верх/низ ≈ 14.7/1005 = 1.46% */
+    padding: 1.46% 5.2%;
+    background: linear-gradient(180deg, #0C6EBF 0%, #7756C2 65%);
+    box-shadow: 0 18px 40px rgba(20, 50, 100, .18);
+}
+.why-phone__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Inner радиус ≈ 36/446 = 8.1% */
+    border-radius: 8.1%;
+    /* белый + 10% #0C6EBF из Figma */
+    background: #E7F0F9;
+    /* Контент карточек начинается с 44.3/975 = 4.54% от верха,
+       по горизонтали 14/446 = 3.14% от сторон */
+    padding: 4.54% 3.14% 0;
+}
+.why-phone__notch {
+    position: absolute;
+    /* 12.3/975 = 1.26% от верха внутреннего экрана */
+    top: 1.26%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 114/446 = 25.56% ширины inner */
+    width: 25.56%;
+    height: 8px;
+    border-radius: 999px;
+    background: #0C6EBF;
+}
+.why-phone__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* 8/975 = 0.82% inner height; на 420 width телефоне это ≈ 7 px */
+    gap: 8px;
+}
+.why-msg {
+    background: #fff;
+    border-radius: 10px;
+    /* 16 px вокруг — точное значение из Figma (внутренний контент 386 в карте 418) */
+    padding: 16px;
+}
+.why-msg__brand {
+    margin: 0;
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 600;
+    letter-spacing: 0.28px;
+    color: #212020;
+}
+.why-msg__brand--ru { letter-spacing: 0.28px; }
+.why-msg__text {
+    margin: 4px 0 0;
+    font-size: 12px;
+    line-height: 14.4px;
+    font-weight: 300;
+    letter-spacing: 0.24px;
+    color: #212020;
+}
+.why-msg__time {
+    margin: 4px 0 0;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    color: #84878C;
+}

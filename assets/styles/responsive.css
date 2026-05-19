@@ -1,0 +1,165 @@
+/* ============================================================
+   TABLET (768 – 1199)
+   ============================================================ */
+@media (max-width: 1199.98px) {
+    .container-xxl { padding-inline: 32px; }
+    .section-title { font-size: 36px; }
+
+    .topbar__nav { display: none; }
+    .topbar__inner { justify-content: flex-end; }
+
+    .header__inner { gap: 16px; min-height: 80px; }
+    .header__links { display: none; }
+    .header__cta-text { display: none; }
+    .header__cta-short { display: inline; }
+    .header__cta { padding: 0 18px; }
+    .header__burger { display: flex; }
+
+    .hero { padding: 64px 0 80px; text-align: center; }
+    .hero__grid { grid-template-columns: 1fr; gap: 24px; }
+    .hero__media { order: -1; max-width: 600px; margin: 0 auto; }
+    .hero__title { font-size: 42px; }
+    .hero__subtitle { font-size: 26px; margin-bottom: 28px; }
+    .hero__lead { margin-bottom: 32px; max-width: none; }
+    .hero__buttons { justify-content: center; margin-bottom: 56px; }
+    .hero__budget-title { font-size: 24px; }
+
+    .why { padding: 72px 0; }
+    .why__grid { grid-template-columns: 1fr; gap: 40px; }
+    .why .section-title { text-align: center; }
+    .why__lead { text-align: center; font-size: 18px; }
+    .why__phone { position: static; max-width: 360px; margin: 0 auto; order: 2; display: flex; justify-content: center; }
+
+    .how { padding: 72px 0 88px; }
+    .how__steps { gap: 32px; }
+    .how-step { grid-template-columns: 1fr; gap: 12px; text-align: center; }
+    .how-step__col--left { display: none; }
+    .how-step__col--right {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .how-step__num { font-size: 72px; }
+    .how-step__center { order: -1; }
+    .how-step__center::before,
+    .how-step__center::after { display: none; }
+    /* tab-driven switch on tablet/mobile */
+    .how[data-active="cabinet"] .how-step__col--right[data-content="api"]     { display: none; }
+    .how[data-active="api"]     .how-step__col--right[data-content="cabinet"] { display: none; }
+    .how[data-active="cabinet"] .how-step__col--left[data-content="cabinet"] {
+        display: flex; justify-content: center; text-align: center;
+        flex-direction: column; gap: 12px;
+    }
+    .how[data-active="cabinet"] .how-step__col--left[data-content="cabinet"] .how-step__text { color: #fff; }
+    .how[data-active="cabinet"] .how-step__col--left[data-content="cabinet"] .how-step__num  { color: rgba(255,255,255,.6); }
+
+    .case-card { flex: 0 0 calc((100% - 24px) / 2); }
+
+    .stats__list { grid-template-columns: repeat(3, 1fr); row-gap: 32px; }
+    .stat:nth-child(4) { border-left: none; padding-left: 0; }
+
+    .features__list { grid-template-columns: repeat(2, 1fr); }
+
+    .cases-ex__list { grid-template-columns: 1fr; }
+
+    .cta__inner { flex-direction: column; text-align: center; }
+    .cta__title { font-size: 28px; }
+
+    .footer__grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .footer__col--company { grid-column: 1 / -1; }
+}
+
+/* ============================================================
+   MOBILE (< 768)
+   ============================================================ */
+@media (max-width: 767.98px) {
+    .container-xxl { padding-inline: 20px; }
+
+    .section-title { font-size: 26px; }
+    .btn { height: 52px; font-size: 15px; padding: 0 22px; }
+
+    .topbar__inner { min-height: 40px; gap: 10px; }
+    .topbar__side { gap: 16px; }
+    .topbar__login span { display: none; }
+
+    .header__inner { min-height: 68px; gap: 12px; }
+    .header__logo img { width: 130px; }
+    .header__cta { height: 46px; padding: 0 16px; font-size: 14px; }
+    .header__burger { width: 44px; height: 44px; }
+
+    .hero { padding: 32px 0 56px; }
+    .hero__title { font-size: 28px; }
+    .hero__subtitle { font-size: 20px; }
+    .hero__lead { font-size: 15px; }
+    .hero__buttons { flex-direction: column; align-items: stretch; }
+    .hero__buttons .btn { width: 100%; }
+    .hero__budget-title { font-size: 20px; }
+
+    .why { padding: 56px 0; }
+    .why__lead { font-size: 16px; }
+    .why-card { padding: 18px 18px; }
+
+    .how { padding: 56px 0 72px; }
+    .how__tabs { width: 100%; flex-direction: column; padding: 6px; }
+    .how-tab { width: 100%; justify-content: center; }
+    .how__lead { font-size: 17px; }
+    .how-step__num { font-size: 60px; }
+    .how-step__text { font-size: 15px; }
+
+    .cases { padding: 64px 0 56px; }
+    .cases__carousel { grid-template-columns: 1fr; }
+    .cases__arrow { display: none; }
+    .case-card { flex: 0 0 80%; }
+
+    .recommend { padding: 56px 0 64px; }
+    .recommend__track { gap: 16px; }
+    .recommend__track li { width: 140px; height: 70px; font-size: 16px; }
+
+    .stats { padding: 56px 0 72px; }
+    .stats__list { grid-template-columns: 1fr; gap: 24px; }
+    .stat {
+        border-left: none;
+        padding-left: 0;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--c-line);
+    }
+    .stat:last-child { border-bottom: none; padding-bottom: 0; }
+    .stat__main { font-size: 26px; }
+
+    .features { padding: 56px 0 64px; }
+    .features__list { grid-template-columns: 1fr; gap: 16px; }
+    .features__buttons { flex-direction: column; align-items: stretch; }
+    .features__buttons .btn { width: 100%; }
+
+    .cases-ex { padding: 56px 0; }
+    .case-ex { padding: 22px 20px; }
+    .case-ex__title { font-size: 16px; }
+
+    .cta__title { font-size: 22px; }
+    .cta__buttons { flex-direction: column; width: 100%; }
+    .cta__buttons .btn { width: 100%; }
+
+    .footer { padding: 40px 0 32px; }
+    .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer__col--company { grid-column: auto; }
+}
+
+@media (max-width: 380px) {
+    .section-title { font-size: 22px; }
+    .hero__title   { font-size: 24px; }
+}
+
+/* ============================================================
+   DESKTOP: phone overflows section (position: absolute)
+   ============================================================ */
+@media (min-width: 1200px) {
+    .why__grid { position: relative; }
+    .why__phone {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 420px;
+        z-index: 10;
+    }
+}

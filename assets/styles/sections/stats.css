@@ -1,0 +1,46 @@
+/* ============================================================
+   STATS — flat text
+   ============================================================ */
+.stats { padding: 49px 0 49px; background: #fff; }
+.stats .section-title { }
+.stats__lead {
+    text-align: center;
+    color: var(--c-text-muted);
+    font-size: 14px;
+    font-weight: 300;
+    margin: 12px 0 32px;
+}
+.stats__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    padding-left: 22px;
+    border-left: 1px solid var(--c-line);
+}
+.stat:first-child { border-left: none; padding-left: 0; }
+.stat__pre {
+    font-size: 13px;
+    color: var(--c-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.stat__main {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--c-text);
+    line-height: 1.1;
+}
+.stat__sub {
+    font-size: 13px;
+    color: var(--c-text-muted);
+    line-height: 1.45;
+    margin-top: 2px;
+}

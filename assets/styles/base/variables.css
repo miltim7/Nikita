@@ -1,0 +1,162 @@
+/* ============================================================
+   Design Tokens — Nikita CRM landing
+   Source of truth for colors, spacing, radii, shadows, etc.
+   ------------------------------------------------------------
+   Naming convention:
+     --color-*         palette (primary / neutral / semantic)
+     --space-*         4px-based spacing scale
+     --radius-*        border radii
+     --shadow-*        elevation
+     --transition-*    motion presets
+     --z-*             z-index layers
+     --font-*          typography
+   Legacy aliases (--c-*, --radius, --shadow, --font) are kept
+   below so existing BEM components keep working unchanged.
+   ============================================================ */
+
+:root {
+    /* ---------- Brand / palette ---------- */
+    --color-primary:          #1E6FBA;   /* main blue */
+    --color-primary-hover:    #1A4A8C;
+    --color-primary-deep:     #154277;
+    --color-primary-soft:     #EAF2FB;
+
+    --color-accent:           #F26822;   /* orange CTA */
+    --color-accent-hover:     #D9551A;
+
+    --color-navy:             #0E2745;
+    --color-purple:           #6B5BCA;
+
+    /* ---------- Neutrals ---------- */
+    --color-bg:               #FFFFFF;
+    --color-bg-soft:          #F4F7FB;
+    --color-line:             #E6ECF4;
+    --color-text:             #1A2238;
+    --color-text-muted:       #6E7AA0;
+    --color-text-inverse:     #FFFFFF;
+
+    /* ---------- Surface (cards/rows) ---------- */
+    --color-surface-pink:     #FBEBE6;
+    --color-surface-green:    #ECF3E5;
+    --color-surface-blue:     #E2EBF6;
+
+    /* ---------- Semantic strokes used inside cards ---------- */
+    --color-stroke-pink:      #E37166;
+    --color-stroke-green:     #7CA661;
+    --color-stroke-blue:      #5586BC;
+
+    /* ---------- Gradients ---------- */
+    --gradient-blue:          linear-gradient(120deg, #1A6DB8 0%, #1E7FCC 50%, #2B92DC 100%);
+    --gradient-blue-purple:   linear-gradient(120deg, #1B5DA8 0%, #2873C0 50%, #4C5DC4 100%);
+    --gradient-footer:        linear-gradient(120deg, #154277 0%, #1A4A8C 60%, #2A5BA0 100%);
+
+    /* ---------- Spacing scale (4px base) ---------- */
+    --space-0:    0;
+    --space-1:    4px;
+    --space-2:    8px;
+    --space-3:    12px;
+    --space-4:    16px;
+    --space-5:    20px;
+    --space-6:    24px;
+    --space-7:    32px;
+    --space-8:    40px;
+    --space-9:    48px;
+    --space-10:   56px;
+    --space-11:   64px;
+    --space-12:   72px;
+    --space-14:   88px;
+    --space-16:  104px;
+
+    /* ---------- Radii ---------- */
+    --radius-xs:   6px;
+    --radius-sm:  10px;
+    --radius-md:  12px;
+    --radius-lg:  16px;
+    --radius-xl:  24px;
+    --radius-pill: 999px;
+
+    /* ---------- Shadows / elevation ---------- */
+    --shadow-xs:   0 1px 2px  rgba(20, 50, 100, .05);
+    --shadow-sm:   0 2px 8px  rgba(20, 50, 100, .06);
+    --shadow-md:   0 8px 24px rgba(20, 50, 100, .10);
+    --shadow-lg:   0 12px 30px rgba(20, 50, 100, .16);
+    --shadow-cta:  0 6px 18px rgba(242, 104, 34, .35);
+    --shadow-cta-hover: 0 8px 22px rgba(242, 104, 34, .45);
+
+    /* ---------- Motion ---------- */
+    --transition-fast:  0.15s ease;
+    --transition-base:  0.2s  ease;
+    --transition-slow:  0.25s ease;
+
+    /* ---------- Z-index layers ---------- */
+    --z-base:        0;
+    --z-content:     1;
+    --z-sticky:    100;
+    --z-dropdown:  500;
+    --z-overlay:   900;
+    --z-modal:    1000;
+
+    /* ---------- Typography ---------- */
+    --font-sans: 'Geologica', 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+    --fw-thin:    200;
+    --fw-light:   300;
+    --fw-regular: 400;
+    --fw-medium:  500;
+    --fw-semibold: 600;
+    --fw-bold:    700;
+    --fw-black:   800;
+
+    /* Font sizes (used semantically, not exhaustively yet) */
+    --fs-xs:   11px;
+    --fs-sm:   12px;
+    --fs-base: 14px;
+    --fs-md:   16px;
+    --fs-lg:   18px;
+    --fs-xl:   20px;
+    --fs-2xl:  24px;
+    --fs-3xl:  30px;
+    --fs-4xl:  36px;
+    --fs-5xl:  42px;
+
+    --lh-tight:   1.2;
+    --lh-normal:  1.4;
+    --lh-relaxed: 1.6;
+
+    --letter-spacing-tight:  0.01em;
+    --letter-spacing-normal: 0.02em;
+    --letter-spacing-wide:   0.05em;
+
+    /* ---------- Layout ---------- */
+    --container-max:        1440px;
+    --container-max-narrow: 1348px;
+    --container-px-desktop: 60px;
+    --container-px-tablet:  32px;
+    --container-px-mobile:  20px;
+
+    /* ============================================================
+       Legacy aliases — keep existing BEM/components working.
+       Do NOT use these in new code; prefer tokens above.
+       ============================================================ */
+    --c-orange:        var(--color-accent);
+    --c-orange-hover:  var(--color-accent-hover);
+    --c-blue:          var(--color-primary);
+    --c-blue-dark:     var(--color-primary-hover);
+    --c-blue-deep:     var(--color-primary-deep);
+    --c-blue-soft:     var(--color-primary-soft);
+    --c-navy:          var(--color-navy);
+    --c-purple:        var(--color-purple);
+    --c-bg:            var(--color-bg);
+    --c-bg-soft:       var(--color-bg-soft);
+    --c-text:          var(--color-text);
+    --c-text-muted:    var(--color-text-muted);
+    --c-line:          var(--color-line);
+    --c-card-pink:     var(--color-surface-pink);
+    --c-card-green:    var(--color-surface-green);
+    --c-card-blue:     var(--color-surface-blue);
+
+    --radius:          var(--radius-lg);
+    --shadow:          var(--shadow-md);
+
+    --font:            var(--font-sans);
+}

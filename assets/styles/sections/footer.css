@@ -1,0 +1,43 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+    background: linear-gradient(120deg, #154277 0%, #1A4A8C 60%, #2A5BA0 100%);
+    color: #fff;
+    padding: 32px 0 31px;
+}
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+    gap: 48px;
+}
+.footer__company { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: #fff; }
+.footer__muted { color: rgba(255, 255, 255, .55); font-size: 13px; margin-bottom: 10px; }
+.footer__sub   { font-size: 13px; color: rgba(255, 255, 255, .8); margin-bottom: 6px; line-height: 1.4; }
+.footer__address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin: 8px 0;
+    color: #fff;
+}
+.footer__copy { color: rgba(255, 255, 255, .55); font-size: 13px; margin-top: 10px; }
+.footer__col--nav { display: flex; flex-direction: column; gap: 10px; padding-top: 2px; }
+.footer__col--nav a { font-size: 14px; color: rgba(255, 255, 255, .9); }
+.footer__col--nav a:hover { color: var(--c-orange); }
+.footer__muted-link { color: rgba(255, 255, 255, .5) !important; font-size: 13px; margin-top: 10px; }
+.footer-contact { margin-bottom: 16px; }
+.footer-contact h4 { font-size: 13px; font-weight: 600; margin-bottom: 8px; color: rgba(255, 255, 255, .85); }
+.footer-contact__row {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.footer-contact__row:hover { color: var(--c-orange); }
+.footer-contact__row--phone { font-size: 18px; font-weight: 700; letter-spacing: 0.01em; }
+.footer-contact__send { width: 16px; margin-left: 10px; color: rgba(255, 255, 255, .65); }
