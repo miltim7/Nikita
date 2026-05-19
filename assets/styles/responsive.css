@@ -24,11 +24,42 @@
     .hero__buttons { justify-content: center; margin-bottom: 56px; }
     .hero__budget-title { font-size: 24px; }
 
-    .why { padding: 72px 0; }
-    .why__grid { grid-template-columns: 1fr; gap: 40px; }
+    .why { padding: 72px 0; overflow: hidden; }
+    .why .container-xxl {
+        max-width: 100%;
+        padding-inline: 32px;
+    }
+    .why__grid {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .why__content { width: min(603px, 100%); }
     .why .section-title { text-align: center; }
     .why__lead { text-align: center; font-size: 18px; }
-    .why__phone { position: static; max-width: 360px; margin: 0 auto; order: 2; display: flex; justify-content: center; }
+    .why__phone {
+        --phone-scale: .72;
+        position: static;
+        order: 2;
+        width: 359px;
+        max-width: 100%;
+        height: 724px;
+        margin: 0 auto;
+    }
+    .why-phone {
+        transform: scale(var(--phone-scale));
+        transform-origin: top left;
+    }
+    .why__partners {
+        left: 0;
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 18px;
+    }
+    .why-partner { height: 64px; }
 
     .how { padding: 72px 0 88px; }
     .how__steps { gap: 32px; }
@@ -97,8 +128,25 @@
     .hero__budget-title { font-size: 20px; }
 
     .why { padding: 56px 0; }
+    .why .container-xxl { padding-inline: 20px; }
+    .why .section-title { font-size: 26px; }
     .why__lead { font-size: 16px; }
     .why-card { padding: 18px 18px; }
+    .why__phone {
+        --phone-scale: .66;
+        width: 329px;
+        height: 663px;
+    }
+    .why__partners {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 14px;
+    }
+    .why-partner {
+        height: 56px;
+        font-size: 13px;
+    }
+    .why-partner--one-c { font-size: 24px; }
 
     .how { padding: 56px 0 72px; }
     .how__tabs { width: 100%; flex-direction: column; padding: 6px; }
@@ -150,16 +198,10 @@
     .hero__title   { font-size: 24px; }
 }
 
-/* ============================================================
-   DESKTOP: phone overflows section (position: absolute)
-   ============================================================ */
-@media (min-width: 1200px) {
-    .why__grid { position: relative; }
+@media (max-width: 380px) {
     .why__phone {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 420px;
-        z-index: 10;
+        --phone-scale: .56;
+        width: 279px;
+        height: 563px;
     }
 }
