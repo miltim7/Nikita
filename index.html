@@ -31,14 +31,10 @@
                         <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
                     </span>
                     <span>RU</span>
-                    <svg class="topbar__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-                        <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <img class="topbar__chevron" src="assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
                 </button>
                 <a href="#login" class="topbar__login">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M12 2L4 5v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V5l-8-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-                    </svg>
+                    <img src="assets/images/header-icon-login.svg" alt="" aria-hidden="true">
                     <span>Войти&nbsp;/&nbsp;Зарегистрироваться</span>
                 </a>
             </div>
@@ -51,7 +47,7 @@
     <div class="container-xxl">
         <div class="header__inner">
             <a href="/" class="header__logo" aria-label="Nikita — главная">
-                <img src="assets/images/logo.png" alt="Nikita" width="181" height="48">
+                <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
             </a>
 
             <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
@@ -67,26 +63,19 @@
                 <div class="header__links">
                     <a href="#support" class="header__link">
                         <span class="header__link-icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M4 13a8 8 0 0116 0v3a3 3 0 01-3 3h-1v-7h4M4 13v3a3 3 0 003 3h1v-7H4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-                            </svg>
+                            <img src="assets/images/header-icon-support.svg" alt="">
                         </span>
                         <span class="header__link-text">Обратиться<br>в техподдержку</span>
                     </a>
                     <a href="#manager" class="header__link">
                         <span class="header__link-icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M4 6h16v10H7l-3 3V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-                            </svg>
+                            <img src="assets/images/header-icon-chat.svg" alt="">
                         </span>
                         <span class="header__link-text">Связаться<br>с менеджером</span>
                     </a>
                 </div>
                 <a href="#demo" class="btn btn-cta header__cta">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <rect x="3" y="6" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
-                        <path d="M17 10l4-2v8l-4-2v-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-                    </svg>
+                    <img src="assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
                     <span class="header__cta-text">Попробовать демо&nbsp;бесплатно</span>
                     <span class="header__cta-short">Демо</span>
                 </a>
@@ -118,7 +107,10 @@
     <div class="container-xxl">
         <div class="hero__grid">
             <div class="hero__content">
-                <h1 class="hero__title">Общайтесь с клиентами там, где им удобно:</h1>
+                <h1 class="hero__title">
+                    <span class="hero__title-main">Общайтесь с клиентами<br>там, где им удобно:</span>
+                    <span class="hero__title-mobile">Общайтесь<br>с клиентами<br>там, где им удобно:</span>
+                </h1>
                 <p class="hero__subtitle">SMS, Telegram, WhatsApp или Viber.</p>
                 <p class="hero__lead">
                     Прямые каналы с операторами&nbsp;КР,<br>
@@ -145,8 +137,9 @@
             </div>
             <div class="hero__media">
                 <picture>
-                    <source srcset="assets/images/hero-map.webp" type="image/webp">
-                    <img src="assets/images/hero-map.png" alt="" loading="eager" decoding="async">
+                    <source media="(max-width: 767.98px)" srcset="assets/images/hero-map-mobile.png">
+                    <source media="(max-width: 1199.98px)" srcset="assets/images/hero-map-tablet.png">
+                    <img src="assets/images/hero-map-tablet.png" alt="" loading="eager" decoding="async">
                 </picture>
             </div>
         </div>
@@ -167,67 +160,35 @@
 
                 <ul class="why__list">
                     <li class="why-card">
-                        <span class="why-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <path d="M6 8h20v14H12l-6 5V8z" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
+                        <span class="why-card__icon" aria-hidden="true"><img src="assets/images/why/icon-sms.svg" alt=""></span>
                         <div>
                             <h3 class="why-card__title">Весь мир на связи:</h3>
                             <p class="why-card__text">Доставка сообщений в любую точку планеты по выгодным тарифам.</p>
                         </div>
                     </li>
                     <li class="why-card">
-                        <span class="why-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <circle cx="8" cy="10" r="2.5" stroke="#1E6FBA" stroke-width="2"/>
-                                <path d="M8 12.5V26M8 2v5.5" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="16" cy="20" r="2.5" stroke="#1E6FBA" stroke-width="2"/>
-                                <path d="M16 22.5V26M16 2v15" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="24" cy="14" r="2.5" stroke="#1E6FBA" stroke-width="2"/>
-                                <path d="M24 16.5V26M24 2v9" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </span>
+                        <span class="why-card__icon" aria-hidden="true"><img src="assets/images/why/icon-functions.svg" alt=""></span>
                         <div>
                             <h3 class="why-card__title">Не только SMS:</h3>
                             <p class="why-card__text">Каскадные рассылки (WhatsApp&nbsp;→&nbsp;Viber&nbsp;→&nbsp;SMS) для максимального охвата и экономии.</p>
                         </div>
                     </li>
                     <li class="why-card">
-                        <span class="why-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <path d="M6 4v24M16 4v24M26 4v24" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
-                                <rect x="3" y="9" width="6" height="6" rx="1" stroke="#1E6FBA" stroke-width="2"/>
-                                <rect x="13" y="17" width="6" height="6" rx="1" stroke="#1E6FBA" stroke-width="2"/>
-                                <rect x="23" y="11" width="6" height="6" rx="1" stroke="#1E6FBA" stroke-width="2"/>
-                            </svg>
-                        </span>
+                        <span class="why-card__icon" aria-hidden="true"><img src="assets/images/why/icon-utilities.svg" alt=""></span>
                         <div>
                             <h3 class="why-card__title">Готовая интеграция:</h3>
                             <p class="why-card__text">API и модули для CRM, позволяющие автоматизировать отправку кодов (OTP) и уведомлений.</p>
                         </div>
                     </li>
                     <li class="why-card">
-                        <span class="why-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <rect x="5" y="6" width="22" height="20" rx="2" stroke="#1E6FBA" stroke-width="2"/>
-                                <path d="M10 13h12M10 18h8" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="22" cy="20" r="4" fill="#fff" stroke="#1E6FBA" stroke-width="2"/>
-                                <path d="M20.5 20l1.2 1.2 2.3-2.3" stroke="#1E6FBA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
+                        <span class="why-card__icon" aria-hidden="true"><img src="assets/images/why/icon-certificate.svg" alt=""></span>
                         <div>
                             <h3 class="why-card__title">Всё легально!</h3>
                             <p class="why-card__text">Используем только официальные каналы доставки сообщений</p>
                         </div>
                     </li>
                     <li class="why-card">
-                        <span class="why-card__icon" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                                <path d="M10 14V8a3 3 0 116 0c0 2-1 4-1 6h8a2 2 0 012 2l-2 9a2 2 0 01-2 2H10V14z" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/>
-                                <rect x="3" y="14" width="7" height="13" rx="1" stroke="#1E6FBA" stroke-width="2"/>
-                            </svg>
-                        </span>
+                        <span class="why-card__icon" aria-hidden="true"><img src="assets/images/why/icon-like.svg" alt=""></span>
                         <div>
                             <h3 class="why-card__title">Дорожим репутацией</h3>
                             <p class="why-card__text">Поэтому не занимаемся SPAM'ом и нелегальными рассылками.</p>
@@ -272,12 +233,14 @@
         </div>
 
         <div class="why__partners" aria-label="Интеграции">
-            <span class="why-partner why-partner--one-c">1C</span>
-            <span class="why-partner why-partner--amo">amoCRM</span>
-            <span class="why-partner why-partner--open">opencart</span>
-            <span class="why-partner why-partner--yclients">yclients</span>
-            <span class="why-partner why-partner--altegio">altegio</span>
-            <span class="why-partner why-partner--bitrix">Битрикс24</span>
+            <div class="why__partners-track">
+                <span class="why-partner why-partner--one-c"><img src="assets/images/partners/logo-1c.svg" alt="1C"></span>
+                <span class="why-partner why-partner--amo"><img src="assets/images/partners/logo-amocrm.png" alt="amoCRM"></span>
+                <span class="why-partner why-partner--open"><img src="assets/images/partners/logo-opencart.svg" alt="opencart"></span>
+                <span class="why-partner why-partner--yclients"><img src="assets/images/partners/logo-yclients.png" alt="yclients"></span>
+                <span class="why-partner why-partner--altegio"><img src="assets/images/partners/logo-altegio.svg" alt="altegio"></span>
+                <span class="why-partner why-partner--bitrix"><img src="assets/images/partners/logo-bitrix.svg" alt="Битрикс24"></span>
+            </div>
         </div>
     </div>
 </section>
@@ -286,7 +249,10 @@
 <section class="how" id="how" data-active="api">
     <div class="how__bg" aria-hidden="true"></div>
     <div class="container-xxl">
-        <h2 class="section-title section-title--light">Запуск рассылки&nbsp;-&nbsp;это просто!</h2>
+        <h2 class="section-title section-title--light">
+            <span class="how-title__line">Запуск рассылки -</span>
+            <span class="how-title__line">это просто!</span>
+        </h2>
         <p class="how__lead">Как сделать рассылку клиентам?</p>
 
         <div class="how__tabs" role="tablist">
@@ -341,7 +307,7 @@
                 </div>
                 <div class="how-step__col how-step__col--right" data-content="api">
                     <span class="how-step__num">02</span>
-                    <p class="how-step__text">Изучите документацию,<br>выберите один из готовых модулей, классов<br>или напишите свой скрипт</p>
+                    <p class="how-step__text">Изучите документацию,<br>выберите один из готовых <br class="how-mobile-break">модулей, классов<br>или напишите свой скрипт</p>
                 </div>
             </div>
 
@@ -358,7 +324,7 @@
                 </div>
                 <div class="how-step__col how-step__col--right" data-content="api">
                     <span class="how-step__num">03</span>
-                    <p class="how-step__text">Готово!<br>Отправляйте SMS из&nbsp;вашей программы<br>меньше чем за 5&nbsp;минут</p>
+                    <p class="how-step__text">Готово!<br>Отправляйте SMS из&nbsp;вашей <br class="how-mobile-break">программы<br>меньше чем за 5&nbsp;минут</p>
                 </div>
             </div>
         </div>
@@ -377,52 +343,52 @@
     <div class="container-xxl">
         <h2 class="section-title">Кому мы приносим пользу</h2>
         <p class="cases__lead">
-            Уже более 25 лет мы помогаем банкам, платёжным системам, интернет-магазинам и тысячам компаний по всему миру информировать своих клиентов с помощью массовых рассылок.
+            Уже более 25 лет мы помогаем банкам, платежным системам, интернет-магазинам и тысячам компаний по всему миру<br class="cases__lead-desktop-break">
+            информировать своих клиентов с помощью массовых рассылок
         </p>
 
-        <div class="cases__carousel">
-            <button type="button" class="cases__arrow cases__arrow--prev" aria-label="Назад">
-                <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M12 2L2 10l10 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="cases__track">
-                <article class="case-card">
-                    <img class="case-card__photo" src="assets/images/cases/retail.jpg" alt="Ритейл и E-commerce" loading="lazy">
-                    <div class="case-card__body">
-                        <h3 class="case-card__title">Ритейл и E-commerce</h3>
-                        <p class="case-card__text">Акции, брошенные корзины, статусы заказов и программы лояльности.</p>
-                    </div>
-                </article>
-                <article class="case-card">
-                    <img class="case-card__photo" src="assets/images/cases/resto.jpg" alt="Рестораны и Кафе" loading="lazy">
+        <div class="cases__stage">
+            <div class="cases__carousel" tabindex="0" aria-label="Кому мы приносим пользу">
+                <div class="cases__track">
+                <article class="case-card case-card--resto" data-mobile-start>
+                    <img class="case-card__photo" src="assets/images/cases/resto.jpg" alt="Рестораны и кафе" loading="lazy">
                     <div class="case-card__body">
                         <h3 class="case-card__title">Рестораны и Кафе</h3>
                         <p class="case-card__text">Бронирования, акции и напоминания для постоянных гостей.</p>
                     </div>
                 </article>
-                <article class="case-card">
-                    <img class="case-card__photo" src="assets/images/cases/travel.jpg" alt="Международные компании / Travel-индустрия" loading="lazy">
+                <article class="case-card case-card--retail" data-mobile-active>
+                    <img class="case-card__photo" src="assets/images/cases/retail.jpg" alt="Ритейл и E-commerce" loading="lazy">
                     <div class="case-card__body">
-                        <h3 class="case-card__title">Международные компании /<br>Travel-индустрия</h3>
-                        <p class="case-card__text">Подтверждения бронирования, уведомления о рейсах и изменениях в расписании.</p>
+                        <h3 class="case-card__title">Ритейл и E-commerce</h3>
+                        <p class="case-card__text">Брошенные корзины, статусы заказов и программы лояльности.</p>
                     </div>
                 </article>
-                <article class="case-card">
-                    <img class="case-card__photo" src="assets/images/cases/logistics.jpg" alt="Логистика и Доставка" loading="lazy">
+                <article class="case-card case-card--logistics">
+                    <img class="case-card__photo" src="assets/images/cases/logistics.jpg" alt="Логистика и доставка" loading="lazy">
                     <div class="case-card__body">
                         <h3 class="case-card__title">Логистика и Доставка</h3>
                         <p class="case-card__text">Статусы посылок, коды получения и уведомления о доставке в режиме реального времени.</p>
                     </div>
                 </article>
-                <article class="case-card">
-                    <img class="case-card__photo" src="assets/images/cases/resto.jpg" alt="Финансы и Сервисы" loading="lazy">
+                <article class="case-card case-card--travel">
+                    <img class="case-card__photo" src="assets/images/cases/travel.jpg" alt="Международные компании и Travel-индустрия" loading="lazy">
                     <div class="case-card__body">
-                        <h3 class="case-card__title">Финансы и Сервисы<br>(Крупный бизнес)</h3>
-                        <p class="case-card__text">OTP-коды, уведомления о транзакциях и напоминания о платежах.</p>
+                        <h3 class="case-card__title">Международные компании / Travel-индустрия</h3>
+                        <p class="case-card__text">Подтверждения бронирования, уведомления о рейсах и изменениях в расписании.</p>
                     </div>
                 </article>
+                </div>
             </div>
-            <button type="button" class="cases__arrow cases__arrow--next" aria-label="Вперёд">
-                <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M2 2l10 8-10 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <button type="button" class="cases__arrow cases__arrow--prev" aria-label="Назад">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M10.57 3.77 6.34 8l4.23 4.23M6.92 8h7.08" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button type="button" class="cases__arrow cases__arrow--next" aria-label="Вперед">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M5.43 3.77 9.66 8l-4.23 4.23M9.08 8H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </button>
         </div>
         <div class="cases__dots" role="tablist" aria-label="Слайды"></div>

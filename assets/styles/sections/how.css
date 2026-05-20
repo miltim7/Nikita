@@ -14,6 +14,8 @@
 }
 .how .container-xxl { position: relative; z-index: 1; max-width: 1476px; }
 .how .section-title { color: #fff; }
+.how-title__line { display: inline; }
+.how-mobile-break { display: none; }
 .how__lead {
     text-align: center;
     color: rgba(255, 255, 255, .5);
@@ -61,6 +63,10 @@
 .how-tab.is-active .how-tab__icon--inactive { display: none; }
 .how-tab.is-active .how-tab__icon--active { display: block; }
 .how-tab.is-active { background: #fff; color: var(--c-blue); }
+.how-tab:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, .75);
+    outline-offset: 2px;
+}
 .how__note {
     display: none;
     text-align: center;

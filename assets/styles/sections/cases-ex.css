@@ -6,10 +6,15 @@
     padding: 48px 0;
     background: rgba(132, 135, 140, .05);
     overflow: hidden;
+    overflow-x: clip;
+    contain: paint;
 }
 .cases-ex .section-title {
     color: #211F1F;
     margin: 0;
+}
+.cases-ex .container-xxl {
+    overflow: hidden;
 }
 .cases-ex__lead {
     text-align: center;
@@ -25,7 +30,8 @@
     display: flex;
     gap: 20px;
     width: 1852px;
-    margin-left: -312px;
+    margin-left: 0;
+    transform: translateX(-312px);
 }
 .case-ex {
     background: #fff;

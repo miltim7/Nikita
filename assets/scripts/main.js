@@ -6,11 +6,13 @@
 import { initMobileMenu }    from './modules/mobile-menu.js';
 import { initHowTabs }       from './modules/how-tabs.js';
 import { initCasesCarousel } from './modules/cases-carousel.js';
+import { initPartnersSlider } from './modules/partners-slider.js';
 
 function init() {
     initMobileMenu();
     initHowTabs();
     initCasesCarousel();
+    initPartnersSlider();
 }
 
 if (document.readyState === 'loading') {

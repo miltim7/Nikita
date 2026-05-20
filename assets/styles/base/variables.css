@@ -20,6 +20,14 @@
     --color-primary-hover:    #1A4A8C;
     --color-primary-deep:     #154277;
     --color-primary-soft:     #EAF2FB;
+    --color-header-blue:      #0C6EBF;
+    --color-header-orange:    #ED5A20;
+    --color-header-black:     #212020;
+    --color-white-80:         rgba(255, 255, 255, .8);
+    --color-white-85:         rgba(255, 255, 255, .85);
+    --color-white-10:         rgba(255, 255, 255, .1);
+    --color-white-20:         rgba(255, 255, 255, .2);
+    --color-black-20:         rgba(33, 32, 32, .2);
 
     --color-accent:           #F26822;   /* orange CTA */
     --color-accent-hover:     #D9551A;
@@ -82,6 +90,9 @@
     --shadow-lg:   0 12px 30px rgba(20, 50, 100, .16);
     --shadow-cta:  0 6px 18px rgba(242, 104, 34, .35);
     --shadow-cta-hover: 0 8px 22px rgba(242, 104, 34, .45);
+    --shadow-figma-cta: 0 2px 2px var(--color-black-20), inset 0 1px 1px var(--color-white-20);
+    --shadow-figma-header: 0 0 4px var(--color-black-20);
+    --shadow-figma-card: 0 0 12px rgba(33, 32, 32, .1);
 
     /* ---------- Motion ---------- */
     --transition-fast:  0.15s ease;
@@ -133,6 +144,9 @@
     --container-px-desktop: 60px;
     --container-px-tablet:  32px;
     --container-px-mobile:  20px;
+    --figma-container-px-desktop: 124px;
+    --figma-container-px-tablet:  40px;
+    --figma-container-px-mobile:  16px;
 
     /* ============================================================
        Legacy aliases — keep existing BEM/components working.

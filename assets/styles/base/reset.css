@@ -1,8 +1,13 @@
 /* ---------------- base ---------------- */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 body {
     margin: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: var(--font);
     font-size: 16px;
     line-height: 1.5;

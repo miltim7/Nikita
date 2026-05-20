@@ -3,79 +3,101 @@
    ============================================================ */
 .why {
     position: relative;
-    background: #fff;
+    min-height: 660px;
     padding: 0;
     overflow: hidden;
+    background: #fff;
 }
 
 .why .container-xxl {
     max-width: 1476px;
-    padding-inline: 124px;
+    padding-inline: 0;
 }
 
 .why__grid {
     position: relative;
     min-height: 660px;
-    padding-top: 62px;
+    padding: 0;
 }
 
 .why__content {
-    position: relative;
+    position: absolute;
+    top: 62px;
+    left: 125px;
     z-index: 2;
     width: 603px;
 }
 
 .why .section-title {
-    text-align: left;
-    margin-bottom: 8px;
+    margin: 0 0 12px;
+    color: #212020;
     font-size: 36px;
+    font-weight: 200;
+    line-height: 1.2;
+    letter-spacing: 0.72px;
+    text-align: left;
 }
 
 .why__lead {
     max-width: 603px;
-    margin: 0 0 34px;
-    color: var(--c-navy);
+    margin: 0 0 36px;
+    color: #212020;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.4px;
+}
+
+.why__lead .text-accent {
+    color: #0C6EBF;
 }
 
 .why__list {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 603px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .why-card {
-    min-height: 68px;
     display: flex;
     align-items: center;
-    gap: 18px;
-    padding: 10px 24px;
-    background: #fff;
-    border: 1px solid #E5ECF4;
+    gap: 12px;
+    height: 68px;
+    padding: 16px;
+    border: 0;
     border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(20, 50, 100, .08);
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(33, 32, 32, 0.1);
 }
 
-.why-card:hover {
-    box-shadow: 0 8px 24px rgba(20, 50, 100, .12);
+.why-card:nth-child(2),
+.why-card:nth-child(3) {
+    height: 81px;
+}
+
+.why-card:hover,
+.why-card:focus-within {
+    box-shadow: 0 4px 6px rgba(33, 32, 32, 0.1);
 }
 
 .why-card__icon {
-    width: 32px;
-    height: 32px;
     display: inline-flex;
+    flex: 0 0 36px;
     align-items: center;
     justify-content: center;
-    flex: 0 0 32px;
-    color: #1E6FBA;
+    width: 36px;
+    height: 36px;
 }
 
-.why-card__icon svg {
-    width: 32px;
-    height: 32px;
+.why-card__icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .why-card__title {
@@ -84,108 +106,95 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.28px;
 }
 
 .why-card__text {
     margin: 0;
-    color: #4F607A;
+    color: #212020;
     font-size: 12px;
     font-weight: 300;
-    line-height: 1.35;
-    letter-spacing: 0.02em;
+    line-height: 1.2;
+    letter-spacing: 0.24px;
 }
 
 .why__phone {
-    --phone-scale: 1;
     position: absolute;
     top: 64px;
-    left: 728px;
+    left: 852.95px;
     z-index: 1;
-    width: 498px;
+    width: 498.05px;
     height: 1005px;
 }
 
 .why-phone {
     position: relative;
-    width: 498px;
-    height: 1005px;
-    padding: 12px 14px;
-    border-radius: 52px;
-    background: linear-gradient(180deg, #0C6EBF 0%, #7756C2 65%);
-    transform: scale(var(--phone-scale));
-    transform-origin: top left;
+    width: 100%;
+    height: 100%;
+    background: url('../../images/why/phone-shell.svg') 0 0 / 100% 100% no-repeat;
 }
 
 .why-phone::before,
 .why-phone::after {
-    content: "";
-    position: absolute;
-    background: #0C6EBF;
-}
-
-.why-phone::before {
-    top: 118px;
-    left: -8px;
-    width: 8px;
-    height: 44px;
-    border-radius: 8px 0 0 8px;
-    box-shadow: 0 66px 0 #0C6EBF;
-}
-
-.why-phone::after {
-    top: 130px;
-    right: -8px;
-    width: 8px;
-    height: 92px;
-    border-radius: 0 8px 8px 0;
+    content: none;
 }
 
 .why-phone__inner {
-    position: relative;
-    width: 470px;
-    height: 981px;
-    padding: 44px 14px 0;
-    border-radius: 42px;
-    background: #E7F0F9;
+    position: absolute;
+    top: 14.74px;
+    left: 26.08px;
+    width: 446px;
+    height: 975.51px;
+    padding: 0;
     overflow: hidden;
+    background: url('../../images/why/phone-screen.svg') 0 0 / 100% 100% no-repeat;
+    -webkit-mask: url('../../images/why/phone-mask.svg') 0 0 / 100% 100% no-repeat;
+    mask: url('../../images/why/phone-mask.svg') 0 0 / 100% 100% no-repeat;
 }
 
 .why-phone__notch {
     position: absolute;
-    top: 12px;
-    left: 50%;
+    top: 12.26px;
+    left: 165.98px;
     width: 114px;
     height: 8px;
-    transform: translateX(-50%);
     border-radius: 999px;
     background: #0C6EBF;
 }
 
 .why-phone__list {
-    list-style: none;
+    position: absolute;
+    top: 44.26px;
+    left: 13.98px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 418px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .why-msg {
-    width: 100%;
-    min-height: 83px;
-    padding: 15px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 418px;
+    height: 83px;
+    padding: 16px;
     border-radius: 10px;
     background: #fff;
-    box-shadow: 0 2px 6px rgba(27, 64, 100, .08);
+    box-shadow: 0 4px 6px rgba(33, 32, 32, 0.1);
 }
 
 .why-msg__brand {
+    width: 100%;
     margin: 0;
     color: #212020;
     font-size: 14px;
     font-weight: 600;
-    line-height: 16.8px;
+    line-height: 1.2;
     letter-spacing: 0.28px;
 }
 
@@ -194,20 +203,22 @@
 }
 
 .why-msg__text {
+    width: 100%;
     margin: 4px 0 0;
-    color: #212020;
+    color: rgba(33, 32, 32, 0.8);
     font-size: 12px;
     font-weight: 300;
-    line-height: 14.4px;
+    line-height: 1.2;
     letter-spacing: 0.24px;
 }
 
 .why-msg__time {
+    width: 100%;
     margin: 4px 0 0;
     color: #84878C;
     font-size: 10px;
     font-weight: 300;
-    line-height: 12px;
+    line-height: 1.2;
     letter-spacing: 0.2px;
 }
 
@@ -215,67 +226,52 @@
     position: relative;
     left: 0;
     z-index: 5;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 8px;
-    width: 100%;
+    width: 100vw;
     height: 148px;
-    padding: 37px 80px;
-    background: #fff url('../../images/partners-row-desktop.png') center / 100% 100% no-repeat;
-    box-shadow: none;
+    margin-inline: calc(50% - 50vw);
+    padding: 24px 0;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(33, 32, 32, 0.2);
 }
 
-.why__partners > * { visibility: hidden; }
-
-.why-partner {
-    min-width: 0;
-    height: 74px;
-    display: inline-flex;
+.why__partners-track {
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
+    width: max-content;
+    height: 100%;
+    margin-inline: auto;
+}
+
+.why-partner {
+    position: relative;
+    flex: 0 0 200px;
+    width: 200px;
+    height: 100px;
+    border: 0;
+    border-radius: 8px;
     background: #fff;
-    border: 1px solid #E2E8F0;
-    border-radius: 6px;
-    box-shadow: 0 3px 8px rgba(20, 50, 100, .12);
-    color: #1A2238;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0;
+    box-shadow: 0 2px 4px rgba(33, 32, 32, 0.2);
 }
 
-.why-partner--one-c {
-    color: #F01818;
-    font-size: 30px;
+.why-partner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    max-width: none;
+    transform: translate(-50%, -50%);
 }
 
-.why-partner--amo {
-    color: #B4D5E6;
-    font-style: italic;
+.why-partner--one-c img {
+    transform: translate(-50%, -50%) scaleY(-1);
 }
 
-.why-partner--open,
-.why-partner--bitrix {
-    color: #00A7EA;
-    font-size: 15px;
-}
-
-.why-partner--yclients::before {
-    content: "";
-    width: 17px;
-    height: 17px;
-    margin-right: 6px;
-    border-radius: 2px;
-    background: #F7C600;
-}
-
-.why-partner--altegio::before {
-    content: "";
-    width: 28px;
-    height: 28px;
-    margin-right: 8px;
-    border: 3px solid #222;
-    border-top-color: transparent;
-    border-radius: 4px;
-    transform: skewX(-8deg);
-}
+.why-partner--one-c img { width: 82px; height: 40px; }
+.why-partner--amo img { width: 104px; height: 20px; }
+.why-partner--open img { width: 101px; height: 20px; }
+.why-partner--yclients img { width: 114px; height: 26px; }
+.why-partner--altegio img { width: 145.66px; height: 44.9px; }
+.why-partner--bitrix img { width: 159.23px; height: 28.31px; }

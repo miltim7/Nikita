@@ -4,6 +4,8 @@
 .recommend {
     position: relative;
     overflow: hidden;
+    overflow-x: clip;
+    contain: paint;
     min-height: 330px;
     padding: 64px 0 63px;
     color: #fff;
@@ -42,7 +44,8 @@
     display: flex;
     gap: 20px;
     width: max-content;
-    margin-left: -132px;
+    margin-left: 0;
+    transform: translateX(-132px);
     animation: none;
 }
 .recommend__track li {

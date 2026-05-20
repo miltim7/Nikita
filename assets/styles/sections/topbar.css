@@ -1,69 +1,91 @@
 /* ============================================================
    TOPBAR
    ============================================================ */
-.topbar { background: var(--c-blue); color: #fff; font-size: 14px; box-shadow: 0 1px 0 rgba(255,255,255,.12); }
+.topbar {
+    background: var(--color-header-blue);
+    color: var(--color-text-inverse);
+    font-size: var(--fs-base);
+}
 .topbar__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 40px;
-    gap: 40px;
+    gap: 24px;
 }
-.topbar__nav { display: flex; gap: 0; flex-wrap: nowrap; width: 816px; height: 40px; }
+.topbar__nav {
+    display: flex;
+    gap: 0;
+    flex-wrap: nowrap;
+    height: 40px;
+}
 .topbar__link {
     height: 40px;
     padding: 0 12px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255,255,255,.85);
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: .02em;
+    color: var(--color-white-85);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
     white-space: nowrap;
     transition: color .2s, background-color .2s;
 }
-.topbar__link:nth-child(1) { width: 136px; }
-.topbar__link:nth-child(2) { width: 212px; }
-.topbar__link:nth-child(3) { width: 224px; }
-.topbar__link:nth-child(4) { width: 153px; }
-.topbar__link:nth-child(5) { width: 91px; }
-.topbar__link:hover { color: var(--c-orange); }
-.topbar__link--active { color: #fff; background: rgba(255,255,255,.15); }
+.topbar__link:hover { color: var(--color-text-inverse); }
+.topbar__link--active { color: var(--color-white-80); background: var(--color-white-10); }
 .topbar__side { display: flex; align-items: center; gap: 40px; flex-shrink: 0; }
 .topbar__lang {
-    width: 100px;
     height: 32px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    color: rgba(255,255,255,.85);
+    gap: 6px;
+    padding: 4px 12px;
+    color: var(--color-text-inverse);
+    border-radius: 4px;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
 }
-.topbar__chevron { opacity: .7; }
+.topbar__chevron,
+.topbar__login img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+.topbar__chevron {
+    padding: 9.5px 8px;
+    transform: none;
+}
+.topbar__login img {
+    padding: 2.54px 4.5px 2.52px;
+}
 .topbar__flag {
     display: inline-flex;
     flex-direction: column;
-    width: 22px;
+    width: 20px;
     height: 16px;
-    border-radius: 3px;
+    border-radius: 1.5px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,.3);
 }
 .topbar__flag-stripe { flex: 1; }
 .topbar__flag-stripe--white { background: #fff; }
 .topbar__flag-stripe--blue  { background: #0039A6; }
 .topbar__flag-stripe--red   { background: #D52B1E; }
 .topbar__login {
-    width: 232px;
     height: 24px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: rgba(255,255,255,.85);
-    font-weight: 300;
-    line-height: 1.2;
+    gap: 6px;
+    color: var(--color-text-inverse);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
     white-space: nowrap;
 }
-.topbar__login:hover { color: var(--c-orange); }
+.topbar__login:hover { color: var(--color-text-inverse); }
