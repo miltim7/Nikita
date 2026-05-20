@@ -1,46 +1,96 @@
 /* ============================================================
    STATS — flat text
    ============================================================ */
-.stats { padding: 49px 0 49px; background: #fff; }
-.stats .section-title { }
+.stats {
+    min-height: 310px;
+    padding: 48px 0;
+    background: rgba(132, 135, 140, .05);
+}
+.stats .section-title {
+    color: #211F1F;
+    margin: 0;
+}
 .stats__lead {
     text-align: center;
-    color: var(--c-text-muted);
+    color: #211F1F;
     font-size: 14px;
     font-weight: 300;
-    margin: 12px 0 32px;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    margin: 6px 0 36px;
 }
 .stats__list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 229.6px);
+    gap: 20px;
     align-items: start;
+    justify-content: center;
 }
 .stat {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    text-align: left;
-    padding-left: 22px;
-    border-left: 1px solid var(--c-line);
+    align-items: center;
+    justify-content: flex-start;
+    width: 229.6px;
+    height: 112px;
+    justify-self: center;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
 }
-.stat:first-child { border-left: none; padding-left: 0; }
 .stat__pre {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--c-blue);
-    font-weight: 600;
+    font-weight: 300;
+    line-height: 1.2;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 .stat__main {
-    font-size: 30px;
-    font-weight: 700;
-    color: var(--c-text);
-    line-height: 1.1;
+    font-size: 42px;
+    font-weight: 200;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    color: var(--c-blue);
+    background: linear-gradient(180deg, #1E8FEB 0%, #0962AA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .stat__sub {
-    font-size: 13px;
-    color: var(--c-text-muted);
-    line-height: 1.45;
-    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #211F1F;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    margin-top: 0;
+}
+.stat:first-child .stat__pre {
+    width: 191px;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1.2;
+    text-transform: none;
+    background: linear-gradient(180deg, #1E8FEB 0%, #0962AA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.stat:first-child .stat__main,
+.stat:first-child .stat__sub {
+    font-size: 14px;
+    font-weight: 300;
+    color: #211F1F;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+}
+.stat:nth-child(5) .stat__main {
+    order: 1;
+}
+.stat:nth-child(5) .stat__pre {
+    order: 2;
+}
+.stat:nth-child(5) .stat__sub {
+    order: 3;
 }

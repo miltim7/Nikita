@@ -1,24 +1,46 @@
 /* ============================================================
    TOPBAR
    ============================================================ */
-.topbar { background: var(--c-navy); color: #fff; font-size: 14px; box-shadow: 0 1px 0 rgba(255,255,255,.12); }
+.topbar { background: var(--c-blue); color: #fff; font-size: 14px; box-shadow: 0 1px 0 rgba(255,255,255,.12); }
 .topbar__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 40px;
-    gap: 24px;
+    gap: 40px;
 }
-.topbar__nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.topbar__nav { display: flex; gap: 0; flex-wrap: nowrap; width: 816px; height: 40px; }
 .topbar__link {
-    padding: 9px 18px;
+    height: 40px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: rgba(255,255,255,.85);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    white-space: nowrap;
     transition: color .2s, background-color .2s;
 }
+.topbar__link:nth-child(1) { width: 136px; }
+.topbar__link:nth-child(2) { width: 212px; }
+.topbar__link:nth-child(3) { width: 224px; }
+.topbar__link:nth-child(4) { width: 153px; }
+.topbar__link:nth-child(5) { width: 91px; }
 .topbar__link:hover { color: var(--c-orange); }
 .topbar__link--active { color: #fff; background: rgba(255,255,255,.15); }
-.topbar__side { display: flex; align-items: center; gap: 28px; flex-shrink: 0; }
-.topbar__lang { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,.85); }
+.topbar__side { display: flex; align-items: center; gap: 40px; flex-shrink: 0; }
+.topbar__lang {
+    width: 100px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255,255,255,.85);
+}
 .topbar__chevron { opacity: .7; }
 .topbar__flag {
     display: inline-flex;
@@ -33,5 +55,15 @@
 .topbar__flag-stripe--white { background: #fff; }
 .topbar__flag-stripe--blue  { background: #0039A6; }
 .topbar__flag-stripe--red   { background: #D52B1E; }
-.topbar__login { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,.85); }
+.topbar__login {
+    width: 232px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,.85);
+    font-weight: 300;
+    line-height: 1.2;
+    white-space: nowrap;
+}
 .topbar__login:hover { color: var(--c-orange); }

@@ -1,25 +1,68 @@
 /* ============================================================
    CTA
    ============================================================ */
-.cta { position: relative; overflow: hidden; padding: 56px 0; color: #fff; }
+.cta {
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+    padding: 64px 0 57px;
+    color: #fff;
+}
 .cta__bg {
     position: absolute; inset: 0;
-    background: linear-gradient(120deg, #1A6DB8 0%, #1E7FCC 50%, #2B92DC 100%);
+    background:
+        radial-gradient(ellipse 1342px 849px at 490px 215px, rgba(80, 190, 255, .45), rgba(80, 190, 255, 0) 58%),
+        radial-gradient(circle 976px at 1148px 65px, rgba(80, 185, 255, .32), rgba(80, 185, 255, 0) 58%),
+        radial-gradient(circle 639px at 1437px 264px, rgba(75, 80, 205, .35), rgba(75, 80, 205, 0) 60%),
+        linear-gradient(135deg, #0962AA 0%, #1E8FEB 100%);
 }
 .cta .container-xxl { position: relative; z-index: 1; }
 .cta__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
-    flex-wrap: wrap;
+    gap: 0;
+    flex-wrap: nowrap;
+}
+.cta__text {
+    width: 766px;
+    max-width: 100%;
 }
 .cta__title {
-    font-size: 34px;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1.2;
+    text-transform: none;
     margin-bottom: 6px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
 }
-.cta__sub { font-size: 15px; color: rgba(255, 255, 255, .8); }
-.cta__buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+.cta__sub {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    color: #fff;
+}
+.cta__buttons {
+    width: 462px;
+    max-width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.cta__buttons .btn {
+    height: 40px;
+    padding: 8px 16px;
+    gap: 6px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.cta__buttons .btn:first-child { width: 208px; }
+.cta__buttons .btn:nth-child(2) { width: 234px; }
+.cta__buttons .btn svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}

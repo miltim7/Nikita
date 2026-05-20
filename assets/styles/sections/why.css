@@ -4,18 +4,19 @@
 .why {
     position: relative;
     background: #fff;
-    padding: 14px 0 0;
+    padding: 0;
     overflow: hidden;
 }
 
 .why .container-xxl {
-    max-width: 1440px;
-    padding-inline: 60px;
+    max-width: 1476px;
+    padding-inline: 124px;
 }
 
 .why__grid {
     position: relative;
-    min-height: 560px;
+    min-height: 660px;
+    padding-top: 62px;
 }
 
 .why__content {
@@ -98,8 +99,8 @@
 .why__phone {
     --phone-scale: 1;
     position: absolute;
-    top: 0;
-    left: 780px;
+    top: 64px;
+    left: 728px;
     z-index: 1;
     width: 498px;
     height: 1005px;
@@ -217,12 +218,14 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 8px;
-    width: 1320px;
-    height: 112px;
-    padding: 19px 80px;
-    background: #fff;
-    box-shadow: 0 -2px 18px rgba(20, 50, 100, .12);
+    width: 100%;
+    height: 148px;
+    padding: 37px 80px;
+    background: #fff url('../../images/partners-row-desktop.png') center / 100% 100% no-repeat;
+    box-shadow: none;
 }
+
+.why__partners > * { visibility: hidden; }
 
 .why-partner {
     min-width: 0;

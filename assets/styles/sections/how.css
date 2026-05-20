@@ -1,16 +1,22 @@
 /* ============================================================
    HOW IT WORKS
    ============================================================ */
-.how { position: relative; overflow: hidden; padding: 58px 0; color: #fff; }
+.how {
+    position: relative;
+    overflow: hidden;
+    min-height: 700px;
+    padding: 58px 0 70px;
+    color: #fff;
+}
 .how__bg {
     position: absolute; inset: 0;
-    background: linear-gradient(120deg, #1A6DB8 0%, #1E7FCC 50%, #2B92DC 100%);
+    background: #0F75C9 url('../../images/how/bg.svg') center / cover no-repeat;
 }
-.how .container-xxl { position: relative; z-index: 1; max-width: 1348px; }
+.how .container-xxl { position: relative; z-index: 1; max-width: 1476px; }
 .how .section-title { color: #fff; }
 .how__lead {
     text-align: center;
-    color: rgba(255, 255, 255, .85);
+    color: rgba(255, 255, 255, .5);
     font-size: 26px;
     font-weight: 200;
     letter-spacing: 0.02em;
@@ -23,8 +29,6 @@
     gap: 0;
     width: 424px;
     max-width: 100%;
-    background: rgba(255, 255, 255, .14);
-    border-radius: 10px;
     padding: 0;
 }
 .how-tab {
@@ -32,27 +36,46 @@
     align-items: center;
     justify-content: center;
     flex: 1;
-    gap: 10px;
-    padding: 8px 18px;
+    gap: 6px;
+    padding: 8px 16px;
     height: 40px;
-    border-radius: 8px;
-    color: rgba(255, 255, 255, .85);
+    border: 1px solid rgba(255, 255, 255, .5);
+    color: #fff;
     font-weight: 300;
     font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
     transition: background-color .25s, color .25s;
 }
-.how-tab.is-active { background: #fff; color: var(--c-text); }
+.how-tab:first-child { border-radius: 6px 0 0 6px; }
+.how-tab:last-child { border-radius: 0 6px 6px 0; margin-left: -1px; }
+.how-tab img {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    box-sizing: border-box;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.how-tab__icon--active { display: none; }
+.how-tab.is-active .how-tab__icon--inactive { display: none; }
+.how-tab.is-active .how-tab__icon--active { display: block; }
+.how-tab.is-active { background: #fff; color: var(--c-blue); }
 .how__note {
+    display: none;
     text-align: center;
-    color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, .8);
     font-size: 14px;
     font-weight: 300;
-    margin: 6px 0 42px;
+    letter-spacing: 0.02em;
+    margin: 12px 0 36px;
     line-height: 1.2;
 }
+.how[data-active="cabinet"] .how__note[data-content="cabinet"],
+.how[data-active="api"] .how__note[data-content="api"] { display: block; }
 
 /* steps */
-.how__steps { display: flex; flex-direction: column; gap: 55px; margin-bottom: 36px; }
+.how__steps { display: flex; flex-direction: column; gap: 60px; margin-bottom: 36px; }
 .how-step {
     display: grid;
     grid-template-columns: 552fr 83fr 552fr;
@@ -61,12 +84,12 @@
 }
 .how-step__col {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     padding: 0 8px;
 }
 .how-step__col--left {
-    justify-content: flex-end;
+    justify-content: flex-start;
     text-align: right;
     flex-direction: row-reverse;
 }
@@ -83,24 +106,30 @@
     flex-shrink: 0;
     font-family: var(--font);
 }
-.how-step__col--left  .how-step__num { color: rgba(255, 255, 255, .35); }
-.how-step__col--right .how-step__num { color: #fff; }
+.how-step__col .how-step__num { color: rgba(255, 255, 255, .1); }
 .how-step__text {
     font-size: 14px;
     line-height: 1.2;
     font-weight: 600;
     letter-spacing: 0.02em;
 }
-.how-step__col--left  .how-step__text { color: rgba(255, 255, 255, .45); }
-.how-step__col--right .how-step__text { color: #fff; }
+.how-step__col .how-step__text { color: rgba(255, 255, 255, .2); }
+.how[data-active="cabinet"] .how-step__col--left[data-content="cabinet"] .how-step__num,
+.how[data-active="api"] .how-step__col--right[data-content="api"] .how-step__num {
+    color: rgba(255, 255, 255, .5);
+}
+.how[data-active="cabinet"] .how-step__col--left[data-content="cabinet"] .how-step__text,
+.how[data-active="api"] .how-step__col--right[data-content="api"] .how-step__text {
+    color: #fff;
+}
 
 .how-step__center {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     height: 100%;
-    min-height: 51px;
+    min-height: 48px;
 }
 .how-step__center::before,
 .how-step__center::after {
@@ -108,25 +137,57 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 0;
-    border-left: 2px dashed rgba(255, 255, 255, .35);
-    height: 28px;
+    width: 6px;
+    height: 36px;
+    background: center / 100% 100% no-repeat;
 }
-.how-step__center::before { top: -28px; }
-.how-step__center::after  { bottom: -28px; }
-.how-step:first-child .how-step__center::before { display: none; }
+.how-step__center::before { display: none; }
+.how-step__center::after  { bottom: -48px; }
+.how-step:nth-child(1) .how-step__center::after { background-image: url('../../images/how/line-1.svg'); }
+.how-step:nth-child(2) .how-step__center::after { background-image: url('../../images/how/line-2.svg'); }
+.how[data-active="cabinet"] .how-step:nth-child(1) .how-step__center::after { background-image: url('../../images/how/line-cabinet-1.svg'); }
+.how[data-active="cabinet"] .how-step:nth-child(2) .how-step__center::after { background-image: url('../../images/how/line-cabinet-2.svg'); }
 .how-step:last-child  .how-step__center::after  { display: none; }
 .how-step__icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, .08);
-    border: 1px solid rgba(255, 255, 255, .25);
+    width: 48px;
+    height: 48px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
 }
+.how-step__icon img {
+    display: none;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+.how[data-active="cabinet"] .how-step__icon img[data-content="cabinet"],
+.how[data-active="api"] .how-step__icon img[data-content="api"] {
+    display: block;
+}
+.how-step:nth-child(1) .how-step__icon img { width: 47px; }
+.how-step:nth-child(2) .how-step__icon img { width: 40px; }
+.how[data-active="cabinet"] .how-step:nth-child(1) .how-step__icon img { width: 48px; }
+.how[data-active="cabinet"] .how-step:nth-child(2) .how-step__icon img { width: 48px; }
 
 .how__cta { text-align: center; }
-.how__cta .btn { height: 40px; font-size: 14px; padding: 0 24px; }
+.how__cta .btn {
+    height: 40px;
+    gap: 6px;
+    padding: 0 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 2px rgba(33, 32, 32, .2), inset 0 1px 1px rgba(255, 255, 255, .2);
+}
+.how__cta .btn img {
+    width: 24px;
+    height: 24px;
+    padding: 6px 4px;
+    box-sizing: border-box;
+    object-fit: contain;
+    transform: scaleX(-1);
+}

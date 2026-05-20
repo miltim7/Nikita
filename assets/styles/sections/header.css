@@ -3,23 +3,65 @@
    ============================================================ */
 .header { background: #fff; box-shadow: 0 1px 0 var(--c-line); }
 .header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
+    position: relative;
     min-height: 80px;
 }
-.header__logo img { width: 181px; height: auto; }
-.header__actions { display: flex; align-items: center; gap: 48px; }
+.header__logo {
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 181px;
+    height: 48px;
+}
+.header__logo img { width: 181px; height: 48px; display: block; }
+.header__phone {
+    position: absolute;
+    left: 283px;
+    top: 28px;
+    width: 227px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--c-blue);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.header__phone:hover { color: var(--c-orange); }
+.header__phone-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.header__actions {
+    position: absolute;
+    left: 654px;
+    top: 20px;
+    width: 574px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
 .header__links { display: flex; align-items: center; gap: 24px; }
 .header__link {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
     color: var(--c-text);
-    font-size: 13px;
-    line-height: 1.25;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    white-space: nowrap;
 }
+.header__link:first-child { width: 119px; }
+.header__link:nth-child(2) { width: 109px; }
 .header__link:hover { color: var(--c-blue); }
 .header__link-icon {
     width: 24px;
@@ -30,7 +72,21 @@
     color: var(--c-blue);
     flex-shrink: 0;
 }
-.header__cta { height: 40px; padding: 0 24px; }
+.header__cta {
+    width: 274px;
+    height: 40px;
+    padding: 0 16px;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.header__cta svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
 .header__cta-short { display: none; }
 .header__burger {
     display: none;

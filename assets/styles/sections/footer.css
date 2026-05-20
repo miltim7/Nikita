@@ -2,14 +2,16 @@
    FOOTER
    ============================================================ */
 .footer {
-    background: linear-gradient(120deg, #154277 0%, #1A4A8C 60%, #2A5BA0 100%);
+    background: var(--c-blue);
     color: #fff;
-    padding: 32px 0 31px;
+    min-height: 292px;
+    padding: 36px 0;
 }
 .footer__grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1.2fr;
-    gap: 48px;
+    grid-template-columns: 420px 280px 327px;
+    column-gap: 100.5px;
+    min-height: 220px;
 }
 .footer__company { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: #fff; }
 .footer__muted { color: rgba(255, 255, 255, .55); font-size: 13px; margin-bottom: 10px; }

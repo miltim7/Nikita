@@ -5,17 +5,13 @@
     position: relative;
     overflow: hidden;
     color: #fff;
-    padding: 56px 0 64px;
+    padding: 110px 0 97px;
     min-height: 600px;
 }
 .hero__bg {
     position: absolute; inset: 0;
-    background-image: url('../../images/hero-map.png');
-    background-image: image-set(
-        url('../../images/hero-map.webp') type('image/webp'),
-        url('../../images/hero-map.png')  type('image/png')
-    );
-    background-size: cover;
+    background-image: url('../../images/hero-bg-figma.png');
+    background-size: 100% 100%;
     background-position: center;
 }
 .hero .container-xxl { position: relative; z-index: 1; }
@@ -24,8 +20,9 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
     gap: 40px;
-    align-items: center;
+    align-items: start;
 }
+.hero__content { width: 603px; }
 .hero__title {
     font-size: 42px;
     line-height: 1.2;
@@ -36,23 +33,40 @@
     margin-bottom: 20px;
 }
 .hero__subtitle {
-    font-size: 30px;
-    font-weight: 400;
-    margin-bottom: 36px;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
     color: rgba(255, 255, 255, .96);
 }
 .hero__lead {
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
     max-width: 520px;
 }
 .hero__buttons {
     display: flex;
-    gap: 14px;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
+}
+.hero__buttons .btn {
+    height: 40px;
+    gap: 6px;
+    padding: 0 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+.hero__buttons .btn svg {
+    width: 24px;
+    height: 24px;
 }
 .hero__buttons .btn-ghost {
     color: #fff;
@@ -61,15 +75,21 @@
 .hero__buttons .btn-ghost:hover { background: rgba(255, 255, 255, .08); border-color: #fff; }
 
 .hero__budget-title {
-    font-size: 28px;
+    font-size: 30px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 200;
     color: rgba(255, 255, 255, .55);
-    letter-spacing: 0.01em;
-    margin-bottom: 10px;
-    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+    line-height: 1.2;
 }
-.hero__budget-text { font-size: 16px; color: rgba(255, 255, 255, .7); }
+.hero__budget-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, .5);
+}
 .hero__media {
     position: absolute;
     top: 50%;

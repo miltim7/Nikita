@@ -1,8 +1,8 @@
 /**
  * Cases carousel: horizontal scroll-snap track + prev/next arrows + dots.
- * Gap between cards is 24px (must match .cases__track gap in CSS).
+ * Gap between cards is 20px (must match .cases__track gap in CSS).
  */
-const GAP = 24;
+const GAP = 20;
 
 export function initCasesCarousel() {
     const track = document.querySelector('.cases__track');

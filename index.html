@@ -54,6 +54,15 @@
                 <img src="assets/images/logo.png" alt="Nikita" width="181" height="48">
             </a>
 
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
             <div class="header__actions">
                 <div class="header__links">
                     <a href="#support" class="header__link">
@@ -274,31 +283,29 @@
 </section>
 
 <!-- ============ HOW IT WORKS ============ -->
-<section class="how" id="how" data-active="cabinet">
+<section class="how" id="how" data-active="api">
     <div class="how__bg" aria-hidden="true"></div>
     <div class="container-xxl">
         <h2 class="section-title section-title--light">Запуск рассылки&nbsp;-&nbsp;это просто!</h2>
         <p class="how__lead">Как сделать рассылку клиентам?</p>
 
         <div class="how__tabs" role="tablist">
-            <button type="button" class="how-tab is-active" role="tab" aria-selected="true" data-tab="cabinet">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="8" cy="6" r="2" fill="currentColor"/>
-                    <circle cx="16" cy="12" r="2" fill="currentColor"/>
-                    <circle cx="10" cy="18" r="2" fill="currentColor"/>
-                </svg>
+            <button type="button" class="how-tab" role="tab" aria-selected="false" data-tab="cabinet">
+                <img class="how-tab__icon how-tab__icon--inactive" src="assets/images/how/tab-cabinet.svg" alt="" aria-hidden="true">
+                <img class="how-tab__icon how-tab__icon--active" src="assets/images/how/tab-cabinet-active.svg" alt="" aria-hidden="true">
                 Из личного кабинета
             </button>
-            <button type="button" class="how-tab" role="tab" aria-selected="false" data-tab="api">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/>
-                    <path d="M8 9l-2 3 2 3M16 9l2 3-2 3M13 8l-2 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            <button type="button" class="how-tab is-active" role="tab" aria-selected="true" data-tab="api">
+                <img class="how-tab__icon how-tab__icon--inactive" src="assets/images/how/tab-api-inactive.svg" alt="" aria-hidden="true">
+                <img class="how-tab__icon how-tab__icon--active" src="assets/images/how/tab-api.svg" alt="" aria-hidden="true">
                 Через API
             </button>
         </div>
-        <p class="how__note">
+        <p class="how__note" data-content="cabinet">
+            Настройка и запуск рассылки из личного кабинета<br>
+            не требует специальных знаний и навыков
+        </p>
+        <p class="how__note" data-content="api">
             Для запуска рассылки через API и интеграции с вашим сайтом или CRM<br>
             вам может понадобиться помощь программиста
         </p>
@@ -311,10 +318,8 @@
                 </div>
                 <div class="how-step__center">
                     <span class="how-step__icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                            <rect x="3" y="3" width="26" height="26" rx="5" stroke="#fff" stroke-width="1.8"/>
-                            <text x="16" y="20" text-anchor="middle" font-family="Inter" font-size="9" font-weight="700" fill="#fff" letter-spacing="0.3">API</text>
-                        </svg>
+                        <img src="assets/images/how/icon-cabinet-list.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="assets/images/how/icon-api.svg" alt="" aria-hidden="true" data-content="api">
                     </span>
                 </div>
                 <div class="how-step__col how-step__col--right" data-content="api">
@@ -330,12 +335,8 @@
                 </div>
                 <div class="how-step__center">
                     <span class="how-step__icon">
-                        <svg width="32" height="40" viewBox="0 0 32 40" fill="none" aria-hidden="true">
-                            <path d="M5 4h14l8 8v24a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-                            <path d="M19 4v8h8" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-                            <circle cx="22" cy="25" r="4" stroke="#fff" stroke-width="1.6"/>
-                            <path d="M22 21v-1.5M22 30v-1.5M26 25h-1.5M19.5 25H18M24.8 22.2l-1 1M21.2 26.8l-1 1M24.8 27.8l-1-1M21.2 23.2l-1-1" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
-                        </svg>
+                        <img src="assets/images/how/icon-cabinet-card.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="assets/images/how/icon-doc.svg" alt="" aria-hidden="true" data-content="api">
                     </span>
                 </div>
                 <div class="how-step__col how-step__col--right" data-content="api">
@@ -351,13 +352,8 @@
                 </div>
                 <div class="how-step__center how-step__center--last">
                     <span class="how-step__icon">
-                        <svg width="36" height="40" viewBox="0 0 36 40" fill="none" aria-hidden="true">
-                            <rect x="4" y="6" width="20" height="30" rx="3" stroke="#fff" stroke-width="1.8"/>
-                            <circle cx="14" cy="13" r="3.5" stroke="#fff" stroke-width="1.4"/>
-                            <text x="14" y="15.5" text-anchor="middle" font-family="Inter" font-size="5" font-weight="700" fill="#fff">%</text>
-                            <path d="M9 22h14M9 26h10M9 30h8" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
-                            <path d="M26 18l4 1.2-1.4 4M30 19.2c-1 4-4 7-8 8" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                        </svg>
+                        <img src="assets/images/how/icon-cabinet-sms.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="assets/images/how/icon-sms.svg" alt="" aria-hidden="true" data-content="api">
                     </span>
                 </div>
                 <div class="how-step__col how-step__col--right" data-content="api">
@@ -370,9 +366,7 @@
         <div class="how__cta">
             <a href="#create" class="btn btn-cta">
                 Создать рассылку
-                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
-                    <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="assets/images/how/cta-arrow.svg" alt="" aria-hidden="true">
             </a>
         </div>
     </div>
@@ -440,6 +434,7 @@
     <div class="recommend__bg" aria-hidden="true"></div>
     <div class="container-xxl">
         <h2 class="section-title section-title--light">Нас рекомендуют</h2>
+        <p class="recommend__lead">100500 клиентов доверяют качеству нашего сервиса</p>
     </div>
     <div class="recommend__marquee" aria-hidden="true">
         <ul class="recommend__track">
@@ -456,7 +451,7 @@
         <p class="stats__lead">Нашу эффективность можно измерить</p>
         <ul class="stats__list">
             <li class="stat">
-                <span class="stat__pre">Все&nbsp;операторы</span>
+                <span class="stat__pre">все<br>операторы</span>
                 <span class="stat__main">Кыргызстана</span>
                 <span class="stat__sub">+ ближнее и&nbsp;дальнее зарубежье</span>
             </li>
@@ -518,6 +513,7 @@
             <a href="#register" class="btn btn-cta">
                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true"><path d="M9 1L2 4v6c0 4 3 7.5 7 9 4-1.5 7-5 7-9V4L9 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
                 Зарегистрироваться
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a href="#try" class="btn btn-ghost btn-ghost--light">
                 Попробовать бесплатно
@@ -615,13 +611,14 @@
     <div class="container-xxl">
         <div class="cta__inner">
             <div class="cta__text">
-                <h2 class="cta__title">Хотите такие же результаты?</h2>
+                <h2 class="cta__title">хотите такие же результаты?</h2>
                 <p class="cta__sub">Начните оптимизировать свой бизнес с нами!</p>
             </div>
             <div class="cta__buttons">
                 <a href="#register" class="btn btn-cta">
                     <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true"><path d="M9 1L2 4v6c0 4 3 7.5 7 9 4-1.5 7-5 7-9V4L9 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
                     Зарегистрироваться
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
                 <a href="#try" class="btn btn-ghost btn-ghost--light">
                     Попробовать бесплатно

@@ -7,6 +7,6 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-align: center;
-    color: var(--c-navy);
+    color: var(--c-blue);
 }
 .section-title--light { color: #fff; }

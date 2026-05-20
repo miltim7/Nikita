@@ -1,38 +1,53 @@
 /* ============================================================
    CASES EXAMPLES
    ============================================================ */
-.cases-ex { padding: 48px 0; background: #fff; }
-.cases-ex .section-title { }
+.cases-ex {
+    min-height: 594px;
+    padding: 48px 0;
+    background: rgba(132, 135, 140, .05);
+    overflow: hidden;
+}
+.cases-ex .section-title {
+    color: #211F1F;
+    margin: 0;
+}
 .cases-ex__lead {
     text-align: center;
-    color: var(--c-text-muted);
+    color: #211F1F;
     font-size: 14px;
+    font-weight: 300;
     line-height: 1.6;
-    margin: 14px auto 27px;
-    max-width: 880px;
+    letter-spacing: .02em;
+    margin: 6px auto 36px;
+    max-width: 1228px;
 }
 .cases-ex__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 20px;
+    width: 1852px;
+    margin-left: -312px;
 }
 .case-ex {
     background: #fff;
-    border-radius: 14px;
-    padding: 14px 14px 16px;
-    box-shadow: 0 10px 28px rgba(30, 111, 186, .10);
-    border: 1px solid rgba(226, 235, 246, .8);
+    border-radius: 10px;
+    width: 604px;
+    height: 379px;
+    flex: 0 0 604px;
+    padding: 16px;
+    box-shadow: none;
+    border: 0;
+    overflow: hidden;
 }
-.case-ex__head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.case-ex__head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
 .case-ex__icon {
-    width: 32px; height: 32px;
+    width: 36px; height: 36px;
     border-radius: 8px;
     background: var(--c-blue-soft);
     display: inline-flex; align-items: center; justify-content: center;
     flex-shrink: 0;
 }
 .case-ex__title {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1.2;
@@ -41,7 +56,7 @@
 .case-ex__title span {
     display: block;
     font-weight: 300;
-    font-size: 11px;
+    font-size: 12px;
     color: var(--c-text-muted);
     margin-top: 2px;
 }
