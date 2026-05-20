@@ -113,6 +113,6 @@
     background: #fff; border-radius: 2px;
     transition: transform .25s, opacity .25s;
 }
-.header__burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header__burger.is-open span:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
 .header__burger.is-open span:nth-child(2) { opacity: 0; }
-.header__burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.header__burger.is-open span:nth-child(3) { transform: translateY(-3.75px) rotate(-45deg); }

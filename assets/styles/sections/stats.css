@@ -1,96 +1,102 @@
 /* ============================================================
-   STATS — flat text
+   STATS - Figma benefits block
    ============================================================ */
 .stats {
     min-height: 310px;
     padding: 48px 0;
-    background: rgba(132, 135, 140, .05);
+    background: var(--color-bg);
 }
+
 .stats .section-title {
-    color: #211F1F;
     margin: 0;
+    color: var(--color-header-black);
 }
+
 .stats__lead {
-    text-align: center;
-    color: #211F1F;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: .02em;
     margin: 6px 0 36px;
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-align: center;
 }
+
 .stats__list {
     display: grid;
-    grid-template-columns: repeat(5, 229.6px);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 20px;
     align-items: start;
-    justify-content: center;
+    justify-content: stretch;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
 .stat {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 0;
     align-items: center;
     justify-content: flex-start;
-    width: 229.6px;
-    height: 112px;
-    justify-self: center;
+    min-width: 0;
+    color: var(--color-header-black);
     text-align: center;
-    padding-left: 0;
-    border-left: none;
 }
-.stat__pre {
-    font-size: 14px;
-    color: var(--c-blue);
-    font-weight: 300;
-    line-height: 1.2;
+
+.stat:first-child {
+    gap: 6px;
+}
+
+.stat__value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: transparent;
+    line-height: var(--lh-tight);
+    text-align: center;
+    background: var(--gradient-stats-blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat__pre,
+.stat__all-label {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
 }
-.stat__main {
-    font-size: 42px;
-    font-weight: 200;
-    line-height: 1.2;
-    letter-spacing: .02em;
-    color: var(--c-blue);
-    background: linear-gradient(180deg, #1E8FEB 0%, #0962AA 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.stat__main,
+.stat__all-main {
+    font-size: var(--fs-5xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+    white-space: nowrap;
 }
+
 .stat__sub {
-    font-size: 14px;
-    font-weight: 300;
-    color: #211F1F;
-    line-height: 1.2;
-    letter-spacing: .02em;
-    margin-top: 0;
+    width: 100%;
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
 }
-.stat:first-child .stat__pre {
-    width: 191px;
-    font-size: 30px;
-    font-weight: 200;
-    line-height: 1.2;
-    text-transform: none;
-    background: linear-gradient(180deg, #1E8FEB 0%, #0962AA 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.stat__value--operators {
+    gap: 0;
 }
-.stat:first-child .stat__main,
-.stat:first-child .stat__sub {
-    font-size: 14px;
-    font-weight: 300;
-    color: #211F1F;
-    background: none;
-    -webkit-text-fill-color: currentColor;
-}
-.stat:nth-child(5) .stat__main {
-    order: 1;
-}
-.stat:nth-child(5) .stat__pre {
-    order: 2;
-}
-.stat:nth-child(5) .stat__sub {
-    order: 3;
+
+.stat__all-main,
+.stat__all-label {
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-thin);
 }

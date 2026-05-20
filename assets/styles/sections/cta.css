@@ -6,15 +6,15 @@
     overflow: hidden;
     min-height: 180px;
     padding: 64px 0 57px;
-    color: #fff;
+    color: var(--color-text-inverse);
 }
 .cta__bg {
-    position: absolute; inset: 0;
-    background:
-        radial-gradient(ellipse 1342px 849px at 490px 215px, rgba(80, 190, 255, .45), rgba(80, 190, 255, 0) 58%),
-        radial-gradient(circle 976px at 1148px 65px, rgba(80, 185, 255, .32), rgba(80, 185, 255, 0) 58%),
-        radial-gradient(circle 639px at 1437px 264px, rgba(75, 80, 205, .35), rgba(75, 80, 205, 0) 60%),
-        linear-gradient(135deg, #0962AA 0%, #1E8FEB 100%);
+    position: absolute;
+    inset: 0;
+    background-image: url('../../images/cta-bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
 }
 .cta .container-xxl { position: relative; z-index: 1; }
 .cta__inner {
@@ -29,19 +29,19 @@
     max-width: 100%;
 }
 .cta__title {
-    font-size: 30px;
-    font-weight: 200;
-    line-height: 1.2;
-    text-transform: none;
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    text-transform: uppercase;
     margin-bottom: 6px;
-    letter-spacing: 0.02em;
+    letter-spacing: var(--letter-spacing-normal);
 }
 .cta__sub {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: .02em;
-    color: #fff;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    color: var(--color-white-80);
 }
 .cta__buttons {
     width: 462px;
@@ -54,15 +54,43 @@
     height: 40px;
     padding: 8px 16px;
     gap: 6px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.2;
+    border-radius: var(--radius-xs);
+    border-width: 1px;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+.cta__buttons .btn:hover {
+    transform: none;
 }
 .cta__buttons .btn:first-child { width: 208px; }
 .cta__buttons .btn:nth-child(2) { width: 234px; }
-.cta__buttons .btn svg {
-    width: 24px;
-    height: 24px;
+.cta__buttons .btn-cta {
+    background: var(--color-header-orange);
+    box-shadow: var(--shadow-figma-cta);
+}
+.cta__buttons .btn-cta:hover {
+    background: var(--color-header-orange);
+    box-shadow: var(--shadow-figma-cta);
+}
+.cta__buttons .btn-ghost--light {
+    border-color: var(--color-white-50);
+}
+.cta__buttons .btn-ghost--light:hover {
+    border-color: var(--color-white-50);
+    background: transparent;
+}
+.cta__icon {
+    display: block;
     flex-shrink: 0;
+}
+.cta__icon--shield {
+    width: 15px;
+    height: 18.94px;
+}
+.cta__icon--arrow {
+    width: 15.4px;
+    height: 11.31px;
+    transform: scaleX(-1);
 }

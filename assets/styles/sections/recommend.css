@@ -3,20 +3,19 @@
    ============================================================ */
 .recommend {
     position: relative;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
     overflow: hidden;
-    overflow-x: clip;
+    overflow-x: hidden;
     contain: paint;
     min-height: 330px;
     padding: 64px 0 63px;
     color: #fff;
 }
 .recommend__bg {
-    position: absolute; inset: 0;
-    background:
-        radial-gradient(ellipse 1342px 849px at 490px 415px, rgba(80, 190, 255, .45), rgba(80, 190, 255, 0) 58%),
-        radial-gradient(circle 976px at 1148px 185px, rgba(80, 185, 255, .32), rgba(80, 185, 255, 0) 58%),
-        radial-gradient(circle 639px at 1437px 384px, rgba(75, 80, 205, .35), rgba(75, 80, 205, 0) 60%),
-        linear-gradient(135deg, #1E8FEB 0%, #0962AA 100%);
+    position: absolute;
+    inset: 0;
+    background: url('../../images/recommend/bg-desktop.svg') center top / 100% 100% no-repeat;
 }
 .recommend .container-xxl { position: relative; z-index: 1; }
 .recommend .section-title {
@@ -39,31 +38,69 @@
     mask-image: none;
     position: relative;
     z-index: 1;
+    user-select: none;
 }
 .recommend__track {
+    --recommend-shift: 880px;
     display: flex;
     gap: 20px;
     width: max-content;
     margin-left: 0;
-    transform: translateX(-132px);
-    animation: none;
+    animation: recommend-marquee 18s linear infinite;
+    will-change: transform;
 }
-.recommend__track li {
+.recommend-card {
+    position: relative;
     flex-shrink: 0;
     width: 200px;
     height: 120px;
-    background: #fff;
-    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--c-text-muted);
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.02em;
-    box-shadow: none;
+    overflow: hidden;
+    background: var(--color-bg);
+    border-radius: var(--radius-figma-card);
+    box-shadow: var(--shadow-figma-logo-card);
 }
-@keyframes marquee {
+.recommend-logo {
+    position: relative;
+    display: block;
+    width: 129px;
+    height: 67px;
+    overflow: hidden;
+}
+.recommend-logo img {
+    position: absolute;
+    display: block;
+    max-width: none;
+    filter: grayscale(1);
+    pointer-events: none;
+}
+.recommend-logo--cnn img {
+    top: -239.46%;
+    left: -54.88%;
+    width: 334.49%;
+    height: 361.2%;
+}
+.recommend-logo--mobil img {
+    top: -186.57%;
+    left: -145.94%;
+    width: 273.07%;
+    height: 294.87%;
+}
+.recommend-logo--pepsi img {
+    top: -20.41px;
+    left: -5.65px;
+    width: auto;
+    height: 410.14px;
+}
+.recommend-logo--amazon img {
+    top: -12.98px;
+    left: -369.88px;
+    width: auto;
+    height: 329px;
+}
+@keyframes recommend-marquee {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(calc(var(--recommend-shift) * -1)); }
 }

@@ -23,11 +23,33 @@
     --color-header-blue:      #0C6EBF;
     --color-header-orange:    #ED5A20;
     --color-header-black:     #212020;
+    --color-feature-blue-left: #1E8FEB;
+    --color-feature-blue-right: #0962AA;
+    --color-feature-pink:     #E035BE;
+    --color-feature-pink-50:  rgba(224, 53, 190, .5);
+    --color-feature-pink-0:   rgba(224, 53, 190, 0);
+    --color-feature-cyan:     #5BC8FF;
+    --color-feature-cyan-50:  rgba(91, 200, 255, .5);
+    --color-feature-cyan-0:   rgba(91, 200, 255, 0);
+    --color-feature-mint:     #5BFFDE;
+    --color-feature-mint-50:  rgba(91, 255, 222, .5);
+    --color-feature-mint-0:   rgba(91, 255, 222, 0);
+    --color-stats-blue-top:   #50AEFB;
+    --color-stats-blue-bottom: var(--color-header-blue);
     --color-white-80:         rgba(255, 255, 255, .8);
     --color-white-85:         rgba(255, 255, 255, .85);
+    --color-white-50:         rgba(255, 255, 255, .5);
     --color-white-10:         rgba(255, 255, 255, .1);
     --color-white-20:         rgba(255, 255, 255, .2);
     --color-black-20:         rgba(33, 32, 32, .2);
+    --color-black-80:         rgba(33, 32, 32, .8);
+    --color-black-100:        #212020;
+    --color-gray-icon:        #9EA1A7;
+    --color-case-green:       #8FB93A;
+    --color-footer-bg:        var(--color-header-blue);
+    --color-footer-icon:      rgba(117, 195, 255, .9);
+    --color-footer-telegram:  #35AEE2;
+    --color-footer-whatsapp:  #25D366;
 
     --color-accent:           #F26822;   /* orange CTA */
     --color-accent-hover:     #D9551A;
@@ -47,6 +69,9 @@
     --color-surface-pink:     #FBEBE6;
     --color-surface-green:    #ECF3E5;
     --color-surface-blue:     #E2EBF6;
+    --color-surface-orange-10: rgba(237, 90, 32, .1);
+    --color-surface-green-10:  rgba(143, 185, 58, .1);
+    --color-surface-blue-5:    rgba(12, 110, 191, .05);
 
     /* ---------- Semantic strokes used inside cards ---------- */
     --color-stroke-pink:      #E37166;
@@ -57,6 +82,7 @@
     --gradient-blue:          linear-gradient(120deg, #1A6DB8 0%, #1E7FCC 50%, #2B92DC 100%);
     --gradient-blue-purple:   linear-gradient(120deg, #1B5DA8 0%, #2873C0 50%, #4C5DC4 100%);
     --gradient-footer:        linear-gradient(120deg, #154277 0%, #1A4A8C 60%, #2A5BA0 100%);
+    --gradient-stats-blue:    linear-gradient(180deg, var(--color-stats-blue-top) 0%, var(--color-stats-blue-bottom) 100%);
 
     /* ---------- Spacing scale (4px base) ---------- */
     --space-0:    0;
@@ -81,6 +107,7 @@
     --radius-md:  12px;
     --radius-lg:  16px;
     --radius-xl:  24px;
+    --radius-figma-card: 8px;
     --radius-pill: 999px;
 
     /* ---------- Shadows / elevation ---------- */
@@ -92,7 +119,11 @@
     --shadow-cta-hover: 0 8px 22px rgba(242, 104, 34, .45);
     --shadow-figma-cta: 0 2px 2px var(--color-black-20), inset 0 1px 1px var(--color-white-20);
     --shadow-figma-header: 0 0 4px var(--color-black-20);
+    --shadow-figma-menu: 0 0 6px var(--color-black-20);
     --shadow-figma-card: 0 0 12px rgba(33, 32, 32, .1);
+    --shadow-figma-case-card: 0 4px 6px rgba(33, 32, 32, .1);
+    --shadow-feature-card: 0 4px 12px rgba(33, 32, 32, .1);
+    --shadow-figma-logo-card: 0 2px 4px var(--color-black-20);
 
     /* ---------- Motion ---------- */
     --transition-fast:  0.15s ease;

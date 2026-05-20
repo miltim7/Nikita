@@ -8,12 +8,17 @@ export function initCasesCarousel() {
 
     if (!slider || !track || !dotsHost) return;
 
-    const dotsCount = 4;
-    let activeDot = 2;
+    let activeIndex = 0;
+    let hasUserInteracted = false;
     let isDragging = false;
     let startX = 0;
     let startScrollLeft = 0;
+    let lastX = 0;
+    let lastTime = 0;
+    let lastScrollLeft = 0;
+    let scrollVelocity = 0;
     let scrollFrame = 0;
+    let momentumFrame = 0;
 
     const getCards = () => Array.from(track.querySelectorAll('.case-card'))
         .filter(card => card.offsetParent !== null)
@@ -26,43 +31,81 @@ export function initCasesCarousel() {
         return card.offsetLeft - ((slider.clientWidth - card.offsetWidth) / 2);
     };
 
-    const setActiveDot = (index) => {
-        activeDot = Math.max(0, Math.min(index, dotsCount - 1));
-        dotsHost.querySelectorAll('button').forEach((dot, dotIndex) => {
-            const active = dotIndex === activeDot;
+    const setActiveIndex = (index) => {
+        const cards = getCards();
+        activeIndex = Math.max(0, Math.min(index, Math.max(0, cards.length - 1)));
+        const dots = Array.from(dotsHost.querySelectorAll('button'));
+
+        dots.forEach((dot, dotIndex) => {
+            const active = dotIndex === activeIndex;
             dot.classList.toggle('is-active', active);
             dot.setAttribute('aria-selected', String(active));
             dot.setAttribute('tabindex', active ? '0' : '-1');
         });
+
+        const activeDot = dots[activeIndex];
+        if (activeDot) {
+            dotsHost.style.setProperty('--cases-dot-active-left', `${activeDot.offsetLeft}px`);
+        }
+
+        const atStart = activeIndex === 0;
+        const atEnd = activeIndex === Math.max(0, cards.length - 1);
+        prev?.classList.toggle('is-disabled', atStart);
+        next?.classList.toggle('is-disabled', atEnd);
     };
 
-    const updateActiveDotByScroll = () => {
-        const maxScrollLeft = getMaxScrollLeft();
-        if (!maxScrollLeft) {
-            setActiveDot(0);
+    const updateActiveIndexByScroll = () => {
+        const cards = getCards();
+        if (!cards.length) {
+            setActiveIndex(0);
             return;
         }
 
-        setActiveDot(Math.ceil((slider.scrollLeft / maxScrollLeft) * (dotsCount - 1)));
+        const maxScrollLeft = getMaxScrollLeft();
+        if (!maxScrollLeft) {
+            setActiveIndex(0);
+            return;
+        }
+
+        setActiveIndex(Math.round((slider.scrollLeft / maxScrollLeft) * (cards.length - 1)));
     };
 
-    const scheduleDotUpdate = () => {
+    const scheduleActiveUpdate = () => {
         if (scrollFrame) return;
         scrollFrame = requestAnimationFrame(() => {
             scrollFrame = 0;
-            updateActiveDotByScroll();
+            updateActiveIndexByScroll();
         });
     };
 
     const scrollToLeft = (left, behavior = 'smooth') => {
+        if (momentumFrame) {
+            cancelAnimationFrame(momentumFrame);
+            momentumFrame = 0;
+        }
+
         const nextLeft = Math.max(0, Math.min(left, getMaxScrollLeft()));
         if (behavior === 'auto') {
             slider.scrollLeft = nextLeft;
-            updateActiveDotByScroll();
+            updateActiveIndexByScroll();
             return;
         }
 
         slider.scrollTo({ left: nextLeft, behavior });
+    };
+
+    const scrollToCard = (index, behavior = 'smooth') => {
+        const cards = getCards();
+        const card = cards[Math.max(0, Math.min(index, cards.length - 1))];
+        if (!card) return;
+        scrollToLeft(getScrollLeftForCard(card), behavior);
+    };
+
+    const scrollToProgress = (index, behavior = 'smooth') => {
+        const cards = getCards();
+        const nextIndex = Math.max(0, Math.min(index, Math.max(0, cards.length - 1)));
+        const denominator = Math.max(1, cards.length - 1);
+        scrollToLeft(getMaxScrollLeft() * (nextIndex / denominator), behavior);
     };
 
     const getInitialScrollLeft = () => {
@@ -78,57 +121,86 @@ export function initCasesCarousel() {
     };
 
     const scheduleInitialPosition = () => {
-        const setInitial = () => scrollToLeft(getInitialScrollLeft(), 'auto');
+        const setInitial = () => {
+            if (hasUserInteracted) return;
+            scrollToLeft(getInitialScrollLeft(), 'auto');
+        };
+
         setInitial();
         requestAnimationFrame(setInitial);
         requestAnimationFrame(() => requestAnimationFrame(setInitial));
-        window.setTimeout(setInitial, 100);
-        window.setTimeout(setInitial, 300);
-        window.setTimeout(setInitial, 600);
-        window.setTimeout(setInitial, 1000);
-        window.setTimeout(setInitial, 1600);
-
-        let attempts = 0;
-        const intervalId = window.setInterval(() => {
-            attempts += 1;
-            setInitial();
-            if (attempts >= 8) window.clearInterval(intervalId);
-        }, 250);
-    };
-
-    const getStep = () => {
-        const cards = getCards();
-        if (cards.length < 2) return cards[0]?.offsetWidth || 0;
-        return Math.abs(cards[1].offsetLeft - cards[0].offsetLeft);
+        window.setTimeout(setInitial, 120);
+        window.setTimeout(setInitial, 360);
     };
 
     const scrollByStep = (direction) => {
-        scrollToLeft(slider.scrollLeft + (getStep() * direction));
+        hasUserInteracted = true;
+        scrollToProgress(activeIndex + direction);
+    };
+
+    const stopMomentum = () => {
+        if (!momentumFrame) return;
+        cancelAnimationFrame(momentumFrame);
+        momentumFrame = 0;
+    };
+
+    const runMomentum = () => {
+        stopMomentum();
+
+        const friction = 0.92;
+        const minVelocity = 0.02;
+
+        const step = () => {
+            const maxScrollLeft = getMaxScrollLeft();
+            const nextLeft = Math.max(0, Math.min(slider.scrollLeft + (scrollVelocity * 16), maxScrollLeft));
+            const hitEdge = nextLeft === 0 || nextLeft === maxScrollLeft;
+
+            slider.scrollLeft = nextLeft;
+            scrollVelocity *= hitEdge ? 0 : friction;
+            updateActiveIndexByScroll();
+
+            if (Math.abs(scrollVelocity) > minVelocity && !hitEdge) {
+                momentumFrame = requestAnimationFrame(step);
+            } else {
+                momentumFrame = 0;
+            }
+        };
+
+        if (Math.abs(scrollVelocity) > minVelocity) {
+            momentumFrame = requestAnimationFrame(step);
+        }
     };
 
     dotsHost.innerHTML = '';
-    for (let index = 0; index < dotsCount; index += 1) {
+    getCards().forEach((card, index) => {
         const dot = document.createElement('button');
         dot.type = 'button';
         dot.setAttribute('role', 'tab');
         dot.setAttribute('aria-label', `Слайд ${index + 1}`);
         dot.addEventListener('click', () => {
-            const maxScrollLeft = getMaxScrollLeft();
-            scrollToLeft(maxScrollLeft * (index / (dotsCount - 1)));
+            hasUserInteracted = true;
+            scrollToProgress(index);
         });
         dotsHost.append(dot);
-    }
-    setActiveDot(activeDot);
+    });
+    setActiveIndex(activeIndex);
 
     prev?.addEventListener('click', () => scrollByStep(-1));
     next?.addEventListener('click', () => scrollByStep(1));
 
     slider.addEventListener('pointerdown', (event) => {
+        if (event.pointerType === 'touch') return;
         if (slider.scrollWidth <= slider.clientWidth) return;
 
+        stopMomentum();
+        hasUserInteracted = true;
         isDragging = true;
         startX = event.clientX;
         startScrollLeft = slider.scrollLeft;
+        lastX = event.clientX;
+        lastTime = performance.now();
+        lastScrollLeft = slider.scrollLeft;
+        scrollVelocity = 0;
         slider.classList.add('is-dragging');
         slider.setPointerCapture(event.pointerId);
     });
@@ -137,6 +209,13 @@ export function initCasesCarousel() {
         if (!isDragging) return;
         event.preventDefault();
         slider.scrollLeft = startScrollLeft - (event.clientX - startX);
+
+        const now = performance.now();
+        const deltaTime = Math.max(1, now - lastTime);
+        scrollVelocity = (slider.scrollLeft - lastScrollLeft) / deltaTime;
+        lastX = event.clientX;
+        lastTime = now;
+        lastScrollLeft = slider.scrollLeft;
     });
 
     const stopDragging = (event) => {
@@ -144,7 +223,8 @@ export function initCasesCarousel() {
 
         isDragging = false;
         slider.classList.remove('is-dragging');
-        updateActiveDotByScroll();
+        updateActiveIndexByScroll();
+        runMomentum();
 
         if (slider.hasPointerCapture(event.pointerId)) {
             slider.releasePointerCapture(event.pointerId);
@@ -153,7 +233,8 @@ export function initCasesCarousel() {
 
     slider.addEventListener('pointerup', stopDragging);
     slider.addEventListener('pointercancel', stopDragging);
-    slider.addEventListener('scroll', scheduleDotUpdate, { passive: true });
+    slider.addEventListener('scroll', scheduleActiveUpdate, { passive: true });
+    slider.addEventListener('wheel', stopMomentum, { passive: true });
 
     slider.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowLeft') {
@@ -172,7 +253,10 @@ export function initCasesCarousel() {
         if (!image.complete) image.addEventListener('error', scheduleInitialPosition, { once: true });
     });
 
-    window.addEventListener('resize', scheduleInitialPosition);
+    window.addEventListener('resize', () => {
+        if (hasUserInteracted) scrollToProgress(activeIndex, 'auto');
+        else scheduleInitialPosition();
+    });
     window.addEventListener('load', scheduleInitialPosition, { once: true });
     scheduleInitialPosition();
 }

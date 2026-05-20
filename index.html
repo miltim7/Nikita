@@ -90,12 +90,36 @@
 <!-- ============ MOBILE MENU ============ -->
 <div class="mobile-menu" id="mobileMenu" hidden>
     <nav class="mobile-menu__nav" aria-label="Главное меню">
-        <a href="#pricing">Условия и цены</a>
-        <a href="#tech">Технические возможности</a>
-        <a href="#security">Надёжность и безопасность</a>
-        <a href="#faq">Вопросы и ответы</a>
-        <a href="#contacts">Контакты</a>
-        <a href="#login" class="mobile-menu__login">Войти / Зарегистрироваться</a>
+        <a href="#pricing" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="assets/images/mobile-menu/icon-money.svg" alt="">
+            </span>
+            <span>Условия и цены</span>
+        </a>
+        <a href="#tech" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="assets/images/mobile-menu/icon-memory.svg" alt="">
+            </span>
+            <span>Технические возможности</span>
+        </a>
+        <a href="#security" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="assets/images/mobile-menu/icon-protect.svg" alt="">
+            </span>
+            <span>Надёжность и безопасность</span>
+        </a>
+        <a href="#faq" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="assets/images/mobile-menu/icon-question.svg" alt="">
+            </span>
+            <span>Вопросы и ответы</span>
+        </a>
+        <a href="#contacts" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="assets/images/mobile-menu/icon-phone.svg" alt="">
+            </span>
+            <span>Контакты</span>
+        </a>
     </nav>
 </div>
 
@@ -396,7 +420,7 @@
 </section>
 
 <!-- ============ RECOMMEND ============ -->
-<section class="recommend">
+<section class="recommend" id="recommend">
     <div class="recommend__bg" aria-hidden="true"></div>
     <div class="container-xxl">
         <h2 class="section-title section-title--light">Нас рекомендуют</h2>
@@ -404,8 +428,54 @@
     </div>
     <div class="recommend__marquee" aria-hidden="true">
         <ul class="recommend__track">
-            <li>Mobil</li><li>Pepsi</li><li>amazon</li><li>CNN</li><li>Yamaha</li><li>Nestle</li>
-            <li>Mobil</li><li>Pepsi</li><li>amazon</li><li>CNN</li><li>Yamaha</li><li>Nestle</li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
         </ul>
     </div>
 </section>
@@ -417,59 +487,75 @@
         <p class="stats__lead">Нашу эффективность можно измерить</p>
         <ul class="stats__list">
             <li class="stat">
-                <span class="stat__pre">все<br>операторы</span>
-                <span class="stat__main">Кыргызстана</span>
-                <span class="stat__sub">+ ближнее и&nbsp;дальнее зарубежье</span>
+                <span class="stat__value stat__value--operators">
+                    <span class="stat__all-main">все</span>
+                    <span class="stat__all-label">операторы</span>
+                </span>
+                <span class="stat__sub">Кыргызстана +ближнее<br>и дальнее зарубежье</span>
             </li>
             <li class="stat">
-                <span class="stat__pre">Более</span>
-                <span class="stat__main">20&nbsp;лет</span>
-                <span class="stat__sub">на рынке профессиональных услуг</span>
+                <span class="stat__value">
+                    <span class="stat__pre">Более</span>
+                    <span class="stat__main">20&nbsp;лет</span>
+                </span>
+                <span class="stat__sub">на рынке<br>профессиональных услуг</span>
             </li>
             <li class="stat">
-                <span class="stat__pre">Более</span>
-                <span class="stat__main">2&nbsp;000+</span>
-                <span class="stat__sub">компаний-клиентов в&nbsp;Кыргызстане и&nbsp;за&nbsp;рубежом</span>
+                <span class="stat__value">
+                    <span class="stat__pre">Более</span>
+                    <span class="stat__main">2&nbsp;000</span>
+                </span>
+                <span class="stat__sub">клиентов<br>доверяют нам свои рассылки</span>
             </li>
             <li class="stat">
-                <span class="stat__pre">Более</span>
-                <span class="stat__main">100&nbsp;000+</span>
-                <span class="stat__sub">сообщений отправляется ежедневно</span>
+                <span class="stat__value">
+                    <span class="stat__pre">Более</span>
+                    <span class="stat__main">100&nbsp;000</span>
+                </span>
+                <span class="stat__sub">SMS<br>отправляем каждый день</span>
             </li>
             <li class="stat">
-                <span class="stat__pre">Доставляемость</span>
-                <span class="stat__main">99.9%</span>
-                <span class="stat__sub">с&nbsp;гарантией доставки в&nbsp;течение секунд</span>
+                <span class="stat__value">
+                    <span class="stat__main">99.9%</span>
+                    <span class="stat__pre">сообщений</span>
+                </span>
+                <span class="stat__sub">гарантированно доходят<br>до адресата</span>
             </li>
         </ul>
     </div>
 </section>
 
 <!-- ============ WHAT YOU GET ============ -->
-<section class="features">
+<section class="features" id="features">
     <div class="features__bg" aria-hidden="true"></div>
     <div class="container-xxl">
-        <h2 class="section-title section-title--light">Что вы получите, выбрав нас</h2>
-        <p class="features__lead">Запустите SMS-рассылку за 5 минут без заключения договора</p>
+        <h2 class="section-title section-title--light">
+            <span class="features-title__line">Что вы получите,</span>
+            <span class="features-title__line">выбрав нас</span>
+        </h2>
+        <p class="features__lead">
+            <span class="features-lead__line">Запустите SMS-рассылку за 5 минут</span>
+            <span class="features-lead__line">без заключения договора</span>
+        </p>
 
         <ul class="features__list">
             <li class="feature">
-                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="14" y="10" width="28" height="36" rx="2" stroke="#fff" stroke-width="2.5"/><path d="M20 20h16M20 28h16M20 36h10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="34" cy="38" r="6" fill="#3E66B3" stroke="#fff" stroke-width="2"/><path d="M31 38l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="feature__icon"><img src="assets/images/features/icon-license.svg" alt="" aria-hidden="true"></span>
                 <h3 class="feature__title">Лицензия на услуги связи</h3>
                 <p class="feature__text">Работаем только в&nbsp;рамках закона</p>
             </li>
             <li class="feature">
-                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M20 44h-6V20h28v8M14 14h28v6H14zM34 34c0-3 3-6 6-6s6 3 6 6-3 6-6 6-6-3-6-6z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M40 28v6l4 2" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+                <span class="feature__icon"><img src="assets/images/features/icon-economy.svg" alt="" aria-hidden="true"></span>
                 <h3 class="feature__title">Контроль расходов</h3>
                 <p class="feature__text">Пластичные и&nbsp;понятные настройки</p>
             </li>
             <li class="feature">
-                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M30 8l-14 22h12l-4 18 16-24H30l4-16z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/></svg></span>
+                <span class="feature__icon"><img src="assets/images/features/icon-speed.svg" alt="" aria-hidden="true"></span>
                 <h3 class="feature__title">Доставка за секунды</h3>
                 <p class="feature__text">Мгновенная доставка сообщений</p>
             </li>
             <li class="feature">
-                <span class="feature__icon"><svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M12 44V28M22 44V18M32 44V24M42 44V12" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></svg></span>
+                <span class="feature__icon"><img src="assets/images/features/icon-stats.svg" alt="" aria-hidden="true"></span>
                 <h3 class="feature__title">Отчёты и аналитика</h3>
                 <p class="feature__text">Удобная статистика в&nbsp;личном кабинете</p>
             </li>
@@ -477,20 +563,19 @@
 
         <div class="features__buttons">
             <a href="#register" class="btn btn-cta">
-                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true"><path d="M9 1L2 4v6c0 4 3 7.5 7 9 4-1.5 7-5 7-9V4L9 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                <img src="assets/images/features/icon-shield.svg" alt="" aria-hidden="true">
                 Зарегистрироваться
-                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a href="#try" class="btn btn-ghost btn-ghost--light">
                 Попробовать бесплатно
-                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <img class="features__button-arrow" src="assets/images/features/icon-arrow.svg" alt="" aria-hidden="true">
             </a>
         </div>
     </div>
 </section>
 
 <!-- ============ CASES EXAMPLES ============ -->
-<section class="cases-ex">
+<section class="cases-ex" id="cases-ex">
     <div class="container-xxl">
         <h2 class="section-title">Кейсы наших клиентов</h2>
         <p class="cases-ex__lead">
@@ -498,81 +583,96 @@
             Вот примеры, когда грамотно выстроенная рассылка увеличивала конверсию и доход.
         </p>
 
-        <div class="cases-ex__list">
+        <div class="cases-ex__list" tabindex="0" aria-label="Кейсы наших клиентов">
             <article class="case-ex">
                 <header class="case-ex__head">
-                    <span class="case-ex__icon"><svg width="36" height="36" viewBox="0 0 32 32" fill="none"><path d="M5 7h3l2 14h14l2-9H10" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/><circle cx="13" cy="26" r="2" fill="#1E6FBA"/><circle cx="23" cy="26" r="2" fill="#1E6FBA"/></svg></span>
-                    <h3 class="case-ex__title">Ритейл и E-commerce <span>(Малый и средний бизнес)</span></h3>
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="7" y="8" width="22" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 14h12M12 18h8M12 22h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Банки, МФО и Сервисы <span>(Крупный бизнес)</span></h3>
+                        <p class="case-ex__task"><span>Задача:</span> Безопасность и уведомления.</p>
+                    </div>
                 </header>
-                <p class="case-ex__task"><span>Задача:</span> Вернуть покупателя и увеличить продажи.</p>
-                <p class="case-ex__scenario">Сценарий:</p>
-                <ul class="case-ex__rows">
-                    <li class="case-ex__row case-ex__row--pink">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5z" stroke="#E37166" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
-                        <div><strong>Рассылка:</strong><br>«Скучаем по вам! Скидка 15% на новую коллекцию по промокоду "FRIEND" до воскресенья».</div>
-                    </li>
-                    <li class="case-ex__row case-ex__row--green">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7CA661" stroke-width="1.8"/><path d="M7 9h10M7 13h6" stroke="#7CA661" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                        <div><strong>Инструмент:</strong><br>Каскадная рассылка. Сначала отправляем в WhatsApp (с фото товара), а тем, кто не прочитал в течение 3 часов&nbsp;— досылаем короткое SMS.</div>
-                    </li>
-                    <li class="case-ex__row case-ex__row--blue">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 5h12v4a6 6 0 11-12 0V5zM8 21h8M12 15v6" stroke="#5586BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                        <div><strong>Результат:</strong><br>Экономия бюджета до 40% за счёт дешёвых мессенджеров и рост конверсии.</div>
-                    </li>
-                </ul>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Сценарий:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Рассылка:</strong>Отправка одноразовых паролей (OTP) для входа в личный кабинет или подтверждения транзакции.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Инструмент:</strong>Прямой API-канал с приоритетной доставкой (до 5-10 секунд).</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Результат:</strong>Высокое доверие клиентов и выполнение требований безопасности.</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="case-ex" data-cases-initial>
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M10 11h4l2 13h12l2-8H17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="18" cy="28" r="2" fill="currentColor"/><circle cx="28" cy="28" r="2" fill="currentColor"/><path d="M22 8a7 7 0 1 1-6.3 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 11v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Ритейл и E-commerce <span>(Малый и средний бизнес)</span></h3>
+                        <p class="case-ex__task"><span>Задача:</span> Вернуть покупателя и увеличить продажи.</p>
+                    </div>
+                </header>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Сценарий:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Рассылка:</strong>«Скучаем по вам! Скидка 15% на новую коллекцию по промокоду "FRIEND" до воскресенья».</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Инструмент:</strong>Каскадная рассылка. Сначала отправляем в WhatsApp (с фото товара), а тем, кто не прочитал в течение 3 часов — досылаем короткое SMS.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Результат:</strong>Экономия бюджета до 40% за счет дешевых мессенджеров и рост конверсии.</div>
+                        </li>
+                    </ul>
+                </div>
             </article>
 
             <article class="case-ex">
                 <header class="case-ex__head">
-                    <span class="case-ex__icon"><svg width="36" height="36" viewBox="0 0 32 32" fill="none"><path d="M3 9h13v13H3zM16 13h7l5 4v5h-12v-9z" stroke="#1E6FBA" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="24" r="2.5" stroke="#1E6FBA" stroke-width="2"/><circle cx="22" cy="24" r="2.5" stroke="#1E6FBA" stroke-width="2"/></svg></span>
-                    <h3 class="case-ex__title">Логистика и Доставка <span>(Средний бизнес)</span></h3>
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M6 12h14v14H6V12zM20 16h7l5 4v6H20V16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="28" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="27" cy="28" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Логистика и Доставка <span>(Средний бизнес)</span></h3>
+                        <p class="case-ex__task"><span>Задача:</span> Информирование о статусе заказа.</p>
+                    </div>
                 </header>
-                <p class="case-ex__task"><span>Задача:</span> Информирование о статусе заказа.</p>
-                <p class="case-ex__scenario">Сценарий:</p>
-                <ul class="case-ex__rows">
-                    <li class="case-ex__row case-ex__row--pink">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5z" stroke="#E37166" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
-                        <div><strong>Рассылка:</strong><br>«Ваш заказ №1234 передан курьеру. Телефон курьера: +996…».</div>
-                    </li>
-                    <li class="case-ex__row case-ex__row--green">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7CA661" stroke-width="1.8"/><path d="M7 9h10M7 13h6" stroke="#7CA661" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                        <div><strong>Инструмент:</strong><br>SMS-уведомления через API.</div>
-                    </li>
-                    <li class="case-ex__row case-ex__row--blue">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 5h12v4a6 6 0 11-12 0V5zM8 21h8M12 15v6" stroke="#5586BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                        <div><strong>Результат:</strong><br>Снижение нагрузки на колл-центр — клиенты не звонят «где мой заказ?».</div>
-                    </li>
-                </ul>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Сценарий:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Рассылка:</strong>«Ваш заказ №1234 передан курьеру. Телефон курьера: +996...».</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Инструмент:</strong>SMS-уведомления через API.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Результат:</strong>Снижение нагрузки на колл-центр — клиенты не звонят с вопросом «где мой заказ?».</div>
+                        </li>
+                    </ul>
+                </div>
             </article>
-
-            <article class="case-ex">
-                <header class="case-ex__head">
-                    <span class="case-ex__icon"><svg width="36" height="36" viewBox="0 0 32 32" fill="none"><rect x="5" y="6" width="22" height="20" rx="2" stroke="#1E6FBA" stroke-width="2"/><path d="M10 12h12M10 16h8M10 20h6" stroke="#1E6FBA" stroke-width="2" stroke-linecap="round"/></svg></span>
-                    <h3 class="case-ex__title">Финансы и Сервисы <span>(Крупный бизнес)</span></h3>
-                </header>
-                <p class="case-ex__task"><span>Задача:</span> Безопасность и уведомления.</p>
-                <p class="case-ex__scenario">Сценарий:</p>
-                <ul class="case-ex__rows">
-                    <li class="case-ex__row case-ex__row--pink">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5z" stroke="#E37166" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
-                        <div><strong>Рассылка:</strong><br>Одноразовых паролей (OTP) для входа в личный кабинет или подтверждения транзакции.</div>
-                    </li>
-                    <li class="case-ex__row case-ex__row--green">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7CA661" stroke-width="1.8"/><path d="M7 9h10M7 13h6" stroke="#7CA661" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-                        <div><strong>Инструмент:</strong><br>SMS с приоритетной доставкой (до 5-10 секунд).</div>
-                    </li>
-                    <li class="case-ex__row case-ex__row--blue">
-                        <span class="case-ex__row-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 5h12v4a6 6 0 11-12 0V5zM8 21h8M12 15v6" stroke="#5586BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                        <div><strong>Результат:</strong><br>Безопасность клиентов и выполнение требований безопасности.</div>
-                    </li>
-                </ul>
-            </article>
+        </div>
+        <div class="cases-ex__scrollbar" aria-hidden="true">
+            <span class="cases-ex__scrollbar-thumb"></span>
         </div>
     </div>
 </section>
 
 <!-- ============ CTA ============ -->
-<section class="cta">
+<section class="cta" id="cta">
     <div class="cta__bg" aria-hidden="true"></div>
     <div class="container-xxl">
         <div class="cta__inner">
@@ -582,13 +682,12 @@
             </div>
             <div class="cta__buttons">
                 <a href="#register" class="btn btn-cta">
-                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" aria-hidden="true"><path d="M9 1L2 4v6c0 4 3 7.5 7 9 4-1.5 7-5 7-9V4L9 1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                    <img class="cta__icon cta__icon--shield" src="assets/images/cta-icon-shield.svg" alt="" aria-hidden="true">
                     Зарегистрироваться
-                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
                 <a href="#try" class="btn btn-ghost btn-ghost--light">
                     Попробовать бесплатно
-                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true"><path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <img class="cta__icon cta__icon--arrow" src="assets/images/cta-icon-arrow.svg" alt="" aria-hidden="true">
                 </a>
             </div>
         </div>
@@ -602,52 +701,80 @@
     <div class="container-xxl">
         <div class="footer__grid">
             <div class="footer__col footer__col--company">
-                <h3 class="footer__company">ОсОО "Никита Онлайн"</h3>
-                <p class="footer__muted">Лицензия ГАС КР №15-1425-КР от&nbsp;18.09.2015</p>
-                <h3 class="footer__company">ОсОО "Никита Мобайл"</h3>
-                <p class="footer__sub">(на основании договора аренды программно-аппаратной платформы с&nbsp;ОсОО&nbsp;"Никита&nbsp;Онлайн" от&nbsp;15.04.2022)</p>
-                <p class="footer__muted">Лицензия ГАС КР №11-828-КР от&nbsp;21.04.2011</p>
-                <p class="footer__address">
-                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true"><path d="M8 19s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
-                    г. Бишкек, ул. Шопокова 89, 5 эт., 9 каб.
-                </p>
+                <div class="footer__company-info">
+                    <h3 class="footer__company">ОсОО "Никита Онлайн"</h3>
+                    <p class="footer__muted">Лицензия ГАС КР №15-1425-КР от&nbsp;18.09.2015</p>
+                    <h3 class="footer__company">ОсОО "Никита Мобайл"</h3>
+                    <p class="footer__sub">(на основании договора аренды программно-аппаратной платформы с ОсОО "Никита Онлайн" от&nbsp;15.04.2022)</p>
+                    <p class="footer__muted">Лицензия ГАС КР №11-828-КР от&nbsp;21.04.2011</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>г. Бишкек, ул. Шопокова 89, 5 эт., 9 каб.</span>
+                    </p>
+                </div>
                 <p class="footer__copy">© ОсОО "Никита Онлайн", ОсОО "Никита Мобайл", 2014-2025 г.</p>
             </div>
 
             <nav class="footer__col footer__col--nav" aria-label="Подвал">
-                <a href="#pricing">Условия и цены</a>
-                <a href="#tech">Технические возможности</a>
-                <a href="#security">Надёжность и безопасность</a>
-                <a href="#faq">Вопросы и ответы</a>
-                <a href="#contacts">Контакты</a>
-                <a href="#terms" class="footer__muted-link">Пользовательское соглашение</a>
-                <a href="#privacy" class="footer__muted-link">Политика конфиденциальности</a>
+                <div class="footer__nav-primary">
+                    <a href="#pricing">Условия и цены</a>
+                    <a href="#tech">Технические возможности</a>
+                    <a href="#security">Надёжность и безопасность</a>
+                    <a href="#faq">Вопросы и ответы</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="#terms">Пользовательское соглашение</a>
+                    <a href="#privacy">Политика конфиденциальности</a>
+                </div>
             </nav>
 
             <div class="footer__col footer__col--contacts">
                 <div class="footer-contact">
                     <h4>Подключение и коммерческие вопросы:</h4>
-                    <a href="mailto:info@nikita.kg" class="footer-contact__row">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><rect x="1" y="1" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M1 3l8 6 8-6" stroke="currentColor" stroke-width="1.5"/></svg>
-                        <span>info@nikita.kg</span>
-                    </a>
-                    <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 1.5l2 3-2 2c1 2 2.5 3.5 4.5 4.5l2-2 3 2v3c0 1-1 2-2 2C5.5 16 2 12.5 2 5c0-1 1-2 2-2 .5 0 .8.2 1 .5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                        <span>+996 (700) 89-21-88</span>
-                        <svg class="footer-contact__send" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-                    </a>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Социальные сети">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-contact">
                     <h4>Техническая поддержка:</h4>
-                    <a href="mailto:info@nikita.kg" class="footer-contact__row">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true"><rect x="1" y="1" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M1 3l8 6 8-6" stroke="currentColor" stroke-width="1.5"/></svg>
-                        <span>info@nikita.kg</span>
-                    </a>
-                    <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 1.5l2 3-2 2c1 2 2.5 3.5 4.5 4.5l2-2 3 2v3c0 1-1 2-2 2C5.5 16 2 12.5 2 5c0-1 1-2 2-2 .5 0 .8.2 1 .5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                        <span>+996 (779) 37-78-88</span>
-                        <svg class="footer-contact__send" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-                    </a>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Социальные сети">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,31 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 834 141" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="bg">
+<mask id="mask0_0_22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="834" height="141">
+<rect id="Rectangle 1" width="834" height="141" fill="var(--fill-0, #D9D9D9)"/>
+</mask>
+<g mask="url(#mask0_0_22)">
+<rect id="Rectangle 2" width="834" height="141" fill="url(#paint0_linear_0_22)"/>
+<ellipse id="Ellipse 1" opacity="0.5" cx="146.5" cy="2" rx="447.5" ry="283" fill="url(#paint1_radial_0_22)"/>
+<ellipse id="Ellipse 2" opacity="0.5" cx="705" cy="-97.5" rx="325" ry="325.5" fill="url(#paint2_radial_0_22)"/>
+<circle id="Ellipse 3" opacity="0.5" cx="898" cy="35" r="213" fill="url(#paint3_radial_0_22)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_22" x1="834" y1="70.5" x2="0" y2="70.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0962AA"/>
+<stop offset="1" stop-color="#1E8FEB"/>
+</linearGradient>
+<radialGradient id="paint1_radial_0_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146.5 2) rotate(90) scale(283 447.5)">
+<stop stop-color="#E035BE"/>
+<stop offset="1" stop-color="#E035BE" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_0_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(705 -97.5) rotate(90) scale(325.5 325)">
+<stop stop-color="#5BC8FF"/>
+<stop offset="1" stop-color="#5BC8FF" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint3_radial_0_22" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(898 35) rotate(90) scale(213)">
+<stop stop-color="#5BFFDE"/>
+<stop offset="1" stop-color="#5BFFDE" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

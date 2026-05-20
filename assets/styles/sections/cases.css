@@ -3,7 +3,7 @@
    ============================================================ */
 .cases {
     position: relative;
-    min-height: 617px;
+    min-height: 573px;
     padding: 48px 0;
     overflow: hidden;
     background: var(--color-bg);
@@ -44,8 +44,11 @@
     height: 358px;
     overflow-x: auto;
     overflow-y: visible;
+    overscroll-behavior-x: contain;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
     cursor: grab;
     user-select: none;
 }
@@ -61,6 +64,7 @@
 
 .cases__carousel.is-dragging {
     cursor: grabbing;
+    scroll-behavior: auto;
 }
 
 .cases__track {
@@ -68,6 +72,7 @@
     width: max-content;
     height: 358px;
     gap: 20px;
+    align-items: stretch;
 }
 
 .case-card {
@@ -80,7 +85,11 @@
     border-radius: var(--radius-md);
     background: var(--color-bg);
     box-shadow: var(--shadow-figma-card);
-    scroll-snap-align: center;
+    cursor: grab;
+}
+
+.cases__carousel.is-dragging .case-card {
+    cursor: grabbing;
 }
 
 .case-card--retail { order: 1; }
@@ -93,6 +102,11 @@
     height: 220px;
     flex: 0 0 220px;
     object-fit: cover;
+    pointer-events: none;
+}
+
+.case-card--travel .case-card__photo {
+    object-position: center 18%;
 }
 
 .case-card__body {
@@ -148,24 +162,56 @@
     outline-offset: 3px;
 }
 
+.cases__arrow.is-disabled {
+    cursor: default;
+    opacity: .45;
+}
+
 .cases__dots {
+    --cases-dot-size: 8px;
+    --cases-dot-gap: 12px;
+    --cases-dot-active-width: 114px;
+    --cases-dot-active-left: 40px;
+
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 174px;
     height: 8px;
-    gap: 12px;
+    gap: var(--cases-dot-gap);
     margin: 36px auto 0;
 }
 
-.cases__dots button {
-    flex: 0 0 auto;
-    width: 8px;
-    height: 8px;
+.cases__dots::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--cases-dot-active-left);
+    width: var(--cases-dot-active-width);
+    height: var(--cases-dot-size);
     border-radius: 12px;
     background: var(--color-header-blue);
+    pointer-events: none;
+    transition: left var(--transition-base), width var(--transition-base);
+}
+
+.cases__dots button {
+    position: relative;
+    flex: 0 0 auto;
+    width: var(--cases-dot-size);
+    height: var(--cases-dot-size);
+    border-radius: 12px;
+    background: var(--color-header-blue);
+    transition: background-color var(--transition-base);
+}
+
+.cases__dots button::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
 }
 
 .cases__dots button.is-active {
-    width: 114px;
+    background: transparent;
 }

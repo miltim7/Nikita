@@ -1,12 +1,104 @@
 .mobile-menu {
-    position: fixed; inset: 0;
-    z-index: 1000;
-    background: rgba(14, 39, 69, .96);
-    color: #fff;
-    padding: 80px 32px 32px;
-    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 84px;
+    right: var(--figma-container-px-tablet);
+    z-index: var(--z-dropdown);
+    width: 260px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-menu);
+    color: var(--color-black-100);
 }
-.mobile-menu__nav { display: flex; flex-direction: column; gap: 18px; font-size: 20px; }
-.mobile-menu__nav a { padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, .12); }
-.mobile-menu__login { color: var(--c-orange); }
-body.is-menu-open { overflow: hidden; }
+
+.mobile-menu[hidden] {
+    display: none;
+}
+
+.mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.mobile-menu__link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 48px;
+    padding: 12px 8px;
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.mobile-menu__link:hover {
+    color: var(--color-black-100);
+}
+
+.mobile-menu__link--active,
+.mobile-menu__link--active:hover {
+    background: var(--color-header-blue);
+    color: var(--color-text-inverse);
+}
+
+.mobile-menu__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.mobile-menu__icon-img {
+    position: absolute;
+    display: block;
+    max-width: none;
+}
+
+.mobile-menu__icon-img--money {
+    top: 19.23%;
+    left: 7.69%;
+    width: 84.62%;
+    height: 61.22%;
+}
+
+.mobile-menu__icon-img--memory {
+    top: 15.54%;
+    left: 15.54%;
+    width: 68.92%;
+    height: 68.92%;
+}
+
+.mobile-menu__icon-img--protect {
+    top: 10.58%;
+    left: 18.75%;
+    width: 62.5%;
+    height: 78.92%;
+}
+
+.mobile-menu__icon-img--question {
+    top: 10.42%;
+    left: 10.42%;
+    width: 79.16%;
+    height: 79.16%;
+}
+
+.mobile-menu__icon-img--phone {
+    top: 14.58%;
+    left: 14.58%;
+    width: 70.84%;
+    height: 70.84%;
+    transform: scaleX(-1);
+}
+
+body.is-menu-open {
+    overflow-x: hidden;
+}
