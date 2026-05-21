@@ -1178,14 +1178,17 @@
     .footer__col--contacts {
         order: 2;
         position: static;
+        align-items: center;
         width: 100%;
         padding-top: 12px;
         border-top: 1px solid var(--color-white-20);
         gap: 24px;
+        text-align: center;
     }
     .footer-contact {
-        display: grid;
-        grid-template-columns: 180px minmax(0, 1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 8px;
         width: 100%;
     }
@@ -1201,8 +1204,14 @@
     }
     .footer-contact__channels {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 6px;
+    }
+    .footer-contact__body,
+    .footer-contact__row,
+    .footer-contact__socials {
+        align-items: center;
+        justify-content: center;
     }
     .footer-contact__row--phone {
         font-size: var(--fs-sm);
@@ -1218,10 +1227,17 @@
     }
     .footer__col--nav {
         order: 3;
+        align-items: center;
         padding-top: 12px;
+        text-align: center;
     }
     .footer__nav-primary {
         display: none;
+    }
+    .footer__nav-legal {
+        align-items: center;
+        width: 100%;
+        text-align: center;
     }
 }
 

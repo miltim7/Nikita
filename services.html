@@ -1,0 +1,854 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — Services</title>
+    <meta name="description" content="Тарифы на отправку SMS абонентам Beeline, MegaCom и O!, условия сотрудничества и способы оплаты.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body class="page-services">
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Дополнительная навигация">
+                <a href="#pricing" class="topbar__link topbar__link--active">Условия и цены</a>
+                <a href="#tech" class="topbar__link">Технические возможности</a>
+                <a href="#security" class="topbar__link">Надёжность и безопасность</a>
+                <a href="#faq" class="topbar__link">Вопросы и ответы</a>
+                <a href="#contacts" class="topbar__link">Контакты</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="#login" class="topbar__login">
+                    <img src="assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Войти&nbsp;/&nbsp;Зарегистрироваться</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="/" class="header__logo" aria-label="Nikita — главная">
+                <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="assets/images/header-icon-support.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Обратиться<br>в техподдержку</span>
+                    </a>
+                    <a href="#manager" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="assets/images/header-icon-chat.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Связаться<br>с менеджером</span>
+                    </a>
+                </div>
+                <a href="#demo" class="btn btn-cta header__cta">
+                    <img src="assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Попробовать демо&nbsp;бесплатно</span>
+                    <span class="header__cta-short">Демо</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Меню" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Главное меню">
+        <a href="#pricing" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="assets/images/mobile-menu/icon-money.svg" alt="">
+            </span>
+            <span>Условия и цены</span>
+        </a>
+        <a href="#tech" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="assets/images/mobile-menu/icon-memory.svg" alt="">
+            </span>
+            <span>Технические возможности</span>
+        </a>
+        <a href="#security" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="assets/images/mobile-menu/icon-protect.svg" alt="">
+            </span>
+            <span>Надёжность и безопасность</span>
+        </a>
+        <a href="#faq" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="assets/images/mobile-menu/icon-question.svg" alt="">
+            </span>
+            <span>Вопросы и ответы</span>
+        </a>
+        <a href="#contacts" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="assets/images/mobile-menu/icon-phone.svg" alt="">
+            </span>
+            <span>Контакты</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+
+<!-- ============ SERVICES PRICING ============ -->
+<section class="service-page" id="pricing">
+    <div class="service-page__breadcrumbs container-xxl" aria-label="Хлебные крошки">
+        <span>Главная → </span><strong>Услуги и цены</strong>
+    </div>
+
+    <div class="service-page__head container-xxl">
+        <h1 class="service-page__title">Услуги и цены</h1>
+        <nav class="service-tabs" aria-label="Разделы услуг" role="tablist" data-service-tabs>
+            <a href="#service-tab-sending" class="service-tabs__item" role="tab" id="service-tab-sending-control" aria-controls="service-tab-sending" aria-selected="false" tabindex="-1" data-service-tab="sending">Отправка SMS</a>
+            <a href="#service-tab-receive" class="service-tabs__item" role="tab" id="service-tab-receive-control" aria-controls="service-tab-receive" aria-selected="false" tabindex="-1" data-service-tab="receive">Прием SMS</a>
+            <a href="#service-tab-otp" class="service-tabs__item" role="tab" id="service-tab-otp-control" aria-controls="service-tab-otp" aria-selected="false" tabindex="-1" data-service-tab="otp">OTP-Сервис</a>
+            <a href="#service-tab-flash" class="service-tabs__item service-tabs__item--active" role="tab" id="service-tab-flash-control" aria-controls="service-tab-flash" aria-selected="true" data-service-tab="flash">Flash SMS</a>
+            <a href="#service-tab-payment" class="service-tabs__item" role="tab" id="service-tab-payment-control" aria-controls="service-tab-payment" aria-selected="false" tabindex="-1" data-service-tab="payment">Способы оплаты</a>
+        </nav>
+    </div>
+
+    <div class="service-tabpanels">
+        <div class="service-tabpanel" id="service-tab-sending" role="tabpanel" aria-labelledby="service-tab-sending-control" data-service-panel="sending" hidden>
+    <div class="service-intro container-xxl">
+        <div class="service-intro__copy">
+            <p>Стоимость каждого отправленного SMS-сообщения абонентам&nbsp;Beeline, MegaCom, O!&nbsp;зависит от размера&nbsp;первого платежа&nbsp;(минимальный платеж для активации тарифа) и оператора связи.</p>
+            <p><strong>Таким образом, чем больше зачисляете на счет, тем ниже стоимость.</strong></p>
+        </div>
+        <div class="service-hints">
+            <article class="service-hint">
+                <span class="service-hint__icon service-hint__icon--like" aria-hidden="true"></span>
+                <p>Дополнительных плат нет. Все&nbsp;<a class="service-hint__link" href="#tech">технические возможности</a>&nbsp;доступны во всех тарифах в полном объеме.</p>
+            </article>
+            <article class="service-hint">
+                <span class="service-hint__icon service-hint__icon--wallet" aria-hidden="true"></span>
+                <p><strong>Внесенная сумма не «сгорает».</strong> Средства можно тратить сколько угодно долго.</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="service-rates container-xxl">
+        <table class="rates-table" aria-label="Тарифы на отправку SMS">
+            <colgroup>
+                <col class="rates-table__operator">
+                <col class="rates-table__type">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">Тариф</th>
+                    <th>Старт</th>
+                    <th>Оптима</th>
+                    <th>Профи</th>
+                    <th>Экстра</th>
+                </tr>
+                <tr>
+                    <th colspan="2">Первый платёж (KGS)</th>
+                    <th>до 5 000</th>
+                    <th>до 10 000</th>
+                    <th>до 25 000</th>
+                    <th>более 25 000</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <th rowspan="3" scope="rowgroup">
+                        <span class="operator-logo operator-logo--mega"><img src="assets/images/services/logo-mega-desktop.png" alt="MEGA"></span>
+                        <strong>MegaCom</strong>
+                        <small>ЗАО “Альфа Телеком”</small>
+                    </th>
+                    <td>Национальные имена отправителей</td>
+                    <td>1,30</td><td>1,28</td><td>1,25</td>
+                    <td rowspan="3">По договору</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <td>Для финансовых учреждений</td>
+                    <td>2,16</td><td>2,13</td><td>2,07</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <td>Международные имена отправителей</td>
+                    <td>25,34</td><td>24,92</td><td>24,49</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <th rowspan="4" scope="rowgroup">
+                        <span class="operator-logo operator-logo--beeline"><img src="assets/images/services/logo-beeline-desktop.png" alt="Beeline"></span>
+                        <strong>Beeline</strong>
+                        <small>ОАО “Скай Мобайл”</small>
+                    </th>
+                    <td>Транзакционные сообщения</td>
+                    <td>1,45</td><td>1,42</td><td>1,39</td>
+                    <td rowspan="4">По договору</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Сервисные сообщения</td>
+                    <td>1,67</td><td>1,64</td><td>1,60</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Рекламные сообщения</td>
+                    <td>3,04</td><td>2,99</td><td>2,91</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Международные имена отправителей</td>
+                    <td>19,37</td><td>19,05</td><td>18,73</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--o">
+                    <th rowspan="2" scope="rowgroup">
+                        <span class="operator-logo operator-logo--o"><img src="assets/images/services/logo-o-desktop.svg" alt="O!"></span>
+                        <strong>O!</strong>
+                        <small>ОАО “НУР Телеком”</small>
+                    </th>
+                    <td>Национальные имена отправителей</td>
+                    <td>1,66</td><td>1,64</td><td>1,59</td>
+                    <td rowspan="2">По договору</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--o">
+                    <td>Международные имена отправителей</td>
+                    <td>20,67</td><td>20,32</td><td>19,98</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="rates-mobile" aria-label="Тарифы на отправку SMS">
+            <article class="rate-card rate-card--mega">
+                <h2><span class="operator-logo operator-logo--mega"><img src="assets/images/services/logo-mega-desktop.png" alt="MEGA"></span><strong>MegaCom</strong><small>ЗАО “Альфа Телеком”</small></h2>
+                <div class="rate-card__plans"><span></span><b>Старт<small>до 5К</small></b><b>Оптима<small>до 10К</small></b><b>Профи<small>до 25К</small></b><b>Экстра<small>25К +</small></b></div>
+                <div class="rate-card__row"><span>Национальные имена отправителей</span><i>1,30</i><i>1,28</i><i>1,25</i><i data-span="true">По договору</i></div>
+                <div class="rate-card__row"><span>Для финансовых учреждений</span><i>2,16</i><i>2,13</i><i>2,07</i><i></i></div>
+                <div class="rate-card__row"><span>М/ународные имена отправителей</span><i>25,34</i><i>24,92</i><i>24,49</i><i></i></div>
+            </article>
+            <article class="rate-card rate-card--beeline">
+                <h2><span class="operator-logo operator-logo--beeline"><img src="assets/images/services/logo-beeline-desktop.png" alt="Beeline"></span><strong>Beeline</strong><small>ОАО “Скай Мобайл”</small></h2>
+                <div class="rate-card__plans"><span></span><b>Старт<small>до 5К</small></b><b>Оптима<small>до 10К</small></b><b>Профи<small>до 25К</small></b><b>Экстра<small>25К +</small></b></div>
+                <div class="rate-card__row"><span>Транзакц. сообщения</span><i>1,45</i><i>1,42</i><i>1,39</i><i data-span="true">По договору</i></div>
+                <div class="rate-card__row"><span>Сервисные сообщения</span><i>1,67</i><i>1,64</i><i>1,60</i><i></i></div>
+                <div class="rate-card__row"><span>Рекламные сообщения</span><i>3,04</i><i>2,99</i><i>2,91</i><i></i></div>
+                <div class="rate-card__row"><span>М/ународные имена отправителей</span><i>19,37</i><i>19,05</i><i>18,73</i><i></i></div>
+            </article>
+            <article class="rate-card rate-card--o">
+                <h2><span class="operator-logo operator-logo--o"><img src="assets/images/services/logo-o-desktop.svg" alt="O!"></span><strong>O!</strong><small>ОАО “НУР Телеком”</small></h2>
+                <div class="rate-card__plans"><span></span><b>Старт<small>до 5К</small></b><b>Оптима<small>до 10К</small></b><b>Профи<small>до 25К</small></b><b>Экстра<small>25К +</small></b></div>
+                <div class="rate-card__row"><span>Национальные имена отправителей</span><i>1,66</i><i>1,64</i><i>1,59</i><i data-span="true">По договору</i></div>
+                <div class="rate-card__row"><span>М/ународные имена отправителей</span><i>20,67</i><i>20,32</i><i>19,98</i><i></i></div>
+            </article>
+        </div>
+    </div>
+
+    <div class="service-note container-xxl">
+        <p><a href="#pricing">[1]&nbsp;</a>Сразу после активации аккаунта клиенту подключается тариф "Старт".</p>
+        <p><a href="#contacts">[2]&nbsp;</a>Цены и возможности отправки в Россию и прочие страны СНГ и мира пожалуйста уточняйте у менеджера.</p>
+        <p><a href="#payment">[3]&nbsp;</a>Цены указаны в сомах и включают в себя налоги НДС и НсП.&nbsp;Прайс актуален с 01 сентября 2025 г.</p>
+    </div>
+
+    <section class="service-copy service-copy--with-aside container-xxl">
+        <div class="service-copy__text">
+            <h2>Национальные и Международные sms</h2>
+            <p class="service-copy__lead">Отправка SMS-сообщений от имен, которые операторы посчитают национальными и зарегистрируют, будет тарифицироваться по тарифам для национальных имен отправителей. Все остальные незарегистрированные имена будут считаться международными, и SMS-сообщения от таких имен будут тарифицироваться по тарифам для международных имен отправителей.</p>
+            <p>К международным&nbsp;относятся альфанумерические имена, которые используются международными брендами, платёжными системами, международными электронными кошельками и/или системами расчётов (например, WebMoney, Qiwi Wallet и т.д.), международными социальными сетями, международными игровыми Интернет-сервисами, международными сервисами электронной почты, файлообменниками, поисковыми системами (например, Mail.Ru, Yahoo, Rambler.ru, Google, и т.д.).</p>
+        </div>
+        <aside class="service-actions">
+            <a href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls" class="service-action service-action--download" target="_blank" rel="noopener">Скачать и заполнить форму заявки на&nbsp;согласование имени отправителя</a>
+            <a href="#sender-info" class="service-action service-action--info">Узнать подробнее о международных именах отправителей</a>
+        </aside>
+    </section>
+
+    <section class="service-copy container-xxl">
+        <div class="service-copy__text">
+            <h2>Регистрация имен отправителей</h2>
+            <p class="service-copy__lead">Независимо от типа, национальное или международное, все имена отправителей должны быть зарегистрированы.</p>
+            <p>Только после регистрации имени каждым оператором появится возможность отправки SMS-сообщений абонентам данного оператора от зарегистрированного имени.</p>
+            <p>Для регистрации имени отправителя необходимо <a class="service-copy__link" href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls" target="_blank" rel="noopener">заполнить&nbsp;заявку</a>&nbsp;и отправить запрос на e-mail <a class="service-copy__link" href="mailto:names@nikita.kg">names@nikita.kg</a>.</p>
+            <p>Срок регистрации новых имен для клиентов с национальным трафиком занимает до 10-ти рабочих дней.</p>
+        </div>
+    </section>
+
+    <section class="service-copy service-copy--features container-xxl">
+        <div class="service-copy__text">
+            <h2>Особенности тарификации</h2>
+            <p class="service-copy__lead">Тарификация за отправленные SMS-сообщения выполняется в заисимости от установленного тарифного плана, имени отправителя, и количества частей сообщений. Ошибочные отправки не тарифицируются.</p>
+            <div class="service-feature-list">
+                <p>У оператора&nbsp;<strong>Beeline</strong>&nbsp;(ООО "Скай Мобайл") SMS-сообщения тарифицируются также в зависимости от типа сообщений, которые делятся на&nbsp;сервисные, транзакционные и рекламные. Рассылка производится по предварительно согласованным с оператором шаблонам транзакционных/сервисных сообщений.</p>
+                <article><h3>Транзакционные (банковские) SMS:</h3><p>К Транзакционным относятся SMS-сообщения, информирующие Абонента о проведении операций по движению денежных средств на его счёте либо о невозможности выполнения такой операции. В шаблоне сообщения должен быть явно указан тип операции, номер счета и сумма.</p></article>
+                <article><h3>Сервисные SMS:</h3><p>Сервисным признается Сообщение, информирующее Абонента о статусе оказания ему сервиса/услуги клиента, а так же информирующих о событиях и/или операциях в рамках оказываемых услуг.</p></article>
+                <article><h3>Рекламные SMS:</h3><p>Рекламными SMS считаются все сообщения, не попадающие под шаблоны сервисных и транзакционных SMS.</p></article>
+                <article class="service-feature-list__card"><h3>Тариф для финансовых учреждений</h3><p>У оператора MegaCom (ЗАО "Альфа Телеком") сообщения, отправляемые финансовыми организациями, оплачиваются по отдельному тарифу. Список имен отправителей для организаций, осуществляющих финансовые услуги (банки, микрокредитные компании, ломбарды) устанавливается оператором.</p></article>
+            </div>
+        </div>
+        <aside class="service-actions service-actions--single">
+            <a href="#template-form" class="service-action service-action--download">Форма заявки на&nbsp;согласование&nbsp;шаблонов транзакционных/сервисных SMS</a>
+        </aside>
+    </section>
+
+    <section class="cooperation">
+        <div class="cooperation__inner container-xxl">
+            <div class="cooperation__top">
+                <div>
+                    <h2>Условия сотрудничества</h2>
+                    <p>Мы дорожим репутацией, поэтому не занимаемся SPAM'ом и нелегальными рассылками.</p>
+                </div>
+                <aside class="service-actions service-actions--contract">
+                    <a href="#contract" class="service-action service-action--download">Скачать типовой договор</a>
+                </aside>
+            </div>
+            <ol class="cooperation__list">
+                <li><span>01</span><p>Проводя рассылки используя наш шлюз клиент выражает свое согласие с положениями&nbsp;<strong class="cooperation__accent-muted">Пользовательского соглашения.</strong> Возможность подмены имени отправителя (Sender ID) предоставляется только после подачи клиентом заявки на регистрацию имени отправителя у операторов и модерации администратором сервиса <strong>smspro.nikita.kg</strong></p></li>
+                <li><span>02</span><p>Договор необходим в том случае, если Вам необходимо получать корректные бухгалтерские отчеты. Для заключения письменного договора необходимо предоставить свидетельство о регистрации юридического лица или ЧП (либо паспорт для физических лиц)</p></li>
+                <li><span>03</span><p>Форма оплаты при заключении письменного договора –&nbsp;<strong>безналичный расчет.</strong> Порядок оплаты услуг - пополнение лицевого счета клиента в системе <strong>smspro.nikita.kg</strong> с последующим списанием средств за предоставленные услуги в соответствии с тарифом</p></li>
+                <li><span>04</span><p>Сразу после регистрации клиенту активируется тариф&nbsp;<strong>"СТАРТ"</strong>. Возможность проводить рассылки и пополнять счет активируется для клиента&nbsp;<strong>только после валидации номера телефона&nbsp;клиента</strong></p></li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="payment-methods container-xxl" id="payment">
+        <h2>Способы оплаты</h2>
+        <p class="payment-methods__lead">Мгновенное зачисление средств <span>с комиссией от 0%!</span></p>
+        <div class="payment-methods__text">
+            <p>Для начала работы требуется только&nbsp;<a href="#register">регистрация,</a> после чего Вы сразу сможете пополнить свой счет и приступить к работе уже через 5 минут –&nbsp;даже без согласования с менеджером!</p>
+            <p>Пополнить счет в нашей системе можно несколькими способами.</p>
+        </div>
+        <h3>Мы принимаем:</h3>
+        <ul class="payment-list">
+            <li><span class="payment-list__icon payment-list__icon--bank" aria-hidden="true"></span><strong>Безналичный<br>расчёт</strong></li>
+            <li><span class="payment-list__icon payment-list__icon--card" aria-hidden="true"></span><strong>Банковские<br>карты</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--mbank"><img src="assets/images/services/payment-mbank.png" alt="mbank"></span><strong>Оплата через Мбанк</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--elqr"><img src="assets/images/services/payment-elqr-source.png" alt="ELQR"></span><strong>Оплата через ELQR</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--pay24"><img src="assets/images/services/payment-pay24.png" alt="Pay24"></span><strong>Оплата<br>через терминалы Pay24</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--elsom"><img src="assets/images/services/payment-elsom-source.png" alt="ЭЛСОМ"></span><strong>Оплата через<br>электронный кошелек ЭЛСОМ</strong></li>
+        </ul>
+    </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-receive" role="tabpanel" aria-labelledby="service-tab-receive-control" data-service-panel="receive" hidden>
+            <section class="receive-intro container-xxl">
+                <div class="receive-intro__copy">
+                    <h2>Нужна обратная связь от ваших клиентов?</h2>
+                    <p>Для обеспечения обратной связи – приема SMS-сообщений от абонентов всех сотовых операторов Кыргызстана компания NIKITA предоставляет услугу&nbsp;<strong>«Аренда короткого SMS-номера».</strong></p>
+                </div>
+                <aside class="receive-alert">
+                    <span class="receive-alert__icon" aria-hidden="true"></span>
+                    <p>Вы сможете проводить ваши автоматические SMS-рассылки <strong>от имени арендуемого номера.</strong></p>
+                </aside>
+            </section>
+
+            <section class="receive-rates container-xxl" aria-label="Стоимость приема SMS">
+                <div class="receive-rates__table">
+                    <div class="receive-rates__row">
+                        <strong>Стоимость аренды короткого номера для клиента</strong>
+                        <span>1000 сом./мес</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Стоимость приема одного SMS-сообщения для клиента</strong>
+                        <span>1.00 сом.</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Вид арендуемого номера: четырехзначный</strong>
+                        <span>7115</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Стоимость отправки SMS для абонента</strong>
+                        <span>1.00 сом.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="receive-processing container-xxl">
+                <div class="receive-processing__copy">
+                    <h2>Обрабатывать получаемые SMS-сообщения можно двумя способами:</h2>
+                    <ol>
+                        <li>В WEB-интерфейсе системы SMSPRO.NIKITA.KG с возможностью фильтрации и выгрузки SMS-сообщений в Excel</li>
+                        <li>Принимать SMS-сообщения для обработки на стороне клиента по&nbsp;<a href="#xml-api">HTTP(s)/XML-протоколу</a></li>
+                    </ol>
+                </div>
+                <aside class="service-actions receive-processing__actions">
+                    <a href="#xml-api" class="service-action service-action--download">Загрузить описание XML-API</a>
+                </aside>
+            </section>
+
+            <section class="receive-rent">
+                <div class="receive-rent__inner container-xxl">
+                    <div class="receive-rent__copy">
+                        <h2>Если у вас стоит задача</h2>
+                        <ul>
+                            <li>оценить эффективность маркетинговой акции</li>
+                            <li>провести опрос / голосование</li>
+                            <li>получать по SMS заказы и предложения о клиентах</li>
+                            <li>проводить многоэтапные маркетинговые акции типа «приведи друга»</li>
+                        </ul>
+                        <p>то услуга&nbsp;«Аренда короткого SMS-номера»&nbsp;- для Вас!</p>
+                    </div>
+                    <aside class="receive-rent__note">
+                        <div class="receive-rent__note-inner">
+                            <p><span>*</span> В данный момент при подключении услуги «Аренда короткого SMS-номера» Вам будет доступен только номер&nbsp;7115.</p>
+                            <p><strong>Возможность подключения другого короткого номера уточняйте у менеджера.</strong></p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="payment-methods payment-methods--receive container-xxl">
+                <h2>Способы оплаты</h2>
+                <p class="payment-methods__lead">Мгновенное зачисление средств <span>с комиссией от 0%!</span></p>
+                <div class="payment-methods__text">
+                    <p>Для начала работы требуется только&nbsp;<a href="#register">регистрация,</a> после чего Вы сразу сможете пополнить свой счет и приступить к работе уже через 5 минут –&nbsp;даже без согласования с менеджером!</p>
+                    <p>Пополнить счет в нашей системе можно несколькими способами.</p>
+                </div>
+                <h3>Мы принимаем:</h3>
+                <ul class="payment-list">
+                    <li><span class="payment-list__icon payment-list__icon--bank" aria-hidden="true"></span><strong>Безналичный<br>расчёт</strong></li>
+                    <li><span class="payment-list__icon payment-list__icon--card" aria-hidden="true"></span><strong>Банковские<br>карты</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--mbank"><img src="assets/images/services/payment-mbank.png" alt="mbank"></span><strong>Оплата через Мбанк</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--elqr"><img src="assets/images/services/payment-elqr-source.png" alt="ELQR"></span><strong>Оплата через ELQR</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--pay24"><img src="assets/images/services/payment-pay24.png" alt="Pay24"></span><strong>Оплата<br>через терминалы Pay24</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--elsom"><img src="assets/images/services/payment-elsom-source.png" alt="ЭЛСОМ"></span><strong>Оплата через<br>электронный кошелек ЭЛСОМ</strong></li>
+                </ul>
+            </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-otp" role="tabpanel" aria-labelledby="service-tab-otp-control" data-service-panel="otp" hidden>
+            <section class="otp-intro container-xxl">
+                <div class="otp-copy">
+                    <h2>Что такое одноразовый пароль?</h2>
+                    <p class="otp-copy__text"><strong>Одноразовые пароли (One Time Password, OTP)</strong> – простая и надёжная форма двухфакторной аутентификации.</p>
+                    <p class="otp-copy__text">Двухфакторная аутентификация – это <strong>дополнительный уровень безопасности,</strong> позволяющий исключить уязвимости стандартного пароля и необходимый для защиты вашей компании и её данных.</p>
+                    <p class="otp-copy__text otp-copy__text--gap"><strong>Защитите свой сервис и пользователей от несанкционированных действий.</strong></p>
+                    <p class="otp-copy__text">Верифицируйте клиентов и их действия при помощи одноразовых SMS-кодов.</p>
+                    <p class="otp-copy__text otp-copy__text--gap">Одноразовый SMS-код – отличное решение для компаний, бизнес которых напрямую связан с Интернетом и работой с большой клиентской базой.</p>
+                </div>
+                <div class="otp-copy">
+                    <h2>Как происходит авторизация клиента?</h2>
+                    <p class="otp-copy__text">В основе двухэтапной аутентификации лежит подтверждение по номеру телефона. Это надежный и безотказный метод, который будет работать в 99% случаев.</p>
+                    <p class="otp-copy__text">Он понятен и <strong>не требует от пользователя установки дополнительного ПО, покупки специальных устройств или выполнения сложных действий.</strong></p>
+                    <ol>
+                        <li>Пользователь вводит свой номер телефона</li>
+                        <li>Наша платформа отправляет ему SMS c одноразовым паролем</li>
+                        <li>Пользователь получает SMS-сообщение с паролем, после чего вводит его на сайте или в приложении.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="otp-purpose">
+                <div class="otp-purpose__inner container-xxl">
+                    <h2>Для чего нужны одноразовые коды?</h2>
+                    <div class="otp-purpose__grid">
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--shield" aria-hidden="true"></span>
+                            <h3>Защита бизнеса от мошенников</h3>
+                            <p>Защитите свой сервис от несанкционированных действий, <br>финансовых и репутационных потерь</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--bank" aria-hidden="true"></span>
+                            <h3>Для банков</h3>
+                            <p>Используйте одноразовые пароли <br>для подтверждения оплаты и совершения транзакции</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--cart" aria-hidden="true"></span>
+                            <h3>Для ритейла</h3>
+                            <p>Привяжите аккаунты покупателей <br>к телефону и списывайте бонусные баллы <br>с помощью одноразовых паролей</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--transport" aria-hidden="true"></span>
+                            <h3>Для<br>пассажироперевозок</h3>
+                            <p>Отправляйте SMS-коды для подтверждения бронирования мест и оплаты билетов</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="otp-benefits container-xxl">
+                <div class="otp-task">
+                    <h2>Авторизация по СМС<br>решает такие задачи, как:</h2>
+                    <div class="otp-benefit-list">
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--copy" aria-hidden="true"></span>
+                            <div>
+                                <h3>Устранение дублей</h3>
+                                <p>Устранение дублирующихся регистраций или аккаунтов (один номер телефона = один аккаунт)</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--check" aria-hidden="true"></span>
+                            <div>
+                                <h3>Безопасность транзакций</h3>
+                                <p>Подтвреждение транзакций одноразовым СМС-паролем повышает надежность операций</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--person" aria-hidden="true"></span>
+                            <div>
+                                <h3>Верификация абонента</h3>
+                                <p>Введенный телефон существует, работает и принадлежит пользователю, а не роботу</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--censor" aria-hidden="true"></span>
+                            <div>
+                                <h3>Защита от спам-атак</h3>
+                                <p>Двухфакторная аутентификация предотвращает спам-атаки</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--like" aria-hidden="true"></span>
+                            <div>
+                                <h3>Повышение валидности результатов</h3>
+                                <p>Подтверждение участников интернет-голосований повышает надежность полученных результатов</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="otp-factor">
+                    <h2>Преимущества <br>двухфакторной аутентификации</h2>
+                    <div class="otp-benefit-list">
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--star" aria-hidden="true"></span>
+                            <div>
+                                <h3>Уникальность</h3>
+                                <p>Одноразовые сообщения уникальны для каждого пользователя и каждого входа в систему с любого цифрового устройства.</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--message" aria-hidden="true"></span>
+                            <div>
+                                <h3>SMS авторизация</h3>
+                                <p>Классический способ отправки одноразовых кодов, ставший привычным для большинства клиентов</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--mail" aria-hidden="true"></span>
+                            <div>
+                                <h3>SMS — канал с максимальной открываемостью</h3>
+                                <p>Поэтому клиент увидит сообщение сразу после получения. <br>Это обеспечит высокий процент успешных регистраций и авторизаций.</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--edit" aria-hidden="true"></span>
+                            <div>
+                                <h3>Своя подпись</h3>
+                                <p>Можно также добавить свое цифро-буквенное имя отправителя, чтобы клиент был уверен, что сообщение отправили именно Вы.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="otp-steps">
+                <div class="otp-steps__inner container-xxl">
+                    <div class="otp-steps__head">
+                        <h2>Как сделать авторизацию по СМС на сайте</h2>
+                        <p>Просто зарегистрируйтесь у нас на сайте, заполните форму заявки на согласование имени отправителя и получите свою подпись (Sender ID). <br class="otp-steps__desktop-break">Затем выполните несколько несложных шагов:</p>
+                    </div>
+                    <ol class="otp-steps__list">
+                        <li>
+                            <span>01</span>
+                            <p>Разместите на Вашем сайте форму регистрации, где среди прочих полей должны быть поля для ввода номера телефона и одноразового пароля.</p>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <p>Генерация и отправка уникального одноразового кода/пароля абоненту осуществляется при помощи нашего</p>
+                            <a class="otp-api-link" href="#otp-api"><span>OTP-API</span><span class="otp-api-link__icon" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <p>Авторизация абонента.<br><br>Абонент вводит полученный код в поле формы. Производится проверка совпадения сгенерированного системой и введенного абонентом кодов.</p>
+                        </li>
+                        <li>
+                            <span>04</span>
+                            <p>Если коды совпадают, то клиенту можно выдать доступ в личный кабинет, если не совпадают, то клиенту нужно выдать сообщение об ошибке и просьбу ввести пароль еще раз.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+        <div class="service-tabpanel service-tabpanel--active" id="service-tab-flash" role="tabpanel" aria-labelledby="service-tab-flash-control" data-service-panel="flash">
+            <section class="flash-intro container-xxl">
+                <div class="flash-intro__copy">
+                    <h2>Новый канал продвижения – Flash SMS</h2>
+                    <p><strong>Эффективная и таргетированная реклама – залог роста доходов и сокращения ненужных затрат.</strong></p>
+                    <p>Flash SMS — это SMS-сообщение, которое моментально отображается на экране мобильного телефона. Вашим адресатам для просмотра сообщения не придется нажимать ни одной кнопки, а ваше сообщение не останется незамеченным!</p>
+                </div>
+                <div class="flash-hints">
+                    <article class="flash-hint flash-hint--base">
+                        <span class="flash-hint__icon" aria-hidden="true"></span>
+                        <p>Самая большая база на рынке: у нас <strong>около 3 000 000 абонентов&nbsp;Beeline</strong> по всему Кыргызстану!</p>
+                    </article>
+                    <article class="flash-hint flash-hint--growth">
+                        <span class="flash-hint__icon" aria-hidden="true"></span>
+                        <p>Эффективность канала Flash SMS сделает этих клиентов постоянными для Вас!</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="flash-ad">
+                <div class="flash-ad__inner container-xxl">
+                    <div class="flash-ad__preview">
+                        <h2>Как выглядит такая реклама?</h2>
+                        <ul class="flash-checklist" aria-label="Возможности Flash SMS">
+                            <li>Flash SMS появляется в открытом виде на экране телефона со звуком сообщения</li>
+                            <li>Кликабельная ссылка</li>
+                            <li>Работает на всех мобильных телефонах</li>
+                            <li>Можно сохранить текст, если он полезен и пригодится</li>
+                            <li>Есть отчет о доставке</li>
+                            <li>70 символов на кириллице, либо 160 символов на латинице</li>
+                        </ul>
+                    </div>
+                    <div class="flash-segment">
+                        <h3>Мы сегментируем абонентов<br>для точного попадания <br class="flash-segment__desktop-break">в целевую аудиторию:</h3>
+                        <ul class="flash-segment__list">
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><path d="M18 32s10-9.4 10-18A10 10 0 0 0 8 14c0 8.6 10 18 10 18Z" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="14" r="3.5" stroke="currentColor" stroke-width="2"/></svg>
+                                </span>
+                                <span>По местонахождению до уровня улиц города а также по регионам</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><rect x="7" y="9" width="22" height="18" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M23 18h6M11 14h10M11 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                                <span>По уровню расходов в месяц</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><path d="M11 9v18M18 9v18M25 9v18M8 14h6M15 22h6M22 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="14" r="2" fill="currentColor"/><circle cx="18" cy="22" r="2" fill="currentColor"/><circle cx="25" cy="17" r="2" fill="currentColor"/></svg>
+                                </span>
+                                <span>По профилю потребления (звонки, интернет) –<br>молодежь либо старше</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><rect x="12" y="5" width="12" height="26" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M16 27h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                                <span>По типу устройства – смартфон или кнопочный телефон<br>на удобном для абонентов языке общения</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flash-price container-xxl">
+                <div class="flash-price__table" role="table" aria-label="Стоимость Flash SMS">
+                    <div class="flash-price__row flash-price__row--head" role="row">
+                        <strong role="columnheader">Стоимость* (чем больше объем, тем ниже цена):</strong>
+                    </div>
+                    <div class="flash-price__row flash-price__row--subhead" role="row">
+                        <strong role="columnheader">Количество Flash SMS</strong>
+                        <strong role="columnheader">Стоимость с НДС</strong>
+                    </div>
+                    <div class="flash-price__row" role="row"><span role="cell">10-4 999</span><span role="cell">1,30 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">5 000 - 9 999</span><span role="cell">1,19 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">10 000 - 49 999</span><span role="cell">1,08 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">50 000 - 99 999</span><span role="cell">1,03 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">100 000 - 299 999</span><span role="cell">0,94 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">300 000 и выше</span><span role="cell">0,85 сом</span></div>
+                </div>
+                <div class="flash-price__notes">
+                    <p><span>*</span> На данный момент отправка Flash SMS- сообщений возможна толко на телефоны абонентов оператора&nbsp;Beeline</p>
+                    <p><span>*</span> Объем рассчитывается для одного рекламного сообщения, включая несколько языков</p>
+                    <p><span>*</span> Акт выполненных работ предоставляется по отчету о доставке: Вы платите только за доставленные сообщения</p>
+                </div>
+            </section>
+
+            <section class="flash-audience">
+                <div class="flash-audience__inner container-xxl">
+                    <div class="flash-audience__copy">
+                        <h2>Кто получит рекламу?</h2>
+                        <p><strong>Рекламу получают только желающие, а это значит, что они будут довольны.<br>Желающие абоненты - это абоненты, подключившиеся к специальной услуге Beeline, чтобы получать рекламу.<br>А именно:</strong></p>
+                        <ul class="flash-audience__list">
+                            <li>активно пользующиеся сотовой связью;</li>
+                            <li>лидеры мнений разных сегментов;</li>
+                            <li>неинертные, интересующиеся и готовые попробовать новое;</li>
+                            <li>как пользователи звонков так и пользователи интернета;</li>
+                            <li>находятся в разных регионах страны;</li>
+                            <li>имеют разные виды устройств от «звонилок» до смартфонов;</li>
+                            <li>с разными ежемесячными расходами, от низкого до высокого уровня.</li>
+                        </ul>
+                    </div>
+                    <img class="flash-audience__image" src="assets/images/services/flash-audience.png" alt="" aria-hidden="true">
+                </div>
+            </section>
+
+            <section class="flash-order">
+                <div class="flash-order__inner container-xxl">
+                    <div class="flash-order__head">
+                        <h2>Процесс заказа</h2>
+                        <ol class="flash-order__steps">
+                            <li><span>01</span><p>Заключаете <strong>договор</strong><br>с "Nikita Online"</p></li>
+                            <li><span>02</span><p>Оформляете заказ<br>и передаете его менеджеру</p></li>
+                            <li><span>03</span><p>Мы делаем сегментацию<br>и производим рассылку рекламы от вашего имени</p></li>
+                            <li><span>04</span><p>Получаете акт выполненных работ по отчету о доставке сообщений</p></li>
+                            <li><span>05</span><p>Проведение взаиморасчетов</p></li>
+                        </ol>
+                    </div>
+
+                    <div class="flash-cases">
+                        <article class="flash-case">
+                            <header class="flash-case__head">
+                                <h3>Пример 1</h3>
+                                <p>Компания ХХХ по производству местной кожаной обуви<br>с ценами средними и выше средних</p>
+                            </header>
+                            <div class="flash-case__rows">
+                                <div class="flash-case-row flash-case-row--task">
+                                    <span class="flash-case-row__icon"><img src="assets/images/services/flash-icon-sms.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Задача:</strong><span>Проинформировать своих потенциальных клиентов о запуске и ассортименте</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--audience">
+                                    <span class="flash-case-row__icon"><img src="assets/images/services/flash-icon-followers.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Подбираются абоненты, которым интересно предложение:</strong><span>- Абоненты со средними и высокими затратами за месяц;<br>- Живущие в больших городах напр., Ош и Бишкек</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--send">
+                                    <span class="flash-case-row__icon"><img src="assets/images/services/flash-icon-speed.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Flash SMS - рассылка</strong><span>Отправляется Flash SMS указанным абонентам со ссылкой на сайт или соц.страничку</span></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="flash-case">
+                            <header class="flash-case__head">
+                                <h3>Пример №2</h3>
+                                <p>Кафе ХХХ фаст фуд,<br>которое находится на пересечении ул. Советская/Токтогула</p>
+                            </header>
+                            <div class="flash-case__rows">
+                                <div class="flash-case-row flash-case-row--task">
+                                    <span class="flash-case-row__icon"><img src="assets/images/services/flash-icon-sms.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Задача:</strong><span>Привлечь своих потенциальных клиентов</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--audience">
+                                    <span class="flash-case-row__icon"><img src="assets/images/services/flash-icon-followers.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Подбираются абоненты, которым интересно предложение:</strong><span>- Молодежь: пользователи интернета<br>- Со средними затратами в месяц<br>- Часто находящиеся в квадрате улиц Советская/Токтогула</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--send">
+                                    <span class="flash-case-row__icon"><img src="assets/images/services/flash-icon-speed.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Flash SMS - рассылка</strong><span>Отправляется Flash SMS указанным абонентам со ссылкой на сайт или соц.страничку</span></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="service-tabpanel service-tabpanel--empty" id="service-tab-payment" role="tabpanel" aria-labelledby="service-tab-payment-control" data-service-panel="payment" hidden></div>
+    </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">ОсОО "Никита Онлайн"</h3>
+                    <p class="footer__muted">Лицензия ГАС КР №15-1425-КР от&nbsp;18.09.2015</p>
+                    <h3 class="footer__company">ОсОО "Никита Мобайл"</h3>
+                    <p class="footer__sub">(на основании договора аренды программно-аппаратной платформы с ОсОО "Никита Онлайн" от&nbsp;15.04.2022)</p>
+                    <p class="footer__muted">Лицензия ГАС КР №11-828-КР от&nbsp;21.04.2011</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>г. Бишкек, ул. Шопокова 89, 5 эт., 9 каб.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© ОсОО "Никита Онлайн", ОсОО "Никита Мобайл", 2014-2025 г.</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Подвал">
+                <div class="footer__nav-primary">
+                    <a href="#pricing">Условия и цены</a>
+                    <a href="#tech">Технические возможности</a>
+                    <a href="#security">Надёжность и безопасность</a>
+                    <a href="#faq">Вопросы и ответы</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="#terms">Пользовательское соглашение</a>
+                    <a href="#privacy">Политика конфиденциальности</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Подключение и коммерческие вопросы:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Социальные сети">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Техническая поддержка:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Социальные сети">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="assets/scripts/main.js"></script>
+</body>
+</html>
+

@@ -42,8 +42,10 @@
     --color-white-10:         rgba(255, 255, 255, .1);
     --color-white-20:         rgba(255, 255, 255, .2);
     --color-black-20:         rgba(33, 32, 32, .2);
+    --color-black-50:         rgba(33, 32, 32, .5);
     --color-black-80:         rgba(33, 32, 32, .8);
     --color-black-100:        #212020;
+    --color-gray-100:         #84878C;
     --color-gray-icon:        #9EA1A7;
     --color-case-green:       #8FB93A;
     --color-footer-bg:        var(--color-header-blue);
@@ -72,6 +74,11 @@
     --color-surface-orange-10: rgba(237, 90, 32, .1);
     --color-surface-green-10:  rgba(143, 185, 58, .1);
     --color-surface-blue-5:    rgba(12, 110, 191, .05);
+    --color-surface-purple-10: #F5EFFF;
+    --color-surface-yellow-45: #FFF4D5;
+    --color-surface-red-10:    rgba(247, 97, 97, .1);
+    --color-blue-20:           rgba(12, 110, 191, .2);
+    --color-gray-20:           rgba(132, 135, 140, .2);
 
     /* ---------- Semantic strokes used inside cards ---------- */
     --color-stroke-pink:      #E37166;
@@ -83,6 +90,7 @@
     --gradient-blue-purple:   linear-gradient(120deg, #1B5DA8 0%, #2873C0 50%, #4C5DC4 100%);
     --gradient-footer:        linear-gradient(120deg, #154277 0%, #1A4A8C 60%, #2A5BA0 100%);
     --gradient-stats-blue:    linear-gradient(180deg, var(--color-stats-blue-top) 0%, var(--color-stats-blue-bottom) 100%);
+    --gradient-flash-segment: linear-gradient(120deg, #6857D9 0%, #2297DE 100%);
 
     /* ---------- Spacing scale (4px base) ---------- */
     --space-0:    0;

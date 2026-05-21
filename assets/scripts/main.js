@@ -9,6 +9,7 @@ import { initCasesCarousel } from './modules/cases-carousel.js';
 import { initCasesExSlider } from './modules/cases-ex-slider.js';
 import { initPartnersSlider } from './modules/partners-slider.js';
 import { initRecommendSlider } from './modules/recommend-slider.js';
+import { initServiceTabs } from './modules/service-tabs.js';
 
 function init() {
     initMobileMenu();
@@ -17,6 +18,7 @@ function init() {
     initCasesExSlider();
     initPartnersSlider();
     initRecommendSlider();
+    initServiceTabs();
 }
 
 if (document.readyState === 'loading') {
