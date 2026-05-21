@@ -11,7 +11,7 @@ export function initPaymentTabs() {
     if (!tabs.length || !panels.length) return;
 
     const setActiveTab = (nextTab, shouldFocus = false) => {
-        const target = nextTab.id.replace('-control', '-panel');
+        const target = nextTab.getAttribute('aria-controls') || nextTab.id.replace('-control', '-panel');
         const nextPanel = panels.find(panel => panel.id === target);
         if (!nextPanel) return;
 
@@ -26,6 +26,8 @@ export function initPaymentTabs() {
             panel.hidden = panel !== nextPanel;
         });
 
+        const targetScroll = nextTab.offsetLeft - (tablist.clientWidth - nextTab.offsetWidth) / 2;
+        tablist.scrollTo({ left: Math.max(0, targetScroll), behavior: 'smooth' });
         if (shouldFocus) nextTab.focus();
     };
 
@@ -33,7 +35,10 @@ export function initPaymentTabs() {
     setActiveTab(activeFromMarkup || tabs[0]);
 
     tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => setActiveTab(tab));
+        tab.addEventListener('click', event => {
+            event.preventDefault();
+            setActiveTab(tab);
+        });
 
         tab.addEventListener('keydown', event => {
             const lastIndex = tabs.length - 1;
