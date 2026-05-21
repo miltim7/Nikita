@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita — Технические возможности</title>
-    <meta name="description" content="Технические возможности SMS-платформы Nikita: интеграции, зона покрытия, API и архитектура.">
+    <title>Nikita — Вопросы и ответы</title>
+    <meta name="description" content="Ответы на часто задаваемые вопросы о договоре, балансе, операторах, Sender ID и рассылках Nikita.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
-<body class="page-technical">
+<body class="page-faq">
 <div class="topbar">
     <div class="container-xxl">
         <div class="topbar__inner">
             <nav class="topbar__nav" aria-label="Дополнительная навигация">
                 <a href="services.html" class="topbar__link">Условия и цены</a>
-                <a href="technical.html" class="topbar__link topbar__link--active">Технические возможности</a>
+                <a href="technical.html" class="topbar__link">Технические возможности</a>
                 <a href="security.html" class="topbar__link">Надёжность и безопасность</a>
-                <a href="faq.html" class="topbar__link">Вопросы и ответы</a>
+                <a href="faq.html" class="topbar__link topbar__link--active">Вопросы и ответы</a>
                 <a href="#contacts" class="topbar__link">Контакты</a>
             </nav>
             <div class="topbar__side">
@@ -47,6 +47,7 @@
             <a href="/" class="header__logo" aria-label="Nikita — главная">
                 <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
             </a>
+
             <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
                 <span class="header__phone-icon" aria-hidden="true">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -55,6 +56,7 @@
                 </span>
                 <span>+996 (700) 892-188</span>
             </a>
+
             <div class="header__actions">
                 <div class="header__links">
                     <a href="#support" class="header__link">
@@ -85,7 +87,7 @@
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="assets/images/mobile-menu/icon-money.svg" alt=""></span>
             <span>Условия и цены</span>
         </a>
-        <a href="technical.html" class="mobile-menu__link mobile-menu__link--active">
+        <a href="technical.html" class="mobile-menu__link">
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="assets/images/mobile-menu/icon-memory.svg" alt=""></span>
             <span>Технические возможности</span>
         </a>
@@ -93,7 +95,7 @@
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="assets/images/mobile-menu/icon-protect.svg" alt=""></span>
             <span>Надёжность и безопасность</span>
         </a>
-        <a href="faq.html" class="mobile-menu__link">
+        <a href="faq.html" class="mobile-menu__link mobile-menu__link--active">
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="assets/images/mobile-menu/icon-question.svg" alt=""></span>
             <span>Вопросы и ответы</span>
         </a>
@@ -105,184 +107,78 @@
 </div>
 
 <main>
-    <section class="technical-page" id="tech">
-        <div class="technical-page__breadcrumbs container-xxl" aria-label="Хлебные крошки">
-            <span>Главная → </span><strong>Технические возможности</strong>
+    <section class="faq-page" id="faq">
+        <div class="faq-page__breadcrumbs container-xxl" aria-label="Хлебные крошки">
+            <span>Главная → </span><strong>Вопросы и ответы</strong>
         </div>
 
-        <div class="technical-page__head container-xxl">
-            <h1 class="technical-page__title">Технические возможности</h1>
-            <div class="technical-capabilities">
-                <article class="technical-capability">
-                    <span class="technical-capability__icon technical-capability__icon--list" aria-hidden="true"></span>
-                    <p>Производить массовые SMS-рассылки по вашим спискам получателей с этого сайта, загружая их из Excel</p>
-                </article>
-                <article class="technical-capability">
-                    <span class="technical-capability__icon technical-capability__icon--integration" aria-hidden="true"></span>
-                    <p>Интегрироваться с системой smspro.nikita.kg для автоматических отправок SMS-оповещений из ваших систем</p>
-                </article>
-                <article class="technical-capability">
-                    <span class="technical-capability__icon technical-capability__icon--mail" aria-hidden="true"></span>
-                    <p>Отправлять СМС-сообщения по Email</p>
-                </article>
-            </div>
-        </div>
+        <div class="faq-page__content container-xxl">
+            <h1 class="faq-page__title">Вопросы и ответы</h1>
+            <p class="faq-page__lead">
+                В данном разделе, мы постарались собрать большинство ответов на часто задаваемые вопросы.<br>
+                Внимательно прочтите их прежде, чем обращаться <a href="#support">в службу поддержки.</a>
+            </p>
 
-        <div class="container-xxl">
-            <section class="coverage-card" aria-labelledby="coverage-title">
-                <h2 class="coverage-card__title" id="coverage-title">Зона покрытия – <br class="coverage-card__mobile-break">все GSM-сети Кыргызстана <span>*</span></h2>
-                <ul class="coverage-list">
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Отчеты о доставке СМС</strong> <small>(с указанием времени доставки)</small></p>
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary class="faq-item__summary">
+                        <span class="faq-item__question">
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                            <span class="faq-item__title">Как заключить письменный договор</span>
+                        </span>
+                        <span class="faq-item__chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Для заключения письменного договора необходимо прислать свои реквизиты на наш электронный адрес или сообщить их в службу поддержки.<br>Ознакомится с договором (скачать типовой договор для ознакомления) можно&nbsp;<a class="faq-answer__link" href="#contract">тут.</a></p>
+                            <p>После заполнения договора на адрес, указанный Вами, будет отправлено 2 экземпляра, которые необходимо подписать и один экземпляр отправить обратно на наш почтовый адрес.</p>
+                            <p><strong>Мы не требуем обязательного заключения договора,</strong> но для получения корректных бухгалтерских отчетов заключение договора необходимо.<br>Также в договоре перечислены правила на рассылки сообщений с подменой имени отправителя (Sender ID) и ответственность при поступлении жалоб в случае рассылки спама. <strong>Без заключенного договора вы можете отправлять подобные сообщения только после согласования имени отправителя с операторами связи.</strong></p>
                         </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Подмена имени отправителя</strong> <small>(Sender ID) <em>**</em></small></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Интеграция по XML-протоколу</strong></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="#xml-api" class="technical-download">Скачать описание XML-API</a>
-                            <a href="#xml-api-en" class="technical-download">Описание XML-API на английском языке</a>
-                            <a href="#swagger" class="technical-download">Swagger</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Интеграция</strong><br>по SOAP-протоколу WEB-служба для подключения к 1С пр.</p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="#wsdl" class="technical-download">Скачать WSDL</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Интеграция</strong> <small>по по высокопроизводительному SMPP-протоколу</small></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="#smpp" class="technical-download">Скачать спецификацию SMPP v 3.4</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Отправка SMS по Email</strong> <small>(SMTP-протокол)</small></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="#email" class="technical-download">Скачать описание</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Сервис одноразовых паролей</strong> <small>(One Time Password service)</small></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="#otp-api" class="technical-download">Скачать описание OTP-API</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Защита данных (HTTPS / SSL)</strong></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Интеллектуальная система прогноза расхода средств</strong></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Автоматизация бухгалтерии</strong> <small>(счета и акты генерируются автоматически и доступны online)</small></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Адресная рассылка</strong></p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
+                    </div>
+                </details>
 
-            <div class="technical-notes">
-                <p><span>*</span> Цены и возможности отправки в Россию и прочие страны СНГ и мира пожалуйста уточняйте у менеджера.</p>
-                <p><span>**</span> Подмена имени отправителя доступна только клиентам работающим по договору. У некоторых операторов СНГ и Азии есть ограничения на подмену имени</p>
-            </div>
-
-            <section class="technical-api" aria-labelledby="technical-api-title">
-                <h2 class="technical-api__title" id="technical-api-title">Примеры подключения HTTP-XML-API:</h2>
-                <div class="technical-api__cards">
-                    <a class="technical-api-card" href="#php">На PHP</a>
-                    <a class="technical-api-card" href="#java">На Java</a>
-                    <a class="technical-api-card" href="#python">На Python</a>
-                    <a class="technical-api-card" href="#nodejs">На NoodleJS</a>
-                </div>
-            </section>
-
-            <section class="technical-specs" aria-labelledby="technical-specs-title">
-                <h2 class="technical-specs__title" id="technical-specs-title">Характеристики</h2>
-                <div class="technical-specs__row">
-                    <p>Пиковая пропускная способность платформы при пакетных рассылках:</p>
-                    <span>до 500 СМС/сек</span>
-                </div>
-                <div class="technical-specs__row">
-                    <p>Реальная пропускная способность на 1 клиентский канал (обычно ограничена скоростью Internet)</p>
-                    <span>от 10 до 30 СМС/сек</span>
-                </div>
-                <div class="technical-specs__row">
-                    <p>Уровень фактической доставки сообщений до получателя (обусловлен факторами GSM-сети)</p>
-                    <span>97-99%</span>
-                </div>
-            </section>
-        </div>
-    </section>
-
-    <section class="technical-architecture" aria-labelledby="architecture-title">
-        <div class="technical-architecture__inner container-xxl">
-            <div class="technical-architecture__head">
-                <h2 id="architecture-title">Архитектура</h2>
-                <p>Мы располагаем собственной SMS-платформой и не являемся реселлером услуг другой компании,<br>что позволяет нам поддерживать <span>низкий уровень цен</span> вне зависимости от ценовой политики конкретного поставщика.</p>
-            </div>
-
-            <div class="architecture-diagram-wrap" aria-hidden="true">
-                <div class="architecture-diagram"></div>
-            </div>
-
-            <div class="architecture-benefits">
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__icon architecture-benefit__icon--protect" aria-hidden="true"></span>
-                    <p>Снижаем риск<br>отказа оборудования</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__icon architecture-benefit__icon--renew" aria-hidden="true"></span>
-                    <p>Снижаем риск<br>отказа канала<br>передачи данных</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__icon architecture-benefit__icon--timeline" aria-hidden="true"></span>
-                    <p>Динамически масштабируем ядро системы при возрастании нагрузки</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__metric">2х</span>
-                    <p>Резерв оборудования в независимых дата-центрах с online синхронизацией данных</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__metric">3х</span>
-                    <p>3-кратное резервирование каналов доставки SMS в GSM-сети</p>
-                </article>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Как пополнить баланс</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">С какими операторами вы работаете</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">В какие страны возможна отправка сообщений</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Я посылаю одно сообщение, а со счета списывается сумма как за два</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Какова максимальная длина отправляемых SMS-сообщений</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Могу ли я организовать рассылку SMS со своего сайта</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Как задать свое имя в качестве отправителя SMS-сообщений</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Какие существуют ограничения на использование Sender ID</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Что такое Международное имя отправителя</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Какие правила существуют в отношении массовых рекламных рассылок</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">В каком формате должны быть указаны номера абонентов для отправки сообщений</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Что означает тот или иной статус напротив сообщения</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Если не хватило средств для отправки всех сообщений рассылки, отправятся ли СМСки после пополнения баланса</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Я забыл пароль, что мне делать?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                </details>
             </div>
         </div>
     </section>

@@ -1,0 +1,1335 @@
+/* ============================================================
+   SECURITY PAGE
+   ============================================================ */
+.page-security {
+    background: var(--color-bg);
+    color: var(--color-header-black);
+    overflow-x: hidden;
+}
+
+.security-page {
+    padding: 24px 0 0;
+    background: var(--color-bg);
+}
+
+.security-page .container-xxl,
+.security-reliability .container-xxl,
+.security-data .container-xxl {
+    padding-inline: var(--figma-container-px-desktop);
+}
+
+.security-page__breadcrumbs {
+    height: 12px;
+    font-size: 10px;
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-page__breadcrumbs span {
+    color: var(--color-black-20);
+}
+
+.security-page__breadcrumbs strong {
+    color: var(--color-header-black);
+    font-weight: var(--fw-light);
+}
+
+.security-page__head {
+    margin-top: 24px;
+}
+
+.security-page__title,
+.security-legality h2,
+.security-reliability h2,
+.security-convenience h2,
+.security-data h2,
+.security-price h2,
+.security-company h2 {
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+}
+
+.security-page__title {
+    margin: 0 0 16px;
+    font-size: var(--fs-5xl);
+}
+
+.security-tabs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    border-bottom: 1px solid var(--color-gray-20);
+    overflow: hidden;
+}
+
+.security-tabs__item {
+    display: inline-flex;
+    align-items: center;
+    height: 33px;
+    padding: 8px 16px;
+    border-bottom: 1px solid transparent;
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.security-tabs__item--active {
+    border-color: var(--color-header-blue);
+    color: var(--color-header-blue);
+}
+
+.security-tabs__fill {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 33px;
+}
+
+.security-tabpanel--active {
+    animation: security-tab-fade .24s ease both;
+}
+
+.security-tabpanel--placeholder {
+    min-height: 360px;
+    padding: 36px 0 72px;
+}
+
+.security-tabpanel--placeholder p {
+    min-height: 120px;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-blue-5);
+    color: var(--color-gray-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+@keyframes security-tab-fade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.security-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 36px 0 0;
+}
+
+.security-legality {
+    display: grid;
+    grid-template-columns: 812px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.security-legality__copy,
+.security-convenience,
+.security-data,
+.security-price,
+.security-company,
+.security-company-services {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-legality__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.security-legality h2,
+.security-convenience h2,
+.security-price h2,
+.security-company h2 {
+    margin: 0 0 12px;
+    font-size: var(--fs-3xl);
+}
+
+.security-legality p {
+    margin: 0;
+}
+
+.security-legality strong,
+.security-convenience strong,
+.security-price strong,
+.security-company strong,
+.security-company-card h3,
+.text-blue {
+    font-weight: var(--fw-semibold);
+}
+
+.text-blue {
+    color: var(--color-header-blue);
+}
+
+.text-orange {
+    color: var(--color-header-orange);
+}
+
+.security-license {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    min-width: 0;
+    height: 470px;
+    padding: 48px 16px;
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-menu);
+    overflow: hidden;
+}
+
+.security-license__image {
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.security-license__zoom {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-xs);
+    background: var(--color-surface-blue-5);
+    color: var(--color-header-blue);
+}
+
+.security-license__zoom svg {
+    width: 24px;
+    height: 24px;
+}
+
+.security-reliability {
+    color: var(--color-text-inverse);
+    background-image: url('../../images/technical/architecture-bg-desktop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.security-reliability__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-block: 48px;
+}
+
+.security-reliability__head,
+.security-reliability__note {
+    text-align: center;
+}
+
+.security-reliability h2 {
+    margin: 0 0 12px;
+    font-size: var(--fs-4xl);
+}
+
+.security-reliability__head p,
+.security-reliability__note p {
+    margin: 0;
+    color: var(--color-text-inverse);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-reliability__cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.security-reliability-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 72px;
+    padding: 12px 24px;
+    border: 1px solid var(--color-white-10);
+    border-radius: var(--radius-md);
+    background: var(--color-white-10);
+}
+
+.security-reliability-card p {
+    min-width: 0;
+    margin: 0;
+    color: var(--color-text-inverse);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-reliability-card__icon {
+    display: block;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    background: var(--security-card-icon) center / contain no-repeat;
+}
+
+.security-reliability-card__icon--utilities {
+    --security-card-icon: url('../../images/security/reliability-icon-utilities.svg');
+}
+
+.security-reliability-card__icon--person {
+    --security-card-icon: url('../../images/security/reliability-icon-person.svg');
+}
+
+.security-reliability-card__icon--renew {
+    --security-card-icon: url('../../images/security/reliability-icon-renew.svg');
+}
+
+.security-reliability-card__icon--settings {
+    --security-card-icon: url('../../images/security/reliability-icon-settings.svg');
+}
+
+.security-reliability__note {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.security-reliability__note h3 {
+    margin: 0;
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-reliability__mobile-break {
+    display: none;
+}
+
+.security-reliability-card--risk {
+    align-items: center;
+    min-height: 98px;
+    padding: 24px;
+}
+
+.security-reliability-card--risk h4 {
+    margin: 0 0 4px;
+    color: var(--color-text-inverse);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-reliability__diagram-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.security-diagram-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-block: 36px;
+}
+
+.security-diagram {
+    width: 870px;
+    max-width: 100%;
+    aspect-ratio: 870 / 176;
+    margin-inline: auto;
+    background: url('../../images/technical/architecture-diagram-desktop.png') center / contain no-repeat;
+}
+
+.page-security .security-reliability__button {
+    align-self: center;
+    height: 40px;
+    min-width: 0;
+    padding-inline: 16px;
+    border-radius: var(--radius-xs);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    letter-spacing: var(--letter-spacing-normal);
+    box-shadow: var(--shadow-figma-cta);
+    gap: 6px;
+}
+
+.security-reliability__button-arrow {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    background: url('../../images/cta-icon-arrow.svg') center / 9px 9px no-repeat;
+}
+
+.security-convenience {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.security-convenience__intro {
+    max-width: 812px;
+}
+
+.security-convenience__intro p {
+    margin: 0;
+}
+
+.security-convenience__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 604px));
+    gap: 20px;
+}
+
+.security-capability-list {
+    min-width: 0;
+}
+
+.security-capability-list h3,
+.security-integration h3 {
+    margin: 0 0 16px;
+    font-size: 26px;
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-benefit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.security-benefit-card,
+.security-company-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-case-card);
+}
+
+.security-benefit-card {
+    min-height: 60px;
+}
+
+.security-benefit-card h4 {
+    min-width: 0;
+    margin: 0;
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-benefit-card p {
+    margin-top: 4px;
+    color: var(--color-black-80);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-check {
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.security-check::before {
+    content: "";
+    position: absolute;
+    left: 4.21px;
+    top: 6.35px;
+    width: 15.57px;
+    height: 11.3px;
+    background: url('../../images/technical/icon-coverage-check.svg') center / 100% 100% no-repeat;
+}
+
+.security-capability-list__note {
+    margin-top: 16px;
+    color: var(--color-gray-100);
+}
+
+.security-integration {
+    min-width: 0;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background-image: url('../../images/technical/architecture-bg-desktop.png');
+    background-position: center;
+    background-size: cover;
+    color: var(--color-text-inverse);
+}
+
+.security-integration__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.security-integration__list p,
+.security-integration__downloads a {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 48px;
+    margin: 0;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--color-white-10);
+    color: var(--color-white-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-integration__list p::before,
+.security-integration__downloads a::before {
+    content: "";
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    background: url('../../images/technical/icon-coverage-check.svg') center / 15.57px 11.3px no-repeat;
+}
+
+.security-integration__downloads {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.security-integration__downloads a {
+    align-items: center;
+    min-height: 48px;
+    background: var(--color-bg);
+    color: var(--color-header-blue);
+}
+
+.security-integration__downloads a::before {
+    background-image: url('../../images/technical/icon-coverage-download.svg');
+    background-size: 15px 15px;
+}
+
+.security-api-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.security-api-row h3 {
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-api-row__cards {
+    display: grid;
+    flex: 1 1 auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    min-width: 0;
+}
+
+.security-api-row__cards a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 68px;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-technical-api-card);
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-api-row__cards a::before {
+    content: "";
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    background: url('../../images/technical/icon-api-sms.svg') center / 32.25px 32.25px no-repeat;
+}
+
+.security-more {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-blue-5);
+}
+
+.security-more h3 {
+    margin: 0;
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+}
+
+.security-more__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.security-more__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 0;
+    padding: 8px;
+    border-radius: var(--radius-xs);
+    background: var(--color-surface-blue-5);
+}
+
+.security-more__text {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    overflow-wrap: anywhere;
+}
+
+.security-more__text p {
+    margin: 0;
+}
+
+.security-more__text strong {
+    font-weight: var(--fw-semibold);
+}
+
+.security-more__icon {
+    display: block;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    background: var(--security-more-icon) center / contain no-repeat;
+}
+
+.security-more__icon--balance {
+    --security-more-icon: url('../../images/security/more-balance.svg');
+}
+
+.security-more__icon--document {
+    --security-more-icon: url('../../images/security/more-document.svg');
+}
+
+.security-data {
+    color: var(--color-text-inverse);
+    background-image: url('../../images/services/otp-bg-steps.png');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.security-data__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    min-height: 276px;
+    padding-block: 48px;
+    text-align: center;
+}
+
+.security-data h2 {
+    margin: 0;
+    font-size: var(--fs-3xl);
+}
+
+.security-data p {
+    max-width: 812px;
+    margin: 0;
+    color: var(--color-white-80);
+}
+
+.security-data__button {
+    height: 40px;
+    padding-inline: 16px;
+    border-radius: var(--radius-xs);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-medium);
+    box-shadow: var(--shadow-figma-cta);
+}
+
+.security-data__button span {
+    width: 16px;
+    height: 16px;
+    background: url('../../images/cta-icon-arrow.svg') center / 9px 9px no-repeat;
+}
+
+.security-price {
+    display: grid;
+    grid-template-columns: 812px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.security-price__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.security-price h2 {
+    margin: 0;
+}
+
+.security-price__copy p {
+    margin: 0;
+}
+
+.security-price__copy p + p {
+    margin-top: 0;
+}
+
+.security-price-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-menu);
+}
+
+.security-price-card h3 {
+    margin: 0;
+    color: var(--color-header-black);
+    font-size: 26px;
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-price-card p {
+    margin: 0;
+}
+
+.security-company__box {
+    padding: 24px;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-blue-5);
+}
+
+.security-company__box p + p {
+    margin-top: 12px;
+}
+
+.security-company-services {
+    padding-bottom: 72px;
+}
+
+.security-company-services h2 {
+    margin: 0 0 16px;
+    font-size: 26px;
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-company-services__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.security-company-card h3 {
+    margin: 0 0 4px;
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.security-company-card p {
+    margin: 0;
+}
+
+.security-company-services__note {
+    margin-top: 24px;
+    color: var(--color-header-black);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+@media (min-width: 1200px) and (max-width: 1475.98px) {
+    .security-page .container-xxl,
+    .security-reliability .container-xxl,
+    .security-data .container-xxl {
+        padding-inline: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+
+    .security-legality,
+    .security-price {
+        grid-template-columns: minmax(0, 812px) minmax(292px, 1fr);
+    }
+
+    .security-convenience__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .security-page {
+        padding-top: 12px;
+    }
+
+    .security-page .container-xxl,
+    .security-reliability .container-xxl,
+    .security-data .container-xxl {
+        max-width: 100%;
+        padding-inline: var(--figma-container-px-tablet);
+    }
+
+    .security-page__breadcrumbs {
+        height: 10px;
+        font-size: 8px;
+    }
+
+    .security-page__head {
+        margin-top: 12px;
+    }
+
+    .security-page__title {
+        margin-bottom: 6px;
+        font-size: var(--fs-3xl);
+    }
+
+    .security-tabs {
+        overflow: visible;
+    }
+
+    .security-tabs__item {
+        height: 30px;
+        padding-inline: 16px;
+        font-size: var(--fs-sm);
+    }
+
+    .security-stack {
+        gap: 24px;
+        padding-top: 20px;
+    }
+
+    .security-legality {
+        grid-template-columns: minmax(0, 1fr) 240px;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .security-price {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding-block: 24px;
+    }
+
+    .security-legality__copy,
+    .security-convenience,
+    .security-data,
+    .security-price,
+    .security-company,
+    .security-company-services {
+        font-size: var(--fs-sm);
+    }
+
+    .security-legality h2,
+    .security-convenience h2,
+    .security-company h2 {
+        margin-bottom: 6px;
+        font-size: var(--fs-2xl);
+    }
+
+    .security-price h2 {
+        margin: 0;
+        font-size: var(--fs-2xl);
+    }
+
+    .security-license {
+        height: 320px;
+        padding: 36px 12px;
+    }
+
+    .security-license__zoom {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .security-reliability {
+        background-image: url('../../images/technical/architecture-bg-tablet.png');
+    }
+
+    .security-reliability__inner {
+        gap: 36px;
+        padding-block: 48px;
+    }
+
+    .security-reliability h2 {
+        font-size: 26px;
+    }
+
+    .security-reliability__head p,
+    .security-reliability__note p,
+    .security-reliability-card p {
+        font-size: var(--fs-sm);
+    }
+
+    .security-reliability-card {
+        min-height: 72px;
+        padding: 12px 24px;
+    }
+
+    .security-reliability-card--risk {
+        padding: 24px;
+    }
+
+    .security-reliability-card__icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .security-reliability__note h3 {
+        font-size: var(--fs-md);
+    }
+
+    .security-reliability-card--risk h4 {
+        font-size: var(--fs-sm);
+    }
+
+    .security-diagram-wrap {
+        padding-block: 0;
+    }
+
+    .security-diagram {
+        width: 754px;
+        aspect-ratio: 754 / 147;
+        background-image: url('../../images/technical/architecture-diagram-tablet.png');
+    }
+
+    .security-reliability__diagram-group {
+        gap: 36px;
+    }
+
+    .page-security .security-reliability__button {
+        height: 36px;
+        font-size: var(--fs-sm);
+        padding-inline: 16px;
+    }
+
+    .security-reliability__button-arrow {
+        flex-basis: 16px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .security-convenience {
+        gap: 24px;
+    }
+
+    .security-convenience__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .security-capability-list h3,
+    .security-integration h3,
+    .security-company-services h2,
+    .security-price-card h3 {
+        font-size: var(--fs-xl);
+    }
+
+    .security-benefit-list {
+        gap: 6px;
+    }
+
+    .security-benefit-card,
+    .security-company-card {
+        gap: 8px;
+        padding: 12px;
+        border-radius: var(--radius-figma-card);
+    }
+
+    .security-benefit-card h4,
+    .security-integration__list p,
+    .security-integration__downloads a,
+    .security-api-row__cards a,
+    .security-company-card h3 {
+        font-size: var(--fs-sm);
+    }
+
+    .security-more h3 {
+        font-size: var(--fs-2xl);
+    }
+
+    .security-more__text strong {
+        font-size: var(--fs-sm);
+        letter-spacing: .24px;
+    }
+
+    .security-check {
+        flex-basis: 16px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .security-check::before {
+        left: 2.81px;
+        top: 4.23px;
+        width: 10.38px;
+        height: 7.53px;
+    }
+
+    .security-integration {
+        padding: 16px;
+    }
+
+    .security-integration__downloads {
+        grid-template-columns: 1fr;
+    }
+
+    .security-api-row {
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .security-api-row h3 {
+        font-size: var(--fs-md);
+    }
+
+    .security-api-row__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .security-api-row__cards a {
+        min-height: 56px;
+        padding: 12px;
+    }
+
+    .security-api-row__cards a::before {
+        flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+        background-size: 21.5px 21.5px;
+    }
+
+    .security-data__inner {
+        min-height: 232px;
+        padding-block: 36px;
+    }
+
+    .security-data h2 {
+        font-size: var(--fs-2xl);
+    }
+
+    .security-price-card {
+        padding: 16px;
+    }
+
+    .security-price-card__desktop-break,
+    .security-price-card__desktop-gap {
+        display: none;
+    }
+
+    .security-company__box {
+        padding: 16px;
+    }
+
+    .security-company-services {
+        padding-bottom: 48px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 833.98px) {
+    .security-page .container-xxl,
+    .security-data .container-xxl {
+        padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .security-reliability .container-xxl {
+        padding-inline: var(--figma-container-px-tablet);
+    }
+
+    .security-legality {
+        grid-template-columns: minmax(0, 1fr) 220px;
+    }
+
+    .security-license {
+        height: 300px;
+    }
+
+    .security-convenience__grid {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .security-page {
+        padding-top: 12px;
+    }
+
+    .security-page .container-xxl,
+    .security-reliability .container-xxl,
+    .security-data .container-xxl {
+        max-width: 100%;
+        padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .security-page__head {
+        overflow: hidden;
+    }
+
+    .security-page__title {
+        margin-bottom: 12px;
+        font-size: var(--fs-3xl);
+    }
+
+    .security-tabs {
+        width: 100%;
+        max-width: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+    }
+
+    .security-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .security-tabs__item {
+        flex: 0 0 auto;
+    }
+
+    .security-tabs__fill {
+        display: none;
+    }
+
+    .security-stack {
+        gap: 24px;
+        padding-top: 16px;
+    }
+
+    .security-legality,
+    .security-convenience__grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .security-legality {
+        gap: 20px;
+    }
+
+    .security-legality h2,
+    .security-convenience h2,
+    .security-company h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .security-price h2 {
+        font-size: var(--fs-2xl);
+    }
+
+    .security-license {
+        align-self: auto;
+        height: 440px;
+        padding: 48px 16px 24px;
+    }
+
+    .security-reliability {
+        background-image: url('../../images/technical/architecture-bg-mobile.png');
+    }
+
+    .security-reliability__inner {
+        gap: 24px;
+        padding-block: 24px;
+    }
+
+    .security-reliability h2 {
+        font-size: 26px;
+    }
+
+    .security-reliability__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .security-reliability-card {
+        min-height: 0;
+        padding: 12px 24px;
+    }
+
+    .security-reliability-card--risk {
+        padding: 24px;
+    }
+
+    .security-reliability-card__icon {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .security-reliability__note h3 {
+        font-size: var(--fs-md);
+    }
+
+    .security-reliability__mobile-break {
+        display: block;
+    }
+
+    .security-diagram {
+        width: 361px;
+        aspect-ratio: 361 / 71;
+        background-image: url('../../images/technical/architecture-diagram-mobile.png');
+    }
+
+    .security-data__button {
+        width: 100%;
+        min-width: 0;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .security-reliability__diagram-group {
+        gap: 24px;
+    }
+
+    .page-security .security-reliability__button {
+        width: auto;
+        height: 36px;
+        min-width: 0;
+        padding-inline: 16px;
+        font-size: var(--fs-sm);
+        white-space: nowrap;
+    }
+
+    .security-convenience {
+        gap: 20px;
+    }
+
+    .security-capability-list h3,
+    .security-integration h3 {
+        margin-bottom: 12px;
+        font-size: var(--fs-xl);
+    }
+
+    .security-benefit-card {
+        min-height: 48px;
+    }
+
+    .security-integration {
+        padding: 16px;
+        background-image: url('../../images/technical/architecture-bg-mobile.png');
+    }
+
+    .security-integration__list p,
+    .security-integration__downloads a {
+        min-height: 48px;
+    }
+
+    .security-api-row {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .security-api-row__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .security-more__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .security-data {
+        background-image: url('../../images/technical/architecture-bg-mobile.png');
+        background-size: cover;
+    }
+
+    .security-data__inner {
+        min-height: 0;
+        gap: 16px;
+        padding-block: 24px;
+    }
+
+    .security-data h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .security-price {
+        gap: 20px;
+    }
+
+    .security-company-services {
+        padding-bottom: 36px;
+    }
+
+    .security-company-services h2 {
+        font-size: var(--fs-xl);
+    }
+
+    .security-tabpanel--placeholder {
+        min-height: 280px;
+        padding: 24px 0 48px;
+    }
+}

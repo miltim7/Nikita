@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — Надёжность и безопасность</title>
+    <meta name="description" content="Легальность, техническая надежность, безопасность данных и ценовая политика SMS-платформы Nikita.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+<body class="page-security">
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Дополнительная навигация">
+                <a href="services.html" class="topbar__link">Условия и цены</a>
+                <a href="technical.html" class="topbar__link">Технические возможности</a>
+                <a href="security.html" class="topbar__link topbar__link--active">Надёжность и безопасность</a>
+                <a href="faq.html" class="topbar__link">Вопросы и ответы</a>
+                <a href="#contacts" class="topbar__link">Контакты</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="#login" class="topbar__login">
+                    <img src="assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Войти&nbsp;/&nbsp;Зарегистрироваться</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="/" class="header__logo" aria-label="Nikita — главная">
+                <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="assets/images/header-icon-support.svg" alt=""></span>
+                        <span class="header__link-text">Обратиться<br>в техподдержку</span>
+                    </a>
+                    <a href="#manager" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="assets/images/header-icon-chat.svg" alt=""></span>
+                        <span class="header__link-text">Связаться<br>с менеджером</span>
+                    </a>
+                </div>
+                <a href="#demo" class="btn btn-cta header__cta">
+                    <img src="assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Попробовать демо&nbsp;бесплатно</span>
+                    <span class="header__cta-short">Демо</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Меню" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Главное меню">
+        <a href="services.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="assets/images/mobile-menu/icon-money.svg" alt=""></span>
+            <span>Условия и цены</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="assets/images/mobile-menu/icon-memory.svg" alt=""></span>
+            <span>Технические возможности</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="assets/images/mobile-menu/icon-protect.svg" alt=""></span>
+            <span>Надёжность и безопасность</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="assets/images/mobile-menu/icon-question.svg" alt=""></span>
+            <span>Вопросы и ответы</span>
+        </a>
+        <a href="#contacts" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="assets/images/mobile-menu/icon-phone.svg" alt=""></span>
+            <span>Контакты</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+    <section class="security-page" id="security">
+        <div class="security-page__breadcrumbs container-xxl" aria-label="Хлебные крошки">
+            <span>Главная → </span><strong>Услуги и цены</strong>
+        </div>
+
+        <div class="security-page__head container-xxl">
+            <h1 class="security-page__title">надёжность и безопасность</h1>
+            <nav class="security-tabs" aria-label="Разделы надёжности" role="tablist" data-security-tabs>
+                <a href="#security-tab-legality" class="security-tabs__item security-tabs__item--active" role="tab" id="security-tab-legality-control" aria-controls="security-tab-legality" aria-selected="true" data-security-tab="legality">Легальность</a>
+                <a href="#security-tab-reliability" class="security-tabs__item" role="tab" id="security-tab-reliability-control" aria-controls="security-tab-reliability" aria-selected="false" tabindex="-1" data-security-tab="reliability">Надежность</a>
+                <a href="#security-tab-safety" class="security-tabs__item" role="tab" id="security-tab-safety-control" aria-controls="security-tab-safety" aria-selected="false" tabindex="-1" data-security-tab="safety">Безопасность</a>
+                <a href="#security-tab-convenience" class="security-tabs__item" role="tab" id="security-tab-convenience-control" aria-controls="security-tab-convenience" aria-selected="false" tabindex="-1" data-security-tab="convenience">Удобство</a>
+                <a href="#security-tab-pricing" class="security-tabs__item" role="tab" id="security-tab-pricing-control" aria-controls="security-tab-pricing" aria-selected="false" tabindex="-1" data-security-tab="pricing">Ценовая политика</a>
+                <a href="#security-tab-company" class="security-tabs__item" role="tab" id="security-tab-company-control" aria-controls="security-tab-company" aria-selected="false" tabindex="-1" data-security-tab="company">О компании</a>
+                <span class="security-tabs__fill" aria-hidden="true"></span>
+            </nav>
+        </div>
+
+        <div class="security-tabpanels">
+            <section class="security-tabpanel security-tabpanel--active" id="security-tab-legality" role="tabpanel" aria-labelledby="security-tab-legality-control" data-security-panel="legality">
+                <div class="security-stack">
+                    <section class="security-legality container-xxl" aria-labelledby="security-legality-title">
+                        <div class="security-legality__copy">
+                            <h2 id="security-legality-title">легальность</h2>
+                            <p>Выбирая поставщика SMS-услуг нельзя опираться лишь на предлагаемую стоимость SMS-сообщений.<br>Ведь рассылая SMS-сообщения вы&nbsp;доверяете вашему партнеру контакты ваших клиентов!<br>Кроме того, далеко не всегда дешевые SMS-шлюзы способны обеспечить достойное качество сервиса и полноценный функционал.<br><br>Да, имея собственную SMS-платформу мы можем предложить действительно <strong class="text-blue">низкие цены на SMS-рассылки,</strong> однако советуем вам так же обратить внимание на другие наши преимущества.</p>
+                            <p>Проводя любые массовые рассылки&nbsp;мы с вами осуществляем деятельность строго регламентированную несколькими законами КР&nbsp;в том числе&nbsp;законом о рекламе&nbsp;и&nbsp;законом о связи, а так же нормативами и требованиями сотовых операторов.<br><br><strong>Мы&nbsp;прилагаем все усилия для того, чтобы действовать в рамках законодательства.</strong></p>
+                            <p>Мы располагаем необходимой&nbsp;<strong class="text-blue">лицензией</strong>&nbsp;на Телематические услуги связи, работаем с контрагентами только по официальным договорам, отражающим все требования закона. Боремся со СПАМом и мошенничеством, т.е. производим только т.н. "Адресные рассылки".<br><br>И именно поэтому для наших клиентов мы открываем функцию подмены номера отправителя только при наличии подписанного договора.</p>
+                        </div>
+                        <aside class="security-license" aria-label="Лицензия ОсОО Никита Онлайн">
+                            <img class="security-license__image" src="assets/images/security/license-certificate.png" alt="Лицензия ОсОО Никита Онлайн">
+                            <button class="security-license__zoom" type="button" aria-label="Увеличить лицензию">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+                                    <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                        </aside>
+                    </section>
+
+                    <section class="security-reliability" aria-labelledby="security-reliability-title">
+                        <div class="security-reliability__inner container-xxl">
+                            <div class="security-reliability__head">
+                                <h2 id="security-reliability-title">Техническая надежность</h2>
+                                <p>У нас есть&nbsp;два серьезных плюса:</p>
+                            </div>
+                            <div class="security-reliability__cards security-reliability__cards--top">
+                                <article class="security-reliability-card">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--utilities" aria-hidden="true"></span>
+                                    <p>Своя программно-техническая база</p>
+                                </article>
+                                <article class="security-reliability-card">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--person" aria-hidden="true"></span>
+                                    <p>Технические сотрудники с опытом создания провайдерских систем с опытом работы более 10 лет.</p>
+                                </article>
+                            </div>
+                            <div class="security-reliability__note">
+                                <h3>От технических сбоев <br class="security-reliability__mobile-break">никто не застрахован.<br>Но мы постарались подготовиться <br class="security-reliability__mobile-break">к основным рискам!</h3>
+                                <p>У нас есть&nbsp;два серьезных плюса:</p>
+                            </div>
+                            <div class="security-reliability__cards">
+                                <article class="security-reliability-card security-reliability-card--risk">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--renew" aria-hidden="true"></span>
+                                    <div>
+                                        <h4>Резерв каналов доставки&nbsp;СМС&nbsp;</h4>
+                                        <p>(на случай аварии на одном из каналов мы доставим ваше СМС-сообщение через другой канал)</p>
+                                    </div>
+                                </article>
+                                <article class="security-reliability-card security-reliability-card--risk">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--settings" aria-hidden="true"></span>
+                                    <div>
+                                        <h4>&nbsp;Резерв серверов и баз данных&nbsp;</h4>
+                                        <p>(в случае аварии на оборудовании или в Дата-центре мы активизируем резервное оборудование в альтернативном дата центре. При этом Ваши данные будут сохранены)</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="security-reliability__diagram-group">
+                                <div class="security-diagram-wrap">
+                                    <div class="security-diagram" aria-hidden="true"></div>
+                                </div>
+                                <a href="technical.html#architecture-title" class="btn btn-cta security-reliability__button">
+                                    <span>Подробнее об архитектуре</span>
+                                    <span class="security-reliability__button-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="security-convenience container-xxl" aria-labelledby="security-convenience-title">
+                        <div class="security-convenience__intro">
+                            <h2 id="security-convenience-title">Удобство и автоматизация работы</h2>
+                            <p>Возможность не только информировать своих клиентов с помощью СМС, но и собирать статистику, управлять рассылками и автоматизировать регулярные отправки.</p>
+                        </div>
+                        <div class="security-convenience__grid">
+                            <div class="security-capability-list">
+                                <h3>При рассылках с нашего сайта Вы сможете:</h3>
+                                <div class="security-benefit-list">
+                                    <article class="security-benefit-card">
+                                        <span class="security-check" aria-hidden="true"></span>
+                                        <div><h4>Загрузить свою базу клиентов в Excel-формате. </h4><p>При этом мы разберем любой формат телефона и&nbsp;+996...&nbsp;и&nbsp;0 (555) ...<br>и т.п. А в случае ошибочных номеров мы предоставим Вам подробный&nbsp;отчет об ошибках.</p></div>
+                                    </article>
+                                    <article class="security-benefit-card">
+                                        <span class="security-check" aria-hidden="true"></span>
+                                        <div><h4>Повторить любую сделанную ранее рассылку изменив только при необходимости текст или список получателей. </h4><p>Получателей можно&nbsp;фильтровать&nbsp;по полу и возрасту.</p></div>
+                                    </article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Автоматически&nbsp;подставлять в текст СМС имя получателя</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Запланировать&nbsp;отложенную рассылку</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Рассылать&nbsp;постепенно, чтобы абоненты получали ваши сообщения&nbsp;равномерно на протяжении нескольких часов</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Просмотреть&nbsp;отчеты о доставках</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Просмотреть&nbsp;историю отправок&nbsp;на конкретный номер телефона<br>и/или&nbsp;заблокировать получателя</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Просмотреть историю&nbsp;финансовых взаиморасчетов</h4></article>
+                                </div>
+                                <p class="security-capability-list__note">...И много других удобных и полезных мелочей</p>
+                            </div>
+                            <aside class="security-integration">
+                                <h3>При интеграции с нашей платформой<br>вы получите:</h3>
+                                <div class="security-integration__list">
+                                    <p>Доступ к удобному и продуманному XML-протоколу</p>
+                                    <p>Доступ к WEB-службе (SOAP-протокол, WSDL) для интеграции с 1С<br>и другими системами автоматизации.</p>
+                                    <p>Доступ к профессиональному SMPP-протоколу</p>
+                                    <p>Возможность отправлять SMS путем простой отправки e-mail</p>
+                                    <p>2 варианта получения отчетов о доставке<br>(событийный либо по запросу)</p>
+                                    <p>Понятную документацию и примеры подключения на JSP и PHP</p>
+                                </div>
+                                <div class="security-integration__downloads">
+                                    <a href="#xml">XML-протокол</a>
+                                    <a href="#smpp">SMPP-протокол</a>
+                                    <a href="#email">Email-протокол</a>
+                                    <a href="#wsdl">WSDL для WEB-служб</a>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="security-api-row">
+                            <h3>Примеры подключения HTTP-XML-API:</h3>
+                            <div class="security-api-row__cards">
+                                <a href="#php">На PHP</a>
+                                <a href="#java">На Java</a>
+                                <a href="#python">На Python</a>
+                                <a href="#nodejs">На NoodleJS</a>
+                            </div>
+                        </div>
+                        <section class="security-more" aria-labelledby="security-more-title">
+                            <h3 id="security-more-title">Кроме того</h3>
+                            <div class="security-more__grid">
+                                <article class="security-more__card">
+                                    <span class="security-more__icon security-more__icon--balance" aria-hidden="true"></span>
+                                    <div class="security-more__text">
+                                        <p><strong>Мы разработали&nbsp;систему предсказания расхода средств!</strong></p>
+                                        <p>Именно для Вас в зависимости от динамики ваших рассылок мы напомним Вам заранее о необходимости пополнения счета в нужное время.</p>
+                                    </div>
+                                </article>
+                                <article class="security-more__card">
+                                    <span class="security-more__icon security-more__icon--document" aria-hidden="true"></span>
+                                    <div class="security-more__text">
+                                        <p>Сразу по завершении очередного месяца мы <strong>автоматически вышлем для Вашей бухгалтерии скан заверенного&nbsp;акта&nbsp;о выполненных услугах,</strong> а очередной&nbsp;счет&nbsp;вы сможете выставить себе самостоятельно нажатием одной кнопки.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="security-data" aria-labelledby="security-data-title">
+                        <div class="security-data__inner container-xxl">
+                            <h2 id="security-data-title">Безопасность ваших данных</h2>
+                            <p>Свой сайт развернут на защищенном сервере с использованием всех необходимых мер, включая и наши. Для исключения доступа третьих лиц мы не передаем вашу клиентскую базу внешним подрядчикам.</p>
+                            <a href="#demo" class="btn btn-cta security-data__button">Получить консультацию по безопасности<span aria-hidden="true"></span></a>
+                        </div>
+                    </section>
+
+                    <section class="security-price container-xxl" aria-labelledby="security-price-title">
+                        <div class="security-price__copy">
+                            <h2 id="security-price-title">Цены</h2>
+                            <p>По нашему опыту стоимость сервиса является второстепенным критерием при выборе поставщика СМС-услуг - <strong>куда важнее качество работы сервиса.</strong></p>
+                            <p>Но, тем не менее, мы можем предложить своим клиентам цены ниже средних по рынку и без ущерба для качества.<br><br>Кроме того мы всегда готовы идти на встречу нашим заказчикам и предоставляем&nbsp;<strong>значительные скидки</strong>&nbsp;на крупные и/или регулярные закупки СМС-услуг. <strong class="text-orange">Уточните возможность скидки у наших менеджеров.</strong></p>
+                            <p>К международным&nbsp;относятся альфанумерические имена, которые используются международными брендами, платёжными системами, международными электронными кошельками и/или системами расчётов (например, WebMoney, Qiwi Wallet и т.д.), международными социальными сетями, международными игровыми Интернет-сервисами, международными сервисами электронной почты, файлообменниками, поисковыми системами (например, Mail.Ru, Yahoo, Rambler.ru, Google, и т.д.).</p>
+                        </div>
+                        <aside class="security-price-card">
+                            <h3>За отправленные<span class="security-price-card__desktop-break"><br></span> или доставленные?</h3>
+                            <p><strong>Мы считаем отправленные СМС.</strong> Нам так удобнее т.к. каждая, даже ошибочная, СМС имеет для нас свою себестоимость.<span class="security-price-card__desktop-gap"><br><br></span> Но важно знать, что уровень фактических доставок в нашей системе составляет порядка <strong>99.9%!</strong></p>
+                            <p>Если вы попробуете отправить СМС на неправильный номер телефона (вне допустимого диапазона) мы не примем к отправке это СМС и <strong>не протарифицируем его.</strong></p>
+                        </aside>
+                    </section>
+
+                    <section class="security-company container-xxl" aria-labelledby="security-company-title">
+                        <div class="security-company__box">
+                            <h2 id="security-company-title">О компании</h2>
+                            <p><strong>Компания Nikita, c начала 2006 года и по настоящее время, является лидером рынка мобильного контента в Кыргызстане в области IVR и SMS услуг. </strong></p>
+                            <p>Компания работает со всеми сотовыми операторами в стране: «Альфа Телеком» (ТМ «MegaCom»), «Скай Мобайл» (ТМ «Beeline»), «Нуртелеком» (ТМ «О!»), «Семь Мобайл» (ТМ «Fonex»), «Сотел» (ТМ «Nexi»).</p>
+                        </div>
+                    </section>
+
+                    <section class="security-company-services container-xxl" aria-labelledby="security-company-services-title">
+                        <h2 id="security-company-services-title">В настоящее время наша компания предоставляет ряд информационных и развлекательных сервисов на базе следующих технологий:</h2>
+                        <div class="security-company-services__list">
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>SMS-маркетинг/адресные рассылки</h3><p>Адресные рассылки по GSM-операторам связи. Среди наших клиентов: банки, кредитные организации, магазины, предприятия общепита, службы такси и ряд прочих клиентов;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>IVR, голосовой портал «Позвони!»&nbsp;</h3><p>(Розыгрыши, Закачка мелодий и приложений, Знакомства, Анекдоты, Признания, Поздравления, Voice Changer - Смеховызов, Background Music – Алиби, пр.);</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>SMS&nbsp;премиум-номера – доступ к различному цифровому контенту</h3><p>(игры TankiOnline, WorldOfTanks, WorldOfWarShips, Worldofwarplanes, пр. видео, фото, пр.), к социальным сетям Odnoklassniki, Mail.ru, Vkontakte, пр. (покупка виртуальной валюты, пр.). Интерактивные SMS-проекты на ТВ и Радио, пр.;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>SMS-акции мобильного маркетинга&nbsp;</h3><p>с такими торговыми марками как «Чудо» (молочные продукты), «Чай Пиала», «Мак-Кофе», «Собрание» (Галахер); «WEST» (Реемтсма-Кыргызстан), ТМ «Водоффка» (АрВин), Pepsi Cola, KitKat, Coca-Cola, Frima, Чай «Рахмет», «Балтика 7», MacCoffee, пр.;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>JAVA, Android, iOS – приложения</h3><p>(Карта маршрутов г.Бишкек, Кыргызско-англо-русский словарь, пр.);</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>RBT-контент</h3><p>Произведения национальных, российских и зарубежных исполнителей;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>Компания Nikita также поставляет всем GSM операторам Кыргызстана программный продукт:&nbsp;"Автонастройки GPRS/MMS/WAP". </h3><p>Обновление баз телефонов, минимум 1 раз в месяц, автоматическое определение модели телефона по IMEI коду, пр. Благодаря данному продукту, у абонентов не возникает проблем с настройкой Интернета для мобильного терминала.</p></div></article>
+                        </div>
+                        <p class="security-company-services__note">Компания Nikita предоставляет исключительно лицензионный контент, на распространение которого имеет разрешения от его правообладателей.</p>
+                    </section>
+                </div>
+            </section>
+
+            <section class="security-tabpanel security-tabpanel--placeholder" id="security-tab-reliability" role="tabpanel" aria-labelledby="security-tab-reliability-control" data-security-panel="reliability" hidden>
+                <div class="container-xxl"><p>Контент раздела будет добавлен позже.</p></div>
+            </section>
+            <section class="security-tabpanel security-tabpanel--placeholder" id="security-tab-safety" role="tabpanel" aria-labelledby="security-tab-safety-control" data-security-panel="safety" hidden>
+                <div class="container-xxl"><p>Контент раздела будет добавлен позже.</p></div>
+            </section>
+            <section class="security-tabpanel security-tabpanel--placeholder" id="security-tab-convenience" role="tabpanel" aria-labelledby="security-tab-convenience-control" data-security-panel="convenience" hidden>
+                <div class="container-xxl"><p>Контент раздела будет добавлен позже.</p></div>
+            </section>
+            <section class="security-tabpanel security-tabpanel--placeholder" id="security-tab-pricing" role="tabpanel" aria-labelledby="security-tab-pricing-control" data-security-panel="pricing" hidden>
+                <div class="container-xxl"><p>Контент раздела будет добавлен позже.</p></div>
+            </section>
+            <section class="security-tabpanel security-tabpanel--placeholder" id="security-tab-company" role="tabpanel" aria-labelledby="security-tab-company-control" data-security-panel="company" hidden>
+                <div class="container-xxl"><p>Контент раздела будет добавлен позже.</p></div>
+            </section>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">ОсОО "Никита Онлайн"</h3>
+                    <p class="footer__muted">Лицензия ГАС КР №15-1425-КР от&nbsp;18.09.2015</p>
+                    <h3 class="footer__company">ОсОО "Никита Мобайл"</h3>
+                    <p class="footer__sub">(на основании договора аренды программно-аппаратной платформы с ОсОО "Никита Онлайн" от&nbsp;15.04.2022)</p>
+                    <p class="footer__muted">Лицензия ГАС КР №11-828-КР от&nbsp;21.04.2011</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>г. Бишкек, ул. Шопокова 89, 5 эт., 9 каб.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© ОсОО "Никита Онлайн", ОсОО "Никита Мобайл", 2014-2025 г.</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Подвал">
+                <div class="footer__nav-primary">
+                    <a href="services.html">Условия и цены</a>
+                    <a href="technical.html">Технические возможности</a>
+                    <a href="security.html">Надёжность и безопасность</a>
+                    <a href="faq.html">Вопросы и ответы</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="#terms">Пользовательское соглашение</a>
+                    <a href="#privacy">Политика конфиденциальности</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Подключение и коммерческие вопросы:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Социальные сети">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Техническая поддержка:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Социальные сети">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="assets/scripts/main.js?v=security-tabs"></script>
+</body>
+</html>

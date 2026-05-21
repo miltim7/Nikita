@@ -11,6 +11,8 @@ import { initPartnersSlider } from './modules/partners-slider.js';
 import { initRecommendSlider } from './modules/recommend-slider.js';
 import { initServiceTabs } from './modules/service-tabs.js';
 import { initPaymentTabs } from './modules/payment-tabs.js?v=payment-tabs';
+import { initSecurityTabs } from './modules/security-tabs.js';
+import { initFaqAccordion } from './modules/faq-accordion.js';
 
 function init() {
     initMobileMenu();
@@ -21,6 +23,8 @@ function init() {
     initRecommendSlider();
     initServiceTabs();
     initPaymentTabs();
+    initSecurityTabs();
+    initFaqAccordion();
 }
 
 if (document.readyState === 'loading') {
