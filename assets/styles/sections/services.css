@@ -916,6 +916,239 @@
     object-fit: contain;
 }
 
+/* ============================================================
+   PAYMENT TAB
+   ============================================================ */
+.payment-tab {
+    margin-top: 36px;
+}
+
+.payment-tab__intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.payment-tab__title,
+.payment-tab__panel h3 {
+    margin: 0;
+    color: var(--color-header-black);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+}
+
+.payment-tab__title,
+.payment-tab__panel h3 {
+    font-size: var(--fs-3xl);
+}
+
+.payment-tab__lead {
+    margin: 0;
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.payment-tab__content {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-5);
+    margin-top: 36px;
+}
+
+.payment-tab__methods {
+    display: flex;
+    flex: 0 0 292px;
+    flex-direction: column;
+    gap: var(--space-2);
+    width: 292px;
+}
+
+.payment-tab-card {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    width: 100%;
+    height: 82px;
+    min-height: 82px;
+    padding: var(--space-4);
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-case-card);
+    color: var(--color-header-black);
+    font: inherit;
+    text-align: left;
+}
+
+.payment-tab-card--brand {
+    gap: 6px;
+}
+
+.payment-tab-card--active {
+    border-color: var(--color-header-blue);
+    background: var(--color-surface-blue-5);
+    box-shadow: none;
+    color: var(--color-header-blue);
+}
+
+.payment-tab-card__icon {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    background: var(--payment-tab-icon) center / contain no-repeat;
+}
+
+.payment-tab-card__icon--bank {
+    --payment-tab-icon: url('../../images/services/icon-payment-bank.svg');
+}
+
+.payment-tab-card__icon--card {
+    --payment-tab-icon: url('../../images/services/icon-payment-card.svg');
+}
+
+.payment-tab-card__brand {
+    display: inline-flex;
+    flex: 0 0 54px;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 24px;
+}
+
+.payment-tab-card__brand img {
+    display: block;
+    object-fit: contain;
+}
+
+.payment-tab-card__brand--mbank img,
+.payment-tab-card__brand--pay24 img {
+    width: 54px;
+    height: 24px;
+}
+
+.payment-tab-card__brand--elqr img {
+    width: 24px;
+    height: 24px;
+}
+
+.payment-tab-card__brand--elsom img {
+    width: 30px;
+    height: 18px;
+}
+
+.payment-tab-card__text {
+    flex: 1 1 auto;
+    min-width: 0;
+    color: currentColor;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.payment-tab__panel {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 532px;
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-blue-5);
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.payment-tab__copy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+}
+
+.payment-tab__copy p {
+    margin: 0;
+}
+
+.payment-tab__copy strong {
+    font-weight: var(--fw-semibold);
+}
+
+.payment-tab__steps {
+    margin: 0;
+    padding-left: 20px;
+    list-style: decimal;
+}
+
+.payment-tab__steps a {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+}
+
+.payment-tab__steps a:hover,
+.payment-tab__steps a:focus-visible {
+    text-decoration: underline;
+}
+
+.payment-tab__note {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.payment-card-logos {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.payment-card-logo {
+    display: flex;
+    flex: 0 1 200px;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    max-width: 200px;
+    aspect-ratio: 5 / 3;
+    border-radius: var(--radius-figma-card);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-logo-card);
+}
+
+.payment-card-logo img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+.payment-card-logo--visa img {
+    width: min(130.285px, 88%);
+}
+
+.payment-card-logo--mastercard img,
+.payment-card-logo--maestro img {
+    width: min(100.224px, 68%);
+}
+
+.payment-card-logo--amex img {
+    width: min(166px, 92%);
+}
+
+.payment-card-panel__commission {
+    color: var(--color-header-orange);
+}
+
 .otp-intro {
     display: flex;
     flex-direction: column;
@@ -1663,6 +1896,100 @@
         height: 18px;
     }
 
+    .payment-tab {
+        margin-top: var(--space-4);
+    }
+
+    .payment-tab__title,
+    .payment-tab__panel h3 {
+        font-size: var(--fs-2xl);
+    }
+
+    .payment-tab__lead,
+    .payment-tab__panel {
+        font-size: var(--fs-sm);
+        letter-spacing: 0.02em;
+    }
+
+    .payment-tab__content {
+        display: block;
+        margin-top: var(--space-4);
+        padding-bottom: var(--space-6);
+    }
+
+    .payment-tab__methods {
+        flex-direction: row;
+        gap: var(--space-2);
+        width: 100%;
+        padding-bottom: var(--space-4);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .payment-tab__methods::-webkit-scrollbar {
+        display: none;
+    }
+
+    .payment-tab-card {
+        flex: 0 0 154px;
+        width: 154px;
+        height: 90px;
+        min-height: 90px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+        padding: var(--space-4);
+        border-radius: var(--radius-figma-card);
+        text-align: center;
+    }
+
+    .payment-tab-card--pay24 {
+        flex-basis: 166px;
+        width: 166px;
+    }
+
+    .payment-tab-card--elsom {
+        flex-basis: 160px;
+        width: 160px;
+    }
+
+    .payment-tab-card__icon {
+        flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .payment-tab-card__text {
+        flex: 0 1 auto;
+        width: 100%;
+        font-size: var(--fs-base);
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    .payment-tab-card--pay24 .payment-tab-card__text,
+    .payment-tab-card--elsom .payment-tab-card__text {
+        font-size: 13px;
+    }
+
+    .payment-tab__panel {
+        min-height: 0;
+        padding: var(--space-6);
+    }
+
+    .payment-card-logos {
+        justify-content: space-between;
+        gap: var(--space-3);
+    }
+
+    .payment-card-logo {
+        flex: 0 1 167px;
+        width: 167px;
+        max-width: 167px;
+    }
+
     .otp-intro {
         gap: 28px;
         margin-top: 28px;
@@ -2321,6 +2648,39 @@
 
     .payment-list li:nth-last-child(-n+2) {
         min-height: 119px;
+    }
+
+    .payment-tab__methods {
+        padding-bottom: var(--space-3);
+    }
+
+    .payment-tab-card,
+    .payment-tab-card--mbank,
+    .payment-tab-card--elqr {
+        flex-basis: 90px;
+        width: 90px;
+        padding-inline: var(--space-2);
+    }
+
+    .payment-tab-card--pay24,
+    .payment-tab-card--elsom {
+        flex-basis: 160px;
+        width: 160px;
+    }
+
+    .payment-card-logos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-2);
+    }
+
+    .payment-card-logo {
+        width: 100%;
+        max-width: none;
+    }
+
+    .payment-tab__steps {
+        padding-left: 18px;
     }
 
     .otp-intro {

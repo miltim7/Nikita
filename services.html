@@ -137,8 +137,8 @@
             <a href="#service-tab-sending" class="service-tabs__item" role="tab" id="service-tab-sending-control" aria-controls="service-tab-sending" aria-selected="false" tabindex="-1" data-service-tab="sending">Отправка SMS</a>
             <a href="#service-tab-receive" class="service-tabs__item" role="tab" id="service-tab-receive-control" aria-controls="service-tab-receive" aria-selected="false" tabindex="-1" data-service-tab="receive">Прием SMS</a>
             <a href="#service-tab-otp" class="service-tabs__item" role="tab" id="service-tab-otp-control" aria-controls="service-tab-otp" aria-selected="false" tabindex="-1" data-service-tab="otp">OTP-Сервис</a>
-            <a href="#service-tab-flash" class="service-tabs__item service-tabs__item--active" role="tab" id="service-tab-flash-control" aria-controls="service-tab-flash" aria-selected="true" data-service-tab="flash">Flash SMS</a>
-            <a href="#service-tab-payment" class="service-tabs__item" role="tab" id="service-tab-payment-control" aria-controls="service-tab-payment" aria-selected="false" tabindex="-1" data-service-tab="payment">Способы оплаты</a>
+            <a href="#service-tab-flash" class="service-tabs__item" role="tab" id="service-tab-flash-control" aria-controls="service-tab-flash" aria-selected="false" tabindex="-1" data-service-tab="flash">Flash SMS</a>
+            <a href="#service-tab-payment" class="service-tabs__item service-tabs__item--active" role="tab" id="service-tab-payment-control" aria-controls="service-tab-payment" aria-selected="true" data-service-tab="payment">Способы оплаты</a>
         </nav>
     </div>
 
@@ -593,7 +593,7 @@
                 </div>
             </section>
         </div>
-        <div class="service-tabpanel service-tabpanel--active" id="service-tab-flash" role="tabpanel" aria-labelledby="service-tab-flash-control" data-service-panel="flash">
+        <div class="service-tabpanel" id="service-tab-flash" role="tabpanel" aria-labelledby="service-tab-flash-control" data-service-panel="flash" hidden>
             <section class="flash-intro container-xxl">
                 <div class="flash-intro__copy">
                     <h2>Новый канал продвижения – Flash SMS</h2>
@@ -758,7 +758,160 @@
                 </div>
             </section>
         </div>
-        <div class="service-tabpanel service-tabpanel--empty" id="service-tab-payment" role="tabpanel" aria-labelledby="service-tab-payment-control" data-service-panel="payment" hidden></div>
+        <div class="service-tabpanel service-tabpanel--active" id="service-tab-payment" role="tabpanel" aria-labelledby="service-tab-payment-control" data-service-panel="payment">
+            <section class="payment-tab" aria-labelledby="payment-tab-title">
+                <div class="payment-tab__intro container-xxl">
+                    <h2 class="payment-tab__title" id="payment-tab-title">Способы оплаты</h2>
+                    <p class="payment-tab__lead">Вне зависимости от формы Вашей организации (физическое лицо, юридическое лицо либо ЧП) пополнить счет в нашей системе можно любым из перечисленных способов:</p>
+                </div>
+
+                <div class="payment-tab__content container-xxl">
+                    <div class="payment-tab__methods" role="tablist" aria-label="Способы пополнения">
+                        <button class="payment-tab-card payment-tab-card--bank" type="button" role="tab" id="payment-bank-control" aria-selected="false" tabindex="-1" aria-controls="payment-bank-panel">
+                            <span class="payment-tab-card__icon payment-tab-card__icon--bank" aria-hidden="true"></span>
+                            <span class="payment-tab-card__text">Безналичный расчёт</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--active payment-tab-card--card" type="button" role="tab" id="payment-card-control" aria-selected="true" aria-controls="payment-card-panel">
+                            <span class="payment-tab-card__icon payment-tab-card__icon--card" aria-hidden="true"></span>
+                            <span class="payment-tab-card__text">Банковские карты</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--mbank" type="button" role="tab" id="payment-mbank-control" aria-selected="false" tabindex="-1" aria-controls="payment-mbank-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--mbank" aria-hidden="true">
+                                <img src="assets/images/services/payment-mbank.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Оплата через Мбанк</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--elqr" type="button" role="tab" id="payment-elqr-control" aria-selected="false" tabindex="-1" aria-controls="payment-elqr-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--elqr" aria-hidden="true">
+                                <img src="assets/images/services/payment-elqr-source.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Оплата через ELQR</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--pay24" type="button" role="tab" id="payment-pay24-control" aria-selected="false" tabindex="-1" aria-controls="payment-pay24-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--pay24" aria-hidden="true">
+                                <img src="assets/images/services/payment-pay24.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Оплата <br>через терминалы Pay24</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--elsom" type="button" role="tab" id="payment-elsom-control" aria-selected="false" tabindex="-1" aria-controls="payment-elsom-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--elsom" aria-hidden="true">
+                                <img src="assets/images/services/payment-elsom-source.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Оплата через электронный кошелек ЭЛСОМ</span>
+                        </button>
+                    </div>
+
+                    <article class="payment-tab__panel payment-card-panel" id="payment-card-panel" role="tabpanel" aria-labelledby="payment-card-control" data-payment-panel>
+                        <h3>Банковские карты</h3>
+                        <div class="payment-tab__copy payment-card-panel__copy">
+                            <p><strong>Пополнение банковской картой – самый простой и выгодный способ пополения.</strong></p>
+                            <p>Мы принимаем карты всех самых распространенных платежных систем:</p>
+                            <div class="payment-card-logos" aria-label="Платежные системы">
+                                <span class="payment-card-logo payment-card-logo--visa">
+                                    <img src="assets/images/services/payment-card-visa.svg" alt="Visa">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--mastercard">
+                                    <img src="assets/images/services/payment-card-mastercard.svg" alt="MasterCard">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--maestro">
+                                    <img src="assets/images/services/payment-card-maestro.svg" alt="Maestro">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--amex">
+                                    <img src="assets/images/services/payment-card-amex.svg" alt="American Express">
+                                </span>
+                            </div>
+                            <p>Для пополнения картой зайдите в свой личный кабинет на нашем сайте <strong>(Главная&nbsp;→&nbsp;пополнить счет)</strong><br>Выберите соответствующий тип пополнения, укажите сумму пополнения и следуйте дальнейшим указаниям системы.</p>
+                            <p class="payment-card-panel__commission"><strong>Комиссия при пополнении картой – 0%</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-bank-panel" role="tabpanel" aria-labelledby="payment-bank-control" data-payment-panel hidden>
+                        <h3>Безналичный расчёт</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Для организаций и ИП предусмотрена возможность пополнения счета за счет средств организации.</strong></p>
+                            <p>Безналичный расчет позволяет учитывать затраты на SMS-рассылки в бухгалтерских отчетах и получать счета-фактуры для учета в системе.</p>
+                            <p>Для заключения договора и оформления безналичного расчета необходимо предоставить:</p>
+                            <ul style="margin-left: 20px; margin-top: 15px;">
+                                <li>Свидетельство о регистрации юридического лица или ЧП (ИП)</li>
+                                <li>Реквизиты расчетного счета</li>
+                                <li>Контактные данные руководителя</li>
+                            </ul>
+                            <p style="margin-top: 15px;">После согласования договора пополнение счета производится путем перевода средств на банковский счет компании NIKITA.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-mbank-panel" role="tabpanel" aria-labelledby="payment-mbank-control" data-payment-panel hidden>
+                        <h3>Оплата через Мбанк</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Быстрое пополнение счета через мобильное приложение Мбанк.</strong></p>
+                            <p>Для пополнения счета через Мбанк:</p>
+                            <ol style="margin-left: 20px; margin-top: 15px;">
+                                <li>Откройте приложение Мбанк</li>
+                                <li>Перейдите в раздел "Платежи"</li>
+                                <li>Выберите получателя "NIKITA"</li>
+                                <li>Укажите сумму пополнения</li>
+                                <li>Подтвердите платеж</li>
+                            </ol>
+                            <p style="margin-top: 15px;"><strong>Комиссия: уточняется у банка</strong></p>
+                            <p>Средства зачисляются на счет в течение нескольких минут.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-elqr-panel" role="tabpanel" aria-labelledby="payment-elqr-control" data-payment-panel hidden>
+                        <h3>Оплата через ELQR</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Современный способ оплаты через систему ELQR.</strong></p>
+                            <p>ELQR - это единая система быстрых платежей в Кыргызстане.</p>
+                            <p>Для пополнения счета через ELQR:</p>
+                            <ol style="margin-left: 20px; margin-top: 15px;">
+                                <li>Откройте мобильное приложение вашего банка или платежного сервиса</li>
+                                <li>Найдите опцию для оплаты по QR-коду</li>
+                                <li>Отсканируйте QR-код NIKITA или используйте реквизиты получателя</li>
+                                <li>Укажите сумму и подтвердите платеж</li>
+                            </ol>
+                            <p style="margin-top: 15px;"><strong>Комиссия: от 0%</strong></p>
+                            <p>Средства зачисляются мгновенно.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-pay24-panel" role="tabpanel" aria-labelledby="payment-pay24-control" data-payment-panel hidden>
+                        <h3>Оплата через терминалы Pay24</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Пополнение счета через сеть терминалов Pay24 по всей стране.</strong></p>
+                            <p>Сеть терминалов Pay24 представлена во всех крупных торговых центрах и уличных точках Кыргызстана.</p>
+                            <p>Для пополнения счета через терминал Pay24:</p>
+                            <ol style="margin-left: 20px; margin-top: 15px;">
+                                <li>Найдите ближайший терминал Pay24</li>
+                                <li>Выберите опцию "Интернет сервисы"</li>
+                                <li>Найдите NIKITA в списке поставщиков услуг</li>
+                                <li>Введите ваш номер счета или лицевой счет</li>
+                                <li>Укажите сумму и внесите наличные</li>
+                            </ol>
+                            <p style="margin-top: 15px;"><strong>Комиссия: от 1% до 3% в зависимости от суммы</strong></p>
+                            <p>Средства зачисляются в течение 5-15 минут.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-elsom-panel" role="tabpanel" aria-labelledby="payment-elsom-control" data-payment-panel hidden>
+                        <h3>Оплата через электронный кошелек ЭЛСОМ</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Удобное пополнение счета через электронный кошелек ЭЛСОМ.</strong></p>
+                            <p>ЭЛСОМ - это популярная система электронных платежей в Кыргызстане.</p>
+                            <p>Для пополнения счета через ЭЛСОМ:</p>
+                            <ol style="margin-left: 20px; margin-top: 15px;">
+                                <li>Откройте приложение ЭЛСОМ</li>
+                                <li>Перейдите в раздел "Платежи"</li>
+                                <li>Найдите NIKITA в каталоге услуг</li>
+                                <li>Укажите номер счета и сумму пополнения</li>
+                                <li>Подтвердите платеж</li>
+                            </ol>
+                            <p style="margin-top: 15px;"><strong>Комиссия: от 0,5%</strong></p>
+                            <p>Средства зачисляются мгновенно.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
     </div>
 </section>
 </main>
