@@ -883,6 +883,7 @@
     }
     .how-step__center {
         grid-column: 1;
+        grid-row: 1;
         width: 48px;
         min-height: 48px;
         flex-shrink: 0;
@@ -898,12 +899,14 @@
     }
     .how-step__num {
         grid-column: 3;
+        grid-row: 1;
         font-size: 42px;
         line-height: 1.2;
         align-self: center;
     }
     .how-step__text {
         grid-column: 5;
+        grid-row: 1;
         font-size: 12px;
         font-weight: 300;
         align-self: center;

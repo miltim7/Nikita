@@ -769,7 +769,7 @@
                     <div class="payment-tab__methods" role="tablist" aria-label="Способы пополнения">
                         <button class="payment-tab-card payment-tab-card--bank" type="button" role="tab" id="payment-bank-control" aria-selected="false" tabindex="-1" aria-controls="payment-bank-panel">
                             <span class="payment-tab-card__icon payment-tab-card__icon--bank" aria-hidden="true"></span>
-                            <span class="payment-tab-card__text">Безналичный расчёт</span>
+                            <span class="payment-tab-card__text">Безналичный расчет</span>
                         </button>
                         <button class="payment-tab-card payment-tab-card--active payment-tab-card--card" type="button" role="tab" id="payment-card-control" aria-selected="true" aria-controls="payment-card-panel">
                             <span class="payment-tab-card__icon payment-tab-card__icon--card" aria-hidden="true"></span>
@@ -826,17 +826,21 @@
                     </article>
 
                     <article class="payment-tab__panel" id="payment-bank-panel" role="tabpanel" aria-labelledby="payment-bank-control" data-payment-panel hidden>
-                        <h3>Безналичный расчёт</h3>
+                        <h3>Безналичный расчет</h3>
                         <div class="payment-tab__copy">
-                            <p><strong>Для организаций и ИП предусмотрена возможность пополнения счета за счет средств организации.</strong></p>
-                            <p>Безналичный расчет позволяет учитывать затраты на SMS-рассылки в бухгалтерских отчетах и получать счета-фактуры для учета в системе.</p>
-                            <p>Для заключения договора и оформления безналичного расчета необходимо предоставить:</p>
-                            <ul style="margin-left: 20px; margin-top: 15px;">
-                                <li>Свидетельство о регистрации юридического лица или ЧП (ИП)</li>
-                                <li>Реквизиты расчетного счета</li>
-                                <li>Контактные данные руководителя</li>
-                            </ul>
-                            <p style="margin-top: 15px;">После согласования договора пополнение счета производится путем перевода средств на банковский счет компании NIKITA.</p>
+                            <p><strong>Рекомендованный (но не обязательный) способ оплаты для юридических лиц и ЧП.</strong></p>
+                            <p>Оплата производится банковским переводом по счету. Для выставления счета требуется:</p>
+                            <ol class="payment-tab__steps">
+                                <li><span class="payment-tab__link-text">Зарегистрироваться</span> и заключить письменный договор с ОсОО "Никита Онлайн"</li>
+                                <li>Произвести online-заказ на пополнение счета в своем личном кабинете на желаемую сумму<br><strong>(Личный кабинет&nbsp;→&nbsp;Главная&nbsp;→&nbsp;Пополнить счет)</strong></li>
+                            </ol>
+                            <div class="payment-tab__text-flow">
+                                <p>Процесс выставления счета занимает <strong>несколько секунд</strong> без участия менеджера.</p>
+                                <p>Вы сразу получаете скан-копию заверенного документа.</p>
+                                <p>Оригинал документа доставляется отдельно обычной почтой.</p>
+                            </div>
+                            <p>Возможно <strong>ускоренное зачисление</strong> средств на ваш счет в системе при предоставлении скана заверенного платежного поручения (для клиентов, заключивших договор).</p>
+                            <p>В назначении платежа необходимо указать номер счета и фразу «за услуги SMS-оповещений».</p>
                         </div>
                     </article>
 
@@ -845,14 +849,14 @@
                         <div class="payment-tab__copy">
                             <p><strong>Быстрое пополнение счета через мобильное приложение Мбанк.</strong></p>
                             <p>Для пополнения счета через Мбанк:</p>
-                            <ol style="margin-left: 20px; margin-top: 15px;">
+                            <ol class="payment-tab__steps">
                                 <li>Откройте приложение Мбанк</li>
                                 <li>Перейдите в раздел "Платежи"</li>
                                 <li>Выберите получателя "NIKITA"</li>
                                 <li>Укажите сумму пополнения</li>
                                 <li>Подтвердите платеж</li>
                             </ol>
-                            <p style="margin-top: 15px;"><strong>Комиссия: уточняется у банка</strong></p>
+                            <p><strong>Комиссия: уточняется у банка</strong></p>
                             <p>Средства зачисляются на счет в течение нескольких минут.</p>
                         </div>
                     </article>
@@ -863,50 +867,67 @@
                             <p><strong>Современный способ оплаты через систему ELQR.</strong></p>
                             <p>ELQR - это единая система быстрых платежей в Кыргызстане.</p>
                             <p>Для пополнения счета через ELQR:</p>
-                            <ol style="margin-left: 20px; margin-top: 15px;">
+                            <ol class="payment-tab__steps">
                                 <li>Откройте мобильное приложение вашего банка или платежного сервиса</li>
                                 <li>Найдите опцию для оплаты по QR-коду</li>
                                 <li>Отсканируйте QR-код NIKITA или используйте реквизиты получателя</li>
                                 <li>Укажите сумму и подтвердите платеж</li>
                             </ol>
-                            <p style="margin-top: 15px;"><strong>Комиссия: от 0%</strong></p>
+                            <p><strong>Комиссия: от 0%</strong></p>
                             <p>Средства зачисляются мгновенно.</p>
                         </div>
                     </article>
 
                     <article class="payment-tab__panel" id="payment-pay24-panel" role="tabpanel" aria-labelledby="payment-pay24-control" data-payment-panel hidden>
                         <h3>Оплата через терминалы Pay24</h3>
-                        <div class="payment-tab__copy">
-                            <p><strong>Пополнение счета через сеть терминалов Pay24 по всей стране.</strong></p>
-                            <p>Сеть терминалов Pay24 представлена во всех крупных торговых центрах и уличных точках Кыргызстана.</p>
-                            <p>Для пополнения счета через терминал Pay24:</p>
-                            <ol style="margin-left: 20px; margin-top: 15px;">
-                                <li>Найдите ближайший терминал Pay24</li>
-                                <li>Выберите опцию "Интернет сервисы"</li>
-                                <li>Найдите NIKITA в списке поставщиков услуг</li>
-                                <li>Введите ваш номер счета или лицевой счет</li>
-                                <li>Укажите сумму и внесите наличные</li>
-                            </ol>
-                            <p style="margin-top: 15px;"><strong>Комиссия: от 1% до 3% в зависимости от суммы</strong></p>
-                            <p>Средства зачисляются в течение 5-15 минут.</p>
+                        <div class="payment-tab__copy payment-tab__copy--pay24">
+                            <div class="payment-tab__group">
+                                <p><strong>При проведении платежа на терминале Вам потребуется:</strong></p>
+                                <ol class="payment-tab__steps">
+                                    <li>Выбрать раздел <strong>Другие услуги&nbsp;→&nbsp;Программы и электронные услуги</strong>, найти в списке услуг <strong>SMS-рассылки Nikita Online</strong></li>
+                                    <li>Указать номер телефона в международном формате, который вы указали при регистрации на нашем сайте</li>
+                                </ol>
+                                <p class="payment-tab__accent">Комиссия при оплате через терминал Pay24 – 2%</p>
+                            </div>
+                            <div class="payment-tab__group payment-tab__group--tight">
+                                <p>Также Вы можете произвести оплату из "Мобильного Кошелька" на сайте <a href="https://pay24.asia" target="_blank" rel="noopener">pay24.asia</a>.</p>
+                                <p class="payment-tab__accent">Комиссия при этом не взимается.</p>
+                            </div>
                         </div>
                     </article>
 
                     <article class="payment-tab__panel" id="payment-elsom-panel" role="tabpanel" aria-labelledby="payment-elsom-control" data-payment-panel hidden>
                         <h3>Оплата через электронный кошелек ЭЛСОМ</h3>
-                        <div class="payment-tab__copy">
-                            <p><strong>Удобное пополнение счета через электронный кошелек ЭЛСОМ.</strong></p>
-                            <p>ЭЛСОМ - это популярная система электронных платежей в Кыргызстане.</p>
-                            <p>Для пополнения счета через ЭЛСОМ:</p>
-                            <ol style="margin-left: 20px; margin-top: 15px;">
-                                <li>Откройте приложение ЭЛСОМ</li>
-                                <li>Перейдите в раздел "Платежи"</li>
-                                <li>Найдите NIKITA в каталоге услуг</li>
-                                <li>Укажите номер счета и сумму пополнения</li>
-                                <li>Подтвердите платеж</li>
+                        <div class="payment-tab__copy payment-tab__copy--elsom">
+                            <p><strong>Электронный кошелек ЭЛСОМ предлагает Вам удобный и простой способ совершать оплату услуг в любом месте и в любое время, несколькими разными способами, при условии доступности мобильной сети или сети Интернет.</strong></p>
+                            <ol class="payment-tab__method-list">
+                                <li>
+                                    <span>Оплата с помощью USSD-команд (доступно для абонентов Beeline, MegaCom):</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Наберите на своем мобильном телефоне команду <strong>*900#.</strong></li>
+                                        <li>В появившемся меню выберите пункт <strong>"Платежи/Ком.услуги"&nbsp;→&nbsp;"Оплатить счет".</strong></li>
+                                        <li>Затем выберите категорию "Другие" и в списке поставщиков найдите пункт <strong>"Nikita Online".</strong></li>
+                                        <li>Введите <strong>лицевой счет</strong> (номер телефона в международном формате, который вы указали при регистрации на нашем сайте), укажите сумму платежа и подтвердите оплату;</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Оплата с помощью мобильного приложения ЭЛСОМ:</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Скачайте и установите мобильное приложение ЭЛСОМ с сайта <a href="https://www.elsom.kg" target="_blank" rel="noopener">www.elsom.kg</a> (доступно для платформ IOS и Android).</li>
+                                        <li>При оплате через мобильное приложение необходимо войти раздел <strong>"Другие услуги"</strong> и выбрать из списка поставщиков <strong>”SMS-рассылки Nikita Online”.</strong></li>
+                                        <li>В качестве реквизита укажите номер телефона в международном формате, который вы указали при регистрации на нашем сайте.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Оплата через личный кошелек на сайте ЭЛСОМ:</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Используйте личный кошелек на сайте <a href="https://www.elsom.kg" target="_blank" rel="noopener">www.elsom.kg</a></li>
+                                        <li>При оплате через личный кошелек необходимо войти раздел <strong>"Другие услуги"</strong> и выбрать из списка поставщиков <strong>”SMS-рассылки Nikita Online”.</strong></li>
+                                        <li>В качестве реквизита укажите номер телефона в международном формате, который вы указали при регистрации на нашем сайте.</li>
+                                    </ul>
+                                </li>
                             </ol>
-                            <p style="margin-top: 15px;"><strong>Комиссия: от 0,5%</strong></p>
-                            <p>Средства зачисляются мгновенно.</p>
+                            <p class="payment-tab__accent">Комиссия при оплате через мобильный кошелек ЭЛСОМ не взимается.</p>
                         </div>
                     </article>
                 </div>

@@ -1077,6 +1077,14 @@
     margin-top: var(--space-3);
 }
 
+.payment-tab__copy--pay24 {
+    gap: var(--space-6);
+}
+
+.payment-tab__copy--elsom {
+    gap: 10px;
+}
+
 .payment-tab__copy p {
     margin: 0;
 }
@@ -1085,10 +1093,50 @@
     font-weight: var(--fw-semibold);
 }
 
+.payment-tab__copy a,
+.payment-tab__link-text {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+}
+
+.payment-tab__copy a:hover,
+.payment-tab__copy a:focus-visible {
+    text-decoration: underline;
+}
+
+.payment-tab__accent {
+    color: var(--color-header-orange);
+    font-weight: var(--fw-semibold);
+}
+
+.payment-tab__group,
+.payment-tab__text-flow {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-tab__group {
+    gap: var(--space-3);
+}
+
+.payment-tab__group--tight {
+    gap: 6px;
+}
+
+.payment-tab__text-flow {
+    gap: 0;
+}
+
 .payment-tab__steps {
     margin: 0;
     padding-left: 20px;
     list-style: decimal;
+}
+
+.payment-tab__steps li,
+.payment-tab__substeps li {
+    margin: 0;
 }
 
 .payment-tab__steps a {
@@ -1106,6 +1154,27 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
+}
+
+.payment-tab__method-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding-left: 21px;
+    font-weight: var(--fw-semibold);
+    list-style: decimal;
+}
+
+.payment-tab__method-list > li::marker {
+    font-weight: var(--fw-semibold);
+}
+
+.payment-tab__substeps {
+    margin: 8px 0 0;
+    padding-left: var(--space-6);
+    font-weight: var(--fw-light);
+    list-style: disc;
 }
 
 .payment-card-logos {
@@ -1913,6 +1982,17 @@
         letter-spacing: 0.02em;
     }
 
+    .payment-tab__copy--pay24,
+    .payment-tab__copy--elsom,
+    .payment-tab__group,
+    .payment-tab__method-list {
+        gap: var(--space-3);
+    }
+
+    .payment-tab__group--tight {
+        gap: 6px;
+    }
+
     .payment-tab__content {
         display: block;
         margin-top: var(--space-4);
@@ -1981,6 +2061,10 @@
         flex: 0 1 167px;
         width: 167px;
         max-width: 167px;
+    }
+
+    .payment-tab__method-list {
+        padding-left: 18px;
     }
 
     .otp-intro {
