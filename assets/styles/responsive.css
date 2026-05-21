@@ -1723,17 +1723,20 @@
 
 @media (max-width: 767.98px) {
     .why__partners {
+        --why-partner-card-width: clamp(88px, 15vw, 115px);
+        --why-partner-card-height: clamp(46px, 7.83vw, 60px);
         width: 100vw;
         grid-template-columns: none;
         margin-inline: calc(50% - 50vw);
-        height: 60px;
-        padding: 12px 0;
+        height: clamp(78px, 12vw, 92px);
+        padding: 16px var(--figma-container-px-mobile);
         overflow-x: auto;
         overflow-y: hidden;
         background: #fff;
         box-shadow: 0 0 12px rgba(33, 32, 32, 0.2);
         -ms-overflow-style: none;
         scrollbar-width: none;
+        scroll-padding-inline: var(--figma-container-px-mobile);
         touch-action: pan-y;
         cursor: grab;
         user-select: none;
@@ -1752,27 +1755,27 @@
         left: 0;
         flex: 0 0 auto;
         gap: 12px;
-        margin-inline: 0;
+        margin-inline: auto;
         transform: none;
     }
 
     .why-partner,
     .why-partner--bitrix {
-        flex: 0 0 69px;
-        width: 69px;
-        height: 36px;
+        flex: 0 0 var(--why-partner-card-width);
+        width: var(--why-partner-card-width);
+        height: var(--why-partner-card-height);
         border: 0;
         border-radius: 6px;
         box-shadow: 0 2px 4px rgba(33, 32, 32, 0.2);
         visibility: visible;
     }
 
-    .why-partner--one-c img { width: 43px; height: 20.96px; }
-    .why-partner--amo img { width: 61.96px; height: 11.92px; }
-    .why-partner--open img { width: 51px; height: 10.1px; }
-    .why-partner--yclients img { width: 61px; height: 14px; }
-    .why-partner--altegio img { width: 55.83px; height: 17.2px; }
-    .why-partner--bitrix img { width: 61.6px; height: 11.29px; }
+    .why-partner--one-c img { width: 62.32%; height: 58.27%; }
+    .why-partner--amo img { width: 89.85%; height: 33.12%; }
+    .why-partner--open img { width: 73.91%; height: 28.05%; }
+    .why-partner--yclients img { width: 88.41%; height: 38.88%; }
+    .why-partner--altegio img { width: 80.91%; height: 47.75%; }
+    .why-partner--bitrix img { width: 89.24%; height: 30.43%; }
 }
 
 /* Audience carousel: Figma pixel-perfect overrides */
@@ -1901,5 +1904,434 @@
 
     .cases__arrow {
         display: none;
+    }
+}
+
+/* Technical page: Figma responsive overrides */
+@media (min-width: 1200px) and (max-width: 1475.98px) {
+    .technical-page .container-xxl,
+    .technical-architecture .container-xxl {
+        padding-inline: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .technical-page {
+        padding-top: 12px;
+        padding-bottom: 167px;
+    }
+
+    .technical-page .container-xxl,
+    .technical-architecture .container-xxl {
+        max-width: 100%;
+        padding-inline: var(--figma-container-px-tablet);
+    }
+
+    .technical-page__breadcrumbs {
+        height: 10px;
+        font-size: 8px;
+    }
+
+    .technical-page__head {
+        margin-top: 12px;
+    }
+
+    .technical-page__title {
+        margin-bottom: 12px;
+        font-size: var(--fs-3xl);
+    }
+
+    .technical-capabilities {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 177px;
+        gap: 16px;
+    }
+
+    .technical-capability {
+        min-height: 67px;
+    }
+
+    .technical-capability p {
+        font-size: var(--fs-sm);
+    }
+
+    .coverage-card {
+        margin-top: 20px;
+    }
+
+    .coverage-card__title {
+        padding: 16px 16px 8px;
+        font-size: var(--fs-md);
+    }
+
+    .coverage-row {
+        min-height: 42px;
+        padding: 8px 16px;
+        gap: 12px;
+    }
+
+    .coverage-row__main {
+        gap: 12px;
+    }
+
+    .technical-check {
+        flex-basis: 16px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .technical-check::before {
+        left: 2.81px;
+        top: 4.23px;
+        width: 10.38px;
+        height: 7.54px;
+    }
+
+    .coverage-row__text,
+    .technical-download {
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .coverage-row__text small {
+        font-size: var(--fs-sm);
+    }
+
+    .coverage-row__actions {
+        gap: 6px;
+    }
+
+    .technical-download {
+        min-height: 32px;
+        padding: 8px;
+    }
+
+    .technical-download::before {
+        flex-basis: 16px;
+        width: 16px;
+        height: 16px;
+        background-size: 10px 10px;
+    }
+
+    .technical-notes {
+        margin-top: 20px;
+        font-size: var(--fs-sm);
+    }
+
+    .technical-api {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .technical-api__title {
+        font-size: var(--fs-md);
+    }
+
+    .technical-api__cards {
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .technical-api-card {
+        min-height: 56px;
+        padding: 16px;
+        border-radius: var(--radius-figma-card);
+        font-size: var(--fs-base);
+    }
+
+    .technical-api-card::before {
+        flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+        background-size: 21.5px 21.5px;
+    }
+
+    .technical-specs {
+        margin-top: 24px;
+    }
+
+    .technical-specs__title {
+        min-height: 48px;
+        font-size: var(--fs-xl);
+    }
+
+    .technical-specs__row {
+        grid-template-columns: minmax(0, 1fr) 260px;
+    }
+
+    .technical-specs__row > * {
+        min-height: 41px;
+        padding: 12px 24px;
+        font-size: var(--fs-sm);
+    }
+
+    .technical-architecture {
+        min-height: 628px;
+        background-image: url('../images/technical/architecture-bg-tablet.png');
+    }
+
+    .technical-architecture__inner {
+        gap: 36px;
+        min-height: 628px;
+        padding-block: 48px;
+    }
+
+    .technical-architecture__head h2 {
+        font-size: 26px;
+    }
+
+    .technical-architecture__head p,
+    .architecture-benefit p {
+        font-size: var(--fs-sm);
+    }
+
+    .architecture-diagram-wrap {
+        padding-block: 0;
+    }
+
+    .architecture-diagram {
+        flex-basis: 100%;
+        width: 100%;
+        aspect-ratio: 754 / 147;
+        background-image: url('../images/technical/architecture-diagram-tablet.png');
+    }
+
+    .architecture-benefits {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .architecture-benefit {
+        grid-column: span 2;
+        min-height: 117px;
+        gap: 16px;
+    }
+
+    .architecture-benefit:nth-child(4),
+    .architecture-benefit:nth-child(5) {
+        grid-column: span 3;
+        min-height: 101px;
+    }
+
+    .architecture-benefit__metric {
+        font-size: var(--fs-3xl);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .technical-page {
+        padding-bottom: 160px;
+    }
+
+    .technical-page .container-xxl,
+    .technical-architecture .container-xxl {
+        padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .technical-page__title {
+        margin-bottom: 12px;
+        font-size: var(--fs-3xl);
+    }
+
+    .technical-capabilities {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .technical-capability {
+        min-height: 0;
+    }
+
+    .technical-capability:nth-child(3) {
+        align-items: center;
+    }
+
+    .coverage-card {
+        margin-top: 16px;
+    }
+
+    .coverage-card__title {
+        display: block;
+        padding-inline: 16px;
+        white-space: normal;
+    }
+
+    .coverage-card__mobile-break {
+        display: block;
+    }
+
+    .coverage-row {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        min-height: 40px;
+        padding: 8px 16px;
+    }
+
+    .coverage-row__actions {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 28px;
+        width: 100%;
+    }
+
+    .technical-download {
+        min-height: 32px;
+        min-width: 0;
+        white-space: nowrap;
+        overflow-wrap: normal;
+    }
+
+    .coverage-row__text--stack-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .coverage-row__text--stack-mobile small {
+        margin-left: 0;
+    }
+
+    .technical-notes {
+        margin-top: 12px;
+    }
+
+    .technical-api {
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .technical-api__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .technical-api-card {
+        min-height: 56px;
+        justify-content: flex-start;
+        padding: 16px;
+    }
+
+    .technical-specs {
+        margin-top: 20px;
+    }
+
+    .technical-specs__title {
+        min-height: 44px;
+        padding-inline: 12px;
+    }
+
+    .technical-specs__row {
+        grid-template-columns: minmax(0, 1fr) 90px;
+    }
+
+    .technical-specs__row > * {
+        padding: 12px;
+    }
+
+    .technical-specs__row span {
+        padding-inline: 8px;
+    }
+
+    .technical-architecture {
+        min-height: 615px;
+        background-image: url('../images/technical/architecture-bg-mobile.png');
+    }
+
+    .technical-architecture__inner {
+        min-height: 615px;
+        padding-block: 24px;
+        gap: 36px;
+    }
+
+    .technical-architecture__head h2 {
+        font-size: 26px;
+    }
+
+    .technical-architecture__head p {
+        max-width: calc(100vw - (2 * var(--figma-container-px-mobile)));
+        margin-inline: auto;
+    }
+
+    .architecture-diagram {
+        flex-basis: auto;
+        width: min(100%, calc(100vw - (2 * var(--figma-container-px-mobile))));
+        aspect-ratio: 361 / 71;
+        background-image: url('../images/technical/architecture-diagram-mobile.png');
+    }
+
+    .architecture-benefits {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: min(100%, calc(100vw - (2 * var(--figma-container-px-mobile))));
+        gap: 6px;
+    }
+
+    .architecture-benefit {
+        min-height: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .architecture-benefit__icon {
+        flex-basis: 32px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .architecture-benefit__icon--protect {
+        --architecture-benefit-icon-x: 6px;
+        --architecture-benefit-icon-y: 3.39px;
+        --architecture-benefit-icon-w: 20px;
+        --architecture-benefit-icon-h: 25.26px;
+    }
+
+    .architecture-benefit__icon--renew {
+        --architecture-benefit-icon-x: 5.67px;
+        --architecture-benefit-icon-y: 1.8px;
+        --architecture-benefit-icon-w: 20.67px;
+        --architecture-benefit-icon-h: 28.41px;
+    }
+
+    .architecture-benefit__icon--timeline {
+        --architecture-benefit-icon-x: 1.67px;
+        --architecture-benefit-icon-y: 8.33px;
+        --architecture-benefit-icon-w: 28.67px;
+        --architecture-benefit-icon-h: 15.33px;
+    }
+
+    .architecture-benefit__metric {
+        flex: 0 0 auto;
+        width: 42px;
+        font-size: var(--fs-3xl);
+    }
+
+    .architecture-benefit p {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .page-technical .footer {
+        padding-block: 16px;
+    }
+
+    .page-technical .footer__grid {
+        gap: 8px;
+    }
+
+    .page-technical .footer__col--company {
+        min-height: 166px;
+    }
+
+    .page-technical .footer__col--contacts {
+        gap: 16px;
     }
 }

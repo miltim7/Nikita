@@ -27,6 +27,11 @@ This is a static HTML/CSS/JS landing project. Keep the codebase organized for a 
 - Keep class names BEM-like and scoped: `.block`, `.block__element`, `.block--modifier`.
 - Prefer asset files for Figma-exported icons/logos instead of inline SVG when the asset repeats.
 
+## Navigation Rules
+
+- When creating a new standalone page, update the shared header/topbar, mobile menu, and footer links in affected HTML files so the page is reachable from navigation when possible.
+- Use the real page URL for cross-page navigation, and keep active navigation states only on the current page.
+
 ## Breakpoints
 
 - Desktop: `>= 1200px`

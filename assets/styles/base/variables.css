@@ -132,6 +132,7 @@
     --shadow-figma-case-card: 0 4px 6px rgba(33, 32, 32, .1);
     --shadow-feature-card: 0 4px 12px rgba(33, 32, 32, .1);
     --shadow-figma-logo-card: 0 2px 4px var(--color-black-20);
+    --shadow-technical-api-card: 0 4px 6px rgba(33, 32, 32, .1);
 
     /* ---------- Motion ---------- */
     --transition-fast:  0.15s ease;

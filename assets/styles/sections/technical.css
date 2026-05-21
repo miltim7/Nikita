@@ -1,0 +1,518 @@
+/* ============================================================
+   TECHNICAL CAPABILITIES PAGE
+   ============================================================ */
+.page-technical {
+    background: var(--color-bg);
+    color: var(--color-header-black);
+    overflow-x: hidden;
+}
+
+.technical-page {
+    padding: 24px 0 113px;
+    background: var(--color-bg);
+}
+
+.technical-page .container-xxl,
+.technical-architecture .container-xxl {
+    padding-inline: var(--figma-container-px-desktop);
+}
+
+.technical-page__breadcrumbs {
+    height: 12px;
+    font-size: 10px;
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.technical-page__breadcrumbs span {
+    color: var(--color-black-20);
+}
+
+.technical-page__breadcrumbs strong {
+    color: var(--color-header-black);
+    font-weight: var(--fw-light);
+}
+
+.technical-page__head {
+    margin-top: 24px;
+}
+
+.technical-page__title {
+    margin: 0 0 16px;
+    color: var(--color-header-black);
+    font-size: var(--fs-5xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+}
+
+.technical-capabilities {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 292px;
+    gap: 20px;
+}
+
+.technical-capability {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 0;
+    min-height: 67px;
+    padding: 8px;
+    border-radius: var(--radius-xs);
+    background: var(--color-surface-blue-5);
+}
+
+.technical-check,
+.technical-download::before,
+.technical-api-card::before {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.technical-capability__icon {
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.technical-capability__icon::before {
+    content: "";
+    position: absolute;
+    left: var(--technical-icon-x);
+    top: var(--technical-icon-y);
+    width: var(--technical-icon-w);
+    height: var(--technical-icon-h);
+    background: var(--technical-icon) center / 100% 100% no-repeat;
+}
+
+.technical-capability__icon--list {
+    --technical-icon: url('../../images/technical/icon-capability-message.svg');
+    --technical-icon-x: 2.69px;
+    --technical-icon-y: 2.5px;
+    --technical-icon-w: 18.62px;
+    --technical-icon-h: 18.15px;
+}
+
+.technical-capability__icon--integration {
+    --technical-icon: url('../../images/technical/icon-capability-chip.svg');
+    --technical-icon-x: 3.73px;
+    --technical-icon-y: 3.73px;
+    --technical-icon-w: 16.54px;
+    --technical-icon-h: 16.54px;
+}
+
+.technical-capability__icon--mail {
+    --technical-icon: url('../../images/technical/icon-capability-email.svg');
+    --technical-icon-x: 2.5px;
+    --technical-icon-y: 4.5px;
+    --technical-icon-w: 19px;
+    --technical-icon-h: 15px;
+}
+
+.technical-capability p {
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.coverage-card,
+.technical-specs {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-menu);
+}
+
+.coverage-card {
+    margin-top: 36px;
+}
+
+.coverage-card__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 16px 16px 12px;
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.coverage-card__title span {
+    color: var(--color-header-blue);
+}
+
+.coverage-card__mobile-break {
+    display: none;
+}
+
+.coverage-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.coverage-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 8px 16px;
+    border-top: 1px solid var(--color-gray-20);
+}
+
+.coverage-row__main {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 12px;
+}
+
+.technical-check {
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    color: var(--color-header-blue);
+}
+
+.technical-check::before {
+    content: "";
+    position: absolute;
+    left: 4.21px;
+    top: 6.35px;
+    width: 15.57px;
+    height: 11.3px;
+    background: url('../../images/technical/icon-coverage-check.svg') center / 100% 100% no-repeat;
+}
+
+.coverage-row__text {
+    min-width: 0;
+    margin: 0;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.coverage-row__text strong {
+    font-weight: var(--fw-semibold);
+}
+
+.coverage-row__text small {
+    margin-left: 8px;
+    font-size: inherit;
+    font-weight: var(--fw-light);
+}
+
+.coverage-row__text em {
+    color: var(--color-header-blue);
+    font-style: normal;
+    font-weight: var(--fw-semibold);
+}
+
+.coverage-row__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    min-width: 0;
+}
+
+.technical-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 40px;
+    padding: 8px;
+    border-radius: var(--radius-xs);
+    color: var(--color-header-blue);
+    background: var(--color-surface-blue-5);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.technical-download::before {
+    content: "";
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    background: url('../../images/technical/icon-coverage-download.svg') center / 15px 15px no-repeat;
+}
+
+.technical-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+    margin-top: 20px;
+    overflow-wrap: break-word;
+    color: var(--color-gray-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.technical-notes p {
+    margin: 0;
+}
+
+.technical-notes span {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+}
+
+.technical-api {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.technical-api__title {
+    margin: 0;
+    flex: 0 0 auto;
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.technical-api__cards {
+    display: grid;
+    flex: 1 1 auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    min-width: 0;
+}
+
+.technical-api-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    min-width: 0;
+    min-height: 68px;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-technical-api-card);
+    color: var(--color-header-black);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.technical-api-card::before {
+    content: "";
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    background: url('../../images/technical/icon-api-sms.svg') center / 32.25px 32.25px no-repeat;
+}
+
+.technical-specs {
+    margin-top: 36px;
+}
+
+.technical-specs__title {
+    display: flex;
+    align-items: center;
+    min-height: 54px;
+    margin: 0;
+    padding: 12px 24px;
+    color: var(--color-text-inverse);
+    background: var(--color-header-blue);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.technical-specs__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    min-height: 41px;
+}
+
+.technical-specs__row > * {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    margin: 0;
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--color-gray-20);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.technical-specs__row:last-child > * {
+    border-bottom: 0;
+}
+
+.technical-specs__row span {
+    justify-content: center;
+    border-left: 1px solid var(--color-gray-20);
+    text-align: center;
+}
+
+.technical-architecture {
+    min-height: 644px;
+    color: var(--color-text-inverse);
+    background-image: url('../../images/technical/architecture-bg-desktop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.technical-architecture__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    min-height: 644px;
+    padding-block: 48px;
+}
+
+.technical-architecture__head {
+    text-align: center;
+}
+
+.technical-architecture__head h2 {
+    margin: 0 0 12px;
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+}
+
+.technical-architecture__head p {
+    margin: 0;
+    overflow-wrap: break-word;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.technical-architecture__head span {
+    color: var(--color-white-50);
+}
+
+.architecture-diagram-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-block: 36px;
+}
+
+.architecture-diagram {
+    display: block;
+    flex: 0 1 870px;
+    width: 870px;
+    min-width: 0;
+    max-width: 100%;
+    aspect-ratio: 870 / 176;
+    background: url('../../images/technical/architecture-diagram-desktop.png') center / contain no-repeat;
+}
+
+.architecture-benefits {
+    display: grid;
+    grid-template-columns: 180px 180px repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.architecture-benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    min-height: 137px;
+    padding: 12px;
+    border: 1px solid var(--color-white-10);
+    border-radius: var(--radius-md);
+    background: var(--color-white-10);
+    text-align: center;
+}
+
+.architecture-benefit__icon {
+    display: block;
+    position: relative;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+}
+
+.architecture-benefit__icon::before {
+    content: "";
+    position: absolute;
+    left: var(--architecture-benefit-icon-x);
+    top: var(--architecture-benefit-icon-y);
+    width: var(--architecture-benefit-icon-w);
+    height: var(--architecture-benefit-icon-h);
+    background: var(--architecture-benefit-icon) center / 100% 100% no-repeat;
+}
+
+.architecture-benefit__icon--protect {
+    --architecture-benefit-icon: url('../../images/technical/icon-protect-white.svg');
+    --architecture-benefit-icon-x: 9px;
+    --architecture-benefit-icon-y: 5.08px;
+    --architecture-benefit-icon-w: 30px;
+    --architecture-benefit-icon-h: 37.88px;
+}
+
+.architecture-benefit__icon--renew {
+    --architecture-benefit-icon: url('../../images/technical/icon-renew-white.svg');
+    --architecture-benefit-icon-x: 8.5px;
+    --architecture-benefit-icon-y: 2.69px;
+    --architecture-benefit-icon-w: 31px;
+    --architecture-benefit-icon-h: 42.62px;
+}
+
+.architecture-benefit__icon--timeline {
+    --architecture-benefit-icon: url('../../images/technical/icon-timeline-white.svg');
+    --architecture-benefit-icon-x: 2.5px;
+    --architecture-benefit-icon-y: 12.5px;
+    --architecture-benefit-icon-w: 43px;
+    --architecture-benefit-icon-h: 23px;
+}
+
+.architecture-benefit p {
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: break-word;
+    color: var(--color-text-inverse);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.architecture-benefit__metric {
+    color: var(--color-white-50);
+    font-size: var(--fs-5xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+}
