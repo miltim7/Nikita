@@ -90,13 +90,13 @@
 <!-- ============ MOBILE MENU ============ -->
 <div class="mobile-menu" id="mobileMenu" hidden>
     <nav class="mobile-menu__nav" aria-label="Главное меню">
-        <a href="#pricing" class="mobile-menu__link">
+        <a href="#pricing" class="mobile-menu__link mobile-menu__link--active">
             <span class="mobile-menu__icon" aria-hidden="true">
                 <img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="assets/images/mobile-menu/icon-money.svg" alt="">
             </span>
             <span>Условия и цены</span>
         </a>
-        <a href="#tech" class="mobile-menu__link mobile-menu__link--active">
+        <a href="#tech" class="mobile-menu__link">
             <span class="mobile-menu__icon" aria-hidden="true">
                 <img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="assets/images/mobile-menu/icon-memory.svg" alt="">
             </span>
@@ -134,16 +134,16 @@
     <div class="service-page__head container-xxl">
         <h1 class="service-page__title">Услуги и цены</h1>
         <nav class="service-tabs" aria-label="Разделы услуг" role="tablist" data-service-tabs>
-            <a href="#service-tab-sending" class="service-tabs__item" role="tab" id="service-tab-sending-control" aria-controls="service-tab-sending" aria-selected="false" tabindex="-1" data-service-tab="sending">Отправка SMS</a>
+            <a href="#service-tab-sending" class="service-tabs__item service-tabs__item--active" role="tab" id="service-tab-sending-control" aria-controls="service-tab-sending" aria-selected="true" data-service-tab="sending">Отправка SMS</a>
             <a href="#service-tab-receive" class="service-tabs__item" role="tab" id="service-tab-receive-control" aria-controls="service-tab-receive" aria-selected="false" tabindex="-1" data-service-tab="receive">Прием SMS</a>
             <a href="#service-tab-otp" class="service-tabs__item" role="tab" id="service-tab-otp-control" aria-controls="service-tab-otp" aria-selected="false" tabindex="-1" data-service-tab="otp">OTP-Сервис</a>
             <a href="#service-tab-flash" class="service-tabs__item" role="tab" id="service-tab-flash-control" aria-controls="service-tab-flash" aria-selected="false" tabindex="-1" data-service-tab="flash">Flash SMS</a>
-            <a href="#service-tab-payment" class="service-tabs__item service-tabs__item--active" role="tab" id="service-tab-payment-control" aria-controls="service-tab-payment" aria-selected="true" data-service-tab="payment">Способы оплаты</a>
+            <a href="#service-tab-payment" class="service-tabs__item" role="tab" id="service-tab-payment-control" aria-controls="service-tab-payment" aria-selected="false" tabindex="-1" data-service-tab="payment">Способы оплаты</a>
         </nav>
     </div>
 
     <div class="service-tabpanels">
-        <div class="service-tabpanel" id="service-tab-sending" role="tabpanel" aria-labelledby="service-tab-sending-control" data-service-panel="sending" hidden>
+        <div class="service-tabpanel service-tabpanel--active" id="service-tab-sending" role="tabpanel" aria-labelledby="service-tab-sending-control" data-service-panel="sending">
     <div class="service-intro container-xxl">
         <div class="service-intro__copy">
             <p>Стоимость каждого отправленного SMS-сообщения абонентам&nbsp;Beeline, MegaCom, O!&nbsp;зависит от размера&nbsp;первого платежа&nbsp;(минимальный платеж для активации тарифа) и оператора связи.</p>
@@ -758,7 +758,7 @@
                 </div>
             </section>
         </div>
-        <div class="service-tabpanel service-tabpanel--active" id="service-tab-payment" role="tabpanel" aria-labelledby="service-tab-payment-control" data-service-panel="payment">
+        <div class="service-tabpanel" id="service-tab-payment" role="tabpanel" aria-labelledby="service-tab-payment-control" data-service-panel="payment" hidden>
             <section class="payment-tab" aria-labelledby="payment-tab-title">
                 <div class="payment-tab__intro container-xxl">
                     <h2 class="payment-tab__title" id="payment-tab-title">Способы оплаты</h2>

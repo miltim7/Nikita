@@ -6,7 +6,7 @@ export function initServiceTabs() {
     const panels = Array.from(document.querySelectorAll('[data-service-panel]'));
     if (!tabs.length || !panels.length) return;
 
-    const setActiveTab = (nextTab, shouldFocus = false) => {
+    const setActiveTab = (nextTab, shouldFocus = false, shouldUpdateHash = false) => {
         const target = nextTab.dataset.serviceTab;
         const nextPanel = panels.find(panel => panel.dataset.servicePanel === target);
         if (!target || !nextPanel) return;
@@ -26,12 +26,18 @@ export function initServiceTabs() {
 
         const targetScroll = nextTab.offsetLeft - (tablist.clientWidth - nextTab.offsetWidth) / 2;
         tablist.scrollTo({ left: Math.max(0, targetScroll), behavior: 'smooth' });
+        if (shouldUpdateHash) {
+            const nextHash = nextTab.getAttribute('href');
+            if (nextHash && window.location.hash !== nextHash) {
+                history.pushState(null, '', nextHash);
+            }
+        }
         if (shouldFocus) nextTab.focus();
     };
 
-    const activeFromHash = tabs.find(tab => tab.getAttribute('href') === window.location.hash);
-    const activeFromMarkup = tabs.find(tab => tab.classList.contains('service-tabs__item--active'));
-    setActiveTab(activeFromHash || activeFromMarkup || tabs[0]);
+    const getTabFromHash = () => tabs.find(tab => tab.getAttribute('href') === window.location.hash);
+    const activeFromHash = getTabFromHash();
+    setActiveTab(activeFromHash || tabs[0]);
     if (activeFromHash) {
         requestAnimationFrame(() => tablist.closest('.service-page')?.scrollIntoView({ block: 'start' }));
     }
@@ -39,7 +45,7 @@ export function initServiceTabs() {
     tabs.forEach((tab, index) => {
         tab.addEventListener('click', event => {
             event.preventDefault();
-            setActiveTab(tab);
+            setActiveTab(tab, false, true);
         });
 
         tab.addEventListener('keydown', event => {
@@ -59,7 +65,15 @@ export function initServiceTabs() {
             }
 
             event.preventDefault();
-            setActiveTab(tabs[nextIndex], true);
+            setActiveTab(tabs[nextIndex], true, true);
         });
     });
+
+    const syncFromHash = () => {
+        const tabFromHash = getTabFromHash();
+        setActiveTab(tabFromHash || tabs[0]);
+    };
+
+    window.addEventListener('popstate', syncFromHash);
+    window.addEventListener('hashchange', syncFromHash);
 }
