@@ -35,11 +35,30 @@ export function initServiceTabs() {
         if (shouldFocus) nextTab.focus();
     };
 
-    const getTabFromHash = () => tabs.find(tab => tab.getAttribute('href') === window.location.hash);
+    const getTargetFromHash = () => {
+        const hash = window.location.hash;
+        return hash && hash.length > 1 ? document.getElementById(hash.slice(1)) : null;
+    };
+
+    const getTabFromHash = () => {
+        const hash = window.location.hash;
+        const directTab = tabs.find(tab => tab.getAttribute('href') === hash);
+        if (directTab) return directTab;
+        if (!hash || hash.length < 2) return null;
+
+        const targetNode = getTargetFromHash();
+        const targetPanel = targetNode?.closest('[data-service-panel]');
+        if (!targetPanel) return null;
+
+        return tabs.find(tab => tab.dataset.serviceTab === targetPanel.dataset.servicePanel) || null;
+    };
     const activeFromHash = getTabFromHash();
     setActiveTab(activeFromHash || tabs[0]);
     if (activeFromHash) {
-        requestAnimationFrame(() => tablist.closest('.service-page')?.scrollIntoView({ block: 'start' }));
+        requestAnimationFrame(() => {
+            const targetNode = getTargetFromHash();
+            (targetNode || tablist.closest('.service-page'))?.scrollIntoView({ block: 'start' });
+        });
     }
 
     tabs.forEach((tab, index) => {
@@ -71,7 +90,7 @@ export function initServiceTabs() {
 
     const syncFromHash = () => {
         const tabFromHash = getTabFromHash();
-        setActiveTab(tabFromHash || tabs[0]);
+        if (tabFromHash) setActiveTab(tabFromHash);
     };
 
     window.addEventListener('popstate', syncFromHash);

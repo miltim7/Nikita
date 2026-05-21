@@ -31,8 +31,16 @@ export function initPaymentTabs() {
         if (shouldFocus) nextTab.focus();
     };
 
+    const getTabFromHash = () => {
+        const hash = window.location.hash;
+        if (!hash || hash.length < 2) return null;
+
+        const targetId = hash.slice(1);
+        return tabs.find(tab => tab.getAttribute('aria-controls') === targetId || tab.id === targetId) || null;
+    };
+
     const activeFromMarkup = tabs.find(tab => tab.classList.contains('payment-tab-card--active'));
-    setActiveTab(activeFromMarkup || tabs[0]);
+    setActiveTab(getTabFromHash() || activeFromMarkup || tabs[0]);
 
     tabs.forEach((tab, index) => {
         tab.addEventListener('click', event => {
@@ -59,5 +67,10 @@ export function initPaymentTabs() {
             event.preventDefault();
             setActiveTab(tabs[nextIndex], true);
         });
+    });
+
+    window.addEventListener('hashchange', () => {
+        const tabFromHash = getTabFromHash();
+        if (tabFromHash) setActiveTab(tabFromHash);
     });
 }

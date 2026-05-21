@@ -2472,3 +2472,185 @@
         gap: 16px;
     }
 }
+
+/* Contacts page: Figma responsive overrides */
+@media (min-width: 1200px) and (max-width: 1475.98px) {
+    .contacts-page .container-xxl {
+        padding-inline: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+
+    .contacts-map {
+        min-width: 620px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .contacts-page {
+        padding: 12px 0 0;
+    }
+
+    .contacts-page .container-xxl {
+        max-width: 100%;
+        padding-inline: var(--figma-container-px-tablet);
+    }
+
+    .contacts-page__breadcrumbs {
+        display: flex;
+        align-items: center;
+        height: 10px;
+        font-size: 8px;
+    }
+
+    .contacts-page__head {
+        margin-top: 12px;
+    }
+
+    .contacts-page__title {
+        font-size: var(--fs-3xl);
+    }
+
+    .contacts-page__content {
+        margin-top: 0;
+        padding-block: 24px;
+    }
+
+    .contacts-page__layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .contacts-page__info {
+        width: 100%;
+        gap: 36px;
+    }
+
+    .contact-block {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .contact-block__title {
+        flex: 0 0 369px;
+        width: 369px;
+        font-size: var(--fs-md);
+    }
+
+    .contact-block__title br {
+        display: none;
+    }
+
+    .contact-block__body,
+    .contact-block__legal {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .contact-block__legal {
+        gap: 6px;
+    }
+
+    .contact-block__company {
+        font-size: var(--fs-md);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .contact-block__license,
+    .contact-block__text,
+    .contact-block--legal .contact-row {
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .contact-row__icon {
+        flex-basis: 16px;
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;
+    }
+
+    .contact-block:not(.contact-block--legal) .contact-row {
+        font-size: var(--fs-md);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .contact-row--phone {
+        font-size: var(--fs-md);
+    }
+
+    .contact-social {
+        height: 36px;
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .contact-social__icon {
+        flex-basis: 24px;
+        width: 24px;
+        height: 24px;
+        background-size: 18px 18px;
+    }
+
+    .contacts-map {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contacts-page {
+        padding-top: 12px;
+    }
+
+    .contacts-page .container-xxl {
+        padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .contacts-page__content {
+        padding-block: 16px;
+    }
+
+    .contacts-page__layout {
+        gap: 16px;
+    }
+
+    .contacts-page__info {
+        gap: 36px;
+    }
+
+    .contact-block {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .contact-block--legal {
+        gap: 12px;
+    }
+
+    .contact-block__title {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .contact-block__body {
+        width: 100%;
+    }
+
+    .contact-socials {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 380px) {
+    .contacts-page__title {
+        font-size: 28px;
+    }
+
+    .contact-block:not(.contact-block--legal) .contact-row,
+    .contact-row--phone,
+    .contact-block__company {
+        font-size: var(--fs-base);
+    }
+}

@@ -191,8 +191,23 @@
     margin: 0;
 }
 
-.faq-answer p + p {
+.faq-answer p + p,
+.faq-answer p + ul,
+.faq-answer ul + p {
     margin-top: 16.8px;
+}
+
+.faq-answer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.faq-answer li {
+    padding-left: 2px;
 }
 
 .faq-answer strong {

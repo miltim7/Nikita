@@ -186,6 +186,16 @@
     color: var(--color-header-orange);
 }
 
+.security-inline-link {
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+}
+
+.security-inline-link:hover,
+.security-inline-link:focus-visible {
+    text-decoration: underline;
+}
+
 .security-license {
     position: relative;
     display: flex;

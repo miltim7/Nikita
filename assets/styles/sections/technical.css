@@ -414,8 +414,18 @@
     letter-spacing: var(--letter-spacing-normal);
 }
 
-.technical-architecture__head span {
+.technical-architecture__head span,
+.technical-architecture__head a {
     color: var(--color-white-50);
+}
+
+.technical-architecture__head a {
+    text-decoration: none;
+}
+
+.technical-architecture__head a:hover,
+.technical-architecture__head a:focus-visible {
+    text-decoration: underline;
 }
 
 .architecture-diagram-wrap {

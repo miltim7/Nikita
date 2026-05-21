@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita — Технические возможности</title>
-    <meta name="description" content="Технические возможности SMS-платформы Nikita: интеграции, зона покрытия, API и архитектура.">
+    <title>Nikita — Контакты</title>
+    <meta name="description" content="Контакты Nikita: подключение и коммерческие вопросы, техническая поддержка, юридическая информация и адрес офиса в Бишкеке.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
-<body class="page-technical">
+<body class="page-contacts">
 <div class="topbar">
     <div class="container-xxl">
         <div class="topbar__inner">
             <nav class="topbar__nav" aria-label="Дополнительная навигация">
                 <a href="services.html" class="topbar__link">Условия и цены</a>
-                <a href="technical.html" class="topbar__link topbar__link--active">Технические возможности</a>
+                <a href="technical.html" class="topbar__link">Технические возможности</a>
                 <a href="security.html" class="topbar__link">Надёжность и безопасность</a>
                 <a href="faq.html" class="topbar__link">Вопросы и ответы</a>
-                <a href="contacts.html" class="topbar__link">Контакты</a>
+                <a href="contacts.html" class="topbar__link topbar__link--active">Контакты</a>
             </nav>
             <div class="topbar__side">
                 <button type="button" class="topbar__lang" aria-haspopup="listbox">
@@ -47,6 +47,7 @@
             <a href="index.html" class="header__logo" aria-label="Nikita — главная">
                 <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
             </a>
+
             <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
                 <span class="header__phone-icon" aria-hidden="true">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -55,18 +56,19 @@
                 </span>
                 <span>+996 (700) 892-188</span>
             </a>
+
             <div class="header__actions">
                 <div class="header__links">
-                    <a href="contacts.html#support" class="header__link">
+                    <a href="#support" class="header__link">
                         <span class="header__link-icon" aria-hidden="true"><img src="assets/images/header-icon-support.svg" alt=""></span>
                         <span class="header__link-text">Обратиться<br>в техподдержку</span>
                     </a>
-                    <a href="contacts.html#commercial" class="header__link">
+                    <a href="#commercial" class="header__link">
                         <span class="header__link-icon" aria-hidden="true"><img src="assets/images/header-icon-chat.svg" alt=""></span>
                         <span class="header__link-text">Связаться<br>с менеджером</span>
                     </a>
                 </div>
-                <a href="contacts.html" class="btn btn-cta header__cta">
+                <a href="https://smspro.nikita.kg/kg/register.html" class="btn btn-cta header__cta">
                     <img src="assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
                     <span class="header__cta-text">Попробовать демо&nbsp;бесплатно</span>
                     <span class="header__cta-short">Демо</span>
@@ -85,7 +87,7 @@
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="assets/images/mobile-menu/icon-money.svg" alt=""></span>
             <span>Условия и цены</span>
         </a>
-        <a href="technical.html" class="mobile-menu__link mobile-menu__link--active">
+        <a href="technical.html" class="mobile-menu__link">
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="assets/images/mobile-menu/icon-memory.svg" alt=""></span>
             <span>Технические возможности</span>
         </a>
@@ -97,7 +99,7 @@
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="assets/images/mobile-menu/icon-question.svg" alt=""></span>
             <span>Вопросы и ответы</span>
         </a>
-        <a href="contacts.html" class="mobile-menu__link">
+        <a href="contacts.html" class="mobile-menu__link mobile-menu__link--active">
             <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="assets/images/mobile-menu/icon-phone.svg" alt=""></span>
             <span>Контакты</span>
         </a>
@@ -105,184 +107,87 @@
 </div>
 
 <main>
-    <section class="technical-page" id="tech">
-        <div class="technical-page__breadcrumbs container-xxl" aria-label="Хлебные крошки">
-            <span>Главная → </span><strong>Технические возможности</strong>
+    <section class="contacts-page" id="contacts-page">
+        <div class="contacts-page__breadcrumbs container-xxl" aria-label="Хлебные крошки">
+            <span>Главная → </span><strong>Контакты</strong>
         </div>
 
-        <div class="technical-page__head container-xxl">
-            <h1 class="technical-page__title">Технические возможности</h1>
-            <div class="technical-capabilities">
-                <article class="technical-capability">
-                    <span class="technical-capability__icon technical-capability__icon--list" aria-hidden="true"></span>
-                    <p>Производить массовые SMS-рассылки по вашим спискам получателей с этого сайта, загружая их из Excel</p>
-                </article>
-                <article class="technical-capability">
-                    <span class="technical-capability__icon technical-capability__icon--integration" aria-hidden="true"></span>
-                    <p>Интегрироваться с системой smspro.nikita.kg для автоматических отправок SMS-оповещений из ваших систем</p>
-                </article>
-                <article class="technical-capability">
-                    <span class="technical-capability__icon technical-capability__icon--mail" aria-hidden="true"></span>
-                    <p>Отправлять СМС-сообщения по Email</p>
-                </article>
-            </div>
+        <div class="contacts-page__head container-xxl">
+            <h1 class="contacts-page__title">Контакты</h1>
         </div>
 
-        <div class="container-xxl">
-            <section class="coverage-card" aria-labelledby="coverage-title">
-                <h2 class="coverage-card__title" id="coverage-title">Зона покрытия – <br class="coverage-card__mobile-break">все GSM-сети Кыргызстана <span>*</span></h2>
-                <ul class="coverage-list">
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Отчеты о доставке СМС</strong> <small>(с указанием времени доставки)</small></p>
+        <div class="contacts-page__content container-xxl">
+            <div class="contacts-page__layout">
+                <div class="contacts-page__info">
+                    <section class="contact-block" id="commercial">
+                        <h2 class="contact-block__title">Подключение <br>и коммерческие вопросы:</h2>
+                        <div class="contact-block__body">
+                            <a class="contact-row contact-row--email" href="mailto:info@nikita.kg">
+                                <span class="contact-row__icon contact-row__icon--email" aria-hidden="true"></span>
+                                <span class="contact-row__text">info@nikita.kg</span>
+                            </a>
+                            <a class="contact-row contact-row--phone" href="tel:+996700892188">
+                                <span class="contact-row__icon contact-row__icon--phone" aria-hidden="true"></span>
+                                <span class="contact-row__text">+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="contact-socials" aria-label="Каналы связи">
+                                <a class="contact-social contact-social--telegram" href="https://t.me/" aria-label="Telegram">
+                                    <span class="contact-social__icon" aria-hidden="true"></span>
+                                    <span>Telegram</span>
+                                </a>
+                                <a class="contact-social contact-social--whatsapp" href="https://wa.me/996700892188" aria-label="WhatsApp">
+                                    <span class="contact-social__icon" aria-hidden="true"></span>
+                                    <span>Whatsapp</span>
+                                </a>
+                            </div>
                         </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Подмена имени отправителя</strong> <small>(Sender ID) <em>**</em></small></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Интеграция по XML-протоколу</strong></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api.pdf" class="technical-download">Скачать описание XML-API</a>
-                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api_EN.pdf" class="technical-download">Описание XML-API на английском языке</a>
-                            <a href="https://app.swaggerhub.com/apis-docs/ALEXEYSOLOMAKHIN/nikita_online_sms_api/1.0.0" class="technical-download" target="_blank" rel="noopener">Swagger</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Интеграция</strong><br>по SOAP-протоколу WEB-служба для подключения к 1С пр.</p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="http://smspro.nikita.kg/api/soap?wsdl" class="technical-download">Скачать WSDL</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Интеграция</strong> <small>по по высокопроизводительному SMPP-протоколу</small></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="https://smspro.nikita.kg/kg/documents/smpp-v3.4-issue1.2.pdf" class="technical-download">Скачать спецификацию SMPP v 3.4</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Отправка SMS по Email</strong> <small>(SMTP-протокол)</small></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-email2sms-api.pdf" class="technical-download">Скачать описание</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Сервис одноразовых паролей</strong> <small>(One Time Password service)</small></p>
-                        </div>
-                        <div class="coverage-row__actions">
-                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-OTP-api.pdf" class="technical-download">Скачать описание OTP-API</a>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Защита данных (HTTPS / SSL)</strong></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Интеллектуальная система прогноза расхода средств</strong></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Автоматизация бухгалтерии</strong> <small>(счета и акты генерируются автоматически и доступны online)</small></p>
-                        </div>
-                    </li>
-                    <li class="coverage-row">
-                        <div class="coverage-row__main">
-                            <span class="technical-check" aria-hidden="true"></span>
-                            <p class="coverage-row__text"><strong>Адресная рассылка</strong></p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
+                    </section>
 
-            <div class="technical-notes">
-                <p><span>*</span> Цены и возможности отправки в Россию и прочие страны СНГ и мира пожалуйста уточняйте у менеджера.</p>
-                <p><span>**</span> Подмена имени отправителя доступна только клиентам работающим по договору. У некоторых операторов СНГ и Азии есть ограничения на подмену имени</p>
-            </div>
+                    <section class="contact-block" id="support">
+                        <h2 class="contact-block__title">Техническая поддержка:</h2>
+                        <div class="contact-block__body">
+                            <a class="contact-row contact-row--email" href="mailto:info@nikita.kg">
+                                <span class="contact-row__icon contact-row__icon--email" aria-hidden="true"></span>
+                                <span class="contact-row__text">info@nikita.kg</span>
+                            </a>
+                            <a class="contact-row contact-row--phone" href="tel:+996779377888">
+                                <span class="contact-row__icon contact-row__icon--phone" aria-hidden="true"></span>
+                                <span class="contact-row__text">+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="contact-socials" aria-label="Каналы связи">
+                                <a class="contact-social contact-social--telegram" href="https://t.me/" aria-label="Telegram">
+                                    <span class="contact-social__icon" aria-hidden="true"></span>
+                                    <span>Telegram</span>
+                                </a>
+                                <a class="contact-social contact-social--whatsapp" href="https://wa.me/996779377888" aria-label="WhatsApp">
+                                    <span class="contact-social__icon" aria-hidden="true"></span>
+                                    <span>Whatsapp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
 
-            <section class="technical-api" aria-labelledby="technical-api-title">
-                <h2 class="technical-api__title" id="technical-api-title">Примеры подключения HTTP-XML-API:</h2>
-                <div class="technical-api__cards">
-                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/PHPexample.zip">На PHP</a>
-                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/JSPexample.zip">На Java</a>
-                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/PYexample.zip">На Python</a>
-                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/NJSexample.zip">На NodeJS</a>
+                    <section class="contact-block contact-block--legal" id="legal">
+                        <h2 class="contact-block__title">Юридическая информация:</h2>
+                        <div class="contact-block__legal">
+                            <p class="contact-block__company">ОсОО "Никита Онлайн"</p>
+                            <p class="contact-block__license">Лицензия ГАС КР №15-1425-КР от 18.09.2015</p>
+                            <p class="contact-block__text">ОсОО "Никита Мобайл" (на основании договора аренды программно-аппаратной платформы с ОсОО "Никита Онлайн" от 15.04.2022)</p>
+                            <p class="contact-block__license">Лицензия ГАС КР №11-828-КР от 21.04.2011</p>
+                            <p class="contact-row">
+                                <span class="contact-row__icon contact-row__icon--location" aria-hidden="true"></span>
+                                <span class="contact-row__text">г. Бишкек, ул. Шопокова 89, 5 эт., 9 каб.</span>
+                            </p>
+                        </div>
+                    </section>
                 </div>
-            </section>
 
-            <section class="technical-specs" aria-labelledby="technical-specs-title">
-                <h2 class="technical-specs__title" id="technical-specs-title">Характеристики</h2>
-                <div class="technical-specs__row">
-                    <p>Пиковая пропускная способность платформы при пакетных рассылках:</p>
-                    <span>до 500 СМС/сек</span>
+                <div class="contacts-map" aria-label="Карта: г. Бишкек, ул. Шопокова 89">
+                    <img class="contacts-map__image" src="assets/images/contacts/map.png" alt="" loading="eager" decoding="async">
+                    <a class="contacts-map__open" href="https://yandex.ru/maps/?text=%D0%B3.%20%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C%20%D1%83%D0%BB.%20%D0%A8%D0%BE%D0%BF%D0%BE%D0%BA%D0%BE%D0%B2%D0%B0%2089" target="_blank" rel="noopener" aria-label="Открыть адрес в картах">
+                        <img src="assets/images/contacts/map-open.png" alt="" aria-hidden="true">
+                    </a>
                 </div>
-                <div class="technical-specs__row">
-                    <p>Реальная пропускная способность на 1 клиентский канал (обычно ограничена скоростью Internet)</p>
-                    <span>от 10 до 30 СМС/сек</span>
-                </div>
-                <div class="technical-specs__row">
-                    <p>Уровень фактической доставки сообщений до получателя (обусловлен факторами GSM-сети)</p>
-                    <span>97-99%</span>
-                </div>
-            </section>
-        </div>
-    </section>
-
-    <section class="technical-architecture" aria-labelledby="architecture-title">
-        <div class="technical-architecture__inner container-xxl">
-            <div class="technical-architecture__head">
-                <h2 id="architecture-title">Архитектура</h2>
-                <p>Мы располагаем собственной SMS-платформой и не являемся реселлером услуг другой компании,<br>что позволяет нам поддерживать <a href="services.html">низкий уровень цен</a> вне зависимости от ценовой политики конкретного поставщика.</p>
-            </div>
-
-            <div class="architecture-diagram-wrap" aria-hidden="true">
-                <div class="architecture-diagram"></div>
-            </div>
-
-            <div class="architecture-benefits">
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__icon architecture-benefit__icon--protect" aria-hidden="true"></span>
-                    <p>Снижаем риск<br>отказа оборудования</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__icon architecture-benefit__icon--renew" aria-hidden="true"></span>
-                    <p>Снижаем риск<br>отказа канала<br>передачи данных</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__icon architecture-benefit__icon--timeline" aria-hidden="true"></span>
-                    <p>Динамически масштабируем ядро системы при возрастании нагрузки</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__metric">2х</span>
-                    <p>Резерв оборудования в независимых дата-центрах с online синхронизацией данных</p>
-                </article>
-                <article class="architecture-benefit">
-                    <span class="architecture-benefit__metric">3х</span>
-                    <p>3-кратное резервирование каналов доставки SMS в GSM-сети</p>
-                </article>
             </div>
         </div>
     </section>
@@ -315,7 +220,7 @@
                     <a href="contacts.html">Контакты</a>
                 </div>
                 <div class="footer__nav-legal">
-                    <a href="services.html#contract">Пользовательское соглашение</a>
+                    <a href="https://smspro.nikita.kg/kg/oferta.html">Пользовательское соглашение</a>
                     <a href="security.html#bezop">Политика конфиденциальности</a>
                 </div>
             </nav>
@@ -372,6 +277,6 @@
     </div>
 </footer>
 
-<script type="module" src="assets/scripts/main.js?v=payment-tabs"></script>
+<script type="module" src="assets/scripts/main.js"></script>
 </body>
 </html>

@@ -52,6 +52,9 @@
     --color-footer-icon:      rgba(117, 195, 255, .9);
     --color-footer-telegram:  #35AEE2;
     --color-footer-whatsapp:  #25D366;
+    --color-social-telegram:  #2AABEE;
+    --color-social-whatsapp:  #23B33A;
+    --color-speed-test-blue-start: #36A0F8;
 
     --color-accent:           #F26822;   /* orange CTA */
     --color-accent-hover:     #D9551A;
@@ -91,6 +94,7 @@
     --gradient-footer:        linear-gradient(120deg, #154277 0%, #1A4A8C 60%, #2A5BA0 100%);
     --gradient-stats-blue:    linear-gradient(180deg, var(--color-stats-blue-top) 0%, var(--color-stats-blue-bottom) 100%);
     --gradient-flash-segment: linear-gradient(120deg, #6857D9 0%, #2297DE 100%);
+    --gradient-speed-test:    linear-gradient(180deg, var(--color-speed-test-blue-start) 0%, var(--color-header-blue) 100%);
 
     /* ---------- Spacing scale (4px base) ---------- */
     --space-0:    0;

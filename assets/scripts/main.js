@@ -13,9 +13,11 @@ import { initServiceTabs } from './modules/service-tabs.js';
 import { initPaymentTabs } from './modules/payment-tabs.js?v=payment-tabs';
 import { initSecurityTabs } from './modules/security-tabs.js';
 import { initFaqAccordion } from './modules/faq-accordion.js';
+import { initSpeedTestWidget } from './modules/speed-test-widget.js';
 
 function init() {
     initMobileMenu();
+    initSpeedTestWidget();
     initHowTabs();
     initCasesCarousel();
     initCasesExSlider();
