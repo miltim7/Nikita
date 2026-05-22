@@ -1,0 +1,15 @@
+/* ============================================================
+   Nikita CRM — account dashboard
+   Source: Figma crm / dashboard responsive nodes
+   ============================================================ */
+
+/* ---------------- base ---------------- */
+@import url('./base/variables.css');
+@import url('./base/reset.css');
+@import url('./base/layout.css');
+
+/* ---------------- components ---------------- */
+@import url('./components/cabinet-components.css');
+
+/* ---------------- sections ---------------- */
+@import url('./sections/cabinet-dashboard.css');

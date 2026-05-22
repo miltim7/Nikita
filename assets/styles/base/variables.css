@@ -21,6 +21,7 @@
     --color-primary-deep:     #154277;
     --color-primary-soft:     #EAF2FB;
     --color-header-blue:      #0C6EBF;
+    --color-header-blue-50:   rgba(12, 110, 191, .5);
     --color-header-orange:    #ED5A20;
     --color-header-black:     #212020;
     --color-feature-blue-left: #1E8FEB;
@@ -77,11 +78,18 @@
     --color-surface-orange-10: rgba(237, 90, 32, .1);
     --color-surface-green-10:  rgba(143, 185, 58, .1);
     --color-surface-blue-5:    rgba(12, 110, 191, .05);
+    --color-surface-blue-10:   rgba(12, 110, 191, .1);
     --color-surface-purple-10: #F5EFFF;
     --color-surface-yellow-45: #FFF4D5;
     --color-surface-red-10:    rgba(247, 97, 97, .1);
     --color-blue-20:           rgba(12, 110, 191, .2);
+    --color-gray-5:            rgba(132, 135, 140, .05);
     --color-gray-20:           rgba(132, 135, 140, .2);
+    --color-gray-10:           rgba(132, 135, 140, .1);
+    --color-red-100:           #EC3A2D;
+    --color-red-10:            rgba(236, 58, 45, .1);
+    --color-green-100:         #8FB93A;
+    --color-orange-50:         rgba(237, 90, 32, .5);
 
     /* ---------- Semantic strokes used inside cards ---------- */
     --color-stroke-pink:      #E37166;
@@ -138,11 +146,15 @@
     --shadow-figma-logo-card: 0 2px 4px var(--color-black-20);
     --shadow-technical-api-card: 0 4px 6px rgba(33, 32, 32, .1);
     --shadow-faq-card: 0 0 4px rgba(42, 35, 72, .2);
+    --shadow-cabinet-header: 0 2px 2px rgba(33, 32, 32, .1);
+    --shadow-cabinet-header-tablet: 0 0 4px var(--color-black-20);
+    --shadow-cabinet-panel: 0 0 6px var(--color-black-20);
 
     /* ---------- Motion ---------- */
     --transition-fast:  0.15s ease;
     --transition-base:  0.2s  ease;
     --transition-slow:  0.25s ease;
+    --transition-cabinet-menu: 0.28s cubic-bezier(.4, 0, .2, 1);
 
     /* ---------- Z-index layers ---------- */
     --z-base:        0;
@@ -192,6 +204,49 @@
     --figma-container-px-desktop: 124px;
     --figma-container-px-tablet:  40px;
     --figma-container-px-mobile:  16px;
+
+    /* ---------- Cabinet layout/components ---------- */
+    --cabinet-sidebar-w: 60px;
+    --cabinet-header-desktop-w: 1476px;
+    --cabinet-header-tablet-w: 834px;
+    --cabinet-header-mobile-w: 393px;
+    --cabinet-header-desktop-guest-h: 120px;
+    --cabinet-header-desktop-user-h: 89px;
+    --cabinet-header-desktop-demo-h: 80px;
+    --cabinet-header-tablet-guest-h: 84px;
+    --cabinet-header-tablet-user-h: 52px;
+    --cabinet-header-tablet-demo-h: 52px;
+    --cabinet-header-mobile-guest-h: 84px;
+    --cabinet-header-mobile-user-h: 74px;
+    --cabinet-header-mobile-demo-h: 72px;
+    --cabinet-header-menu-desktop-h: 40px;
+    --cabinet-header-menu-compact-h: 32px;
+    --cabinet-header-line-desktop-h: 80px;
+    --cabinet-header-line-desktop-user-h: 89px;
+    --cabinet-header-line-tablet-h: 52px;
+    --cabinet-header-line-mobile-guest-h: 52px;
+    --cabinet-header-line-mobile-user-h: 42px;
+    --cabinet-header-line-mobile-demo-h: 40px;
+    --cabinet-sidepanel-w: 160px;
+    --cabinet-sidepanel-w-full: 260px;
+    --cabinet-sidepanel-w-short: 60px;
+    --cabinet-sidepanel-row-h: 48px;
+    --cabinet-sidepanel-account-h: 477px;
+    --cabinet-sidepanel-account-short-h: 476px;
+    --cabinet-sidepanel-full-h: 680px;
+    --cabinet-sidepanel-full-short-h: 758px;
+    --cabinet-icon-blue: #75C3FF;
+    --cabinet-card-radius: 12px;
+    --cabinet-control-radius: 6px;
+    --cabinet-input-radius: 4px;
+    --cabinet-tabbar-h: 56px;
+    --cabinet-footer-bg: linear-gradient(90deg, var(--color-gray-5) 0%, var(--color-gray-5) 100%), #fff;
+    --cabinet-lh-tertiary: 10px;
+    --cabinet-lh-status: 12px;
+    --cabinet-lh-secondary: 14px;
+    --cabinet-lh-paragraph: 17px;
+    --cabinet-lh-heading-sm: 19px;
+    --cabinet-lh-heading: 24px;
 
     /* ============================================================
        Legacy aliases — keep existing BEM/components working.
