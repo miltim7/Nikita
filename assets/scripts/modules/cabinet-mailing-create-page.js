@@ -25,6 +25,7 @@ export function initCabinetMailingCreatePage() {
     const page = document.querySelector('[data-cabinet-mailing-create-page]');
     if (!page) return;
 
+    const recipientsUrl = 'mailing-create-recipients.html';
     const steps = Array.from(page.querySelectorAll('[data-mailing-create-step]'));
     const form = page.querySelector('[data-mailing-create-form]');
     const nameInput = page.querySelector('[data-mailing-create-name]');
@@ -35,6 +36,11 @@ export function initCabinetMailingCreatePage() {
 
     steps.forEach((step) => {
         step.addEventListener('click', () => {
+            if (step.dataset.mailingCreateStep === '2') {
+                form?.requestSubmit();
+                return;
+            }
+
             setActiveStep(steps, step.dataset.mailingCreateStep);
         });
     });
@@ -95,9 +101,19 @@ export function initCabinetMailingCreatePage() {
             return;
         }
 
+        try {
+            window.sessionStorage.setItem('nikitaMailingDraft', JSON.stringify({
+                name: nameInput.value.trim(),
+                sender: senderSelect.options[senderSelect.selectedIndex]?.textContent?.trim() || senderSelect.value
+            }));
+        } catch (error) {
+            // Session storage is optional; navigation should not depend on it.
+        }
+
         setActiveStep(steps, 2);
         if (status) {
             status.textContent = 'Параметры рассылки сохранены. Открыт шаг списка получателей.';
         }
+        window.location.href = recipientsUrl;
     });
 }

@@ -76,6 +76,10 @@ html:has(body.cabinet-page--mailing-create)::-webkit-scrollbar,
     color: var(--color-header-blue);
 }
 
+.cabinet-mailing-create-step.is-complete .cabinet-mailing-create-step__number {
+    color: var(--color-green-100);
+}
+
 .cabinet-mailing-create-step__label {
     min-width: 0;
     flex: 1 1 auto;

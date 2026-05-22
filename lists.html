@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita — рассылки</title>
-    <meta name="description" content="Рассылки личного кабинета Nikita.">
+    <title>Nikita — списки получателей</title>
+    <meta name="description" content="Списки получателей личного кабинета Nikita.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/cabinet.css">
 </head>
-<body class="cabinet-page cabinet-page--mailings" data-cabinet-current-section="mailings">
+<body class="cabinet-page cabinet-page--recipient-lists" data-cabinet-current-section="lists">
     <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Навигация кабинета" data-cabinet-sidepanel>
         <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
             <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Развернуть меню" aria-expanded="false" data-cabinet-sidepanel-toggle>
@@ -134,16 +134,330 @@
             </header>
 
             <div class="cabinet-breadcrumbs">
-                <span>Мой кабинет → </span><strong data-cabinet-current>Рассылки</strong>
+                <span>Мой кабинет → </span><strong data-cabinet-current><span class="cabinet-recipient-lists__title-full">Списки получателей</span><span class="cabinet-recipient-lists__title-short">Списки</span></strong>
             </div>
 
             <div class="cabinet-page-title">
-                <h1 class="cabinet-page-title__text" id="mailingsTitle">Рассылки</h1>
+                <h1 class="cabinet-page-title__text" id="recipientListsTitle">
+                    <span class="cabinet-recipient-lists__title-full">Списки получателей</span>
+                    <span class="cabinet-recipient-lists__title-short">Списки</span>
+                </h1>
             </div>
         </div>
 
         <main class="cabinet-main">
-            <section class="cabinet-mailings" aria-labelledby="mailingsTitle" data-cabinet-mailings-page>
+            <section class="cabinet-recipient-lists" aria-labelledby="recipientListsTitle" data-cabinet-recipient-lists-page>
+                <form class="cabinet-recipient-lists-filter" action="#" data-recipient-lists-filter>
+                    <div class="cabinet-recipient-lists-filter__top">
+                        <div class="cabinet-recipient-lists-filter__select" data-recipient-lists-select>
+                            <button class="cabinet-recipient-lists-filter__select-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-recipient-lists-select-toggle>
+                                <span data-recipient-lists-select-label>Выбрать список</span>
+                                <span class="cabinet-recipient-lists-filter__select-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/select-chevron-desktop.svg" alt=""></span>
+                            </button>
+                            <div class="cabinet-recipient-lists-filter__select-list" role="listbox" aria-label="Список получателей" hidden data-recipient-lists-select-list>
+                                <button class="cabinet-recipient-lists-filter__select-option" type="button" role="option" aria-selected="false" data-recipient-lists-select-option="Основной список">Основной список</button>
+                                <button class="cabinet-recipient-lists-filter__select-option" type="button" role="option" aria-selected="false" data-recipient-lists-select-option="Промо база">Промо база</button>
+                                <button class="cabinet-recipient-lists-filter__select-option" type="button" role="option" aria-selected="false" data-recipient-lists-select-option="VIP клиенты">VIP клиенты</button>
+                            </div>
+                        </div>
+                        <button class="cabinet-recipient-lists-filter__blacklist" type="button" aria-pressed="false" data-recipient-lists-blacklist>
+                            <span class="cabinet-recipient-lists-filter__blacklist-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/blacklist-desktop.svg" alt=""></span>
+                            <span>Чёрный список</span>
+                        </button>
+                        <button class="cabinet-recipient-lists-filter__toggle" type="button" aria-label="Открыть фильтр" aria-expanded="false" data-recipient-lists-filter-toggle>
+                            <span class="cabinet-recipient-lists-filter__toggle-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/filter-mobile-closed.svg" alt=""></span>
+                        </button>
+                    </div>
+
+                    <div class="cabinet-recipient-lists-filter__details" data-recipient-lists-filter-details>
+                        <div class="cabinet-recipient-lists-filter__fields">
+                            <label class="cabinet-recipient-lists-filter__field cabinet-recipient-lists-filter__field--name">
+                                <span class="cabinet-recipient-lists-filter__label">Новый список<span class="cabinet-recipient-lists-filter__label-colon">:</span></span>
+                                <input class="cabinet-recipient-lists-filter__input" type="text" name="list_name" placeholder="Название списка">
+                            </label>
+                            <label class="cabinet-recipient-lists-filter__field cabinet-recipient-lists-filter__field--description">
+                                <span class="cabinet-recipient-lists-filter__label">Описание<span class="cabinet-recipient-lists-filter__label-colon">:</span></span>
+                                <input class="cabinet-recipient-lists-filter__input" type="text" name="description" placeholder="Добавьте краткое описание">
+                            </label>
+                        </div>
+                        <div class="cabinet-recipient-lists-filter__buttons">
+                            <button class="cabinet-recipient-lists-filter__button cabinet-recipient-lists-filter__button--secondary" type="reset">Сбросить</button>
+                            <button class="cabinet-recipient-lists-filter__button cabinet-recipient-lists-filter__button--primary" type="submit">Сохранить</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cabinet-recipient-lists__grid">
+                    <div class="cabinet-recipient-lists__toolbar">
+                        <div class="cabinet-recipient-lists__sort" data-recipient-lists-page-size>
+                            <button class="cabinet-recipient-lists__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-recipient-lists-page-size-toggle>
+                                <span>Показывать по</span>
+                                <span class="cabinet-recipient-lists__sort-value" data-recipient-lists-page-size-value>50</span>
+                                <span class="cabinet-recipient-lists__sort-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                            </button>
+                            <div class="cabinet-recipient-lists__sort-list" role="listbox" aria-label="Количество получателей на странице" hidden data-recipient-lists-page-size-list>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="10">10</button>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="20">20</button>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="30">30</button>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="40">40</button>
+                                <button class="cabinet-recipient-lists__sort-option is-active" type="button" role="option" aria-selected="true" data-recipient-lists-page-size-option="50">50</button>
+                            </div>
+                        </div>
+                        <div class="cabinet-recipient-lists__actions" aria-label="Действия со списком получателей">
+                            <div class="cabinet-recipient-lists__action-control cabinet-recipient-lists__action-control--add" data-recipient-lists-action-control>
+                                <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--add" type="button" aria-haspopup="menu" aria-expanded="false" data-recipient-lists-action-toggle>
+                                    <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-add-desktop.svg" alt=""></span>
+                                    <span class="cabinet-recipient-lists__action-text">Добавить</span>
+                                    <span class="cabinet-recipient-lists__action-chevron" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-recipient-lists__action-menu cabinet-recipient-lists__action-menu--add" role="menu" hidden data-recipient-lists-action-menu>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem" data-recipient-lists-add-manual>Добавить вручную</button>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Добавить из другого списка</button>
+                                </div>
+                            </div>
+                            <div class="cabinet-recipient-lists__action-control cabinet-recipient-lists__action-control--import" data-recipient-lists-action-control>
+                                <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--import" type="button" aria-haspopup="menu" aria-expanded="false" data-recipient-lists-action-toggle>
+                                    <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-import-desktop.svg" alt=""></span>
+                                    <span class="cabinet-recipient-lists__action-text">Импорт </span>
+                                    <span class="cabinet-recipient-lists__action-chevron" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-recipient-lists__action-menu cabinet-recipient-lists__action-menu--import" role="menu" hidden data-recipient-lists-action-menu>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Импорт из Excel</button>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Импорт из CSV</button>
+                                </div>
+                            </div>
+                            <div class="cabinet-recipient-lists__action-control cabinet-recipient-lists__action-control--export" data-recipient-lists-action-control>
+                                <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--export" type="button" aria-haspopup="menu" aria-expanded="false" data-recipient-lists-action-toggle>
+                                    <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-export-desktop.svg" alt=""></span>
+                                    <span class="cabinet-recipient-lists__action-text">Экспорт</span>
+                                    <span class="cabinet-recipient-lists__action-chevron" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-recipient-lists__action-menu cabinet-recipient-lists__action-menu--export" role="menu" hidden data-recipient-lists-action-menu>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Экспорт в Excel</button>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Экспорт в CSV</button>
+                                </div>
+                            </div>
+                            <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--delete-selected" type="button" data-recipient-lists-delete-selected>
+                                <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-delete-selected-desktop.svg" alt=""></span>
+                                <span class="cabinet-recipient-lists__action-text cabinet-recipient-lists__action-text--desktop">Удалить выбранных</span>
+                                <span class="cabinet-recipient-lists__action-text cabinet-recipient-lists__action-text--compact">Удалить</span>
+                            </button>
+                            <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--delete-list" type="button" data-recipient-lists-delete-list>
+                                <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/action-delete-list-desktop.svg" alt=""></span>
+                                <span class="cabinet-recipient-lists__action-text">Удалить список</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-recipient-lists__table-scroll" tabindex="0" aria-labelledby="recipientListsTitle">
+                        <div class="cabinet-recipient-lists-table" role="table" aria-labelledby="recipientListsTitle">
+                            <div class="cabinet-recipient-lists-table__row cabinet-recipient-lists-table__row--head" role="row">
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="columnheader"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать всех получателей" data-recipient-lists-select-all><span class="cabinet-recipient-lists-table__head-copy">Телефон <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">ФИО <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Дата рожд-я <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Пол <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Регион <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Оператор <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Час.пояс <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Доп.1 <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Доп.2 <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Доп.3 <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="columnheader"></div>
+                            </div>
+
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Китай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Ж</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">15.04.1990</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Ж</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Нидерланды</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 0</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.78</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 113</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-244</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Китай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Ж</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Китай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Ж</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">М</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Китай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Ж</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Выбрать получателя +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия И...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">15.04.1990</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Ж</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Нидерланды</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 0</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.78</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Значение 113</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-244</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabinet-recipient-lists__scrollbar" aria-hidden="true">
+                        <span class="cabinet-recipient-lists__scrollbar-track"></span>
+                        <span class="cabinet-recipient-lists__scrollbar-thumb"></span>
+                        <span class="cabinet-recipient-lists__scrollbar-knob"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cabinet-mailings" aria-hidden="true" hidden>
                 <form class="cabinet-mailings-filter" action="#" data-mailings-filter>
                     <div class="cabinet-mailings-filter__search-row">
                         <label class="cabinet-mailings-filter__search">
@@ -713,6 +1027,92 @@
                 <span>+996 (700) 892-188</span>
             </a>
         </footer>
+
+        <div class="cabinet-modal cabinet-recipient-lists-modal" role="dialog" aria-modal="true" aria-labelledby="recipientListsAddTitle" hidden data-recipient-lists-add-modal>
+            <section class="cabinet-recipient-lists-modal__dialog" role="document" tabindex="-1">
+                <div class="cabinet-recipient-lists-modal__head">
+                    <h2 class="cabinet-recipient-lists-modal__title" id="recipientListsAddTitle">Добавление получателя</h2>
+                    <button class="cabinet-recipient-lists-modal__close" type="button" aria-label="Закрыть" data-recipient-lists-add-close>
+                        <img src="assets/images/cabinet-recipient-lists/modal-close-desktop.svg" alt="">
+                    </button>
+                </div>
+
+                <form class="cabinet-recipient-lists-modal__form" data-recipient-lists-add-form>
+                    <div class="cabinet-recipient-lists-modal__fields">
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Номер телефона: <span>*</span></span>
+                            <span class="cabinet-recipient-lists-modal__input-wrap cabinet-recipient-lists-modal__input-wrap--icon">
+                                <input class="cabinet-recipient-lists-modal__input" type="tel" name="phone" placeholder="+996 XXX - XXX - XXX" required>
+                                <img class="cabinet-recipient-lists-modal__input-icon cabinet-recipient-lists-modal__input-icon--chevron" src="assets/images/cabinet-recipient-lists/modal-chevron-desktop.svg" alt="">
+                            </span>
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Дата рождения:</span>
+                            <span class="cabinet-recipient-lists-modal__input-wrap cabinet-recipient-lists-modal__input-wrap--icon">
+                                <input class="cabinet-recipient-lists-modal__input" type="text" name="birth" inputmode="numeric" placeholder="дд.мм.гггг">
+                                <img class="cabinet-recipient-lists-modal__input-icon cabinet-recipient-lists-modal__input-icon--calendar" src="assets/images/cabinet-recipient-lists/modal-calendar-desktop.svg" alt="">
+                            </span>
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">ФИО:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="fullname" placeholder="Укажите ФИО">
+                        </label>
+
+                        <div class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Пол:</span>
+                            <div class="cabinet-recipient-lists-modal-select" data-recipient-lists-modal-select>
+                                <input type="hidden" name="gender" value="" data-recipient-lists-modal-select-input>
+                                <button class="cabinet-recipient-lists-modal-select__toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-recipient-lists-modal-select-toggle>
+                                    <span class="cabinet-recipient-lists-modal-select__value is-placeholder" data-recipient-lists-modal-select-value>Не выбран</span>
+                                    <img class="cabinet-recipient-lists-modal-select__chevron" src="assets/images/cabinet-recipient-lists/modal-chevron-desktop.svg" alt="">
+                                </button>
+                                <div class="cabinet-recipient-lists-modal-select__menu" role="listbox">
+                                    <button class="cabinet-recipient-lists-modal-select__option" type="button" role="option" aria-selected="false" data-recipient-lists-modal-select-option="М">М</button>
+                                    <button class="cabinet-recipient-lists-modal-select__option" type="button" role="option" aria-selected="false" data-recipient-lists-modal-select-option="Ж">Ж</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Фамилия:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="lastName" placeholder="Укажите Фамилию">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Имя:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="firstName" placeholder="Укажите Имя">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Отчество</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="middleName" placeholder="Укажите Отчество">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Доп.1:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="extra1" placeholder="Укажите значение">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Доп.2:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="extra2" placeholder="Укажите значение">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Доп.3:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="extra3" placeholder="Укажите значение">
+                        </label>
+                    </div>
+
+                    <div class="cabinet-recipient-lists-modal__actions">
+                        <button class="cabinet-recipient-lists-modal__button cabinet-recipient-lists-modal__button--secondary" type="button" data-recipient-lists-add-close>Отменить</button>
+                        <button class="cabinet-recipient-lists-modal__button cabinet-recipient-lists-modal__button--primary" type="submit">Создать</button>
+                    </div>
+                </form>
+            </section>
+        </div>
 
         <div class="cabinet-tabbar-modal" role="dialog" aria-label="Меню кабинета" hidden data-cabinet-tabbar-modal>
             <div class="cabinet-tabbar-modal__head">

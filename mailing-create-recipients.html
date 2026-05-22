@@ -21,7 +21,7 @@
         <nav class="cabinet-sidepanel__nav" aria-label="Разделы кабинета">
             <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Главная"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Главная</span></a>
             <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Рассылки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Рассылки</span></a>
-            <a class="cabinet-sidepanel__item" href="cabinet.html#lists" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
             <a class="cabinet-sidepanel__item" href="cabinet.html#api" data-cabinet-nav data-section="api" aria-label="API-интеграция"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API-интеграция</span></a>
             <a class="cabinet-sidepanel__item" href="cabinet.html#reports" data-cabinet-nav data-section="reports" aria-label="Отчёты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчёты</span></a>
             <a class="cabinet-sidepanel__item" href="cabinet.html#otp" data-cabinet-nav data-section="otp" aria-label="Сервис OTP"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">Сервис OTP</span></a>
@@ -143,13 +143,13 @@
         </div>
 
         <main class="cabinet-main">
-            <section class="cabinet-mailing-create" aria-labelledby="mailingCreateTitle" data-cabinet-mailing-create-page>
+            <section class="cabinet-mailing-create cabinet-mailing-recipients" aria-labelledby="mailingCreateTitle" data-cabinet-mailing-recipients-page>
                 <div class="cabinet-mailing-create__steps" aria-label="Шаги создания рассылки">
-                    <button class="cabinet-mailing-create-step is-active" type="button" aria-current="step" data-mailing-create-step="1">
+                    <button class="cabinet-mailing-create-step is-complete" type="button" data-mailing-create-step="1">
                         <span class="cabinet-mailing-create-step__number">01</span>
                         <span class="cabinet-mailing-create-step__label"><span class="cabinet-mailing-create-step__label-line">Параметры</span><span class="cabinet-mailing-create-step__label-line">рассылки</span></span>
                     </button>
-                    <button class="cabinet-mailing-create-step" type="button" data-mailing-create-step="2">
+                    <button class="cabinet-mailing-create-step is-active" type="button" aria-current="step" data-mailing-create-step="2">
                         <span class="cabinet-mailing-create-step__number">02</span>
                         <span class="cabinet-mailing-create-step__label"><span class="cabinet-mailing-create-step__label-line">Список</span><span class="cabinet-mailing-create-step__label-line">получателей</span></span>
                     </button>
@@ -159,56 +159,1119 @@
                     </button>
                 </div>
 
-                <form class="cabinet-mailing-create-form" action="#" method="post" data-mailing-create-form novalidate>
-                    <div class="cabinet-mailing-create-form__fields">
-                        <label class="cabinet-mailing-create-field">
-                            <span class="cabinet-mailing-create-field__label">Название рассылки:</span>
-                            <input class="cabinet-mailing-create-field__control" type="text" name="mailing_name" placeholder="Укажите название" data-mailing-create-name>
-                            <span class="cabinet-mailing-create-field__hint">Например: “Реклама сантября”</span>
+                <div class="cabinet-mailing-recipients__summary">
+                    <div class="cabinet-mailing-recipients__summary-fields" aria-label="Параметры рассылки">
+                        <div class="cabinet-mailing-recipients__summary-row">
+                            <span class="cabinet-mailing-recipients__summary-label">Добавление получателей в рассылку:</span>
+                            <strong class="cabinet-mailing-recipients__summary-value">Тестовая рассылка</strong>
+                        </div>
+                        <div class="cabinet-mailing-recipients__summary-row">
+                            <span class="cabinet-mailing-recipients__summary-label">Имя отправителя:</span>
+                            <strong class="cabinet-mailing-recipients__summary-value">Username</strong>
+                        </div>
+                        <div class="cabinet-mailing-recipients__summary-row" hidden data-mailing-message-count-row>
+                            <span class="cabinet-mailing-recipients__summary-label">Добавлено получателей:</span>
+                            <strong class="cabinet-mailing-recipients__summary-value" data-mailing-message-recipient-count>127</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-recipients__intro" data-mailing-recipients-intro>
+                        <h2 class="cabinet-mailing-recipients__title">Выберите способ загрузки</h2>
+                        <p>Вы можете использовать как один, так и несколько способов для одной рассылки.</p>
+                        <p>При добавлении одинаковых получателей из разных источников <strong>дубликаты не сохраняются;</strong> возможно только дополнение информации.</p>
+                    </div>
+                </div>
+
+                <form class="cabinet-mailing-recipients-card" action="#" method="post" data-mailing-recipients-form novalidate>
+                    <div class="cabinet-mailing-recipients-card__tabs" role="tablist" aria-label="Способ загрузки получателей">
+                        <button class="cabinet-mailing-recipients-tab is-active" type="button" role="tab" aria-selected="true" data-mailing-recipients-tab="manual">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/tab-manual-plus.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Добавить вручную</span>
+                        </button>
+                        <button class="cabinet-mailing-recipients-tab" type="button" role="tab" aria-selected="false" data-mailing-recipients-tab="mailing">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/tab-mailing.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Добавить из другой рассылки</span>
+                        </button>
+                        <button class="cabinet-mailing-recipients-tab" type="button" role="tab" aria-selected="false" data-mailing-recipients-tab="list">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/tab-list.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Добавить из списка</span>
+                        </button>
+                        <button class="cabinet-mailing-recipients-tab" type="button" role="tab" aria-selected="false" data-mailing-recipients-tab="file">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/tab-upload.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Загрузить из файла</span>
+                        </button>
+                    </div>
+                    <div class="cabinet-mailing-recipients-card__divider" aria-hidden="true"></div>
+
+                    <div class="cabinet-mailing-recipients-card__fields" data-mailing-manual-fields>
+                        <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--name">
+                            <span class="cabinet-mailing-recipients-field__label">ФИО:</span>
+                            <input class="cabinet-mailing-recipients-input" type="text" name="recipient_name" placeholder="Укажите ФИО" data-mailing-recipient-name>
                         </label>
 
-                        <label class="cabinet-mailing-create-field">
-                            <span class="cabinet-mailing-create-field__label">Имя отправителя:</span>
-                            <span class="cabinet-mailing-create-select">
-                                <select class="cabinet-mailing-create-select__control" name="sender_name" required data-mailing-create-sender>
-                                    <option value="" selected>Не выбрано</option>
-                                    <option value="Nikita">Nikita</option>
-                                    <option value="SMSPRO">SMSPRO</option>
-                                    <option value="Info">Info</option>
-                                </select>
-                                <span class="cabinet-mailing-create-select__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-create/chevron.svg" alt=""></span>
+                        <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--phone">
+                            <span class="cabinet-mailing-recipients-field__label">Телефон:</span>
+                            <span class="cabinet-mailing-recipients-phone">
+                                <span class="cabinet-mailing-recipients-select cabinet-mailing-recipients-select--code">
+                                    <select class="cabinet-mailing-recipients-select__control" name="recipient_country" data-mailing-recipient-code>
+                                        <option value="+996" selected>+996</option>
+                                        <option value="+7">+7</option>
+                                        <option value="+998">+998</option>
+                                    </select>
+                                    <span class="cabinet-mailing-recipients-select__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                                <input class="cabinet-mailing-recipients-input cabinet-mailing-recipients-input--phone" type="tel" name="recipient_phone" placeholder="XXX-XXX-XXX" inputmode="tel" data-mailing-recipient-phone>
                             </span>
                         </label>
 
-                        <label class="cabinet-mailing-create-check cabinet-mailing-create-check--birthday">
-                            <input class="cabinet-mailing-create-check__input" type="checkbox" name="birthday_auto" data-mailing-create-checkbox>
-                            <span class="cabinet-mailing-create-check__box" aria-hidden="true"></span>
-                            <span class="cabinet-mailing-create-check__text">Рассылка для автоматических поздравлений с днём рождения</span>
-                            <button class="cabinet-mailing-create-check__help" type="button" aria-label="Подсказка" data-mailing-create-help>
-                                <img src="assets/images/cabinet-mailing-create/help.svg" alt="">
-                            </button>
-                            <span class="cabinet-mailing-create-check__tooltip" role="tooltip" hidden data-mailing-create-help-tooltip>Автоматическое поздравление отправится по дате рождения получателя из списка.</span>
+                        <div class="cabinet-mailing-recipients-date-age">
+                            <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--birthday">
+                                <span class="cabinet-mailing-recipients-field__label">Дата рождения</span>
+                                <span class="cabinet-mailing-recipients-date">
+                                    <input class="cabinet-mailing-recipients-input cabinet-mailing-recipients-input--date" type="text" name="recipient_birthday" placeholder="дд.мм.гггг" inputmode="numeric" data-mailing-recipient-birthday>
+                                    <span class="cabinet-mailing-recipients-date__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/calendar.svg" alt=""></span>
+                                </span>
+                            </label>
+                            <span class="cabinet-mailing-recipients-date-age__separator">или</span>
+                            <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--age">
+                                <span class="cabinet-mailing-recipients-field__label">Возраст</span>
+                                <span class="cabinet-mailing-recipients-age">
+                                    <button class="cabinet-mailing-recipients-age__button" type="button" aria-label="Уменьшить возраст" data-mailing-recipient-age-minus><img src="assets/images/cabinet-mailing-recipients/minus.svg" alt=""></button>
+                                    <input class="cabinet-mailing-recipients-age__value" type="number" name="recipient_age" value="24" min="0" max="120" data-mailing-recipient-age>
+                                    <button class="cabinet-mailing-recipients-age__button" type="button" aria-label="Увеличить возраст" data-mailing-recipient-age-plus><img src="assets/images/cabinet-mailing-recipients/plus.svg" alt=""></button>
+                                </span>
+                            </label>
+                        </div>
+
+                        <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--gender">
+                            <span class="cabinet-mailing-recipients-field__label">Пол:</span>
+                            <span class="cabinet-mailing-recipients-select cabinet-mailing-recipients-select--gender">
+                                <select class="cabinet-mailing-recipients-select__control" name="recipient_gender" data-mailing-recipient-gender>
+                                    <option value="m" selected>М</option>
+                                    <option value="f">Ж</option>
+                                </select>
+                                <span class="cabinet-mailing-recipients-select__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                            </span>
                         </label>
 
-                        <label class="cabinet-mailing-create-check">
-                            <input class="cabinet-mailing-create-check__input" type="checkbox" name="notify_phone" checked data-mailing-create-checkbox>
-                            <span class="cabinet-mailing-create-check__box" aria-hidden="true"></span>
-                            <span class="cabinet-mailing-create-check__text">Сообщить об отправке данной рассылки мне на телефон</span>
-                        </label>
-                    </div>
-
-                    <div class="cabinet-mailing-create-form__actions">
-                        <a class="cabinet-mailing-create-btn cabinet-mailing-create-btn--secondary" href="mailings.html" data-mailing-create-cancel>
-                            <span class="cabinet-mailing-create-btn__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-create/cancel.svg" alt=""></span>
-                            <span>Отменить</span>
-                        </a>
-                        <button class="cabinet-mailing-create-btn cabinet-mailing-create-btn--primary" type="submit">
-                            <span>Продолжить</span>
-                            <span class="cabinet-mailing-create-btn__icon cabinet-mailing-create-btn__icon--next" aria-hidden="true"><img src="assets/images/cabinet-mailing-create/next.svg" alt=""></span>
+                        <button class="cabinet-mailing-recipients-add" type="submit" data-mailing-recipient-add>
+                            <span class="cabinet-mailing-recipients-add__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/add-check.svg" alt=""></span>
+                            <span>Добавить</span>
                         </button>
                     </div>
-                    <p class="visually-hidden" aria-live="polite" data-mailing-create-status></p>
+
+                    <div class="cabinet-mailing-recipients-empty" data-mailing-recipients-empty>
+                        <span class="cabinet-mailing-recipients-empty__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/person.svg" alt=""></span>
+                        <span data-mailing-recipients-empty-text>Ни один получатель ещё не добавлен</span>
+                    </div>
+                    <div class="cabinet-mailing-recipients-selected" hidden data-mailing-recipients-selected>
+                        <div class="cabinet-mailing-recipients-table-scroll" tabindex="0" data-mailing-recipients-table-scroll>
+                            <table class="cabinet-mailing-recipients-table">
+                                <colgroup>
+                                    <col class="cabinet-mailing-recipients-table__col-phone">
+                                    <col class="cabinet-mailing-recipients-table__col-name">
+                                    <col class="cabinet-mailing-recipients-table__col-birthday">
+                                    <col class="cabinet-mailing-recipients-table__col-age">
+                                    <col class="cabinet-mailing-recipients-table__col-gender">
+                                    <col class="cabinet-mailing-recipients-table__col-action">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><span>Телефон</span><img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>ФИО</span><img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>Дата рождения</span><img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>Возраст</span><img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>Пол</span><img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col" aria-label="Удалить"></th>
+                                    </tr>
+                                </thead>
+                                <tbody data-mailing-recipients-table-body></tbody>
+                            </table>
+                        </div>
+                        <div class="cabinet-mailing-recipients-table-slider" aria-hidden="true" data-mailing-recipients-table-slider>
+                            <span class="cabinet-mailing-recipients-table-slider__thumb" data-mailing-recipients-table-thumb></span>
+                        </div>
+                        <div class="cabinet-mailing-recipients-count" data-mailing-recipients-count-badge>
+                            <span class="cabinet-mailing-recipients-count__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/selected-person.svg" alt=""></span>
+                            <span>Выбрано:</span>
+                            <strong data-mailing-recipients-count>0 получателей</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-source" hidden data-mailing-source-panel>
+                        <div class="cabinet-mailing-source__filters">
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--name">
+                                <span class="cabinet-mailing-source-field__label">Название рассылки:</span>
+                                <span class="cabinet-mailing-source-search">
+                                    <input class="cabinet-mailing-source-input" type="search" name="source_mailing_name" placeholder="Поиск по названию" data-mailing-source-search>
+                                    <span class="cabinet-mailing-source-search__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-search.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <div class="cabinet-mailing-source-field cabinet-mailing-source-field--date">
+                                <span class="cabinet-mailing-source-field__label">Дата:</span>
+                                <div class="cabinet-mailing-source-range">
+                                    <span class="cabinet-mailing-source-date">
+                                        <input class="cabinet-mailing-source-input cabinet-mailing-source-input--date" type="text" name="source_date_from" placeholder="дд.мм.гггг" inputmode="numeric" data-mailing-source-date-from>
+                                        <span class="cabinet-mailing-source-date__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/calendar.svg" alt=""></span>
+                                    </span>
+                                    <span class="cabinet-mailing-source-range__dash">-</span>
+                                    <span class="cabinet-mailing-source-date">
+                                        <input class="cabinet-mailing-source-input cabinet-mailing-source-input--date" type="text" name="source_date_to" placeholder="дд.мм.гггг" inputmode="numeric" data-mailing-source-date-to>
+                                        <span class="cabinet-mailing-source-date__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/calendar.svg" alt=""></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-source-field cabinet-mailing-source-field--age">
+                                <span class="cabinet-mailing-source-field__label">Возраст:</span>
+                                <div class="cabinet-mailing-source-range">
+                                    <span class="cabinet-mailing-source-age">
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Уменьшить возраст от" data-mailing-source-age-from-minus><img src="assets/images/cabinet-mailing-recipients/minus.svg" alt=""></button>
+                                        <input class="cabinet-mailing-source-age__value" type="number" name="source_age_from" value="18" min="0" max="120" data-mailing-source-age-from>
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Увеличить возраст от" data-mailing-source-age-from-plus><img src="assets/images/cabinet-mailing-recipients/plus.svg" alt=""></button>
+                                    </span>
+                                    <span class="cabinet-mailing-source-range__dash">-</span>
+                                    <span class="cabinet-mailing-source-age">
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Уменьшить возраст до" data-mailing-source-age-to-minus><img src="assets/images/cabinet-mailing-recipients/minus.svg" alt=""></button>
+                                        <input class="cabinet-mailing-source-age__value" type="number" name="source_age_to" value="30" min="0" max="120" data-mailing-source-age-to>
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Увеличить возраст до" data-mailing-source-age-to-plus><img src="assets/images/cabinet-mailing-recipients/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--gender">
+                                <span class="cabinet-mailing-source-field__label">Пол:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="source_gender" data-mailing-source-gender>
+                                        <option value="all" selected>Все</option>
+                                        <option value="m">М</option>
+                                        <option value="f">Ж</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <div class="cabinet-mailing-source__filter-actions">
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--secondary" type="button" data-mailing-source-reset>Сбросить</button>
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--primary" type="button" data-mailing-source-refresh>Обновить</button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-table" role="table" aria-label="Рассылки для добавления получателей">
+                            <div class="cabinet-mailing-source-table__row cabinet-mailing-source-table__row--head" role="row">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="columnheader">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-select-all>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать все рассылки</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Дата и время рассылки</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">Название рассылки</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">Количество получателей</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="08.05.2026" data-source-name="Рекламная рассылка - сезонные акции" data-source-recipients="1560">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать рассылку Рекламная рассылка - сезонные акции</span>
+                                    </label>
+                                    <span>08.05.2026 <span class="cabinet-mailing-source-table__time">12:35</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Рекламная рассылка - сезонные акции</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">1 560</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="05.05.2026" data-source-name="Информационное сообщение" data-source-recipients="12">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" checked data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать рассылку Информационное сообщение</span>
+                                    </label>
+                                    <span>05.05.2026 <span class="cabinet-mailing-source-table__time">22:00</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Информационное сообщение</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">12</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="28.04.2026" data-source-name="Информирование клиентов - изменение условий" data-source-recipients="2720">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать рассылку Информирование клиентов - изменение условий</span>
+                                    </label>
+                                    <span>28.04.2026 <span class="cabinet-mailing-source-table__time">09:24</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Информирование клиентов - изменение условий</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">2 720</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="16.04.2026" data-source-name="Рекламная рассылка - сезонные акции версия 2" data-source-recipients="47">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать рассылку Рекламная рассылка - сезонные акции версия 2</span>
+                                    </label>
+                                    <span>16.04.2026 <span class="cabinet-mailing-source-table__time">11:48</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Рекламная рассылка - сезонные акции версия 2</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">47</div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-count" data-mailing-source-count-badge>
+                            <span class="cabinet-mailing-source-count__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-selected-person.svg" alt=""></span>
+                            <span>Выбрано:</span>
+                            <strong data-mailing-source-recipient-count>12 получателей</strong>
+                            <span>из</span>
+                            <strong data-mailing-source-mailing-count>1 рассылки</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-source cabinet-mailing-list" hidden data-mailing-list-panel>
+                        <div class="cabinet-mailing-source__filters">
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--region">
+                                <span class="cabinet-mailing-source-field__label">Регион:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="list_region" data-mailing-list-region>
+                                        <option value="all" selected>Все</option>
+                                        <option value="bishkek">Бишкек</option>
+                                        <option value="osh">Ош</option>
+                                        <option value="chuy">Чуй</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--operator">
+                                <span class="cabinet-mailing-source-field__label">Оператор:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="list_operator" data-mailing-list-operator>
+                                        <option value="all" selected>Все</option>
+                                        <option value="o">O!</option>
+                                        <option value="beeline">Beeline</option>
+                                        <option value="megacom">Megacom</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--gender">
+                                <span class="cabinet-mailing-source-field__label">Пол:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="list_gender" data-mailing-list-gender>
+                                        <option value="all" selected>Все</option>
+                                        <option value="m">М</option>
+                                        <option value="f">Ж</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <div class="cabinet-mailing-source__filter-actions">
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--secondary" type="button" data-mailing-list-reset>Сбросить</button>
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--primary" type="button" data-mailing-list-refresh>Обновить</button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-table cabinet-mailing-list-table" role="table" aria-label="Списки для добавления получателей">
+                            <div class="cabinet-mailing-source-table__row cabinet-mailing-source-table__row--head" role="row">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="columnheader">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-list-select-all>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать все списки</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Название списка</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">Описание списка</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">Количество получателей</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="VIP-клиенты" data-list-recipients="27" data-list-region="bishkek" data-list-operator="o" data-list-gender="all">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать список VIP-клиенты</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">VIP-клиенты</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Рекламная рассылка - сезонные акции</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">27</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="Новые клиенты май 2026" data-list-recipients="12" data-list-region="bishkek" data-list-operator="beeline" data-list-gender="m">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" checked data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать список Новые клиенты май 2026</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Новые клиенты май 2026</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Информационное сообщение</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">12</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="Полный список №2 2025-2026 гг" data-list-recipients="2720" data-list-region="osh" data-list-operator="megacom" data-list-gender="f">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать список Полный список №2 2025-2026 гг</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Полный список №2 2025-2026 гг</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Информирование клиентов - изменение условий</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">2 720</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="Полный список №1 2024-2025 гг" data-list-recipients="47" data-list-region="chuy" data-list-operator="o" data-list-gender="all">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" checked data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Выбрать список Полный список №1 2024-2025 гг</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Полный список №1 2024-2025 гг</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Рекламная рассылка - сезонные акции версия 2</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">47</div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-count" data-mailing-list-count-badge>
+                            <span class="cabinet-mailing-source-count__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/source-selected-person.svg" alt=""></span>
+                            <span>Выбрано:</span>
+                            <strong data-mailing-list-recipient-count>59 получателей</strong>
+                            <span>из</span>
+                            <strong data-mailing-list-count>2 списков</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-file" hidden data-mailing-file-panel>
+                        <div class="cabinet-mailing-file__body">
+                            <div class="cabinet-mailing-file__intro">
+                                <span class="cabinet-mailing-file__main-icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/file-upload.svg" alt=""></span>
+                                <div class="cabinet-mailing-file__content">
+                                    <div class="cabinet-mailing-file__copy">
+                                        <h3 class="cabinet-mailing-file__title">Загрузка файла</h3>
+                                        <p class="cabinet-mailing-file__text">Загрузите список получателей в формате <strong>.xls, .xlsx, .csv.</strong></p>
+                                    </div>
+                                    <button class="cabinet-mailing-file__rules" type="button" data-mailing-file-rules>
+                                        <span class="cabinet-mailing-file__rules-icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/file-rules.svg" alt=""></span>
+                                        <span>Правила загрузки</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-file__actions">
+                                <label class="cabinet-mailing-file__switch">
+                                    <input class="cabinet-mailing-file__switch-input" type="checkbox" name="file_custom_upload" data-mailing-file-custom>
+                                    <span class="cabinet-mailing-file__switch-control" aria-hidden="true"></span>
+                                    <span>Настраиваемая загрузка</span>
+                                </label>
+                                <label class="cabinet-mailing-file__choose">
+                                    <input class="visually-hidden" type="file" name="recipients_file" accept=".xls,.xlsx,.csv" data-mailing-file-input>
+                                    <span>Выбрать файл</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-file-table-wrap" data-mailing-file-table-wrap>
+                            <div class="cabinet-mailing-file-table-scroll" tabindex="0" data-mailing-file-table-scroll>
+                                <div class="cabinet-mailing-file-table" role="table" aria-label="Получатели из файла">
+                                    <div class="cabinet-mailing-file-table__row cabinet-mailing-file-table__row--head" role="row">
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--phone" role="columnheader"><span>Телефон</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--name" role="columnheader"><span>ФИО</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--birthday" role="columnheader"><span>Дата рожд-я</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--gender" role="columnheader"><span>Пол</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--region" role="columnheader"><span>Регион</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--operator" role="columnheader"><span>Оператор</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--timezone" role="columnheader"><span>Час.пояс</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--extra" role="columnheader"><span>Доп.1</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--extra" role="columnheader"><span>Доп.2</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--extra" role="columnheader"><span>Доп.3</span><img src="assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (700) 892-188</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кошечкина Вероника Владимировна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">30.12.2014</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 001</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">256 984.40</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 001</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-01</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (701) 145-772</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Константинопольский Владислав Петрович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">24.09.2000</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 002</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">128 421.10</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 002</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-02</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (702) 581-936</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Сидоров Иван Иванович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">18.02.1998</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 003</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">86 204.00</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 003</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-03</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (703) 447-510</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Собачкина Вера Константиновна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">12.11.2007</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ж</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 004</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">54 705.75</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 004</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-04</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (704) 239-081</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ахматова Динара Руслановна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">05.05.1995</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ж</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 005</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">32 110.20</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 005</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-05</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (705) 810-245</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Жумабеков Нурлан Эркинович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">17.07.1991</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 006</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">71 904.65</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 006</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-06</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (706) 334-672</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Мамбеталиева Айсулуу Бакытовна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">09.03.2003</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ж</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 007</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">42 617.90</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 007</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-07</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (707) 918-430</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Абдылдаев Руслан Темирович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">22.01.1989</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 008</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">95 332.35</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 008</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-08</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (708) 765-124</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ибраимова Назира Омурбековна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">14.04.1999</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ж</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 009</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">63 840.00</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 009</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-09</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (709) 502-816</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Токтосунов Азамат Кубанычбекович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">01.10.1996</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 010</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">77 190.45</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 010</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-10</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (550) 184-291</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Орозова Жылдыз Асановна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">19.08.1994</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ж</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 011</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">28 566.10</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 011</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-11</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (551) 604-837</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кадыров Тимур Алмазович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">27.06.2002</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 012</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">11 309.80</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 012</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-12</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (552) 973-406</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Султаналиева Бермет Муратовна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">06.12.1997</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ж</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 013</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">49 228.55</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 013</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-13</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (553) 740-185</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Бекназаров Мирлан Сагынбекович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">08.09.1992</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 014</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">18 734.20</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 014</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-14</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (554) 361-928</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Муратова Айгерим Талантовна</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">11.05.2001</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ж</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 015</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">34 627.70</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 015</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-15</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (555) 698-312</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Осмонов Бакыт Эрмекович</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">03.03.1987</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">М</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Кыргызстан</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 016</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">102 508.95</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Значение 016</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-16</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabinet-mailing-file-table-slider" aria-hidden="true" data-mailing-file-table-slider>
+                                <span class="cabinet-mailing-file-table-slider__thumb" data-mailing-file-table-thumb></span>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-file__footer">
+                            <div class="cabinet-mailing-file__empty" data-mailing-file-empty-badge>
+                                <span class="cabinet-mailing-file__empty-icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/person.svg" alt=""></span>
+                                <span data-mailing-file-empty-text>Ни один получатель ещё не добавлен</span>
+                            </div>
+                            <div class="cabinet-mailing-file__selected" hidden data-mailing-file-selected-badge>
+                                <span class="cabinet-mailing-file__selected-icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/person.svg" alt=""></span>
+                                <span>Выбрано:</span>
+                                <strong data-mailing-file-selected-count>16 получателей</strong>
+                            </div>
+                            <div class="cabinet-mailing-file__name" data-mailing-file-name-badge>
+                                <span class="cabinet-mailing-file__name-icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/file-attach.svg" alt=""></span>
+                                <span data-mailing-file-name>Файл не выбран</span>
+                            </div>
+                            <button class="cabinet-mailing-file__loaded-name" type="button" hidden data-mailing-file-loaded-name-badge>
+                                <span class="cabinet-mailing-file__loaded-file-icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/file-format-xls.svg" alt=""></span>
+                                <span data-mailing-file-loaded-name>List_2026.xls</span>
+                                <span class="cabinet-mailing-file__loaded-delete-icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/file-loaded-chevron.svg" alt=""></span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="visually-hidden" aria-live="polite" data-mailing-recipients-status></p>
                 </form>
+
+                <form class="cabinet-mailing-message" action="#" method="post" hidden data-mailing-message-form novalidate>
+                    <h2 class="cabinet-mailing-message__title">Дата и время отправки SMS</h2>
+
+                    <div class="cabinet-mailing-message__schedule">
+                        <div class="cabinet-mailing-message__send-group">
+                            <label class="cabinet-mailing-message-check">
+                                <input class="cabinet-mailing-message-check__input" type="checkbox" name="send_now" data-mailing-message-send-now>
+                                <span class="cabinet-mailing-message-check__box" aria-hidden="true"></span>
+                                <span class="cabinet-mailing-message-check__text">Отправить сейчас</span>
+                            </label>
+                            <span class="cabinet-mailing-message__separator">или</span>
+                            <div class="cabinet-mailing-message__datetime">
+                                <label class="cabinet-mailing-message-input cabinet-mailing-message-input--date">
+                                    <input type="text" name="message_date" placeholder="дд.мм.гггг" inputmode="numeric" data-mailing-message-date>
+                                    <span aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-calendar.svg" alt=""></span>
+                                </label>
+                                <span class="cabinet-mailing-message__time-label">в</span>
+                                <label class="cabinet-mailing-message-input cabinet-mailing-message-input--time">
+                                    <input type="text" name="message_time" placeholder="00:00" inputmode="numeric" data-mailing-message-time>
+                                    <span aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-clock.svg" alt=""></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-message__gradual-group">
+                            <label class="cabinet-mailing-message-check">
+                                <input class="cabinet-mailing-message-check__input" type="checkbox" name="send_gradual" data-mailing-message-gradual>
+                                <span class="cabinet-mailing-message-check__box" aria-hidden="true"></span>
+                                <span class="cabinet-mailing-message-check__text">Разослать постепенно</span>
+                            </label>
+                            <div class="cabinet-mailing-message__gradual-controls">
+                                <span>за</span>
+                                <span class="cabinet-mailing-message-stepper">
+                                    <button type="button" aria-label="Уменьшить количество часов" data-mailing-message-hours-minus><img src="assets/images/cabinet-mailing-recipients/message-minus.svg" alt=""></button>
+                                    <input type="number" name="message_hours" value="12" min="1" max="72" data-mailing-message-hours>
+                                    <button type="button" aria-label="Увеличить количество часов" data-mailing-message-hours-plus><img src="assets/images/cabinet-mailing-recipients/message-plus.svg" alt=""></button>
+                                </span>
+                                <span>часов</span>
+                            </div>
+                            <button class="cabinet-mailing-message__help" type="button" aria-label="Подсказка о постепенной рассылке" data-mailing-message-help>
+                                <img src="assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                            </button>
+                        </div>
+
+                        <button class="cabinet-mailing-message__settings" type="button" aria-expanded="false" data-mailing-message-settings>
+                            <span aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-settings.svg" alt=""></span>
+                            <span>Все настройки</span>
+                            <span class="cabinet-mailing-message__settings-chevron" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-chevron.svg" alt=""></span>
+                        </button>
+
+                        <div class="cabinet-mailing-message__settings-panel" hidden data-mailing-message-settings-panel>
+                            <div class="cabinet-mailing-message__appeals">
+                                <div class="cabinet-mailing-message__appeals-row">
+                                    <label class="cabinet-mailing-message-appeal">
+                                        <span>Обращение к мужчинам:</span>
+                                        <input type="text" name="appeal_male" placeholder="Укажите обращение">
+                                    </label>
+                                    <label class="cabinet-mailing-message-appeal">
+                                        <span>к женщинам:</span>
+                                        <input type="text" name="appeal_female" placeholder="Укажите обращение">
+                                    </label>
+                                    <label class="cabinet-mailing-message-appeal">
+                                        <span>когда пол не указан:</span>
+                                        <input type="text" name="appeal_unknown" placeholder="Укажите обращение">
+                                    </label>
+                                </div>
+                                <div class="cabinet-mailing-message__settings-hint">
+                                    <span>Напишите в тексте тег <strong>%to%</strong> в том месте, где должно быть обращение</span>
+                                    <button class="cabinet-mailing-message__help" type="button" aria-label="Подсказка о теге обращения" data-mailing-message-help>
+                                        <img src="assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-message__tags">
+                                <div class="cabinet-mailing-message__tag-line">
+                                    <span>Имя - тег <strong>%name1%</strong></span>
+                                    <button class="cabinet-mailing-message__help" type="button" aria-label="Подсказка о теге имени" data-mailing-message-help>
+                                        <img src="assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="cabinet-mailing-message__tag-line">Отчество - тег <strong>%name2%</strong></div>
+                                <div class="cabinet-mailing-message__tag-line">Фамилия - тег <strong>%name3%</strong></div>
+                                <div class="cabinet-mailing-message__tag-line">Дополнительные поля Доп.1, Доп.2, Доп.3 - теги <strong>%extra1%</strong>, <strong>%extra2%</strong>, <strong>%extra3%</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-mailing-message__field">
+                        <div class="cabinet-mailing-message__field-head">
+                            <label class="cabinet-mailing-message__label" for="mailingMessageText">Введите текст сообщения:</label>
+                            <div class="cabinet-mailing-message__counters" aria-live="polite">
+                                <span>Символов: <strong data-mailing-message-char-count>11</strong></span>
+                                <span>Частей SMS: <strong data-mailing-message-sms-count>1</strong></span>
+                            </div>
+                        </div>
+                        <textarea class="cabinet-mailing-message__textarea" id="mailingMessageText" name="message_text" data-mailing-message-text>Добрый день!</textarea>
+                        <div class="cabinet-mailing-message__meta">
+                            <div class="cabinet-mailing-message__hint">
+                                <span>Напишите в тексте тег <strong>%username%</strong></span>
+                                <span>в том месте, где надо поставить ФИО получателя</span>
+                                <button class="cabinet-mailing-message__help" type="button" aria-label="Подсказка о теге получателя" data-mailing-message-tag-help>
+                                    <img src="assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="cabinet-mailing-message__tools">
+                                <button class="cabinet-mailing-message-tool" type="button" data-mailing-message-translit>
+                                    <span aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-translit.svg" alt=""></span>
+                                    <span>Перевести в транслит</span>
+                                </button>
+                                <button class="cabinet-mailing-message-tool" type="button" data-mailing-message-clear>
+                                    <span aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-clear.svg" alt=""></span>
+                                    <span>Очистить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-mailing-message__form-actions">
+                        <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--secondary" type="button" data-mailing-message-reset>Сбросить</button>
+                        <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--primary" type="button" data-mailing-message-add>Добавить сообщение в рассылку</button>
+                    </div>
+
+                    <div class="cabinet-mailing-message__ready">
+                        <h2 class="cabinet-mailing-message__ready-title">Сообщения, готовые к отправке:</h2>
+                        <div class="cabinet-mailing-message__empty" data-mailing-message-empty>
+                            <span aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-empty.svg" alt=""></span>
+                            <span>Сообщения ещё не добавлены</span>
+                        </div>
+                        <div class="cabinet-mailing-message__list" hidden data-mailing-message-list>
+                            <div class="cabinet-mailing-message-table-scroll" data-mailing-message-table-scroll>
+                                <table class="cabinet-mailing-message-table">
+                                    <colgroup>
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--text">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--sms">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--date">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--time">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--conditions">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--action">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Текст сообщения <img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Частей SMS <img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Дата отправки <img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Время отправки <img src="assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Условия</th>
+                                            <th scope="col"><span class="visually-hidden">Действия</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-mailing-message-table-body></tbody>
+                                </table>
+                            </div>
+                            <div class="cabinet-mailing-message-table-slider" aria-hidden="true" data-mailing-message-table-slider>
+                                <span data-mailing-message-table-thumb></span>
+                            </div>
+                            <div class="cabinet-mailing-message-row-menu" role="menu" hidden data-mailing-message-row-menu>
+                                <button type="button" role="menuitem" data-mailing-message-row-edit>Редактировать</button>
+                                <button type="button" role="menuitem" data-mailing-message-row-delete>Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cabinet-mailing-create-form__actions cabinet-mailing-recipients__actions" data-mailing-recipients-actions>
+                    <a class="cabinet-mailing-create-btn cabinet-mailing-create-btn--secondary cabinet-mailing-recipients__back" href="mailing-create.html" data-mailing-recipients-back>
+                        <span class="cabinet-mailing-create-btn__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/arrow-back.svg" alt=""></span>
+                        <span class="cabinet-mailing-recipients__back-text-full">К параметрам рассылки</span>
+                        <span class="cabinet-mailing-recipients__back-text-short">Назад</span>
+                    </a>
+                    <button class="cabinet-mailing-create-btn cabinet-mailing-create-btn--primary cabinet-mailing-recipients__continue" type="button" data-mailing-recipients-continue>
+                        <span>Добавить и продолжить</span>
+                        <span class="cabinet-mailing-create-btn__icon cabinet-mailing-create-btn__icon--next" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/arrow-next.svg" alt=""></span>
+                    </button>
+                </div>
+
+                <div class="cabinet-mailing-create-form__actions cabinet-mailing-recipients__actions cabinet-mailing-message__actions" hidden data-mailing-message-actions>
+                    <button class="cabinet-mailing-create-btn cabinet-mailing-create-btn--secondary cabinet-mailing-message__back" type="button" data-mailing-message-back>
+                        <span class="cabinet-mailing-create-btn__icon" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-arrow-back.svg" alt=""></span>
+                        <span class="cabinet-mailing-message__back-text-full">К списку получателей</span>
+                        <span class="cabinet-mailing-message__back-text-short">Назад</span>
+                    </button>
+                    <button class="cabinet-mailing-create-btn cabinet-mailing-create-btn--primary cabinet-mailing-message__done" type="button" data-mailing-message-done>
+                        <span>Готово</span>
+                        <span class="cabinet-mailing-create-btn__icon cabinet-mailing-create-btn__icon--next" aria-hidden="true"><img src="assets/images/cabinet-mailing-recipients/message-arrow-next.svg" alt=""></span>
+                    </button>
+                </div>
+
+                <div class="cabinet-modal cabinet-mailing-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="mailingConfirmTitle" hidden data-mailing-confirm-modal>
+                    <section class="cabinet-mailing-confirm-modal__dialog" role="document" tabindex="-1">
+                        <div class="cabinet-mailing-confirm-modal__head">
+                            <h2 class="cabinet-mailing-confirm-modal__title" id="mailingConfirmTitle">Подтверждения</h2>
+                            <button class="cabinet-mailing-confirm-modal__close" type="button" aria-label="Закрыть" data-mailing-confirm-close>
+                                <img src="assets/images/cabinet-mailing-recipients/modal-close.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="cabinet-mailing-confirm-modal__important">
+                            <strong>ВАЖНО!</strong>
+                            <p>Здесь показана только приблизительная стоимость вашей рассылки.</p>
+                            <p>Итоговая стоимость рассчитывается лишь по завершении рассылки.</p>
+                        </div>
+
+                        <dl class="cabinet-mailing-confirm-modal__summary">
+                            <div>
+                                <dt>Имя рассылки:</dt>
+                                <dd data-mailing-confirm-name>Тестовая рассылка</dd>
+                            </div>
+                            <div>
+                                <dt>Всего получателей:</dt>
+                                <dd data-mailing-confirm-recipients>1 (1SMS)</dd>
+                            </div>
+                            <div>
+                                <dt>Общая стоимость рассылки <span>*</span></dt>
+                                <dd>3,04 сом</dd>
+                            </div>
+                            <div>
+                                <dt>дд.мм.гггг</dt>
+                                <dd>Дата рождения</dd>
+                            </div>
+                        </dl>
+
+                        <div class="cabinet-mailing-confirm-modal__note">
+                            <p><strong>*</strong> Если в тексте вашей рассылки содержатся подстановки (например, %name%, %extra% и т.д.), то <b>количество символов и частей SMS могут увеличиться!</b></p>
+                            <p>Соответственно, <b>в этом случае увеличится итоговая стоимость.</b></p>
+                            <p>Также итоговая стоимость будет зависеть от <a href="cabinet.html#billing">категории сообщения</a> (рекламное, сервисное, транзакционное) и статуса его доставки.</p>
+                        </div>
+
+                        <div class="cabinet-mailing-confirm-modal__alert">Если вы уверены, что средств на вашем балансе достаточно, нажмите “Подтвердить”</div>
+
+                        <div class="cabinet-mailing-confirm-modal__balance">
+                            <span>Ваш баланс:</span>
+                            <strong>100.26</strong>
+                        </div>
+
+                        <div class="cabinet-mailing-confirm-modal__actions">
+                            <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--secondary" type="button" data-mailing-confirm-cancel>Отменить</button>
+                            <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--primary" type="button" data-mailing-confirm-submit>Подтвердить</button>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="cabinet-modal cabinet-mailing-upload-modal" role="dialog" aria-modal="true" aria-labelledby="mailingUploadRulesTitle" hidden data-mailing-upload-modal="rules">
+                    <section class="cabinet-mailing-upload-modal__dialog cabinet-mailing-upload-modal__dialog--rules" role="document" tabindex="-1">
+                        <div class="cabinet-mailing-upload-modal__head">
+                            <h2 class="cabinet-mailing-upload-modal__title" id="mailingUploadRulesTitle">Правила заполнения файла со списком получателей</h2>
+                            <button class="cabinet-mailing-upload-modal__close" type="button" aria-label="Закрыть" data-mailing-upload-modal-close>
+                                <img src="assets/images/cabinet-mailing-recipients/modal-close.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="cabinet-mailing-upload-rules">
+                            <p class="cabinet-mailing-upload-rules__intro">Каждый получатель в файле должен быть представлен отдельной строкой и содержать следующие поля:</p>
+                            <div class="cabinet-mailing-upload-rules__fields">
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>Номер телефона</span>
+                                    <span>+XXX (XXX) XXX-XXX</span>
+                                    <strong>Обязательное поле</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>ФИО</span>
+                                    <span>Фамилия Имя Отчество</span>
+                                    <strong>Необязательное поле</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>Пол</span>
+                                    <span>М / Ж</span>
+                                    <strong>Необязательное поле</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>Дата рождения</span>
+                                    <span>дд.мм.гггг</span>
+                                    <strong>Необязательное поле</strong>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--success">
+                                <div class="cabinet-mailing-upload-example__title">
+                                    <img src="assets/images/cabinet-mailing-recipients/modal-check.svg" alt="">
+                                    <strong>Пример правильного формата данных:</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-example__table">
+                                    <div><span>996 (123) 45-67-89</span><span></span><span></span><span></span></div>
+                                    <div><span>996123456789</span><span></span><span>М</span><span></span></div>
+                                    <div><span>996123456789</span><span>Мария Иванова</span><span>Ж</span><span>01.01.1980</span></div>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--error">
+                                <div class="cabinet-mailing-upload-example__title">
+                                    <img src="assets/images/cabinet-mailing-recipients/modal-error.svg" alt="">
+                                    <strong>Пример неправильного формата данных:</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-example__table">
+                                    <div><span>996 (123) 45-67-89</span><span>Игнат Сидоров</span><strong>Муж.</strong><strong>1971-02-31</strong></div>
+                                    <div><strong>Лариса Муравьёва</strong><strong>01.01.1980</strong><span>Ж</span><strong>996(123)456-789</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="cabinet-modal cabinet-mailing-upload-modal" role="dialog" aria-modal="true" aria-labelledby="mailingCustomUploadTitle" hidden data-mailing-upload-modal="custom">
+                    <section class="cabinet-mailing-upload-modal__dialog cabinet-mailing-upload-modal__dialog--custom" role="document" tabindex="-1">
+                        <div class="cabinet-mailing-upload-modal__head">
+                            <h2 class="cabinet-mailing-upload-modal__title" id="mailingCustomUploadTitle">Настраиваемая загрузка</h2>
+                            <button class="cabinet-mailing-upload-modal__close" type="button" aria-label="Закрыть" data-mailing-upload-modal-close>
+                                <img src="assets/images/cabinet-mailing-recipients/modal-close.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="cabinet-mailing-custom-upload">
+                            <div class="cabinet-mailing-custom-upload__main">
+                                <div class="cabinet-mailing-custom-upload__file">
+                                    <div class="cabinet-mailing-custom-upload__file-copy">
+                                        <h3>Загрузка файла</h3>
+                                        <p>Вы можете загрузить файл со списком получателей в формате .XLS, .XLSX или CSV</p>
+                                    </div>
+                                    <button class="cabinet-mailing-custom-upload__choose" type="button" data-mailing-custom-file-choose>Выберите файл</button>
+                                    <button class="cabinet-mailing-custom-upload__file-name" type="button" data-mailing-custom-file-badge>
+                                        <span><img src="assets/images/cabinet-mailing-recipients/file-format-xls.svg" alt=""></span>
+                                        <span>List_2026.xls</span>
+                                        <span><img src="assets/images/cabinet-mailing-recipients/file-loaded-chevron.svg" alt=""></span>
+                                    </button>
+                                </div>
+
+                                <div class="cabinet-mailing-upload-rules cabinet-mailing-upload-rules--compact">
+                                    <p class="cabinet-mailing-upload-rules__intro">Каждый получатель в файле должен быть представлен отдельной строкой и содержать следующие поля:</p>
+                                    <div class="cabinet-mailing-upload-rules__fields">
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>Номер телефона</span>
+                                            <span>+XXX (XXX) XXX-XXX</span>
+                                            <strong>Обязательное поле</strong>
+                                        </div>
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>ФИО</span>
+                                            <span>Фамилия Имя Отчество</span>
+                                            <strong>Необязательное поле</strong>
+                                        </div>
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>Пол</span>
+                                            <span>М / Ж</span>
+                                            <strong>Необязательное поле</strong>
+                                        </div>
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>Дата рождения</span>
+                                            <span>дд.мм.гггг</span>
+                                            <strong>Необязательное поле</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--success cabinet-mailing-upload-example--compact">
+                                    <div class="cabinet-mailing-upload-example__title">
+                                        <img src="assets/images/cabinet-mailing-recipients/modal-check.svg" alt="">
+                                        <strong>Пример правильного формата данных:</strong>
+                                    </div>
+                                    <div class="cabinet-mailing-upload-example__table">
+                                        <div><span>996 (123) 45-67-89</span><span></span><span></span><span></span></div>
+                                        <div><span>996123456789</span><span></span><span>М</span><span></span></div>
+                                        <div><span>996123456789</span><span>Мария Иванова</span><span>Ж</span><span>01.01.1980</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--error cabinet-mailing-upload-example--compact">
+                                    <div class="cabinet-mailing-upload-example__title">
+                                        <img src="assets/images/cabinet-mailing-recipients/modal-error.svg" alt="">
+                                        <strong>Пример неправильного формата данных:</strong>
+                                    </div>
+                                    <div class="cabinet-mailing-upload-example__table">
+                                        <div><span>996 (123) 45-67-89</span><span>Игнат Сидоров</span><strong>Муж.</strong><strong>1971-02-31</strong></div>
+                                        <div><strong>Лариса Муравьёва</strong><strong>01.01.1980</strong><span>Ж</span><strong>996(123)456-789</strong></div>
+                                    </div>
+                                </div>
+
+                                <p class="cabinet-mailing-custom-upload__note">При добавлении одинаковых получателей из разных источников дубликаты не сохраняются, возможно только расширение информации о получателе.</p>
+                            </div>
+
+                            <div class="cabinet-mailing-custom-map">
+                                <div class="cabinet-mailing-custom-map__head">
+                                    <h3>Настройка формата данных</h3>
+                                    <p>Мы взяли из загружаемого файла 1-ю строку и считали из неё все значения. Теперь <strong>вам нужно определить соответствия между значениями из файла и полями в нашей системе:</strong></p>
+                                </div>
+                                <div class="cabinet-mailing-custom-map__labels">
+                                    <strong>Значение из файла:</strong>
+                                    <strong>Соответствие:</strong>
+                                </div>
+                                <div class="cabinet-mailing-custom-map__rows">
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>Иванов</strong><span>Иванов</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Фамилия</span><img src="assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>Иваныч</strong><span>Иваныч</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Отчество</span><img src="assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>Иван</strong><span>Иван</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Имя</span><img src="assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>25.01.1900</strong><span>25.01.1900</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Выберите значение</span><img src="assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>996772123456</strong><span>996772123456</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Выберите значение</span><img src="assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>25.01.1900</strong><span>25.01.1900</span></div>
+                                        <div class="cabinet-mailing-map-select is-open" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Номер телефона</span><img src="assets/images/cabinet-mailing-recipients/modal-select-chevron-active.svg" alt=""></button>
+                                            <div class="cabinet-mailing-map-select__menu" data-mailing-map-select-menu>
+                                                <button type="button" data-mailing-map-select-option>-------</button>
+                                                <button type="button" data-mailing-map-select-option>Номер телефона</button>
+                                                <button type="button" data-mailing-map-select-option>ФИО полностью</button>
+                                                <button type="button" data-mailing-map-select-option>Пол (М или Ж)</button>
+                                                <button type="button" data-mailing-map-select-option>Дата рождения (дд.мм.гггг)</button>
+                                                <button type="button" data-mailing-map-select-option>Имя</button>
+                                                <button type="button" data-mailing-map-select-option>Отчество</button>
+                                                <button type="button" data-mailing-map-select-option>Фамилия</button>
+                                                <button type="button" data-mailing-map-select-option>Доп.1</button>
+                                                <button type="button" data-mailing-map-select-option>Доп.2</button>
+                                                <button type="button" data-mailing-map-select-option>Доп.3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-custom-upload__actions">
+                            <button class="cabinet-mailing-custom-upload__action cabinet-mailing-custom-upload__action--secondary" type="button" data-mailing-custom-cancel>Отменить</button>
+                            <button class="cabinet-mailing-custom-upload__action cabinet-mailing-custom-upload__action--primary" type="button" data-mailing-custom-save>Сохранить настройки</button>
+                        </div>
+                    </section>
+                </div>
             </section>
             <section class="cabinet-notifications" aria-labelledby="notificationsTitle" data-cabinet-notifications-page>
                 <div class="cabinet-notifications__toolbar">
@@ -552,7 +1615,7 @@
             <nav class="cabinet-tabbar-modal__nav" aria-label="Меню кабинета">
                 <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Главная</span></a>
                 <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Рассылки</span></a>
-                <a class="cabinet-tabbar-modal__item" href="cabinet.html#lists" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Списки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Списки</span></a>
                 <a class="cabinet-tabbar-modal__item" href="cabinet.html#api" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API-интеграция</span></a>
                 <a class="cabinet-tabbar-modal__item" href="cabinet.html#reports" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчёты</span></a>
                 <a class="cabinet-tabbar-modal__item" href="cabinet.html#otp" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>Сервис OTP</span></a>
@@ -574,7 +1637,7 @@
                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
                 <span>Рассылки</span>
             </a>
-            <a class="cabinet-tabbar__item" href="cabinet.html#lists" data-cabinet-nav data-section="lists">
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
                 <span>Списки</span>
             </a>

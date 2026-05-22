@@ -16,7 +16,9 @@
 @import url('./sections/cabinet-dashboard.css');
 @import url('./sections/cabinet-notifications.css');
 @import url('./sections/cabinet-mailings.css');
+@import url('./sections/cabinet-recipient-lists.css');
 @import url('./sections/cabinet-mailing-create.css');
+@import url('./sections/cabinet-mailing-recipients.css');
 
 /* ---------------- global interaction states ---------------- */
 @import url('./components/interactive.css');
