@@ -10,6 +10,13 @@
 
 /* ---------------- components ---------------- */
 @import url('./components/cabinet-components.css');
+@import url('./components/cabinet-modal.css');
 
 /* ---------------- sections ---------------- */
 @import url('./sections/cabinet-dashboard.css');
+@import url('./sections/cabinet-notifications.css');
+@import url('./sections/cabinet-mailings.css');
+@import url('./sections/cabinet-mailing-create.css');
+
+/* ---------------- global interaction states ---------------- */
+@import url('./components/interactive.css');

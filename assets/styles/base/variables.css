@@ -42,6 +42,7 @@
     --color-white-50:         rgba(255, 255, 255, .5);
     --color-white-10:         rgba(255, 255, 255, .1);
     --color-white-20:         rgba(255, 255, 255, .2);
+    --color-black-10:         rgba(33, 32, 32, .1);
     --color-black-20:         rgba(33, 32, 32, .2);
     --color-black-50:         rgba(33, 32, 32, .5);
     --color-black-80:         rgba(33, 32, 32, .8);
@@ -80,6 +81,8 @@
     --color-surface-blue-5:    rgba(12, 110, 191, .05);
     --color-surface-blue-10:   rgba(12, 110, 191, .1);
     --color-surface-purple-10: #F5EFFF;
+    --color-warning-yellow:    #F4BB1E;
+    --color-surface-yellow-10: rgba(244, 187, 30, .1);
     --color-surface-yellow-45: #FFF4D5;
     --color-surface-red-10:    rgba(247, 97, 97, .1);
     --color-blue-20:           rgba(12, 110, 191, .2);
@@ -149,12 +152,20 @@
     --shadow-cabinet-header: 0 2px 2px rgba(33, 32, 32, .1);
     --shadow-cabinet-header-tablet: 0 0 4px var(--color-black-20);
     --shadow-cabinet-panel: 0 0 6px var(--color-black-20);
+    --shadow-cabinet-table: 0 0 6px var(--color-black-10);
+    --shadow-cabinet-step: 0 2px 6px var(--color-black-10);
 
     /* ---------- Motion ---------- */
     --transition-fast:  0.15s ease;
     --transition-base:  0.2s  ease;
     --transition-slow:  0.25s ease;
+    --transition-interactive: 0.2s ease;
+    --transition-modal: 0.28s cubic-bezier(.4, 0, .2, 1);
     --transition-cabinet-menu: 0.28s cubic-bezier(.4, 0, .2, 1);
+    --interactive-hover-filter: brightness(.91) saturate(1.1);
+    --interactive-hover-opacity: 1;
+    --interactive-hover-bg: rgba(12, 110, 191, .16);
+    --interactive-hover-bg-inverse: rgba(255, 255, 255, .24);
 
     /* ---------- Z-index layers ---------- */
     --z-base:        0;
@@ -194,6 +205,11 @@
     --letter-spacing-tight:  0.01em;
     --letter-spacing-normal: 0.02em;
     --letter-spacing-wide:   0.05em;
+
+    --breadcrumb-fs-desktop: 10px;
+    --breadcrumb-fs-compact: 8px;
+    --breadcrumb-h-desktop: 12px;
+    --breadcrumb-h-compact: 10px;
 
     /* ---------- Layout ---------- */
     --container-max:        1440px;
@@ -247,6 +263,19 @@
     --cabinet-lh-paragraph: 17px;
     --cabinet-lh-heading-sm: 19px;
     --cabinet-lh-heading: 24px;
+    --cabinet-notifications-date-col: 160px;
+    --cabinet-notifications-date-col-mobile: 132px;
+    --cabinet-notifications-table-head-h: 30px;
+    --cabinet-notifications-table-row-h: 28px;
+    --cabinet-mailings-filter-desktop-h: 175px;
+    --cabinet-mailings-filter-tablet-h: 136px;
+    --cabinet-mailings-filter-mobile-closed-h: 68px;
+    --cabinet-mailings-filter-mobile-open-h: 228px;
+    --cabinet-mailings-table-desktop-w: 1228px;
+    --cabinet-mailings-table-compact-w: 879px;
+    --cabinet-mailings-table-head-desktop-h: 30px;
+    --cabinet-mailings-table-head-compact-h: 42px;
+    --cabinet-mailings-table-row-h: 36px;
 
     /* ============================================================
        Legacy aliases — keep existing BEM/components working.

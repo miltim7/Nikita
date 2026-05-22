@@ -1,0 +1,516 @@
+/* ============================================================
+   GLOBAL INTERACTIVE STATES
+   Site-wide hover affordances for links, buttons, and controls.
+   ============================================================ */
+
+:where(
+    .topbar__link,
+    .topbar__lang,
+    .topbar__login,
+    .header__logo,
+    .header__phone,
+    .header__link,
+    .header__cta,
+    .header__burger,
+    .service-tabs__item,
+    .payment-tab-card,
+    .how-tab,
+    .cases__arrow,
+    .cases__dots button,
+    .faq-item__summary,
+    .feature,
+    .why-card,
+    .contact-row,
+    .contact-social,
+    .speed-test-widget__submit,
+    .speed-test-widget__tab-button,
+    .footer-contact__row,
+    .footer-contact__social,
+    .mobile-menu__link,
+    .security-integration__downloads a,
+    .security-api-row__cards a,
+    .security-data__button,
+    .security-reliability__button,
+    .cabinet-btn,
+    .cabinet-action,
+    .cabinet-modal-button,
+    .cabinet-price-modal__button,
+    .cabinet-header__logo,
+    .cabinet-header__support-link,
+    .cabinet-header__tool,
+    .cabinet-select,
+    .cabinet-user,
+    .cabinet-payment-method__card,
+    .cabinet-quick-sms__add-name,
+    .cabinet-quick-sms__tools button,
+    .cabinet-action-modal__close,
+    .cabinet-price-modal__close,
+    .cabinet-sidepanel__toggle,
+    .cabinet-sidepanel__item,
+    .cabinet-sidepanel__theme-btn,
+    .cabinet-sidepanel__logout,
+    .cabinet-tabbar__item,
+    .cabinet-tabbar-modal__item,
+    .cabinet-tabbar-modal__theme-btn,
+    .cabinet-tabbar-modal__logout,
+    .cabinet-tabbar-modal__close,
+    .cabinet-crm-header__link,
+    .cabinet-crm-header__logo,
+    .cabinet-crm-header__menu-link,
+    .cabinet-crm-header__login,
+    .cabinet-crm-header__select,
+    .cabinet-crm-header__tool,
+    .cabinet-crm-header__demo-btn,
+    .cabinet-crm-header__menu-btn,
+    .cabinet-crm-header__support-link,
+    .cabinet-crm-header__user,
+    .cabinet-manager-popover__close,
+    .cabinet-manager-popover__social,
+    .cabinet-manager-popover__phone,
+    .cabinet-language-popover__item,
+    .cabinet-notifications-popover__all
+) {
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        border-color var(--transition-interactive),
+        box-shadow var(--transition-interactive),
+        opacity var(--transition-interactive),
+        filter var(--transition-interactive),
+        transform var(--transition-fast),
+        text-decoration-color var(--transition-interactive);
+}
+
+.topbar__link,
+.topbar__lang,
+.topbar__login,
+.header__logo,
+.header__phone,
+.header__link,
+.header__cta,
+.header__burger,
+.service-tabs__item,
+.payment-tab-card,
+.how-tab,
+.cases__arrow,
+.cases__dots button,
+.faq-item__summary,
+.contact-social,
+.speed-test-widget__submit,
+.speed-test-widget__tab-button,
+.footer-contact__social,
+.security-integration__downloads a,
+.security-api-row__cards a,
+.security-data__button,
+.security-reliability__button,
+.cabinet-btn,
+.cabinet-action,
+.cabinet-modal-button,
+.cabinet-price-modal__button,
+.cabinet-header__logo,
+.cabinet-header__support-link,
+.cabinet-header__tool,
+.cabinet-select,
+.cabinet-user,
+.cabinet-payment-method__card,
+.cabinet-quick-sms__add-name,
+.cabinet-quick-sms__tools button,
+.cabinet-action-modal__close,
+.cabinet-price-modal__close,
+.cabinet-sidepanel__toggle,
+.cabinet-sidepanel__theme-btn,
+.cabinet-tabbar__item,
+.cabinet-tabbar-modal__item,
+.cabinet-tabbar-modal__theme-btn,
+.cabinet-tabbar-modal__logout,
+.cabinet-tabbar-modal__close,
+.cabinet-crm-header__logo,
+.cabinet-crm-header__menu-link,
+.cabinet-crm-header__login,
+.cabinet-crm-header__select,
+.cabinet-crm-header__tool,
+.cabinet-crm-header__demo-btn,
+.cabinet-crm-header__menu-btn,
+.cabinet-crm-header__support-link,
+.cabinet-crm-header__user,
+.cabinet-manager-popover__close,
+.cabinet-manager-popover__social,
+.cabinet-manager-popover__phone,
+.cabinet-language-popover__item,
+.cabinet-notifications-popover__all {
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        border-color var(--transition-interactive),
+        box-shadow var(--transition-interactive),
+        opacity var(--transition-interactive),
+        filter var(--transition-interactive),
+        transform var(--transition-fast),
+        text-decoration-color var(--transition-interactive);
+}
+
+.topbar__lang,
+.topbar__login,
+.header__phone,
+.header__link,
+.header__cta,
+.header__burger,
+.cabinet-header__support-link,
+.cabinet-header__tool,
+.cabinet-select,
+.cabinet-user,
+.cabinet-crm-header__login,
+.cabinet-crm-header__support-link,
+.cabinet-crm-header__select,
+.cabinet-crm-header__tool,
+.cabinet-crm-header__user {
+    border-radius: var(--radius-xs);
+}
+
+.header__link,
+.header__phone,
+.cabinet-header__support-link,
+.cabinet-crm-header__support-link {
+    padding: 4px 6px;
+    margin: -4px -6px;
+}
+
+.topbar__login {
+    height: 32px;
+    padding: 4px 8px;
+    margin: -4px -8px;
+    border-radius: var(--radius-xs);
+}
+
+.cabinet-crm-header__login {
+    min-height: 32px;
+    padding: 4px 8px;
+    margin: -4px -8px;
+}
+
+.cabinet-header__tool,
+.cabinet-crm-header__tool {
+    width: 32px;
+    height: 32px;
+    margin: -4px;
+    border-radius: var(--radius-xs);
+}
+
+.cabinet-header .cabinet-select,
+.cabinet-user {
+    padding-inline: 6px;
+    margin-inline: -6px;
+    border-radius: var(--radius-xs);
+}
+
+.cabinet-user {
+    padding-block: 4px;
+    margin-block: -4px;
+}
+
+.topbar__lang,
+.header__logo,
+.header__phone,
+.header__link,
+.header__cta,
+.header__burger,
+.cabinet-header__logo,
+.cabinet-header__support-link,
+.cabinet-header__tool,
+.cabinet-select,
+.cabinet-user,
+.cabinet-crm-header__logo,
+.cabinet-crm-header__login,
+.cabinet-crm-header__support-link,
+.cabinet-crm-header__select,
+.cabinet-crm-header__tool,
+.cabinet-crm-header__demo-btn,
+.cabinet-crm-header__menu-btn,
+.cabinet-crm-header__user {
+    cursor: pointer;
+}
+
+.cabinet-sidepanel__logout {
+    transition:
+        width var(--transition-cabinet-menu),
+        min-height var(--transition-cabinet-menu),
+        padding var(--transition-cabinet-menu),
+        gap var(--transition-cabinet-menu),
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        opacity var(--transition-interactive),
+        filter var(--transition-interactive);
+}
+
+.cabinet-sidepanel__toggle {
+    transition:
+        width var(--transition-cabinet-menu),
+        padding var(--transition-cabinet-menu),
+        gap var(--transition-cabinet-menu),
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        opacity var(--transition-interactive),
+        filter var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    a[href]:hover,
+    a[href]:focus-visible {
+        text-decoration-line: underline;
+        text-decoration-color: currentColor;
+    }
+
+    a[href]:is(
+        .btn,
+        .topbar__link,
+        .topbar__login,
+        .header__logo,
+        .header__phone,
+        .header__link,
+        .header__cta,
+        .service-tabs__item,
+        .contact-social,
+        .speed-test-widget__submit,
+        .speed-test-widget__tab-button,
+        .footer-contact__social,
+        .security-data__button,
+        .security-reliability__button,
+        .cabinet-btn,
+        .cabinet-header__logo,
+        .cabinet-header__support-link,
+        .cabinet-header__tool,
+        .cabinet-modal-button,
+        .cabinet-price-modal__button,
+        .cabinet-sidepanel__item,
+        .cabinet-tabbar__item,
+        .cabinet-tabbar-modal__item,
+        .cabinet-crm-header__logo,
+        .cabinet-crm-header__menu-link,
+        .cabinet-crm-header__login,
+        .cabinet-crm-header__support-link,
+        .cabinet-crm-header__tool,
+        .cabinet-crm-header__demo-btn,
+        .cabinet-manager-popover__social,
+        .cabinet-notifications-popover__all
+    ):hover,
+    a[href]:is(
+        .btn,
+        .topbar__link,
+        .topbar__login,
+        .header__logo,
+        .header__phone,
+        .header__link,
+        .header__cta,
+        .service-tabs__item,
+        .contact-social,
+        .speed-test-widget__submit,
+        .speed-test-widget__tab-button,
+        .footer-contact__social,
+        .security-data__button,
+        .security-reliability__button,
+        .cabinet-btn,
+        .cabinet-header__logo,
+        .cabinet-header__support-link,
+        .cabinet-header__tool,
+        .cabinet-modal-button,
+        .cabinet-price-modal__button,
+        .cabinet-sidepanel__item,
+        .cabinet-tabbar__item,
+        .cabinet-tabbar-modal__item,
+        .cabinet-crm-header__logo,
+        .cabinet-crm-header__menu-link,
+        .cabinet-crm-header__login,
+        .cabinet-crm-header__support-link,
+        .cabinet-crm-header__tool,
+        .cabinet-crm-header__demo-btn,
+        .cabinet-manager-popover__social,
+        .cabinet-notifications-popover__all
+    ):focus-visible,
+    .security-integration__downloads a[href]:hover,
+    .security-integration__downloads a[href]:focus-visible,
+    .security-api-row__cards a[href]:hover,
+    .security-api-row__cards a[href]:focus-visible {
+        text-decoration-color: transparent;
+    }
+
+    button:not(:disabled):not([aria-disabled="true"]):not(.is-disabled):hover,
+    input[type="button"]:not(:disabled):hover,
+    input[type="submit"]:not(:disabled):hover,
+    input[type="reset"]:not(:disabled):hover,
+    a[href]:is(
+        .btn,
+        .topbar__lang,
+        .topbar__login,
+        .header__logo,
+        .header__phone,
+        .header__link,
+        .header__cta,
+        .contact-social,
+        .speed-test-widget__submit,
+        .speed-test-widget__tab-button,
+        .footer-contact__social,
+        .security-data__button,
+        .security-reliability__button,
+        .cabinet-btn,
+        .cabinet-header__logo,
+        .cabinet-header__support-link,
+        .cabinet-header__tool,
+        .cabinet-modal-button,
+        .cabinet-price-modal__button,
+        .cabinet-crm-header__logo,
+        .cabinet-crm-header__link,
+        .cabinet-crm-header__login,
+        .cabinet-crm-header__support-link,
+        .cabinet-crm-header__tool,
+        .cabinet-crm-header__demo-btn,
+        .cabinet-manager-popover__social,
+        .cabinet-notifications-popover__all
+    ):hover,
+    .cabinet-select[role="button"]:hover,
+    .cabinet-user[role="button"]:hover,
+    .security-integration__downloads a[href]:hover,
+    .security-api-row__cards a[href]:hover {
+        filter: var(--interactive-hover-filter);
+        opacity: var(--interactive-hover-opacity);
+    }
+
+    button:not(:disabled):not([aria-disabled="true"]):not(.is-disabled):active,
+    input[type="button"]:not(:disabled):active,
+    input[type="submit"]:not(:disabled):active,
+    input[type="reset"]:not(:disabled):active,
+    a[href]:is(
+        .btn,
+        .topbar__lang,
+        .topbar__login,
+        .header__logo,
+        .header__phone,
+        .header__link,
+        .header__cta,
+        .contact-social,
+        .speed-test-widget__submit,
+        .speed-test-widget__tab-button,
+        .footer-contact__social,
+        .security-data__button,
+        .security-reliability__button,
+        .cabinet-btn,
+        .cabinet-header__logo,
+        .cabinet-header__support-link,
+        .cabinet-header__tool,
+        .cabinet-modal-button,
+        .cabinet-price-modal__button,
+        .cabinet-crm-header__logo,
+        .cabinet-crm-header__link,
+        .cabinet-crm-header__login,
+        .cabinet-crm-header__support-link,
+        .cabinet-crm-header__tool,
+        .cabinet-crm-header__demo-btn,
+        .cabinet-manager-popover__social,
+        .cabinet-notifications-popover__all
+    ):active,
+    .cabinet-select[role="button"]:active,
+    .cabinet-user[role="button"]:active,
+    .security-integration__downloads a[href]:active,
+    .security-api-row__cards a[href]:active {
+        filter: none;
+        opacity: 1;
+    }
+
+    .topbar__link:hover,
+    .topbar__link:focus-visible,
+    .topbar__login:hover,
+    .topbar__login:focus-visible,
+    .header__link:hover,
+    .header__link:focus-visible,
+    .header__phone:hover,
+    .header__phone:focus-visible,
+    .footer__nav-primary a:hover,
+    .footer__nav-primary a:focus-visible,
+    .footer__nav-legal a:hover,
+    .footer__nav-legal a:focus-visible,
+    .contact-row:hover,
+    .contact-row:focus-visible,
+    .cabinet-header__support-link:hover,
+    .cabinet-header__support-link:focus-visible,
+    .cabinet-crm-header__link:hover,
+    .cabinet-crm-header__link:focus-visible,
+    .cabinet-crm-header__menu-link:hover,
+    .cabinet-crm-header__menu-link:focus-visible,
+    .cabinet-crm-header__login:hover,
+    .cabinet-crm-header__login:focus-visible,
+    .cabinet-crm-header__support-link:hover,
+    .cabinet-crm-header__support-link:focus-visible,
+    .cabinet-manager-popover__phone:hover,
+    .cabinet-manager-popover__phone:focus-visible {
+        text-decoration-color: currentColor;
+    }
+
+    .service-tabs__item:not(.service-tabs__item--active):hover,
+    .service-tabs__item:not(.service-tabs__item--active):focus-visible,
+    .how-tab:not(.is-active):hover,
+    .how-tab:not(.is-active):focus-visible,
+    .payment-tab-card:not(.payment-tab-card--active):hover,
+    .payment-tab-card:not(.payment-tab-card--active):focus-visible,
+    .faq-item__summary:hover,
+    .faq-item__summary:focus-visible,
+    .mobile-menu__link:not(.mobile-menu__link--active):hover,
+    .mobile-menu__link:not(.mobile-menu__link--active):focus-visible,
+    .header__link:hover,
+    .header__link:focus-visible,
+    .header__phone:hover,
+    .header__phone:focus-visible,
+    .cabinet-header__support-link:hover,
+    .cabinet-header__support-link:focus-visible,
+    .cabinet-header__tool:hover,
+    .cabinet-header__tool:focus-visible,
+    .cabinet-header .cabinet-select:hover,
+    .cabinet-header .cabinet-select:focus-visible,
+    .cabinet-user:hover,
+    .cabinet-user:focus-visible,
+    .cabinet-crm-header__support-link:hover,
+    .cabinet-crm-header__support-link:focus-visible,
+    .cabinet-crm-header__tool:hover,
+    .cabinet-crm-header__tool:focus-visible,
+    .cabinet-crm-header__select:not(.cabinet-crm-header__select--top):not(.cabinet-crm-header__select--menu):hover,
+    .cabinet-crm-header__select:not(.cabinet-crm-header__select--top):not(.cabinet-crm-header__select--menu):focus-visible,
+    .cabinet-crm-header__user:hover,
+    .cabinet-crm-header__user:focus-visible,
+    .cabinet-payment-method__card:not(.is-active):hover,
+    .cabinet-payment-method__card:not(.is-active):focus-visible,
+    .cabinet-sidepanel__item:not(.is-active):hover,
+    .cabinet-sidepanel__item:not(.is-active):focus-visible,
+    .cabinet-tabbar__item:not(.is-active):hover,
+    .cabinet-tabbar__item:not(.is-active):focus-visible,
+    .cabinet-tabbar-modal__item:not(.is-active):hover,
+    .cabinet-tabbar-modal__item:not(.is-active):focus-visible {
+        background-color: var(--interactive-hover-bg);
+    }
+
+    .topbar__link:not(.topbar__link--active):hover,
+    .topbar__link:not(.topbar__link--active):focus-visible,
+    .topbar__lang:hover,
+    .topbar__lang:focus-visible,
+    .topbar__login:hover,
+    .topbar__login:focus-visible,
+    .cabinet-crm-header__menu-link:not(.is-active):hover,
+    .cabinet-crm-header__menu-link:not(.is-active):focus-visible,
+    .cabinet-crm-header__login:hover,
+    .cabinet-crm-header__login:focus-visible,
+    .cabinet-crm-header__select--top:hover,
+    .cabinet-crm-header__select--top:focus-visible,
+    .cabinet-crm-header__select--menu:hover,
+    .cabinet-crm-header__select--menu:focus-visible {
+        background-color: var(--interactive-hover-bg-inverse);
+    }
+}
+
+:where(button, [role="button"], input[type="button"], input[type="submit"], input[type="reset"], summary):focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-surface-blue-5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :where(a, button, [role="button"], input, summary) {
+        transition: none;
+    }
+}

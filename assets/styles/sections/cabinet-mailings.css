@@ -1,0 +1,1253 @@
+/* ============================================================
+   CABINET MAILINGS
+   Figma source: crm / nodes 2140:26275, 3194:32134, 3194:32073, 3194:39513
+   ============================================================ */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.cabinet-page--mailings .cabinet-notifications,
+.cabinet-page--mailings .cabinet-dashboard,
+.cabinet-page--mailings .cabinet-placeholder {
+    display: none;
+}
+
+.cabinet-mailings {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    min-width: 0;
+}
+
+.cabinet-mailings-filter {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+    height: var(--cabinet-mailings-filter-desktop-h);
+    padding: var(--space-6);
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-table);
+}
+
+.cabinet-mailings-filter__search-row,
+.cabinet-mailings-filter__details,
+.cabinet-mailings-filter__fields,
+.cabinet-mailings-filter__buttons,
+.cabinet-mailings-filter__range,
+.cabinet-mailings__toolbar,
+.cabinet-mailings__actions,
+.cabinet-mailings__sort-toggle,
+.cabinet-mailings__action,
+.cabinet-mailings-table__head-copy,
+.cabinet-mailings-status__line {
+    display: flex;
+    align-items: center;
+}
+
+.cabinet-mailings-filter__search-row {
+    width: 100%;
+    height: 40px;
+}
+
+.cabinet-mailings-filter__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding-left: var(--space-3);
+    border: 1px solid var(--color-black-20);
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+}
+
+.cabinet-mailings-filter__search-input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    padding: 0 var(--space-2) 0 0;
+    border: 0;
+    color: var(--color-black-100);
+    background: transparent;
+    font: inherit;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailings-filter__search-input::placeholder,
+.cabinet-mailings-filter__date-input input::placeholder {
+    color: var(--color-black-50);
+    opacity: 1;
+}
+
+.cabinet-mailings-filter__search-input::-webkit-search-decoration,
+.cabinet-mailings-filter__search-input::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+.cabinet-mailings-filter__search-button,
+.cabinet-mailings-filter__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--cabinet-control-radius);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-mailings-filter__search-button,
+.cabinet-mailings-filter__button--primary {
+    color: var(--color-text-inverse);
+    background: var(--color-header-orange);
+    box-shadow: var(--shadow-figma-cta);
+}
+
+.cabinet-mailings-filter__button--secondary,
+.cabinet-mailings-filter__toggle {
+    color: var(--color-header-orange);
+    background: var(--color-bg);
+    border: 1px solid var(--color-orange-50);
+}
+
+.cabinet-mailings-filter__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+.cabinet-mailings-filter__icon img {
+    display: block;
+}
+
+.cabinet-mailings-filter__icon--search img {
+    width: 17.192px;
+    height: 17.192px;
+}
+
+.cabinet-mailings-filter__icon--filter img {
+    width: 12.533px;
+    height: 12.533px;
+}
+
+.cabinet-mailings-filter__toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    padding: var(--space-2);
+    border-radius: var(--cabinet-control-radius);
+}
+
+.cabinet-mailings-filter__details {
+    justify-content: space-between;
+    gap: var(--space-5);
+    width: 100%;
+    height: 63px;
+}
+
+.cabinet-mailings-filter__fields {
+    gap: var(--space-5);
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.cabinet-mailings-filter__field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6px;
+    min-width: 0;
+}
+
+.cabinet-mailings-filter__field--date {
+    flex: 0 0 282px;
+    width: 282px;
+}
+
+.cabinet-mailings-filter__field--status {
+    flex: 0 0 300px;
+    width: 300px;
+}
+
+.cabinet-mailings-filter__label {
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-mailings-filter__range {
+    gap: var(--space-2);
+    width: 100%;
+}
+
+.cabinet-mailings-filter__date-input,
+.cabinet-mailings-filter__select-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    min-width: 0;
+    border: 1px solid var(--color-black-20);
+    border-radius: var(--cabinet-input-radius);
+    background: var(--color-bg);
+}
+
+.cabinet-mailings-filter__date-input {
+    width: 130px;
+    flex: 0 0 130px;
+    justify-content: space-between;
+    padding: var(--space-2);
+}
+
+.cabinet-mailings-filter__date-input input {
+    width: 82px;
+    min-width: 0;
+    border: 0;
+    color: var(--color-black-100);
+    background: transparent;
+    font: inherit;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailings-filter__dash {
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailings-filter__input-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+.cabinet-mailings-filter__input-icon img {
+    display: block;
+    width: 17px;
+    height: 19.115px;
+}
+
+.cabinet-mailings-filter__select-wrap {
+    width: 100%;
+    justify-content: space-between;
+    padding: var(--space-2);
+}
+
+.cabinet-mailings-filter__select {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    appearance: none;
+    color: var(--color-black-100);
+    background: transparent;
+    font: inherit;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailings-filter__select-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+.cabinet-mailings-filter__select-icon img {
+    display: block;
+    width: 11.309px;
+    height: 6.706px;
+}
+
+.cabinet-mailings-filter__buttons {
+    justify-content: flex-end;
+    gap: var(--space-3);
+    flex: 0 0 auto;
+}
+
+.cabinet-mailings-filter__button--secondary {
+    width: 100px;
+}
+
+.cabinet-mailings-filter__button--primary {
+    width: 102px;
+}
+
+.cabinet-mailings__grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+}
+
+.cabinet-mailings__toolbar {
+    justify-content: space-between;
+    gap: var(--space-5);
+    width: 100%;
+    height: 40px;
+}
+
+.cabinet-mailings__sort {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.cabinet-mailings__sort-toggle {
+    gap: 6px;
+    height: 24px;
+    color: var(--color-black-50);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-mailings__sort-value {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-mailings__sort-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+.cabinet-mailings__sort-icon img {
+    display: block;
+    width: 6.706px;
+    height: 11.309px;
+    transform: rotate(-90deg) scaleX(-1);
+}
+
+.cabinet-mailings__sort-list {
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 4px);
+    left: 88px;
+    display: flex;
+    flex-direction: column;
+    width: 54px;
+    padding: 4px 0;
+    border: 1px solid var(--color-gray-20);
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-table);
+}
+
+.cabinet-mailings__sort-list[hidden] {
+    display: none;
+}
+
+.cabinet-mailings__sort-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 26px;
+    color: var(--color-black-100);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailings__sort-option:hover,
+.cabinet-mailings__sort-option:focus-visible,
+.cabinet-mailings__sort-option.is-active {
+    color: var(--color-header-blue);
+    background: var(--color-surface-blue-5);
+}
+
+.cabinet-mailings__actions {
+    gap: 10px;
+    flex: 0 0 auto;
+}
+
+.cabinet-mailings__action {
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+    padding: var(--space-2);
+    border: 1px solid transparent;
+    border-radius: var(--cabinet-control-radius);
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        border-color var(--transition-interactive),
+        box-shadow var(--transition-interactive),
+        filter var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+.cabinet-mailings__action-icon,
+.cabinet-mailings__action-chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+.cabinet-mailings__action-icon img,
+.cabinet-mailings__action-chevron img {
+    display: block;
+}
+
+.cabinet-mailings__action [src*="icon-action-start"] {
+    width: 9.577px;
+    height: 12.192px;
+}
+
+.cabinet-mailings__action [src*="icon-action-stop"] {
+    width: 13px;
+    height: 13px;
+}
+
+.cabinet-mailings__action [src*="icon-action-delete"] {
+    width: 15px;
+    height: 16.885px;
+}
+
+.cabinet-mailings__action [src*="icon-action-create"] {
+    width: 13px;
+    height: 13px;
+}
+
+.cabinet-mailings__action-chevron img {
+    width: 11.309px;
+    height: 6.706px;
+}
+
+.cabinet-mailings__action--create .cabinet-mailings__action-chevron img {
+    width: 6.706px;
+    height: 11.309px;
+    transform: rotate(-90deg) scaleX(-1);
+}
+
+.cabinet-mailings__table-scroll {
+    width: 100%;
+    margin-top: var(--space-3);
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: var(--cabinet-control-radius);
+    box-shadow: var(--shadow-cabinet-table);
+    scrollbar-width: none;
+}
+
+.cabinet-mailings__table-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.cabinet-mailings-table {
+    display: flex;
+    flex-direction: column;
+    width: var(--cabinet-mailings-table-desktop-w);
+    min-width: var(--cabinet-mailings-table-desktop-w);
+    overflow: hidden;
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+}
+
+.cabinet-mailings-table__row {
+    display: grid;
+    grid-template-columns: 160px 258px 200px 120px 130px 130px 110px 120px;
+    width: 100%;
+    height: var(--cabinet-mailings-table-row-h);
+    min-height: 0;
+}
+
+.cabinet-mailings-table__row:nth-child(even) {
+    background: var(--color-gray-5);
+}
+
+.cabinet-mailings-table__row--head {
+    height: var(--cabinet-mailings-table-head-desktop-h);
+    min-height: 0;
+    background: var(--color-bg);
+}
+
+.cabinet-mailings-table__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+    height: var(--cabinet-mailings-table-row-h);
+    padding: 5px var(--space-2);
+    border-bottom: 1px solid var(--color-gray-20);
+    color: var(--color-black-100);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-mailings-table__cell + .cabinet-mailings-table__cell {
+    border-left: 1px solid var(--color-gray-20);
+}
+
+.cabinet-mailings-table__row:last-child .cabinet-mailings-table__cell {
+    border-bottom: 0;
+}
+
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell {
+    height: var(--cabinet-mailings-table-head-desktop-h);
+    min-height: 0;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-mailings-table__cell--date {
+    justify-content: flex-start;
+    gap: var(--space-3);
+}
+
+.cabinet-mailings-table__cell--name {
+    justify-content: flex-start;
+}
+
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell--name,
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell--recipients,
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell--queue,
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell--sent,
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell--delivered,
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell--amount,
+.cabinet-mailings-table__row--head .cabinet-mailings-table__cell--status {
+    justify-content: center;
+}
+
+.cabinet-mailings-table__cell--amount:not([role="columnheader"]) {
+    justify-content: flex-end;
+}
+
+.cabinet-mailings-table__cell--status:not([role="columnheader"]) {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.cabinet-mailings-table__checkbox {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    margin: 0;
+    border: 1px solid var(--color-gray-100);
+    border-radius: 4px;
+    appearance: none;
+    background-color: var(--color-bg);
+    cursor: pointer;
+}
+
+.cabinet-mailings-table__checkbox:checked {
+    border-color: var(--color-header-orange);
+    background-color: var(--color-header-orange);
+    background-image: url('../../images/cabinet-notifications/checkbox-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10.38px 7.54px;
+}
+
+.cabinet-mailings-table__checkbox:focus-visible,
+.cabinet-mailings-filter__search-input:focus-visible,
+.cabinet-mailings-filter__date-input input:focus-visible,
+.cabinet-mailings-filter__select:focus-visible {
+    outline: 1px solid var(--color-blue-20);
+    outline-offset: 1px;
+}
+
+.cabinet-mailings-filter__search-button:focus-visible,
+.cabinet-mailings-filter__button:focus-visible,
+.cabinet-mailings-filter__toggle:focus-visible,
+.cabinet-mailings__sort-toggle:focus-visible,
+.cabinet-mailings__action:focus-visible {
+    outline: none;
+    border-color: var(--color-header-blue);
+    box-shadow: 0 0 0 3px var(--color-surface-blue-5);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cabinet-mailings-filter__search-button:hover,
+    .cabinet-mailings-filter__button--primary:hover {
+        filter: var(--interactive-hover-filter);
+        transform: translateY(-1px);
+    }
+
+    .cabinet-mailings-filter__button--secondary:hover,
+    .cabinet-mailings-filter__toggle:hover {
+        background: var(--color-red-10);
+        border-color: var(--color-header-orange);
+        transform: translateY(-1px);
+    }
+
+    .cabinet-mailings__sort-toggle:hover {
+        color: var(--color-header-blue);
+    }
+
+    .cabinet-mailings__action:hover {
+        background: var(--color-surface-blue-5);
+        border-color: var(--color-black-10);
+        transform: translateY(-1px);
+    }
+}
+
+.cabinet-mailings-table__time {
+    color: var(--color-gray-100);
+}
+
+.cabinet-mailings-table__head-copy {
+    gap: 6px;
+    min-width: 0;
+}
+
+.cabinet-mailings-table__sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+}
+
+.cabinet-mailings-table__sort img {
+    display: block;
+    width: 5.333px;
+    height: 6.667px;
+}
+
+.cabinet-mailings-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    min-width: 0;
+    color: var(--color-black-100);
+    font-size: 10px;
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailings-status__line {
+    gap: var(--space-1);
+}
+
+.cabinet-mailings-status__dot {
+    width: 6px;
+    height: 6px;
+    flex: 0 0 6px;
+    border-radius: 50%;
+    background: var(--color-warning-yellow);
+}
+
+.cabinet-mailings-status--delivered .cabinet-mailings-status__dot {
+    background: var(--color-green-100);
+}
+
+.cabinet-mailings-status--failed .cabinet-mailings-status__dot {
+    background: var(--color-red-100);
+}
+
+.cabinet-mailings-status a {
+    padding-left: 10px;
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-mailings__scrollbar {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 24px;
+}
+
+.cabinet-mailings__scrollbar-track,
+.cabinet-mailings__scrollbar-thumb,
+.cabinet-mailings__scrollbar-knob {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    border-radius: 12px;
+    transform: translateY(-50%);
+}
+
+.cabinet-mailings__scrollbar-track {
+    right: 0;
+    background: var(--color-gray-20);
+}
+
+.cabinet-mailings__scrollbar-thumb {
+    width: 37.5%;
+    background: var(--color-header-blue);
+}
+
+.cabinet-mailings__scrollbar-knob {
+    width: 3.12%;
+    background: var(--color-header-blue);
+}
+
+@media (min-width: 1200px) {
+    .cabinet-page--mailings .cabinet-main {
+        padding-top: var(--space-6);
+        padding-bottom: var(--space-6);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1475.98px) {
+    .cabinet-page--mailings .cabinet-page-title {
+        padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+        padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .cabinet-mailings {
+        gap: var(--space-0);
+    }
+
+    .cabinet-page-title {
+        padding-inline: var(--figma-container-px-tablet);
+    }
+
+    .cabinet-page-title__text {
+        font-size: var(--fs-xl);
+    }
+
+    .cabinet-mailings-filter {
+        height: var(--cabinet-mailings-filter-tablet-h);
+        padding: var(--space-4);
+        gap: var(--space-3);
+    }
+
+    .cabinet-mailings-filter__search-row,
+    .cabinet-mailings-filter__search,
+    .cabinet-mailings-filter__search-button,
+    .cabinet-mailings-filter__button {
+        height: 36px;
+    }
+
+    .cabinet-mailings-filter__search-input,
+    .cabinet-mailings-filter__search-button,
+    .cabinet-mailings-filter__button,
+    .cabinet-mailings-filter__label,
+    .cabinet-mailings-filter__date-input input,
+    .cabinet-mailings-filter__select,
+    .cabinet-mailings__sort-toggle,
+    .cabinet-mailings__action {
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-mailings-filter__icon,
+    .cabinet-mailings-filter__input-icon,
+    .cabinet-mailings-filter__select-icon,
+    .cabinet-mailings__sort-icon,
+    .cabinet-mailings__action-icon,
+    .cabinet-mailings__action-chevron {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+    }
+
+    .cabinet-mailings-filter__icon--search img {
+        content: url('../../images/cabinet-mailings/icon-search-tablet.svg');
+        width: 11.461px;
+        height: 11.461px;
+    }
+
+    .cabinet-mailings-filter__input-icon img {
+        content: url('../../images/cabinet-mailings/icon-calendar-tablet.svg');
+        width: 11.333px;
+        height: 12.744px;
+    }
+
+    .cabinet-mailings-filter__select-icon img,
+    .cabinet-mailings__sort-icon img,
+    .cabinet-mailings__action-chevron img {
+        content: url('../../images/cabinet-mailings/icon-chevron-tablet.svg');
+        width: 7.539px;
+        height: 4.47px;
+    }
+
+    .cabinet-mailings__sort-icon img {
+        width: 4.47px;
+        height: 7.539px;
+        transform: rotate(-90deg) scaleX(-1);
+    }
+
+    .cabinet-mailings-filter__details {
+        height: 56px;
+    }
+
+    .cabinet-mailings-filter__fields {
+        gap: var(--space-5);
+    }
+
+    .cabinet-mailings-filter__field {
+        gap: 6px;
+    }
+
+    .cabinet-mailings-filter__field--date {
+        flex-basis: 222px;
+        width: 222px;
+    }
+
+    .cabinet-mailings-filter__field--status {
+        flex: 1 1 auto;
+        width: auto;
+        min-width: 266px;
+    }
+
+    .cabinet-mailings-filter__date-input {
+        width: 100px;
+        flex-basis: 100px;
+        height: 36px;
+        padding: var(--space-2) 6px;
+    }
+
+    .cabinet-mailings-filter__date-input input {
+        width: 64px;
+    }
+
+    .cabinet-mailings-filter__select-wrap {
+        height: 36px;
+        padding: var(--space-2) 6px;
+    }
+
+    .cabinet-mailings-filter__buttons {
+        gap: var(--space-3);
+    }
+
+    .cabinet-mailings-filter__button--secondary {
+        width: 90px;
+    }
+
+    .cabinet-mailings-filter__button--primary {
+        width: 92px;
+    }
+
+    .cabinet-mailings__toolbar {
+        height: 40px;
+    }
+
+    .cabinet-mailings__sort-toggle {
+        gap: var(--space-1);
+        height: 16px;
+    }
+
+    .cabinet-mailings__actions {
+        gap: 10px;
+    }
+
+    .cabinet-mailings__action {
+        height: 32px;
+    }
+
+    .cabinet-mailings__action [src*="icon-action-start"] {
+        content: url('../../images/cabinet-mailings/icon-action-start-tablet.svg');
+        width: 6.385px;
+        height: 8.128px;
+    }
+
+    .cabinet-mailings__action [src*="icon-action-stop"] {
+        content: url('../../images/cabinet-mailings/icon-action-stop-tablet.svg');
+        width: 8.667px;
+        height: 8.667px;
+    }
+
+    .cabinet-mailings__action [src*="icon-action-delete"] {
+        content: url('../../images/cabinet-mailings/icon-action-delete-tablet.svg');
+        width: 10px;
+        height: 11.256px;
+    }
+
+    .cabinet-mailings__action [src*="icon-action-create"] {
+        content: url('../../images/cabinet-mailings/icon-action-create-tablet.svg');
+        width: 8.667px;
+        height: 8.667px;
+    }
+
+    .cabinet-mailings__table-scroll {
+        margin-top: var(--space-0);
+        border-radius: var(--space-0);
+        box-shadow: var(--shadow-cabinet-table);
+    }
+
+    .cabinet-mailings-table {
+        width: var(--cabinet-mailings-table-compact-w);
+        min-width: var(--cabinet-mailings-table-compact-w);
+    }
+
+    .cabinet-mailings-table__row {
+        grid-template-columns: 132px 122px 119px 110px 110px 110px 86px 90px;
+    }
+
+    .cabinet-mailings-table__row--desktop-extra {
+        display: none;
+    }
+
+    .cabinet-mailings-table__row--head {
+        height: var(--cabinet-mailings-table-head-compact-h);
+        min-height: 0;
+    }
+
+    .cabinet-mailings-table__row--head .cabinet-mailings-table__cell {
+        height: var(--cabinet-mailings-table-head-compact-h);
+        min-height: 0;
+    }
+
+    .cabinet-mailings-table__row--head .cabinet-mailings-table__cell,
+    .cabinet-mailings-table__cell {
+        font-size: 10px;
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-mailings-table__row--head .cabinet-mailings-table__cell {
+        font-weight: var(--fw-semibold);
+        white-space: normal;
+    }
+
+    .cabinet-mailings-table__cell {
+        height: var(--cabinet-mailings-table-row-h);
+        min-height: 0;
+    }
+
+    .cabinet-mailings-table__cell--date {
+        gap: var(--space-2);
+    }
+
+    .cabinet-mailings-table__checkbox {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+    }
+
+    .cabinet-mailings-status {
+        font-size: 8px;
+    }
+
+    .cabinet-mailings-status a {
+        padding-left: 10px;
+    }
+
+    .cabinet-mailings__scrollbar {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .cabinet-mailings__grid {
+        height: 466px;
+    }
+
+    .cabinet-mailings__actions {
+        width: 497px;
+    }
+
+    .cabinet-mailings__action:nth-child(1) {
+        width: 99px;
+    }
+
+    .cabinet-mailings__action:nth-child(2) {
+        width: 110px;
+    }
+
+    .cabinet-mailings__action:nth-child(3) {
+        width: 88px;
+    }
+
+    .cabinet-mailings__action:nth-child(4) {
+        width: 170px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cabinet-page-title {
+        padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .cabinet-page--mailings .cabinet-footer {
+        min-width: 0;
+    }
+
+    .cabinet-page--mailings .cabinet-tabbar {
+        width: 100vw;
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .cabinet-mailings {
+        width: calc(100vw - (var(--figma-container-px-mobile) * 2));
+        max-width: 100%;
+        gap: var(--space-3);
+    }
+
+    .cabinet-mailings-filter {
+        height: var(--cabinet-mailings-filter-mobile-closed-h);
+        overflow: hidden;
+        transition: height var(--transition-modal);
+    }
+
+    .cabinet-mailings.is-filter-open .cabinet-mailings-filter {
+        height: var(--cabinet-mailings-filter-mobile-open-h);
+    }
+
+    .cabinet-mailings-filter__search-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 36px;
+        gap: var(--space-3);
+    }
+
+    .cabinet-mailings-filter__search {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .cabinet-mailings-filter__toggle {
+        display: inline-flex;
+    }
+
+    .cabinet-mailings-filter__icon--search img {
+        content: url('../../images/cabinet-mailings/icon-search-mobile.svg');
+    }
+
+    .cabinet-mailings-filter__input-icon img {
+        content: url('../../images/cabinet-mailings/icon-calendar-mobile.svg');
+    }
+
+    .cabinet-mailings-filter__select-icon img,
+    .cabinet-mailings__sort-icon img,
+    .cabinet-mailings__action-chevron img {
+        content: url('../../images/cabinet-mailings/icon-chevron-mobile.svg');
+    }
+
+    .cabinet-mailings-filter__details {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: var(--space-5);
+        width: 100%;
+        height: 148px;
+    }
+
+    .cabinet-mailings.is-filter-open .cabinet-mailings-filter__details {
+        display: flex;
+    }
+
+    .cabinet-mailings-filter__fields {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-5);
+        width: 100%;
+    }
+
+    .cabinet-mailings-filter__field {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .cabinet-mailings-filter__field--date,
+    .cabinet-mailings-filter__field--status {
+        flex-basis: auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .cabinet-mailings-filter__label {
+        flex: 0 0 100px;
+        width: 100px;
+    }
+
+    .cabinet-mailings-filter__range {
+        flex: 0 0 222px;
+        width: 222px;
+    }
+
+    .cabinet-mailings-filter__select-wrap {
+        flex: 1 1 auto;
+        width: auto;
+    }
+
+    .cabinet-mailings-filter__buttons {
+        width: 100%;
+    }
+
+    .cabinet-mailings-filter__button {
+        flex: 1 1 0;
+        width: auto;
+    }
+
+    .cabinet-mailings__grid {
+        height: 466px;
+    }
+
+    .cabinet-mailings.is-filter-open .cabinet-mailings__grid {
+        height: 442px;
+    }
+
+    .cabinet-mailings__toolbar {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 146px;
+        align-items: center;
+        gap: var(--space-3);
+    }
+
+    .cabinet-mailings__sort {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .cabinet-mailings__sort-toggle {
+        max-width: 150px;
+        overflow: hidden;
+    }
+
+    .cabinet-mailings__actions {
+        gap: 6px;
+        flex: 0 0 146px;
+        width: 146px;
+        margin-left: auto;
+    }
+
+    .cabinet-mailings__action {
+        width: 32px;
+        height: 32px;
+        padding: var(--space-2);
+        gap: 0;
+    }
+
+    .cabinet-mailings__action-text,
+    .cabinet-mailings__action-chevron {
+        display: none;
+    }
+
+    .cabinet-mailings__action [src*="icon-action-start"] {
+        content: url('../../images/cabinet-mailings/icon-action-start-mobile.svg');
+    }
+
+    .cabinet-mailings__action [src*="icon-action-stop"] {
+        content: url('../../images/cabinet-mailings/icon-action-stop-mobile.svg');
+    }
+
+    .cabinet-mailings__action [src*="icon-action-delete"] {
+        content: url('../../images/cabinet-mailings/icon-action-delete-mobile.svg');
+    }
+
+    .cabinet-mailings__action [src*="icon-action-create"] {
+        content: url('../../images/cabinet-mailings/icon-action-create-mobile.svg');
+    }
+
+    .cabinet-mailings.is-filter-open .cabinet-mailings__scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .cabinet-mailings-filter__search-input {
+        font-size: 11px;
+    }
+
+    .cabinet-mailings-filter__search-button {
+        padding-left: var(--space-2);
+        padding-right: var(--space-2);
+    }
+
+    .cabinet-mailings-filter__range {
+        flex-basis: 206px;
+        width: 206px;
+        gap: 6px;
+    }
+
+    .cabinet-mailings-filter__date-input {
+        width: 94px;
+        flex-basis: 94px;
+    }
+}
+
+@media (max-width: 379.98px) {
+    .cabinet-mailings-filter__label {
+        flex-basis: 90px;
+        width: 90px;
+    }
+
+    .cabinet-mailings-filter__range {
+        flex: 1 1 auto;
+        width: auto;
+        min-width: 0;
+        gap: 6px;
+    }
+
+    .cabinet-mailings-filter__date-input {
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
+        padding-inline: 6px;
+    }
+
+    .cabinet-mailings-filter__date-input input {
+        width: 100%;
+    }
+
+    .cabinet-mailings-filter__select-wrap {
+        min-width: 0;
+    }
+}

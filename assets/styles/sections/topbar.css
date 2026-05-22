@@ -31,7 +31,10 @@
     line-height: var(--lh-tight);
     letter-spacing: var(--letter-spacing-normal);
     white-space: nowrap;
-    transition: color .2s, background-color .2s;
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        text-decoration-color var(--transition-interactive);
 }
 .topbar__link:hover { color: var(--color-text-inverse); }
 .topbar__link--active { color: var(--color-white-80); background: var(--color-white-10); }

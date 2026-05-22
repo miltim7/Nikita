@@ -18,19 +18,23 @@
 }
 
 .faq-page__breadcrumbs {
-    height: 12px;
-    font-size: 10px;
+    display: flex;
+    align-items: center;
+    height: var(--breadcrumb-h-desktop);
+    color: var(--color-black-100);
+    font-size: var(--breadcrumb-fs-desktop);
     font-weight: var(--fw-light);
     line-height: var(--lh-tight);
     letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
 }
 
 .faq-page__breadcrumbs span {
-    color: var(--color-black-20);
+    color: var(--color-black-50);
 }
 
 .faq-page__breadcrumbs strong {
-    color: var(--color-header-black);
+    color: var(--color-black-100);
     font-weight: var(--fw-light);
 }
 

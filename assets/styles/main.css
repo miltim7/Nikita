@@ -40,3 +40,6 @@
 /* ---------------- responsive ---------------- */
 @import url('./responsive.css');
 
+/* ---------------- global interaction states ---------------- */
+@import url('./components/interactive.css');
+

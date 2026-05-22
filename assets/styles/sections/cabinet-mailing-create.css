@@ -1,0 +1,612 @@
+/* ============================================================
+   CABINET MAILING CREATE
+   Figma source: crm / nodes 1892:32015, 3194:42603, 3194:42470
+   ============================================================ */
+
+.cabinet-page--mailing-create .cabinet-notifications,
+.cabinet-page--mailing-create .cabinet-dashboard,
+.cabinet-page--mailing-create .cabinet-placeholder {
+    display: none;
+}
+
+html:has(body.cabinet-page--mailing-create),
+.cabinet-page--mailing-create {
+    scrollbar-width: none;
+}
+
+html:has(body.cabinet-page--mailing-create)::-webkit-scrollbar,
+.cabinet-page--mailing-create::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.cabinet-mailing-create {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    width: 100%;
+    min-width: 0;
+}
+
+.cabinet-mailing-create__steps {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    width: 100%;
+    min-width: 0;
+    height: 62px;
+}
+
+.cabinet-mailing-create-step {
+    display: flex;
+    align-items: center;
+    width: 292px;
+    height: 62px;
+    flex: 0 0 292px;
+    min-width: 0;
+    padding: 6px var(--space-3);
+    border-radius: var(--cabinet-control-radius);
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-step);
+    text-align: left;
+    transition:
+        background-color var(--transition-interactive),
+        box-shadow var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+.cabinet-mailing-create-step.is-active {
+    background: var(--color-surface-blue-10);
+    box-shadow: none;
+}
+
+.cabinet-mailing-create-step__number {
+    width: 64px;
+    flex: 0 0 64px;
+    color: var(--color-black-20);
+    font-size: var(--fs-5xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailing-create-step.is-active .cabinet-mailing-create-step__number {
+    color: var(--color-header-blue);
+}
+
+.cabinet-mailing-create-step__label {
+    min-width: 0;
+    flex: 1 1 auto;
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailing-create-step__label-line {
+    display: inline;
+}
+
+.cabinet-mailing-create-step__label-line + .cabinet-mailing-create-step__label-line::before {
+    content: " ";
+}
+
+.cabinet-mailing-create-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 604px;
+    min-height: 354px;
+    padding: var(--space-6);
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-table);
+}
+
+.cabinet-mailing-create-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+}
+
+.cabinet-mailing-create-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+}
+
+.cabinet-mailing-create-field__label,
+.cabinet-mailing-create-check__text {
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailing-create-field__hint {
+    color: var(--color-gray-100);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailing-create-field__control,
+.cabinet-mailing-create-select {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: var(--space-2);
+    border: 1px solid var(--color-black-20);
+    border-radius: var(--cabinet-input-radius);
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    font: inherit;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailing-create-field__control::placeholder {
+    color: var(--color-black-50);
+    opacity: 1;
+}
+
+.cabinet-mailing-create-select {
+    position: relative;
+    justify-content: space-between;
+}
+
+.cabinet-mailing-create-select__control {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    padding: 0 30px 0 0;
+    border: 0;
+    appearance: none;
+    color: var(--color-black-50);
+    background: transparent;
+    font: inherit;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailing-create-select__control:valid {
+    color: var(--color-black-100);
+}
+
+.cabinet-mailing-create-select__icon {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    right: var(--space-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.cabinet-mailing-create-select__icon img {
+    display: block;
+    width: 6.7075px;
+    height: 11.3075px;
+    transform: rotate(90deg);
+}
+
+.cabinet-mailing-create-check {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    min-height: 24px;
+}
+
+.cabinet-mailing-create-check__input {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.cabinet-mailing-create-check__box {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    border: 1px solid var(--color-gray-100);
+    border-radius: var(--cabinet-input-radius);
+    background-color: var(--color-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabinet-mailing-create-check__input:checked + .cabinet-mailing-create-check__box {
+    border-color: var(--color-header-orange);
+    background-color: var(--color-header-orange);
+    background-image: url('../../images/cabinet-mailing-create/checkbox-check.svg');
+    background-size: 15.569px 11.3038px;
+}
+
+.cabinet-mailing-create-check__text {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.cabinet-mailing-create-check__help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    border-radius: var(--cabinet-control-radius);
+    transition:
+        background-color var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+.cabinet-mailing-create-check__help img {
+    display: block;
+    width: 19px;
+    height: 19px;
+}
+
+.cabinet-mailing-create-check__tooltip {
+    position: absolute;
+    z-index: var(--z-dropdown);
+    top: calc(100% + 6px);
+    right: 0;
+    width: 260px;
+    padding: var(--space-2);
+    border-radius: var(--cabinet-control-radius);
+    color: var(--color-black-80);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-panel);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-mailing-create-check__tooltip[hidden] {
+    display: none;
+}
+
+.cabinet-mailing-create-form__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-mailing-create-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--cabinet-control-radius);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        border-color var(--transition-interactive),
+        box-shadow var(--transition-interactive),
+        filter var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+.cabinet-mailing-create-btn--secondary {
+    width: 132px;
+    color: var(--color-header-orange);
+    border: 1px solid var(--color-orange-50);
+    background: var(--color-bg);
+}
+
+.cabinet-mailing-create-btn--primary {
+    width: 152px;
+    color: var(--color-text-inverse);
+    background: var(--color-header-orange);
+    box-shadow: var(--shadow-figma-cta);
+}
+
+.cabinet-mailing-create-btn__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+.cabinet-mailing-create-btn__icon img {
+    display: block;
+}
+
+.cabinet-mailing-create-btn--secondary .cabinet-mailing-create-btn__icon img {
+    width: 13.3075px;
+    height: 13.3075px;
+}
+
+.cabinet-mailing-create-btn__icon--next img {
+    width: 15.404px;
+    height: 11.3075px;
+    transform: scaleX(-1);
+}
+
+.cabinet-mailing-create-field__control:focus-visible,
+.cabinet-mailing-create-select__control:focus-visible,
+.cabinet-mailing-create-check__input:focus-visible + .cabinet-mailing-create-check__box {
+    outline: 1px solid var(--color-blue-20);
+    outline-offset: 1px;
+}
+
+.cabinet-mailing-create-field__control[aria-invalid="true"],
+.cabinet-mailing-create-select__control[aria-invalid="true"] + .cabinet-mailing-create-select__icon {
+    color: var(--color-red-100);
+}
+
+.cabinet-mailing-create-field__control[aria-invalid="true"],
+.cabinet-mailing-create-select:has(.cabinet-mailing-create-select__control[aria-invalid="true"]) {
+    border-color: var(--color-red-100);
+}
+
+.cabinet-mailing-create-step:focus-visible,
+.cabinet-mailing-create-check__help:focus-visible,
+.cabinet-mailing-create-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-surface-blue-5);
+}
+
+.cabinet-mailing-create-btn--secondary:focus-visible,
+.cabinet-mailing-create-btn--primary:focus-visible {
+    border-color: var(--color-header-blue);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cabinet-mailing-create-step:hover {
+        transform: translateY(-1px);
+    }
+
+    .cabinet-mailing-create-field__control:hover,
+    .cabinet-mailing-create-select:hover,
+    .cabinet-mailing-create-check:hover .cabinet-mailing-create-check__box {
+        border-color: var(--color-header-blue-50);
+    }
+
+    .cabinet-mailing-create-check__help:hover {
+        background: var(--color-surface-blue-5);
+        transform: translateY(-1px);
+    }
+
+    .cabinet-mailing-create-btn--secondary:hover {
+        background: var(--color-red-10);
+        border-color: var(--color-header-orange);
+        transform: translateY(-1px);
+    }
+
+    .cabinet-mailing-create-btn--primary:hover {
+        filter: var(--interactive-hover-filter);
+        transform: translateY(-1px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .cabinet-page--mailing-create .cabinet-main {
+        padding-top: var(--space-6);
+        padding-bottom: var(--space-6);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1475.98px) {
+    .cabinet-page--mailing-create .cabinet-page-title {
+        padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+        padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .cabinet-mailing-create {
+        gap: var(--space-6);
+    }
+
+    .cabinet-mailing-create__steps {
+        gap: var(--space-4);
+        height: 48px;
+    }
+
+    .cabinet-mailing-create-step {
+        width: 160px;
+        height: 48px;
+        flex-basis: 160px;
+    }
+
+    .cabinet-mailing-create-step__number {
+        width: 48px;
+        flex-basis: 48px;
+        font-size: var(--fs-3xl);
+    }
+
+    .cabinet-mailing-create-step__label {
+        font-size: var(--fs-sm);
+    }
+
+    .cabinet-mailing-create-step__label-line {
+        display: block;
+    }
+
+    .cabinet-mailing-create-step__label-line + .cabinet-mailing-create-step__label-line::before {
+        content: none;
+    }
+
+    .cabinet-mailing-create-form {
+        width: 100%;
+        min-height: 336px;
+    }
+
+    .cabinet-mailing-create-field__label,
+    .cabinet-mailing-create-field__hint,
+    .cabinet-mailing-create-field__control,
+    .cabinet-mailing-create-select__control,
+    .cabinet-mailing-create-check__text,
+    .cabinet-mailing-create-btn {
+        font-size: var(--fs-sm);
+    }
+
+    .cabinet-mailing-create-field__control,
+    .cabinet-mailing-create-select,
+    .cabinet-mailing-create-btn {
+        height: 36px;
+    }
+
+    .cabinet-mailing-create-field__control,
+    .cabinet-mailing-create-select {
+        padding: var(--space-2) 6px;
+    }
+
+    .cabinet-mailing-create-select__icon,
+    .cabinet-mailing-create-btn__icon {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+    }
+
+    .cabinet-mailing-create-select__icon img {
+        width: 4.47px;
+        height: 7.539px;
+    }
+
+    .cabinet-mailing-create-btn--secondary {
+        width: 114px;
+    }
+
+    .cabinet-mailing-create-btn--primary {
+        width: 131px;
+    }
+
+    .cabinet-mailing-create-btn--secondary .cabinet-mailing-create-btn__icon img {
+        width: 8.8717px;
+        height: 8.8717px;
+    }
+
+    .cabinet-mailing-create-btn__icon--next img {
+        width: 10.269px;
+        height: 7.5383px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cabinet-page--mailing-create .cabinet-footer {
+        min-width: 0;
+    }
+
+    .cabinet-page--mailing-create .cabinet-tabbar {
+        width: 100vw;
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .cabinet-mailing-create {
+        width: calc(100vw - (var(--figma-container-px-mobile) * 2));
+        max-width: 100%;
+        gap: var(--space-3);
+    }
+
+    .cabinet-mailing-create__steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-2);
+        height: 76px;
+    }
+
+    .cabinet-mailing-create-step {
+        align-items: flex-start;
+        justify-content: center;
+        width: auto;
+        height: 76px;
+        flex-basis: auto;
+        flex-direction: column;
+        padding: 6px var(--space-3);
+    }
+
+    .cabinet-mailing-create-step__label {
+        width: 100%;
+    }
+
+    .cabinet-mailing-create-form {
+        min-height: 328px;
+        padding: var(--space-4);
+    }
+
+    .cabinet-mailing-create-check {
+        align-items: flex-start;
+        min-height: 28px;
+    }
+
+    .cabinet-mailing-create-check__input,
+    .cabinet-mailing-create-check__box,
+    .cabinet-mailing-create-check__help {
+        margin-top: 2px;
+    }
+
+    .cabinet-mailing-create-form__actions {
+        gap: var(--space-4);
+    }
+
+    .cabinet-mailing-create-btn {
+        width: auto;
+        flex: 1 1 0;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .cabinet-mailing-create-step {
+        padding-inline: var(--space-2);
+    }
+
+    .cabinet-mailing-create-step__number {
+        font-size: 28px;
+    }
+
+    .cabinet-mailing-create-step__label {
+        font-size: 11px;
+    }
+
+    .cabinet-mailing-create-form {
+        padding: var(--space-3);
+    }
+
+    .cabinet-mailing-create-form__actions {
+        gap: var(--space-2);
+    }
+
+    .cabinet-mailing-create-btn {
+        padding-inline: var(--space-2);
+    }
+}

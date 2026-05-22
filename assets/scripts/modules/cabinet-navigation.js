@@ -1,3 +1,5 @@
+import { closeModalLayer, openModalLayer } from './modal-transition.js';
+
 const CABINET_SECTIONS = {
     dashboard: { label: 'Главная', icon: 'icon-nav-widget' },
     mailings: { label: 'Рассылки', icon: 'icon-nav-email' },
@@ -14,6 +16,8 @@ const CABINET_SECTIONS = {
     support: { label: 'Техподдержка', icon: 'icon-support' },
     manager: { label: 'Менеджер', icon: 'icon-chat' },
     referral: { label: 'Реферальная программа', icon: 'icon-referral' },
+    profile: { label: 'Мой профиль', icon: 'icon-nav-widget' },
+    notifications: { label: 'Уведомления', icon: 'icon-bell' },
     menu: { label: 'Меню', icon: 'icon-nav-burger' },
 };
 
@@ -23,6 +27,17 @@ function normalizeSection(section) {
 
 function getSectionFromHash() {
     return normalizeSection(window.location.hash.replace('#', ''));
+}
+
+function getInitialSection() {
+    return document.body.dataset.cabinetCurrentSection
+        ? normalizeSection(document.body.dataset.cabinetCurrentSection)
+        : getSectionFromHash();
+}
+
+function isSamePageLink(item) {
+    const url = new URL(item.href, window.location.href);
+    return url.pathname === window.location.pathname && url.search === window.location.search;
 }
 
 export function initCabinetNavigation() {
@@ -48,9 +63,20 @@ export function initCabinetNavigation() {
 
     navItems.forEach((item) => {
         item.addEventListener('click', (event) => {
+            if (!isSamePageLink(item)) return;
+
+            if (item.hasAttribute('data-cabinet-price-open')) {
+                event.preventDefault();
+                return;
+            }
+
             event.preventDefault();
             setActiveSection(item.dataset.section);
         });
+    });
+
+    document.addEventListener('cabinet:set-section', (event) => {
+        setActiveSection(event.detail?.section);
     });
 
     if (dashboard) {
@@ -61,7 +87,7 @@ export function initCabinetNavigation() {
         placeholder.hidden = true;
     }
 
-    setActiveSection(getSectionFromHash());
+    setActiveSection(getInitialSection());
 }
 
 export function initCabinetSidepanel() {
@@ -102,24 +128,14 @@ export function initCabinetTabbarModal() {
     if (!modal || !toggle) return;
 
     const closeButtons = modal.querySelectorAll('[data-cabinet-tabbar-close]');
-    let hideTimer = null;
 
     const isOpen = () => !modal.hidden && modal.classList.contains('is-open');
 
     const setOpen = (open) => {
-        window.clearTimeout(hideTimer);
-
         if (open) {
-            modal.hidden = false;
-            modal.offsetWidth;
-            modal.classList.add('is-open');
+            openModalLayer(modal);
         } else {
-            modal.classList.remove('is-open');
-            hideTimer = window.setTimeout(() => {
-                if (!modal.classList.contains('is-open')) {
-                    modal.hidden = true;
-                }
-            }, 280);
+            closeModalLayer(modal);
         }
 
         toggle.classList.toggle('is-active', open);

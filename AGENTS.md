@@ -1,6 +1,6 @@
 # Project Layout Rules
 
-This is a static HTML/CSS/JS landing project. Keep the codebase organized for a large Figma-to-code build.
+This is a large multi-page HTML/CSS/JS project based on Figma layouts. Keep the codebase organized, scalable, and suitable for a big Figma-to-code build.
 
 ## Source Of Truth
 
@@ -12,6 +12,19 @@ This is a static HTML/CSS/JS landing project. Keep the codebase organized for a 
 - Put reusable design values in `assets/styles/base/variables.css`.
 - Do not introduce hardcoded colors, shadows, radii, font weights, or repeated spacing values in section files when a token already exists.
 - Add missing project-wide tokens before using the same value in multiple sections.
+
+## Figma Pixel-Perfect Requirements
+
+- Copy absolutely everything from the provided Figma nodes: icons, SVG paths, images, colors, gradients, opacity, shadows, borders, radii, dimensions, x/y positioning, gaps, padding, margins, typography, line-height, letter-spacing, font weight, and responsive behavior.
+- Do not invent, redraw, approximate, or substitute icons, images, SVG paths, or UI elements. If Figma provides a specific icon/asset/path, use that exact asset/path.
+- Do not reuse an existing "similar" icon or component unless it is confirmed to be the same Figma asset/component for that exact node and state.
+- When an icon or image is inside a Figma node, inspect that child node or downloaded asset before implementing it. If the asset cannot be fetched or identified, stop and state the blocker instead of guessing.
+- Keep separate icons separate: header icons, card icons, navigation icons, status icons, and section icons must not be collapsed into one shared icon unless Figma uses the same source asset.
+- Match Figma component states and page variants independently. A demo header, logged-in cabinet header, public-site header, tablet header, and mobile header are different variants unless Figma proves they are identical.
+- Preserve Figma text content, capitalization, punctuation, whitespace intent, and line breaks. Do not rewrite labels or helper copy.
+- Preserve Figma layout hierarchy and internal spacing. Outer dimensions, internal padding, child gaps, alignment, and flex/grid behavior must match the inspected node, not an inferred layout.
+- Use existing project components only when they can be adapted to the exact Figma output. If an existing component differs in icon, spacing, typography, color, or state, override or extend it for the exact variant instead of accepting the mismatch.
+- Verification must compare the implemented page against the supplied Figma node for every provided breakpoint and variant.
 
 ## CSS Structure
 
@@ -26,6 +39,14 @@ This is a static HTML/CSS/JS landing project. Keep the codebase organized for a 
 - Section files may position and compose components, but should not redefine the same button, card, typography, or icon patterns.
 - Keep class names BEM-like and scoped: `.block`, `.block__element`, `.block--modifier`.
 - Prefer asset files for Figma-exported icons/logos instead of inline SVG when the asset repeats.
+- Every clickable button/control must have a simple hover/focus interaction: use an existing tokenized transition, a subtle transform/filter/background/border change, and avoid raw browser default outlines unless they match the design.
+
+## Interaction Logic Rules
+
+- When implementing Figma forms and modals, implement the obvious behavior implied by the UI controls, not only the static layout: selects open, options can be selected, selected/active states update, links are clickable, and buttons with modal-flow meaning advance to the provided next state.
+- When a control clearly starts a page flow or navigates to another state/page, wire that flow immediately instead of leaving the control inert. For example, `Создать рассылку` on the `Рассылки` page must open the create-mailing page, cancel/back actions must return to the list page, and continue/save actions must perform the expected validation or step transition when the required target state exists or can be safely inferred.
+- All modals, dialogs, and modal-like overlays must open and close smoothly with tokenized CSS transitions; do not toggle `hidden` in the same frame as `is-open` changes when that would skip the closing animation.
+- If Figma provides only one visual state but the control clearly implies missing behavior, implement the minimal expected behavior and state the assumption.
 
 ## Navigation Rules
 

@@ -139,8 +139,8 @@
     }
 
     .faq-page__breadcrumbs {
-        height: 10px;
-        font-size: 8px;
+        height: var(--breadcrumb-h-compact);
+        font-size: var(--breadcrumb-fs-compact);
     }
 
     .faq-page__content {
@@ -2065,8 +2065,8 @@
     }
 
     .technical-page__breadcrumbs {
-        height: 10px;
-        font-size: 8px;
+        height: var(--breadcrumb-h-compact);
+        font-size: var(--breadcrumb-fs-compact);
     }
 
     .technical-page__head {
@@ -2497,8 +2497,8 @@
     .contacts-page__breadcrumbs {
         display: flex;
         align-items: center;
-        height: 10px;
-        font-size: 8px;
+        height: var(--breadcrumb-h-compact);
+        font-size: var(--breadcrumb-fs-compact);
     }
 
     .contacts-page__head {

@@ -9,10 +9,30 @@
     background: var(--color-bg);
     box-shadow: var(--shadow-figma-menu);
     color: var(--color-black-100);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px) scale(.98);
+    transform-origin: right top;
+    transition:
+        opacity var(--transition-modal),
+        transform var(--transition-modal);
 }
 
 .mobile-menu[hidden] {
     display: none;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mobile-menu {
+        transition: none;
+        transform: none;
+    }
 }
 
 .mobile-menu__nav {

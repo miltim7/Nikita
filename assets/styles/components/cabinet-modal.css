@@ -1,0 +1,1285 @@
+/* ============================================================
+   CABINET MODALS
+   Shared modal shell and SMS price modal.
+   ============================================================ */
+body.is-cabinet-modal-open {
+    overflow: hidden;
+}
+
+[data-cabinet-modal-open] {
+    cursor: pointer;
+}
+
+.cabinet-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+    background: var(--color-black-80);
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transition: opacity var(--transition-modal);
+}
+
+.cabinet-modal[hidden] {
+    display: none;
+}
+
+.cabinet-modal.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cabinet-price-modal__dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+    width: 508px;
+    max-width: 100%;
+    max-height: calc(100dvh - (var(--space-6) * 2));
+    padding: var(--space-6);
+    border-radius: var(--cabinet-card-radius);
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-panel);
+    outline: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(16px) scale(.98);
+    transition:
+        opacity var(--transition-modal),
+        transform var(--transition-modal);
+}
+
+.cabinet-modal.is-open .cabinet-price-modal__dialog {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.cabinet-price-modal__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 460px;
+    max-width: 100%;
+    flex: 0 0 auto;
+}
+
+.cabinet-price-modal__title {
+    flex: 1 1 auto;
+    min-width: 0;
+    color: var(--color-black-100);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-price-modal__mobile-break {
+    display: none;
+}
+
+.cabinet-price-modal__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    color: var(--color-gray-100);
+}
+
+.cabinet-price-modal__close .cabinet-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.cabinet-price-modal__table-wrap {
+    width: 460px;
+    max-width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    border-top: 1px solid var(--color-gray-20);
+    border-right: 1px solid var(--color-gray-20);
+    border-left: 1px solid var(--color-gray-20);
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+}
+
+.cabinet-price-modal__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.cabinet-price-modal__table th,
+.cabinet-price-modal__table td {
+    width: 50%;
+    height: 26px;
+    padding-inline: var(--space-6);
+    border-bottom: 1px solid var(--color-gray-20);
+    color: var(--color-black-100);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.cabinet-price-modal__table th + th,
+.cabinet-price-modal__table td + td {
+    border-left: 1px solid var(--color-gray-20);
+}
+
+.cabinet-price-modal__table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 30px;
+    padding-block: 6px;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    background: var(--color-bg);
+}
+
+.cabinet-price-modal__table td {
+    padding-block: 5.3px;
+    font-size: var(--fs-sm);
+    white-space: nowrap;
+}
+
+.cabinet-price-modal__table tbody tr:nth-child(odd) {
+    background: var(--color-gray-5);
+}
+
+.cabinet-price-modal__table tr.is-tall td {
+    height: 54px;
+}
+
+.cabinet-price-modal__th-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cabinet-price-modal__table th:nth-child(2) {
+    padding-inline: var(--space-2);
+    text-align: center;
+}
+
+.cabinet-price-modal__table th:nth-child(2) .cabinet-price-modal__th-content {
+    justify-content: center;
+}
+
+.cabinet-price-modal__sort {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    color: var(--color-gray-100);
+}
+
+.cabinet-price-modal__price-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    white-space: nowrap;
+}
+
+.cabinet-price-modal__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 460px;
+    max-width: 100%;
+    flex: 0 0 auto;
+}
+
+.cabinet-price-modal__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 40px;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--cabinet-control-radius);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-price-modal__button--secondary {
+    color: var(--color-header-orange);
+    background: var(--color-bg);
+    border: 1px solid var(--color-orange-50);
+}
+
+.cabinet-price-modal__button--primary {
+    color: var(--color-text-inverse);
+    background: var(--color-header-orange);
+    box-shadow: var(--shadow-figma-cta);
+}
+
+@media (max-width: 1199.98px) {
+    .cabinet-price-modal__dialog {
+        gap: var(--space-4);
+    }
+
+    .cabinet-price-modal__title {
+        font-size: var(--fs-md);
+    }
+
+    .cabinet-price-modal__table th,
+    .cabinet-price-modal__table td {
+        height: 24px;
+    }
+
+    .cabinet-price-modal__table th {
+        height: 30px;
+        font-size: var(--fs-sm);
+    }
+
+    .cabinet-price-modal__table td {
+        font-size: 10px;
+    }
+
+    .cabinet-price-modal__table tr.is-tall td {
+        height: 48px;
+    }
+
+    .cabinet-price-modal__actions {
+        gap: var(--space-4);
+    }
+
+    .cabinet-price-modal__button {
+        height: 36px;
+        font-size: var(--fs-sm);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cabinet-modal {
+        align-items: center;
+        padding: var(--space-6) var(--figma-container-px-mobile);
+    }
+
+    .cabinet-price-modal__dialog {
+        width: 360px;
+    }
+
+    .cabinet-price-modal__head,
+    .cabinet-price-modal__table-wrap,
+    .cabinet-price-modal__actions {
+        width: 100%;
+    }
+
+    .cabinet-price-modal__head {
+        align-items: flex-start;
+    }
+
+    .cabinet-price-modal__mobile-break {
+        display: block;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .cabinet-price-modal__dialog {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .cabinet-price-modal__table th,
+    .cabinet-price-modal__table td {
+        padding-inline: var(--space-4);
+    }
+
+    .cabinet-price-modal__table th:nth-child(2) {
+        padding-inline: var(--space-2);
+    }
+
+    .cabinet-price-modal__actions {
+        gap: var(--space-3);
+    }
+}
+
+/* ============================================================
+   CABINET ACTION MODALS
+   Demo mode, quick SMS, payment, and confirmation flows.
+   ============================================================ */
+.cabinet-action-modal__dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+    width: var(--cabinet-action-modal-w, 600px);
+    max-width: 100%;
+    max-height: calc(100dvh - (var(--space-6) * 2));
+    padding: var(--space-6);
+    overflow: auto;
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    border-radius: var(--cabinet-card-radius);
+    box-shadow: var(--shadow-cabinet-panel);
+    outline: 0;
+    overscroll-behavior: contain;
+    opacity: 0;
+    transform: translateY(16px) scale(.98);
+    transition:
+        opacity var(--transition-modal),
+        transform var(--transition-modal);
+}
+
+.cabinet-modal.is-open .cabinet-action-modal__dialog {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cabinet-modal,
+    .cabinet-price-modal__dialog,
+    .cabinet-action-modal__dialog {
+        transition: none;
+    }
+
+    .cabinet-price-modal__dialog,
+    .cabinet-action-modal__dialog {
+        transform: none;
+    }
+}
+
+.cabinet-action-modal__dialog--demo-mode {
+    --cabinet-action-modal-w: 604px;
+}
+
+.cabinet-action-modal__dialog--payment-phone {
+    --cabinet-action-modal-w: 400px;
+}
+
+.cabinet-action-modal__dialog--payment-confirm {
+    --cabinet-action-modal-w: 400px;
+}
+
+.cabinet-action-modal__dialog--sender-name {
+    --cabinet-action-modal-w: 400px;
+}
+
+.cabinet-action-modal__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.cabinet-action-modal__title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.cabinet-action-modal__title {
+    flex: 1 1 auto;
+    min-width: 0;
+    color: var(--color-black-100);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-action-modal__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    color: var(--color-gray-100);
+}
+
+.cabinet-action-modal__close .cabinet-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.cabinet-action-modal__asset {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+}
+
+.cabinet-action-modal__sprite {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    color: currentColor;
+}
+
+.cabinet-action-modal__asset--button {
+    width: 24px;
+    height: 24px;
+}
+
+.cabinet-action-modal__asset--arrow-right {
+    transform: scaleX(-1);
+}
+
+.cabinet-action-modal__indicator {
+    width: 12px;
+    height: 12px;
+    flex: 0 0 12px;
+    border-radius: var(--radius-pill);
+    background: var(--color-red-100);
+}
+
+.cabinet-action-modal__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-action-modal__desktop-only {
+    display: initial;
+}
+
+.cabinet-action-modal__mobile-only {
+    display: none;
+}
+
+.cabinet-modal-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+    min-width: 0;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--cabinet-control-radius);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-modal-button--secondary {
+    color: var(--color-header-orange);
+    background: var(--color-bg);
+    border: 1px solid var(--color-orange-50);
+}
+
+.cabinet-modal-button--primary {
+    color: var(--color-text-inverse);
+    background: var(--color-header-orange);
+    box-shadow: var(--shadow-figma-cta);
+}
+
+.cabinet-action-label {
+    display: block;
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-action-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    min-width: 0;
+    padding: var(--space-2);
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    border: 1px solid var(--color-black-20);
+    border-radius: var(--cabinet-input-radius);
+    font: inherit;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-action-input::placeholder,
+.cabinet-action-input span {
+    color: var(--color-black-50);
+}
+
+.cabinet-action-input--select {
+    justify-content: space-between;
+    text-align: left;
+}
+
+.cabinet-action-input__chevron {
+    width: 24px;
+    height: 24px;
+    color: var(--color-gray-100);
+    transform: rotate(-90deg);
+}
+
+.cabinet-action-input--select[aria-expanded="true"] .cabinet-action-input__chevron {
+    transform: rotate(90deg);
+}
+
+.cabinet-action-select {
+    position: relative;
+    min-width: 0;
+}
+
+.cabinet-action-select.has-value [data-cabinet-sender-value] {
+    color: var(--color-black-100);
+}
+
+.cabinet-action-select__menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-1) 0;
+    overflow: hidden;
+    background: var(--color-bg);
+    border: 1px solid var(--color-black-20);
+    border-radius: var(--cabinet-input-radius);
+    box-shadow: var(--shadow-cabinet-panel);
+}
+
+.cabinet-action-select__menu[hidden] {
+    display: none;
+}
+
+.cabinet-action-select__menu button {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    padding: var(--space-2);
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-align: left;
+}
+
+.cabinet-action-select__menu button:hover,
+.cabinet-action-select__menu button[aria-selected="true"] {
+    color: var(--color-header-blue);
+    background: var(--color-surface-blue-5);
+}
+
+.cabinet-action-input--textarea {
+    height: 120px;
+    align-items: flex-start;
+    resize: none;
+    padding: var(--space-3) var(--space-2);
+}
+
+.cabinet-action-input--phone {
+    gap: 6px;
+}
+
+.cabinet-action-input--phone input {
+    width: 100%;
+    min-width: 0;
+    color: var(--color-black-100);
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font: inherit;
+}
+
+.cabinet-action-input--phone input::placeholder {
+    color: var(--color-black-50);
+}
+
+.cabinet-action-input__phone {
+    width: 24px;
+    height: 24px;
+    color: var(--color-black-50);
+}
+
+.cabinet-action-input__phone-frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    color: var(--color-black-20);
+}
+
+.cabinet-action-input__phone-frame .cabinet-action-input__phone {
+    width: 17px;
+    height: 17px;
+    color: currentColor;
+    transform: scaleX(-1);
+}
+
+.cabinet-demo-mode__rows {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid var(--color-gray-20);
+    border-bottom: 1px solid var(--color-gray-20);
+}
+
+.cabinet-demo-mode__row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-5);
+    width: 100%;
+    padding: var(--space-3) 0;
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-demo-mode__row + .cabinet-demo-mode__row {
+    border-top: 1px solid var(--color-gray-20);
+}
+
+.cabinet-demo-mode__row > span {
+    flex: 0 0 auto;
+}
+
+.cabinet-demo-mode__row b {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-demo-mode__row strong {
+    flex: 0 0 231px;
+    color: var(--color-black-80);
+    font-weight: var(--fw-semibold);
+    text-align: right;
+}
+
+.cabinet-demo-mode__row small {
+    display: block;
+    font-size: inherit;
+    font-weight: var(--fw-light);
+}
+
+.cabinet-demo-mode__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-demo-mode__actions p {
+    flex: 1 1 auto;
+    min-width: 0;
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-demo-mode__actions strong {
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-demo-mode__download {
+    width: 169px;
+    flex: 0 0 169px;
+}
+
+.cabinet-demo-mode__download .cabinet-action-modal__sprite {
+    color: var(--color-white-50);
+}
+
+.cabinet-quick-sms {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+}
+
+.cabinet-quick-sms__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-quick-sms__field--message {
+    gap: 6px;
+}
+
+.cabinet-quick-sms__sender-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+.cabinet-quick-sms__sender-top .cabinet-action-label {
+    flex: 0 0 auto;
+}
+
+.cabinet-quick-sms__field--sender .cabinet-action-input--select {
+    flex: 1 1 auto;
+}
+
+.cabinet-quick-sms__field--sender {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 176px;
+    grid-template-areas:
+        "label label"
+        "input add";
+    column-gap: var(--space-3);
+}
+
+.cabinet-quick-sms__field--sender .cabinet-quick-sms__sender-top {
+    display: contents;
+}
+
+.cabinet-quick-sms__field--sender .cabinet-action-label {
+    grid-area: label;
+}
+
+.cabinet-quick-sms__field--sender .cabinet-action-select {
+    grid-area: input;
+}
+
+.cabinet-quick-sms__add-name {
+    grid-area: add;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-quick-sms__help {
+    width: 24px;
+    height: 24px;
+    color: var(--color-header-blue-50);
+}
+
+.cabinet-quick-sms__plus {
+    width: 16px;
+    height: 16px;
+    color: var(--color-header-orange);
+}
+
+.cabinet-quick-sms__message-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-quick-sms__counter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-3);
+    color: var(--color-black-50);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-quick-sms__counter b {
+    color: var(--color-black-100);
+    font-weight: var(--fw-light);
+}
+
+.cabinet-quick-sms__tools {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-6);
+    width: 100%;
+    padding-top: 10px;
+}
+
+.cabinet-quick-sms__tools button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.cabinet-quick-sms__tools .cabinet-action-modal__sprite {
+    color: var(--color-header-blue);
+}
+
+.cabinet-quick-sms .cabinet-action-modal__actions .cabinet-modal-button {
+    flex: 1 1 0;
+}
+
+.cabinet-payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+}
+
+.cabinet-payment-method__label {
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-payment-method__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-2);
+    width: 100%;
+}
+
+.cabinet-payment-method__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    min-height: 114px;
+    padding: var(--space-4);
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-figma-case-card);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-align: center;
+}
+
+.cabinet-payment-method__card--tall {
+    min-height: 131px;
+}
+
+.cabinet-payment-method__card.is-active {
+    color: var(--color-header-blue);
+    background: var(--color-surface-blue-5);
+    border-color: var(--color-header-blue);
+    box-shadow: none;
+}
+
+.cabinet-payment-method__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 81px;
+    height: 36px;
+}
+
+.cabinet-payment-method__icon {
+    width: 36px;
+    height: 36px;
+    color: var(--color-gray-100);
+}
+
+.cabinet-payment-method__logo {
+    display: block;
+    max-width: 81px;
+    max-height: 36px;
+    object-fit: contain;
+}
+
+.cabinet-payment-method__card:not(.is-active) .cabinet-payment-method__logo {
+    filter: grayscale(1);
+    opacity: .72;
+}
+
+.cabinet-payment-method__card.is-active .cabinet-payment-method__icon {
+    color: var(--color-header-blue);
+}
+
+.cabinet-payment-method__card.is-active .cabinet-payment-method__logo {
+    filter: none;
+    opacity: 1;
+}
+
+.cabinet-payment-phone,
+.cabinet-payment-confirm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+}
+
+.cabinet-payment-phone__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-payment-phone__actions .cabinet-modal-button,
+.cabinet-payment-confirm__actions .cabinet-modal-button {
+    flex: 1 1 0;
+}
+
+.cabinet-payment-phone__actions .cabinet-action-modal__icon-frame,
+.cabinet-payment-confirm__actions .cabinet-action-modal__icon-frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+}
+
+.cabinet-payment-phone__actions .cabinet-modal-button--secondary .cabinet-action-modal__icon-frame,
+.cabinet-payment-confirm__actions .cabinet-modal-button--secondary .cabinet-action-modal__icon-frame {
+    color: var(--color-orange-50);
+}
+
+.cabinet-payment-phone__actions .cabinet-modal-button--primary .cabinet-action-modal__icon-frame {
+    color: var(--color-white-50);
+}
+
+.cabinet-payment-phone__actions .cabinet-action-modal__asset--button,
+.cabinet-payment-confirm__actions .cabinet-action-modal__asset--button {
+    width: 15.4px;
+    height: 11.3px;
+    flex: 0 0 15.4px;
+    color: currentColor;
+}
+
+.cabinet-payment-confirm__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-payment-confirm__body strong {
+    color: var(--color-black-100);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-payment-confirm__body p {
+    color: var(--color-black-50);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-sender-name {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+}
+
+.cabinet-sender-name__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+}
+
+.cabinet-sender-name__note {
+    color: var(--color-black-50);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-sender-name__actions .cabinet-modal-button {
+    flex: 1 1 0;
+}
+
+.cabinet-confirm-action__body {
+    width: 100%;
+}
+
+.cabinet-confirm-action__body p {
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-confirm-action__profile-link {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-confirm-action__actions {
+    display: flex;
+    width: 100%;
+}
+
+.cabinet-confirm-action__actions .cabinet-modal-button {
+    width: 200px;
+}
+
+@media (max-width: 767.98px) {
+    .cabinet-action-modal__dialog,
+    .cabinet-action-modal__dialog--demo-mode,
+    .cabinet-action-modal__dialog--payment-phone,
+    .cabinet-action-modal__dialog--payment-confirm,
+    .cabinet-action-modal__dialog--sender-name {
+        --cabinet-action-modal-w: 360px;
+        gap: var(--space-4);
+    }
+
+    .cabinet-action-modal__dialog--confirm-action {
+        gap: var(--space-6);
+    }
+
+    .cabinet-action-modal__title {
+        font-size: var(--fs-md);
+    }
+
+    .cabinet-action-modal__actions {
+        gap: var(--space-4);
+    }
+
+    .cabinet-action-modal__desktop-only {
+        display: none;
+    }
+
+    .cabinet-action-modal__mobile-only {
+        display: initial;
+    }
+
+    .cabinet-modal-button {
+        height: 36px;
+        font-size: var(--fs-sm);
+    }
+
+    .cabinet-action-label,
+    .cabinet-action-input,
+    .cabinet-action-select__menu button,
+    .cabinet-demo-mode__row,
+    .cabinet-demo-mode__actions p,
+    .cabinet-quick-sms__add-name,
+    .cabinet-quick-sms__counter,
+    .cabinet-quick-sms__tools button,
+    .cabinet-payment-method__label,
+    .cabinet-payment-confirm__body strong,
+    .cabinet-payment-confirm__body p,
+    .cabinet-sender-name__note,
+    .cabinet-confirm-action__body p {
+        font-size: var(--fs-sm);
+    }
+
+    .cabinet-action-input {
+        height: 36px;
+        padding: var(--space-2) 6px;
+    }
+
+    .cabinet-action-input--textarea {
+        height: 90px;
+        padding: var(--space-3) 6px;
+    }
+
+    .cabinet-action-input__chevron,
+    .cabinet-action-modal__asset,
+    .cabinet-action-modal__sprite,
+    .cabinet-action-modal__asset--button {
+        width: 16px;
+        height: 16px;
+    }
+
+    .cabinet-action-input__phone-frame {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+    }
+
+    .cabinet-action-input__phone-frame .cabinet-action-input__phone {
+        width: 11.3px;
+        height: 11.3px;
+    }
+
+    .cabinet-demo-mode__rows {
+        gap: 0;
+    }
+
+    .cabinet-demo-mode__row {
+        display: grid;
+        grid-template-columns: 130px minmax(0, 1fr);
+        gap: 0;
+        padding: var(--space-2) 0;
+    }
+
+    .cabinet-demo-mode__row strong {
+        flex: unset;
+        width: auto;
+        text-align: right;
+    }
+
+    .cabinet-demo-mode__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-3);
+    }
+
+    .cabinet-demo-mode__download {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .cabinet-quick-sms {
+        gap: var(--space-4);
+    }
+
+    .cabinet-quick-sms__field {
+        gap: var(--space-3);
+    }
+
+    .cabinet-quick-sms__field--sender {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .cabinet-quick-sms__field--sender .cabinet-quick-sms__sender-top {
+        display: flex;
+        height: 32px;
+        margin-bottom: 0;
+    }
+
+    .cabinet-quick-sms__add-name {
+        height: 32px;
+    }
+
+    .cabinet-quick-sms__help {
+        width: 16px;
+        height: 16px;
+    }
+
+    .cabinet-quick-sms__message-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cabinet-quick-sms__tools {
+        justify-content: space-between;
+        gap: var(--space-3);
+        padding-top: 10px;
+    }
+
+    .cabinet-payment-method {
+        gap: var(--space-4);
+    }
+
+    .cabinet-payment-method__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cabinet-payment-method__card {
+        min-height: 96px;
+        padding: var(--space-4);
+        border-radius: var(--radius-figma-card);
+        font-size: var(--fs-sm);
+        gap: var(--space-3);
+    }
+
+    .cabinet-payment-method__card--tall {
+        min-height: 110px;
+    }
+
+    .cabinet-payment-method__media {
+        width: 54px;
+        height: 24px;
+    }
+
+    .cabinet-payment-method__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cabinet-payment-method__logo {
+        max-width: 54px;
+        max-height: 24px;
+    }
+
+    .cabinet-payment-phone,
+    .cabinet-payment-confirm {
+        gap: var(--space-4);
+    }
+
+    .cabinet-sender-name {
+        gap: var(--space-4);
+    }
+
+    .cabinet-payment-phone__actions .cabinet-action-modal__icon-frame,
+    .cabinet-payment-confirm__actions .cabinet-action-modal__icon-frame {
+        width: 16px;
+        height: 16px;
+        flex-basis: 16px;
+    }
+
+    .cabinet-payment-phone__actions .cabinet-action-modal__asset--button,
+    .cabinet-payment-confirm__actions .cabinet-action-modal__asset--button {
+        width: 10.3px;
+        height: 7.5px;
+        flex-basis: 10.3px;
+    }
+
+    .cabinet-confirm-action__body p {
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-confirm-action__profile-link {
+        display: block;
+    }
+
+    .cabinet-confirm-action__actions .cabinet-modal-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .cabinet-action-modal__dialog {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .cabinet-quick-sms__tools {
+        flex-wrap: wrap;
+    }
+}

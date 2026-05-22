@@ -20,13 +20,13 @@
         </div>
         <nav class="cabinet-sidepanel__nav" aria-label="Разделы кабинета">
             <a class="cabinet-sidepanel__item is-active" href="#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Главная"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Главная</span></a>
-            <a class="cabinet-sidepanel__item" href="#mailings" data-cabinet-nav data-section="mailings" aria-label="Рассылки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Рассылки</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Рассылки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Рассылки</span></a>
             <a class="cabinet-sidepanel__item" href="#lists" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
             <a class="cabinet-sidepanel__item" href="#api" data-cabinet-nav data-section="api" aria-label="API-интеграция"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API-интеграция</span></a>
             <a class="cabinet-sidepanel__item" href="#reports" data-cabinet-nav data-section="reports" aria-label="Отчёты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчёты</span></a>
             <a class="cabinet-sidepanel__item" href="#otp" data-cabinet-nav data-section="otp" aria-label="Сервис OTP"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">Сервис OTP</span></a>
             <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="#templates" data-cabinet-nav data-section="templates" aria-label="Шаблоны"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблоны</span></a>
-            <a class="cabinet-sidepanel__item" href="#billing" data-cabinet-nav data-section="billing" aria-label="Условия и цены"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Условия и цены</span></a>
+            <a class="cabinet-sidepanel__item" href="#billing" data-cabinet-nav data-section="billing" data-cabinet-price-open aria-label="Условия и цены"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Условия и цены</span></a>
             <a class="cabinet-sidepanel__item" href="#memory" data-cabinet-nav data-section="memory" aria-label="Технические возможности"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Технические возможности</span></a>
             <a class="cabinet-sidepanel__item" href="#security" data-cabinet-nav data-section="security" aria-label="Надёжность и безопасность"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Надёжность и безопасность</span></a>
             <a class="cabinet-sidepanel__item" href="#help" data-cabinet-nav data-section="help" aria-label="Вопросы и ответы"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Вопросы и ответы</span></a>
@@ -53,26 +53,26 @@
             <header class="cabinet-header">
                 <div class="cabinet-header__mobile-top">
                     <div class="cabinet-header__mobile-controls">
-                        <button class="cabinet-select" type="button" aria-label="Язык">
-                            <span class="cabinet-select__flag" aria-hidden="true"></span>
-                            <span>RU</span>
+                        <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
                             <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
                         </button>
                         <button class="cabinet-select" type="button" aria-label="Баланс">
-                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-wallet"></use></svg>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
                             <span class="cabinet-select__value">1 569.89</span>
                             <span>СОМ</span>
                             <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
                         </button>
                     </div>
                     <div class="cabinet-header__mobile-tools">
-                        <button class="cabinet-header__tool" type="button" aria-label="Уведомления">
+                        <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
                             <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
                         </button>
                         <a class="cabinet-header__tool" href="#support" aria-label="Техподдержка" data-cabinet-nav data-section="support">
                             <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
                         </a>
-                        <a class="cabinet-header__tool" href="#manager" aria-label="Менеджер" data-cabinet-nav data-section="manager">
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Менеджер" data-cabinet-manager-open>
                             <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
                         </a>
                     </div>
@@ -88,7 +88,7 @@
                             <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
                             <span>Обратиться<br>в техподдержку</span>
                         </a>
-                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-nav data-section="manager">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
                             <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
                             <span>Связаться<br>с менеджером</span>
                         </a>
@@ -96,20 +96,20 @@
 
                     <div class="cabinet-header__right">
                         <div class="cabinet-header__controls">
-                            <button class="cabinet-select" type="button" aria-label="Язык">
-                                <span class="cabinet-select__flag" aria-hidden="true"></span>
-                                <span>RU</span>
+                            <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
                                 <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
                             </button>
                             <button class="cabinet-select" type="button" aria-label="Баланс">
-                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-wallet"></use></svg>
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
                                 <span class="cabinet-select__value">1 569.89</span>
                                 <span>СОМ</span>
                                 <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
                             </button>
                         </div>
                         <div class="cabinet-header__tools">
-                            <button class="cabinet-header__tool" type="button" aria-label="Уведомления">
+                            <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
                                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
                                 <span class="cabinet-header__dot" aria-hidden="true"></span>
                             </button>
@@ -147,7 +147,7 @@
                                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-wallet"></use></svg>
                                 <span>Финансы</span>
                             </h1>
-                            <button class="cabinet-btn cabinet-btn--primary" type="button">Пополнить счёт</button>
+                            <button class="cabinet-btn cabinet-btn--primary" type="button" data-cabinet-modal-open="payment-method">Пополнить счёт</button>
                         </div>
                         <div class="cabinet-card__divider"></div>
                         <div class="cabinet-detail">
@@ -179,6 +179,7 @@
                                 <span class="cabinet-detail__value cabinet-detail__plan">
                                     <span class="cabinet-detail__plan-name">Старт</span>
                                     <span class="cabinet-detail__plan-note">Цена SMS зависит от страны и оператора получателя сообщения</span>
+                                    <a class="cabinet-detail__plan-more" href="#sms-price" data-cabinet-price-open>Подробнее...</a>
                                 </span>
                             </div>
                             <div class="cabinet-detail__row cabinet-detail__row--top cabinet-detail__row--period">
@@ -230,7 +231,7 @@
                             <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-sms-figma"></use></svg>
                             <span class="cabinet-quick__text">Быстрая отправка SMS</span>
                         </h2>
-                        <button class="cabinet-btn cabinet-btn--primary" type="button">Отправить SMS</button>
+                        <button class="cabinet-btn cabinet-btn--primary" type="button" data-cabinet-modal-open="quick-sms">Отправить SMS</button>
                     </section>
 
                     <section class="cabinet-card cabinet-stat" aria-labelledby="statTitle">
@@ -316,13 +317,13 @@
             </div>
             <nav class="cabinet-tabbar-modal__nav" aria-label="Меню кабинета">
                 <a class="cabinet-tabbar-modal__item" href="#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Главная</span></a>
-                <a class="cabinet-tabbar-modal__item" href="#mailings" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Рассылки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Рассылки</span></a>
                 <a class="cabinet-tabbar-modal__item" href="#lists" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Списки</span></a>
                 <a class="cabinet-tabbar-modal__item" href="#api" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API-интеграция</span></a>
                 <a class="cabinet-tabbar-modal__item" href="#reports" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчёты</span></a>
                 <a class="cabinet-tabbar-modal__item" href="#otp" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>Сервис OTP</span></a>
                 <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="#templates" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблоны</span></a>
-                <a class="cabinet-tabbar-modal__item" href="#billing" data-cabinet-nav data-section="billing"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Условия и цены</span></a>
+                <a class="cabinet-tabbar-modal__item" href="#billing" data-cabinet-nav data-section="billing" data-cabinet-price-open><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Условия и цены</span></a>
                 <a class="cabinet-tabbar-modal__item" href="#memory" data-cabinet-nav data-section="memory"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Технические возможности</span></a>
                 <a class="cabinet-tabbar-modal__item" href="#security" data-cabinet-nav data-section="security"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Надёжность и безопасность</span></a>
                 <a class="cabinet-tabbar-modal__item" href="#help" data-cabinet-nav data-section="help"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Вопросы и ответы</span></a>
@@ -335,7 +336,7 @@
                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
                 <span>Главная</span>
             </a>
-            <a class="cabinet-tabbar__item" href="#mailings" data-cabinet-nav data-section="mailings">
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
                 <span>Рассылки</span>
             </a>
