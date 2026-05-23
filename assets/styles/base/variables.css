@@ -307,6 +307,11 @@
     --cabinet-recipient-lists-table-compact-w: 1073px;
     --cabinet-recipient-lists-table-head-h: 30px;
     --cabinet-recipient-lists-table-row-h: 28px;
+    --cabinet-templates-table-desktop-w: 1228px;
+    --cabinet-templates-table-compact-w: 912px;
+    --cabinet-templates-table-head-h: 30px;
+    --cabinet-templates-table-row-h: 36px;
+    --cabinet-templates-table-row-tall-h: 54px;
 
     /* ============================================================
        Legacy aliases — keep existing BEM/components working.

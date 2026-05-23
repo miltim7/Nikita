@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — Шаблоны</title>
+    <meta name="description" content="Шаблоны сообщений личного кабинета Nikita.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--templates" data-cabinet-current-section="templates">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Навигация кабинета" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Развернуть меню" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Свернуть меню</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Разделы кабинета">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Главная"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Главная</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Рассылки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Рассылки</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API-интеграция"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API-интеграция</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчёты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчёты</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="Сервис OTP"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">Сервис OTP</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблоны" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблоны</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Условия и цены"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Условия и цены</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Технические возможности"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Технические возможности</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Надёжность и безопасность"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Надёжность и безопасность</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Вопросы и ответы"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Вопросы и ответы</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Контакты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Контакты</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Тема">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Светлая тема" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Выйти">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Выйти</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Баланс">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>СОМ</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Техподдержка" data-cabinet-nav data-section="support">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Менеджер" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita — главная">
+                        <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-nav data-section="support">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Обратиться<br>в техподдержку</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Связаться<br>с менеджером</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Баланс">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>СОМ</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="cabinet-user cabinet-user--regular">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Константин</span>
+                                    <span class="cabinet-status cabinet-status--admin">Администратор</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>ЛС: <strong>4567</strong></span>
+                                    <span>/ ООО “Организация</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cabinet-user cabinet-user--demo cabinet-user--templates-demo" aria-label="Демо-режим" role="button" tabindex="0" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">ДЕМО-РЕЖИМ</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>Мой кабинет → </span><strong data-cabinet-current>Шаблоны</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="templatesTitle">Шаблоны</h1>
+            </div>
+
+            <nav class="cabinet-templates-tabs" aria-label="Разделы шаблонов">
+                <a class="cabinet-templates-tabs__item is-active" href="templates.html" aria-current="page" data-templates-tab="templates">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                    <span>Шаблоны</span>
+                </a>
+                <a class="cabinet-templates-tabs__item" href="#rules" data-templates-tab="rules">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg>
+                    <span>Правила</span>
+                </a>
+                <a class="cabinet-templates-tabs__item" href="#testing" data-templates-tab="testing">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-template-testing"></use></svg>
+                    <span>Тестирование шаблонов</span>
+                </a>
+            </nav>
+        </div>
+
+        <main class="cabinet-main" data-cabinet-templates-root>
+            <section class="cabinet-templates cabinet-templates-panel" aria-labelledby="templatesTitle" data-cabinet-templates-page data-templates-panel="templates">
+                <div class="cabinet-templates__toolbar">
+                    <div class="cabinet-templates__sort">
+                        <button class="cabinet-templates__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-page-size-toggle data-desktop-value="10" data-mobile-value="50">
+                            <span>Показывать по</span>
+                            <span class="cabinet-templates__sort-value" data-templates-page-size-value>10</span>
+                            <span class="cabinet-templates__sort-icon" aria-hidden="true"><img src="assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                        </button>
+                        <div class="cabinet-templates__sort-list" role="listbox" aria-label="Количество шаблонов на странице" hidden data-templates-page-size-list>
+                            <button class="cabinet-templates__sort-option is-active" type="button" role="option" aria-selected="true" data-templates-page-size-option="10">10</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="20">20</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="30">30</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="50">50</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cabinet-templates__table-wrap">
+                    <div class="cabinet-templates__table-scroll" tabindex="0" aria-label="Таблица шаблонов" data-templates-table-scroll>
+                        <div class="cabinet-templates-table" role="table" aria-label="Шаблоны">
+                            <div class="cabinet-templates-table__row cabinet-templates-table__row--head" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="columnheader"><span class="cabinet-templates-table__head-copy">Страна<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="columnheader"><span class="cabinet-templates-table__head-copy">Имя отправителя<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="columnheader"><span class="cabinet-templates-table__head-copy">Тип трафика<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="columnheader"><span class="cabinet-templates-table__head-copy">Статус<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="columnheader">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="columnheader"><span class="cabinet-templates-table__head-copy">Дата активации<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Австралия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Сервисный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Пример контента в таблице</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row cabinet-templates-table__row--tall" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Германия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Рекламный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text cabinet-templates-table__cell--clamp" role="cell">Пример большого количества контента в ячейке, отображаем первые 3 строки, далее скрываем текст за троеточием...</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Сервисный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Германия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Сервисный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Пример контента в таблице</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Италия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Транзакционный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Австралия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Рекламный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Пример контента в таблице</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Сервисный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Сервисный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Пример контента в таблице</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Рекламный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Китай</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Отправитель - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Транзакционный</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Готов к использованию</strong></span><span class="cabinet-templates-status__note">Дескриптор (опционально)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-templates__scrollbar" aria-hidden="true" hidden data-templates-scrollbar>
+                        <span class="cabinet-templates__scrollbar-track"></span>
+                        <span class="cabinet-templates__scrollbar-thumb" data-templates-scrollbar-thumb></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cabinet-template-rules cabinet-templates-panel" aria-labelledby="templatesTitle" hidden data-templates-panel="rules">
+                <div class="cabinet-template-rules__grid">
+                    <article class="cabinet-template-rules-card cabinet-template-rules-card--compose">
+                        <h2 class="cabinet-template-rules-card__title">Правила составления шаблонов</h2>
+
+                        <div class="cabinet-template-rules-card__body">
+                            <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+
+                            <div class="cabinet-template-rules-card__step cabinet-template-rules-card__step--intro">
+                                <p>Дла заведения нового шаблона необходимо скачать, заполнить и прислать заявку на <a href="mailto:names@nikita.kg">names@nikita.kg</a></p>
+                                <a class="cabinet-template-rules-card__download" href="#" aria-label="Скачать форму заявки на согласование шаблонов транзакционных / сервисных SMS">
+                                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-action-download"></use></svg>
+                                    <span>Форма заявки на согласование шаблонов транзакционных / сервисных SMS</span>
+                                </a>
+                            </div>
+
+                            <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+
+                            <div class="cabinet-template-rules-card__step cabinet-template-rules-card__step--legend">
+                                <p class="cabinet-template-rules-card__lead">Обозначения:</p>
+                                <div class="cabinet-template-rules-card__copy-stack">
+                                    <p>Знак <strong>“Х”</strong> на латинице обозначает один любой символ</p>
+                                    <p>Знак <strong>“~~”</strong> на латинице обозначает последовательность любых символов</p>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-template-rules-card__example">
+                                <p class="cabinet-template-rules-card__lead">Примеры:</p>
+                                <div class="cabinet-template-rules-card__example-lines">
+                                    <p>1. Ваш код для входа в систему: <strong>ХХХ</strong></p>
+                                    <p>2. Karta “<strong>XXX</strong>”: servis informirovaniya podkluchen.</p>
+                                    <p>3. Vash zakaz ID ~~ obrabotan na summu ~~ som, data vydachi <strong>ХХ.ХX.XX</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cabinet-template-rules-card cabinet-template-rules-card--traffic">
+                        <h2 class="cabinet-template-rules-card__title">Правила отнесения шаблонов к типам трафика</h2>
+
+                        <div class="cabinet-template-rules-card__body">
+                            <section class="cabinet-template-rules-card__section">
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Транзакционные SMS:</h3>
+                                    <p>К <strong>Транзакционным</strong> относятся SMS-сообщения, информирующие Абонента о проведении операций по движению денежных средств на его счёте либо о невозможности выполнения такой операции.</p>
+                                    <p>Под <strong>операцией движения средств</strong> понимаются:</p>
+                                    <ul>
+                                        <li>состоявшаяся операция зачисления / прихода / снятия резерва денежных средств;</li>
+                                        <li>состоявшаяся операция списания / расхода / перевода / резервирования денежных средств;</li>
+                                        <li>выплата комиссии, начисление % по вкладу, конверсия денежных средств в другую валюту;</li>
+                                        <li>отмена либо невозможность совершения перечисленных операций.</li>
+                                        <li>В Шаблоне Транзакционного сообщения должен быть ЯВНО указан тип операции, номер счёта, сумма.</li>
+                                    </ul>
+                                </div>
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                            </section>
+
+                            <section class="cabinet-template-rules-card__section">
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Сервисные SMS:</h3>
+                                    <p>Сервисным признаётся Сообщение, информирующее Абонента о статусе оказания ему сервиса / услуги клиента.</p>
+                                    <p>Под <strong>статусом оказания сервиса/услуги</strong> понимается:</p>
+                                    <ul>
+                                        <li>Разовый пароль (OTP);</li>
+                                        <li>Приветственное сообщение по факту регистрации в услуге;</li>
+                                        <li>Уведомление пользователя о событиях, влияющих на условия оказания услуг (изменение номера телефона, предоставление сервиса, к примеру, повышение абонентской платы);</li>
+                                        <li>Подтверждение заказа/покупки;</li>
+                                        <li>Статус доставки/возврата/обмена товара;</li>
+                                        <li>Напоминания о запланированном событии в рамках оказания услуги (к примеру, о назначенном визите);</li>
+                                        <li>Информирование о технических работах/предупреждений о приостановке/возобновлении работы сервисов;</li>
+                                        <li>Уведомления о входе/выходе/попытках входа в систему самообслуживания клиента;</li>
+                                        <li>Информирование о расписаниях занятий, текущих и итоговых достижениях, сообщения о внутреннем распорядке или домашнем задании и другие сообщения, отправляемые учебными заведениями, которые не противоречат правилам отнесения Шаблонов к Сервисным;</li>
+                                        <li>Информирование о долге клиента и реквизиты договора, на основании которого возник долг клиента;</li>
+                                        <li>Информирование об условиях и графике погашения долга клиента;</li>
+                                        <li>Информирование клиента о начислениях/списаниях/сроке использования баллов/погашения купонов в программах лояльности</li>
+                                        <li>Прочие Сообщения, соответствующие определению, указанному в п.4.1 настоящих Специальных условий</li>
+                                    </ul>
+                                </div>
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                            </section>
+
+                            <section class="cabinet-template-rules-card__section">
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Рекламные SMS:</h3>
+                                    <ul>
+                                        <li>Все Сообщения, не относящиеся к Транзакционным и Сервисным, относятся к Рекламным сообщениям. При этом, сбор Шаблонов для рекламного трафика не предусмотрен.</li>
+                                        <li>В случае, если текст SMS будет содержать лишние пробелы в начале и/или в конце текста, то такое SMS будет распознано платформой как НЕ соответствующее Шаблону.</li>
+                                        <li>Все не соответствующие Шаблонам Национальные А2Р SMS, а также все случаи отправки Сервисных/Рекламных/Транзакционных SMS-сообщений в любой смешанной комбинации будут также отнесены к категории Рекламных сообщений.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="cabinet-template-testing cabinet-templates-panel" aria-labelledby="templatesTitle" hidden data-templates-panel="testing" data-templates-testing>
+                <form class="cabinet-template-testing-card" action="#" data-templates-testing-form>
+                    <div class="cabinet-template-testing-card__fields">
+                        <div class="cabinet-template-testing-card__column">
+                            <div class="cabinet-template-testing-card__field">
+                                <span class="cabinet-template-testing-card__label">Страна:</span>
+                                <span class="cabinet-template-testing-card__select" data-templates-testing-select>
+                                    <button class="cabinet-template-testing-card__input cabinet-template-testing-card__input--select" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-testing-select-toggle>
+                                        <span>Кыргызстан</span>
+                                        <svg class="cabinet-icon cabinet-template-testing-card__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                                    </button>
+                                    <span class="cabinet-template-testing-card__select-menu" role="listbox" hidden data-templates-testing-select-menu>
+                                        <button class="cabinet-template-testing-card__select-option" type="button" role="option" aria-selected="true">Кыргызстан</button>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="cabinet-template-testing-card__field">
+                                <span class="cabinet-template-testing-card__label">Имя отправителя:</span>
+                                <span class="cabinet-template-testing-card__select" data-templates-testing-select>
+                                    <button class="cabinet-template-testing-card__input cabinet-template-testing-card__input--select" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-testing-select-toggle>
+                                        <span>SMSPRO.KG</span>
+                                        <svg class="cabinet-icon cabinet-template-testing-card__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                                    </button>
+                                    <span class="cabinet-template-testing-card__select-menu" role="listbox" hidden data-templates-testing-select-menu>
+                                        <button class="cabinet-template-testing-card__select-option" type="button" role="option" aria-selected="true">SMSPRO.KG</button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-template-testing-card__field cabinet-template-testing-card__field--message">
+                            <span class="cabinet-template-testing-card__label">Текст сообщения:</span>
+                            <span class="cabinet-template-testing-card__textarea" role="textbox" aria-label="Текст сообщения">Ваш код - %code%</span>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-template-testing-card__actions">
+                        <button class="cabinet-template-testing-card__button cabinet-template-testing-card__button--secondary" type="button" data-templates-testing-clear>Очистить форму</button>
+                        <button class="cabinet-template-testing-card__button cabinet-template-testing-card__button--primary" type="button" data-templates-testing-show>Показать результат</button>
+                    </div>
+
+                    <div class="cabinet-template-testing-result" hidden data-templates-testing-result>
+                        <div class="cabinet-template-testing-result__item">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-template-advertising"></use></svg>
+                            <span class="cabinet-template-testing-result__copy">
+                                <span>Тип трафика:</span>
+                                <strong>Рекламный</strong>
+                            </span>
+                        </div>
+                        <div class="cabinet-template-testing-result__item">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                            <span class="cabinet-template-testing-result__copy">
+                                <span>Шаблон:</span>
+                                <strong>-</strong>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© ОсОО "Никита Онлайн",</span>
+                <span>ОсОО "Никита Мобайл", 2014-2025 г.</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="https://smspro.nikita.kg/kg/oferta.html">Пользовательское соглашение</a> | <a href="security.html#bezop">Политика конфиденциальности</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Меню кабинета" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Тема">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Светлая тема" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Выйти</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Закрыть меню" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Меню кабинета">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Главная</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Рассылки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Списки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API-интеграция</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчёты</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>Сервис OTP</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблоны</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Условия и цены</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Технические возможности</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Надёжность и безопасность</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Вопросы и ответы</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Контакты</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Нижняя навигация кабинета">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Главная</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Рассылки</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Списки</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API-интеграция</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Отчёты</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>Сервис OTP</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-current="page">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Шаблоны</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Меню</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="assets/scripts/cabinet.js"></script>
+</body>
+</html>

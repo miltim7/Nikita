@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita — API интеграции</title>
-    <meta name="description" content="API интеграции личного кабинета Nikita.">
+    <title>Nikita — Сервис OTP</title>
+    <meta name="description" content="Сервис одноразовых паролей личного кабинета Nikita.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/cabinet.css">
 </head>
-<body class="cabinet-page cabinet-page--api" data-cabinet-current-section="api">
+<body class="cabinet-page cabinet-page--otp" data-cabinet-current-section="otp">
     <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Навигация кабинета" data-cabinet-sidepanel>
         <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
             <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Развернуть меню" aria-expanded="false" data-cabinet-sidepanel-toggle>
@@ -24,7 +24,7 @@
             <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
             <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API-интеграция"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API-интеграция</span></a>
             <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчёты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчёты</span></a>
-            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="Сервис OTP"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">Сервис OTP</span></a>
+            <a class="cabinet-sidepanel__item is-active" href="otp.html" data-cabinet-nav data-section="otp" aria-label="Сервис OTP" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">Сервис OTP</span></a>
             <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблоны"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблоны</span></a>
             <a class="cabinet-sidepanel__item" href="services.html" aria-label="Условия и цены"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Условия и цены</span></a>
             <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Технические возможности"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Технические возможности</span></a>
@@ -114,7 +114,7 @@
                                 <span class="cabinet-header__dot" aria-hidden="true"></span>
                             </button>
                         </div>
-                        <div class="cabinet-user">
+                        <div class="cabinet-user cabinet-user--regular">
                             <span class="cabinet-avatar cabinet-user__avatar">
                                 <img src="assets/images/cabinet-avatar.jpg" alt="">
                             </span>
@@ -129,162 +129,109 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="cabinet-user cabinet-user--demo cabinet-user--otp-demo" aria-label="Демо-режим" role="button" tabindex="0" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">ДЕМО-РЕЖИМ</span>
+                        </div>
                     </div>
                 </div>
             </header>
 
             <div class="cabinet-breadcrumbs">
-                <span>Мой кабинет → </span><strong data-cabinet-current>API интеграция</strong>
+                <span>Мой кабинет → </span><strong data-cabinet-current>Сервис OTP</strong>
             </div>
 
             <div class="cabinet-page-title">
-                <h1 class="cabinet-page-title__text" id="apiTitle">API интеграция</h1>
+                <h1 class="cabinet-page-title__text" id="otpTitle">Сервис одноразовых паролей (OTP)</h1>
             </div>
         </div>
 
         <main class="cabinet-main">
-            <section class="cabinet-api" aria-labelledby="apiTitle">
-                <div class="cabinet-api__content">
-                    <section class="cabinet-api-flow" aria-label="Схема API интеграции">
-                        <div class="cabinet-api-flow__platform">
-                            <span class="cabinet-api-flow__platform-icon" aria-hidden="true">
-                                <img src="assets/images/cabinet-api/platform.svg" alt="">
+            <section class="cabinet-otp" aria-labelledby="otpTitle" data-cabinet-otp-page>
+                <form class="cabinet-otp-form" data-cabinet-otp-form>
+                    <div class="cabinet-otp-form__fields">
+                        <label class="cabinet-otp-field cabinet-otp-field--stack">
+                            <span class="cabinet-otp-field__label">API ключ:</span>
+                            <span class="cabinet-otp-field__control">
+                                <input class="cabinet-otp-input" type="text" value="" placeholder="c2m459y2946hj49hjc4h0" aria-label="API ключ">
                             </span>
-                            <p>Платформа Nikita.kg</p>
-                        </div>
+                        </label>
 
-                        <div class="cabinet-api-flow__arrows" aria-hidden="true">
-                            <span class="cabinet-api-flow__arrow-pair">
-                                <img src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                                <img class="cabinet-api-flow__arrow--reverse" src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                            </span>
-                            <span class="cabinet-api-flow__arrow-pair">
-                                <img src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                                <img class="cabinet-api-flow__arrow--reverse" src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                            </span>
-                        </div>
-
-                        <div class="cabinet-api-flow__row cabinet-api-flow__row--large">
-                            <article class="cabinet-api-flow__node cabinet-api-flow__node--large">
-                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
-                                    <img src="assets/images/cabinet-api/api-call.svg" alt="">
-                                </span>
-                                <p>Вызов API-функции<br>для передачи SMS-сообщения<br>и получения отчёта о доставке</p>
-                            </article>
-                            <article class="cabinet-api-flow__node cabinet-api-flow__node--large">
-                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
-                                    <img src="assets/images/cabinet-api/sms-report.svg" alt="">
-                                </span>
-                                <p>Отправка SMS<br>и получение отчёта о доставке</p>
-                            </article>
-                        </div>
-
-                        <div class="cabinet-api-flow__arrows" aria-hidden="true">
-                            <span class="cabinet-api-flow__arrow-pair">
-                                <img src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                                <img class="cabinet-api-flow__arrow--reverse" src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                            </span>
-                            <span class="cabinet-api-flow__arrow-pair">
-                                <img src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                                <img class="cabinet-api-flow__arrow--reverse" src="assets/images/cabinet-api/arrow-vertical.svg" alt="">
-                            </span>
-                        </div>
-
-                        <div class="cabinet-api-flow__row cabinet-api-flow__row--small">
-                            <article class="cabinet-api-flow__node cabinet-api-flow__node--small">
-                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
-                                    <img src="assets/images/cabinet-api/sender.svg" alt="">
-                                </span>
-                                <p>Вы</p>
-                            </article>
-                            <article class="cabinet-api-flow__node cabinet-api-flow__node--small">
-                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
-                                    <img src="assets/images/cabinet-api/recipient.svg" alt="">
-                                </span>
-                                <p>Получатель</p>
-                            </article>
-                        </div>
-
-                        <div class="cabinet-api-flow__actions">
-                            <a class="cabinet-api-flow__button cabinet-api-flow__button--secondary" href="cabinet.html#support" data-cabinet-nav data-section="support">
-                                <span class="cabinet-api-flow__button-icon" aria-hidden="true"><img src="assets/images/cabinet-api/support.svg" alt=""></span>
-                                <span class="cabinet-api-flow__button-copy"><span>Задать вопрос</span><span>технику</span></span>
-                            </a>
-                            <a class="cabinet-api-flow__button cabinet-api-flow__button--primary" href="#xml-protocol">
-                                <span class="cabinet-api-flow__button-icon" aria-hidden="true"><img src="assets/images/cabinet-api/download.svg" alt=""></span>
-                                <span class="cabinet-api-flow__button-copy"><span>Загрузить описание</span><span>XML-протокола</span></span>
-                            </a>
-                        </div>
-                    </section>
-
-                    <div class="cabinet-api__aside">
-                        <section class="cabinet-api-protocols" aria-labelledby="apiProtocolsTitle">
-                            <h2 class="cabinet-api-protocols__title" id="apiProtocolsTitle">Протоколы</h2>
-                            <ol class="cabinet-api-protocols__list">
-                                <li class="cabinet-api-protocols__item">
-                                    <span class="cabinet-api-protocols__number">01</span>
-                                    <div class="cabinet-api-protocols__body">
-                                        <p>Универсальный XML/HTTP протокол - <br class="cabinet-api-protocols__desktop-break">для подключения интернет-магазинов</p>
-                                        <a class="cabinet-api-protocols__action" href="#documentation">
-                                            <span aria-hidden="true"><img src="assets/images/cabinet-api/documentation.svg" alt=""></span>
-                                            <span>Документация</span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="cabinet-api-protocols__item">
-                                    <span class="cabinet-api-protocols__number">02</span>
-                                    <div class="cabinet-api-protocols__body">
-                                        <p>SOAP-протокол для интеграции с 1С <br class="cabinet-api-protocols__desktop-break">или CRM</p>
-                                        <a class="cabinet-api-protocols__action cabinet-api-protocols__action--wide" href="#wsdl">
-                                            <span aria-hidden="true"><img src="assets/images/cabinet-api/wsdl.svg" alt=""></span>
-                                            <span>WSDL-описание</span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="cabinet-api-protocols__item">
-                                    <span class="cabinet-api-protocols__number">03</span>
-                                    <div class="cabinet-api-protocols__body">
-                                        <p>Протокол <a href="#smpp">SMPP 3.4</a> для высокоскоростной передачи</p>
-                                    </div>
-                                </li>
-                                <li class="cabinet-api-protocols__item">
-                                    <span class="cabinet-api-protocols__number">04</span>
-                                    <div class="cabinet-api-protocols__body">
-                                        <p>Для авторизации используйте те же логин / пароль, что вы используете для входа в личный кабинет</p>
-                                    </div>
-                                </li>
-                                <li class="cabinet-api-protocols__item">
-                                    <span class="cabinet-api-protocols__number">05</span>
-                                    <div class="cabinet-api-protocols__body">
-                                        <p><a href="#request-history">Здесь</a> вы сможете просмотреть историю ваших запросов</p>
-                                    </div>
-                                </li>
-                            </ol>
-                        </section>
-
-                        <section class="cabinet-api-examples" aria-labelledby="apiExamplesTitle">
-                            <h2 class="cabinet-api-examples__title" id="apiExamplesTitle">У нас есть простые примеры подключения к нашей платформе:</h2>
-                            <div class="cabinet-api-examples__grid">
-                                <a class="cabinet-api-examples__item" href="#php">
-                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="assets/images/cabinet-api/example.svg" alt=""></span>
-                                    <span>На PHP</span>
-                                </a>
-                                <a class="cabinet-api-examples__item" href="#python">
-                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="assets/images/cabinet-api/example.svg" alt=""></span>
-                                    <span>На Python</span>
-                                </a>
-                                <a class="cabinet-api-examples__item" href="#java">
-                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="assets/images/cabinet-api/example.svg" alt=""></span>
-                                    <span>На Java</span>
-                                </a>
-                                <a class="cabinet-api-examples__item" href="#noodlejs">
-                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="assets/images/cabinet-api/example.svg" alt=""></span>
-                                    <span>На NoodleJS</span>
-                                </a>
+                        <div class="cabinet-otp-field cabinet-otp-field--stack">
+                            <span class="cabinet-otp-field__label">Имя отправителя по умолчанию:</span>
+                            <div class="cabinet-otp-field__control">
+                                <div class="cabinet-otp-select" data-otp-select>
+                                    <button class="cabinet-otp-select__button" type="button" aria-haspopup="listbox" aria-expanded="false" data-otp-select-button>
+                                        <span data-otp-select-label>Не выбрано</span>
+                                        <img src="assets/images/cabinet-otp/select-chevron.svg" alt="">
+                                    </button>
+                                    <ul class="cabinet-otp-select__menu" role="listbox" hidden data-otp-select-menu>
+                                        <li class="cabinet-otp-select__option" role="option" aria-selected="true" data-otp-select-option>Не выбрано</li>
+                                        <li class="cabinet-otp-select__option" role="option" aria-selected="false" data-otp-select-option>NIKITA</li>
+                                        <li class="cabinet-otp-select__option" role="option" aria-selected="false" data-otp-select-option>SMSPRO</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </section>
+                        </div>
+
+                        <div class="cabinet-otp-inline-grid cabinet-otp-inline-grid--settings">
+                            <div class="cabinet-otp-field cabinet-otp-field--inline cabinet-otp-field--mobile-row cabinet-otp-field--code-length">
+                                <span class="cabinet-otp-field__label">Длина кода:</span>
+                                <span class="cabinet-otp-field__control">
+                                    <span class="cabinet-otp-stepper" data-otp-stepper data-initial="" data-min="4" data-max="12" data-step="1">
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Уменьшить длину кода" data-otp-stepper-decrement><img src="assets/images/cabinet-otp/step-minus.svg" alt=""></button>
+                                        <input class="cabinet-otp-stepper__value" type="text" value="" placeholder="6" inputmode="numeric" aria-label="Длина кода" data-otp-stepper-value>
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Увеличить длину кода" data-otp-stepper-increment><img src="assets/images/cabinet-otp/step-plus.svg" alt=""></button>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="cabinet-otp-field cabinet-otp-field--inline cabinet-otp-field--mobile-row">
+                                <span class="cabinet-otp-field__label">Сложность кода:</span>
+                                <span class="cabinet-otp-field__control">
+                                    <span class="cabinet-otp-stepper" data-otp-stepper data-initial="" data-min="1" data-max="5" data-step="1">
+                                        <button class="cabinet-otp-stepper__button cabinet-otp-stepper__button--muted" type="button" aria-label="Уменьшить сложность кода" data-otp-stepper-decrement><img src="assets/images/cabinet-otp/step-minus-muted.svg" alt=""></button>
+                                        <input class="cabinet-otp-stepper__value" type="text" value="" placeholder="1" inputmode="numeric" aria-label="Сложность кода" data-otp-stepper-value>
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Увеличить сложность кода" data-otp-stepper-increment><img src="assets/images/cabinet-otp/step-plus.svg" alt=""></button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <label class="cabinet-otp-field cabinet-otp-field--stack">
+                            <span class="cabinet-otp-field__label">Текст:</span>
+                            <span class="cabinet-otp-field__control">
+                                <textarea class="cabinet-otp-textarea" placeholder="Ваш код - %code%" aria-label="Текст"></textarea>
+                            </span>
+                        </label>
+
+                        <div class="cabinet-otp-inline-grid">
+                            <label class="cabinet-otp-field cabinet-otp-field--stack cabinet-otp-field--mobile-row">
+                                <span class="cabinet-otp-field__label">OTP-код:</span>
+                                <span class="cabinet-otp-field__control cabinet-otp-code">
+                                    <input class="cabinet-otp-input" type="text" value="" placeholder="%code%" aria-label="OTP-код" data-otp-code>
+                                    <button class="cabinet-otp-code__copy" type="button" aria-label="Скопировать OTP-код" data-otp-copy><img src="assets/images/cabinet-otp/copy.svg" alt=""></button>
+                                </span>
+                            </label>
+                            <div class="cabinet-otp-field cabinet-otp-field--stack cabinet-otp-field--mobile-row">
+                                <span class="cabinet-otp-field__label">Время жизни OTP-кода&nbsp; (сек.):</span>
+                                <span class="cabinet-otp-field__control">
+                                    <span class="cabinet-otp-stepper" data-otp-stepper data-initial="" data-min="30" data-max="600" data-step="30">
+                                        <button class="cabinet-otp-stepper__button cabinet-otp-stepper__button--muted" type="button" aria-label="Уменьшить время жизни кода" data-otp-stepper-decrement><img src="assets/images/cabinet-otp/step-minus-muted.svg" alt=""></button>
+                                        <input class="cabinet-otp-stepper__value" type="text" value="" placeholder="120" inputmode="numeric" aria-label="Время жизни OTP-кода" data-otp-stepper-value>
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Увеличить время жизни кода" data-otp-stepper-increment><img src="assets/images/cabinet-otp/step-plus.svg" alt=""></button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-otp-actions">
+                            <button class="cabinet-otp-button cabinet-otp-button--secondary" type="button" data-otp-reset>Отменить правки</button>
+                            <button class="cabinet-otp-button cabinet-otp-button--primary" type="submit">Сохранить изменения</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </section>
         </main>
 
@@ -328,7 +275,7 @@
                 <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Списки</span></a>
                 <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API-интеграция</span></a>
                 <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчёты</span></a>
-                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>Сервис OTP</span></a>
+                <a class="cabinet-tabbar-modal__item is-active" href="otp.html" data-cabinet-nav data-section="otp" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>Сервис OTP</span></a>
                 <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблоны</span></a>
                 <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Условия и цены</span></a>
                 <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Технические возможности</span></a>
@@ -359,7 +306,7 @@
                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
                 <span>Отчёты</span>
             </a>
-            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet is-active" href="otp.html" data-cabinet-nav data-section="otp" aria-current="page">
                 <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
                 <span>Сервис OTP</span>
             </a>

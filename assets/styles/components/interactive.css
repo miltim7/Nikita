@@ -283,6 +283,7 @@
         .cabinet-modal-button,
         .cabinet-price-modal__button,
         .cabinet-reports-tabs__item,
+        .cabinet-templates-tabs__item,
         .cabinet-sidepanel__item,
         .cabinet-tabbar__item,
         .cabinet-tabbar-modal__item,
@@ -317,6 +318,7 @@
         .cabinet-modal-button,
         .cabinet-price-modal__button,
         .cabinet-reports-tabs__item,
+        .cabinet-templates-tabs__item,
         .cabinet-sidepanel__item,
         .cabinet-tabbar__item,
         .cabinet-tabbar-modal__item,
@@ -331,8 +333,11 @@
     ):focus-visible,
     .security-integration__downloads a[href]:hover,
     .security-integration__downloads a[href]:focus-visible,
+    .cabinet-template-rules-card a[href]:hover,
+    .cabinet-template-rules-card a[href]:focus-visible,
     .security-api-row__cards a[href]:hover,
     .security-api-row__cards a[href]:focus-visible {
+        text-decoration-line: none;
         text-decoration-color: transparent;
     }
 

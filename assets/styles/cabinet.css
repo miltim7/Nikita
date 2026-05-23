@@ -20,7 +20,9 @@
 @import url('./sections/cabinet-mailing-create.css');
 @import url('./sections/cabinet-mailing-recipients.css');
 @import url('./sections/cabinet-api.css');
+@import url('./sections/cabinet-otp.css');
 @import url('./sections/cabinet-reports.css');
+@import url('./sections/cabinet-templates.css');
 
 /* ---------------- global interaction states ---------------- */
 @import url('./components/interactive.css');

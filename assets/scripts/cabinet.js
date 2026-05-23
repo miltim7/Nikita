@@ -7,9 +7,11 @@ import { initCabinetMailingsPage } from './modules/cabinet-mailings-page.js';
 import { initCabinetManagerPopover } from './modules/cabinet-manager-popover.js';
 import { initCabinetNotificationsPage } from './modules/cabinet-notifications-page.js';
 import { initCabinetNotificationsPopover } from './modules/cabinet-notifications-popover.js';
+import { initCabinetOtpPage } from './modules/cabinet-otp-page.js';
 import { initCabinetPriceModal } from './modules/cabinet-price-modal.js';
 import { initCabinetRecipientListsPage } from './modules/cabinet-recipient-lists-page.js';
 import { initCabinetReportsPage } from './modules/cabinet-reports-page.js';
+import { initCabinetTemplatesPage } from './modules/cabinet-templates-page.js';
 
 function init() {
     initCabinetSidepanel();
@@ -23,9 +25,11 @@ function init() {
     initCabinetManagerPopover();
     initCabinetNotificationsPage();
     initCabinetNotificationsPopover();
+    initCabinetOtpPage();
     initCabinetPriceModal();
     initCabinetRecipientListsPage();
     initCabinetReportsPage();
+    initCabinetTemplatesPage();
     initCabinetThemeToggle();
 }
 
