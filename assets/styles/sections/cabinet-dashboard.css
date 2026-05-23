@@ -716,7 +716,7 @@
     }
 
     body.cabinet-page.is-cabinet-sidepanel-open {
-        padding-left: var(--cabinet-sidepanel-w-full);
+        padding-left: var(--cabinet-sidepanel-w-short);
     }
 
     .cabinet-page__content {

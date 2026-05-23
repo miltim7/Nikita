@@ -9,6 +9,7 @@ import { initCabinetNotificationsPage } from './modules/cabinet-notifications-pa
 import { initCabinetNotificationsPopover } from './modules/cabinet-notifications-popover.js';
 import { initCabinetPriceModal } from './modules/cabinet-price-modal.js';
 import { initCabinetRecipientListsPage } from './modules/cabinet-recipient-lists-page.js';
+import { initCabinetReportsPage } from './modules/cabinet-reports-page.js';
 
 function init() {
     initCabinetSidepanel();
@@ -24,6 +25,7 @@ function init() {
     initCabinetNotificationsPopover();
     initCabinetPriceModal();
     initCabinetRecipientListsPage();
+    initCabinetReportsPage();
     initCabinetThemeToggle();
 }
 

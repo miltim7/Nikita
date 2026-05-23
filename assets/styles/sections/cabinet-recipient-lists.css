@@ -1051,12 +1051,46 @@
         padding-top: var(--space-6);
         padding-bottom: var(--space-6);
     }
+
+    .cabinet-recipient-lists__table-scroll {
+        width: var(--cabinet-recipient-lists-table-desktop-w);
+        max-width: none;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1475.98px) {
     .cabinet-page--recipient-lists .cabinet-page-title {
         padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
         padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+
+    .cabinet-recipient-lists__table-scroll {
+        width: 100%;
+        max-width: 100%;
+        margin-top: var(--space-0);
+    }
+
+    .cabinet-recipient-lists-table {
+        width: max(100%, var(--cabinet-recipient-lists-table-compact-w));
+        min-width: var(--cabinet-recipient-lists-table-compact-w);
+    }
+
+    .cabinet-recipient-lists-table__row {
+        grid-template-columns: 146px 82px 115px 70px 120px 110px 100px 100px 100px 100px 30px;
+    }
+
+    .cabinet-recipient-lists-table__row--head .cabinet-recipient-lists-table__cell {
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-recipient-lists-table__cell {
+        font-size: 10px;
+        letter-spacing: .2px;
+    }
+
+    .cabinet-recipient-lists__scrollbar {
+        display: block;
     }
 }
 

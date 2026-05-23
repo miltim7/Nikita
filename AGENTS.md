@@ -40,6 +40,7 @@ This is a large multi-page HTML/CSS/JS project based on Figma layouts. Keep the 
 - Keep class names BEM-like and scoped: `.block`, `.block__element`, `.block--modifier`.
 - Prefer asset files for Figma-exported icons/logos instead of inline SVG when the asset repeats.
 - Every clickable button/control must have a simple hover/focus interaction: use an existing tokenized transition, a subtle transform/filter/background/border change, and avoid raw browser default outlines unless they match the design.
+- Similar or identical clickable elements across pages must reuse the same hover, focus, active-state, and animation behavior. Before adding or changing a hover effect, check existing matching controls and keep transitions, transforms, colors, shadows, and icon state behavior consistent unless Figma explicitly shows a different state.
 
 ## Interaction Logic Rules
 
