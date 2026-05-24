@@ -12,13 +12,23 @@
     width: calc(var(--speed-test-panel-width) + var(--speed-test-tab-width));
     height: var(--speed-test-height);
     filter: drop-shadow(var(--shadow-figma-menu));
+    opacity: 0;
     pointer-events: none;
-    transform: translateX(calc(var(--speed-test-panel-width) * -1));
-    transition: transform var(--transition-slow);
+    visibility: hidden;
+    transform: translateX(calc((var(--speed-test-panel-width) + var(--speed-test-tab-width)) * -1));
+    transition:
+        transform var(--transition-slow),
+        opacity var(--transition-base),
+        visibility 0s linear var(--transition-slow);
 }
 
 .speed-test-widget.is-open {
+    opacity: 1;
     transform: translateX(0);
+    visibility: visible;
+    transition:
+        transform var(--transition-slow),
+        opacity var(--transition-base);
 }
 
 .speed-test-widget__panel {

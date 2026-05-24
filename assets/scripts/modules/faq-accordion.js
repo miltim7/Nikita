@@ -6,6 +6,11 @@ export function initFaqAccordion() {
     const items = Array.from(document.querySelectorAll('.faq-item'));
     if (!items.length) return;
 
+    const hashTarget = window.location.hash ? document.querySelector(window.location.hash) : null;
+    if (hashTarget?.matches('.faq-item')) {
+        hashTarget.open = true;
+    }
+
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
 

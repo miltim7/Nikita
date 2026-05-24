@@ -48,6 +48,9 @@ function renderWidget() {
 
 export function initSpeedTestWidget() {
     if (document.getElementById('speedTestWidget')) return;
+    const triggers = Array.from(document.querySelectorAll('[data-speed-test-trigger]'));
+
+    if (!triggers.length) return;
 
     const widget = renderWidget();
     document.body.append(widget);
@@ -58,10 +61,10 @@ export function initSpeedTestWidget() {
     const submit = widget.querySelector('[data-speed-test-submit]');
     const submitText = widget.querySelector('[data-speed-test-submit-text]');
     const status = widget.querySelector('[data-speed-test-status]');
-    const triggers = Array.from(document.querySelectorAll('[data-speed-test-trigger]'));
     let lastTrigger = null;
 
     const setTriggerState = (isOpen) => {
+        widget.setAttribute('aria-hidden', String(!isOpen));
         toggle.setAttribute('aria-expanded', String(isOpen));
         form.setAttribute('aria-hidden', String(!isOpen));
         input.tabIndex = isOpen ? 0 : -1;
@@ -86,10 +89,6 @@ export function initSpeedTestWidget() {
     };
 
     setTriggerState(false);
-
-    if (window.location.hash === '#speedTestWidget') {
-        openWidget();
-    }
 
     toggle.addEventListener('click', () => {
         lastTrigger = toggle;

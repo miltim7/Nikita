@@ -763,8 +763,18 @@ body.is-cabinet-modal-open {
     grid-area: input;
 }
 
-.cabinet-quick-sms__add-name {
+.cabinet-quick-sms__add-wrap {
     grid-area: add;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+}
+
+.cabinet-quick-sms__add-name,
+.cabinet-quick-sms__help-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -778,10 +788,44 @@ body.is-cabinet-modal-open {
     white-space: nowrap;
 }
 
+.cabinet-quick-sms__help-button {
+    flex: 0 0 32px;
+    width: 32px;
+    border-radius: var(--radius-xs);
+}
+
+.cabinet-quick-sms__help-button:hover,
+.cabinet-quick-sms__help-button:focus-visible,
+.cabinet-quick-sms__help-button.is-active {
+    background: var(--color-surface-blue-10);
+}
+
 .cabinet-quick-sms__help {
     width: 24px;
     height: 24px;
     color: var(--color-header-blue-50);
+}
+
+.cabinet-quick-sms__tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 2;
+    width: 272px;
+    padding: 10px 12px;
+    border-radius: var(--radius-xs);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-menu);
+    color: var(--color-black-80);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: normal;
+}
+
+.cabinet-quick-sms__tooltip[hidden] {
+    display: none;
 }
 
 .cabinet-quick-sms__plus {
@@ -1182,13 +1226,25 @@ body.is-cabinet-modal-open {
         margin-bottom: 0;
     }
 
-    .cabinet-quick-sms__add-name {
+    .cabinet-quick-sms__add-wrap,
+    .cabinet-quick-sms__add-name,
+    .cabinet-quick-sms__help-button {
         height: 32px;
+    }
+
+    .cabinet-quick-sms__help-button {
+        flex-basis: 24px;
+        width: 24px;
     }
 
     .cabinet-quick-sms__help {
         width: 16px;
         height: 16px;
+    }
+
+    .cabinet-quick-sms__tooltip {
+        right: 0;
+        width: min(272px, calc(100vw - 48px));
     }
 
     .cabinet-quick-sms__message-head {

@@ -84,11 +84,16 @@ function quickSmsTemplate() {
             <div class="cabinet-quick-sms__field cabinet-quick-sms__field--sender">
                 <div class="cabinet-quick-sms__sender-top">
                     <label class="cabinet-action-label" for="cabinetQuickSender">От кого:</label>
-                    <button class="cabinet-quick-sms__add-name" type="button" data-cabinet-modal-open="sender-name">
-                        ${spriteIcon('icon-action-plus', 'cabinet-quick-sms__plus')}
-                        <span>Добавить имя</span>
-                        ${spriteIcon('icon-action-help', 'cabinet-quick-sms__help')}
-                    </button>
+                    <div class="cabinet-quick-sms__add-wrap">
+                        <button class="cabinet-quick-sms__add-name" type="button" data-cabinet-modal-open="sender-name">
+                            ${spriteIcon('icon-action-plus', 'cabinet-quick-sms__plus')}
+                            <span>Добавить имя</span>
+                        </button>
+                        <button class="cabinet-quick-sms__help-button" type="button" aria-label="Подсказка об имени отправителя" aria-expanded="false" aria-describedby="cabinetQuickSenderHint" data-cabinet-sender-help>
+                            ${spriteIcon('icon-action-help', 'cabinet-quick-sms__help')}
+                        </button>
+                        <span class="cabinet-quick-sms__tooltip" id="cabinetQuickSenderHint" role="tooltip" hidden data-cabinet-sender-help-tooltip>Имя отправителя отображается у получателя вместо номера. Новое имя нужно добавить и дождаться согласования.</span>
+                    </div>
                 </div>
                 <div class="cabinet-action-select" data-cabinet-sender-select>
                     <button class="cabinet-action-input cabinet-action-input--select" id="cabinetQuickSender" type="button" aria-expanded="false" aria-controls="cabinetQuickSenderMenu" data-cabinet-sender-toggle>
@@ -110,11 +115,11 @@ function quickSmsTemplate() {
                 <div class="cabinet-quick-sms__message-head">
                     <label class="cabinet-action-label" for="cabinetQuickMessage">Введите текст сообщения:</label>
                     <div class="cabinet-quick-sms__counter">
-                        <span>Символов: <b>11</b></span>
+                        <span>Символов: <b>0</b></span>
                         <span>Частей SMS: <b>1</b></span>
                     </div>
                 </div>
-                <textarea class="cabinet-action-input cabinet-action-input--textarea" id="cabinetQuickMessage" name="message">Добрый день! </textarea>
+                <textarea class="cabinet-action-input cabinet-action-input--textarea" id="cabinetQuickMessage" name="message" placeholder="Введите текст SMS"></textarea>
                 <div class="cabinet-quick-sms__tools">
                     <button type="button" data-cabinet-translit-message>
                         ${spriteIcon('icon-action-translit')}
@@ -371,6 +376,7 @@ export function initCabinetActionModals() {
         const trigger = activeTrigger;
         window.clearTimeout(paymentNextTimer);
         closeSenderSelects(modal);
+        closeSenderHelp(modal);
         activeModal = null;
         document.removeEventListener('keydown', handleKeydown);
 
@@ -423,6 +429,19 @@ export function initCabinetActionModals() {
         root.querySelectorAll('[data-cabinet-sender-select].is-open').forEach((select) => {
             if (select !== except) closeSenderSelect(select);
         });
+    };
+
+    const closeSenderHelp = (root = activeModal, restoreFocus = false) => {
+        const tooltip = root?.querySelector('[data-cabinet-sender-help-tooltip]:not([hidden])');
+        const button = root?.querySelector('[data-cabinet-sender-help]');
+        if (!tooltip || !button) return false;
+
+        tooltip.hidden = true;
+        tooltip.classList.remove('is-open');
+        button.classList.remove('is-active');
+        button.setAttribute('aria-expanded', 'false');
+        if (restoreFocus) button.focus({ preventScroll: true });
+        return true;
     };
 
     const updateQuickCounter = (form) => {
@@ -495,6 +514,10 @@ export function initCabinetActionModals() {
                 return;
             }
 
+            if (closeSenderHelp(activeModal, true)) {
+                return;
+            }
+
             closeModal();
             return;
         }
@@ -562,6 +585,25 @@ export function initCabinetActionModals() {
 
             if (!event.target.closest('[data-cabinet-sender-select]')) {
                 closeSenderSelects(modal);
+            }
+
+            const senderHelp = event.target.closest('[data-cabinet-sender-help]');
+
+            if (senderHelp) {
+                event.preventDefault();
+                const tooltip = modal.querySelector('[data-cabinet-sender-help-tooltip]');
+                if (!tooltip) return;
+
+                const shouldOpen = tooltip.hidden;
+                tooltip.hidden = !shouldOpen;
+                tooltip.classList.toggle('is-open', shouldOpen);
+                senderHelp.classList.toggle('is-active', shouldOpen);
+                senderHelp.setAttribute('aria-expanded', String(shouldOpen));
+                return;
+            }
+
+            if (!event.target.closest('[data-cabinet-sender-help-tooltip]')) {
+                closeSenderHelp(modal);
             }
 
             const profileLink = event.target.closest('[data-cabinet-profile-link]');

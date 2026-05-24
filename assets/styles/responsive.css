@@ -818,13 +818,22 @@
     .header__links {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 8px;
     }
     .header__link {
         gap: 0;
-        width: 16px;
-        height: 16px;
-        overflow: hidden;
+        width: 28px;
+        height: 28px;
+        padding: 4px;
+        margin: -4px;
+        overflow: visible;
+        justify-content: center;
+        flex: 0 0 28px;
+    }
+    .header__link-icon,
+    .header__link-icon img {
+        width: 20px;
+        height: 20px;
     }
     .header__link-text { display: none; }
     .header__cta {
@@ -1385,13 +1394,19 @@
         gap: var(--space-1);
     }
     .header__links {
-        gap: 6px;
+        gap: 4px;
     }
-    .header__link,
+    .header__link {
+        width: 26px;
+        height: 26px;
+        padding: 4px;
+        margin: -4px;
+        flex-basis: 26px;
+    }
     .header__link-icon,
     .header__link-icon img {
-        width: 14px;
-        height: 14px;
+        width: 18px;
+        height: 18px;
     }
     .header__cta {
         height: 30px;
