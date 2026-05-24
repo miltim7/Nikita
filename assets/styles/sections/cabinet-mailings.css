@@ -297,8 +297,9 @@
 
 .cabinet-mailings-filter__select-icon img {
     display: block;
-    width: 11.309px;
-    height: 6.706px;
+    width: 6.706px;
+    height: 11.309px;
+    transform: rotate(-90deg) scaleX(-1);
 }
 
 .cabinet-mailings-filter__buttons {
@@ -821,6 +822,12 @@
         content: url('../../images/cabinet-mailings/icon-chevron-tablet.svg');
         width: 7.539px;
         height: 4.47px;
+    }
+
+    .cabinet-mailings-filter__select-icon img {
+        width: 4.47px;
+        height: 7.539px;
+        transform: rotate(-90deg) scaleX(-1);
     }
 
     .cabinet-mailings__sort-icon img {

@@ -177,18 +177,53 @@ export function initCabinetTabbarModal() {
 
 export function initCabinetThemeToggle() {
     const buttons = document.querySelectorAll('[data-theme-toggle], [data-cabinet-theme-button]');
-    if (!buttons.length) return;
+    if (!document.body.classList.contains('cabinet-page') || !buttons.length) return;
+
+    const storageKey = 'nikita:cabinet-theme';
+    const themes = new Set(['light', 'dark']);
+    const getButtonTheme = (button) => button.dataset.cabinetThemeButton || button.dataset.themeToggle;
+    const normalizeTheme = (theme) => (themes.has(theme) ? theme : 'light');
+
+    const getStoredTheme = () => {
+        try {
+            return normalizeTheme(window.localStorage.getItem(storageKey));
+        } catch (error) {
+            return 'light';
+        }
+    };
+
+    const setStoredTheme = (theme) => {
+        try {
+            window.localStorage.setItem(storageKey, theme);
+        } catch (error) {
+            // Keep the visual switch working even when storage is unavailable.
+        }
+    };
+
+    const syncButtons = (theme) => {
+        buttons.forEach((button) => {
+            const isCurrent = getButtonTheme(button) === theme;
+            button.classList.toggle('is-active', isCurrent);
+            button.setAttribute('aria-pressed', String(isCurrent));
+        });
+    };
+
+    const setTheme = (theme, persist = false) => {
+        const currentTheme = normalizeTheme(theme);
+        document.body.dataset.cabinetTheme = currentTheme;
+        document.documentElement.dataset.cabinetTheme = currentTheme;
+        syncButtons(currentTheme);
+
+        if (persist) {
+            setStoredTheme(currentTheme);
+        }
+    };
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
-            const group = button.closest('[role="group"]') ?? document;
-            const groupButtons = group.querySelectorAll('[data-theme-toggle], [data-cabinet-theme-button]');
-
-            groupButtons.forEach((item) => {
-                const isCurrent = item === button;
-                item.classList.toggle('is-active', isCurrent);
-                item.setAttribute('aria-pressed', String(isCurrent));
-            });
+            setTheme(getButtonTheme(button), true);
         });
     });
+
+    setTheme(getStoredTheme());
 }

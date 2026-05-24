@@ -1,0 +1,425 @@
+/* ============================================================
+   CABINET THEME
+   Theme overrides are scoped to cabinet pages only.
+   ============================================================ */
+
+body.cabinet-page[data-cabinet-theme="dark"] {
+    color-scheme: dark;
+    --color-bg: var(--cabinet-dark-surface);
+    --color-bg-soft: var(--cabinet-dark-page-bg);
+    --color-text: var(--cabinet-dark-text);
+    --color-text-muted: var(--cabinet-dark-text-muted);
+    --color-black-100: var(--cabinet-dark-text);
+    --color-black-80: var(--cabinet-dark-text-muted);
+    --color-black-50: var(--cabinet-dark-text-subtle);
+    --color-black-20: var(--cabinet-dark-border-strong);
+    --color-black-10: var(--cabinet-dark-border);
+    --color-gray-100: var(--cabinet-dark-text-subtle);
+    --color-gray-icon: var(--cabinet-dark-text-subtle);
+    --color-gray-20: var(--cabinet-dark-border);
+    --color-gray-10: rgba(255, 255, 255, .08);
+    --color-gray-5: rgba(255, 255, 255, .05);
+    --color-surface-blue-5: rgba(255, 255, 255, .1);
+    --color-surface-blue-10: rgba(255, 255, 255, .12);
+    --color-surface-green-10: rgba(143, 185, 58, .15);
+    --color-surface-orange-10: rgba(237, 90, 32, .16);
+    --color-surface-red-10: rgba(236, 58, 45, .16);
+    --color-red-10: rgba(236, 58, 45, .16);
+    --color-blue-20: rgba(117, 195, 255, .45);
+    --color-orange-50: rgba(237, 90, 32, .7);
+    --cabinet-footer-bg: var(--cabinet-dark-surface);
+    --interactive-hover-bg: rgba(255, 255, 255, .08);
+    --interactive-hover-bg-inverse: rgba(255, 255, 255, .16);
+    --interactive-hover-filter: brightness(1.08) saturate(1.06);
+    --shadow-cabinet-header: 0 2px 2px rgba(0, 0, 0, .35);
+    --shadow-cabinet-header-tablet: 0 0 0 1px var(--cabinet-dark-border);
+    --shadow-cabinet-panel: 0 0 0 1px var(--cabinet-dark-border);
+    --shadow-cabinet-table: 0 0 0 1px var(--cabinet-dark-border);
+    --shadow-cabinet-step: 0 0 0 1px var(--cabinet-dark-border);
+    --shadow-figma-cta: 0 2px 2px rgba(0, 0, 0, .2), inset 0 1px 1px rgba(255, 255, 255, .2);
+    background: var(--cabinet-dark-page-bg);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-header,
+    .cabinet-header__mobile-top,
+    .cabinet-header__line,
+    .cabinet-footer,
+    .cabinet-sidepanel,
+    .cabinet-tabbar,
+    .cabinet-tabbar-modal,
+    .cabinet-manager-popover,
+    .cabinet-language-popover,
+    .cabinet-notifications-popover,
+    .cabinet-price-modal__dialog,
+    .cabinet-action-modal__dialog,
+    .cabinet-profile-modal__dialog,
+    .registration-activation-modal__dialog
+) {
+    background: var(--cabinet-dark-surface);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-card,
+    .cabinet-placeholder__body,
+    .cabinet-mailings-filter,
+    .cabinet-mailings-table,
+    .cabinet-recipient-lists-filter,
+    .cabinet-recipient-lists-table,
+    .cabinet-reports-filter,
+    .cabinet-reports-periods-filter,
+    .cabinet-reports-table,
+    .cabinet-templates-filter,
+    .cabinet-templates-table,
+    .cabinet-notifications-card,
+    .cabinet-api-card,
+    .cabinet-otp-card,
+    .cabinet-profile-card,
+    .cabinet-registration-card,
+    .cabinet-agreement-card,
+    .cabinet-template-testing-card,
+    .cabinet-template-rules-card,
+    .cabinet-mailing-create-form,
+    .cabinet-mailing-create-step,
+    .cabinet-mailing-recipients-card,
+    .cabinet-mailing-source-card,
+    .cabinet-mailing-map-card,
+    .cabinet-mailing-message-card,
+    .cabinet-price-modal__table-wrap,
+    .registration-card
+) {
+    background: var(--cabinet-dark-surface);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-header__line,
+    .cabinet-header__mobile-top,
+    .cabinet-footer,
+    .cabinet-card__divider,
+    .cabinet-tabbar-modal__head,
+    .cabinet-tabbar-modal__item--divider,
+    .cabinet-sidepanel__item--divider,
+    .cabinet-sidepanel__bottom--full,
+    .cabinet-price-modal__table-wrap,
+    .cabinet-price-modal__table th,
+    .cabinet-price-modal__table td,
+    .cabinet-price-modal__table th + th,
+    .cabinet-price-modal__table td + td,
+    .registration-card__divider
+) {
+    border-color: var(--cabinet-dark-border);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-header__line {
+    box-shadow: inset 0 -1px 0 var(--cabinet-dark-border);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-footer {
+    box-shadow: inset 0 1px 0 var(--cabinet-dark-border);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-footer__copyright {
+    color: var(--cabinet-dark-text-disabled);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-footer__legal {
+    color: var(--cabinet-dark-text-muted);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-footer__phone {
+    color: var(--cabinet-dark-text);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-footer__phone .cabinet-icon {
+    color: var(--cabinet-dark-text-subtle);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(input, textarea, select) {
+    color: var(--cabinet-dark-text);
+    caret-color: var(--cabinet-dark-text);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(select option, select optgroup) {
+    color: var(--cabinet-dark-text);
+    background: var(--cabinet-dark-surface);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] select option:checked {
+    color: var(--color-text-inverse);
+    background: var(--color-header-blue);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(input, textarea)::placeholder {
+    color: var(--cabinet-dark-text-subtle);
+    opacity: 1;
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-input,
+    .cabinet-action-input,
+    .cabinet-action-select__button,
+    .cabinet-action-select__menu,
+    .cabinet-mailings-filter__search,
+    .cabinet-mailings-filter__date-input,
+    .cabinet-mailings-filter__select-wrap,
+    .cabinet-mailings__sort-list,
+    .cabinet-recipient-lists-filter__search,
+    .cabinet-recipient-lists-filter__date-input,
+    .cabinet-recipient-lists-filter__select-wrap,
+    .cabinet-recipient-lists__sort-list,
+    .cabinet-reports-filter__search,
+    .cabinet-reports-filter__date-input,
+    .cabinet-reports-filter__select-wrap,
+    .cabinet-reports__sort-list,
+    .cabinet-templates-filter__search,
+    .cabinet-templates-filter__select-wrap,
+    .cabinet-template-testing-card__input,
+    .cabinet-template-testing-card__textarea,
+    .cabinet-template-testing-card__select-menu,
+    .cabinet-templates__sort-list,
+    .cabinet-mailing-create-field__control,
+    .cabinet-mailing-create-select,
+    .cabinet-mailing-recipients-input,
+    .cabinet-mailing-recipients-select,
+    .cabinet-mailing-recipients-age,
+    .cabinet-mailing-source-input,
+    .cabinet-mailing-source-select,
+    .cabinet-mailing-source-age,
+    .cabinet-mailing-map-select,
+    .cabinet-mailing-map-select__menu,
+    .cabinet-mailing-message-input,
+    .cabinet-mailing-message-stepper,
+    .cabinet-mailing-message__textarea,
+    .cabinet-otp-input,
+    .cabinet-otp-textarea,
+    .cabinet-otp-select__button,
+    .cabinet-otp-select__menu,
+    .cabinet-otp-stepper,
+    .cabinet-profile-input,
+    .cabinet-profile-textarea,
+    .cabinet-profile-stepper,
+    .cabinet-registration-input,
+    .cabinet-registration-textarea,
+    .registration-input,
+    .registration-checkbox__control
+) {
+    color: var(--cabinet-dark-text);
+    background: var(--cabinet-dark-control-bg);
+    border-color: var(--cabinet-dark-border);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-input,
+    .cabinet-action-input,
+    .cabinet-action-select__button,
+    .cabinet-mailings-filter__search,
+    .cabinet-mailings-filter__date-input,
+    .cabinet-mailings-filter__select-wrap,
+    .cabinet-recipient-lists-filter__search,
+    .cabinet-recipient-lists-filter__date-input,
+    .cabinet-recipient-lists-filter__select-wrap,
+    .cabinet-reports-filter__search,
+    .cabinet-reports-filter__date-input,
+    .cabinet-reports-filter__select-wrap,
+    .cabinet-templates-filter__search,
+    .cabinet-templates-filter__select-wrap,
+    .cabinet-template-testing-card__input,
+    .cabinet-template-testing-card__textarea,
+    .registration-input
+):is(:hover, :focus, :focus-within) {
+    background: var(--cabinet-dark-control-bg-hover);
+    border-color: var(--cabinet-dark-border-strong);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-input,
+    .cabinet-action-input,
+    .cabinet-mailings-filter__search input,
+    .cabinet-mailings-filter__date-input input,
+    .cabinet-recipient-lists-filter__search input,
+    .cabinet-recipient-lists-filter__date-input input,
+    .cabinet-reports-filter__search input,
+    .cabinet-reports-filter__date-input input,
+    .cabinet-templates-filter__search input,
+    .cabinet-template-testing-card__input,
+    .cabinet-template-testing-card__textarea,
+    .registration-input
+):focus {
+    outline-color: var(--cabinet-dark-focus);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-header .cabinet-select {
+    background: transparent;
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-header .cabinet-select:hover,
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-header .cabinet-select:focus-visible,
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-user:hover,
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-user:focus-visible {
+    background: var(--cabinet-dark-control-bg);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__toggle,
+    .cabinet-sidepanel__theme,
+    .cabinet-sidepanel__logout,
+    .cabinet-tabbar-modal__theme,
+    .cabinet-tabbar-modal__logout,
+    .cabinet-tabbar-modal__close
+) {
+    background: var(--cabinet-dark-control-bg);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__theme-btn,
+    .cabinet-tabbar-modal__theme-btn
+) {
+    color: var(--cabinet-dark-text-disabled);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__theme-btn,
+    .cabinet-tabbar-modal__theme-btn
+).is-active {
+    color: var(--cabinet-dark-text);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__item-label,
+    .cabinet-sidepanel__subitem-label,
+    .cabinet-tabbar-modal__item span
+) {
+    color: var(--cabinet-dark-text-muted);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-sidepanel__subitem.is-current .cabinet-sidepanel__subitem-label {
+    color: var(--color-header-blue);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__item,
+    .cabinet-sidepanel__subitem,
+    .cabinet-tabbar-modal__item
+) {
+    color: var(--cabinet-icon-blue);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__item.is-active
+) {
+    color: var(--color-text-inverse);
+    background: var(--color-header-blue);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-tabbar-modal__item.is-active {
+    background: var(--cabinet-dark-control-bg);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__item.is-active .cabinet-sidepanel__item-label,
+    .cabinet-tabbar-modal__item.is-active span
+) {
+    color: var(--color-text-inverse);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-tabbar__item.is-active {
+    color: var(--color-header-orange);
+    background: var(--color-surface-orange-10);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-tabbar__item.is-active .cabinet-icon {
+    color: var(--color-header-orange);
+}
+
+body.cabinet-page--registration[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__item.is-active,
+    .cabinet-tabbar-modal__item.is-active
+) {
+    color: var(--cabinet-icon-blue);
+    background: transparent;
+}
+
+body.cabinet-page--registration[data-cabinet-theme="dark"] :is(
+    .cabinet-sidepanel__item.is-active .cabinet-sidepanel__item-label,
+    .cabinet-tabbar-modal__item.is-active span
+) {
+    color: var(--cabinet-dark-text-muted);
+}
+
+body.cabinet-page--registration[data-cabinet-theme="dark"] .cabinet-tabbar__item.is-active {
+    color: var(--cabinet-dark-text);
+    background: transparent;
+}
+
+body.cabinet-page--registration[data-cabinet-theme="dark"] .cabinet-tabbar__item.is-active .cabinet-icon {
+    color: var(--cabinet-icon-blue);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-mailing-create-step.is-active {
+    background: var(--color-header-blue);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-mailing-create-step.is-active :is(
+    .cabinet-mailing-create-step__label,
+    .cabinet-mailing-create-step__number
+) {
+    color: var(--cabinet-dark-text);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td
+) {
+    border-color: var(--cabinet-dark-border);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    tbody tr:nth-child(odd),
+    .cabinet-price-modal__table tbody tr:nth-child(odd)
+) {
+    background: var(--color-gray-5);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .cabinet-modal {
+    background: var(--cabinet-dark-overlay);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] .registration-activation-modal {
+    background: var(--cabinet-dark-overlay);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    .cabinet-modal-button--secondary,
+    .cabinet-price-modal__button--secondary,
+    .cabinet-btn--secondary
+) {
+    background: var(--cabinet-dark-surface);
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    img[src*="calendar.svg"],
+    img[src*="chevron.svg"],
+    img[src*="sort.svg"],
+    img[src*="filter.svg"],
+    img[src*="help.svg"],
+    img[src$="plus.svg"],
+    img[src$="minus.svg"]
+) {
+    filter: brightness(0) invert(1);
+    opacity: .7;
+}
+
+body.cabinet-page[data-cabinet-theme="dark"] :is(
+    img[src*="icon-action"],
+    img[src*="status-"],
+    img[src*="checkbox-check"],
+    img[src*="flag-"],
+    img[src*="logo"]
+) {
+    filter: none;
+    opacity: 1;
+}

@@ -29,3 +29,6 @@
 
 /* ---------------- global interaction states ---------------- */
 @import url('./components/interactive.css');
+
+/* ---------------- cabinet theme overrides ---------------- */
+@import url('./components/cabinet-theme.css');

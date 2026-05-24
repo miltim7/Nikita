@@ -257,6 +257,18 @@
     --cabinet-input-radius: 4px;
     --cabinet-tabbar-h: 56px;
     --cabinet-footer-bg: linear-gradient(90deg, var(--color-gray-5) 0%, var(--color-gray-5) 100%), #fff;
+    --cabinet-dark-page-bg: #0D0D0D;
+    --cabinet-dark-surface: #212020;
+    --cabinet-dark-control-bg: rgba(255, 255, 255, .1);
+    --cabinet-dark-control-bg-hover: rgba(255, 255, 255, .14);
+    --cabinet-dark-border: rgba(255, 255, 255, .1);
+    --cabinet-dark-border-strong: rgba(255, 255, 255, .2);
+    --cabinet-dark-text: #FFFFFF;
+    --cabinet-dark-text-muted: rgba(255, 255, 255, .8);
+    --cabinet-dark-text-subtle: rgba(255, 255, 255, .5);
+    --cabinet-dark-text-disabled: rgba(255, 255, 255, .2);
+    --cabinet-dark-overlay: rgba(0, 0, 0, .72);
+    --cabinet-dark-focus: rgba(117, 195, 255, .28);
     --cabinet-lh-tertiary: 10px;
     --cabinet-lh-status: 12px;
     --cabinet-lh-secondary: 14px;
