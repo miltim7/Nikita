@@ -25,6 +25,7 @@
 @import url('./sections/cabinet-templates.css');
 @import url('./sections/cabinet-profile.css');
 @import url('./sections/cabinet-registration.css');
+@import url('./sections/cabinet-agreement.css');
 
 /* ---------------- global interaction states ---------------- */
 @import url('./components/interactive.css');

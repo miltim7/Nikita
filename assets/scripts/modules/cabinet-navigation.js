@@ -19,6 +19,7 @@ const CABINET_SECTIONS = {
     profile: { label: 'Мой профиль', icon: 'icon-nav-widget' },
     registration: { label: 'Регистрация', icon: 'icon-nav-widget' },
     notifications: { label: 'Уведомления', icon: 'icon-bell' },
+    agreement: { label: 'Пользовательское соглашение', icon: 'icon-nav-docs' },
     menu: { label: 'Меню', icon: 'icon-nav-burger' },
 };
 

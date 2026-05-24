@@ -1,0 +1,195 @@
+/* ============================================================
+   CABINET USER AGREEMENT
+   Figma source: crm / nodes 2210:16178, 3239:68664, 3239:68563
+   ============================================================ */
+
+.cabinet-page--agreement .cabinet-main {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+}
+
+.cabinet-agreement {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    min-width: 0;
+    color: var(--color-black-100);
+    font-variation-settings: "CRSV" 0, "SHRP" 0;
+}
+
+.cabinet-agreement__section,
+.cabinet-agreement__appendix {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    width: 100%;
+    min-width: 0;
+}
+
+.cabinet-agreement__appendix {
+    padding: var(--space-6);
+    border-radius: var(--cabinet-card-radius);
+    background: var(--color-gray-5);
+}
+
+.cabinet-agreement__intro,
+.cabinet-agreement__subhead,
+.cabinet-agreement__copy,
+.cabinet-agreement__requisites {
+    width: 100%;
+    margin: 0;
+    font-size: var(--fs-base);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    overflow-wrap: break-word;
+}
+
+.cabinet-agreement__intro,
+.cabinet-agreement__copy,
+.cabinet-agreement__requisites {
+    font-weight: var(--fw-light);
+}
+
+.cabinet-agreement__subhead {
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-agreement__heading {
+    width: 100%;
+    margin: 0;
+    color: var(--color-black-100);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.cabinet-agreement__copy {
+    padding-left: var(--space-5);
+}
+
+.cabinet-agreement__copy p {
+    margin: 0;
+}
+
+.cabinet-agreement__copy p + p {
+    margin-top: 1.2em;
+}
+
+.cabinet-agreement__requisites {
+    display: grid;
+    grid-template-columns: 188px minmax(0, 1fr);
+    column-gap: var(--space-3);
+    padding-left: var(--space-5);
+}
+
+.cabinet-agreement__requisite-row {
+    display: contents;
+}
+
+.cabinet-agreement__requisites dt,
+.cabinet-agreement__requisites dd {
+    margin: 0;
+    line-height: var(--lh-tight);
+}
+
+.cabinet-agreement__requisites dt {
+    color: var(--color-black-80);
+}
+
+.cabinet-agreement__requisites dd {
+    min-width: 0;
+    color: var(--color-black-100);
+}
+
+.cabinet-agreement__requisites a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabinet-agreement__requisites a[href^="mailto:"] {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+}
+
+.cabinet-agreement__requisites a[href^="tel:"] {
+    font-weight: var(--fw-semibold);
+}
+
+@media (min-width: 1200px) and (max-width: 1475.98px) {
+    .cabinet-page--agreement .cabinet-page-title {
+        padding-left: clamp(var(--figma-container-px-tablet), calc(var(--figma-container-px-tablet) + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+        padding-right: clamp(var(--figma-container-px-tablet), calc(var(--figma-container-px-tablet) + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .cabinet-page--agreement .cabinet-main {
+        padding-top: 0;
+        padding-bottom: var(--space-4);
+    }
+
+    .cabinet-page--agreement .cabinet-page-title {
+        padding-inline: var(--figma-container-px-tablet);
+    }
+
+    .cabinet-page--agreement .cabinet-page-title__text,
+    .cabinet-agreement__heading {
+        font-size: var(--fs-md);
+    }
+
+    .cabinet-page--agreement .cabinet-page-title__text {
+        font-size: var(--fs-xl);
+    }
+
+    .cabinet-agreement__intro,
+    .cabinet-agreement__subhead,
+    .cabinet-agreement__copy,
+    .cabinet-agreement__requisites {
+        font-size: var(--fs-sm);
+    }
+
+    .cabinet-agreement__appendix {
+        padding: var(--space-4);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cabinet-page--agreement .cabinet-page-title {
+        padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .cabinet-agreement__requisites {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+        padding-left: var(--space-5);
+    }
+
+    .cabinet-agreement__requisite-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .cabinet-agreement__requisites dt {
+        flex: 0 0 151px;
+        width: 151px;
+    }
+
+    .cabinet-agreement__requisites dd {
+        flex: 1 1 auto;
+        text-align: right;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .cabinet-agreement__requisites dt {
+        flex-basis: 132px;
+        width: 132px;
+    }
+}

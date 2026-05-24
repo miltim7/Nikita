@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — Пользовательское соглашение</title>
+    <meta name="description" content="Пользовательское соглашение личного кабинета Nikita.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--agreement" data-cabinet-current-section="agreement">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Навигация кабинета" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Развернуть меню" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Свернуть меню</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Разделы кабинета">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Главная"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Главная</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Рассылки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Рассылки</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API-интеграция"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API-интеграция</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчёты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчёты</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="Сервис OTP"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">Сервис OTP</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблоны"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблоны</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Условия и цены"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Условия и цены</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Технические возможности"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Технические возможности</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Надёжность и безопасность"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Надёжность и безопасность</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Вопросы и ответы"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Вопросы и ответы</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Контакты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Контакты</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Тема">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Светлая тема" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Выйти">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Выйти</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Баланс">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>СОМ</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Техподдержка" data-cabinet-nav data-section="support">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Менеджер" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita — главная">
+                        <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-nav data-section="support">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Обратиться<br>в техподдержку</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Связаться<br>с менеджером</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Баланс">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>СОМ</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="cabinet-user cabinet-user--regular">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Константин</span>
+                                    <span class="cabinet-status cabinet-status--admin">Администратор</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>ЛС: <strong>4567</strong></span>
+                                    <span>/ ООО “Организация</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>Мой кабинет → </span><strong data-cabinet-current>Пользовательское соглашение</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="agreementTitle">Пользовательское соглашение</h1>
+            </div>
+        </div>
+
+        <main class="cabinet-main cabinet-agreement-main" aria-labelledby="agreementTitle">
+            <article class="cabinet-agreement">
+                <p class="cabinet-agreement__intro">Используя настоящий Сервис (далее по тексту – «Сервис»), Вы подтверждаете полное согласие со всеми условиями настоящего Соглашения с пользователем Сервиса (далее по тексту – «Соглашение»). В случае если Вы не согласны с условиями, изложенными ниже, Вы должны отказаться от использования Сервиса.</p>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">1. Общие положения</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>1.1.&nbsp;Настоящее Соглашение является публичной офертой в соответствии со статьей 39 Гражданского Кодекса Кыргызской Республики (КР), адресованной неограниченному числу лиц. Лицо, отмечающее пункт «я согласен с условиями договора-оферты» при регистрации (далее по тексту – ЗАКАЗЧИК) подтверждает свое согласие со всеми изложенными в настоящем Соглашении условиями. В соответствии с пунктом 1 статьи 399 Гражданского Кодекса КР регистрация и начало пользования Сервисом признается акцептом настоящей публичной оферты.</p>
+                        <p>1.2.&nbsp;Срок действия настоящего Соглашения начинается с момента его акцепта ЗАКАЗЧИКОМ. В случае заключения между ИСПОЛНИТЕЛЕМ и ЗАКАЗЧИКОМ двухстороннего договора – положения такого двухстороннего договора будут иметь приоритет перед положениями настоящего Соглашения по всем пунктам двухстороннего договора и всех приложений к нему.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">2. Термины и определения</h2>
+                    <p class="cabinet-agreement__subhead">Если в тексте настоящего Соглашения не указано иное, термины и определения имеют следующее значение:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>2.1.&nbsp;ИСПОЛНИТЕЛЬ – ОсОО "Никита Онлайн" – организация предоставляющая ЗАКАЗЧИКУ услуги в области электрической связи (телематические услуги) в соответствии с настоящим Соглашением на основании лицензии ГАС КР №13-1066-КР от 12 ноября 2013 года.</p>
+                        <p>2.2.&nbsp;ЗАКАЗЧИК – физическое либо юридическое лицо, принявшее положения настоящего Соглашения для того, чтобы пользоваться услугами (Сервисом) ИСПОЛНИТЕЛЯ в соответствии с положениями Соглашения.</p>
+                        <p>2.3.&nbsp;Вместе ЗАКАЗЧИК и ИСПОЛНИТЕЛЬ именуются Стороны.</p>
+                        <p>2.4.&nbsp;Абонент – лицо, имеющее договорные отношения с Оператором.</p>
+                        <p>2.5.&nbsp;Оператор – юридическое (-ие) лица, оказывающие услуги подвижной радиотелефонной связи стандарта GSM.</p>
+                        <p>2.6.&nbsp;Мобильный терминал – мобильный радиотелефонный аппарат, используемый Абонентом в сетях подвижной радиотелефонной связи стандарта GSM.</p>
+                        <p>2.7.&nbsp;SMS - короткое текстовое сообщение, содержащее информацию в цифровом текстовом формате, которое передается Оператором при помощи оборудования своей сети до Мобильного терминала Абонента. Одно SMS – это SMS длиной до 160 латинских символов, либо до 70 нелатинских символов, или каждая часть сочленённого сообщения размером до 140 байт, или каждое бинарное сообщение размером до 140 байт. Заключительные фрагменты сочленённых текстовых или бинарных сообщений размером менее чем 140 байт считаются как отдельные сообщения.</p>
+                        <p>2.8.&nbsp;Система – информационная система ИСПОЛНИТЕЛЯ, комплекс программно-технических средств и организационных мероприятий, позволяющий ЗАКАЗЧИКУ зарегистрироваться, формировать, отправлять, отслеживать статус и получать подтверждение о доставке SMS, используя WEB-интерфейс Системы и API-протокол, контролировать свой счет и статистику операций с SMS.</p>
+                        <p>2.9.&nbsp;Лицевой счет – счет в Системе, отражающий поступление и расходование средств ЗАКАЗЧИКА.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">3. Предмет соглашения</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>3.1.&nbsp;Согласно условиям настоящего Соглашения, ИСПОЛНИТЕЛЬ предоставляет за плату ЗАКАЗЧИКУ услуги по отправке SMS Абонентам через Операторов путем предоставления доступа к Системе в течение определенного периода в определенном объеме в соответствии с действующими Тарифами, опубликованными на сайте Сервиса по адресу http://smspro.nikita.kg/prices.html, согласованными Сторонами, и Правилами предоставления услуг (Приложение № 1) (далее – Услуги), а ЗАКАЗЧИК оплачивает такие услуги.</p>
+                        <p>3.2.&nbsp;Все приложения к настоящему Соглашению являются неотъемлемой частью настоящего Соглашения.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">4. Права и обязанности сторон</h2>
+                    <p class="cabinet-agreement__subhead">4.1. ИСПОЛНИТЕЛЬ обязан:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.1.1.&nbsp;Предоставить ЗАКАЗЧИКУ Услуги в соответствии с Правилами предоставления Услуг и Тарифами.</p>
+                        <p>4.1.2.&nbsp;Сохранять конфиденциальность информации ЗАКАЗЧИКА, полученной от него при регистрации в Системе и в процессе оказания Услуг за исключением случаев, предусмотренных действующим законодательством КР.</p>
+                    </div>
+                    <p class="cabinet-agreement__subhead">4.1. ЗАКАЗЧИК обязан:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.2.1.&nbsp;Производить оплату предоставляемых Услуг в соответствии с действующими Тарифами.</p>
+                        <p>4.2.2.&nbsp;В обязательном порядке получить от Абонента, на телефон которого планируется отправка SMS с информацией ЗАКАЗЧИКА, согласие на получение таких сообщений в такой форме, которая может быть предъявлена Оператору и не оставляет сомнений как безоговорочное доказательство добровольности Абонента на получение SMS с информацией ЗАКАЗЧИКА.</p>
+                        <p>4.2.3.&nbsp;Не осуществлять массовое направление SMS-сообщений в период с 22:00:00 до 09:00:00 по Бишкекскому времени.</p>
+                        <p>4.2.4.&nbsp;Осуществлять направление SMS-сообщений только тем Абонентам, которые дали согласие на получение соответствующих SMS-сообщений.</p>
+                        <p>4.2.5.&nbsp;ЗАКАЗЧИК несет полную ответственность за содержание контента и его противоречие законодательству Кыргызской Республики. Контент должен соответствовать социальным, моральным и этическим принципам. Не допускается направление SMS-сообщений, нарушающих общие принципы гуманности, а также сообщений, оскорбляющих человеческое достоинство, пропагандирующих насилие, расовую или национальную вражду, нарушающих общественную безопасность, основы конституционного строя и государственную безопасность, безопасность человечества.</p>
+                        <p>4.2.6.&nbsp;Не осуществлять отправку SMS-сообщений, содержащих рекламу или информацию о третьих лицах, либо об операторах связи, и любую информацию об Операторе, а также SMS-сообщений содержащих недостоверную информацию, Спам, Фрод.</p>
+                        <p>4.2.7.&nbsp;В случае если ИСПОЛНИТЕЛЬ потребует, чтобы в каждом отправляемом ЗАКАЗЧИКОМ SMS содержалась информация о ЗАКАЗЧИКЕ выполнить это требование в течение 1 (одного) рабочего дня.</p>
+                        <p>4.2.8.&nbsp;Соблюдать Правила предоставления Услуг (Приложение № 1).</p>
+                    </div>
+                    <p class="cabinet-agreement__subhead">4.3. ИСПОЛНИТЕЛЬ вправе:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.3.1.&nbsp;Изменить в одностороннем порядке применяемые Тарифы и Правила предоставления Услуг (Приложение 1 к настоящему Соглашению) с предварительным уведомлением по электронной почте ЗАКАЗЧИКА в срок не менее 3 (трех) календарных дней до вступления в силу таких изменений, за исключением случая, предусмотренного п. 4.3.2. договора.</p>
+                        <p>4.3.1.1.&nbsp;При неполучении письменных возражений ЗАКАЗЧИКА до вступления в силу новых Тарифов или Правил предоставления Услуг ИСПОЛНИТЕЛЬ продолжает оказание Услуг ЗАКАЗЧИКУ по новым Тарифам или Правилам предоставления Услуг.</p>
+                        <p>4.3.1.2.&nbsp;В случае несогласия ЗАКАЗЧИКА с новыми Тарифами и (или) Правилами предоставления Услуг и извещения ИСПОЛНИТЕЛЯ об этом в течение 3 (трех) календарных дней с момента получения новых Тарифов и (или) Правил предоставления Услуг, ЗАКАЗЧИК вправе</p>
+                        <p>4.3.1.2.1.&nbsp;Не пользоваться Услугами до иного изменения Тарифов и (или) Правил предоставления Услуг и извещения об этом ЗАКАЗЧИКА; или</p>
+                        <p>4.3.1.2.2.&nbsp;Расторгнуть настоящее Соглашение путем направления письменного уведомления ИСПОЛНИТЕЛЮ. В этом случае ИСПОЛНИТЕЛЬ возвращает ЗАКАЗЧИКУ стоимость оплаченных и неотправленных SMS. Возврат денежных средств, согласно настоящему пункту Соглашения, осуществляется ИСПОЛНИТЕЛЕМ в течение 10 (Десяти) рабочих дней с момента получения письменного уведомления о расторжении настоящего Соглашения.</p>
+                        <p>4.3.2.&nbsp;В случае изменения тарифов ИСПОЛНИТЕЛЮ со стороны Оператора, ИСПОЛНИТЕЛЬ вправе изменить Тарифы в одностороннем порядке не менее чем за 24 (двадцать четыре) часа известив об этом ЗАКАЗЧИКА устно по контактному телефону и (или) письменно по электронной почте. ЗАКАЗЧИК извещает ИСПОЛНИТЕЛЯ по электронной почте о своем согласии либо несогласии с новыми Тарифами в течение 24 (двадцати четырех) часов с момента получения информации о новых Тарифах.</p>
+                        <p>4.3.2.1.&nbsp;При неполучении до момента вступления в силу новых Тарифов письменных возражений ЗАКАЗЧИКА ИСПОЛНИТЕЛЬ продолжает оказание Услуг по новым Тарифам.</p>
+                        <p>4.3.2.2.&nbsp;В случае несогласия с новыми Тарифами и извещения ИСПОЛНИТЕЛЯ об этом в течение 24 (двадцати четырех) часов с момента получения информации о новых Тарифах, ЗАКАЗЧИК вправе:</p>
+                        <p>4.3.2.2.1.&nbsp;Не пользоваться Услугами до иного изменения Тарифов и извещения об этом ЗАКАЗЧИКА; или</p>
+                        <p>4.3.2.2.2.&nbsp;Расторгнуть настоящее Соглашение путем направления письменного уведомления ИСПОЛНИТЕЛЮ. В этом случае ИСПОЛНИТЕЛЬ возвращает ЗАКАЗЧИКУ стоимость оплаченных и неотправленных SMS. Возврат денежных средств, согласно настоящему пункту Соглашения, осуществляется ИСПОЛНИТЕЛЕМ в течение 10 (Десяти) рабочих дней с момента получения письменного уведомления о расторжении настоящего Соглашения.</p>
+                        <p>4.3.3.&nbsp;В случае израсходования ЗАКАЗЧИКОМ остатка средств на своем Лицевом счете (а в случае, если ЗАКАЗЧИКУ предоставлен кредитный лимит – израсходование кредитного лимита) прекратить предоставление Услуг ЗАКАЗЧИКУ. Возобновление предоставления Услуг производится после оплаты Услуг (а при наличии израсходованного кредитного лимита – при оплате Услуг и суммы кредитного лимита) ЗАКАЗЧИКОМ в соответствии с Тарифами.</p>
+                        <p>4.3.4.&nbsp;Потребовать от ЗАКАЗЧИКА, чтобы во всех отправляемых ЗАКАЗЧИКОМ SMS-сообщениях содержалась информация о ЗАКАЗЧИКЕ. Вид информации (телефон, электронная почта, адрес WEB или WAP сайта) согласуется с ИСПОЛНИТЕЛЕМ.</p>
+                        <p>4.3.5.&nbsp;Приостановить исполнение своих обязательств по настоящему Соглашению в случае, если требование, предусмотренное п. 4.3.4. Соглашения, не будет выполнено в сроки, установленные в п. 4.2.3. Соглашения. Возобновление предоставления Услуг происходит в течение одного рабочего дня после выполнения ЗАКАЗЧИКОМ вышеуказанного требования и уведомления об этом ИСПОЛНИТЕЛЯ.</p>
+                    </div>
+                    <p class="cabinet-agreement__subhead">4.4. ЗАКАЗЧИК вправе:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.4.1.&nbsp;Требовать от ИСПОЛНИТЕЛЯ предоставления Услуг в соответствии с условиями настоящего Соглашения и Правилами предоставления Услуг (Приложение № 1).</p>
+                        <p>4.4.2.&nbsp;Через Систему получать информацию о состоянии переданных для отправки SMS.</p>
+                        <p>4.4.3.&nbsp;Любым доступным способом довести до сведения Абонента, получателя SMS-сообщения, информацию о возможности и способе, с помощью которого он может отказаться от дальнейшего получения SMS, отправляемых через Систему.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">5. Цена услуг и порядок рсчетов</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>5.1.&nbsp;ЗАКАЗЧИК оплачивает Услуги, оказываемые по настоящему Соглашению, в порядке и на условиях, определенных в настоящем Соглашении и в соответствии с тарифами.</p>
+                        <p>5.2.&nbsp;Оплата за все Услуги, предоставляемые ЗАКАЗЧИКУ, осуществляется платежами в сомах путем пополнения лицевого счета в Системе ИСПОЛНИТЕЛЯ через системы online-платежей доступные ЗАКАЗЧИКУ на сайте Системы, являющиеся агентами ИСПОЛНИТЕЛЯ по приему платежей.</p>
+                        <p>5.3.&nbsp;ЗАКАЗЧИК вправе уполномочить третье лицо на исполнение денежных обязательств ЗАКАЗЧИКА по настоящему Соглашению, а ИСПОЛНИТЕЛЬ обязан принять такое исполнение. Если такое третье лицо (далее – ПЛАТЕЛЬЩИК) осуществляет исполнение денежных обязательств ЗАКАЗЧИКА от своего имени, то в этом случае данное третье лицо будет считаться заключившим договор с ЗАКАЗЧИКОМ, в рамках которого ПЛАТЕЛЬЩИК принимает на себя обязанность исполнить денежные обязательства ЗАКАЗЧИКА перед ИСПОЛНИТЕЛЕМ в полном объеме, а ИСПОЛНИТЕЛЬ даёт своё согласие на перевод долга в пользу ПЛАТЕЛЬЩИКА в случае незамедлительного исполнения ПЛАТЕЛЬЩИКОМ своих денежных обязательств ИСПОЛНИТЕЛЮ или его платежному агенту.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">6. Персональные данные</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>6.1.&nbsp;Каждая из Сторон является обладателем массива персональных данных, в том числе обрабатываемых в рамках выполнения обязательств, предусмотренных Договором. Для целей Договора под персональными данными понимаются сведения, являющиеся таковыми в соответствии с законодательством Кыргызской Республики и относящиеся к работникам, иным представителям Сторон, в том числе – непосредственно участвующим в исполнении Договора, и третьим лицам, данные которых передаются другой Стороне.</p>
+                        <p>6.2.&nbsp;Передача персональных данных не рассматривается Сторонами как поручение обработки персональных данных.</p>
+                        <p>6.3.&nbsp;Каждая из Сторон обеспечивает конфиденциальность полученных в рамках Договора персональных данных от другой Стороны, соблюдение требований к обработке персональных данных в соответствии с применимым законодательством Кыргызской Республики, и несет ответственность за принятие всех необходимых правовых, организационных и технических мер защиты персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, распространения персональных данных, а также от иных неправомерных действий с такими данными.</p>
+                        <p>6.4.&nbsp;Ответственность за правомерность и достоверность персональных данных, предоставляемых Сторонами друг другу в целях исполнения Договора, а также за получение согласия субъектов на передачу их персональных данных другой Стороне в порядке, предусмотренном законодательством Кыргызской Республики, несет Сторона, передающая персональные данные.</p>
+                        <p>6.5.&nbsp;Сторона, получившая персональные данные от другой Стороны, не принимает на себя обязательства по информированию субъектов, персональные данные которых ей переданы, о начале их обработки, поскольку обязанность осуществить соответствующее информирование при получении согласия на такую передачу несет передавшая персональные данные Сторона.</p>
+                        <p>6.6.&nbsp;Сторона, получающая персональные данные, имеет право в целях исполнения Договора в необходимом для этого объеме привлекать к обработке полученных персональных данных аффилированных с такой Стороной лиц.</p>
+                        <p>6.7.&nbsp;При этом Стороны признают, что Услуги, оказываемые через Сервис SMSPRO.NIKITA.KG по настоящему Договору, не могут быть оказаны в отношении Пользователей, которые не предоставили или отозвали свое согласие на обработку их персональных данных в порядке, предусмотренном законодательством Кыргызской Республики.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">7. Ответственность сторон и порядок разрешения споров</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>7.1.&nbsp;ЗАКАЗЧИК соглашается, что на качество предоставления услуг могут отрицательно влиять такие факторы как физические преграды, препятствующие распространению радиоволн, погодные и атмосферные явления, случаи радио интерференции, а также аварии в телекоммуникационных сетях и площадках, к которым подключен ИСПОЛНИТЕЛЬ. Стороны пришли к соглашению, что за ненадлежащее качество услуг, возникшее по перечисленным в настоящем пункте причинам, ИСПОЛНИТЕЛЬ ответственности не несет.</p>
+                        <p>7.2.&nbsp;Претензии ЗАКАЗЧИКА к предоставляемым Услугам принимаются ИСПОЛНИТЕЛЕМ к рассмотрению в письменном виде по электронной почте на адреса: info@nikita.kg, smspro@nikita.kg, в срок не позднее 3-х рабочих дней с момента возникновения спорной ситуации. Срок рассмотрения претензий ЗАКАЗЧИКА составляет не более 14 (четырнадцати) рабочих дней.</p>
+                        <p>7.3.&nbsp;В случае предъявления ЗАКАЗЧИКОМ обоснованной претензии о невозможности воспользоваться Услугами ИСПОЛНИТЕЛЯ по вине ИСПОЛНИТЕЛЯ, и подтверждения указанных ЗАКАЗЧИКОМ в претензии обстоятельств, ИСПОЛНИТЕЛЬ возвращает полученные от ЗАКАЗЧИКА средства за вычетом стоимости отправленных SMS. Возврат производится в 10-дневный срок при наличии письменного заявления ЗАКАЗЧИКА с указанием исчерпывающих идентификационных данных ЗАКАЗЧИКА (паспорт физического лица либо полные реквизиты юридического лица). Остаток неиспользованных средств возвращается за вычетом сумм по оплате Услуг, которыми ЗАКАЗЧИК воспользовался с момента акцепта данного Соглашения, а также сумм задолженности по Соглашению.</p>
+                        <p>7.4.&nbsp;ИСПОЛНИТЕЛЬ не несет ответственности за содержание SMS-сообщений, рассылаемых ЗАКАЗЧИКОМ с использованием Системы.</p>
+                        <p>7.5.&nbsp;При поступлении ИСПОЛНИТЕЛЮ информации о нарушении ЗАКАЗЧИКОМ п.7, п.8, п.9 Правил Предоставления Услуг (Приложение № 1) ИСПОЛНИТЕЛЬ немедленно приостанавливает предоставление Услуг, затем в течение 24 часов уведомляет ЗАКАЗЧИКА о приостановке услуг и проводит внутреннее расследование с привлечением ЗАКАЗЧИКА.<br>Если факт нарушения будет подтвержден, ИСПОЛНИТЕЛЬ имеет право по своему выбору:<br>- расторгнуть настоящее Соглашение в одностороннем порядке, закрыв доступ ЗАКАЗЧИКА к Системе, удержав с ЗАКАЗЧИКА неустойку в размере стоимости неотправленных SMS-сообщений, а в случае, если ЗАКАЗЧИК воспользовался кредитным лимитом – в размере двойной стоимости кредитного лимита;<br>- после консультаций с ЗАКАЗЧИКОМ возобновить предоставление Услуг. При этом ИСПОЛНИТЕЛЬ имеет право в одностороннем порядке изменить условия настоящего Соглашения и Приложений к нему.<br>Если факт нарушения не подтвержден в результате внутреннего расследования с привлечением ЗАКАЗЧИКА, то ИСПОЛНИТЕЛЬ возобновляет предоставление услуг.</p>
+                        <p>7.6.&nbsp;В случае нарушения ЗАКАЗЧИКОМ п. 4.2.3., 4.2.4., 4.2.5 и 4.2.6. Договора Локальный партнер выплачивает Оператору штраф в размере 10 000 (десять тысяч) сомов за каждое SMS-сообщение, прошедшее с таким нарушением.</p>
+                        <p>7.7.&nbsp;В случае, несанкционированного использования Альфа-имени, ЗАКАЗЧИК оплачивает весь нецелевой трафик из расчета за 1 SMS по 1 USD, а также оплачивает штраф в размере 20 000 сом, за каждое SMS-сообщение, прошедшее с таким нарушением.</p>
+                        <p>7.8.&nbsp;ЗАКАЗЧИК обязуется возместить в пятнадцатидневный срок с момента требования ИСПОЛНИТЕЛЮ весь ущерб, причиненный действиями ЗАКАЗЧИКА в Системе и оказанием Услуг по настоящему Соглашению.</p>
+                        <p>7.9.&nbsp;ЗАКАЗЧИК обязуется возместить ИСПОЛНИТЕЛЮ убытки, причиненные всякими выплатами, которые могут быть взысканы с ИСПОЛНИТЕЛЯ из-за нарушений ЗАКАЗЧИКОМ в ходе исполнения настоящего Соглашения действующего законодательства, в том числе авторских и иных прав на объекты интеллектуальной собственности третьих лиц, а также из-за претензий к достоверности и содержанию SMS, рассылаемых с использованием Системы при условии представления ИСПОЛНИТЕЛЕМ ЗАКАЗЧИКУ соответствующих документов, свидетельствующих о причинении ИСПОЛНИТЕЛЮ указанного ущерба. ЗАКАЗЧИК обязуется возместить ИСПОЛНИТЕЛЮ суммы штрафов и оплаты юридических услуг в случае привлечения ИСПОЛНИТЕЛЯ к административной или иной ответственности органом государственной власти в связи с действиями ЗАКАЗЧИКА в Системе и оказанием услуг по настоящему Соглашению.</p>
+                        <p>7.10.&nbsp;ИСПОЛНИТЕЛЬ обязуется возместить в пятнадцатидневный срок с момента требования ЗАКАЗЧИКУ реальный ущерб, причиненный последнему некорректной работой Системы ИСПОЛНИТЕЛЯ, при условии предоставления ЗАКАЗЧИКОМ письменного подтверждения такого ущерба.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">8. Особые условия</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>8.1.&nbsp;Заказчик вправе привлекать третьих лиц к выполнению обязанностей, являющихся предметом настоящего Соглашения при сохранении этими лицами условий конфиденциальности.</p>
+                        <p>8.2.&nbsp;Настоящее Соглашение, включая все Приложения, заменяет любые другие предварительные соглашения, письменные и устные договоренности, относящиеся к предмету настоящего Соглашения.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">9. Реквизиты исполнителя</h2>
+                    <dl class="cabinet-agreement__requisites">
+                        <div class="cabinet-agreement__requisite-row"><dt>Наименование:</dt><dd>ОсОО "Никита Онлайн"</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>ИНН:&nbsp;</dt><dd>02608201310139</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Юридический адрес:&nbsp;</dt><dd>720073, Кыргызская Республика, г.Бишкек, 5 мкр., дом 80, кв.40.</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Почтовый адрес:&nbsp;</dt><dd>720021, Кыргызская Республика, г. Бишкек, ул. Шопокова 89 (ТЦ "Мега-Комфорт"), 5 эт., 9 каб.</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Банк:&nbsp;</dt><dd>ЗАО "Кыргызский Инвестиционно-Кредитный Банк"</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Расчетный счет: </dt><dd>1280016006829520</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>БИК: </dt><dd>128001</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Электронная почта:&nbsp;</dt><dd><a href="mailto:info@nikita.kg">info@nikita.kg</a></dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Телефон:&nbsp;</dt><dd><a href="tel:+996312901661">+996 312 90-16-61</a></dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Генеральный директор:&nbsp;</dt><dd>Сыдыков Т.А.</dd></div>
+                    </dl>
+                </section>
+
+                <section class="cabinet-agreement__appendix">
+                    <h2 class="cabinet-agreement__heading">Приложение № 1: Правила предоставления услуг</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>1.&nbsp;При регистрации ЗАКАЗЧИК получает индивидуальные имя пользователя и пароль, позволяющие получить доступ к защищенной области системы ИСПОЛНИТЕЛЯ. По желанию ЗАКАЗЧИКА доступ к системе ИСПОЛНИТЕЛЯ по API может блокироваться для всех IP-адресов, кроме указанных ЗАКАЗЧИКОМ.</p>
+                        <p>2.&nbsp;В качестве имени отправителя в рассылаемых сообщениях ЗАКАЗЧИК может использовать только указанный и подтвержденный при регистрации в Системе номер мобильного телефона. Любое дополнительное имя отправителя может быть использовано только после его согласования с ИСПОЛНИТЕЛЕМ.</p>
+                        <p>3.&nbsp;ИСПОЛНИТЕЛЬ производит блокировку согласованного имени отправителя в случае если от указанного имени отправителя не было отправок SMS-сообщений за последние 3 месяца.</p>
+                        <p>4.&nbsp;ИСПОЛНИТЕЛЬ предоставляет оплаченные ЗАКАЗЧИКОМ Услуги. Передача информации (текст SMS, телефон и др. информация) происходит от ЗАКАЗЧИКА к ИСПОЛНИТЕЛЮ через сеть Интернет. Протокол передачи согласовывается с ЗАКАЗЧИКОМ дополнительно.</p>
+                        <p>5.&nbsp;ИСПОЛНИТЕЛЬ также предоставляет работу технической службы поддержки, которая функционирует только в рабочее время (10:00 – 19:00) и рабочие дни (5/7): по: e-mail smspro@nikita.kg.</p>
+                        <p>6.&nbsp;Услуги предоставляются круглосуточно на территории Кыргызской Республики. ИСПОЛНИТЕЛЬ не несет ответственности за перерывы в предоставлении Услуг, связанные с проведением работ по техническому обслуживанию, регламентных работ, а так же за перерывы при возникновении следующих ситуаций: проблемы с электропитанием, пожары, террористические акты и другие ситуации, ИСПОЛНИТЕЛЬ информирует ЗАКАЗЧИКА о проведении плановых технических работ не менее чем за один календарный день.</p>
+                        <p>7.&nbsp;ЗАКАЗЧИК должен обеспечивать конфиденциальность присвоенного ему пароля. ИСПОЛНИТЕЛЬ не несет ответственности перед ЗАКАЗЧИКОМ за любые убытки, понесенные ЗАКАЗЧИКОМ из-за утери своего пароля.</p>
+                        <p>8.&nbsp;ЗАКАЗЧИК обязуется использовать Услугу в соответствии с нормами законодательства КР о рекламе и только для передачи информации Абонентам, от которых получено согласие на получение таких сообщений в такой форме, которая может быть предъявлена Оператору и не оставляет сомнений как безоговорочное доказательство добровольности Абонента на получение SMS с информацией ЗАКАЗЧИКА</p>
+                        <p>9.&nbsp;ЗАКАЗЧИК гарантирует, что содержание Услуги соответствует нормам действующего законодательства КР, в том числе нормам законов об охране авторских и иных прав на объекты интеллектуальной собственности, о рекламе, действующих на территории Кыргызской Республики, законодательству об охране прав личности, религиозных и общественных убеждений, национального достоинства, а также общепризнанным нормам международного права.</p>
+                        <p>10.&nbsp;ЗАКАЗЧИК обязуется не использовать Услугу для распространения ненужной получателю, незапрошенной информации: в частности, являются недопустимыми следующие действия:<br>• Массовая рассылка не согласованных предварительно с получателями SMS. Под массовой рассылкой подразумевается как рассылка множеству получателей, так и множественная рассылка одному получателю.<br>• Рассылка информации получателям, высказавшим ранее явное нежелание получать эту информацию</p>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© ОсОО "Никита Онлайн",</span>
+                <span>ОсОО "Никита Мобайл", 2014-2025 г.</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html" aria-current="page">Пользовательское соглашение</a> | <a href="security.html#bezop">Политика конфиденциальности</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Меню кабинета" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Тема">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Светлая тема" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Выйти</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Закрыть меню" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Меню кабинета">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Главная</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Рассылки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Списки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API-интеграция</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчёты</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>Сервис OTP</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблоны</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Условия и цены</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Технические возможности</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Надёжность и безопасность</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Вопросы и ответы</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Контакты</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Нижняя навигация кабинета">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Главная</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Рассылки</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Списки</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API-интеграция</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Отчёты</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>Сервис OTP</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Шаблоны</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Меню</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="assets/scripts/cabinet.js"></script>
+</body>
+</html>
