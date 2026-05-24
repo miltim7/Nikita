@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - регистрация</title>
+    <meta name="description" content="Регистрация в личном кабинете Nikita.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--registration" data-cabinet-current-section="registration">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Навигация кабинета" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Развернуть меню" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Свернуть меню</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Разделы кабинета">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Главная"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Главная</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Рассылки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Рассылки</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API-интеграция"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API-интеграция</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчёты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчёты</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="Сервис OTP"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">Сервис OTP</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблоны"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблоны</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Условия и цены"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Условия и цены</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Технические возможности"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Технические возможности</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Надёжность и безопасность"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Надёжность и безопасность</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Вопросы и ответы"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Вопросы и ответы</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Контакты"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Контакты</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Тема">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Светлая тема" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Выйти">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Выйти</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Баланс">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>СОМ</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Техподдержка" data-cabinet-nav data-section="support">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Менеджер" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita - главная">
+                        <img src="assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-nav data-section="support">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Обратиться<br>в техподдержку</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Связаться<br>с менеджером</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Язык" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Баланс">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>СОМ</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Уведомления" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="Мой профиль">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <span class="cabinet-user__meta">
+                                <span class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Константин</span>
+                                    <span class="cabinet-status cabinet-status--admin">Администратор</span>
+                                </span>
+                                <span class="cabinet-user__account">
+                                    <span>ЛС: <strong>4567</strong></span>
+                                    <span>/ ООО “Организация”</span>
+                                </span>
+                            </span>
+                        </a>
+                        <button class="cabinet-user cabinet-user--demo" type="button" aria-label="Демо-режим" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">ДЕМО-РЕЖИМ</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs registration-breadcrumbs">
+                <span class="registration-breadcrumbs__desktop"><span>Главная &rarr; </span><strong data-cabinet-current>Регистрация</strong></span>
+                <span class="registration-breadcrumbs__compact"><span>Мой кабинет &rarr; </span><strong data-cabinet-current>Регистрация</strong></span>
+            </div>
+        </div>
+
+        <main class="cabinet-main">
+            <div class="registration-layout registration-layout--form" data-registration-form-view>
+                <section class="registration-card registration-card--form" aria-labelledby="registrationTitle">
+                    <div class="registration-card__head">
+                        <img class="registration-card__icon registration-card__icon--user" src="assets/images/cabinet-registration/icon-user-safe.svg" alt="" aria-hidden="true">
+                        <h1 class="registration-card__title" id="registrationTitle">Регистрация</h1>
+                    </div>
+                    <div class="registration-card__divider" aria-hidden="true"></div>
+
+                    <form class="registration-form" action="#" method="post" data-registration-form>
+                        <div class="registration-form__fields">
+                            <label class="registration-field registration-field--simple">
+                                <span class="registration-field__label">Логин <span class="registration-field__required">*</span></span>
+                                <span class="registration-field__control">
+                                    <input class="registration-input" type="text" name="login" value="user_login" required>
+                                </span>
+                            </label>
+
+                            <label class="registration-field registration-field--simple">
+                                <span class="registration-field__label">ФИО <span class="registration-field__required">*</span></span>
+                                <span class="registration-field__control">
+                                    <input class="registration-input" type="text" name="full_name" value="Сидоров Иван Петрович" required>
+                                </span>
+                            </label>
+
+                            <label class="registration-field registration-field--simple">
+                                <span class="registration-field__label">Название компании <span class="registration-field__required">*</span></span>
+                                <span class="registration-field__control">
+                                    <input class="registration-input" type="text" name="company" value="ООО “Рассылки”" required>
+                                </span>
+                            </label>
+
+                            <label class="registration-field registration-field--stacked registration-field--email">
+                                <span class="registration-field__label">Email <span class="registration-field__required">*</span></span>
+                                <span class="registration-field__control">
+                                    <span class="registration-input-wrap">
+                                        <input class="registration-input registration-input--with-help" type="email" name="email" value="sms@rassylki.com" required aria-describedby="registrationEmailHint">
+                                        <button class="registration-input__help" type="button" aria-label="Подсказка по Email" data-registration-help>
+                                            <img src="assets/images/cabinet-registration/input-help.svg" alt="" aria-hidden="true">
+                                        </button>
+                                    </span>
+                                    <span class="registration-hint" id="registrationEmailHint">Пароль создаётся автоматически и будет направлен на указанный email</span>
+                                </span>
+                            </label>
+
+                            <label class="registration-field registration-field--stacked registration-field--phone">
+                                <span class="registration-field__label">Телефон</span>
+                                <span class="registration-field__control">
+                                    <span class="registration-input-wrap">
+                                        <input class="registration-input registration-input--with-help" type="tel" name="phone" value="+996 (123) 456-789" aria-describedby="registrationPhoneHint">
+                                        <button class="registration-input__help" type="button" aria-label="Подсказка по телефону" data-registration-help>
+                                            <img src="assets/images/cabinet-registration/input-help.svg" alt="" aria-hidden="true">
+                                        </button>
+                                    </span>
+                                    <span class="registration-hint" id="registrationPhoneHint">Укажите телефон, чтобы получить PIN-код для активации начального тарифа и <a href="services.html">15 сом для проверки сервиса</a></span>
+                                </span>
+                            </label>
+
+                            <label class="registration-field registration-field--stacked registration-field--promo">
+                                <span class="registration-field__label">Промо-код</span>
+                                <span class="registration-field__control">
+                                    <span class="registration-input-wrap">
+                                        <input class="registration-input registration-input--with-help" type="text" name="promo" placeholder="Введите промо-код" aria-describedby="registrationPromoHint">
+                                        <button class="registration-input__help" type="button" aria-label="Подсказка по промо-коду" data-registration-help>
+                                            <img src="assets/images/cabinet-registration/input-help.svg" alt="" aria-hidden="true">
+                                        </button>
+                                    </span>
+                                    <span class="registration-hint" id="registrationPromoHint">Если у вас нет промо-кода, оставьте это поле пустым</span>
+                                </span>
+                            </label>
+
+                            <label class="registration-field registration-field--captcha">
+                                <span class="registration-field__label">Введите символы на картинке</span>
+                                <span class="registration-field__control">
+                                    <span class="registration-captcha">
+                                        <span class="registration-captcha__image">
+                                            <img src="assets/images/cabinet-registration/captcha.png" alt="">
+                                        </span>
+                                        <span class="registration-input-wrap">
+                                            <input class="registration-input" type="text" name="captcha" placeholder="Введите символы">
+                                        </span>
+                                    </span>
+                                </span>
+                            </label>
+
+                            <label class="registration-checkbox">
+                                <input class="registration-checkbox__control" type="checkbox" name="terms" checked>
+                                <span class="registration-checkbox__text">Я принимаю условия <a class="registration-link" href="https://smspro.nikita.kg/kg/oferta.html">Договора-оферты</a> и <a class="registration-link" href="security.html#bezop">Политики конфиденциалности</a></span>
+                            </label>
+                        </div>
+
+                        <div class="registration-actions">
+                            <div class="registration-actions__buttons">
+                                <button class="registration-btn registration-btn--secondary" type="reset">Отменить</button>
+                                <button class="registration-btn registration-btn--primary" type="submit">Готово!</button>
+                            </div>
+                            <p class="registration-required-note"><span class="registration-required-note__star">*</span><span>Обязательные поля</span></p>
+                        </div>
+                    </form>
+                </section>
+
+                <div class="registration-column">
+                    <section class="registration-card registration-card--benefits" aria-labelledby="registrationBenefitsTitle">
+                        <div class="registration-card__head">
+                            <img class="registration-card__icon registration-card__icon--speed" src="assets/images/cabinet-registration/icon-speed.svg" alt="" aria-hidden="true">
+                            <h2 class="registration-card__title" id="registrationBenefitsTitle">Сразу после регистрации</h2>
+                        </div>
+                        <div class="registration-card__divider" aria-hidden="true"></div>
+                        <div class="registration-info">
+                            <p class="registration-info__lead">Сразу после регистрации вы получите:</p>
+                            <div class="registration-info__list">
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/list-check.svg" alt="" aria-hidden="true"><span><strong>Рабочий тариф и 15 сом на баланс</strong> для проверки сервиса</span></p>
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/list-check.svg" alt="" aria-hidden="true"><span>Возможность <strong>пополнить счёт online</strong> всеми <a href="services.html">доступными способами</a></span></p>
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/list-check.svg" alt="" aria-hidden="true"><span>Возможность проводить полноценные рекламные <strong>SMS-рассылки</strong></span></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="registration-card registration-card--contract" aria-labelledby="registrationContractTitle">
+                        <div class="registration-card__head">
+                            <img class="registration-card__icon registration-card__icon--reg" src="assets/images/cabinet-registration/icon-reg.svg" alt="" aria-hidden="true">
+                            <h2 class="registration-card__title" id="registrationContractTitle">Требуется ли договор?</h2>
+                        </div>
+                        <div class="registration-card__divider" aria-hidden="true"></div>
+                        <div class="registration-info">
+                            <p class="registration-info__lead">Заключение договора может потребоваться только в следующих случаях:</p>
+                            <div class="registration-info__list">
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/list-check.svg" alt="" aria-hidden="true"><span>Если вам требуется корректная бухгалтерская отчётность</span></p>
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/list-check.svg" alt="" aria-hidden="true"><span>Для возможности самостоятельного выставления счёта на оплату услуг</span></p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="registration-layout registration-layout--success" data-registration-success-view hidden>
+                <section class="registration-card registration-card--success-main" aria-labelledby="registrationSuccessTitle">
+                    <div class="registration-card__head">
+                        <img class="registration-card__icon registration-card__icon--user" src="assets/images/cabinet-registration/icon-user-safe.svg" alt="" aria-hidden="true">
+                        <h1 class="registration-card__title" id="registrationSuccessTitle">Регистрация</h1>
+                    </div>
+                    <div class="registration-card__divider" aria-hidden="true"></div>
+
+                    <div class="registration-success">
+                        <div class="registration-success__body">
+                            <div class="registration-success__hero">
+                                <img class="registration-success__rocket" src="assets/images/cabinet-registration/success-rocket.svg" alt="" aria-hidden="true">
+                                <div class="registration-success__hero-text">
+                                    <p class="registration-success__eyebrow">Поздравляем!</p>
+                                    <p class="registration-success__title">Вы успешно зарегистрированы<br>в системе</p>
+                                </div>
+                            </div>
+
+                            <ul class="registration-success__list">
+                                <li>На указанный вами e-mail выслано <strong>письмо с паролем доступа.</strong></li>
+                                <li>На указанный вами номер телефона отправлено <strong>SMS с 4-значным PIN-кодом</strong> активации тарифа <a class="registration-success__blue" href="services.html">"СТАРТ"</a> и <strong>зачислено 15 сом на счет.</strong><br>Введите полученный PIN-код в вашем личном кабинете на странице <a class="registration-success__blue" href="profile.html">«МОЙ ПРОФИЛЬ».</a></li>
+                            </ul>
+
+                            <p class="registration-success__tariff"><strong>Для перехода на более выгодные тарифы</strong> внесите первоначальный платеж в соответствии с <a href="services.html">описанием тарифов.</a></p>
+                        </div>
+
+                        <div class="registration-success__actions">
+                            <button class="registration-btn registration-btn--primary registration-btn--start" type="button" data-registration-activation-open>Поехали!</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="registration-column registration-column--success">
+                    <section class="registration-card registration-card--activation" aria-labelledby="registrationActivationTitle">
+                        <div class="registration-card__head">
+                            <img class="registration-card__icon registration-card__icon--star" src="assets/images/cabinet-registration/success-star.svg" alt="" aria-hidden="true">
+                            <h2 class="registration-card__title" id="registrationActivationTitle">Сразу после активации тарифа</h2>
+                        </div>
+                        <div class="registration-card__divider" aria-hidden="true"></div>
+                        <div class="registration-info">
+                            <p class="registration-info__lead">Сразу после активации тарифа вы сможете пользоваться всеми возможностями сервиса:</p>
+                            <div class="registration-info__list">
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/success-check.svg" alt="" aria-hidden="true"><span>Проводить SMS-рассылки с этого сайта.</span></p>
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/success-check.svg" alt="" aria-hidden="true"><span>Отправлять сообщения используя наше API со своих ресурсов.</span></p>
+                                <p class="registration-info__item"><img src="assets/images/cabinet-registration/success-check.svg" alt="" aria-hidden="true"><span>Пользоваться отчетами о доставке и другими полезными функциями.</span></p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="registration-card registration-card--attention" aria-labelledby="registrationAttentionTitle">
+                        <div class="registration-card__head">
+                            <img class="registration-card__icon registration-card__icon--notification" src="assets/images/cabinet-registration/success-notification.svg" alt="" aria-hidden="true">
+                            <h2 class="registration-card__title" id="registrationAttentionTitle">Обратите внимание!</h2>
+                        </div>
+                        <div class="registration-card__divider" aria-hidden="true"></div>
+                        <div class="registration-attention">
+                            <p>В качестве имени отправителя («от кого» будут приходить ваши сообщения) вы сможете использовать номер мобильного телефона, указанный вами при регистрации.</p>
+                            <p>Если вы не указали номер при регистрации, вы всегда сможете сделать это позже в вашем личном кабинете.</p>
+                            <p>Для отправок SMS от произвольных имен (например, от &lt;my_company.kg&gt;) вам потребуется заключить с нами договор.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <div class="registration-activation-modal" hidden data-registration-activation-modal>
+            <div class="registration-activation-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="registrationActivationModalTitle">
+                <div class="registration-activation-modal__head">
+                    <h2 class="registration-activation-modal__title" id="registrationActivationModalTitle">Аккаунт активирован</h2>
+                    <button class="registration-activation-modal__close" type="button" aria-label="Закрыть" data-registration-activation-close>
+                        <img src="assets/images/cabinet-registration/modal-close.svg" alt="" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="registration-activation-modal__text">
+                    <p>Ваш аккаунт успешно активирован.</p>
+                    <p><strong>На ваш счёт добавлено 12 бесплатных SMS.</strong></p>
+                    <p>Теперь вы можете провести свою SMS-рассылку или попробовать отправить сообщения, используя API.</p>
+                </div>
+                <button class="registration-btn registration-btn--primary registration-btn--modal" type="button" data-registration-activation-close>Закрыть</button>
+            </div>
+        </div>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© ОсОО "Никита Онлайн",</span>
+                <span>ОсОО "Никита Мобайл", 2014-2025 г.</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="https://smspro.nikita.kg/kg/oferta.html">Пользовательское соглашение</a> | <a href="security.html#bezop">Политика конфиденциальности</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Меню кабинета" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Тема">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Светлая тема" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Тёмная тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Выйти</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Закрыть меню" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Меню кабинета">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Главная</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Рассылки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Списки</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API-интеграция</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчёты</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>Сервис OTP</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблоны</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Условия и цены</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Технические возможности</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Надёжность и безопасность</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Вопросы и ответы</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Контакты</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Нижняя навигация кабинета">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Главная</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Рассылки</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Списки</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API-интеграция</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Отчёты</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>Сервис OTP</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Шаблоны</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Меню</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="assets/scripts/cabinet.js"></script>
+</body>
+</html>

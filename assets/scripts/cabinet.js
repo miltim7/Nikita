@@ -11,6 +11,7 @@ import { initCabinetOtpPage } from './modules/cabinet-otp-page.js';
 import { initCabinetPriceModal } from './modules/cabinet-price-modal.js';
 import { initCabinetProfilePage } from './modules/cabinet-profile-page.js';
 import { initCabinetRecipientListsPage } from './modules/cabinet-recipient-lists-page.js';
+import { initCabinetRegistrationPage } from './modules/cabinet-registration-page.js';
 import { initCabinetReportsPage } from './modules/cabinet-reports-page.js';
 import { initCabinetTemplatesPage } from './modules/cabinet-templates-page.js';
 
@@ -30,6 +31,7 @@ function init() {
     initCabinetPriceModal();
     initCabinetProfilePage();
     initCabinetRecipientListsPage();
+    initCabinetRegistrationPage();
     initCabinetReportsPage();
     initCabinetTemplatesPage();
     initCabinetThemeToggle();

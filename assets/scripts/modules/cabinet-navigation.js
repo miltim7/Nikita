@@ -17,6 +17,7 @@ const CABINET_SECTIONS = {
     manager: { label: 'Менеджер', icon: 'icon-chat' },
     referral: { label: 'Реферальная программа', icon: 'icon-referral' },
     profile: { label: 'Мой профиль', icon: 'icon-nav-widget' },
+    registration: { label: 'Регистрация', icon: 'icon-nav-widget' },
     notifications: { label: 'Уведомления', icon: 'icon-bell' },
     menu: { label: 'Меню', icon: 'icon-nav-burger' },
 };
