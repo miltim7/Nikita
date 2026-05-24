@@ -23,6 +23,7 @@
 @import url('./sections/cabinet-otp.css');
 @import url('./sections/cabinet-reports.css');
 @import url('./sections/cabinet-templates.css');
+@import url('./sections/cabinet-profile.css');
 
 /* ---------------- global interaction states ---------------- */
 @import url('./components/interactive.css');

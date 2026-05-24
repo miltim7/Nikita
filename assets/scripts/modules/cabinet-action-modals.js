@@ -236,7 +236,7 @@ function senderNameTemplate() {
 function confirmActionTemplate() {
     return modalShell('confirm-action', 'Подтвердите действие <br class="cabinet-action-modal__mobile-only">на smspro.nikita.kg', `
         <div class="cabinet-confirm-action__body">
-            <p>Вы не указали имя отправителя рассылки.<br>Создать новое имя можно в разделе <a class="cabinet-confirm-action__profile-link" href="#profile" data-cabinet-profile-link>“Мой профиль”</a></p>
+            <p>Вы не указали имя отправителя рассылки.<br>Создать новое имя можно в разделе <a class="cabinet-confirm-action__profile-link" href="profile.html" data-cabinet-profile-link>“Мой профиль”</a></p>
         </div>
         <div class="cabinet-confirm-action__actions">
             <button class="cabinet-modal-button cabinet-modal-button--primary" type="button">Подтвердить</button>
@@ -567,6 +567,7 @@ export function initCabinetActionModals() {
             const profileLink = event.target.closest('[data-cabinet-profile-link]');
 
             if (profileLink) {
+                if (profileLink.pathname && profileLink.pathname !== window.location.pathname) return;
                 document.dispatchEvent(new CustomEvent('cabinet:set-section', {
                     detail: { section: 'profile' },
                 }));
