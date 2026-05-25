@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - reports</title>
+    <meta name="description" content="Nikita personal account reports.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--reports" data-cabinet-current-section="reports">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Account navigation" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Expand menu" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Collapse menu</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Cabinet sections">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Home"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Home</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="My profile"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">My profile</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Newsletters"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Newsletters</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Lists</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API integration"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API integration</span></a>
+            <a class="cabinet-sidepanel__item is-active" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Reports" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Reports</span></a>
+            <div class="cabinet-sidepanel__subnav" aria-label="Report subsections">
+                <a class="cabinet-sidepanel__subitem is-current" href="reports.html" aria-label="Current period">
+                    <span class="cabinet-sidepanel__subitem-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/sidebar-calendar.svg" alt=""></span>
+                    <span class="cabinet-sidepanel__subitem-label">Current period</span>
+                </a>
+                <a class="cabinet-sidepanel__subitem" href="reports.html#periods" aria-label="By periods">
+                    <span class="cabinet-sidepanel__subitem-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/sidebar-compare.svg" alt=""></span>
+                    <span class="cabinet-sidepanel__subitem-label">By periods</span>
+                </a>
+                <a class="cabinet-sidepanel__subitem" href="reports.html#traffic" aria-label="By traffic type">
+                    <span class="cabinet-sidepanel__subitem-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/sidebar-traffic.svg" alt=""></span>
+                    <span class="cabinet-sidepanel__subitem-label">By traffic type</span>
+                </a>
+                <a class="cabinet-sidepanel__subitem" href="reports.html#payments" aria-label="Payments and expenses">
+                    <span class="cabinet-sidepanel__subitem-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/sidebar-bank.svg" alt=""></span>
+                    <span class="cabinet-sidepanel__subitem-label">Payments and expenses</span>
+                </a>
+            </div>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP service"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP service</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Templates</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Terms and prices"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Terms and prices</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Technical capabilities"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Technical capabilities</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Reliability and safety"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Reliability and safety</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Questions and answers"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Questions and answers</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Contacts"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Contacts</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Subject">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Log out">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>SOM</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Technical support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita - main">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Contact<br>to technical support</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Contact<br>with the manager</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>SOM</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="My profile">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Konstantin</span>
+                                    <span class="cabinet-status cabinet-status--admin">Administrator</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ LLC “Organization</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="cabinet-user cabinet-user--demo cabinet-user--reports-demo" aria-label="Demo mode" role="button" tabindex="0" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="../assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">DEMO MODE</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>My office → </span><strong data-cabinet-current>Reports</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="reportsTitle">Reports</h1>
+            </div>
+
+            <nav class="cabinet-reports-tabs" aria-label="Report type">
+                <a class="cabinet-reports-tabs__item is-active" href="reports.html" aria-current="page" data-reports-tab="current">
+                    <span class="cabinet-reports-tabs__icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/tag-calendar-active.svg" data-reports-tab-icon data-active-src="../assets/images/cabinet-reports/tag-calendar-active.svg" data-inactive-src="../assets/images/cabinet-reports/tag-calendar.svg" alt=""></span>
+                    <span>Current period</span>
+                </a>
+                <a class="cabinet-reports-tabs__item" href="reports.html#periods" data-reports-tab="periods">
+                    <span class="cabinet-reports-tabs__icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/tag-compare.svg" data-reports-tab-icon data-active-src="../assets/images/cabinet-reports/tag-compare-active.svg" data-inactive-src="../assets/images/cabinet-reports/tag-compare.svg" alt=""></span>
+                    <span>By periods</span>
+                </a>
+                <a class="cabinet-reports-tabs__item" href="reports.html#traffic" data-reports-tab="traffic">
+                    <span class="cabinet-reports-tabs__icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/tag-traffic.svg" data-reports-tab-icon data-active-src="../assets/images/cabinet-reports/tag-traffic-active.svg" data-inactive-src="../assets/images/cabinet-reports/tag-traffic.svg" alt=""></span>
+                    <span>By traffic type</span>
+                </a>
+                <a class="cabinet-reports-tabs__item" href="reports.html#payments" data-reports-tab="payments">
+                    <span class="cabinet-reports-tabs__icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/tag-bank.svg" data-reports-tab-icon data-active-src="../assets/images/cabinet-reports/tag-bank-active.svg" data-inactive-src="../assets/images/cabinet-reports/tag-bank.svg" alt=""></span>
+                    <span>Payments and expenses</span>
+                </a>
+            </nav>
+        </div>
+
+        <main class="cabinet-main">
+            <section class="cabinet-reports" aria-labelledby="reportsTitle" data-cabinet-reports-page>
+                <div class="cabinet-reports__panel is-active" data-reports-panel="current">
+                <form class="cabinet-reports-filter" action="#" data-reports-filter>
+                    <div class="cabinet-reports-filter__top">
+                        <label class="cabinet-reports-filter__search">
+                            <span class="visually-hidden">Search by recipient number</span>
+                            <input class="cabinet-reports-filter__search-input" type="search" name="query" placeholder="Search by recipient number">
+                            <button class="cabinet-reports-filter__search-button" type="submit">
+                                <span class="cabinet-reports-filter__icon cabinet-reports-filter__icon--search" aria-hidden="true"><img src="../assets/images/cabinet-reports/search.svg" alt=""></span>
+                                <span>Find</span>
+                            </button>
+                        </label>
+                        <label class="cabinet-reports-filter__field cabinet-reports-filter__field--mailing">
+                            <span class="visually-hidden">Belongs to the newsletter</span>
+                            <span class="cabinet-reports-filter__select-wrap">
+                                <select class="cabinet-reports-filter__select" name="mailing">
+                                    <option selected>Belongs to the newsletter</option>
+                                    <option>Newsletter 1</option>
+                                    <option>Newsletter 2</option>
+                                </select>
+                                <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                            </span>
+                        </label>
+                        <label class="cabinet-reports-filter__field cabinet-reports-filter__field--country-top">
+                            <span class="visually-hidden">Country</span>
+                            <span class="cabinet-reports-filter__select-wrap">
+                                <select class="cabinet-reports-filter__select" name="country_top">
+                                    <option selected>All countries</option>
+                                    <option>Australia</option>
+                                    <option>Germany</option>
+                                    <option>Kyrgyzstan</option>
+                                    <option>Italy</option>
+                                </select>
+                                <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                            </span>
+                        </label>
+                        <button class="cabinet-reports-filter__toggle" type="button" aria-label="Open filter" aria-expanded="false" data-reports-filter-toggle>
+                            <span class="cabinet-reports-filter__icon cabinet-reports-filter__icon--filter" aria-hidden="true"><img src="../assets/images/cabinet-reports/filter.svg" alt=""></span>
+                        </button>
+                    </div>
+
+                    <div class="cabinet-reports-filter__details" data-reports-filter-details>
+                        <div class="cabinet-reports-filter__fields">
+                            <label class="cabinet-reports-filter__field cabinet-reports-filter__field--date">
+                                <span class="cabinet-reports-filter__label">Sent</span>
+                                <span class="cabinet-reports-filter__range">
+                                    <span class="cabinet-reports-filter__date-input">
+                                        <input type="text" name="date_from" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                        <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                    </span>
+                                    <span class="cabinet-reports-filter__dash" aria-hidden="true">-</span>
+                                    <span class="cabinet-reports-filter__date-input">
+                                        <input type="text" name="date_to" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                        <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="cabinet-reports-filter__field cabinet-reports-filter__field--channel">
+                                <span class="cabinet-reports-filter__label">Channel</span>
+                                <span class="cabinet-reports-filter__select-wrap">
+                                    <select class="cabinet-reports-filter__select" name="channel">
+                                        <option selected>Web</option>
+                                        <option>API</option>
+                                        <option>SMPP</option>
+                                    </select>
+                                    <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+                            <label class="cabinet-reports-filter__field cabinet-reports-filter__field--country">
+                                <span class="cabinet-reports-filter__label">Country</span>
+                                <span class="cabinet-reports-filter__select-wrap">
+                                    <select class="cabinet-reports-filter__select" name="country">
+                                        <option selected>All</option>
+                                        <option>Australia</option>
+                                        <option>Germany</option>
+                                        <option>Kyrgyzstan</option>
+                                        <option>Italy</option>
+                                    </select>
+                                    <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+                            <label class="cabinet-reports-filter__field cabinet-reports-filter__field--status">
+                                <span class="cabinet-reports-filter__label">Status</span>
+                                <span class="cabinet-reports-filter__select-wrap">
+                                    <select class="cabinet-reports-filter__select" name="status">
+                                        <option selected>All</option>
+                                        <option>Sent</option>
+                                        <option>Delivered</option>
+                                        <option>Not delivered</option>
+                                    </select>
+                                    <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="cabinet-reports-filter__buttons">
+                            <button class="cabinet-reports-filter__button cabinet-reports-filter__button--secondary" type="reset">Reset</button>
+                            <button class="cabinet-reports-filter__button cabinet-reports-filter__button--primary" type="submit"><span class="cabinet-reports-filter__submit-desktop">Update</span><span class="cabinet-reports-filter__submit-compact">Save</span></button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cabinet-reports__grid">
+                    <div class="cabinet-reports__toolbar">
+                        <div class="cabinet-reports__sort" data-reports-page-size>
+                            <button class="cabinet-reports__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-reports-page-size-toggle>
+                                <span>Show by</span>
+                                <span class="cabinet-reports__sort-value" data-reports-page-size-value>10</span>
+                                <span class="cabinet-reports__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                            </button>
+                            <div class="cabinet-reports__sort-list" role="listbox" aria-label="Number of reports per page" hidden data-reports-page-size-list>
+                                <button class="cabinet-reports__sort-option is-active" type="button" role="option" aria-selected="true" data-reports-page-size-option="10">10</button>
+                                <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="20">20</button>
+                                <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="30">30</button>
+                                <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="50">50</button>
+                            </div>
+                        </div>
+                        <div class="cabinet-reports__actions" aria-label="Actions with the report">
+                            <button class="cabinet-reports__action cabinet-reports__action--export" type="button">
+                                <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/export.svg" alt=""></span>
+                                <span class="cabinet-reports__action-text">Export</span>
+                                <span class="cabinet-reports__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                            </button>
+                            <button class="cabinet-reports__action cabinet-reports__action--print" type="button">
+                                <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/print.svg" alt=""></span>
+                                <span class="cabinet-reports__action-text">Seal</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-reports__table-scroll" tabindex="0" aria-label="Report table">
+                        <div class="cabinet-reports-table" role="table" aria-label="Current period">
+                            <div class="cabinet-reports-table__row cabinet-reports-table__row--head" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="columnheader"><span class="cabinet-reports-table__head-copy">Date<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-reports-table__cell" role="columnheader"><span class="cabinet-reports-table__head-copy">From whom<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-reports-table__cell" role="columnheader">№</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="columnheader">Text</div>
+                                <div class="cabinet-reports-table__cell" role="columnheader">Parts</div>
+                                <div class="cabinet-reports-table__cell" role="columnheader"><span class="cabinet-reports-table__head-copy">Sum<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-reports-table__cell" role="columnheader">Channel</div>
+                                <div class="cabinet-reports-table__cell" role="columnheader">Country</div>
+                                <div class="cabinet-reports-table__cell" role="columnheader">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="columnheader">Status</div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">08.04.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6789</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-reports-table__cell" role="cell">1</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Australia</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--failed"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Not delivered</span></span><span class="cabinet-reports-status__note">Subscriber is offline</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row cabinet-reports-table__row--tall" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">08.04.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6788</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Pyrmer of a large amount of content in a cell, there will be the text of a long message, an example with a large amount of text.</div>
+                                <div class="cabinet-reports-table__cell" role="cell">4</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">3 192.84</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Germany</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--sent"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Sent</span></span><span class="cabinet-reports-status__note">Message sent to operator</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">06.04.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6767</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-reports-table__cell" role="cell">1</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Kyrgyzstan</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--delivered"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Delivered</span></span><span class="cabinet-reports-status__note">The subscriber received a message</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">05.04.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6765</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-reports-table__cell" role="cell">2</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Germany</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--delivered"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Delivered</span></span><span class="cabinet-reports-status__note">The subscriber received a message</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">02.04.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6760</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-reports-table__cell" role="cell">1</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Italy</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--failed"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Not delivered</span></span><span class="cabinet-reports-status__note">Subscriber is offline</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">01.04.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6758</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-reports-table__cell" role="cell">1</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Australia</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--delivered"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Delivered</span></span><span class="cabinet-reports-status__note">The subscriber received a message</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">30.03.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6750</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-reports-table__cell" role="cell">1</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Kyrgyzstan</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--delivered"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Delivered</span></span><span class="cabinet-reports-status__note">The subscriber received a message</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">29.03.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6747</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-reports-table__cell" role="cell">2</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Germany</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--delivered"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Delivered</span></span><span class="cabinet-reports-status__note">The subscriber received a message</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">28.03.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6740</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-reports-table__cell" role="cell">1</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Italy</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--failed"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Not delivered</span></span><span class="cabinet-reports-status__note">Subscriber is offline</span></span></div>
+                            </div>
+                            <div class="cabinet-reports-table__row" role="row">
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--date" role="cell">27.03.2025</div>
+                                <div class="cabinet-reports-table__cell" role="cell">User</div>
+                                <div class="cabinet-reports-table__cell" role="cell">6732</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-reports-table__cell" role="cell">1</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Chanel 1</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Australia</div>
+                                <div class="cabinet-reports-table__cell" role="cell">Traffic</div>
+                                <div class="cabinet-reports-table__cell cabinet-reports-table__cell--status" role="cell"><span class="cabinet-reports-status cabinet-reports-status--delivered"><span class="cabinet-reports-status__line"><span class="cabinet-reports-status__dot" aria-hidden="true"></span><span>Delivered</span></span><span class="cabinet-reports-status__note">The subscriber received a message</span></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-reports__scrollbar" aria-hidden="true">
+                        <span class="cabinet-reports__scrollbar-track"></span>
+                        <span class="cabinet-reports__scrollbar-thumb"></span>
+                        <span class="cabinet-reports__scrollbar-knob"></span>
+                    </div>
+                </div>
+
+                <nav class="cabinet-reports-pagination" aria-label="Report pages">
+                    <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#prev" aria-label="Previous page"><img src="../assets/images/cabinet-reports/pagination-prev.svg" alt=""></a>
+                    <a class="cabinet-reports-pagination__item is-active" href="#page-1" aria-current="page">1</a>
+                    <a class="cabinet-reports-pagination__item" href="#page-2">2</a>
+                    <a class="cabinet-reports-pagination__item" href="#page-3">3</a>
+                    <a class="cabinet-reports-pagination__item" href="#page-4">4</a>
+                    <span class="cabinet-reports-pagination__item cabinet-reports-pagination__item--dots">...</span>
+                    <a class="cabinet-reports-pagination__item" href="#page-12">12</a>
+                    <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#next" aria-label="Next page"><img src="../assets/images/cabinet-reports/pagination-next.svg" alt=""></a>
+                </nav>
+                </div>
+
+                <div class="cabinet-reports__panel" data-reports-panel="periods" hidden>
+                    <form class="cabinet-reports-filter cabinet-reports-filter--periods" action="#" data-reports-filter>
+                        <div class="cabinet-reports-filter__details" data-reports-filter-details>
+                            <div class="cabinet-reports-filter__fields">
+                                <label class="cabinet-reports-filter__field cabinet-reports-filter__field--date cabinet-reports-filter__field--period">
+                                    <span class="cabinet-reports-filter__label">Period</span>
+                                    <span class="cabinet-reports-filter__range">
+                                        <span class="cabinet-reports-filter__date-input">
+                                            <input type="text" name="period_from" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                            <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                        </span>
+                                        <span class="cabinet-reports-filter__dash" aria-hidden="true">-</span>
+                                        <span class="cabinet-reports-filter__date-input">
+                                            <input type="text" name="period_to" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                            <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <button class="cabinet-reports-filter__toggle" type="button" aria-label="Open filter" aria-expanded="false" data-reports-filter-toggle>
+                                    <span class="cabinet-reports-filter__icon cabinet-reports-filter__icon--filter" aria-hidden="true"><img src="../assets/images/cabinet-reports/filter.svg" alt=""></span>
+                                </button>
+                                <label class="cabinet-reports-filter__field cabinet-reports-filter__field--channel cabinet-reports-filter__field--period-channel">
+                                    <span class="cabinet-reports-filter__label">Channel</span>
+                                    <span class="cabinet-reports-filter__select-wrap">
+                                        <select class="cabinet-reports-filter__select" name="period_channel">
+                                            <option selected>Web</option>
+                                            <option>API</option>
+                                            <option>SMPP</option>
+                                        </select>
+                                        <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="cabinet-reports-filter__buttons">
+                                <button class="cabinet-reports-filter__button cabinet-reports-filter__button--secondary" type="reset">Reset</button>
+                                <button class="cabinet-reports-filter__button cabinet-reports-filter__button--primary" type="submit"><span class="cabinet-reports-filter__submit-desktop">Update</span><span class="cabinet-reports-filter__submit-compact">Save</span></button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="cabinet-reports__grid cabinet-reports__grid--periods">
+                        <div class="cabinet-reports__toolbar">
+                            <div class="cabinet-reports__sort" data-reports-page-size>
+                                <button class="cabinet-reports__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-reports-page-size-toggle>
+                                    <span>Show by</span>
+                                    <span class="cabinet-reports__sort-value" data-reports-page-size-value>10</span>
+                                    <span class="cabinet-reports__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-reports__sort-list" role="listbox" aria-label="Number of reports per page" hidden data-reports-page-size-list>
+                                    <button class="cabinet-reports__sort-option is-active" type="button" role="option" aria-selected="true" data-reports-page-size-option="10">10</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="20">20</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="30">30</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="50">50</button>
+                                </div>
+                            </div>
+                            <div class="cabinet-reports__actions" aria-label="Actions with the report">
+                                <button class="cabinet-reports__action cabinet-reports__action--export" type="button">
+                                    <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/export.svg" alt=""></span>
+                                    <span class="cabinet-reports__action-text">Export</span>
+                                    <span class="cabinet-reports__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </button>
+                                <button class="cabinet-reports__action cabinet-reports__action--print" type="button">
+                                    <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/print.svg" alt=""></span>
+                                    <span class="cabinet-reports__action-text">Seal</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-reports__table-scroll" tabindex="0" aria-label="Table of reports by period">
+                            <div class="cabinet-reports-table cabinet-reports-table--periods" role="table" aria-label="By periods">
+                                <div class="cabinet-reports-table__row cabinet-reports-table__row--head" role="row">
+                                    <div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="columnheader"><span class="cabinet-reports-table__head-copy">Period<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                    <div class="cabinet-reports-table__cell" role="columnheader"><span class="cabinet-reports-table__head-copy">Channel<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                    <div class="cabinet-reports-table__cell" role="columnheader"><span class="cabinet-reports-table__head-copy">Sent<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                    <div class="cabinet-reports-table__cell" role="columnheader"><span class="cabinet-reports-table__head-copy">Delivered<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                    <div class="cabinet-reports-table__cell" role="columnheader"><span class="cabinet-reports-table__head-copy">Number of SMS<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                    <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="columnheader"><span class="cabinet-reports-table__head-copy">Sum<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                </div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.04.2026 - 08.05.2026</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">12</div><div class="cabinet-reports-table__cell" role="cell">12</div><div class="cabinet-reports-table__cell" role="cell">12</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.03.2026 - 08.04.2026</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">45</div><div class="cabinet-reports-table__cell" role="cell">42</div><div class="cabinet-reports-table__cell" role="cell">45</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">3 192.84</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.02.2026 - 08.03.2026</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">37</div><div class="cabinet-reports-table__cell" role="cell">37</div><div class="cabinet-reports-table__cell" role="cell">37</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.01.2026 - 08.02.2026</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">206</div><div class="cabinet-reports-table__cell" role="cell">206</div><div class="cabinet-reports-table__cell" role="cell">206</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.12.2025 - 08.01.2026</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">121</div><div class="cabinet-reports-table__cell" role="cell">121</div><div class="cabinet-reports-table__cell" role="cell">121</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.11.2025 - 08.12.2025</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">100</div><div class="cabinet-reports-table__cell" role="cell">100</div><div class="cabinet-reports-table__cell" role="cell">100</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.10.2025 - 08.11.2025</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">95</div><div class="cabinet-reports-table__cell" role="cell">90</div><div class="cabinet-reports-table__cell" role="cell">95</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.09.2025 - 08.10.2025</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">70</div><div class="cabinet-reports-table__cell" role="cell">69</div><div class="cabinet-reports-table__cell" role="cell">70</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.08.2025 - 08.09.2025</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">11</div><div class="cabinet-reports-table__cell" role="cell">18</div><div class="cabinet-reports-table__cell" role="cell">11</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.07.2025 - 08.08.2025</div><div class="cabinet-reports-table__cell" role="cell">Chanel 1</div><div class="cabinet-reports-table__cell" role="cell">18</div><div class="cabinet-reports-table__cell" role="cell">18</div><div class="cabinet-reports-table__cell" role="cell">18</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.78</div></div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-reports__scrollbar" aria-hidden="true">
+                            <span class="cabinet-reports__scrollbar-track"></span>
+                            <span class="cabinet-reports__scrollbar-thumb"></span>
+                            <span class="cabinet-reports__scrollbar-knob"></span>
+                        </div>
+                    </div>
+
+                    <nav class="cabinet-reports-pagination" aria-label="Report pages">
+                        <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#prev" aria-label="Previous page"><img src="../assets/images/cabinet-reports/pagination-prev.svg" alt=""></a>
+                        <a class="cabinet-reports-pagination__item is-active" href="#page-1" aria-current="page">1</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-2">2</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-3">3</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-4">4</a>
+                        <span class="cabinet-reports-pagination__item cabinet-reports-pagination__item--dots">...</span>
+                        <a class="cabinet-reports-pagination__item" href="#page-12">12</a>
+                        <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#next" aria-label="Next page"><img src="../assets/images/cabinet-reports/pagination-next.svg" alt=""></a>
+                    </nav>
+                </div>
+
+                <div class="cabinet-reports__panel" data-reports-panel="traffic" hidden>
+                    <form class="cabinet-reports-filter cabinet-reports-filter--traffic" action="#" data-reports-filter>
+                        <div class="cabinet-reports-filter__details" data-reports-filter-details>
+                            <div class="cabinet-reports-filter__fields">
+                                <label class="cabinet-reports-filter__field cabinet-reports-filter__field--date cabinet-reports-filter__field--period">
+                                    <span class="cabinet-reports-filter__label">Period</span>
+                                    <span class="cabinet-reports-filter__range">
+                                        <span class="cabinet-reports-filter__date-input">
+                                            <input type="text" name="traffic_period_from" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                            <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                        </span>
+                                        <span class="cabinet-reports-filter__dash" aria-hidden="true">-</span>
+                                        <span class="cabinet-reports-filter__date-input">
+                                            <input type="text" name="traffic_period_to" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                            <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <button class="cabinet-reports-filter__toggle" type="button" aria-label="Open filter" aria-expanded="false" data-reports-filter-toggle>
+                                    <span class="cabinet-reports-filter__icon cabinet-reports-filter__icon--filter" aria-hidden="true"><img src="../assets/images/cabinet-reports/filter.svg" alt=""></span>
+                                </button>
+                                <label class="cabinet-reports-filter__field cabinet-reports-filter__field--operator">
+                                    <span class="cabinet-reports-filter__label">Operator</span>
+                                    <span class="cabinet-reports-filter__select-wrap">
+                                        <select class="cabinet-reports-filter__select" name="traffic_operator" data-desktop-value="Kyrgyzstan - Beeline" data-compact-value="All">
+                                            <option selected>Kyrgyzstan - Beeline</option>
+                                            <option>All</option>
+                                            <option>Beeline</option>
+                                            <option>O!</option>
+                                            <option>MegaCom</option>
+                                        </select>
+                                        <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                    </span>
+                                </label>
+                                <label class="cabinet-reports-filter__field cabinet-reports-filter__field--traffic-type">
+                                    <span class="cabinet-reports-filter__label">Traffic type</span>
+                                    <span class="cabinet-reports-filter__select-wrap">
+                                        <select class="cabinet-reports-filter__select" name="traffic_type">
+                                            <option selected>All</option>
+                                            <option>Advertising</option>
+                                            <option>Service</option>
+                                            <option>Transactional</option>
+                                        </select>
+                                        <span class="cabinet-reports-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="cabinet-reports-filter__buttons">
+                                <button class="cabinet-reports-filter__button cabinet-reports-filter__button--secondary" type="reset">Reset</button>
+                                <button class="cabinet-reports-filter__button cabinet-reports-filter__button--primary" type="submit"><span class="cabinet-reports-filter__submit-desktop">Update</span><span class="cabinet-reports-filter__submit-compact">Save</span></button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="cabinet-reports__grid cabinet-reports__grid--traffic">
+                        <div class="cabinet-reports__toolbar">
+                            <div class="cabinet-reports__sort" data-reports-page-size>
+                                <button class="cabinet-reports__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-reports-page-size-toggle data-desktop-value="10" data-mobile-value="50">
+                                    <span>Show by</span>
+                                    <span class="cabinet-reports__sort-value" data-reports-page-size-value>10</span>
+                                    <span class="cabinet-reports__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-reports__sort-list" role="listbox" aria-label="Number of reports per page" hidden data-reports-page-size-list>
+                                    <button class="cabinet-reports__sort-option is-active" type="button" role="option" aria-selected="true" data-reports-page-size-option="10">10</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="20">20</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="30">30</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="50">50</button>
+                                </div>
+                            </div>
+                            <div class="cabinet-reports__actions" aria-label="Actions with the report">
+                                <button class="cabinet-reports__action cabinet-reports__action--export" type="button">
+                                    <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/export.svg" alt=""></span>
+                                    <span class="cabinet-reports__action-text">Export</span>
+                                    <span class="cabinet-reports__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </button>
+                                <button class="cabinet-reports__action cabinet-reports__action--print" type="button">
+                                    <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/print.svg" alt=""></span>
+                                    <span class="cabinet-reports__action-text">Seal</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-reports__table-scroll" tabindex="0" aria-label="Table of reports by traffic type">
+                            <div class="cabinet-reports-table cabinet-reports-table--traffic" role="table" aria-label="By traffic type">
+                                <div class="cabinet-reports-table__row cabinet-reports-table__row--traffic-title" role="row">
+                                    <div class="cabinet-reports-table__cell" role="columnheader">Kyrgyzstan - Beeline</div>
+                                </div>
+                                <div class="cabinet-reports-table__row cabinet-reports-table__row--traffic-groups" role="row">
+                                    <div class="cabinet-reports-table__cell" role="columnheader"><span class="cabinet-reports-table__desktop-copy">Number of SMS parts</span><span class="cabinet-reports-table__compact-copy">Parts of SMS</span></div>
+                                    <div class="cabinet-reports-table__cell" role="columnheader" aria-colspan="2">Advertising</div>
+                                    <div class="cabinet-reports-table__cell" role="columnheader" aria-colspan="2">Service</div>
+                                    <div class="cabinet-reports-table__cell" role="columnheader" aria-colspan="2">Transactional</div>
+                                </div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">4</div><div class="cabinet-reports-table__cell" role="cell">4</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">4</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">4</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">2</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div><div class="cabinet-reports-table__cell" role="cell">1</div><div class="cabinet-reports-table__cell" role="cell">15 %</div></div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-reports__scrollbar" aria-hidden="true">
+                            <span class="cabinet-reports__scrollbar-track"></span>
+                            <span class="cabinet-reports__scrollbar-thumb"></span>
+                            <span class="cabinet-reports__scrollbar-knob"></span>
+                        </div>
+                    </div>
+
+                    <nav class="cabinet-reports-pagination" aria-label="Report pages">
+                        <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#prev" aria-label="Previous page"><img src="../assets/images/cabinet-reports/pagination-prev.svg" alt=""></a>
+                        <a class="cabinet-reports-pagination__item is-active" href="#page-1" aria-current="page">1</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-2">2</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-3">3</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-4">4</a>
+                        <span class="cabinet-reports-pagination__item cabinet-reports-pagination__item--dots">...</span>
+                        <a class="cabinet-reports-pagination__item" href="#page-12">12</a>
+                        <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#next" aria-label="Next page"><img src="../assets/images/cabinet-reports/pagination-next.svg" alt=""></a>
+                    </nav>
+                </div>
+
+                <div class="cabinet-reports__panel" data-reports-panel="payments" hidden>
+                    <form class="cabinet-reports-filter cabinet-reports-filter--payments" action="#" data-reports-filter>
+                        <div class="cabinet-reports-filter__details" data-reports-filter-details>
+                            <div class="cabinet-reports-filter__fields">
+                                <label class="cabinet-reports-filter__field cabinet-reports-filter__field--date cabinet-reports-filter__field--period">
+                                    <span class="cabinet-reports-filter__label">Period</span>
+                                    <span class="cabinet-reports-filter__range">
+                                        <span class="cabinet-reports-filter__date-input">
+                                            <input type="text" name="payments_period_from" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                            <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                        </span>
+                                        <span class="cabinet-reports-filter__dash" aria-hidden="true">-</span>
+                                        <span class="cabinet-reports-filter__date-input">
+                                            <input type="text" name="payments_period_to" placeholder="dd.mm.yyyy" inputmode="numeric">
+                                            <span class="cabinet-reports-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/calendar.svg" alt=""></span>
+                                        </span>
+                                    </span>
+                                </label>
+                                <button class="cabinet-reports-filter__toggle" type="button" aria-label="Open filter" aria-expanded="false" data-reports-filter-toggle>
+                                    <span class="cabinet-reports-filter__icon cabinet-reports-filter__icon--filter" aria-hidden="true"><img src="../assets/images/cabinet-reports/filter.svg" alt=""></span>
+                                </button>
+                            </div>
+                            <div class="cabinet-reports-filter__buttons">
+                                <button class="cabinet-reports-filter__button cabinet-reports-filter__button--secondary" type="reset">Reset</button>
+                                <button class="cabinet-reports-filter__button cabinet-reports-filter__button--primary" type="submit"><span class="cabinet-reports-filter__submit-desktop">Update</span><span class="cabinet-reports-filter__submit-compact">Save</span></button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="cabinet-reports__grid cabinet-reports__grid--payments">
+                        <div class="cabinet-reports__toolbar">
+                            <div class="cabinet-reports__sort" data-reports-page-size>
+                                <button class="cabinet-reports__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-reports-page-size-toggle data-desktop-value="10" data-mobile-value="50">
+                                    <span>Show by</span>
+                                    <span class="cabinet-reports__sort-value" data-reports-page-size-value>10</span>
+                                    <span class="cabinet-reports__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-reports__sort-list" role="listbox" aria-label="Number of reports per page" hidden data-reports-page-size-list>
+                                    <button class="cabinet-reports__sort-option is-active" type="button" role="option" aria-selected="true" data-reports-page-size-option="10">10</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="20">20</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="30">30</button>
+                                    <button class="cabinet-reports__sort-option" type="button" role="option" aria-selected="false" data-reports-page-size-option="50">50</button>
+                                </div>
+                            </div>
+                            <div class="cabinet-reports__actions" aria-label="Actions with the report">
+                                <button class="cabinet-reports__action cabinet-reports__action--export" type="button">
+                                    <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/export.svg" alt=""></span>
+                                    <span class="cabinet-reports__action-text">Export</span>
+                                    <span class="cabinet-reports__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                                </button>
+                                <button class="cabinet-reports__action cabinet-reports__action--print" type="button">
+                                    <span class="cabinet-reports__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/print.svg" alt=""></span>
+                                    <span class="cabinet-reports__action-text">Seal</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-reports__table-scroll" tabindex="0" aria-label="Table of payments and expenses">
+                            <div class="cabinet-reports-table cabinet-reports-table--payments" role="table" aria-label="Payments and expenses">
+                                <div class="cabinet-reports-table__row cabinet-reports-table__row--head" role="row">
+                                    <div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="columnheader"><span class="cabinet-reports-table__head-copy">Period<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                    <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="columnheader"><span class="cabinet-reports-table__head-copy">Services provided for the amount<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                    <div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="columnheader"><span class="cabinet-reports-table__head-copy">Total funds received per month<span class="cabinet-reports-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-reports/sort.svg" alt=""></span></span></div>
+                                </div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.04.2026 - 08.05.2026</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.03.2026 - 08.04.2026</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">3 192.84</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">3 192.84</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.02.2026 - 08.03.2026</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.01.2026 - 08.02.2026</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.12.2025 - 08.01.2026</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.11.2025 - 08.12.2025</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">126.53</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.10.2025 - 08.11.2025</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">256 984.40</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.09.2025 - 08.10.2025</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.00</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.08.2025 - 08.09.2025</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">476.12</div></div>
+                                <div class="cabinet-reports-table__row" role="row"><div class="cabinet-reports-table__cell cabinet-reports-table__cell--period" role="cell">08.07.2025 - 08.08.2025</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.78</div><div class="cabinet-reports-table__cell cabinet-reports-table__cell--amount" role="cell">21.78</div></div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-reports__scrollbar" aria-hidden="true">
+                            <span class="cabinet-reports__scrollbar-track"></span>
+                            <span class="cabinet-reports__scrollbar-thumb"></span>
+                            <span class="cabinet-reports__scrollbar-knob"></span>
+                        </div>
+                    </div>
+
+                    <nav class="cabinet-reports-pagination" aria-label="Report pages">
+                        <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#prev" aria-label="Previous page"><img src="../assets/images/cabinet-reports/pagination-prev.svg" alt=""></a>
+                        <a class="cabinet-reports-pagination__item is-active" href="#page-1" aria-current="page">1</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-2">2</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-3">3</a>
+                        <a class="cabinet-reports-pagination__item" href="#page-4">4</a>
+                        <span class="cabinet-reports-pagination__item cabinet-reports-pagination__item--dots">...</span>
+                        <a class="cabinet-reports-pagination__item" href="#page-12">12</a>
+                        <a class="cabinet-reports-pagination__item cabinet-reports-pagination__item--arrow" href="#next" aria-label="Next page"><img src="../assets/images/cabinet-reports/pagination-next.svg" alt=""></a>
+                    </nav>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Nikita Online LLC,</span>
+                <span>Nikita Mobile LLC, 2014-2025</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">User Agreement</a> | <a href="security.html#bezop">Privacy Policy</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Account menu" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Subject">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Log out</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Close menu" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Account menu">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Home</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Newsletters</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Lists</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API integration</span></a>
+                <a class="cabinet-tabbar-modal__item is-active" href="reports.html" data-cabinet-nav data-section="reports" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Reports</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP service</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Templates</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Terms and prices</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Technical capabilities</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Reliability and safety</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Questions and answers</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Contacts</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Bottom navigation of the account">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Home</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Newsletters</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Lists</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API integration</span>
+            </a>
+            <a class="cabinet-tabbar__item is-active" href="reports.html" data-cabinet-nav data-section="reports" aria-current="page">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Reports</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP service</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Templates</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Menu</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

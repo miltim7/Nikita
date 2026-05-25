@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита - алуучулардын тизмелери</title>
+    <meta name="description" content="Никитанын жеке эсебин алуучулардын тизмеси.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--recipient-lists" data-cabinet-current-section="lists">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Каттоо эсебин багыттоо" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Менюну жайыңыз" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Менюну жыйыштыруу</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Кабинеттин бөлүмдөрү">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Үй"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Үй</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="Менин профилим"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">Менин профилим</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Маалымат бюллетендери"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Маалымат бюллетендери</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Тизмелер"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Тизмелер</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API интеграциясы"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API интеграциясы</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчеттор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчеттор</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP кызматы"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP кызматы</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблондор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблондор</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Шарттар жана баалар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Шарттар жана баалар</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Техникалык мүмкүнчүлүктөр"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Техникалык мүмкүнчүлүктөр</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Ишенимдүүлүк жана коопсуздук"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Ишенимдүүлүк жана коопсуздук</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Суроолор жана жооптор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Суроолор жана жооптор</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Байланыштар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Байланыштар</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Тема">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Чыгыңыз">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Чыгыңыз</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>сом</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Техникалык колдоо" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="менеджер" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Никита - негизги">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Байланыш<br>техникалык колдоого</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Байланыш<br>менеджер менен</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>сом</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user" href="profile.html" aria-label="Менин профилим">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Константин</span>
+                                    <span class="cabinet-status cabinet-status--admin">Администратор</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ ЖЧК “Уюм</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>Менин кеңсем → </span><strong data-cabinet-current><span class="cabinet-recipient-lists__title-full">Алуучулардын тизмелери</span><span class="cabinet-recipient-lists__title-short">Тизмелер</span></strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="recipientListsTitle">
+                    <span class="cabinet-recipient-lists__title-full">Алуучулардын тизмелери</span>
+                    <span class="cabinet-recipient-lists__title-short">Тизмелер</span>
+                </h1>
+            </div>
+        </div>
+
+        <main class="cabinet-main">
+            <section class="cabinet-recipient-lists" aria-labelledby="recipientListsTitle" data-cabinet-recipient-lists-page>
+                <form class="cabinet-recipient-lists-filter" action="#" data-recipient-lists-filter>
+                    <div class="cabinet-recipient-lists-filter__top">
+                        <div class="cabinet-recipient-lists-filter__select" data-recipient-lists-select>
+                            <button class="cabinet-recipient-lists-filter__select-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-recipient-lists-select-toggle>
+                                <span data-recipient-lists-select-label>Тизмени тандаңыз</span>
+                                <span class="cabinet-recipient-lists-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/select-chevron-desktop.svg" alt=""></span>
+                            </button>
+                            <div class="cabinet-recipient-lists-filter__select-list" role="listbox" aria-label="алуучулардын тизмеси" hidden data-recipient-lists-select-list>
+                                <button class="cabinet-recipient-lists-filter__select-option" type="button" role="option" aria-selected="false" data-recipient-lists-select-option="Основной список">Негизги тизме</button>
+                                <button class="cabinet-recipient-lists-filter__select-option" type="button" role="option" aria-selected="false" data-recipient-lists-select-option="Промо база">Промо базасы</button>
+                                <button class="cabinet-recipient-lists-filter__select-option" type="button" role="option" aria-selected="false" data-recipient-lists-select-option="VIP клиенты">VIP кардарлар</button>
+                            </div>
+                        </div>
+                        <button class="cabinet-recipient-lists-filter__blacklist" type="button" aria-pressed="false" data-recipient-lists-blacklist>
+                            <span class="cabinet-recipient-lists-filter__blacklist-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/blacklist-desktop.svg" alt=""></span>
+                            <span>Кара тизме</span>
+                        </button>
+                        <button class="cabinet-recipient-lists-filter__toggle" type="button" aria-label="Чыпканы ачуу" aria-expanded="false" data-recipient-lists-filter-toggle>
+                            <span class="cabinet-recipient-lists-filter__toggle-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/filter-mobile-closed.svg" alt=""></span>
+                        </button>
+                    </div>
+
+                    <div class="cabinet-recipient-lists-filter__details" data-recipient-lists-filter-details>
+                        <div class="cabinet-recipient-lists-filter__fields">
+                            <label class="cabinet-recipient-lists-filter__field cabinet-recipient-lists-filter__field--name">
+                                <span class="cabinet-recipient-lists-filter__label">Жаңы тизме<span class="cabinet-recipient-lists-filter__label-colon">:</span></span>
+                                <input class="cabinet-recipient-lists-filter__input" type="text" name="list_name" placeholder="Тизме аты">
+                            </label>
+                            <label class="cabinet-recipient-lists-filter__field cabinet-recipient-lists-filter__field--description">
+                                <span class="cabinet-recipient-lists-filter__label">Сүрөттөмө<span class="cabinet-recipient-lists-filter__label-colon">:</span></span>
+                                <input class="cabinet-recipient-lists-filter__input" type="text" name="description" placeholder="Кыска сүрөттөмө кошуу">
+                            </label>
+                        </div>
+                        <div class="cabinet-recipient-lists-filter__buttons">
+                            <button class="cabinet-recipient-lists-filter__button cabinet-recipient-lists-filter__button--secondary" type="reset">Калыбына келтирүү</button>
+                            <button class="cabinet-recipient-lists-filter__button cabinet-recipient-lists-filter__button--primary" type="submit">Сактоо</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cabinet-recipient-lists__grid">
+                    <div class="cabinet-recipient-lists__toolbar">
+                        <div class="cabinet-recipient-lists__sort" data-recipient-lists-page-size>
+                            <button class="cabinet-recipient-lists__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-recipient-lists-page-size-toggle>
+                                <span>Көрсөтүү</span>
+                                <span class="cabinet-recipient-lists__sort-value" data-recipient-lists-page-size-value>50</span>
+                                <span class="cabinet-recipient-lists__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                            </button>
+                            <div class="cabinet-recipient-lists__sort-list" role="listbox" aria-label="Бир беттеги алуучулардын саны" hidden data-recipient-lists-page-size-list>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="10">10</button>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="20">20</button>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="30">30</button>
+                                <button class="cabinet-recipient-lists__sort-option" type="button" role="option" aria-selected="false" data-recipient-lists-page-size-option="40">40</button>
+                                <button class="cabinet-recipient-lists__sort-option is-active" type="button" role="option" aria-selected="true" data-recipient-lists-page-size-option="50">50</button>
+                            </div>
+                        </div>
+                        <div class="cabinet-recipient-lists__actions" aria-label="алуучулардын тизмеси менен иш-аракеттер">
+                            <div class="cabinet-recipient-lists__action-control cabinet-recipient-lists__action-control--add" data-recipient-lists-action-control>
+                                <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--add" type="button" aria-haspopup="menu" aria-expanded="false" data-recipient-lists-action-toggle>
+                                    <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-add-desktop.svg" alt=""></span>
+                                    <span class="cabinet-recipient-lists__action-text">кошуу</span>
+                                    <span class="cabinet-recipient-lists__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-recipient-lists__action-menu cabinet-recipient-lists__action-menu--add" role="menu" hidden data-recipient-lists-action-menu>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem" data-recipient-lists-add-manual>Кол менен кошуу</button>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Башка тизмеден кошуу</button>
+                                </div>
+                            </div>
+                            <div class="cabinet-recipient-lists__action-control cabinet-recipient-lists__action-control--import" data-recipient-lists-action-control>
+                                <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--import" type="button" aria-haspopup="menu" aria-expanded="false" data-recipient-lists-action-toggle>
+                                    <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-import-desktop.svg" alt=""></span>
+                                    <span class="cabinet-recipient-lists__action-text">Импорттоо </span>
+                                    <span class="cabinet-recipient-lists__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-recipient-lists__action-menu cabinet-recipient-lists__action-menu--import" role="menu" hidden data-recipient-lists-action-menu>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Excelден импорттоо</button>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">CSVден импорттоо</button>
+                                </div>
+                            </div>
+                            <div class="cabinet-recipient-lists__action-control cabinet-recipient-lists__action-control--export" data-recipient-lists-action-control>
+                                <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--export" type="button" aria-haspopup="menu" aria-expanded="false" data-recipient-lists-action-toggle>
+                                    <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-export-desktop.svg" alt=""></span>
+                                    <span class="cabinet-recipient-lists__action-text">Экспорт</span>
+                                    <span class="cabinet-recipient-lists__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-chevron-desktop.svg" alt=""></span>
+                                </button>
+                                <div class="cabinet-recipient-lists__action-menu cabinet-recipient-lists__action-menu--export" role="menu" hidden data-recipient-lists-action-menu>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">Excelге экспорттоо</button>
+                                    <button class="cabinet-recipient-lists__action-menu-item" type="button" role="menuitem">CSVге экспорттоо</button>
+                                </div>
+                            </div>
+                            <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--delete-selected" type="button" data-recipient-lists-delete-selected>
+                                <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-delete-selected-desktop.svg" alt=""></span>
+                                <span class="cabinet-recipient-lists__action-text cabinet-recipient-lists__action-text--desktop">Тандалган алып салуу</span>
+                                <span class="cabinet-recipient-lists__action-text cabinet-recipient-lists__action-text--compact">Жок кылуу</span>
+                            </button>
+                            <button class="cabinet-recipient-lists__action cabinet-recipient-lists__action--delete-list" type="button" data-recipient-lists-delete-list>
+                                <span class="cabinet-recipient-lists__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/action-delete-list-desktop.svg" alt=""></span>
+                                <span class="cabinet-recipient-lists__action-text">Тизмени жок кылуу</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-recipient-lists__table-scroll" tabindex="0" aria-labelledby="recipientListsTitle">
+                        <div class="cabinet-recipient-lists-table" role="table" aria-labelledby="recipientListsTitle">
+                            <div class="cabinet-recipient-lists-table__row cabinet-recipient-lists-table__row--head" role="row">
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="columnheader"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Бардык алуучуларды тандаңыз" data-recipient-lists-select-all><span class="cabinet-recipient-lists-table__head-copy">Телефон <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Толук аты <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Туулган күн <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Жынысы <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Регион <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Оператор <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Убакыт алкагы <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Кош. 1 <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Кош. 2 <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="columnheader"><span class="cabinet-recipient-lists-table__head-copy">Кош. 3 <span class="cabinet-recipient-lists-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-recipient-lists/table-sort-desktop.svg" alt=""></span></span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="columnheader"></div>
+                            </div>
+
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кытай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">А</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">15.04.1990</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">А</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Голландия</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 0</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.78</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Маани 113</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-244</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кытай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">А</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">30.12.2014</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +3</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">256 984.40</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-01</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кытай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" checked aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">А</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">12.11.2002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">Э</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кытай</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT +6</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.00</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 002</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-02</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">27.05.2010</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">А</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Кыргызстан</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">476.12</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Мааниси 050</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-18</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                            <div class="cabinet-recipient-lists-table__row" role="row" data-recipient-list-row>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--phone" role="cell"><input class="cabinet-recipient-lists-table__checkbox" type="checkbox" aria-label="Алуучуну тандоо +996 (700) 892-188" data-recipient-list-row-check><span>+996 (700) 892-188</span></div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--name" role="cell">Фамилия мен...</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--birth" role="cell">15.04.1990</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--gender" role="cell">А</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--region" role="cell">Голландия</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--operator" role="cell">Operator 001</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--timezone" role="cell">GMT 0</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">21.78</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Маани 113</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">Value-244</div>
+                                <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Алуучунун аракеттери"><img src="../assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabinet-recipient-lists__scrollbar" aria-hidden="true">
+                        <span class="cabinet-recipient-lists__scrollbar-track"></span>
+                        <span class="cabinet-recipient-lists__scrollbar-thumb"></span>
+                        <span class="cabinet-recipient-lists__scrollbar-knob"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cabinet-mailings" aria-hidden="true" hidden>
+                <form class="cabinet-mailings-filter" action="#" data-mailings-filter>
+                    <div class="cabinet-mailings-filter__search-row">
+                        <label class="cabinet-mailings-filter__search">
+                            <span class="visually-hidden">Почта аты боюнча издөө</span>
+                            <input class="cabinet-mailings-filter__search-input" type="search" name="query" placeholder="Почта аты боюнча издөө">
+                            <button class="cabinet-mailings-filter__search-button" type="submit">
+                                <span class="cabinet-mailings-filter__icon cabinet-mailings-filter__icon--search" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-search.svg" alt=""></span>
+                                <span>Find</span>
+                            </button>
+                        </label>
+                        <button class="cabinet-mailings-filter__toggle" type="button" aria-label="Чыпканы ачуу" aria-expanded="false" data-mailings-filter-toggle>
+                            <span class="cabinet-mailings-filter__icon cabinet-mailings-filter__icon--filter" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-filter.svg" alt=""></span>
+                        </button>
+                    </div>
+
+                    <div class="cabinet-mailings-filter__details" data-mailings-filter-details>
+                        <div class="cabinet-mailings-filter__fields">
+                            <label class="cabinet-mailings-filter__field cabinet-mailings-filter__field--date">
+                                <span class="cabinet-mailings-filter__label">Дата</span>
+                                <span class="cabinet-mailings-filter__range">
+                                    <span class="cabinet-mailings-filter__date-input">
+                                        <input type="text" name="date_from" placeholder="gg.mm.yyyy" inputmode="numeric">
+                                        <span class="cabinet-mailings-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-calendar.svg" alt=""></span>
+                                    </span>
+                                    <span class="cabinet-mailings-filter__dash" aria-hidden="true">-</span>
+                                    <span class="cabinet-mailings-filter__date-input">
+                                        <input type="text" name="date_to" placeholder="gg.mm.yyyy" inputmode="numeric">
+                                        <span class="cabinet-mailings-filter__input-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-calendar.svg" alt=""></span>
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="cabinet-mailings-filter__field cabinet-mailings-filter__field--status">
+                                <span class="cabinet-mailings-filter__label">Статусу:</span>
+                                <span class="cabinet-mailings-filter__select-wrap">
+                                    <select class="cabinet-mailings-filter__select" name="status">
+                                        <option selected>Баары</option>
+                                        <option>Жөнөтүлдү</option>
+                                        <option>Жеткирүү</option>
+                                        <option>жеткирилген жок</option>
+                                    </select>
+                                    <span class="cabinet-mailings-filter__select-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="cabinet-mailings-filter__buttons">
+                            <button class="cabinet-mailings-filter__button cabinet-mailings-filter__button--secondary" type="reset">Калыбына келтирүү</button>
+                            <button class="cabinet-mailings-filter__button cabinet-mailings-filter__button--primary" type="submit">Жаңыртуу</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cabinet-mailings__grid">
+                    <div class="cabinet-mailings__toolbar">
+                        <div class="cabinet-mailings__sort" data-mailings-page-size>
+                            <button class="cabinet-mailings__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-mailings-page-size-toggle>
+                                <span>Көрсөтүү</span>
+                                <span class="cabinet-mailings__sort-value" data-mailings-page-size-value>50</span>
+                                <span class="cabinet-mailings__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-action-chevron.svg" alt=""></span>
+                            </button>
+                            <div class="cabinet-mailings__sort-list" role="listbox" aria-label="Бир беттеги жаңылыктар саны" hidden data-mailings-page-size-list>
+                                <button class="cabinet-mailings__sort-option" type="button" role="option" aria-selected="false" data-mailings-page-size-option="10">10</button>
+                                <button class="cabinet-mailings__sort-option" type="button" role="option" aria-selected="false" data-mailings-page-size-option="20">20</button>
+                                <button class="cabinet-mailings__sort-option" type="button" role="option" aria-selected="false" data-mailings-page-size-option="30">30</button>
+                                <button class="cabinet-mailings__sort-option" type="button" role="option" aria-selected="false" data-mailings-page-size-option="40">40</button>
+                                <button class="cabinet-mailings__sort-option is-active" type="button" role="option" aria-selected="true" data-mailings-page-size-option="50">50</button>
+                            </div>
+                        </div>
+                        <div class="cabinet-mailings__actions" aria-label="Почталар менен иш-аракеттер">
+                            <button class="cabinet-mailings__action" type="button" data-mailings-start>
+                                <span class="cabinet-mailings__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-action-start.svg" alt=""></span>
+                                <span class="cabinet-mailings__action-text">Ишке киргизүү</span>
+                            </button>
+                            <button class="cabinet-mailings__action" type="button" data-mailings-stop>
+                                <span class="cabinet-mailings__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-action-stop.svg" alt=""></span>
+                                <span class="cabinet-mailings__action-text">Токто</span>
+                            </button>
+                            <button class="cabinet-mailings__action" type="button" data-mailings-delete>
+                                <span class="cabinet-mailings__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-action-delete.svg" alt=""></span>
+                                <span class="cabinet-mailings__action-text">Жок кылуу</span>
+                            </button>
+                            <a class="cabinet-mailings__action cabinet-mailings__action--create" href="mailing-create.html" aria-label="Маалымат бюллетенин түзүү">
+                                <span class="cabinet-mailings__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-action-create.svg" alt=""></span>
+                                <span class="cabinet-mailings__action-text">Маалымат бюллетенин түзүү</span>
+                                <span class="cabinet-mailings__action-chevron" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-action-chevron.svg" alt=""></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-mailings__table-scroll" tabindex="0" aria-labelledby="mailingsTitle">
+                        <div class="cabinet-mailings-table" role="table" aria-labelledby="mailingsTitle">
+                            <div class="cabinet-mailings-table__row cabinet-mailings-table__row--head" role="row">
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="columnheader"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="Бардык каттарды тандаңыз" data-mailings-select-all><span class="cabinet-mailings-table__head-copy">Дата жана убакыт <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="columnheader"><span class="cabinet-mailings-table__head-copy">Почта аты <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="columnheader"><span class="cabinet-mailings-table__head-copy">алуучулардын саны <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="columnheader"><span class="cabinet-mailings-table__head-copy">Кезекте <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="columnheader"><span class="cabinet-mailings-table__head-copy">Жөнөтүлдү <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="columnheader"><span class="cabinet-mailings-table__head-copy">Жеткирүү <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="columnheader"><span class="cabinet-mailings-table__head-copy">Сум <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="columnheader"><span class="cabinet-mailings-table__head-copy">Статус <span class="cabinet-mailings-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailings/icon-table-sort.svg" alt=""></span></span></div>
+                            </div>
+
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/08/2026 12:35 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>08.05.2026 <span class="cabinet-mailings-table__time">12:35</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Жарнамалык бюллетень - сезондук акциялар</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">2 570</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">112</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">112</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">112</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">116,75</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--sent"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жөнөтүлдү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/05/2026 22:00 жаңылык бюллетенин тандаңыз" checked data-mailing-row-check><span>05.05.2026 <span class="cabinet-mailings-table__time">22:00</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Маалыматтык билдирүү</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">210</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">65</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">65</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">65</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">21,18</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--delivered"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жеткирүү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="28.04.2026 09:24 жаңылык бюллетенин тандаңыз" checked data-mailing-row-check><span>28.04.2026 <span class="cabinet-mailings-table__time">09:24</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Кардарларды маалымдоо</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">476</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">85</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">85</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">85</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">16,75</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--delivered"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жеткирүү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="16.04.2026 11:48 маалымат бюллетенин тандаңыз" data-mailing-row-check><span>16.04.2026 <span class="cabinet-mailings-table__time">11:48</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Жарнамалык бюллетень - сезондук акциялар</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">1 200</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">1 090</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">1 090</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">1 090</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">96,44</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--delivered"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жеткирүү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/08/2026 12:35 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>08.05.2026 <span class="cabinet-mailings-table__time">12:35</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Сезондук жарнамалардын версиясы 2</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">256</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">50</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">50</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">50</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">14,48</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--delivered"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жеткирүү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/05/2026 22:00 жаңылык бюллетенин тандаңыз" checked data-mailing-row-check><span>05.05.2026 <span class="cabinet-mailings-table__time">22:00</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Маалыматтык билдирүү</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">21</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">8</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">8</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">8</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">16,75</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--delivered"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жеткирүү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="28.04.2026 09:24 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>28.04.2026 <span class="cabinet-mailings-table__time">09:24</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Жарнамалык бюллетень - сезондук акциялар</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">476</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">21,18</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--failed"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>жеткирилген жок</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/08/2026 12:35 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>08.05.2026 <span class="cabinet-mailings-table__time">12:35</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Шарттарды өзгөртүү</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">256</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">96,44</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--failed"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>жеткирилген жок</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/08/2026 12:35 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>08.05.2026 <span class="cabinet-mailings-table__time">12:35</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Кардарларды маалымдоо</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">256</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">16,75</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--delivered"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жеткирүү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/05/2026 22:00 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>05.05.2026 <span class="cabinet-mailings-table__time">22:00</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Жарнамалык бюллетень - сезондук акциялар</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">67</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">0</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">16,75</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--failed"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>жеткирилген жок</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row cabinet-mailings-table__row--desktop-extra" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="28.04.2026 09:24 жаңылык бюллетенин тандаңыз" checked data-mailing-row-check><span>28.04.2026 <span class="cabinet-mailings-table__time">09:24</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Сезондук жарнамалардын версиясы 2</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">7 598</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">3</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">3</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">3</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">116,75</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--failed"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>жеткирилген жок</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row cabinet-mailings-table__row--desktop-extra" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="05/05/2026 22:00 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>05.05.2026 <span class="cabinet-mailings-table__time">22:00</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Маалыматтык билдирүү</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">350</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">12</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">12</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">12</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">21,18</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--failed"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>жеткирилген жок</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row cabinet-mailings-table__row--desktop-extra" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="28.04.2026 09:24 жаңылык бюллетенин тандаңыз" data-mailing-row-check><span>28.04.2026 <span class="cabinet-mailings-table__time">09:24</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Жарнамалык бюллетень</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">440</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">110</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">110</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">110</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">96,44</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--delivered"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>Жеткирүү</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                            <div class="cabinet-mailings-table__row cabinet-mailings-table__row--desktop-extra" role="row" data-mailing-row>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--date" role="cell"><input class="cabinet-mailings-table__checkbox" type="checkbox" aria-label="16.04.2026 11:48 маалымат бюллетенин тандаңыз" data-mailing-row-check><span>16.04.2026 <span class="cabinet-mailings-table__time">11:48</span></span></div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--name" role="cell">Жарнамалык бюллетень - сезондук акциялар</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--recipients" role="cell">210</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--queue" role="cell">6</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--sent" role="cell">6</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--delivered" role="cell">6</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--amount" role="cell">16,75</div>
+                                <div class="cabinet-mailings-table__cell cabinet-mailings-table__cell--status" role="cell"><span class="cabinet-mailings-status cabinet-mailings-status--failed"><span class="cabinet-mailings-status__line"><span class="cabinet-mailings-status__dot"></span><span>жеткирилген жок</span></span><a href="#report">Баяндама</a></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailings__scrollbar" aria-hidden="true">
+                        <span class="cabinet-mailings__scrollbar-track"></span>
+                        <span class="cabinet-mailings__scrollbar-thumb"></span>
+                        <span class="cabinet-mailings__scrollbar-knob"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cabinet-notifications" aria-labelledby="notificationsTitle" data-cabinet-notifications-page>
+                <div class="cabinet-notifications__toolbar">
+                    <div class="cabinet-notifications__sort" data-notifications-page-size>
+                        <button class="cabinet-notifications__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-notifications-page-size-toggle>
+                            <span>Көрсөтүү</span>
+                            <span class="cabinet-notifications__sort-value" data-notifications-page-size-value>50</span>
+                            <span class="cabinet-notifications__sort-chevron" aria-hidden="true"></span>
+                        </button>
+                        <div class="cabinet-notifications__sort-list" role="listbox" aria-label="Бир беттеги эскертмелердин саны" hidden data-notifications-page-size-list>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="10">10</button>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="20">20</button>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="30">30</button>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="40">40</button>
+                            <button class="cabinet-notifications__sort-option is-active" type="button" role="option" aria-selected="true" data-notifications-page-size-option="50">50</button>
+                        </div>
+                    </div>
+                    <div class="cabinet-notifications__actions">
+                        <button class="cabinet-notifications__action" type="button" data-notifications-mark-read>
+                            <span class="cabinet-notifications__action-icon cabinet-notifications__action-icon--read" aria-hidden="true"><img src="../assets/images/cabinet-notifications/action-read.svg" alt=""></span>
+                            <span class="cabinet-notifications__action-text">Окулган деп белгилөө</span>
+                        </button>
+                        <button class="cabinet-notifications__action" type="button" data-notifications-delete>
+                            <span class="cabinet-notifications__action-icon cabinet-notifications__action-icon--delete" aria-hidden="true"><img src="../assets/images/cabinet-notifications/action-delete.svg" alt=""></span>
+                            <span class="cabinet-notifications__action-text">Жок кылуу</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cabinet-notifications__table" role="table" aria-labelledby="notificationsTitle">
+                    <div class="cabinet-notifications__row cabinet-notifications__row--head" role="row">
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="columnheader">
+                            <input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Бардык эскертмелерди тандаңыз" data-notifications-select-all>
+                            <span class="cabinet-notifications__head-copy">Дата жана убакыт <span class="cabinet-notifications__head-sort" aria-hidden="true"><img src="../assets/images/cabinet-notifications/table-sort.svg" alt=""></span></span>
+                        </div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="columnheader">
+                            <span class="cabinet-notifications__head-copy">Эскертме тексти <span class="cabinet-notifications__head-sort" aria-hidden="true"><img src="../assets/images/cabinet-notifications/table-sort.svg" alt=""></span></span>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="16.04.2026 11:48ден кабарлоону тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="28.04.2026 09:24 билдирүүнү тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Ката эскертмесинин мисалы</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="16.04.2026 11:48ден кабарлоону тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="28.04.2026 09:24 билдирүүнү тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Ката эскертмесинин мисалы</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="28.04.2026 09:24 билдирүүнү тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Ката эскертмесинин мисалы</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="16.04.2026 11:48ден кабарлоону тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="28.04.2026 09:24 билдирүүнү тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Ката эскертмесинин мисалы</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="16.04.2026 11:48ден кабарлоону тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="28.04.2026 09:24 билдирүүнү тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Ката эскертмесинин мисалы</span></div>
+                    </div>
+
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="16.04.2026 11:48ден кабарлоону тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="28.04.2026 09:24 билдирүүнү тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Ката эскертмесинин мисалы</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="16.04.2026 11:48ден кабарлоону тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.08.2026 12:35тен эскертмени тандаңыз" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Ийгиликтүү аяктаган процесс жөнүндө билдирүүнүн мисалы, мисал <a class="cabinet-notifications__message-link" href="notifications.html">төмөнкү шилтемелер</a> билдирүүдө</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="05.05.2026 22:00дөн баштап эскертмени тандаңыз" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Маалыматтык билдирүү</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cabinet-dashboard" data-cabinet-panel="dashboard">
+                <div class="cabinet-dashboard__col">
+                    <section class="cabinet-card cabinet-finance" aria-labelledby="financeTitle">
+                        <div class="cabinet-card__head">
+                            <h1 class="cabinet-card__title" id="financeTitle">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-wallet"></use></svg>
+                                <span>Каржы</span>
+                            </h1>
+                            <button class="cabinet-btn cabinet-btn--primary" type="button" data-cabinet-modal-open="payment-method">Каттоо эсебиңизди толуктаңыз</button>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-detail">
+                            <div class="cabinet-detail__row cabinet-detail__row--strong">
+                                <span class="cabinet-detail__label">Учурдагы баланс:</span>
+                                <span class="cabinet-detail__value cabinet-detail__amount">100.26</span>
+                            </div>
+                            <div class="cabinet-detail__row">
+                                <span class="cabinet-detail__label">Төлөм валютасы:</span>
+                                <span class="cabinet-detail__value">сом</span>
+                            </div>
+                            <div class="cabinet-detail__row">
+                                <span class="cabinet-detail__label">Жеткиликтүү кредит:</span>
+                                <span class="cabinet-detail__value">0.00</span>
+                            </div>
+                            <div class="cabinet-detail__row cabinet-detail__row--wrap">
+                                <span class="cabinet-detail__label">Эсептеги каражаттар <br class="cabinet-finance__mobile-break">мезгилдин башында:</span>
+                                <span class="cabinet-detail__value">112.22</span>
+                            </div>
+                            <div class="cabinet-detail__row cabinet-detail__row--wrap">
+                                <span class="cabinet-detail__label">Сарпталган <br class="cabinet-finance__mobile-break">мезгилдин башынан бери:</span>
+                                <span class="cabinet-detail__value">11.96</span>
+                            </div>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-detail">
+                            <div class="cabinet-detail__row cabinet-detail__row--strong cabinet-detail__row--top">
+                                <span class="cabinet-detail__label">Сиздин тариф:</span>
+                                <span class="cabinet-detail__value cabinet-detail__plan">
+                                    <span class="cabinet-detail__plan-name">Баштоо</span>
+                                    <span class="cabinet-detail__plan-note">SMSтин баасы билдирүүнү алуучунун өлкөсүнө жана операторуна жараша болот</span>
+                                    <a class="cabinet-detail__plan-more" href="#sms-price" data-cabinet-price-open>Кененирээк...</a>
+                                </span>
+                            </div>
+                            <div class="cabinet-detail__row cabinet-detail__row--top cabinet-detail__row--period">
+                                <span class="cabinet-detail__label">Учурдагы отчеттук мезгил:</span>
+                                <span class="cabinet-detail__value cabinet-finance__period">
+                                    <span>01.03.2025 - 01.03.2026</span>
+                                    <svg class="cabinet-icon cabinet-icon--sm cabinet-finance__help" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-question"></use></svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-detail__row cabinet-detail__row--strong">
+                            <span class="cabinet-detail__label">Каттоо эсебинин абалы:</span>
+                            <span class="cabinet-detail__value"><span class="cabinet-status">Активдүү</span></span>
+                        </div>
+                    </section>
+
+                    <section class="cabinet-card cabinet-referral" aria-labelledby="referralTitle">
+                        <div class="cabinet-card__head">
+                            <h2 class="cabinet-card__title" id="referralTitle">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-referral-figma"></use></svg>
+                                <span>Реферат программасы</span>
+                            </h2>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-referral__intro">
+                            <p>Досуңузду smspro.nikita.kg сайтына алып келиңиз жана <strong>анын төлөмүнүн 2% алуу</strong> маалымат бюллетендериңиз үчүн</p>
+                            <a class="cabinet-referral__more" href="faq.html#faq-referral">Кененирээк...</a>
+                        </div>
+                        <form class="cabinet-form" action="#" method="post">
+                            <label class="cabinet-field">
+                                <span class="cabinet-field__label">Аты-жөнү:</span>
+                                <input class="cabinet-input" type="text" name="name" value="Василиса">
+                            </label>
+                            <label class="cabinet-field">
+                                <span class="cabinet-field__label">Email:</span>
+                                <input class="cabinet-input" type="email" name="email" value="email@domain.com">
+                            </label>
+                            <div class="cabinet-referral__submit">
+                                <button class="cabinet-btn cabinet-btn--secondary" type="submit">Чакыруу жөнөтүү</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="cabinet-dashboard__col cabinet-dashboard__col--right">
+                    <section class="cabinet-quick" aria-labelledby="quickTitle">
+                        <h2 class="cabinet-quick__title" id="quickTitle">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-sms-figma"></use></svg>
+                            <span class="cabinet-quick__text">Тез SMS жөнөтүү</span>
+                        </h2>
+                        <button class="cabinet-btn cabinet-btn--primary" type="button" data-cabinet-modal-open="quick-sms">SMS жөнөтүү</button>
+                    </section>
+
+                    <section class="cabinet-card cabinet-stat" aria-labelledby="statTitle">
+                        <div class="cabinet-card__head">
+                            <h2 class="cabinet-card__title cabinet-card__title--subtle" id="statTitle">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-stats-figma"></use></svg>
+                                <span>Статистика</span>
+                            </h2>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-stat__row">
+                            <div class="cabinet-stat__line">
+                                <span class="cabinet-stat__line-label">Почта тизмелери аркылуу жөнөтүлгөн SMS <br class="cabinet-stat__mobile-break">бул сайттан:</span>
+                                <span class="cabinet-stat__value">1 480</span>
+                            </div>
+                            <a class="cabinet-action" href="reports.html" data-cabinet-nav data-section="reports">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-arrow-action"></use></svg>
+                                <span>Отчетту көрүү</span>
+                            </a>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-stat__row">
+                            <div class="cabinet-stat__line">
+                                <span class="cabinet-stat__line-label">API аркылуу SMS жөнөтүлдү <br class="cabinet-stat__mobile-break">сиздин ресурстарыңыздан:</span>
+                                <span class="cabinet-stat__value">26 574</span>
+                            </div>
+                            <a class="cabinet-action" href="reports.html" data-cabinet-nav data-section="reports">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-arrow-action"></use></svg>
+                                <span>Отчетту көрүү</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <section class="cabinet-card cabinet-placeholder" data-cabinet-placeholder hidden aria-live="polite">
+                <div class="cabinet-card__head">
+                    <h1 class="cabinet-card__title">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                        <span data-cabinet-placeholder-title>бөлүм</span>
+                    </h1>
+                </div>
+                <div class="cabinet-card__divider"></div>
+                <div class="cabinet-placeholder__body">
+                    <p>Stub</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Никита Онлайн ЖЧК,</span>
+                <span>«Никита Мобайл» ЖЧКсы, 2014-2025-жж</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">Колдонуучу келишими</a> | <a href="security.html#bezop">Купуялык саясаты</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-modal cabinet-recipient-lists-modal" role="dialog" aria-modal="true" aria-labelledby="recipientListsAddTitle" hidden data-recipient-lists-add-modal>
+            <section class="cabinet-recipient-lists-modal__dialog" role="document" tabindex="-1">
+                <div class="cabinet-recipient-lists-modal__head">
+                    <h2 class="cabinet-recipient-lists-modal__title" id="recipientListsAddTitle">Алуучу кошуу</h2>
+                    <button class="cabinet-recipient-lists-modal__close" type="button" aria-label="Жабуу" data-recipient-lists-add-close>
+                        <img src="../assets/images/cabinet-recipient-lists/modal-close-desktop.svg" alt="">
+                    </button>
+                </div>
+
+                <form class="cabinet-recipient-lists-modal__form" data-recipient-lists-add-form>
+                    <div class="cabinet-recipient-lists-modal__fields">
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Телефон номери: <span>*</span></span>
+                            <span class="cabinet-recipient-lists-modal__input-wrap cabinet-recipient-lists-modal__input-wrap--icon">
+                                <input class="cabinet-recipient-lists-modal__input" type="tel" name="phone" placeholder="+996 XXX - XXX - XXX" required>
+                                <img class="cabinet-recipient-lists-modal__input-icon cabinet-recipient-lists-modal__input-icon--chevron" src="../assets/images/cabinet-recipient-lists/modal-chevron-desktop.svg" alt="">
+                            </span>
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Туулган күн:</span>
+                            <span class="cabinet-recipient-lists-modal__input-wrap cabinet-recipient-lists-modal__input-wrap--icon">
+                                <input class="cabinet-recipient-lists-modal__input" type="text" name="birth" inputmode="numeric" placeholder="gg.mm.yyyy">
+                                <img class="cabinet-recipient-lists-modal__input-icon cabinet-recipient-lists-modal__input-icon--calendar" src="../assets/images/cabinet-recipient-lists/modal-calendar-desktop.svg" alt="">
+                            </span>
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Толук аты:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="fullname" placeholder="Толук аты-жөнүңүздү киргизиңиз">
+                        </label>
+
+                        <div class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Жынысы:</span>
+                            <div class="cabinet-recipient-lists-modal-select" data-recipient-lists-modal-select>
+                                <input type="hidden" name="gender" value="" data-recipient-lists-modal-select-input>
+                                <button class="cabinet-recipient-lists-modal-select__toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-recipient-lists-modal-select-toggle>
+                                    <span class="cabinet-recipient-lists-modal-select__value is-placeholder" data-recipient-lists-modal-select-value>Тандалган эмес</span>
+                                    <img class="cabinet-recipient-lists-modal-select__chevron" src="../assets/images/cabinet-recipient-lists/modal-chevron-desktop.svg" alt="">
+                                </button>
+                                <div class="cabinet-recipient-lists-modal-select__menu" role="listbox">
+                                    <button class="cabinet-recipient-lists-modal-select__option" type="button" role="option" aria-selected="false" data-recipient-lists-modal-select-option="М">Э</button>
+                                    <button class="cabinet-recipient-lists-modal-select__option" type="button" role="option" aria-selected="false" data-recipient-lists-modal-select-option="Ж">А</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Фамилия:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="lastName" placeholder="Фамилияңызды киргизиңиз">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Аты-жөнү:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="firstName" placeholder="Атын киргизиңиз">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Фамилия</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="middleName" placeholder="Атаңыздын аты-жөнүңүздү көрсөтүңүз">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Кош. 1:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="extra1" placeholder="Сураныч, маани киргизиңиз">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Кош. 2:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="extra2" placeholder="Сураныч, маани киргизиңиз">
+                        </label>
+
+                        <label class="cabinet-recipient-lists-modal__field">
+                            <span class="cabinet-recipient-lists-modal__label">Кош. 3:</span>
+                            <input class="cabinet-recipient-lists-modal__input" type="text" name="extra3" placeholder="Сураныч, маани киргизиңиз">
+                        </label>
+                    </div>
+
+                    <div class="cabinet-recipient-lists-modal__actions">
+                        <button class="cabinet-recipient-lists-modal__button cabinet-recipient-lists-modal__button--secondary" type="button" data-recipient-lists-add-close>Жокко чыгаруу</button>
+                        <button class="cabinet-recipient-lists-modal__button cabinet-recipient-lists-modal__button--primary" type="submit">Түзүү</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Каттоо эсебинин менюсу" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Тема">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Чыгыңыз</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Менюну жабуу" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Каттоо эсебинин менюсу">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Үй</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Маалымат бюллетендери</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Тизмелер</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API интеграциясы</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчеттор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP кызматы</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблондор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Шарттар жана баалар</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Техникалык мүмкүнчүлүктөр</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Ишенимдүүлүк жана коопсуздук</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Суроолор жана жооптор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Байланыштар</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Каттоо эсебинин ылдыйкы навигациясы">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Үй</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Маалымат бюллетендери</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Тизмелер</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API интеграциясы</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Отчеттор</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP кызматы</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Шаблондор</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Меню</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

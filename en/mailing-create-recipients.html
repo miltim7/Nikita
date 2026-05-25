@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - list of mailing recipients</title>
+    <meta name="description" content="Adding recipients to a new newsletter in your Nikita personal account.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--mailing-create cabinet-page--mailing-recipients" data-cabinet-current-section="mailings">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Account navigation" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Expand menu" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Collapse menu</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Cabinet sections">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Home"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Home</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="My profile"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">My profile</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Newsletters"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Newsletters</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Lists</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API integration"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API integration</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Reports</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP service"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP service</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Templates</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Terms and prices"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Terms and prices</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Technical capabilities"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Technical capabilities</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Reliability and safety"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Reliability and safety</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Questions and answers"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Questions and answers</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Contacts"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Contacts</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Subject">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Log out">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>SOM</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Technical support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita - main">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Contact<br>to technical support</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Contact<br>with the manager</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>SOM</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user" href="profile.html" aria-label="My profile">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Konstantin</span>
+                                    <span class="cabinet-status cabinet-status--admin">Administrator</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ LLC “Organization</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>My account → Newsletters → </span><strong data-cabinet-current>Mailing management</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="mailingCreateTitle">Creating a new newsletter</h1>
+            </div>
+        </div>
+
+        <main class="cabinet-main">
+            <section class="cabinet-mailing-create cabinet-mailing-recipients" aria-labelledby="mailingCreateTitle" data-cabinet-mailing-recipients-page>
+                <div class="cabinet-mailing-create__steps" aria-label="Steps to create a newsletter">
+                    <button class="cabinet-mailing-create-step is-complete" type="button" data-mailing-create-step="1">
+                        <span class="cabinet-mailing-create-step__number">01</span>
+                        <span class="cabinet-mailing-create-step__label"><span class="cabinet-mailing-create-step__label-line">Options</span><span class="cabinet-mailing-create-step__label-line">mailings</span></span>
+                    </button>
+                    <button class="cabinet-mailing-create-step is-active" type="button" aria-current="step" data-mailing-create-step="2">
+                        <span class="cabinet-mailing-create-step__number">02</span>
+                        <span class="cabinet-mailing-create-step__label"><span class="cabinet-mailing-create-step__label-line">List</span><span class="cabinet-mailing-create-step__label-line">recipients</span></span>
+                    </button>
+                    <button class="cabinet-mailing-create-step" type="button" data-mailing-create-step="3">
+                        <span class="cabinet-mailing-create-step__number">03</span>
+                        <span class="cabinet-mailing-create-step__label"><span class="cabinet-mailing-create-step__label-line">Message</span><span class="cabinet-mailing-create-step__label-line">in the newsletter</span></span>
+                    </button>
+                </div>
+
+                <div class="cabinet-mailing-recipients__summary">
+                    <div class="cabinet-mailing-recipients__summary-fields" aria-label="Mailing parameters">
+                        <div class="cabinet-mailing-recipients__summary-row">
+                            <span class="cabinet-mailing-recipients__summary-label">Adding recipients to your mailing list:</span>
+                            <strong class="cabinet-mailing-recipients__summary-value">Test mailing</strong>
+                        </div>
+                        <div class="cabinet-mailing-recipients__summary-row">
+                            <span class="cabinet-mailing-recipients__summary-label">Sender's name:</span>
+                            <strong class="cabinet-mailing-recipients__summary-value">Username</strong>
+                        </div>
+                        <div class="cabinet-mailing-recipients__summary-row" hidden data-mailing-message-count-row>
+                            <span class="cabinet-mailing-recipients__summary-label">Recipients added:</span>
+                            <strong class="cabinet-mailing-recipients__summary-value" data-mailing-message-recipient-count>127</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-recipients__intro" data-mailing-recipients-intro>
+                        <h2 class="cabinet-mailing-recipients__title">Select download method</h2>
+                        <p>You can use one or several methods for one mailing.</p>
+                        <p>When adding identical recipients from different sources <strong>duplicates are not saved;</strong> It is only possible to add information.</p>
+                    </div>
+                </div>
+
+                <form class="cabinet-mailing-recipients-card" action="#" method="post" data-mailing-recipients-form novalidate>
+                    <div class="cabinet-mailing-recipients-card__tabs" role="tablist" aria-label="Recipient loading method">
+                        <button class="cabinet-mailing-recipients-tab is-active" type="button" role="tab" aria-selected="true" data-mailing-recipients-tab="manual">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/tab-manual-plus.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Add manually</span>
+                        </button>
+                        <button class="cabinet-mailing-recipients-tab" type="button" role="tab" aria-selected="false" data-mailing-recipients-tab="mailing">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/tab-mailing.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Add from another mailing list</span>
+                        </button>
+                        <button class="cabinet-mailing-recipients-tab" type="button" role="tab" aria-selected="false" data-mailing-recipients-tab="list">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/tab-list.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Add from list</span>
+                        </button>
+                        <button class="cabinet-mailing-recipients-tab" type="button" role="tab" aria-selected="false" data-mailing-recipients-tab="file">
+                            <span class="cabinet-mailing-recipients-tab__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/tab-upload.svg" alt=""></span>
+                            <span class="cabinet-mailing-recipients-tab__text">Load from file</span>
+                        </button>
+                    </div>
+                    <div class="cabinet-mailing-recipients-card__divider" aria-hidden="true"></div>
+
+                    <div class="cabinet-mailing-recipients-card__fields" data-mailing-manual-fields>
+                        <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--name">
+                            <span class="cabinet-mailing-recipients-field__label">Full name:</span>
+                            <input class="cabinet-mailing-recipients-input" type="text" name="recipient_name" placeholder="Enter your full name" data-mailing-recipient-name>
+                        </label>
+
+                        <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--phone">
+                            <span class="cabinet-mailing-recipients-field__label">Telephone:</span>
+                            <span class="cabinet-mailing-recipients-phone">
+                                <span class="cabinet-mailing-recipients-select cabinet-mailing-recipients-select--code">
+                                    <select class="cabinet-mailing-recipients-select__control" name="recipient_country" data-mailing-recipient-code>
+                                        <option value="+996" selected>+996</option>
+                                        <option value="+7">+7</option>
+                                        <option value="+998">+998</option>
+                                    </select>
+                                    <span class="cabinet-mailing-recipients-select__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                                <input class="cabinet-mailing-recipients-input cabinet-mailing-recipients-input--phone" type="tel" name="recipient_phone" placeholder="XXX-XXX-XXX" inputmode="tel" data-mailing-recipient-phone>
+                            </span>
+                        </label>
+
+                        <div class="cabinet-mailing-recipients-date-age">
+                            <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--birthday">
+                                <span class="cabinet-mailing-recipients-field__label">Date of birth</span>
+                                <span class="cabinet-mailing-recipients-date">
+                                    <input class="cabinet-mailing-recipients-input cabinet-mailing-recipients-input--date" type="text" name="recipient_birthday" placeholder="dd.mm.yyyy" inputmode="numeric" data-mailing-recipient-birthday>
+                                    <span class="cabinet-mailing-recipients-date__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/calendar.svg" alt=""></span>
+                                </span>
+                            </label>
+                            <span class="cabinet-mailing-recipients-date-age__separator">or</span>
+                            <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--age">
+                                <span class="cabinet-mailing-recipients-field__label">Age</span>
+                                <span class="cabinet-mailing-recipients-age">
+                                    <button class="cabinet-mailing-recipients-age__button" type="button" aria-label="Reduce age" data-mailing-recipient-age-minus><img src="../assets/images/cabinet-mailing-recipients/minus.svg" alt=""></button>
+                                    <input class="cabinet-mailing-recipients-age__value" type="number" name="recipient_age" value="24" min="0" max="120" data-mailing-recipient-age>
+                                    <button class="cabinet-mailing-recipients-age__button" type="button" aria-label="Increase age" data-mailing-recipient-age-plus><img src="../assets/images/cabinet-mailing-recipients/plus.svg" alt=""></button>
+                                </span>
+                            </label>
+                        </div>
+
+                        <label class="cabinet-mailing-recipients-field cabinet-mailing-recipients-field--gender">
+                            <span class="cabinet-mailing-recipients-field__label">Gender:</span>
+                            <span class="cabinet-mailing-recipients-select cabinet-mailing-recipients-select--gender">
+                                <select class="cabinet-mailing-recipients-select__control" name="recipient_gender" data-mailing-recipient-gender>
+                                    <option value="m" selected>M</option>
+                                    <option value="f">F</option>
+                                </select>
+                                <span class="cabinet-mailing-recipients-select__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                            </span>
+                        </label>
+
+                        <button class="cabinet-mailing-recipients-add" type="submit" data-mailing-recipient-add>
+                            <span class="cabinet-mailing-recipients-add__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/add-check.svg" alt=""></span>
+                            <span>Add</span>
+                        </button>
+                    </div>
+
+                    <div class="cabinet-mailing-recipients-empty" data-mailing-recipients-empty>
+                        <span class="cabinet-mailing-recipients-empty__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/person.svg" alt=""></span>
+                        <span data-mailing-recipients-empty-text>No recipients have been added yet</span>
+                    </div>
+                    <div class="cabinet-mailing-recipients-selected" hidden data-mailing-recipients-selected>
+                        <div class="cabinet-mailing-recipients-table-scroll" tabindex="0" data-mailing-recipients-table-scroll>
+                            <table class="cabinet-mailing-recipients-table">
+                                <colgroup>
+                                    <col class="cabinet-mailing-recipients-table__col-phone">
+                                    <col class="cabinet-mailing-recipients-table__col-name">
+                                    <col class="cabinet-mailing-recipients-table__col-birthday">
+                                    <col class="cabinet-mailing-recipients-table__col-age">
+                                    <col class="cabinet-mailing-recipients-table__col-gender">
+                                    <col class="cabinet-mailing-recipients-table__col-action">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><span>Telephone</span><img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>Full name</span><img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>Date of birth</span><img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>Age</span><img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col"><span>Gender</span><img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                        <th scope="col" aria-label="Delete"></th>
+                                    </tr>
+                                </thead>
+                                <tbody data-mailing-recipients-table-body></tbody>
+                            </table>
+                        </div>
+                        <div class="cabinet-mailing-recipients-table-slider" aria-hidden="true" data-mailing-recipients-table-slider>
+                            <span class="cabinet-mailing-recipients-table-slider__thumb" data-mailing-recipients-table-thumb></span>
+                        </div>
+                        <div class="cabinet-mailing-recipients-count" data-mailing-recipients-count-badge>
+                            <span class="cabinet-mailing-recipients-count__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/selected-person.svg" alt=""></span>
+                            <span>Selected:</span>
+                            <strong data-mailing-recipients-count>0 recipients</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-source" hidden data-mailing-source-panel>
+                        <div class="cabinet-mailing-source__filters">
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--name">
+                                <span class="cabinet-mailing-source-field__label">Mailing name:</span>
+                                <span class="cabinet-mailing-source-search">
+                                    <input class="cabinet-mailing-source-input" type="search" name="source_mailing_name" placeholder="Search by name" data-mailing-source-search>
+                                    <span class="cabinet-mailing-source-search__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-search.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <div class="cabinet-mailing-source-field cabinet-mailing-source-field--date">
+                                <span class="cabinet-mailing-source-field__label">Date:</span>
+                                <div class="cabinet-mailing-source-range">
+                                    <span class="cabinet-mailing-source-date">
+                                        <input class="cabinet-mailing-source-input cabinet-mailing-source-input--date" type="text" name="source_date_from" placeholder="dd.mm.yyyy" inputmode="numeric" data-mailing-source-date-from>
+                                        <span class="cabinet-mailing-source-date__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/calendar.svg" alt=""></span>
+                                    </span>
+                                    <span class="cabinet-mailing-source-range__dash">-</span>
+                                    <span class="cabinet-mailing-source-date">
+                                        <input class="cabinet-mailing-source-input cabinet-mailing-source-input--date" type="text" name="source_date_to" placeholder="dd.mm.yyyy" inputmode="numeric" data-mailing-source-date-to>
+                                        <span class="cabinet-mailing-source-date__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/calendar.svg" alt=""></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-source-field cabinet-mailing-source-field--age">
+                                <span class="cabinet-mailing-source-field__label">Age:</span>
+                                <div class="cabinet-mailing-source-range">
+                                    <span class="cabinet-mailing-source-age">
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Reduce age from" data-mailing-source-age-from-minus><img src="../assets/images/cabinet-mailing-recipients/minus.svg" alt=""></button>
+                                        <input class="cabinet-mailing-source-age__value" type="number" name="source_age_from" value="18" min="0" max="120" data-mailing-source-age-from>
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Increase age from" data-mailing-source-age-from-plus><img src="../assets/images/cabinet-mailing-recipients/plus.svg" alt=""></button>
+                                    </span>
+                                    <span class="cabinet-mailing-source-range__dash">-</span>
+                                    <span class="cabinet-mailing-source-age">
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Reduce age to" data-mailing-source-age-to-minus><img src="../assets/images/cabinet-mailing-recipients/minus.svg" alt=""></button>
+                                        <input class="cabinet-mailing-source-age__value" type="number" name="source_age_to" value="30" min="0" max="120" data-mailing-source-age-to>
+                                        <button class="cabinet-mailing-source-age__button" type="button" aria-label="Increase age to" data-mailing-source-age-to-plus><img src="../assets/images/cabinet-mailing-recipients/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--gender">
+                                <span class="cabinet-mailing-source-field__label">Gender:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="source_gender" data-mailing-source-gender>
+                                        <option value="all" selected>All</option>
+                                        <option value="m">M</option>
+                                        <option value="f">F</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <div class="cabinet-mailing-source__filter-actions">
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--secondary" type="button" data-mailing-source-reset>Reset</button>
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--primary" type="button" data-mailing-source-refresh>Update</button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-table" role="table" aria-label="Mailings to add recipients">
+                            <div class="cabinet-mailing-source-table__row cabinet-mailing-source-table__row--head" role="row">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="columnheader">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-select-all>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select all mailings</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Date and time of mailing</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">Mailing name</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">Number of recipients</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="08.05.2026" data-source-name="Advertising newsletter - seasonal promotions" data-source-recipients="1560">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select newsletter Advertising newsletter - seasonal promotions</span>
+                                    </label>
+                                    <span>08.05.2026 <span class="cabinet-mailing-source-table__time">12:35</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Advertising newsletter - seasonal promotions</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">1 560</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="05.05.2026" data-source-name="Information message" data-source-recipients="12">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" checked data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select newsletter Information message</span>
+                                    </label>
+                                    <span>05.05.2026 <span class="cabinet-mailing-source-table__time">22:00</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Information message</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">12</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="28.04.2026" data-source-name="Informing clients - changing conditions" data-source-recipients="2720">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select newsletter Informing clients - changing conditions</span>
+                                    </label>
+                                    <span>28.04.2026 <span class="cabinet-mailing-source-table__time">09:24</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Informing clients - changing conditions</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">2 720</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-source-row data-source-date="16.04.2026" data-source-name="Advertising newsletter - seasonal promotions version 2" data-source-recipients="47">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-source-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select newsletter Advertising newsletter - seasonal promotions version 2</span>
+                                    </label>
+                                    <span>16.04.2026 <span class="cabinet-mailing-source-table__time">11:48</span></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Advertising newsletter - seasonal promotions version 2</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">47</div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-count" data-mailing-source-count-badge>
+                            <span class="cabinet-mailing-source-count__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-selected-person.svg" alt=""></span>
+                            <span>Selected:</span>
+                            <strong data-mailing-source-recipient-count>12 recipients</strong>
+                            <span>from</span>
+                            <strong data-mailing-source-mailing-count>1 mailings</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-source cabinet-mailing-list" hidden data-mailing-list-panel>
+                        <div class="cabinet-mailing-source__filters">
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--region">
+                                <span class="cabinet-mailing-source-field__label">Region:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="list_region" data-mailing-list-region>
+                                        <option value="all" selected>All</option>
+                                        <option value="bishkek">Bishkek</option>
+                                        <option value="osh">Osh</option>
+                                        <option value="chuy">Chuy</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--operator">
+                                <span class="cabinet-mailing-source-field__label">Operator:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="list_operator" data-mailing-list-operator>
+                                        <option value="all" selected>All</option>
+                                        <option value="o">O!</option>
+                                        <option value="beeline">Beeline</option>
+                                        <option value="megacom">Megacom</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <label class="cabinet-mailing-source-field cabinet-mailing-source-field--gender">
+                                <span class="cabinet-mailing-source-field__label">Gender:</span>
+                                <span class="cabinet-mailing-source-select">
+                                    <select class="cabinet-mailing-source-select__control" name="list_gender" data-mailing-list-gender>
+                                        <option value="all" selected>All</option>
+                                        <option value="m">M</option>
+                                        <option value="f">F</option>
+                                    </select>
+                                    <span class="cabinet-mailing-source-select__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/chevron.svg" alt=""></span>
+                                </span>
+                            </label>
+
+                            <div class="cabinet-mailing-source__filter-actions">
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--secondary" type="button" data-mailing-list-reset>Reset</button>
+                                <button class="cabinet-mailing-source-btn cabinet-mailing-source-btn--primary" type="button" data-mailing-list-refresh>Update</button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-table cabinet-mailing-list-table" role="table" aria-label="Lists to add recipients">
+                            <div class="cabinet-mailing-source-table__row cabinet-mailing-source-table__row--head" role="row">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="columnheader">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-list-select-all>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select all lists</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">List name</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">List Description</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="columnheader">
+                                    <span class="cabinet-mailing-source-table__head-text">Number of recipients</span>
+                                    <span class="cabinet-mailing-source-table__sort" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="VIP clients" data-list-recipients="27" data-list-region="bishkek" data-list-operator="o" data-list-gender="all">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select list of VIP clients</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">VIP clients</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Advertising newsletter - seasonal promotions</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">27</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="New clients May 2026" data-list-recipients="12" data-list-region="bishkek" data-list-operator="beeline" data-list-gender="m">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" checked data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select list New clients May 2026</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">New clients May 2026</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Information message</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">12</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="Full list No. 2 2025-2026" data-list-recipients="2720" data-list-region="osh" data-list-operator="megacom" data-list-gender="f">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select list Complete list No. 2 2025-2026</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Complete list No. 2 2025-2026</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Informing clients - changing conditions</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">2 720</div>
+                            </div>
+                            <div class="cabinet-mailing-source-table__row" role="row" data-mailing-list-row data-list-name="Full list No. 1 2024-2025" data-list-recipients="47" data-list-region="chuy" data-list-operator="o" data-list-gender="all">
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--date" role="cell">
+                                    <label class="cabinet-mailing-source-check">
+                                        <input type="checkbox" checked data-mailing-list-row-check>
+                                        <span class="cabinet-mailing-source-check__box" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Select list Complete list No. 1 2024-2025</span>
+                                    </label>
+                                    <span class="cabinet-mailing-source-table__head-text">Complete list No. 1 2024-2025</span>
+                                </div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--name" role="cell">Advertising newsletter - seasonal promotions version 2</div>
+                                <div class="cabinet-mailing-source-table__cell cabinet-mailing-source-table__cell--count" role="cell">47</div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-source-count" data-mailing-list-count-badge>
+                            <span class="cabinet-mailing-source-count__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/source-selected-person.svg" alt=""></span>
+                            <span>Selected:</span>
+                            <strong data-mailing-list-recipient-count>59 recipients</strong>
+                            <span>from</span>
+                            <strong data-mailing-list-count>2 lists</strong>
+                        </div>
+                    </div>
+                    <div class="cabinet-mailing-file" hidden data-mailing-file-panel>
+                        <div class="cabinet-mailing-file__body">
+                            <div class="cabinet-mailing-file__intro">
+                                <span class="cabinet-mailing-file__main-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/file-upload.svg" alt=""></span>
+                                <div class="cabinet-mailing-file__content">
+                                    <div class="cabinet-mailing-file__copy">
+                                        <h3 class="cabinet-mailing-file__title">Uploading a file</h3>
+                                        <p class="cabinet-mailing-file__text">Download the list of recipients in the format <strong>.xls, .xlsx, .csv.</strong></p>
+                                    </div>
+                                    <button class="cabinet-mailing-file__rules" type="button" data-mailing-file-rules>
+                                        <span class="cabinet-mailing-file__rules-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/file-rules.svg" alt=""></span>
+                                        <span>Download Rules</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-file__actions">
+                                <label class="cabinet-mailing-file__switch">
+                                    <input class="cabinet-mailing-file__switch-input" type="checkbox" name="file_custom_upload" data-mailing-file-custom>
+                                    <span class="cabinet-mailing-file__switch-control" aria-hidden="true"></span>
+                                    <span>Custom Boot</span>
+                                </label>
+                                <label class="cabinet-mailing-file__choose">
+                                    <input class="visually-hidden" type="file" name="recipients_file" accept=".xls,.xlsx,.csv" data-mailing-file-input>
+                                    <span>Select file</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-file-table-wrap" data-mailing-file-table-wrap>
+                            <div class="cabinet-mailing-file-table-scroll" tabindex="0" data-mailing-file-table-scroll>
+                                <div class="cabinet-mailing-file-table" role="table" aria-label="Recipients from file">
+                                    <div class="cabinet-mailing-file-table__row cabinet-mailing-file-table__row--head" role="row">
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--phone" role="columnheader"><span>Telephone</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--name" role="columnheader"><span>Full name</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--birthday" role="columnheader"><span>Date of birth</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--gender" role="columnheader"><span>Gender</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--region" role="columnheader"><span>Region</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--operator" role="columnheader"><span>Operator</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--timezone" role="columnheader"><span>Time zone</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--extra" role="columnheader"><span>Extra 1</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--extra" role="columnheader"><span>Extra 2</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                        <div class="cabinet-mailing-file-table__cell cabinet-mailing-file-table__cell--extra" role="columnheader"><span>Extra 3</span><img src="../assets/images/cabinet-mailing-recipients/source-table-sort.svg" alt=""></div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (700) 892-188</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Koshechkina Veronica Vladimirovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">30.12.2014</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 001</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">256 984.40</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 001</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-01</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (701) 145-772</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Konstantinopolsky Vladislav Petrovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">24.09.2000</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 002</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">128 421.10</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 002</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-02</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (702) 581-936</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Sidorov Ivan Ivanovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">18.02.1998</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 003</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">86 204.00</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 003</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-03</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (703) 447-510</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Sobachkina Vera Konstantinovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">12.11.2007</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">F</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 004</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">54 705.75</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 004</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-04</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (704) 239-081</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Akhmatova Dinara Ruslanovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">05.05.1995</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">F</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 005</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">32 110.20</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 005</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-05</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (705) 810-245</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Zhumabekov Nurlan Erkinovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">17.07.1991</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 006</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">71 904.65</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 006</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-06</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (706) 334-672</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Mambetalieva Aisuluu Bakytovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">09.03.2003</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">F</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 007</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">42 617.90</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 007</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-07</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (707) 918-430</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Abdyldaev Ruslan Temirovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">22.01.1989</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 008</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">95 332.35</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 008</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-08</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (708) 765-124</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Ibraimova Nazira Omurbekovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">14.04.1999</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">F</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 009</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">63 840.00</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 009</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-09</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (709) 502-816</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Toktosunov Azamat Kubanychbekovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">01.10.1996</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 010</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">77 190.45</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 010</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-10</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (550) 184-291</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Orozova Zhyldyz Asanovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">19.08.1994</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">F</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 011</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">28 566.10</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 011</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-11</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (551) 604-837</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kadyrov Timur Almazovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">27.06.2002</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 012</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">11 309.80</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 012</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-12</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (552) 973-406</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Sultanalieva Bermet Muratovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">06.12.1997</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">F</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 013</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">49 228.55</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 013</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-13</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (553) 740-185</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Beknazarov Mirlan Sagynbekovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">08.09.1992</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 014</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">18 734.20</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 014</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-14</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (554) 361-928</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Muratova Aigerim Talantovna</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">11.05.2001</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">F</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 015</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +4</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">34 627.70</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 015</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-15</div>
+                                    </div>
+                                    <div class="cabinet-mailing-file-table__row" role="row">
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">+996 (555) 698-312</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Osmonov Bakyt Ermekovich</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">03.03.1987</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">M</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Kyrgyzstan</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Operator 016</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">GMT +3</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">102 508.95</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value 016</div>
+                                        <div class="cabinet-mailing-file-table__cell" role="cell">Value-16</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabinet-mailing-file-table-slider" aria-hidden="true" data-mailing-file-table-slider>
+                                <span class="cabinet-mailing-file-table-slider__thumb" data-mailing-file-table-thumb></span>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-file__footer">
+                            <div class="cabinet-mailing-file__empty" data-mailing-file-empty-badge>
+                                <span class="cabinet-mailing-file__empty-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/person.svg" alt=""></span>
+                                <span data-mailing-file-empty-text>No recipients have been added yet</span>
+                            </div>
+                            <div class="cabinet-mailing-file__selected" hidden data-mailing-file-selected-badge>
+                                <span class="cabinet-mailing-file__selected-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/person.svg" alt=""></span>
+                                <span>Selected:</span>
+                                <strong data-mailing-file-selected-count>16 recipients</strong>
+                            </div>
+                            <div class="cabinet-mailing-file__name" data-mailing-file-name-badge>
+                                <span class="cabinet-mailing-file__name-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/file-attach.svg" alt=""></span>
+                                <span data-mailing-file-name>File not selected</span>
+                            </div>
+                            <button class="cabinet-mailing-file__loaded-name" type="button" hidden data-mailing-file-loaded-name-badge>
+                                <span class="cabinet-mailing-file__loaded-file-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/file-format-xls.svg" alt=""></span>
+                                <span data-mailing-file-loaded-name>List_2026.xls</span>
+                                <span class="cabinet-mailing-file__loaded-delete-icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/file-loaded-chevron.svg" alt=""></span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="visually-hidden" aria-live="polite" data-mailing-recipients-status></p>
+                </form>
+
+                <form class="cabinet-mailing-message" action="#" method="post" hidden data-mailing-message-form novalidate>
+                    <h2 class="cabinet-mailing-message__title">Date and time of SMS sending</h2>
+
+                    <div class="cabinet-mailing-message__schedule">
+                        <div class="cabinet-mailing-message__send-group">
+                            <label class="cabinet-mailing-message-check">
+                                <input class="cabinet-mailing-message-check__input" type="checkbox" name="send_now" data-mailing-message-send-now>
+                                <span class="cabinet-mailing-message-check__box" aria-hidden="true"></span>
+                                <span class="cabinet-mailing-message-check__text">Send now</span>
+                            </label>
+                            <span class="cabinet-mailing-message__separator">or</span>
+                            <div class="cabinet-mailing-message__datetime">
+                                <label class="cabinet-mailing-message-input cabinet-mailing-message-input--date">
+                                    <input type="text" name="message_date" placeholder="dd.mm.yyyy" inputmode="numeric" data-mailing-message-date>
+                                    <span aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-calendar.svg" alt=""></span>
+                                </label>
+                                <span class="cabinet-mailing-message__time-label">V</span>
+                                <label class="cabinet-mailing-message-input cabinet-mailing-message-input--time">
+                                    <input type="text" name="message_time" placeholder="00:00" inputmode="numeric" data-mailing-message-time>
+                                    <span aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-clock.svg" alt=""></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-message__gradual-group">
+                            <label class="cabinet-mailing-message-check">
+                                <input class="cabinet-mailing-message-check__input" type="checkbox" name="send_gradual" data-mailing-message-gradual>
+                                <span class="cabinet-mailing-message-check__box" aria-hidden="true"></span>
+                                <span class="cabinet-mailing-message-check__text">Send out gradually</span>
+                            </label>
+                            <div class="cabinet-mailing-message__gradual-controls">
+                                <span>for</span>
+                                <span class="cabinet-mailing-message-stepper">
+                                    <button type="button" aria-label="Reduce number of hours" data-mailing-message-hours-minus><img src="../assets/images/cabinet-mailing-recipients/message-minus.svg" alt=""></button>
+                                    <input type="number" name="message_hours" value="12" min="1" max="72" data-mailing-message-hours>
+                                    <button type="button" aria-label="Increase the number of hours" data-mailing-message-hours-plus><img src="../assets/images/cabinet-mailing-recipients/message-plus.svg" alt=""></button>
+                                </span>
+                                <span>hours</span>
+                            </div>
+                            <button class="cabinet-mailing-message__help" type="button" aria-label="Tip about gradual mailing" data-mailing-message-help>
+                                <img src="../assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                            </button>
+                        </div>
+
+                        <button class="cabinet-mailing-message__settings" type="button" aria-expanded="false" data-mailing-message-settings>
+                            <span aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-settings.svg" alt=""></span>
+                            <span>All settings</span>
+                            <span class="cabinet-mailing-message__settings-chevron" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-chevron.svg" alt=""></span>
+                        </button>
+
+                        <div class="cabinet-mailing-message__settings-panel" hidden data-mailing-message-settings-panel>
+                            <div class="cabinet-mailing-message__appeals">
+                                <div class="cabinet-mailing-message__appeals-row">
+                                    <label class="cabinet-mailing-message-appeal">
+                                        <span>Appeal to men:</span>
+                                        <input type="text" name="appeal_male" placeholder="Please indicate your request">
+                                    </label>
+                                    <label class="cabinet-mailing-message-appeal">
+                                        <span>to women:</span>
+                                        <input type="text" name="appeal_female" placeholder="Please indicate your request">
+                                    </label>
+                                    <label class="cabinet-mailing-message-appeal">
+                                        <span>when gender is not specified:</span>
+                                        <input type="text" name="appeal_unknown" placeholder="Please indicate your request">
+                                    </label>
+                                </div>
+                                <div class="cabinet-mailing-message__settings-hint">
+                                    <span>Write a tag in the text <strong>%to%</strong> in the place where the appeal should be</span>
+                                    <button class="cabinet-mailing-message__help" type="button" aria-label="Hit tag hint" data-mailing-message-help>
+                                        <img src="../assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-message__tags">
+                                <div class="cabinet-mailing-message__tag-line">
+                                    <span>Name - tag <strong>%name1%</strong></span>
+                                    <button class="cabinet-mailing-message__help" type="button" aria-label="Name tag hint" data-mailing-message-help>
+                                        <img src="../assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="cabinet-mailing-message__tag-line">Middle name - tag <strong>%name2%</strong></div>
+                                <div class="cabinet-mailing-message__tag-line">Last name - tag <strong>%name3%</strong></div>
+                                <div class="cabinet-mailing-message__tag-line">Additional fields Additional 1, Additional 2, Additional 3 - tags <strong>%extra1%</strong>, <strong>%extra2%</strong>, <strong>%extra3%</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-mailing-message__field">
+                        <div class="cabinet-mailing-message__field-head">
+                            <label class="cabinet-mailing-message__label" for="mailingMessageText">Enter message text:</label>
+                            <div class="cabinet-mailing-message__counters" aria-live="polite">
+                                <span>Characters: <strong data-mailing-message-char-count>11</strong></span>
+                                <span>Parts of SMS: <strong data-mailing-message-sms-count>1</strong></span>
+                            </div>
+                        </div>
+                        <textarea class="cabinet-mailing-message__textarea" id="mailingMessageText" name="message_text" data-mailing-message-text>Good afternoon</textarea>
+                        <div class="cabinet-mailing-message__meta">
+                            <div class="cabinet-mailing-message__hint">
+                                <span>Write a tag in the text <strong>%username%</strong></span>
+                                <span>in the place where you need to put the recipient's name</span>
+                                <button class="cabinet-mailing-message__help" type="button" aria-label="Recipient tag hint" data-mailing-message-tag-help>
+                                    <img src="../assets/images/cabinet-mailing-recipients/message-help.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="cabinet-mailing-message__tools">
+                                <button class="cabinet-mailing-message-tool" type="button" data-mailing-message-translit>
+                                    <span aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-translit.svg" alt=""></span>
+                                    <span>Translate into transliteration</span>
+                                </button>
+                                <button class="cabinet-mailing-message-tool" type="button" data-mailing-message-clear>
+                                    <span aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-clear.svg" alt=""></span>
+                                    <span>Clear</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-mailing-message__form-actions">
+                        <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--secondary" type="button" data-mailing-message-reset>Reset</button>
+                        <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--primary" type="button" data-mailing-message-add>Add a message to the newsletter</button>
+                    </div>
+
+                    <div class="cabinet-mailing-message__ready">
+                        <h2 class="cabinet-mailing-message__ready-title">Messages ready to be sent:</h2>
+                        <div class="cabinet-mailing-message__empty" data-mailing-message-empty>
+                            <span aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-empty.svg" alt=""></span>
+                            <span>No messages added yet</span>
+                        </div>
+                        <div class="cabinet-mailing-message__list" hidden data-mailing-message-list>
+                            <div class="cabinet-mailing-message-table-scroll" data-mailing-message-table-scroll>
+                                <table class="cabinet-mailing-message-table">
+                                    <colgroup>
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--text">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--sms">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--date">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--time">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--conditions">
+                                        <col class="cabinet-mailing-message-table__col cabinet-mailing-message-table__col--action">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Message text <img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Parts of SMS <img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Sent date <img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Dispatch time <img src="../assets/images/cabinet-mailing-recipients/table-sort.svg" alt=""></th>
+                                            <th scope="col">Terms</th>
+                                            <th scope="col"><span class="visually-hidden">Actions</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody data-mailing-message-table-body></tbody>
+                                </table>
+                            </div>
+                            <div class="cabinet-mailing-message-table-slider" aria-hidden="true" data-mailing-message-table-slider>
+                                <span data-mailing-message-table-thumb></span>
+                            </div>
+                            <div class="cabinet-mailing-message-row-menu" role="menu" hidden data-mailing-message-row-menu>
+                                <button type="button" role="menuitem" data-mailing-message-row-edit>Edit</button>
+                                <button type="button" role="menuitem" data-mailing-message-row-delete>Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cabinet-mailing-create-form__actions cabinet-mailing-recipients__actions" data-mailing-recipients-actions>
+                    <a class="cabinet-mailing-create-btn cabinet-mailing-create-btn--secondary cabinet-mailing-recipients__back" href="mailing-create.html" data-mailing-recipients-back>
+                        <span class="cabinet-mailing-create-btn__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/arrow-back.svg" alt=""></span>
+                        <span class="cabinet-mailing-recipients__back-text-full">To mailing parameters</span>
+                        <span class="cabinet-mailing-recipients__back-text-short">Back</span>
+                    </a>
+                    <button class="cabinet-mailing-create-btn cabinet-mailing-create-btn--primary cabinet-mailing-recipients__continue" type="button" data-mailing-recipients-continue>
+                        <span>Add and continue</span>
+                        <span class="cabinet-mailing-create-btn__icon cabinet-mailing-create-btn__icon--next" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/arrow-next.svg" alt=""></span>
+                    </button>
+                </div>
+
+                <div class="cabinet-mailing-create-form__actions cabinet-mailing-recipients__actions cabinet-mailing-message__actions" hidden data-mailing-message-actions>
+                    <button class="cabinet-mailing-create-btn cabinet-mailing-create-btn--secondary cabinet-mailing-message__back" type="button" data-mailing-message-back>
+                        <span class="cabinet-mailing-create-btn__icon" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-arrow-back.svg" alt=""></span>
+                        <span class="cabinet-mailing-message__back-text-full">To the list of recipients</span>
+                        <span class="cabinet-mailing-message__back-text-short">Back</span>
+                    </button>
+                    <button class="cabinet-mailing-create-btn cabinet-mailing-create-btn--primary cabinet-mailing-message__done" type="button" data-mailing-message-done>
+                        <span>Ready</span>
+                        <span class="cabinet-mailing-create-btn__icon cabinet-mailing-create-btn__icon--next" aria-hidden="true"><img src="../assets/images/cabinet-mailing-recipients/message-arrow-next.svg" alt=""></span>
+                    </button>
+                </div>
+
+                <div class="cabinet-modal cabinet-mailing-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="mailingConfirmTitle" hidden data-mailing-confirm-modal>
+                    <section class="cabinet-mailing-confirm-modal__dialog" role="document" tabindex="-1">
+                        <div class="cabinet-mailing-confirm-modal__head">
+                            <h2 class="cabinet-mailing-confirm-modal__title" id="mailingConfirmTitle">Confirmations</h2>
+                            <button class="cabinet-mailing-confirm-modal__close" type="button" aria-label="Close" data-mailing-confirm-close>
+                                <img src="../assets/images/cabinet-mailing-recipients/modal-close.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="cabinet-mailing-confirm-modal__important">
+                            <strong>IMPORTANT!</strong>
+                            <p>Only the approximate cost of your mailing is shown here.</p>
+                            <p>The total cost is calculated only upon completion of the mailing.</p>
+                        </div>
+
+                        <dl class="cabinet-mailing-confirm-modal__summary">
+                            <div>
+                                <dt>Mailing name:</dt>
+                                <dd data-mailing-confirm-name>Test mailing</dd>
+                            </div>
+                            <div>
+                                <dt>Total recipients:</dt>
+                                <dd data-mailing-confirm-recipients>1 (1SMS)</dd>
+                            </div>
+                            <div>
+                                <dt>Total mailing cost <span>*</span></dt>
+                                <dd>3.04 som</dd>
+                            </div>
+                            <div>
+                                <dt>dd.mm.yyyy</dt>
+                                <dd>Date of birth</dd>
+                            </div>
+                        </dl>
+
+                        <div class="cabinet-mailing-confirm-modal__note">
+                            <p><strong>*</strong> If the text of your newsletter contains substitutions (for example, %name%, %extra%, etc.), then <b>the number of characters and parts of SMS may increase!</b></p>
+                            <p>Respectively, <b>in this case the final cost will increase.</b></p>
+                            <p>Also, the final cost will depend on <a href="cabinet.html#billing">message categories</a> (advertising, service, transactional) and the status of its delivery.</p>
+                        </div>
+
+                        <div class="cabinet-mailing-confirm-modal__alert">If you are sure that there are enough funds in your balance, click “Confirm”</div>
+
+                        <div class="cabinet-mailing-confirm-modal__balance">
+                            <span>Your balance:</span>
+                            <strong>100.26</strong>
+                        </div>
+
+                        <div class="cabinet-mailing-confirm-modal__actions">
+                            <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--secondary" type="button" data-mailing-confirm-cancel>Cancel</button>
+                            <button class="cabinet-mailing-message-btn cabinet-mailing-message-btn--primary" type="button" data-mailing-confirm-submit>Confirm</button>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="cabinet-modal cabinet-mailing-upload-modal" role="dialog" aria-modal="true" aria-labelledby="mailingUploadRulesTitle" hidden data-mailing-upload-modal="rules">
+                    <section class="cabinet-mailing-upload-modal__dialog cabinet-mailing-upload-modal__dialog--rules" role="document" tabindex="-1">
+                        <div class="cabinet-mailing-upload-modal__head">
+                            <h2 class="cabinet-mailing-upload-modal__title" id="mailingUploadRulesTitle">Rules for filling out a file with a list of recipients</h2>
+                            <button class="cabinet-mailing-upload-modal__close" type="button" aria-label="Close" data-mailing-upload-modal-close>
+                                <img src="../assets/images/cabinet-mailing-recipients/modal-close.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="cabinet-mailing-upload-rules">
+                            <p class="cabinet-mailing-upload-rules__intro">Each recipient in the file must be represented on a separate line and contain the following fields:</p>
+                            <div class="cabinet-mailing-upload-rules__fields">
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>Phone number</span>
+                                    <span>+XXX (XXX) XXX-XXX</span>
+                                    <strong>Required field</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>Full name</span>
+                                    <span>Last name First name Patronymic</span>
+                                    <strong>Optional field</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>Gender</span>
+                                    <span>M / F</span>
+                                    <strong>Optional field</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-rules__field">
+                                    <span>Date of birth</span>
+                                    <span>dd.mm.yyyy</span>
+                                    <strong>Optional field</strong>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--success">
+                                <div class="cabinet-mailing-upload-example__title">
+                                    <img src="../assets/images/cabinet-mailing-recipients/modal-check.svg" alt="">
+                                    <strong>Example of correct data format:</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-example__table">
+                                    <div><span>996 (123) 45-67-89</span><span></span><span></span><span></span></div>
+                                    <div><span>996123456789</span><span></span><span>M</span><span></span></div>
+                                    <div><span>996123456789</span><span>Maria Ivanova</span><span>F</span><span>01.01.1980</span></div>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--error">
+                                <div class="cabinet-mailing-upload-example__title">
+                                    <img src="../assets/images/cabinet-mailing-recipients/modal-error.svg" alt="">
+                                    <strong>Example of incorrect data format:</strong>
+                                </div>
+                                <div class="cabinet-mailing-upload-example__table">
+                                    <div><span>996 (123) 45-67-89</span><span>Ignat Sidorov</span><strong>Husband.</strong><strong>1971-02-31</strong></div>
+                                    <div><strong>Larisa Muravyova</strong><strong>01.01.1980</strong><span>F</span><strong>996(123)456-789</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="cabinet-modal cabinet-mailing-upload-modal" role="dialog" aria-modal="true" aria-labelledby="mailingCustomUploadTitle" hidden data-mailing-upload-modal="custom">
+                    <section class="cabinet-mailing-upload-modal__dialog cabinet-mailing-upload-modal__dialog--custom" role="document" tabindex="-1">
+                        <div class="cabinet-mailing-upload-modal__head">
+                            <h2 class="cabinet-mailing-upload-modal__title" id="mailingCustomUploadTitle">Custom Boot</h2>
+                            <button class="cabinet-mailing-upload-modal__close" type="button" aria-label="Close" data-mailing-upload-modal-close>
+                                <img src="../assets/images/cabinet-mailing-recipients/modal-close.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="cabinet-mailing-custom-upload">
+                            <div class="cabinet-mailing-custom-upload__main">
+                                <div class="cabinet-mailing-custom-upload__file">
+                                    <div class="cabinet-mailing-custom-upload__file-copy">
+                                        <h3>Uploading a file</h3>
+                                        <p>You can upload a recipient list file in .XLS, .XLSX or CSV format</p>
+                                    </div>
+                                    <button class="cabinet-mailing-custom-upload__choose" type="button" data-mailing-custom-file-choose>Select file</button>
+                                    <button class="cabinet-mailing-custom-upload__file-name" type="button" data-mailing-custom-file-badge>
+                                        <span><img src="../assets/images/cabinet-mailing-recipients/file-format-xls.svg" alt=""></span>
+                                        <span>List_2026.xls</span>
+                                        <span><img src="../assets/images/cabinet-mailing-recipients/file-loaded-chevron.svg" alt=""></span>
+                                    </button>
+                                </div>
+
+                                <div class="cabinet-mailing-upload-rules cabinet-mailing-upload-rules--compact">
+                                    <p class="cabinet-mailing-upload-rules__intro">Each recipient in the file must be represented on a separate line and contain the following fields:</p>
+                                    <div class="cabinet-mailing-upload-rules__fields">
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>Phone number</span>
+                                            <span>+XXX (XXX) XXX-XXX</span>
+                                            <strong>Required field</strong>
+                                        </div>
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>Full name</span>
+                                            <span>Last name First name Patronymic</span>
+                                            <strong>Optional field</strong>
+                                        </div>
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>Gender</span>
+                                            <span>M / F</span>
+                                            <strong>Optional field</strong>
+                                        </div>
+                                        <div class="cabinet-mailing-upload-rules__field">
+                                            <span>Date of birth</span>
+                                            <span>dd.mm.yyyy</span>
+                                            <strong>Optional field</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--success cabinet-mailing-upload-example--compact">
+                                    <div class="cabinet-mailing-upload-example__title">
+                                        <img src="../assets/images/cabinet-mailing-recipients/modal-check.svg" alt="">
+                                        <strong>Example of correct data format:</strong>
+                                    </div>
+                                    <div class="cabinet-mailing-upload-example__table">
+                                        <div><span>996 (123) 45-67-89</span><span></span><span></span><span></span></div>
+                                        <div><span>996123456789</span><span></span><span>M</span><span></span></div>
+                                        <div><span>996123456789</span><span>Maria Ivanova</span><span>F</span><span>01.01.1980</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="cabinet-mailing-upload-example cabinet-mailing-upload-example--error cabinet-mailing-upload-example--compact">
+                                    <div class="cabinet-mailing-upload-example__title">
+                                        <img src="../assets/images/cabinet-mailing-recipients/modal-error.svg" alt="">
+                                        <strong>Example of incorrect data format:</strong>
+                                    </div>
+                                    <div class="cabinet-mailing-upload-example__table">
+                                        <div><span>996 (123) 45-67-89</span><span>Ignat Sidorov</span><strong>Husband.</strong><strong>1971-02-31</strong></div>
+                                        <div><strong>Larisa Muravyova</strong><strong>01.01.1980</strong><span>F</span><strong>996(123)456-789</strong></div>
+                                    </div>
+                                </div>
+
+                                <p class="cabinet-mailing-custom-upload__note">When adding identical recipients from different sources, duplicates are not saved; only information about the recipient can be expanded.</p>
+                            </div>
+
+                            <div class="cabinet-mailing-custom-map">
+                                <div class="cabinet-mailing-custom-map__head">
+                                    <h3>Setting the data format</h3>
+                                    <p>We took the 1st line from the downloaded file and read all the values ​​from it. Now <strong>you need to determine the correspondence between the values ​​​​from the file and the fields in our system:</strong></p>
+                                </div>
+                                <div class="cabinet-mailing-custom-map__labels">
+                                    <strong>Value from file:</strong>
+                                    <strong>Correspondence:</strong>
+                                </div>
+                                <div class="cabinet-mailing-custom-map__rows">
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>Ivanov</strong><span>Ivanov</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Surname</span><img src="../assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>Ivanovich</strong><span>Ivanovich</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Surname</span><img src="../assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>Ivan</strong><span>Ivan</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Name</span><img src="../assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>25.01.1900</strong><span>25.01.1900</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Select value</span><img src="../assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>996772123456</strong><span>996772123456</span></div>
+                                        <div class="cabinet-mailing-map-select" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Select value</span><img src="../assets/images/cabinet-mailing-recipients/modal-select-chevron.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-mailing-custom-map__row">
+                                        <div class="cabinet-mailing-custom-map__value"><strong>25.01.1900</strong><span>25.01.1900</span></div>
+                                        <div class="cabinet-mailing-map-select is-open" data-mailing-map-select>
+                                            <button type="button" data-mailing-map-select-toggle><span>Phone number</span><img src="../assets/images/cabinet-mailing-recipients/modal-select-chevron-active.svg" alt=""></button>
+                                            <div class="cabinet-mailing-map-select__menu" data-mailing-map-select-menu>
+                                                <button type="button" data-mailing-map-select-option>-------</button>
+                                                <button type="button" data-mailing-map-select-option>Phone number</button>
+                                                <button type="button" data-mailing-map-select-option>Full name</button>
+                                                <button type="button" data-mailing-map-select-option>Gender (M or F)</button>
+                                                <button type="button" data-mailing-map-select-option>Date of birth (dd.mm.yyyy)</button>
+                                                <button type="button" data-mailing-map-select-option>Name</button>
+                                                <button type="button" data-mailing-map-select-option>Surname</button>
+                                                <button type="button" data-mailing-map-select-option>Surname</button>
+                                                <button type="button" data-mailing-map-select-option>Extra 1</button>
+                                                <button type="button" data-mailing-map-select-option>Extra 2</button>
+                                                <button type="button" data-mailing-map-select-option>Extra 3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-mailing-custom-upload__actions">
+                            <button class="cabinet-mailing-custom-upload__action cabinet-mailing-custom-upload__action--secondary" type="button" data-mailing-custom-cancel>Cancel</button>
+                            <button class="cabinet-mailing-custom-upload__action cabinet-mailing-custom-upload__action--primary" type="button" data-mailing-custom-save>Save settings</button>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <section class="cabinet-notifications" aria-labelledby="notificationsTitle" data-cabinet-notifications-page>
+                <div class="cabinet-notifications__toolbar">
+                    <div class="cabinet-notifications__sort" data-notifications-page-size>
+                        <button class="cabinet-notifications__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-notifications-page-size-toggle>
+                            <span>Show by</span>
+                            <span class="cabinet-notifications__sort-value" data-notifications-page-size-value>50</span>
+                            <span class="cabinet-notifications__sort-chevron" aria-hidden="true"></span>
+                        </button>
+                        <div class="cabinet-notifications__sort-list" role="listbox" aria-label="Number of notifications per page" hidden data-notifications-page-size-list>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="10">10</button>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="20">20</button>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="30">30</button>
+                            <button class="cabinet-notifications__sort-option" type="button" role="option" aria-selected="false" data-notifications-page-size-option="40">40</button>
+                            <button class="cabinet-notifications__sort-option is-active" type="button" role="option" aria-selected="true" data-notifications-page-size-option="50">50</button>
+                        </div>
+                    </div>
+                    <div class="cabinet-notifications__actions">
+                        <button class="cabinet-notifications__action" type="button" data-notifications-mark-read>
+                            <span class="cabinet-notifications__action-icon cabinet-notifications__action-icon--read" aria-hidden="true"><img src="../assets/images/cabinet-notifications/action-read.svg" alt=""></span>
+                            <span class="cabinet-notifications__action-text">Mark as read</span>
+                        </button>
+                        <button class="cabinet-notifications__action" type="button" data-notifications-delete>
+                            <span class="cabinet-notifications__action-icon cabinet-notifications__action-icon--delete" aria-hidden="true"><img src="../assets/images/cabinet-notifications/action-delete.svg" alt=""></span>
+                            <span class="cabinet-notifications__action-text">Delete</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cabinet-notifications__table" role="table" aria-labelledby="notificationsTitle">
+                    <div class="cabinet-notifications__row cabinet-notifications__row--head" role="row">
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="columnheader">
+                            <input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select all notifications" data-notifications-select-all>
+                            <span class="cabinet-notifications__head-copy">Date and time <span class="cabinet-notifications__head-sort" aria-hidden="true"><img src="../assets/images/cabinet-notifications/table-sort.svg" alt=""></span></span>
+                        </div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="columnheader">
+                            <span class="cabinet-notifications__head-copy">Notification text <span class="cabinet-notifications__head-sort" aria-hidden="true"><img src="../assets/images/cabinet-notifications/table-sort.svg" alt=""></span></span>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/16/2026 11:48" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/28/2026 09:24" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Example of an error notification</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/16/2026 11:48" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/28/2026 09:24" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Example of an error notification</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/28/2026 09:24" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Example of an error notification</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/16/2026 11:48" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/28/2026 09:24" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Example of an error notification</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/16/2026 11:48" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--desktop" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/28/2026 09:24" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Example of an error notification</span></div>
+                    </div>
+
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/16/2026 11:48" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/28/2026 09:24" checked data-notification-row-check><span class="cabinet-notifications__date">28.04.2026 <span class="cabinet-notifications__time">09:24</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--error" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-error.svg" alt=""></span><span class="cabinet-notifications__message">Example of an error notification</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 04/16/2026 11:48" data-notification-row-check><span class="cabinet-notifications__date">16.04.2026 <span class="cabinet-notifications__time">11:48</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/08/2026 12:35" data-notification-row-check><span class="cabinet-notifications__date">08.05.2026 <span class="cabinet-notifications__time">12:35</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--success" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-success.svg" alt=""></span><span class="cabinet-notifications__message">Example of a notification about a successfully completed process, example <a class="cabinet-notifications__message-link" href="notifications.html">links to follow</a> in the notice</span></div>
+                    </div>
+                    <div class="cabinet-notifications__row cabinet-notifications__row--mobile-only" role="row" data-notification-row>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--date" role="cell"><input class="cabinet-notifications__checkbox" type="checkbox" aria-label="Select notification from 05/05/2026 22:00" checked data-notification-row-check><span class="cabinet-notifications__date">05.05.2026 <span class="cabinet-notifications__time">22:00</span></span></div>
+                        <div class="cabinet-notifications__cell cabinet-notifications__cell--text" role="cell"><span class="cabinet-notifications__status cabinet-notifications__status--info" aria-hidden="true"><img src="../assets/images/cabinet-notifications/status-info.svg" alt=""></span><span class="cabinet-notifications__message">Information message</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="cabinet-dashboard" data-cabinet-panel="dashboard">
+                <div class="cabinet-dashboard__col">
+                    <section class="cabinet-card cabinet-finance" aria-labelledby="financeTitle">
+                        <div class="cabinet-card__head">
+                            <h1 class="cabinet-card__title" id="financeTitle">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-wallet"></use></svg>
+                                <span>Finance</span>
+                            </h1>
+                            <button class="cabinet-btn cabinet-btn--primary" type="button" data-cabinet-modal-open="payment-method">Top up your account</button>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-detail">
+                            <div class="cabinet-detail__row cabinet-detail__row--strong">
+                                <span class="cabinet-detail__label">Current balance:</span>
+                                <span class="cabinet-detail__value cabinet-detail__amount">100.26</span>
+                            </div>
+                            <div class="cabinet-detail__row">
+                                <span class="cabinet-detail__label">Payment currency:</span>
+                                <span class="cabinet-detail__value">SOM</span>
+                            </div>
+                            <div class="cabinet-detail__row">
+                                <span class="cabinet-detail__label">Available credit:</span>
+                                <span class="cabinet-detail__value">0.00</span>
+                            </div>
+                            <div class="cabinet-detail__row cabinet-detail__row--wrap">
+                                <span class="cabinet-detail__label">Funds in the account <br class="cabinet-finance__mobile-break">at the beginning of the period:</span>
+                                <span class="cabinet-detail__value">112.22</span>
+                            </div>
+                            <div class="cabinet-detail__row cabinet-detail__row--wrap">
+                                <span class="cabinet-detail__label">Spent <br class="cabinet-finance__mobile-break">from the beginning of the period:</span>
+                                <span class="cabinet-detail__value">11.96</span>
+                            </div>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-detail">
+                            <div class="cabinet-detail__row cabinet-detail__row--strong cabinet-detail__row--top">
+                                <span class="cabinet-detail__label">Your tariff:</span>
+                                <span class="cabinet-detail__value cabinet-detail__plan">
+                                    <span class="cabinet-detail__plan-name">Start</span>
+                                    <span class="cabinet-detail__plan-note">The price of SMS depends on the country and operator of the message recipient</span>
+                                    <a class="cabinet-detail__plan-more" href="#sms-price" data-cabinet-price-open>Read more...</a>
+                                </span>
+                            </div>
+                            <div class="cabinet-detail__row cabinet-detail__row--top cabinet-detail__row--period">
+                                <span class="cabinet-detail__label">Current reporting period:</span>
+                                <span class="cabinet-detail__value cabinet-finance__period">
+                                    <span>01.03.2025 - 01.03.2026</span>
+                                    <svg class="cabinet-icon cabinet-icon--sm cabinet-finance__help" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-question"></use></svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-detail__row cabinet-detail__row--strong">
+                            <span class="cabinet-detail__label">Account status:</span>
+                            <span class="cabinet-detail__value"><span class="cabinet-status">Active</span></span>
+                        </div>
+                    </section>
+
+                    <section class="cabinet-card cabinet-referral" aria-labelledby="referralTitle">
+                        <div class="cabinet-card__head">
+                            <h2 class="cabinet-card__title" id="referralTitle">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-referral-figma"></use></svg>
+                                <span>Referral program</span>
+                            </h2>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-referral__intro">
+                            <p>Bring a friend to smspro.nikita.kg and <strong>receive 2% of his payment</strong> for your newsletters</p>
+                            <a class="cabinet-referral__more" href="faq.html#faq-referral">Read more...</a>
+                        </div>
+                        <form class="cabinet-form" action="#" method="post">
+                            <label class="cabinet-field">
+                                <span class="cabinet-field__label">Name:</span>
+                                <input class="cabinet-input" type="text" name="name" value="Vasilisa">
+                            </label>
+                            <label class="cabinet-field">
+                                <span class="cabinet-field__label">Email:</span>
+                                <input class="cabinet-input" type="email" name="email" value="email@domain.com">
+                            </label>
+                            <div class="cabinet-referral__submit">
+                                <button class="cabinet-btn cabinet-btn--secondary" type="submit">Send an invitation</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="cabinet-dashboard__col cabinet-dashboard__col--right">
+                    <section class="cabinet-quick" aria-labelledby="quickTitle">
+                        <h2 class="cabinet-quick__title" id="quickTitle">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-sms-figma"></use></svg>
+                            <span class="cabinet-quick__text">Fast SMS sending</span>
+                        </h2>
+                        <button class="cabinet-btn cabinet-btn--primary" type="button" data-cabinet-modal-open="quick-sms">Send SMS</button>
+                    </section>
+
+                    <section class="cabinet-card cabinet-stat" aria-labelledby="statTitle">
+                        <div class="cabinet-card__head">
+                            <h2 class="cabinet-card__title cabinet-card__title--subtle" id="statTitle">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-stats-figma"></use></svg>
+                                <span>Statistics</span>
+                            </h2>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-stat__row">
+                            <div class="cabinet-stat__line">
+                                <span class="cabinet-stat__line-label">SMS sent via mailing lists <br class="cabinet-stat__mobile-break">from this site:</span>
+                                <span class="cabinet-stat__value">1 480</span>
+                            </div>
+                            <a class="cabinet-action" href="reports.html" data-cabinet-nav data-section="reports">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-arrow-action"></use></svg>
+                                <span>View report</span>
+                            </a>
+                        </div>
+                        <div class="cabinet-card__divider"></div>
+                        <div class="cabinet-stat__row">
+                            <div class="cabinet-stat__line">
+                                <span class="cabinet-stat__line-label">Sent SMS using API <br class="cabinet-stat__mobile-break">from your resources:</span>
+                                <span class="cabinet-stat__value">26 574</span>
+                            </div>
+                            <a class="cabinet-action" href="reports.html" data-cabinet-nav data-section="reports">
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-arrow-action"></use></svg>
+                                <span>View report</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <section class="cabinet-card cabinet-placeholder" data-cabinet-placeholder hidden aria-live="polite">
+                <div class="cabinet-card__head">
+                    <h1 class="cabinet-card__title">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                        <span data-cabinet-placeholder-title>Chapter</span>
+                    </h1>
+                </div>
+                <div class="cabinet-card__divider"></div>
+                <div class="cabinet-placeholder__body">
+                    <p>Stub</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Nikita Online LLC,</span>
+                <span>Nikita Mobile LLC, 2014-2025</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">User Agreement</a> | <a href="security.html#bezop">Privacy Policy</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Account menu" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Subject">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Log out</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Close menu" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Account menu">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Home</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Newsletters</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Lists</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API integration</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Reports</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP service</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Templates</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Terms and prices</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Technical capabilities</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Reliability and safety</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Questions and answers</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Contacts</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Bottom navigation of the account">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Home</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Newsletters</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Lists</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API integration</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Reports</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP service</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Templates</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Menu</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

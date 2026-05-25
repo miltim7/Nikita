@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - my profile</title>
+    <meta name="description" content="Nikita personal account profile settings.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--profile" data-cabinet-current-section="profile">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Account navigation" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Expand menu" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Collapse menu</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Cabinet sections">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Home"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Home</span></a>
+            <a class="cabinet-sidepanel__item is-active" href="profile.html" data-cabinet-nav data-section="profile" aria-label="My profile" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">My profile</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Newsletters"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Newsletters</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Lists</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API integration"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API integration</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Reports</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP service"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP service</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Templates</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Terms and prices"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Terms and prices</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Technical capabilities"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Technical capabilities</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Reliability and safety"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Reliability and safety</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Questions and answers"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Questions and answers</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Contacts"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Contacts</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Subject">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Log out">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>SOM</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Technical support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita - main">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Contact<br>to technical support</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Contact<br>with the manager</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>SOM</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="My profile">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <span class="cabinet-user__meta">
+                                <span class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Konstantin</span>
+                                    <span class="cabinet-status cabinet-status--admin">Administrator</span>
+                                </span>
+                                <span class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ LLC “Organization</span>
+                                </span>
+                            </span>
+                        </a>
+                        <button class="cabinet-user cabinet-user--demo" type="button" aria-label="Demo mode" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="../assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">DEMO MODE</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>My office → </span><strong data-cabinet-current>My profile</strong>
+            </div>
+
+            <div class="cabinet-page-title cabinet-profile-title">
+                <h1 class="cabinet-page-title__text" id="profileTitle">My profile</h1>
+            </div>
+
+            <nav class="cabinet-profile-tabs" aria-label="Profile sections" role="tablist">
+                <button class="cabinet-profile-tabs__item is-active" id="profileSettingsTab" type="button" role="tab" aria-selected="true" aria-current="page" aria-controls="profileSettingsPanel" data-profile-tab-button="settings" data-profile-settings-tab>
+                    <span class="cabinet-profile-tabs__icon cabinet-profile-tabs__icon--profile" aria-hidden="true">
+                        <img class="cabinet-profile-tabs__icon-active" src="../assets/images/cabinet-profile/tab-profile.svg" alt="">
+                        <img class="cabinet-profile-tabs__icon-inactive" src="../assets/images/cabinet-profile/tab-profile-inactive.svg" alt="">
+                    </span>
+                    <span>Profile Settings</span>
+                </button>
+                <button class="cabinet-profile-tabs__item" id="profileSendersTab" type="button" role="tab" aria-selected="false" aria-controls="profileSendersPanel" data-profile-tab-button="senders" data-profile-senders-tab>
+                    <span class="cabinet-profile-tabs__icon cabinet-profile-tabs__icon--senders" aria-hidden="true">
+                        <img class="cabinet-profile-tabs__icon-active" src="../assets/images/cabinet-profile/tab-senders-active.svg" alt="">
+                        <img class="cabinet-profile-tabs__icon-inactive" src="../assets/images/cabinet-profile/tab-senders.svg" alt="">
+                    </span>
+                    <span>Sender names</span>
+                </button>
+            </nav>
+        </div>
+
+        <main class="cabinet-main">
+            <section class="cabinet-profile" aria-labelledby="profileTitle" data-cabinet-profile-page>
+                <div class="cabinet-profile__panel is-active" id="profileSettingsPanel" role="tabpanel" aria-labelledby="profileSettingsTab" data-profile-tab-panel="settings">
+                <div class="cabinet-profile__grid">
+                    <section class="cabinet-profile-card cabinet-profile-personal" aria-labelledby="profilePersonalTitle">
+                        <h2 class="cabinet-profile-card__title" id="profilePersonalTitle">Personal information</h2>
+
+                        <form class="cabinet-profile-form" action="#" method="post">
+                            <div class="cabinet-profile-form__group">
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Organization name:</span>
+                                    <input class="cabinet-profile-input" type="text" name="organization" value="MKS">
+                                </label>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Full name:</span>
+                                    <input class="cabinet-profile-input" type="text" name="full_name" value="Sidorov Ivan Petrovich">
+                                </label>
+                            </div>
+
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+
+                            <div class="cabinet-profile-form__group cabinet-profile-form__group--contacts">
+                                <h2 class="cabinet-profile-card__title">Contacts</h2>
+                                <label class="cabinet-profile-field cabinet-profile-field--row">
+                                    <span class="cabinet-profile-field__label">Email:</span>
+                                    <input class="cabinet-profile-input" type="email" name="email" value="email@domain.com">
+                                </label>
+                                <label class="cabinet-profile-field cabinet-profile-field--row">
+                                    <span class="cabinet-profile-field__label">Telephone:</span>
+                                    <input class="cabinet-profile-input" type="tel" name="phone" value="996 (550) 403-993">
+                                    <span class="cabinet-profile-field__hint">Number format: XXXXXXXXXXXX</span>
+                                </label>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Additional email addresses for notification:</span>
+                                    <textarea class="cabinet-profile-textarea" name="extra_emails" placeholder="Enter additional addresses"></textarea>
+                                    <span class="cabinet-profile-field__hint">Addresses are entered separated by commas</span>
+                                </label>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section class="cabinet-profile-card cabinet-profile-settings" aria-label="Profile Options" data-profile-settings>
+                        <div class="cabinet-profile-section cabinet-profile-section--toggle" data-profile-section="api">
+                            <div class="cabinet-profile-section__head">
+                                <h2 class="cabinet-profile-section__title">API Parameters</h2>
+                                <button class="cabinet-profile-toggle" type="button" aria-expanded="false" aria-controls="profileApiPanel" data-profile-toggle>
+                                    <span data-profile-toggle-label>Expand</span>
+                                    <span class="cabinet-profile-toggle__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/chevron-down.svg" alt="" data-profile-toggle-icon></span>
+                                </button>
+                            </div>
+                            <div class="cabinet-profile-section__body" id="profileApiPanel" hidden data-profile-panel>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">IP addresses of your servers to restrict access:</span>
+                                    <textarea class="cabinet-profile-textarea" name="api_ip" placeholder="Enter additional addresses"></textarea>
+                                    <span class="cabinet-profile-field__hint">Addresses are entered separated by commas</span>
+                                </label>
+                                <div class="cabinet-profile-note-switch">
+                                    <button class="cabinet-profile-switch" type="button" role="switch" aria-checked="false" data-profile-switch-control="timezone_correction"></button>
+                                    <span class="cabinet-profile-note-switch__text">Adjust delivery time according to the recipient's time zone</span>
+                                    <button class="cabinet-profile-help" type="button" aria-label="Time zone tip" aria-expanded="false" aria-describedby="profileTimezoneTooltip" data-profile-help>
+                                        <img src="../assets/images/cabinet-profile/help.svg" alt="" aria-hidden="true">
+                                    </button>
+                                    <span class="cabinet-profile-tooltip" id="profileTimezoneTooltip" role="tooltip" hidden data-profile-tooltip>
+                                        If enabled, delivery time will be recalculated according to the recipient's time zone when determined by the system.
+                                    </span>
+                                </div>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Valid email addresses for email2sms protocol</span>
+                                    <textarea class="cabinet-profile-textarea" name="email2sms" placeholder="Enter additional addresses"></textarea>
+                                    <span class="cabinet-profile-field__hint">Addresses are entered separated by commas</span>
+                                </label>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">URL of your script to receive delivery reports:</span>
+                                    <input class="cabinet-profile-input" type="url" name="delivery_url" placeholder="Enter URL">
+                                </label>
+                                <div class="cabinet-profile-note-switch">
+                                    <button class="cabinet-profile-switch" type="button" role="switch" aria-checked="false" data-profile-switch-control="delivery_reports"></button>
+                                    <span class="cabinet-profile-note-switch__text">Enable sending delivery reports to your script</span>
+                                </div>
+                                <div class="cabinet-profile-subhead">
+                                    <h3 class="cabinet-profile-subhead__title">Antispam settings</h3>
+                                    <button class="cabinet-profile-help" type="button" aria-label="Antispam tip" aria-expanded="false" aria-describedby="profileAntispamTooltip" data-profile-help>
+                                        <img src="../assets/images/cabinet-profile/help.svg" alt="" aria-hidden="true">
+                                    </button>
+                                    <span class="cabinet-profile-tooltip" id="profileAntispamTooltip" role="tooltip" hidden data-profile-tooltip>
+                                        Limits help limit repeated sendings to one number and to a number + text pair.
+                                    </span>
+                                </div>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Limit per number:</span>
+                                    <span class="cabinet-profile-stepper" data-profile-stepper data-profile-stepper-control="spam_phone_limit" data-min="0" data-step="1">
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Reduce limit per number" data-profile-stepper-action="decrease"><img src="../assets/images/cabinet-profile/minus.svg" alt=""></button>
+                                        <span class="cabinet-profile-stepper__value" data-profile-stepper-value>0</span>
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Increase number limit" data-profile-stepper-action="increase"><img src="../assets/images/cabinet-profile/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Number and text limit:</span>
+                                    <span class="cabinet-profile-stepper" data-profile-stepper data-profile-stepper-control="spam_text_limit" data-min="0" data-step="1">
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Reduce number and text limit" data-profile-stepper-action="decrease"><img src="../assets/images/cabinet-profile/minus.svg" alt=""></button>
+                                        <span class="cabinet-profile-stepper__value" data-profile-stepper-value>0</span>
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Increase number and text limit" data-profile-stepper-action="increase"><img src="../assets/images/cabinet-profile/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="cabinet-profile-section cabinet-profile-section--toggle" data-profile-section="notifications">
+                            <div class="cabinet-profile-section__head">
+                                <h2 class="cabinet-profile-section__title">Notification settings</h2>
+                                <button class="cabinet-profile-toggle" type="button" aria-expanded="false" aria-controls="profileNotificationsPanel" data-profile-toggle>
+                                    <span data-profile-toggle-label>Expand</span>
+                                    <span class="cabinet-profile-toggle__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/chevron-down.svg" alt="" data-profile-toggle-icon></span>
+                                </button>
+                            </div>
+                            <div class="cabinet-profile-section__body" id="profileNotificationsPanel" hidden data-profile-panel>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Balance threshold:</span>
+                                    <span class="cabinet-profile-stepper" data-profile-stepper data-profile-stepper-control="balance_threshold" data-min="0" data-step="1">
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Reduce balance threshold" data-profile-stepper-action="decrease"><img src="../assets/images/cabinet-profile/minus.svg" alt=""></button>
+                                        <span class="cabinet-profile-stepper__value" data-profile-stepper-value>50</span>
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Increase balance threshold" data-profile-stepper-action="increase"><img src="../assets/images/cabinet-profile/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Notifications:</span>
+                                    <span class="cabinet-profile-checkboxes">
+                                        <button class="cabinet-profile-checkbox is-checked" type="button" role="checkbox" aria-checked="true" data-profile-checkbox data-profile-checkbox-control="notify_email">
+                                            <span class="cabinet-profile-checkbox__mark" aria-hidden="true"><img src="../assets/images/cabinet-profile/checkbox-check.svg" alt=""></span>
+                                            <span>On enamel</span>
+                                        </button>
+                                        <button class="cabinet-profile-checkbox" type="button" role="checkbox" aria-checked="false" data-profile-checkbox data-profile-checkbox-control="notify_phone">
+                                            <span class="cabinet-profile-checkbox__mark" aria-hidden="true"><img src="../assets/images/cabinet-profile/checkbox-check.svg" alt=""></span>
+                                            <span>To phone</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="cabinet-profile-section">
+                            <div class="cabinet-profile-row">
+                                <span class="cabinet-profile-row__label cabinet-profile-row__label--muted">Personal account:</span>
+                                <span class="cabinet-profile-row__value">163343</span>
+                            </div>
+                            <div class="cabinet-profile-row cabinet-profile-row--top">
+                                <span class="cabinet-profile-row__label cabinet-profile-row__label--muted">Altegio key:</span>
+                                <span class="cabinet-profile-row__content">
+                                    <span class="cabinet-profile-row__value">c469h5_c5e6h56v5j_479346477</span>
+                                    <button class="cabinet-profile-action" type="button" data-profile-altegio>
+                                        <span class="cabinet-profile-action__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/button-plus.svg" alt=""></span>
+                                        <span>Connect Altegio</span>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="cabinet-profile-section">
+                            <div class="cabinet-profile-row cabinet-profile-row--password">
+                                <span class="cabinet-profile-row__label cabinet-profile-row__label--muted">Change password:</span>
+                                <span class="cabinet-profile-password">
+                                    <span class="cabinet-profile-password__options">
+                                        <button class="cabinet-profile-password__option" type="button" data-profile-switch-control="password_all" data-profile-password-scope="all">
+                                            <span class="cabinet-profile-switch" role="switch" aria-checked="false"></span>
+                                            <span>All</span>
+                                        </button>
+                                        <button class="cabinet-profile-password__option" type="button" data-profile-switch-control="password_cabinet" data-profile-password-scope="cabinet">
+                                            <span class="cabinet-profile-switch is-on" role="switch" aria-checked="true"></span>
+                                            <span>Personal account</span>
+                                        </button>
+                                        <button class="cabinet-profile-password__option" type="button" data-profile-switch-control="password_api" data-profile-password-scope="api">
+                                            <span class="cabinet-profile-switch is-on" role="switch" aria-checked="true"></span>
+                                            <span>API/SMPP</span>
+                                        </button>
+                                        <button class="cabinet-profile-action" type="button" data-profile-password-open>
+                                            <span class="cabinet-profile-action__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/lock.svg" alt=""></span>
+                                            <span>Change password</span>
+                                        </button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="cabinet-profile-actions">
+                    <button class="cabinet-btn cabinet-btn--secondary" type="button" data-profile-cancel>Undo edits</button>
+                    <button class="cabinet-btn cabinet-btn--primary" type="button" data-profile-save>Save changes</button>
+                </div>
+                </div>
+
+                <div class="cabinet-profile__panel cabinet-profile__panel--senders" id="profileSendersPanel" role="tabpanel" aria-labelledby="profileSendersTab" hidden data-profile-tab-panel="senders">
+                    <section class="cabinet-profile-card cabinet-profile-senders" aria-labelledby="profileSendersTitle" data-profile-senders>
+                        <h2 class="cabinet-profile-senders__title" id="profileSendersTitle">Sender names used when sending SMS</h2>
+
+                        <div class="cabinet-profile-senders__controls">
+                            <button class="cabinet-profile-senders__digital" type="button" role="switch" aria-checked="false" data-profile-switch-control="numeric_senders">
+                                <span class="cabinet-profile-switch" aria-hidden="true"></span>
+                                <span>Digital sender names enabled</span>
+                            </button>
+                            <div class="cabinet-profile-senders__actions">
+                                <button class="cabinet-profile-senders__action cabinet-profile-senders__action--download" type="button" data-profile-sender-application>
+                                    <span class="cabinet-profile-senders__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/sender-download.svg" alt=""></span>
+                                    <span>Application form for approval of the sender's name</span>
+                                </button>
+                                <button class="cabinet-profile-senders__action cabinet-profile-senders__action--add" type="button" data-profile-sender-add-open>
+                                    <span class="cabinet-profile-senders__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/sender-add.svg" alt=""></span>
+                                    <span>Add a new name</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-profile-senders-table" role="table" aria-label="Sender names" data-profile-senders-table>
+                            <div class="cabinet-profile-senders-table__head" role="rowgroup">
+                                <div class="cabinet-profile-senders-table__row cabinet-profile-senders-table__row--head" role="row">
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--name" role="columnheader" aria-sort="none">
+                                        <button class="cabinet-profile-senders-table__sort" type="button" data-profile-sender-sort="name">
+                                            <span>Name</span>
+                                            <img src="../assets/images/cabinet-profile/sender-sort.svg" alt="" aria-hidden="true">
+                                        </button>
+                                    </div>
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--status" role="columnheader" aria-sort="none">
+                                        <button class="cabinet-profile-senders-table__sort" type="button" data-profile-sender-sort="status">
+                                            <span>Status</span>
+                                            <img src="../assets/images/cabinet-profile/sender-sort.svg" alt="" aria-hidden="true">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabinet-profile-senders-table__body" role="rowgroup" data-profile-senders-body>
+                                <div class="cabinet-profile-senders-table__row is-muted" role="row" data-profile-sender-row data-name="SMSPRO.KG" data-status="ready" data-status-order="0">
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--name" role="cell">
+                                        <span class="cabinet-profile-senders-table__name">SMSPRO.KG</span>
+                                    </div>
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--status" role="cell">
+                                        <span class="cabinet-profile-senders-status cabinet-profile-senders-status--ready">
+                                            <span class="cabinet-profile-senders-status__line"><img src="../assets/images/cabinet-profile/status-ready.svg" alt="" aria-hidden="true"><strong>Ready to use</strong></span>
+                                            <span class="cabinet-profile-senders-status__meta">Handle (optional)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="cabinet-profile-senders-table__row" role="row" data-profile-sender-row data-name="Yandex" data-status="inactive" data-status-order="2">
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--name" role="cell">
+                                        <span class="cabinet-profile-senders-table__name">Yandex</span>
+                                    </div>
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--status" role="cell">
+                                        <span class="cabinet-profile-senders-status cabinet-profile-senders-status--inactive">
+                                            <span class="cabinet-profile-senders-status__line"><img src="../assets/images/cabinet-profile/status-red.svg" alt="" aria-hidden="true"><strong>Deactivated</strong></span>
+                                            <span class="cabinet-profile-senders-status__meta">Handle (optional)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="cabinet-profile-sender-popover" role="dialog" aria-modal="false" aria-labelledby="profileSenderPopoverTitle" hidden data-profile-sender-popover>
+                        <form class="cabinet-profile-sender-popover__dialog" action="#" method="post" data-profile-sender-form>
+                            <div class="cabinet-profile-sender-popover__head">
+                                <h2 class="cabinet-profile-sender-popover__title" id="profileSenderPopoverTitle">Add new sender name</h2>
+                                <button class="cabinet-profile-sender-popover__close" type="button" aria-label="Close" data-profile-sender-close>
+                                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-modal-close"></use></svg>
+                                </button>
+                            </div>
+                            <label class="cabinet-profile-field">
+                                <span class="cabinet-profile-field__label">Create a name:</span>
+                                <input class="cabinet-profile-input" type="text" name="sender_name" value="MKS" maxlength="11" autocomplete="off" data-profile-sender-input>
+                            </label>
+                            <p class="cabinet-profile-sender-popover__error" role="alert" hidden data-profile-sender-error></p>
+                            <div class="cabinet-profile-sender-popover__actions">
+                                <button class="cabinet-modal-button cabinet-modal-button--secondary" type="button" data-profile-sender-close>Cancel</button>
+                                <button class="cabinet-modal-button cabinet-modal-button--primary" type="submit">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Nikita Online LLC,</span>
+                <span>Nikita Mobile LLC, 2014-2025</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">User Agreement</a> | <a href="security.html#bezop">Privacy Policy</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Account menu" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Subject">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Log out</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Close menu" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Account menu">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Home</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Newsletters</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Lists</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API integration</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Reports</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP service</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Templates</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Terms and prices</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Technical capabilities</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Reliability and safety</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Questions and answers</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Contacts</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Bottom navigation of the account">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Home</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Newsletters</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Lists</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API integration</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Reports</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP service</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Templates</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Menu</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

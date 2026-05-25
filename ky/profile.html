@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита - менин профилим</title>
+    <meta name="description" content="Никита жеке аккаунтунун профилинин жөндөөлөрү.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--profile" data-cabinet-current-section="profile">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Каттоо эсебин багыттоо" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Менюну жайыңыз" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Менюну жыйыштыруу</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Кабинеттин бөлүмдөрү">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Үй"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Үй</span></a>
+            <a class="cabinet-sidepanel__item is-active" href="profile.html" data-cabinet-nav data-section="profile" aria-label="Менин профилим" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">Менин профилим</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Маалымат бюллетендери"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Маалымат бюллетендери</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Тизмелер"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Тизмелер</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API интеграциясы"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API интеграциясы</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчеттор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчеттор</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP кызматы"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP кызматы</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблондор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблондор</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Шарттар жана баалар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Шарттар жана баалар</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Техникалык мүмкүнчүлүктөр"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Техникалык мүмкүнчүлүктөр</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Ишенимдүүлүк жана коопсуздук"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Ишенимдүүлүк жана коопсуздук</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Суроолор жана жооптор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Суроолор жана жооптор</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Байланыштар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Байланыштар</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Тема">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Чыгыңыз">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Чыгыңыз</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>сом</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Техникалык колдоо" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="менеджер" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Никита - негизги">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Байланыш<br>техникалык колдоого</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Байланыш<br>менеджер менен</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>сом</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="Менин профилим">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <span class="cabinet-user__meta">
+                                <span class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Константин</span>
+                                    <span class="cabinet-status cabinet-status--admin">Администратор</span>
+                                </span>
+                                <span class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ ЖЧК “Уюм</span>
+                                </span>
+                            </span>
+                        </a>
+                        <button class="cabinet-user cabinet-user--demo" type="button" aria-label="Демо режими" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="../assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">DEMO РЕЖИМ</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>Менин кеңсем → </span><strong data-cabinet-current>Менин профилим</strong>
+            </div>
+
+            <div class="cabinet-page-title cabinet-profile-title">
+                <h1 class="cabinet-page-title__text" id="profileTitle">Менин профилим</h1>
+            </div>
+
+            <nav class="cabinet-profile-tabs" aria-label="Профиль бөлүмдөрү" role="tablist">
+                <button class="cabinet-profile-tabs__item is-active" id="profileSettingsTab" type="button" role="tab" aria-selected="true" aria-current="page" aria-controls="profileSettingsPanel" data-profile-tab-button="settings" data-profile-settings-tab>
+                    <span class="cabinet-profile-tabs__icon cabinet-profile-tabs__icon--profile" aria-hidden="true">
+                        <img class="cabinet-profile-tabs__icon-active" src="../assets/images/cabinet-profile/tab-profile.svg" alt="">
+                        <img class="cabinet-profile-tabs__icon-inactive" src="../assets/images/cabinet-profile/tab-profile-inactive.svg" alt="">
+                    </span>
+                    <span>Профиль орнотуулары</span>
+                </button>
+                <button class="cabinet-profile-tabs__item" id="profileSendersTab" type="button" role="tab" aria-selected="false" aria-controls="profileSendersPanel" data-profile-tab-button="senders" data-profile-senders-tab>
+                    <span class="cabinet-profile-tabs__icon cabinet-profile-tabs__icon--senders" aria-hidden="true">
+                        <img class="cabinet-profile-tabs__icon-active" src="../assets/images/cabinet-profile/tab-senders-active.svg" alt="">
+                        <img class="cabinet-profile-tabs__icon-inactive" src="../assets/images/cabinet-profile/tab-senders.svg" alt="">
+                    </span>
+                    <span>Жөнөтүүчү аттары</span>
+                </button>
+            </nav>
+        </div>
+
+        <main class="cabinet-main">
+            <section class="cabinet-profile" aria-labelledby="profileTitle" data-cabinet-profile-page>
+                <div class="cabinet-profile__panel is-active" id="profileSettingsPanel" role="tabpanel" aria-labelledby="profileSettingsTab" data-profile-tab-panel="settings">
+                <div class="cabinet-profile__grid">
+                    <section class="cabinet-profile-card cabinet-profile-personal" aria-labelledby="profilePersonalTitle">
+                        <h2 class="cabinet-profile-card__title" id="profilePersonalTitle">Жеке маалымат</h2>
+
+                        <form class="cabinet-profile-form" action="#" method="post">
+                            <div class="cabinet-profile-form__group">
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Уюмдун аталышы:</span>
+                                    <input class="cabinet-profile-input" type="text" name="organization" value="MKS">
+                                </label>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Толук аты:</span>
+                                    <input class="cabinet-profile-input" type="text" name="full_name" value="Сидоров Иван Петрович">
+                                </label>
+                            </div>
+
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+
+                            <div class="cabinet-profile-form__group cabinet-profile-form__group--contacts">
+                                <h2 class="cabinet-profile-card__title">Байланыштар</h2>
+                                <label class="cabinet-profile-field cabinet-profile-field--row">
+                                    <span class="cabinet-profile-field__label">Email:</span>
+                                    <input class="cabinet-profile-input" type="email" name="email" value="email@domain.com">
+                                </label>
+                                <label class="cabinet-profile-field cabinet-profile-field--row">
+                                    <span class="cabinet-profile-field__label">Телефон:</span>
+                                    <input class="cabinet-profile-input" type="tel" name="phone" value="996 (550) 403-993">
+                                    <span class="cabinet-profile-field__hint">Сан форматы: XXXXXXXXXXXX</span>
+                                </label>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Кабарлоо үчүн кошумча электрондук почта даректери:</span>
+                                    <textarea class="cabinet-profile-textarea" name="extra_emails" placeholder="Кошумча даректерди киргизиңиз"></textarea>
+                                    <span class="cabinet-profile-field__hint">Даректер үтүр менен бөлүнгөн</span>
+                                </label>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section class="cabinet-profile-card cabinet-profile-settings" aria-label="Профиль параметрлери" data-profile-settings>
+                        <div class="cabinet-profile-section cabinet-profile-section--toggle" data-profile-section="api">
+                            <div class="cabinet-profile-section__head">
+                                <h2 class="cabinet-profile-section__title">API параметрлери</h2>
+                                <button class="cabinet-profile-toggle" type="button" aria-expanded="false" aria-controls="profileApiPanel" data-profile-toggle>
+                                    <span data-profile-toggle-label>Кеңейтүү</span>
+                                    <span class="cabinet-profile-toggle__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/chevron-down.svg" alt="" data-profile-toggle-icon></span>
+                                </button>
+                            </div>
+                            <div class="cabinet-profile-section__body" id="profileApiPanel" hidden data-profile-panel>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Кирүүнү чектөө үчүн сервериңиздин IP даректери:</span>
+                                    <textarea class="cabinet-profile-textarea" name="api_ip" placeholder="Кошумча даректерди киргизиңиз"></textarea>
+                                    <span class="cabinet-profile-field__hint">Даректер үтүр менен бөлүнгөн</span>
+                                </label>
+                                <div class="cabinet-profile-note-switch">
+                                    <button class="cabinet-profile-switch" type="button" role="switch" aria-checked="false" data-profile-switch-control="timezone_correction"></button>
+                                    <span class="cabinet-profile-note-switch__text">Жеткирүү убактысын алуучунун убакыт алкагына жараша тууралаңыз</span>
+                                    <button class="cabinet-profile-help" type="button" aria-label="Убакыт алкагынын кеңеши" aria-expanded="false" aria-describedby="profileTimezoneTooltip" data-profile-help>
+                                        <img src="../assets/images/cabinet-profile/help.svg" alt="" aria-hidden="true">
+                                    </button>
+                                    <span class="cabinet-profile-tooltip" id="profileTimezoneTooltip" role="tooltip" hidden data-profile-tooltip>
+                                        Эгер иштетилсе, жеткирүү убактысы система тарабынан аныкталганда алуучунун убакыт алкагына ылайык кайра эсептелинет.
+                                    </span>
+                                </div>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">email2sms протоколу үчүн жарактуу электрондук почта даректери</span>
+                                    <textarea class="cabinet-profile-textarea" name="email2sms" placeholder="Кошумча даректерди киргизиңиз"></textarea>
+                                    <span class="cabinet-profile-field__hint">Даректер үтүр менен бөлүнгөн</span>
+                                </label>
+                                <label class="cabinet-profile-field">
+                                    <span class="cabinet-profile-field__label">Жеткирүү отчетторун алуу үчүн скриптиңиздин URL дареги:</span>
+                                    <input class="cabinet-profile-input" type="url" name="delivery_url" placeholder="URL киргизиңиз">
+                                </label>
+                                <div class="cabinet-profile-note-switch">
+                                    <button class="cabinet-profile-switch" type="button" role="switch" aria-checked="false" data-profile-switch-control="delivery_reports"></button>
+                                    <span class="cabinet-profile-note-switch__text">Скриптиңизге жеткирүү отчетторун жөнөтүүнү иштетиңиз</span>
+                                </div>
+                                <div class="cabinet-profile-subhead">
+                                    <h3 class="cabinet-profile-subhead__title">Антиспам жөндөөлөрү</h3>
+                                    <button class="cabinet-profile-help" type="button" aria-label="Спамга каршы кеңеш" aria-expanded="false" aria-describedby="profileAntispamTooltip" data-profile-help>
+                                        <img src="../assets/images/cabinet-profile/help.svg" alt="" aria-hidden="true">
+                                    </button>
+                                    <span class="cabinet-profile-tooltip" id="profileAntispamTooltip" role="tooltip" hidden data-profile-tooltip>
+                                        Чектөөлөр бир санга жана санга + текст жупуна кайталануучу жөнөтүүнү чектөөгө жардам берет.
+                                    </span>
+                                </div>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Номерге чектөө:</span>
+                                    <span class="cabinet-profile-stepper" data-profile-stepper data-profile-stepper-control="spam_phone_limit" data-min="0" data-step="1">
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Бир санга чектөөнү азайтыңыз" data-profile-stepper-action="decrease"><img src="../assets/images/cabinet-profile/minus.svg" alt=""></button>
+                                        <span class="cabinet-profile-stepper__value" data-profile-stepper-value>0</span>
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Сан чегин көбөйтүү" data-profile-stepper-action="increase"><img src="../assets/images/cabinet-profile/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Сан жана текст чеги:</span>
+                                    <span class="cabinet-profile-stepper" data-profile-stepper data-profile-stepper-control="spam_text_limit" data-min="0" data-step="1">
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Номер жана текст чегин азайтыңыз" data-profile-stepper-action="decrease"><img src="../assets/images/cabinet-profile/minus.svg" alt=""></button>
+                                        <span class="cabinet-profile-stepper__value" data-profile-stepper-value>0</span>
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Сандын жана тексттин чегин жогорулатуу" data-profile-stepper-action="increase"><img src="../assets/images/cabinet-profile/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="cabinet-profile-section cabinet-profile-section--toggle" data-profile-section="notifications">
+                            <div class="cabinet-profile-section__head">
+                                <h2 class="cabinet-profile-section__title">Эскертме жөндөөлөрү</h2>
+                                <button class="cabinet-profile-toggle" type="button" aria-expanded="false" aria-controls="profileNotificationsPanel" data-profile-toggle>
+                                    <span data-profile-toggle-label>Кеңейтүү</span>
+                                    <span class="cabinet-profile-toggle__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/chevron-down.svg" alt="" data-profile-toggle-icon></span>
+                                </button>
+                            </div>
+                            <div class="cabinet-profile-section__body" id="profileNotificationsPanel" hidden data-profile-panel>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Баланс чеги:</span>
+                                    <span class="cabinet-profile-stepper" data-profile-stepper data-profile-stepper-control="balance_threshold" data-min="0" data-step="1">
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Баланс босогосун азайтыңыз" data-profile-stepper-action="decrease"><img src="../assets/images/cabinet-profile/minus.svg" alt=""></button>
+                                        <span class="cabinet-profile-stepper__value" data-profile-stepper-value>50</span>
+                                        <button class="cabinet-profile-stepper__button" type="button" aria-label="Баланс босогосун жогорулатуу" data-profile-stepper-action="increase"><img src="../assets/images/cabinet-profile/plus.svg" alt=""></button>
+                                    </span>
+                                </div>
+                                <div class="cabinet-profile-row">
+                                    <span class="cabinet-profile-row__label">Эскертмелер:</span>
+                                    <span class="cabinet-profile-checkboxes">
+                                        <button class="cabinet-profile-checkbox is-checked" type="button" role="checkbox" aria-checked="true" data-profile-checkbox data-profile-checkbox-control="notify_email">
+                                            <span class="cabinet-profile-checkbox__mark" aria-hidden="true"><img src="../assets/images/cabinet-profile/checkbox-check.svg" alt=""></span>
+                                            <span>Эмаль боюнча</span>
+                                        </button>
+                                        <button class="cabinet-profile-checkbox" type="button" role="checkbox" aria-checked="false" data-profile-checkbox data-profile-checkbox-control="notify_phone">
+                                            <span class="cabinet-profile-checkbox__mark" aria-hidden="true"><img src="../assets/images/cabinet-profile/checkbox-check.svg" alt=""></span>
+                                            <span>Телефонго</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="cabinet-profile-section">
+                            <div class="cabinet-profile-row">
+                                <span class="cabinet-profile-row__label cabinet-profile-row__label--muted">Жеке эсеп:</span>
+                                <span class="cabinet-profile-row__value">163343</span>
+                            </div>
+                            <div class="cabinet-profile-row cabinet-profile-row--top">
+                                <span class="cabinet-profile-row__label cabinet-profile-row__label--muted">Altegio ачкычы:</span>
+                                <span class="cabinet-profile-row__content">
+                                    <span class="cabinet-profile-row__value">c469h5_c5e6h56v5j_479346477</span>
+                                    <button class="cabinet-profile-action" type="button" data-profile-altegio>
+                                        <span class="cabinet-profile-action__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/button-plus.svg" alt=""></span>
+                                        <span>Altegio туташуу</span>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="cabinet-profile-divider" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="cabinet-profile-section">
+                            <div class="cabinet-profile-row cabinet-profile-row--password">
+                                <span class="cabinet-profile-row__label cabinet-profile-row__label--muted">Сырсөздү өзгөртүү:</span>
+                                <span class="cabinet-profile-password">
+                                    <span class="cabinet-profile-password__options">
+                                        <button class="cabinet-profile-password__option" type="button" data-profile-switch-control="password_all" data-profile-password-scope="all">
+                                            <span class="cabinet-profile-switch" role="switch" aria-checked="false"></span>
+                                            <span>Баары</span>
+                                        </button>
+                                        <button class="cabinet-profile-password__option" type="button" data-profile-switch-control="password_cabinet" data-profile-password-scope="cabinet">
+                                            <span class="cabinet-profile-switch is-on" role="switch" aria-checked="true"></span>
+                                            <span>Жеке эсеп</span>
+                                        </button>
+                                        <button class="cabinet-profile-password__option" type="button" data-profile-switch-control="password_api" data-profile-password-scope="api">
+                                            <span class="cabinet-profile-switch is-on" role="switch" aria-checked="true"></span>
+                                            <span>API/SMPP</span>
+                                        </button>
+                                        <button class="cabinet-profile-action" type="button" data-profile-password-open>
+                                            <span class="cabinet-profile-action__icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/lock.svg" alt=""></span>
+                                            <span>Сырсөздү өзгөртүү</span>
+                                        </button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="cabinet-profile-actions">
+                    <button class="cabinet-btn cabinet-btn--secondary" type="button" data-profile-cancel>Түзөтүүлөрдү жокко чыгаруу</button>
+                    <button class="cabinet-btn cabinet-btn--primary" type="button" data-profile-save>Өзгөрүүлөрдү сактоо</button>
+                </div>
+                </div>
+
+                <div class="cabinet-profile__panel cabinet-profile__panel--senders" id="profileSendersPanel" role="tabpanel" aria-labelledby="profileSendersTab" hidden data-profile-tab-panel="senders">
+                    <section class="cabinet-profile-card cabinet-profile-senders" aria-labelledby="profileSendersTitle" data-profile-senders>
+                        <h2 class="cabinet-profile-senders__title" id="profileSendersTitle">SMS жөнөтүүдө колдонулган жөнөтүүчү аттары</h2>
+
+                        <div class="cabinet-profile-senders__controls">
+                            <button class="cabinet-profile-senders__digital" type="button" role="switch" aria-checked="false" data-profile-switch-control="numeric_senders">
+                                <span class="cabinet-profile-switch" aria-hidden="true"></span>
+                                <span>Санарип жөнөтүүчү аттары иштетилди</span>
+                            </button>
+                            <div class="cabinet-profile-senders__actions">
+                                <button class="cabinet-profile-senders__action cabinet-profile-senders__action--download" type="button" data-profile-sender-application>
+                                    <span class="cabinet-profile-senders__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/sender-download.svg" alt=""></span>
+                                    <span>Жөнөтүүчүнүн аты-жөнүн бекитүү үчүн анкета</span>
+                                </button>
+                                <button class="cabinet-profile-senders__action cabinet-profile-senders__action--add" type="button" data-profile-sender-add-open>
+                                    <span class="cabinet-profile-senders__action-icon" aria-hidden="true"><img src="../assets/images/cabinet-profile/sender-add.svg" alt=""></span>
+                                    <span>Жаңы ат кошуу</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-profile-senders-table" role="table" aria-label="Жөнөтүүчү аттары" data-profile-senders-table>
+                            <div class="cabinet-profile-senders-table__head" role="rowgroup">
+                                <div class="cabinet-profile-senders-table__row cabinet-profile-senders-table__row--head" role="row">
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--name" role="columnheader" aria-sort="none">
+                                        <button class="cabinet-profile-senders-table__sort" type="button" data-profile-sender-sort="name">
+                                            <span>аты</span>
+                                            <img src="../assets/images/cabinet-profile/sender-sort.svg" alt="" aria-hidden="true">
+                                        </button>
+                                    </div>
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--status" role="columnheader" aria-sort="none">
+                                        <button class="cabinet-profile-senders-table__sort" type="button" data-profile-sender-sort="status">
+                                            <span>Статус</span>
+                                            <img src="../assets/images/cabinet-profile/sender-sort.svg" alt="" aria-hidden="true">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cabinet-profile-senders-table__body" role="rowgroup" data-profile-senders-body>
+                                <div class="cabinet-profile-senders-table__row is-muted" role="row" data-profile-sender-row data-name="SMSPRO.KG" data-status="ready" data-status-order="0">
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--name" role="cell">
+                                        <span class="cabinet-profile-senders-table__name">SMSPRO.KG</span>
+                                    </div>
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--status" role="cell">
+                                        <span class="cabinet-profile-senders-status cabinet-profile-senders-status--ready">
+                                            <span class="cabinet-profile-senders-status__line"><img src="../assets/images/cabinet-profile/status-ready.svg" alt="" aria-hidden="true"><strong>Колдонууга даяр</strong></span>
+                                            <span class="cabinet-profile-senders-status__meta">Туткасы (милдеттүү эмес)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="cabinet-profile-senders-table__row" role="row" data-profile-sender-row data-name="Яндекс" data-status="inactive" data-status-order="2">
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--name" role="cell">
+                                        <span class="cabinet-profile-senders-table__name">Яндекс</span>
+                                    </div>
+                                    <div class="cabinet-profile-senders-table__cell cabinet-profile-senders-table__cell--status" role="cell">
+                                        <span class="cabinet-profile-senders-status cabinet-profile-senders-status--inactive">
+                                            <span class="cabinet-profile-senders-status__line"><img src="../assets/images/cabinet-profile/status-red.svg" alt="" aria-hidden="true"><strong>Өчүрүлгөн</strong></span>
+                                            <span class="cabinet-profile-senders-status__meta">Туткасы (милдеттүү эмес)</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="cabinet-profile-sender-popover" role="dialog" aria-modal="false" aria-labelledby="profileSenderPopoverTitle" hidden data-profile-sender-popover>
+                        <form class="cabinet-profile-sender-popover__dialog" action="#" method="post" data-profile-sender-form>
+                            <div class="cabinet-profile-sender-popover__head">
+                                <h2 class="cabinet-profile-sender-popover__title" id="profileSenderPopoverTitle">Жаңы жөнөтүүчү атын кошуу</h2>
+                                <button class="cabinet-profile-sender-popover__close" type="button" aria-label="Жабуу" data-profile-sender-close>
+                                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-modal-close"></use></svg>
+                                </button>
+                            </div>
+                            <label class="cabinet-profile-field">
+                                <span class="cabinet-profile-field__label">Атын түзүү:</span>
+                                <input class="cabinet-profile-input" type="text" name="sender_name" value="MKS" maxlength="11" autocomplete="off" data-profile-sender-input>
+                            </label>
+                            <p class="cabinet-profile-sender-popover__error" role="alert" hidden data-profile-sender-error></p>
+                            <div class="cabinet-profile-sender-popover__actions">
+                                <button class="cabinet-modal-button cabinet-modal-button--secondary" type="button" data-profile-sender-close>Жокко чыгаруу</button>
+                                <button class="cabinet-modal-button cabinet-modal-button--primary" type="submit">Сактоо</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Никита Онлайн ЖЧК,</span>
+                <span>«Никита Мобайл» ЖЧКсы, 2014-2025-жж</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">Колдонуучу келишими</a> | <a href="security.html#bezop">Купуялык саясаты</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Каттоо эсебинин менюсу" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Тема">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Чыгыңыз</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Менюну жабуу" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Каттоо эсебинин менюсу">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Үй</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Маалымат бюллетендери</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Тизмелер</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API интеграциясы</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчеттор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP кызматы</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблондор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Шарттар жана баалар</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Техникалык мүмкүнчүлүктөр</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Ишенимдүүлүк жана коопсуздук</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Суроолор жана жооптор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Байланыштар</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Каттоо эсебинин ылдыйкы навигациясы">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Үй</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Маалымат бюллетендери</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Тизмелер</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API интеграциясы</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Отчеттор</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP кызматы</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Шаблондор</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Меню</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

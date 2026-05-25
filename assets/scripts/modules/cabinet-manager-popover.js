@@ -1,7 +1,46 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
 
-const ASSET_PATH = 'assets/images/cabinet-modals/';
+const ASSET_PATH = new URL('../../images/cabinet-modals/', import.meta.url).href;
 const MANAGER_POPOVER_OFFSET = 24;
+
+const MANAGER_POPOVER_I18N = {
+    ru: {
+        title: 'Есть вопросы?',
+        close: 'Закрыть',
+        text: 'Обратитесь к специалисту<br>технической поддержки:',
+        telegram: 'Через Telegram',
+        whatsapp: 'Через WhatsApp',
+        call: 'или позвоните:',
+    },
+    en: {
+        title: 'Any questions?',
+        close: 'Close',
+        text: 'Contact a technical<br>support specialist:',
+        telegram: 'Via Telegram',
+        whatsapp: 'Via WhatsApp',
+        call: 'or call:',
+    },
+    ky: {
+        title: 'Суроолоруңуз барбы?',
+        close: 'Жабуу',
+        text: 'Техникалык колдоо<br>адисине кайрылыңыз:',
+        telegram: 'Telegram аркылуу',
+        whatsapp: 'WhatsApp аркылуу',
+        call: 'же чалыңыз:',
+    },
+};
+
+function getCurrentLocale() {
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    if (segments.includes('en')) return 'en';
+    if (segments.includes('ky')) return 'ky';
+    return 'ru';
+}
+
+function popoverText(key) {
+    const locale = getCurrentLocale();
+    return MANAGER_POPOVER_I18N[locale]?.[key] || MANAGER_POPOVER_I18N.ru[key] || key;
+}
 
 const TELEGRAM_ICON = `
     <span class="cabinet-manager-popover__social-icon" aria-hidden="true">
@@ -26,26 +65,26 @@ function createManagerPopover() {
     popover.className = 'cabinet-manager-popover';
     popover.hidden = true;
     popover.setAttribute('role', 'dialog');
-    popover.setAttribute('aria-label', 'Есть вопросы?');
+    popover.setAttribute('aria-label', popoverText('title'));
     popover.setAttribute('data-cabinet-manager-popover', '');
 
     popover.innerHTML = `
         <div class="cabinet-manager-popover__head">
-            <strong>Есть вопросы?</strong>
-            <button class="cabinet-manager-popover__close" type="button" aria-label="Закрыть" data-cabinet-manager-close>
+            <strong>${popoverText('title')}</strong>
+            <button class="cabinet-manager-popover__close" type="button" aria-label="${popoverText('close')}" data-cabinet-manager-close>
                 <img class="cabinet-manager-popover__close-icon" src="${ASSET_PATH}support-close.svg" alt="" aria-hidden="true">
             </button>
         </div>
-        <p class="cabinet-manager-popover__text">Обратитесь к специалисту<br>технической поддержки:</p>
+        <p class="cabinet-manager-popover__text">${popoverText('text')}</p>
         <a class="cabinet-manager-popover__social cabinet-manager-popover__social--telegram" href="https://t.me/" target="_blank" rel="noopener">
             ${TELEGRAM_ICON}
-            <span>Через Telegram</span>
+            <span>${popoverText('telegram')}</span>
         </a>
         <a class="cabinet-manager-popover__social cabinet-manager-popover__social--whatsapp" href="https://wa.me/996700892188" target="_blank" rel="noopener">
             ${WHATSAPP_ICON}
-            <span>Через WhatsApp</span>
+            <span>${popoverText('whatsapp')}</span>
         </a>
-        <p class="cabinet-manager-popover__text">или позвоните:</p>
+        <p class="cabinet-manager-popover__text">${popoverText('call')}</p>
         <a class="cabinet-manager-popover__phone" href="tel:+996700892188">
             <span class="cabinet-manager-popover__phone-icon">
                 ${PHONE_ICON}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - Integration API</title>
+    <meta name="description" content="Nikita personal account integration API.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--api" data-cabinet-current-section="api">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Account navigation" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Expand menu" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Collapse menu</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Cabinet sections">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Home"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Home</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="My profile"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">My profile</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Newsletters"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Newsletters</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Lists</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API integration"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API integration</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Reports</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP service"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP service</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Templates</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Terms and prices"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Terms and prices</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Technical capabilities"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Technical capabilities</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Reliability and safety"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Reliability and safety</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Questions and answers"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Questions and answers</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Contacts"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Contacts</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Subject">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Log out">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>SOM</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Technical support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita - main">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Contact<br>to technical support</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Contact<br>with the manager</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>SOM</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user" href="profile.html" aria-label="My profile">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Konstantin</span>
+                                    <span class="cabinet-status cabinet-status--admin">Administrator</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ LLC “Organization</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>My office → </span><strong data-cabinet-current>API integration</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="apiTitle">API integration</h1>
+            </div>
+        </div>
+
+        <main class="cabinet-main">
+            <section class="cabinet-api" aria-labelledby="apiTitle">
+                <div class="cabinet-api__content">
+                    <section class="cabinet-api-flow" aria-label="API integration diagram">
+                        <div class="cabinet-api-flow__platform">
+                            <span class="cabinet-api-flow__platform-icon" aria-hidden="true">
+                                <img src="../assets/images/cabinet-api/platform.svg" alt="">
+                            </span>
+                            <p>Platform Nikita.kg</p>
+                        </div>
+
+                        <div class="cabinet-api-flow__arrows" aria-hidden="true">
+                            <span class="cabinet-api-flow__arrow-pair">
+                                <img src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                                <img class="cabinet-api-flow__arrow--reverse" src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                            </span>
+                            <span class="cabinet-api-flow__arrow-pair">
+                                <img src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                                <img class="cabinet-api-flow__arrow--reverse" src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                            </span>
+                        </div>
+
+                        <div class="cabinet-api-flow__row cabinet-api-flow__row--large">
+                            <article class="cabinet-api-flow__node cabinet-api-flow__node--large">
+                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
+                                    <img src="../assets/images/cabinet-api/api-call.svg" alt="">
+                                </span>
+                                <p>Calling an API function<br>to send an SMS message<br>and receive a delivery report</p>
+                            </article>
+                            <article class="cabinet-api-flow__node cabinet-api-flow__node--large">
+                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
+                                    <img src="../assets/images/cabinet-api/sms-report.svg" alt="">
+                                </span>
+                                <p>Sending SMS<br>and receiving a delivery report</p>
+                            </article>
+                        </div>
+
+                        <div class="cabinet-api-flow__arrows" aria-hidden="true">
+                            <span class="cabinet-api-flow__arrow-pair">
+                                <img src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                                <img class="cabinet-api-flow__arrow--reverse" src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                            </span>
+                            <span class="cabinet-api-flow__arrow-pair">
+                                <img src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                                <img class="cabinet-api-flow__arrow--reverse" src="../assets/images/cabinet-api/arrow-vertical.svg" alt="">
+                            </span>
+                        </div>
+
+                        <div class="cabinet-api-flow__row cabinet-api-flow__row--small">
+                            <article class="cabinet-api-flow__node cabinet-api-flow__node--small">
+                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
+                                    <img src="../assets/images/cabinet-api/sender.svg" alt="">
+                                </span>
+                                <p>You</p>
+                            </article>
+                            <article class="cabinet-api-flow__node cabinet-api-flow__node--small">
+                                <span class="cabinet-api-flow__node-icon" aria-hidden="true">
+                                    <img src="../assets/images/cabinet-api/recipient.svg" alt="">
+                                </span>
+                                <p>Recipient</p>
+                            </article>
+                        </div>
+
+                        <div class="cabinet-api-flow__actions">
+                            <a class="cabinet-api-flow__button cabinet-api-flow__button--secondary" href="cabinet.html#support" data-cabinet-nav data-section="support">
+                                <span class="cabinet-api-flow__button-icon" aria-hidden="true"><img src="../assets/images/cabinet-api/support.svg" alt=""></span>
+                                <span class="cabinet-api-flow__button-copy"><span>Ask a question</span><span>technique</span></span>
+                            </a>
+                            <a class="cabinet-api-flow__button cabinet-api-flow__button--primary" href="#xml-protocol">
+                                <span class="cabinet-api-flow__button-icon" aria-hidden="true"><img src="../assets/images/cabinet-api/download.svg" alt=""></span>
+                                <span class="cabinet-api-flow__button-copy"><span>Download description</span><span>XML protocol</span></span>
+                            </a>
+                        </div>
+                    </section>
+
+                    <div class="cabinet-api__aside">
+                        <section class="cabinet-api-protocols" aria-labelledby="apiProtocolsTitle">
+                            <h2 class="cabinet-api-protocols__title" id="apiProtocolsTitle">Protocols</h2>
+                            <ol class="cabinet-api-protocols__list">
+                                <li class="cabinet-api-protocols__item">
+                                    <span class="cabinet-api-protocols__number">01</span>
+                                    <div class="cabinet-api-protocols__body">
+                                        <p>Universal XML/HTTP protocol - <br class="cabinet-api-protocols__desktop-break">for connecting online stores</p>
+                                        <a class="cabinet-api-protocols__action" href="#documentation">
+                                            <span aria-hidden="true"><img src="../assets/images/cabinet-api/documentation.svg" alt=""></span>
+                                            <span>Documentation</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="cabinet-api-protocols__item">
+                                    <span class="cabinet-api-protocols__number">02</span>
+                                    <div class="cabinet-api-protocols__body">
+                                        <p>SOAP protocol for integration with 1C <br class="cabinet-api-protocols__desktop-break">or CRM</p>
+                                        <a class="cabinet-api-protocols__action cabinet-api-protocols__action--wide" href="#wsdl">
+                                            <span aria-hidden="true"><img src="../assets/images/cabinet-api/wsdl.svg" alt=""></span>
+                                            <span>WSDL description</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="cabinet-api-protocols__item">
+                                    <span class="cabinet-api-protocols__number">03</span>
+                                    <div class="cabinet-api-protocols__body">
+                                        <p>Protocol <a href="#smpp">SMPP 3.4</a> for high speed transmission</p>
+                                    </div>
+                                </li>
+                                <li class="cabinet-api-protocols__item">
+                                    <span class="cabinet-api-protocols__number">04</span>
+                                    <div class="cabinet-api-protocols__body">
+                                        <p>To authorize, use the same username/password that you use to log into your personal account.</p>
+                                    </div>
+                                </li>
+                                <li class="cabinet-api-protocols__item">
+                                    <span class="cabinet-api-protocols__number">05</span>
+                                    <div class="cabinet-api-protocols__body">
+                                        <p><a href="#request-history">Here</a> you can view the history of your requests</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <section class="cabinet-api-examples" aria-labelledby="apiExamplesTitle">
+                            <h2 class="cabinet-api-examples__title" id="apiExamplesTitle">We have simple examples of connecting to our platform:</h2>
+                            <div class="cabinet-api-examples__grid">
+                                <a class="cabinet-api-examples__item" href="#php">
+                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="../assets/images/cabinet-api/example.svg" alt=""></span>
+                                    <span>In PHP</span>
+                                </a>
+                                <a class="cabinet-api-examples__item" href="#python">
+                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="../assets/images/cabinet-api/example.svg" alt=""></span>
+                                    <span>In Python</span>
+                                </a>
+                                <a class="cabinet-api-examples__item" href="#java">
+                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="../assets/images/cabinet-api/example.svg" alt=""></span>
+                                    <span>In Java</span>
+                                </a>
+                                <a class="cabinet-api-examples__item" href="#noodlejs">
+                                    <span class="cabinet-api-examples__icon" aria-hidden="true"><img src="../assets/images/cabinet-api/example.svg" alt=""></span>
+                                    <span>On NoodleJS</span>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Nikita Online LLC,</span>
+                <span>Nikita Mobile LLC, 2014-2025</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">User Agreement</a> | <a href="security.html#bezop">Privacy Policy</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Account menu" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Subject">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Log out</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Close menu" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Account menu">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Home</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Newsletters</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Lists</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API integration</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Reports</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP service</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Templates</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Terms and prices</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Technical capabilities</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Reliability and safety</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Questions and answers</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Contacts</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Bottom navigation of the account">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Home</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Newsletters</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Lists</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API integration</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Reports</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP service</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Templates</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Menu</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

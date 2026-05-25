@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита - Техникалык мүмкүнчүлүктөр</title>
+    <meta name="description" content="Никита SMS платформасынын техникалык мүмкүнчүлүктөрү: интеграциялар, камтуу аймагы, API жана архитектура.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body class="page-technical">
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Кошумча навигация">
+                <a href="services.html" class="topbar__link">Шарттар жана баалар</a>
+                <a href="technical.html" class="topbar__link topbar__link--active">Техникалык мүмкүнчүлүктөр</a>
+                <a href="security.html" class="topbar__link">Ишенимдүүлүк жана коопсуздук</a>
+                <a href="faq.html" class="topbar__link">Суроолор жана жооптор</a>
+                <a href="contacts.html" class="topbar__link">Байланыштар</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Кирүү / Каттоо</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Никита - негизги">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-support.svg" alt=""></span>
+                        <span class="header__link-text">Байланыш<br>техникалык колдоого</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-chat.svg" alt=""></span>
+                        <span class="header__link-text">Байланыш<br>менеджер менен</span>
+                    </a>
+                </div>
+                <a href="contacts.html" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Демонстрацияны бекер колдонуп көрүңүз</span>
+                    <span class="header__cta-short">Демо</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Меню" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Башкы меню">
+        <a href="services.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt=""></span>
+            <span>Шарттар жана баалар</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt=""></span>
+            <span>Техникалык мүмкүнчүлүктөр</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt=""></span>
+            <span>Ишенимдүүлүк жана коопсуздук</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt=""></span>
+            <span>Суроолор жана жооптор</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt=""></span>
+            <span>Байланыштар</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+    <section class="technical-page" id="tech">
+        <div class="technical-page__breadcrumbs container-xxl" aria-label="нан күкүмдөрү">
+            <span>Башкы бет → </span><strong>Техникалык мүмкүнчүлүктөр</strong>
+        </div>
+
+        <div class="technical-page__head container-xxl">
+            <h1 class="technical-page__title">Техникалык мүмкүнчүлүктөр</h1>
+            <div class="technical-capabilities">
+                <article class="technical-capability">
+                    <span class="technical-capability__icon technical-capability__icon--list" aria-hidden="true"></span>
+                    <p>Бул сайттан алуучулардын тизмелерине жапырт SMS жөнөтүүлөрдү жасап, аларды Excelден жүктөп алыңыз</p>
+                </article>
+                <article class="technical-capability">
+                    <span class="technical-capability__icon technical-capability__icon--integration" aria-hidden="true"></span>
+                    <p>Системаларыңыздан SMS эскертүүлөрдү автоматтык түрдө жөнөтүү үчүн smspro.nikita.kg системасы менен интеграцияланыңыз</p>
+                </article>
+                <article class="technical-capability">
+                    <span class="technical-capability__icon technical-capability__icon--mail" aria-hidden="true"></span>
+                    <p>Электрондук почта аркылуу SMS билдирүүлөрдү жөнөтүү</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="container-xxl">
+            <section class="coverage-card" aria-labelledby="coverage-title">
+                <h2 class="coverage-card__title" id="coverage-title">Камтуу аймагы - <br class="coverage-card__mobile-break">Кыргызстандагы бардык GSM түйүндөрү <span>*</span></h2>
+                <ul class="coverage-list">
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>SMS жеткирүү отчеттору</strong> <small>(жеткирүү убактысын көрсөтүү)</small></p>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text"><strong>Жөнөтүүчүнүн атын бурмалоо</strong> <small>(Sender ID) <em>**</em></small></p>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text"><strong>XML протоколу аркылуу интеграция</strong></p>
+                        </div>
+                        <div class="coverage-row__actions">
+                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api.pdf" class="technical-download">XML-API сүрөттөмөсүн жүктөп алыңыз</a>
+                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api_EN.pdf" class="technical-download">Англис тилинде XML-API сүрөттөмөсү</a>
+                            <a href="https://app.swaggerhub.com/apis-docs/ALEXEYSOLOMAKHIN/nikita_online_sms_api/1.0.0" class="technical-download" target="_blank" rel="noopener">Swagger</a>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text"><strong>Интеграция</strong><br>SOAP протоколу аркылуу 1С прге туташуу үчүн WEB кызматы.</p>
+                        </div>
+                        <div class="coverage-row__actions">
+                            <a href="http://smspro.nikita.kg/api/soap?wsdl" class="technical-download">WSDL жүктөп алыңыз</a>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Интеграция</strong> <small>жогорку натыйжалуу SMPP протоколу аркылуу</small></p>
+                        </div>
+                        <div class="coverage-row__actions">
+                            <a href="https://smspro.nikita.kg/kg/documents/smpp-v3.4-issue1.2.pdf" class="technical-download">SMPP v 3.4 спецификациясын жүктөп алыңыз</a>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text"><strong>Электрондук почта аркылуу SMS жөнөтүү</strong> <small>(SMTP протоколу)</small></p>
+                        </div>
+                        <div class="coverage-row__actions">
+                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-email2sms-api.pdf" class="technical-download">Сүрөттөмө түшүрүү</a>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Бир жолку сырсөз кызматы</strong> <small>(One Time Password service)</small></p>
+                        </div>
+                        <div class="coverage-row__actions">
+                            <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-OTP-api.pdf" class="technical-download">OTP-API сүрөттөмөсүн жүктөп алыңыз</a>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text"><strong>Маалымат коопсуздугу (HTTPS/SSL)</strong></p>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text"><strong>Чыгымдарды болжолдоонун интеллектуалдык системасы</strong></p>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text coverage-row__text--stack-mobile"><strong>Бухгалтердик эсепти автоматташтыруу</strong> <small>(эсеп-фактуралар жана актылар автоматтык түрдө түзүлөт жана онлайн режиминде жеткиликтүү)</small></p>
+                        </div>
+                    </li>
+                    <li class="coverage-row">
+                        <div class="coverage-row__main">
+                            <span class="technical-check" aria-hidden="true"></span>
+                            <p class="coverage-row__text"><strong>Түздөн-түз почта</strong></p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <div class="technical-notes">
+                <p><span>*</span> Сураныч, бааларды жана Россияга жана башка КМШ өлкөлөрүнө жана дүйнөгө жеткирүү жолдорун менеджерден тактаңыз.</p>
+                <p><span>**</span> Жөнөтүүчүнүн атын алмаштыруу келишим боюнча иштеген кардарларга гана жеткиликтүү. КМШ жана Азиядагы кээ бир операторлор атын алмаштырууга чектөөлөрдү коюшкан</p>
+            </div>
+
+            <section class="technical-api" aria-labelledby="technical-api-title">
+                <h2 class="technical-api__title" id="technical-api-title">HTTP-XML-API байланыш мисалдары:</h2>
+                <div class="technical-api__cards">
+                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/PHPexample.zip">PHPде</a>
+                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/JSPexample.zip">Java тилинде</a>
+                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/PYexample.zip">Python тилинде</a>
+                    <a class="technical-api-card" href="https://smspro.nikita.kg/kg/documents/NJSexample.zip">NodeJS боюнча</a>
+                </div>
+            </section>
+
+            <section class="technical-specs" aria-labelledby="technical-specs-title">
+                <h2 class="technical-specs__title" id="technical-specs-title">Мүнөздөмөлөрү</h2>
+                <div class="technical-specs__row">
+                    <p>Пакеттик жөнөтүүлөр үчүн платформанын эң жогорку өткөрүмдүүлүгү:</p>
+                    <span>500 SMS/сек чейин</span>
+                </div>
+                <div class="technical-specs__row">
+                    <p>1 кардар каналына реалдуу өткөрүү жөндөмдүүлүгү (адатта Интернет ылдамдыгы менен чектелген)</p>
+                    <span>10дон 30га чейин SMS/сек</span>
+                </div>
+                <div class="technical-specs__row">
+                    <p>Алуучуга билдирүүнү иш жүзүндө жеткирүү деңгээли (GSM тармагынын факторлоруна жараша)</p>
+                    <span>97-99%</span>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="technical-architecture" aria-labelledby="architecture-title">
+        <div class="technical-architecture__inner container-xxl">
+            <div class="technical-architecture__head">
+                <h2 id="architecture-title">Архитектура</h2>
+                <p>Бизде өз SMS платформабыз бар жана башка компаниянын кызматтарын сатуучу эмеспиз,<br>колдоо көрсөтүүгө мүмкүндүк берет <a href="services.html">төмөн баа деңгээли</a> конкреттүү жеткирүүчүнүн баа саясатына карабастан.</p>
+            </div>
+
+            <div class="architecture-diagram-wrap" aria-hidden="true">
+                <div class="architecture-diagram"></div>
+            </div>
+
+            <div class="architecture-benefits">
+                <article class="architecture-benefit">
+                    <span class="architecture-benefit__icon architecture-benefit__icon--protect" aria-hidden="true"></span>
+                    <p>Тобокелдикти азайтуу<br>жабдуулардын бузулушу</p>
+                </article>
+                <article class="architecture-benefit">
+                    <span class="architecture-benefit__icon architecture-benefit__icon--renew" aria-hidden="true"></span>
+                    <p>Тобокелдикти азайтуу<br>каналдын катасы<br>маалыматтарды берүү</p>
+                </article>
+                <article class="architecture-benefit">
+                    <span class="architecture-benefit__icon architecture-benefit__icon--timeline" aria-hidden="true"></span>
+                    <p>Жүктөлгөн сайын системанын өзөгүн динамикалык масштабдаңыз</p>
+                </article>
+                <article class="architecture-benefit">
+                    <span class="architecture-benefit__metric">2x</span>
+                    <p>Маалыматтарды онлайн синхрондоштуруу менен көз карандысыз маалымат борборлорунда жабдуулардын резерви</p>
+                </article>
+                <article class="architecture-benefit">
+                    <span class="architecture-benefit__metric">3x</span>
+                    <p>GSM түйүнүндө SMS жеткирүү каналдарын 3 эсе резервациялоо</p>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">ООО "Никита Онлайн"</h3>
+                    <p class="footer__muted">КР ГАС лицензиясы 2015-жылдын 18-сентябрында № 15-1425-КР.</p>
+                    <h3 class="footer__company">ООО "Никита Мобайл"</h3>
+                    <p class="footer__sub">(2022-жылдын 15-апрелиндеги Никита Онлайн ЖЧК менен программалык-аппараттык платформаны ижарага алуу келишиминин негизинде)</p>
+                    <p class="footer__muted">КР ГАЗ №11-828-КР 21.04.2011-ж.</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Бишкек, ул. Шопокова 89, 5-кабат, 9-кабинет.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Никита Онлайн ЖЧК, Никита Мобайл ЖЧК, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Подвал">
+                <div class="footer__nav-primary">
+                    <a href="services.html">Шарттар жана баалар</a>
+                    <a href="technical.html">Техникалык мүмкүнчүлүктөр</a>
+                    <a href="security.html">Ишенимдүүлүк жана коопсуздук</a>
+                    <a href="faq.html">Суроолор жана жооптор</a>
+                    <a href="contacts.html">Байланыштар</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="services.html#contract">Колдонуучу келишими</a>
+                    <a href="security.html#bezop">Купуялык саясаты</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Байланыш жана коммерциялык маселелер:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Техникалык колдоо:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js?v=payment-tabs"></script>
+</body>
+</html>

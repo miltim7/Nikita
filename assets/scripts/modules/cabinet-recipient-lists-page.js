@@ -1,5 +1,7 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
 
+const ROW_MORE_ICON = new URL('../../images/cabinet-recipient-lists/row-more-desktop.svg', import.meta.url).href;
+
 export function initCabinetRecipientListsPage() {
     const page = document.querySelector('[data-cabinet-recipient-lists-page]');
     if (!page) return;
@@ -184,7 +186,7 @@ export function initCabinetRecipientListsPage() {
             <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra cabinet-recipient-lists-table__cell--numeric" role="cell">${escapeHtml(extra1)}</div>
             <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">${escapeHtml(extra2)}</div>
             <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--extra" role="cell">${escapeHtml(extra3)}</div>
-            <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="assets/images/cabinet-recipient-lists/row-more-desktop.svg" alt=""></button></div>
+            <div class="cabinet-recipient-lists-table__cell cabinet-recipient-lists-table__cell--more" role="cell"><button class="cabinet-recipient-lists-table__more" type="button" aria-label="Действия получателя"><img src="${ROW_MORE_ICON}" alt=""></button></div>
         `;
 
         head.after(row);

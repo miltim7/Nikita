@@ -1,5 +1,10 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
 
+const MAP_SELECT_CHEVRON = new URL('../../images/cabinet-mailing-recipients/modal-select-chevron.svg', import.meta.url).href;
+const MAP_SELECT_CHEVRON_ACTIVE = new URL('../../images/cabinet-mailing-recipients/modal-select-chevron-active.svg', import.meta.url).href;
+const MESSAGE_MORE_ICON = new URL('../../images/cabinet-mailing-recipients/message-more.svg', import.meta.url).href;
+const TABLE_DELETE_ICON = new URL('../../images/cabinet-mailing-recipients/table-delete.svg', import.meta.url).href;
+
 function setInvalid(control, invalid) {
     if (!control) return;
 
@@ -398,9 +403,7 @@ export function initCabinetMailingRecipientsPage() {
         const icon = select?.querySelector('[data-mailing-map-select-toggle] img');
         select?.classList.toggle('is-open', open);
         if (icon) {
-            icon.src = open
-                ? 'assets/images/cabinet-mailing-recipients/modal-select-chevron-active.svg'
-                : 'assets/images/cabinet-mailing-recipients/modal-select-chevron.svg';
+            icon.src = open ? MAP_SELECT_CHEVRON_ACTIVE : MAP_SELECT_CHEVRON;
         }
     };
 
@@ -771,7 +774,7 @@ export function initCabinetMailingRecipientsPage() {
         menuToggle.setAttribute('aria-haspopup', 'menu');
         menuToggle.setAttribute('aria-expanded', 'false');
         const menuIcon = document.createElement('img');
-        menuIcon.src = 'assets/images/cabinet-mailing-recipients/message-more.svg';
+        menuIcon.src = MESSAGE_MORE_ICON;
         menuIcon.alt = '';
         menuToggle.append(menuIcon);
 
@@ -947,7 +950,7 @@ export function initCabinetMailingRecipientsPage() {
         deleteButton.setAttribute('aria-label', `Удалить получателя ${name}`);
 
         const deleteIcon = document.createElement('img');
-        deleteIcon.src = 'assets/images/cabinet-mailing-recipients/table-delete.svg';
+        deleteIcon.src = TABLE_DELETE_ICON;
         deleteIcon.alt = '';
 
         deleteButton.append(deleteIcon);

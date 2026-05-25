@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита - OTP кызматы</title>
+    <meta name="description" content="Никита жеке аккаунтунун бир жолку сырсөз кызматы.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--otp" data-cabinet-current-section="otp">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Каттоо эсебин багыттоо" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Менюну жайыңыз" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Менюну жыйыштыруу</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Кабинеттин бөлүмдөрү">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Үй"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Үй</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="Менин профилим"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">Менин профилим</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Маалымат бюллетендери"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Маалымат бюллетендери</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Тизмелер"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Тизмелер</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API интеграциясы"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API интеграциясы</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчеттор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчеттор</span></a>
+            <a class="cabinet-sidepanel__item is-active" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP кызматы" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP кызматы</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблондор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблондор</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Шарттар жана баалар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Шарттар жана баалар</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Техникалык мүмкүнчүлүктөр"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Техникалык мүмкүнчүлүктөр</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Ишенимдүүлүк жана коопсуздук"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Ишенимдүүлүк жана коопсуздук</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Суроолор жана жооптор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Суроолор жана жооптор</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Байланыштар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Байланыштар</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Тема">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Чыгыңыз">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Чыгыңыз</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>сом</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Техникалык колдоо" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="менеджер" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Никита - негизги">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Байланыш<br>техникалык колдоого</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Байланыш<br>менеджер менен</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>сом</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="Менин профилим">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Константин</span>
+                                    <span class="cabinet-status cabinet-status--admin">Администратор</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ ЖЧК “Уюм</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="cabinet-user cabinet-user--demo cabinet-user--otp-demo" aria-label="Демо режими" role="button" tabindex="0" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="../assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">DEMO РЕЖИМ</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>Менин кеңсем → </span><strong data-cabinet-current>OTP кызматы</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="otpTitle">Бир жолку сырсөз (OTP) кызматы</h1>
+            </div>
+        </div>
+
+        <main class="cabinet-main">
+            <section class="cabinet-otp" aria-labelledby="otpTitle" data-cabinet-otp-page>
+                <form class="cabinet-otp-form" data-cabinet-otp-form>
+                    <div class="cabinet-otp-form__fields">
+                        <label class="cabinet-otp-field cabinet-otp-field--stack">
+                            <span class="cabinet-otp-field__label">API ачкычы:</span>
+                            <span class="cabinet-otp-field__control">
+                                <input class="cabinet-otp-input" type="text" value="" placeholder="c2m459y2946hj49hjc4h0" aria-label="API ачкычы">
+                            </span>
+                        </label>
+
+                        <div class="cabinet-otp-field cabinet-otp-field--stack">
+                            <span class="cabinet-otp-field__label">Демейки жөнөтүүчү аты:</span>
+                            <div class="cabinet-otp-field__control">
+                                <div class="cabinet-otp-select" data-otp-select>
+                                    <button class="cabinet-otp-select__button" type="button" aria-haspopup="listbox" aria-expanded="false" data-otp-select-button>
+                                        <span data-otp-select-label>Тандалган эмес</span>
+                                        <img src="../assets/images/cabinet-otp/select-chevron.svg" alt="">
+                                    </button>
+                                    <ul class="cabinet-otp-select__menu" role="listbox" hidden data-otp-select-menu>
+                                        <li class="cabinet-otp-select__option" role="option" aria-selected="true" data-otp-select-option>Тандалган эмес</li>
+                                        <li class="cabinet-otp-select__option" role="option" aria-selected="false" data-otp-select-option>NIKITA</li>
+                                        <li class="cabinet-otp-select__option" role="option" aria-selected="false" data-otp-select-option>SMSPRO</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-otp-inline-grid cabinet-otp-inline-grid--settings">
+                            <div class="cabinet-otp-field cabinet-otp-field--inline cabinet-otp-field--mobile-row cabinet-otp-field--code-length">
+                                <span class="cabinet-otp-field__label">Коддун узундугу:</span>
+                                <span class="cabinet-otp-field__control">
+                                    <span class="cabinet-otp-stepper" data-otp-stepper data-initial="" data-min="4" data-max="12" data-step="1">
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Коддун узундугун кыскартуу" data-otp-stepper-decrement><img src="../assets/images/cabinet-otp/step-minus.svg" alt=""></button>
+                                        <input class="cabinet-otp-stepper__value" type="text" value="" placeholder="6" inputmode="numeric" aria-label="Коддун узундугу" data-otp-stepper-value>
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Коддун узундугун көбөйтүү" data-otp-stepper-increment><img src="../assets/images/cabinet-otp/step-plus.svg" alt=""></button>
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="cabinet-otp-field cabinet-otp-field--inline cabinet-otp-field--mobile-row">
+                                <span class="cabinet-otp-field__label">Коддун татаалдыгы:</span>
+                                <span class="cabinet-otp-field__control">
+                                    <span class="cabinet-otp-stepper" data-otp-stepper data-initial="" data-min="1" data-max="5" data-step="1">
+                                        <button class="cabinet-otp-stepper__button cabinet-otp-stepper__button--muted" type="button" aria-label="Коддун татаалдыгын азайтыңыз" data-otp-stepper-decrement><img src="../assets/images/cabinet-otp/step-minus-muted.svg" alt=""></button>
+                                        <input class="cabinet-otp-stepper__value" type="text" value="" placeholder="1" inputmode="numeric" aria-label="Коддун татаалдыгы" data-otp-stepper-value>
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Коддун татаалдыгын жогорулатуу" data-otp-stepper-increment><img src="../assets/images/cabinet-otp/step-plus.svg" alt=""></button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <label class="cabinet-otp-field cabinet-otp-field--stack">
+                            <span class="cabinet-otp-field__label">Текст:</span>
+                            <span class="cabinet-otp-field__control">
+                                <textarea class="cabinet-otp-textarea" placeholder="Сиздин кодуңуз – %code%" aria-label="Текст"></textarea>
+                            </span>
+                        </label>
+
+                        <div class="cabinet-otp-inline-grid">
+                            <label class="cabinet-otp-field cabinet-otp-field--stack cabinet-otp-field--mobile-row">
+                                <span class="cabinet-otp-field__label">OTP коду:</span>
+                                <span class="cabinet-otp-field__control cabinet-otp-code">
+                                    <input class="cabinet-otp-input" type="text" value="" placeholder="%code%" aria-label="OTP коду" data-otp-code>
+                                    <button class="cabinet-otp-code__copy" type="button" aria-label="OTP кодун көчүрүү" data-otp-copy><img src="../assets/images/cabinet-otp/copy.svg" alt=""></button>
+                                </span>
+                            </label>
+                            <div class="cabinet-otp-field cabinet-otp-field--stack cabinet-otp-field--mobile-row">
+                                <span class="cabinet-otp-field__label">OTP кодунун иштөө мөөнөтү (сек.):</span>
+                                <span class="cabinet-otp-field__control">
+                                    <span class="cabinet-otp-stepper" data-otp-stepper data-initial="" data-min="30" data-max="600" data-step="30">
+                                        <button class="cabinet-otp-stepper__button cabinet-otp-stepper__button--muted" type="button" aria-label="Коддун иштөө мөөнөтүн кыскартуу" data-otp-stepper-decrement><img src="../assets/images/cabinet-otp/step-minus-muted.svg" alt=""></button>
+                                        <input class="cabinet-otp-stepper__value" type="text" value="" placeholder="120" inputmode="numeric" aria-label="OTP кодун колдонуу мөөнөтү" data-otp-stepper-value>
+                                        <button class="cabinet-otp-stepper__button" type="button" aria-label="Коддун иштөө мөөнөтүн көбөйтүү" data-otp-stepper-increment><img src="../assets/images/cabinet-otp/step-plus.svg" alt=""></button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-otp-actions">
+                            <button class="cabinet-otp-button cabinet-otp-button--secondary" type="button" data-otp-reset>Түзөтүүлөрдү жокко чыгаруу</button>
+                            <button class="cabinet-otp-button cabinet-otp-button--primary" type="submit">Өзгөрүүлөрдү сактоо</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Никита Онлайн ЖЧК,</span>
+                <span>«Никита Мобайл» ЖЧКсы, 2014-2025-жж</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">Колдонуучу келишими</a> | <a href="security.html#bezop">Купуялык саясаты</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Каттоо эсебинин менюсу" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Тема">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Чыгыңыз</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Менюну жабуу" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Каттоо эсебинин менюсу">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Үй</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Маалымат бюллетендери</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Тизмелер</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API интеграциясы</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчеттор</span></a>
+                <a class="cabinet-tabbar-modal__item is-active" href="otp.html" data-cabinet-nav data-section="otp" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP кызматы</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблондор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Шарттар жана баалар</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Техникалык мүмкүнчүлүктөр</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Ишенимдүүлүк жана коопсуздук</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Суроолор жана жооптор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Байланыштар</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Каттоо эсебинин ылдыйкы навигациясы">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Үй</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Маалымат бюллетендери</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Тизмелер</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API интеграциясы</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Отчеттор</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet is-active" href="otp.html" data-cabinet-nav data-section="otp" aria-current="page">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP кызматы</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Шаблондор</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Меню</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
 
-const ASSET_PATH = 'assets/images/cabinet-modals/';
+const ASSET_PATH = new URL('../../images/cabinet-modals/', import.meta.url).href;
+const ICON_SPRITE = new URL('../../images/cabinet-icons.svg', import.meta.url).href;
 
 const FOCUSABLE_SELECTOR = [
     'a[href]',
@@ -22,14 +23,275 @@ const MODAL_HASHES = {
     '#confirm-action': 'confirm-action',
 };
 
+const ACTION_MODAL_I18N = {
+    ru: {
+        quickSmsTitle: 'Быстрая отправка SMS',
+        paymentTitle: 'Пополнение счёта',
+        paymentMethodLabel: 'Выберите способ оплаты:',
+        from: 'От кого:',
+        addName: 'Добавить имя',
+        senderHelp: 'Подсказка об имени отправителя',
+        senderTooltip: 'Имя отправителя отображается у получателя вместо номера. Новое имя нужно добавить и дождаться согласования.',
+        selectSender: 'Выберите имя отправителя',
+        to: 'Кому:',
+        recipientPlaceholder: 'Укажите получателя',
+        messageText: 'Введите текст сообщения:',
+        characters: 'Символов:',
+        smsParts: 'Частей SMS:',
+        smsPlaceholder: 'Введите текст SMS',
+        translit: 'Перевести в транслит',
+        clear: 'Очистить',
+        cancel: 'Отменить',
+        send: 'Отправить',
+        cashless: 'Безналичный расчёт',
+        bankCards: 'Банковские карты',
+        mbank: 'Оплата через Мбанк',
+        elqr: 'Оплата через ELQR',
+        pay24: 'Оплата через терминалы Pay24',
+        elsom: 'Оплата через электронный кошелек ЭЛСОМ',
+        close: 'Закрыть',
+        phoneLabel: 'Введите номер телефона:',
+        back: 'Назад',
+        confirm: 'Подтвердить',
+        paymentSelected: 'Выбран способ оплаты:',
+        paymentConfirmText: 'Подтвердите выбор способа оплаты, чтобы продолжить пополнение счёта.',
+        senderNameTitle: 'Добавить имя отправителя',
+        senderNameLabel: 'Имя отправителя:',
+        senderNamePlaceholder: 'Введите имя отправителя',
+        senderNameNote: 'Имя будет добавлено в список отправителей для быстрой отправки SMS.',
+        save: 'Сохранить',
+        confirmActionTitle: 'Подтвердите действие <br class="cabinet-action-modal__mobile-only">на smspro.nikita.kg',
+        confirmActionText: 'Вы не указали имя отправителя рассылки.<br>Создать новое имя можно в разделе <a class="cabinet-confirm-action__profile-link" href="profile.html" data-cabinet-profile-link>“Мой профиль”</a>',
+        demoTitle: 'Тестовый режим',
+        demoMassMailings: 'Массовые рассылки',
+        demoDisabled: 'Отключены',
+        demoQuickSms: 'Отправка SMS <br>в разделе <b>“Быстрая отправка SMS”</b>',
+        demoLimited: 'Ограничена <small>(отправка SMS только на номер, указанный в профиле</small>',
+        demoApi: 'Работа <br class="cabinet-action-modal__mobile-only">по API/SMPP',
+        demoText: 'Для перехода в рабочий режим <strong>заполните форму</strong> <br class="cabinet-action-modal__desktop-only">на согласование имени отправителя',
+        downloadForm: 'Скачать форму',
+    },
+    en: {
+        quickSmsTitle: 'Fast SMS sending',
+        paymentTitle: 'Balance top-up',
+        paymentMethodLabel: 'Choose a payment method:',
+        from: 'From:',
+        addName: 'Add name',
+        senderHelp: 'Sender name hint',
+        senderTooltip: 'The sender name is shown to the recipient instead of a number. Add the new name and wait for approval.',
+        selectSender: 'Select sender name',
+        to: 'To:',
+        recipientPlaceholder: 'Enter recipient',
+        messageText: 'Enter message text:',
+        characters: 'Characters:',
+        smsParts: 'SMS parts:',
+        smsPlaceholder: 'Enter SMS text',
+        translit: 'Transliterate',
+        clear: 'Clear',
+        cancel: 'Cancel',
+        send: 'Send',
+        cashless: 'Cashless payment',
+        bankCards: 'Bank cards',
+        mbank: 'Payment via Mbank',
+        elqr: 'Payment via ELQR',
+        pay24: 'Payment via Pay24 terminals',
+        elsom: 'Payment via ELSOM e-wallet',
+        close: 'Close',
+        phoneLabel: 'Enter phone number:',
+        back: 'Back',
+        confirm: 'Confirm',
+        paymentSelected: 'Selected payment method:',
+        paymentConfirmText: 'Confirm the selected payment method to continue topping up the balance.',
+        senderNameTitle: 'Add sender name',
+        senderNameLabel: 'Sender name:',
+        senderNamePlaceholder: 'Enter sender name',
+        senderNameNote: 'The name will be added to the sender list for fast SMS sending.',
+        save: 'Save',
+        confirmActionTitle: 'Confirm action <br class="cabinet-action-modal__mobile-only">on smspro.nikita.kg',
+        confirmActionText: 'You have not specified a mailing sender name.<br>You can create a new name in <a class="cabinet-confirm-action__profile-link" href="profile.html" data-cabinet-profile-link>“My profile”</a>',
+        demoTitle: 'Test mode',
+        demoMassMailings: 'Bulk mailings',
+        demoDisabled: 'Disabled',
+        demoQuickSms: 'SMS sending <br>in <b>“Fast SMS sending”</b>',
+        demoLimited: 'Limited <small>(SMS sending only to the number specified in the profile</small>',
+        demoApi: 'API/SMPP <br class="cabinet-action-modal__mobile-only">operation',
+        demoText: 'To switch to live mode, <strong>fill out the form</strong> <br class="cabinet-action-modal__desktop-only">for sender name approval',
+        downloadForm: 'Download form',
+    },
+    ky: {
+        quickSmsTitle: 'Ыкчам SMS жөнөтүү',
+        paymentTitle: 'Эсепти толуктоо',
+        paymentMethodLabel: 'Төлөм ыкмасын тандаңыз:',
+        from: 'Кимден:',
+        addName: 'Ат кошуу',
+        senderHelp: 'Жөнөтүүчү аты боюнча кеңеш',
+        senderTooltip: 'Жөнөтүүчүнүн аты алуучуга номердин ордуна көрсөтүлөт. Жаңы атты кошуп, макулдашууну күтүңүз.',
+        selectSender: 'Жөнөтүүчү атын тандаңыз',
+        to: 'Кимге:',
+        recipientPlaceholder: 'Алуучуну көрсөтүңүз',
+        messageText: 'Билдирүүнүн текстин киргизиңиз:',
+        characters: 'Белгилер:',
+        smsParts: 'SMS бөлүктөрү:',
+        smsPlaceholder: 'SMS текстин киргизиңиз',
+        translit: 'Транслитке өткөрүү',
+        clear: 'Тазалоо',
+        cancel: 'Жокко чыгаруу',
+        send: 'Жөнөтүү',
+        cashless: 'Накталай эмес төлөм',
+        bankCards: 'Банк карталары',
+        mbank: 'Мбанк аркылуу төлөө',
+        elqr: 'ELQR аркылуу төлөө',
+        pay24: 'Pay24 терминалдары аркылуу төлөө',
+        elsom: 'ЭЛСОМ электрондук капчыгы аркылуу төлөө',
+        close: 'Жабуу',
+        phoneLabel: 'Телефон номерин киргизиңиз:',
+        back: 'Артка',
+        confirm: 'Ырастоо',
+        paymentSelected: 'Тандалган төлөм ыкмасы:',
+        paymentConfirmText: 'Эсепти толуктоону улантуу үчүн төлөм ыкмасын ырастаңыз.',
+        senderNameTitle: 'Жөнөтүүчүнүн атын кошуу',
+        senderNameLabel: 'Жөнөтүүчүнүн аты:',
+        senderNamePlaceholder: 'Жөнөтүүчүнүн атын киргизиңиз',
+        senderNameNote: 'Ат SMSти ыкчам жөнөтүү үчүн жөнөтүүчүлөр тизмесине кошулат.',
+        save: 'Сактоо',
+        confirmActionTitle: 'smspro.nikita.kg сайтында <br class="cabinet-action-modal__mobile-only">аракетти ырастаңыз',
+        confirmActionText: 'Сиз рассылка жөнөтүүчүнүн атын көрсөткөн жоксуз.<br>Жаңы атты <a class="cabinet-confirm-action__profile-link" href="profile.html" data-cabinet-profile-link>“Менин профилим”</a> бөлүмүндө түзсө болот',
+        demoTitle: 'Тест режими',
+        demoMassMailings: 'Массалык рассылкалар',
+        demoDisabled: 'Өчүрүлгөн',
+        demoQuickSms: 'SMS жөнөтүү <br><b>“Ыкчам SMS жөнөтүү”</b> бөлүмүндө',
+        demoLimited: 'Чектелген <small>(SMS профилде көрсөтүлгөн номерге гана жөнөтүлөт</small>',
+        demoApi: 'API/SMPP <br class="cabinet-action-modal__mobile-only">аркылуу иштөө',
+        demoText: 'Иш режимине өтүү үчүн жөнөтүүчүнүн атын макулдашуу формасын <strong>толтуруңуз</strong>',
+        downloadForm: 'Форманы жүктөө',
+    },
+};
+
+function getCurrentLocale() {
+    const segments = window.location.pathname.split('/').filter(Boolean);
+    if (segments.includes('en')) return 'en';
+    if (segments.includes('ky')) return 'ky';
+    return 'ru';
+}
+
+function modalText(key) {
+    const locale = getCurrentLocale();
+    return ACTION_MODAL_I18N[locale]?.[key] || ACTION_MODAL_I18N.ru[key] || key;
+}
+
+function setText(node, value) {
+    if (node) node.textContent = value;
+}
+
+function setHtml(node, value) {
+    if (node) node.innerHTML = value;
+}
+
+function localizeActionModal(modal, id) {
+    if (getCurrentLocale() === 'ru') return;
+
+    modal.querySelector('[data-cabinet-action-close]')?.setAttribute('aria-label', modalText('close'));
+
+    if (id === 'payment-method') {
+        setText(modal.querySelector('.cabinet-action-modal__title'), modalText('paymentTitle'));
+        setText(modal.querySelector('.cabinet-payment-method__label'), modalText('paymentMethodLabel'));
+
+        const cards = modal.querySelectorAll('.cabinet-payment-method__card');
+        const keys = ['cashless', 'bankCards', 'mbank', 'elqr', 'pay24', 'elsom'];
+        cards.forEach((card, index) => {
+            const label = card.querySelector(':scope > span:last-child');
+            const text = modalText(keys[index]);
+            setText(label, text);
+            card.setAttribute('title', text);
+            card.dataset.paymentTitle = text;
+        });
+    }
+
+    if (id === 'payment-phone' || id === 'payment-confirm') {
+        setText(modal.querySelector('.cabinet-action-modal__title'), modalText('paymentTitle'));
+    }
+
+    if (id === 'payment-phone') {
+        setText(modal.querySelector('.cabinet-payment-phone__field .cabinet-action-label'), modalText('phoneLabel'));
+        const actionButtons = modal.querySelectorAll('.cabinet-payment-phone__actions .cabinet-modal-button');
+        setText(actionButtons[0]?.querySelector(':scope > span:last-child'), modalText('back'));
+        setText(actionButtons[1]?.querySelector(':scope > span:first-child'), modalText('confirm'));
+    }
+
+    if (id === 'payment-confirm') {
+        setText(modal.querySelector('[data-payment-confirm-title]'), modalText('cashless'));
+        setText(modal.querySelector('.cabinet-payment-confirm__body .cabinet-action-label'), modalText('paymentSelected'));
+        setText(modal.querySelector('.cabinet-payment-confirm__body p'), modalText('paymentConfirmText'));
+        const actionLabels = modal.querySelectorAll('.cabinet-payment-confirm__actions .cabinet-modal-button > span:last-child');
+        setText(actionLabels[0], modalText('back'));
+        setText(actionLabels[1], modalText('confirm'));
+    }
+
+    if (id === 'quick-sms') {
+        setText(modal.querySelector('.cabinet-action-modal__title'), modalText('quickSmsTitle'));
+        setText(modal.querySelector('label[for="cabinetQuickSender"]'), modalText('from'));
+        setText(modal.querySelector('[data-cabinet-sender-value]'), modalText('selectSender'));
+        setText(modal.querySelector('.cabinet-quick-sms__add-name span'), modalText('addName'));
+        modal.querySelector('[data-cabinet-sender-help]')?.setAttribute('aria-label', modalText('senderHelp'));
+        setText(modal.querySelector('[data-cabinet-sender-help-tooltip]'), modalText('senderTooltip'));
+
+        const recipientField = modal.querySelector('input[name="recipient"]');
+        setText(recipientField?.closest('label')?.querySelector('.cabinet-action-label'), modalText('to'));
+        recipientField?.setAttribute('placeholder', modalText('recipientPlaceholder'));
+
+        setText(modal.querySelector('label[for="cabinetQuickMessage"]'), modalText('messageText'));
+        const counters = modal.querySelectorAll('.cabinet-quick-sms__counter span');
+        setHtml(counters[0], `${modalText('characters')} <b>0</b>`);
+        setHtml(counters[1], `${modalText('smsParts')} <b>1</b>`);
+        modal.querySelector('#cabinetQuickMessage')?.setAttribute('placeholder', modalText('smsPlaceholder'));
+
+        const toolLabels = modal.querySelectorAll('.cabinet-quick-sms__tools button span');
+        setText(toolLabels[0], modalText('translit'));
+        setText(toolLabels[1], modalText('clear'));
+
+        const actionButtons = modal.querySelectorAll('.cabinet-action-modal__actions .cabinet-modal-button');
+        setText(actionButtons[0], modalText('cancel'));
+        setText(actionButtons[1], modalText('send'));
+    }
+
+    if (id === 'sender-name') {
+        setText(modal.querySelector('.cabinet-action-modal__title'), modalText('senderNameTitle'));
+        setText(modal.querySelector('.cabinet-sender-name__field .cabinet-action-label'), modalText('senderNameLabel'));
+        modal.querySelector('input[name="senderName"]')?.setAttribute('placeholder', modalText('senderNamePlaceholder'));
+        setText(modal.querySelector('.cabinet-sender-name__note'), modalText('senderNameNote'));
+        const actionButtons = modal.querySelectorAll('.cabinet-sender-name__actions .cabinet-modal-button');
+        setText(actionButtons[0], modalText('cancel'));
+        setText(actionButtons[1], modalText('save'));
+    }
+
+    if (id === 'confirm-action') {
+        setHtml(modal.querySelector('.cabinet-action-modal__title'), modalText('confirmActionTitle'));
+        setHtml(modal.querySelector('.cabinet-confirm-action__body p'), modalText('confirmActionText'));
+        setText(modal.querySelector('.cabinet-confirm-action__actions .cabinet-modal-button'), modalText('confirm'));
+    }
+
+    if (id === 'demo-mode') {
+        setText(modal.querySelector('.cabinet-action-modal__title'), modalText('demoTitle'));
+        const rows = modal.querySelectorAll('.cabinet-demo-mode__row');
+        setText(rows[0]?.querySelector('span'), modalText('demoMassMailings'));
+        setText(rows[0]?.querySelector('strong'), modalText('demoDisabled'));
+        setHtml(rows[1]?.querySelector('span'), modalText('demoQuickSms'));
+        setHtml(rows[1]?.querySelector('strong'), modalText('demoLimited'));
+        setHtml(rows[2]?.querySelector('span'), modalText('demoApi'));
+        setHtml(rows[2]?.querySelector('strong'), modalText('demoLimited'));
+        setHtml(modal.querySelector('.cabinet-demo-mode__actions p'), modalText('demoText'));
+        setText(modal.querySelector('.cabinet-demo-mode__download span'), modalText('downloadForm'));
+    }
+}
+
 function spriteIcon(symbol, className = '') {
-    return `<svg class="cabinet-action-modal__sprite ${className}" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#${symbol}"></use></svg>`;
+    return `<svg class="cabinet-action-modal__sprite ${className}" aria-hidden="true"><use href="${ICON_SPRITE}#${symbol}"></use></svg>`;
 }
 
 function closeButton() {
     return `
         <button class="cabinet-action-modal__close" type="button" aria-label="Закрыть" data-cabinet-action-close>
-            <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-modal-close"></use></svg>
+            <svg class="cabinet-icon" aria-hidden="true"><use href="${ICON_SPRITE}#icon-modal-close"></use></svg>
         </button>
     `;
 }
@@ -356,6 +618,7 @@ export function initCabinetActionModals() {
         modal.setAttribute('aria-labelledby', `cabinetActionModalTitle-${id}`);
         modal.setAttribute('data-cabinet-action-modal', id);
         modal.innerHTML = MODAL_TEMPLATES[id]();
+        localizeActionModal(modal, id);
 
         document.body.append(modal);
         bindModal(modal);

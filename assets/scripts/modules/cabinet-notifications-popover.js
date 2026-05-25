@@ -1,6 +1,6 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
 
-const ASSET_PATH = 'assets/images/cabinet-modals/';
+const ASSET_PATH = new URL('../../images/cabinet-modals/', import.meta.url).href;
 
 const NOTIFICATIONS = [
     {

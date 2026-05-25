@@ -309,11 +309,13 @@
 }
 
 .cabinet-mailings-filter__button--secondary {
-    width: 100px;
+    width: auto;
+    min-width: 100px;
 }
 
 .cabinet-mailings-filter__button--primary {
-    width: 102px;
+    width: auto;
+    min-width: 102px;
 }
 
 .cabinet-mailings__grid {
@@ -880,11 +882,13 @@
     }
 
     .cabinet-mailings-filter__button--secondary {
-        width: 90px;
+        width: auto;
+        min-width: 90px;
     }
 
     .cabinet-mailings-filter__button--primary {
-        width: 92px;
+        width: auto;
+        min-width: 92px;
     }
 
     .cabinet-mailings__toolbar {

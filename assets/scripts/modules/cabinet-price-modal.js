@@ -1,5 +1,7 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
 
+const ICON_SPRITE = new URL('../../images/cabinet-icons.svg', import.meta.url).href;
+
 const PRICE_ROWS = [
     ['Абхазия', '26,57'],
     ['Азербайджан', '44,50'],
@@ -77,7 +79,7 @@ function createPriceModal() {
             <div class="cabinet-price-modal__head">
                 <h2 class="cabinet-price-modal__title" id="cabinetPriceModalTitle">Стоимость SMS <br class="cabinet-price-modal__mobile-break">(валюта расчётов: сом)</h2>
                 <button class="cabinet-price-modal__close" type="button" aria-label="Закрыть" data-cabinet-price-close>
-                    <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-modal-close"></use></svg>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="${ICON_SPRITE}#icon-modal-close"></use></svg>
                 </button>
             </div>
             <div class="cabinet-price-modal__table-wrap">
@@ -85,10 +87,10 @@ function createPriceModal() {
                     <thead>
                         <tr>
                             <th scope="col">
-                                <span class="cabinet-price-modal__th-content">Страна <svg class="cabinet-price-modal__sort" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span>
+                                <span class="cabinet-price-modal__th-content">Страна <svg class="cabinet-price-modal__sort" aria-hidden="true"><use href="${ICON_SPRITE}#icon-table-sort"></use></svg></span>
                             </th>
                             <th scope="col">
-                                <span class="cabinet-price-modal__th-content">Стоимость <svg class="cabinet-price-modal__sort" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span>
+                                <span class="cabinet-price-modal__th-content">Стоимость <svg class="cabinet-price-modal__sort" aria-hidden="true"><use href="${ICON_SPRITE}#icon-table-sort"></use></svg></span>
                             </th>
                         </tr>
                     </thead>

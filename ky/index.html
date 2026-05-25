@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита - Кыргызстанда SMS, Telegram, WhatsApp, Viber почтасы</title>
+    <meta name="description" content="Кыргызстандын операторлору менен түз каналдар, эл аралык камтуу жана ачык баалар. 0% комиссия. 100 сомдон толуктоо.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body>
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Кошумча навигация">
+                <a href="services.html" class="topbar__link">Шарттар жана баалар</a>
+                <a href="technical.html" class="topbar__link">Техникалык мүмкүнчүлүктөр</a>
+                <a href="security.html" class="topbar__link">Ишенимдүүлүк жана коопсуздук</a>
+                <a href="faq.html" class="topbar__link">Суроолор жана жооптор</a>
+                <a href="contacts.html" class="topbar__link">Байланыштар</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Кирүү / Каттоо</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Никита - негизги">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-support.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Байланыш<br>техникалык колдоого</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-chat.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Байланыш<br>менеджер менен</span>
+                    </a>
+                </div>
+                <a href="cabinet-demo.html" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Демонстрацияны бекер колдонуп көрүңүз</span>
+                    <span class="header__cta-short">Демо</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Меню" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Башкы меню">
+        <a href="services.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt="">
+            </span>
+            <span>Шарттар жана баалар</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt="">
+            </span>
+            <span>Техникалык мүмкүнчүлүктөр</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt="">
+            </span>
+            <span>Ишенимдүүлүк жана коопсуздук</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt="">
+            </span>
+            <span>Суроолор жана жооптор</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt="">
+            </span>
+            <span>Байланыштар</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <div class="hero__grid">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__title-main">Кардарлар менен баарлашуу<br>алар үчүн ыңгайлуу болгон жерде:</span>
+                    <span class="hero__title-mobile">Байланыш<br>кардарлар менен<br>алар үчүн ыңгайлуу болгон жерде:</span>
+                </h1>
+                <p class="hero__subtitle">SMS, Telegram, WhatsApp же Viber.</p>
+                <p class="hero__lead">
+                    КР операторлору менен түз каналдар,<br>
+                    эл аралык камтуу жана ачык баа, 0% комиссия
+                </p>
+                <div class="hero__buttons">
+                    <a href="#speedTestWidget" class="btn btn-cta" data-speed-test-trigger>
+                        Бекер аракет кылып көрүңүз
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                            <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="technical.html#tech" class="btn btn-ghost">
+                        API алуу
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                            <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero__budget">
+                    <h2 class="hero__budget-title">Каалаган бюджет менен баштаңыз:</h2>
+                    <p class="hero__budget-text">100 сомдон толуктоо, баланстагы акчанын мөөнөтү бүтпөйт</p>
+                </div>
+            </div>
+            <div class="hero__media">
+                <picture>
+                    <source media="(max-width: 767.98px)" srcset="assets/images/hero-map-mobile.png">
+                    <source media="(max-width: 1199.98px)" srcset="assets/images/hero-map-tablet.png">
+                    <img src="../assets/images/hero-map-tablet.png" alt="" loading="eager" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why">
+    <div class="container-xxl">
+        <div class="why__grid">
+            <div class="why__content">
+                <h2 class="section-title">Эмне үчүн бизди танда</h2>
+                <p class="why__lead">
+                    <span class="text-accent">Биз жардам беребиз</span> жүздөгөн компаниялар
+                    <span class="text-accent">кардарларыңызга маалымат берүү,</span>
+                    жана биз муну жогорку денгээлде аткарып жатабыз.
+                </p>
+
+                <ul class="why__list">
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-sms.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">Бүт дүйнө байланышкан:</h3>
+                            <p class="why-card__text">дүйнөнүн каалаган жерине атаандаштык баада билдирүүлөрдү жеткирүү.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-functions.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">SMS гана эмес:</h3>
+                            <p class="why-card__text">Максималдуу камтуу жана үнөмдөө үчүн каскаддык жөнөтүүлөр (WhatsApp → Viber → SMS).</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-utilities.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">Даяр интеграция:</h3>
+                            <p class="why-card__text">Коддорду (OTP) жана эскертмелерди жөнөтүүнү автоматташтырууга мүмкүндүк берүүчү API жана CRM модулдары.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-certificate.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">Баары мыйзамдуу!</h3>
+                            <p class="why-card__text">Биз расмий билдирүүлөрдү жеткирүү каналдарын гана колдонобуз</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-like.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">Биз өз аброюбузду баалайбыз</h3>
+                            <p class="why-card__text">Ошондуктан, биз СПАМ же мыйзамсыз жөнөтүү менен алектенбейбиз.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <aside class="why__phone" aria-label="Смартфондогу эскертмелердин мисалы">
+                <div class="why-phone">
+                    <div class="why-phone__inner">
+                        <span class="why-phone__notch" aria-hidden="true"></span>
+                        <ul class="why-phone__list">
+                            <li class="why-msg">
+                                <p class="why-msg__brand">BANK</p>
+                                <p class="why-msg__text">Айбек, 12500 сом игиликтуу аткарылды.</p>
+                                <p class="why-msg__time">12:00</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">FOOD</p>
+                                <p class="why-msg__text">Оксана, сиздин буйрутманыз 248 берегё дайар.</p>
+                                <p class="why-msg__time">14:46</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">STORE</p>
+                                <p class="why-msg__text">31-майга чейн бардык кызматтарга 20% арзандатуу!<br>Кенениреек колдонмодо.</p>
+                                <p class="why-msg__time">22:09</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">TAXI</p>
+                                <p class="why-msg__text">Айдоочу сизди кире беристе күтүп жатат.</p>
+                                <p class="why-msg__time">10:15</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand why-msg__brand--ru">Сиздин кызмат</p>
+                                <p class="why-msg__text">Сиздин ырастоо кодуңуз: 7777<br>Бул кодду эч ким менен болуушпоңуз.</p>
+                                <p class="why-msg__time">22:13</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="why__partners" aria-label="Интеграциялар">
+            <div class="why__partners-track">
+                <span class="why-partner why-partner--one-c"><img src="../assets/images/partners/logo-1c.svg" alt="1C"></span>
+                <span class="why-partner why-partner--amo"><img src="../assets/images/partners/logo-amocrm.png" alt="amoCRM"></span>
+                <span class="why-partner why-partner--open"><img src="../assets/images/partners/logo-opencart.svg" alt="opencart"></span>
+                <span class="why-partner why-partner--yclients"><img src="../assets/images/partners/logo-yclients.png" alt="yclients"></span>
+                <span class="why-partner why-partner--altegio"><img src="../assets/images/partners/logo-altegio.svg" alt="altegio"></span>
+                <span class="why-partner why-partner--bitrix"><img src="../assets/images/partners/logo-bitrix.svg" alt="Bitrix24"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how" data-active="api">
+    <div class="how__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">
+            <span class="how-title__line">Маалымат бюллетенин баштоо -</span>
+            <span class="how-title__line">бул оңой!</span>
+        </h2>
+        <p class="how__lead">Кантип кардарларга маалымат кат жөнөтүү керек?</p>
+
+        <div class="how__tabs" role="tablist">
+            <button type="button" class="how-tab" role="tab" aria-selected="false" data-tab="cabinet">
+                <img class="how-tab__icon how-tab__icon--inactive" src="../assets/images/how/tab-cabinet.svg" alt="" aria-hidden="true">
+                <img class="how-tab__icon how-tab__icon--active" src="../assets/images/how/tab-cabinet-active.svg" alt="" aria-hidden="true">
+                Сиздин жеке эсебиңизден
+            </button>
+            <button type="button" class="how-tab is-active" role="tab" aria-selected="true" data-tab="api">
+                <img class="how-tab__icon how-tab__icon--inactive" src="../assets/images/how/tab-api-inactive.svg" alt="" aria-hidden="true">
+                <img class="how-tab__icon how-tab__icon--active" src="../assets/images/how/tab-api.svg" alt="" aria-hidden="true">
+                API аркылуу
+            </button>
+        </div>
+        <p class="how__note" data-content="cabinet">
+            Сиздин жеке эсебиңизден каттарды орнотуу жана ишке киргизүү<br>
+            атайын билимди жана көндүмдөрдү талап кылбайт
+        </p>
+        <p class="how__note" data-content="api">
+            API аркылуу маалымат бюллетенин ишке киргизүү жана веб-сайтыңыз же CRM менен интеграциялоо<br>
+            сизге программисттин жардамы керек болушу мүмкүн
+        </p>
+
+        <div class="how__steps" role="list">
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">01</span>
+                    <p class="how-step__text">Каттоо<br>2 мүнөттө<br>жана балансыңызды толуктаңыз</p>
+                </div>
+                <div class="how-step__center">
+                    <span class="how-step__icon">
+                        <img src="../assets/images/how/icon-cabinet-list.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="../assets/images/how/icon-api.svg" alt="" aria-hidden="true" data-content="api">
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">01</span>
+                    <p class="how-step__text">API ачкычын алыңыз<br>жана колдонуу<br>сиздин программаңызда</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">02</span>
+                    <p class="how-step__text">Жөнөтүүчүнүн атын тандаңыз,<br>текстти жаз<br>жана жөнөтүү убактысын тандаңыз</p>
+                </div>
+                <div class="how-step__center">
+                    <span class="how-step__icon">
+                        <img src="../assets/images/how/icon-cabinet-card.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="../assets/images/how/icon-doc.svg" alt="" aria-hidden="true" data-content="api">
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">02</span>
+                    <p class="how-step__text">Документти окуңуз<br>даяр болгондордун бирин танда <br class="how-mobile-break">модулдар, класстар<br>же өз сценарийиңизди жазыңыз</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">03</span>
+                    <p class="how-step__text">Даяр!<br>Билдирүүлөр жөнөтүлдү<br>Сиздин кардарлар үчүн!</p>
+                </div>
+                <div class="how-step__center how-step__center--last">
+                    <span class="how-step__icon">
+                        <img src="../assets/images/how/icon-cabinet-sms.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="../assets/images/how/icon-sms.svg" alt="" aria-hidden="true" data-content="api">
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">03</span>
+                    <p class="how-step__text">Даяр!<br>Сизден SMS жөнөтүңүз <br class="how-mobile-break">программалар<br>5 мүнөткө жетпеген убакытта</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how__cta">
+            <a href="registration.html" class="btn btn-cta">
+                Маалымат бюллетенин түзүү
+                <img src="../assets/images/how/cta-arrow.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section class="cases">
+    <div class="container-xxl">
+        <h2 class="section-title">Биз кимге пайдабыз?</h2>
+        <p class="cases__lead">
+            25 жылдан ашык убакыттан бери биз дүйнө жүзү боюнча банктарга, төлөм системаларына, интернет-дүкөндөрүнө жана миңдеген компанияларга жардам берип келебиз.<br class="cases__lead-desktop-break">
+            массалык почта аркылуу кардарларга кабарлоо
+        </p>
+
+        <div class="cases__stage">
+            <div class="cases__carousel" tabindex="0" aria-label="Биз кимге пайдабыз?">
+                <div class="cases__track">
+                <article class="case-card case-card--resto" data-mobile-start>
+                    <img class="case-card__photo" src="../assets/images/cases/resto.jpg" alt="Ресторандар жана кафелер" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Ресторандар жана кафелер</h3>
+                        <p class="case-card__text">Кадимки коноктор үчүн резервациялар, жарнамалар жана эскертүүлөр.</p>
+                    </div>
+                </article>
+                <article class="case-card case-card--retail" data-mobile-active>
+                    <img class="case-card__photo" src="../assets/images/cases/retail.jpg" alt="Чекене жана электрондук соода" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Чекене жана электрондук соода</h3>
+                        <p class="case-card__text">Ташталган арабалар, заказ статустары жана лоялдуулук программалары.</p>
+                    </div>
+                </article>
+                <article class="case-card case-card--logistics">
+                    <img class="case-card__photo" src="../assets/images/cases/logistics.jpg" alt="Логистика жана жеткирүү" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Логистика жана жеткирүү</h3>
+                        <p class="case-card__text">Почталардын статустары, алуу коддору жана жеткирүү эскертмелери реалдуу убакытта.</p>
+                    </div>
+                </article>
+                <article class="case-card case-card--travel">
+                    <img class="case-card__photo" src="../assets/images/cases/travel.jpg" alt="Эл аралык компаниялар жана саякат индустриясы" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Эл аралык компаниялар / Саякат индустриясы</h3>
+                        <p class="case-card__text">Брондоо ырастоолору, учуу эскертмелери жана графиктин өзгөртүүлөрү.</p>
+                    </div>
+                </article>
+                </div>
+            </div>
+            <button type="button" class="cases__arrow cases__arrow--prev" aria-label="Артка">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M10.57 3.77 6.34 8l4.23 4.23M6.92 8h7.08" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button type="button" class="cases__arrow cases__arrow--next" aria-label="Алга">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M5.43 3.77 9.66 8l-4.23 4.23M9.08 8H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cases__dots" role="tablist" aria-label="Слайддар"></div>
+    </div>
+</section>
+
+<!-- ============ RECOMMEND ============ -->
+<section class="recommend" id="recommend">
+    <div class="recommend__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">Бизге сунушталат</h2>
+        <p class="recommend__lead">100 500 кардар биздин кызматтын сапатына ишенет</p>
+    </div>
+    <div class="recommend__marquee" aria-hidden="true">
+        <ul class="recommend__track">
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+    <div class="container-xxl">
+        <h2 class="section-title">Биз сандабыз</h2>
+        <p class="stats__lead">Биздин натыйжалуулугун өлчөө мүмкүн</p>
+        <ul class="stats__list">
+            <li class="stat">
+                <span class="stat__value stat__value--operators">
+                    <span class="stat__all-main">Баары</span>
+                    <span class="stat__all-label">операторлор</span>
+                </span>
+                <span class="stat__sub">Кыргызстан + жакын<br>жана алыскы чет</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__pre">Дагы</span>
+                    <span class="stat__main">20 жыл</span>
+                </span>
+                <span class="stat__sub">базарда<br>кесиптик кызматтар</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__pre">Дагы</span>
+                    <span class="stat__main">2&nbsp;000</span>
+                </span>
+                <span class="stat__sub">кардарлар<br>алардын почтасы менен бизге ишен</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__pre">Дагы</span>
+                    <span class="stat__main">100&nbsp;000</span>
+                </span>
+                <span class="stat__sub">SMS<br>биз күн сайын жөнөтөбүз</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__main">99.9%</span>
+                    <span class="stat__pre">билдирүүлөр</span>
+                </span>
+                <span class="stat__sub">келүүгө кепилдик берилет<br>адресатка</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section class="features" id="features">
+    <div class="features__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">
+            <span class="features-title__line">Эмне аласың,</span>
+            <span class="features-title__line">бизди тандоо</span>
+        </h2>
+        <p class="features__lead">
+            <span class="features-lead__line">5 мүнөттөн кийин SMS жөнөтө баштаңыз</span>
+            <span class="features-lead__line">келишим түзбөстөн</span>
+        </p>
+
+        <ul class="features__list">
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-license.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">Байланыш кызматтарына лицензия</h3>
+                <p class="feature__text">Биз мыйзамдын чегинде гана иштейбиз</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-economy.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">Чыгымдарды көзөмөлдөө</h3>
+                <p class="feature__text">Ийкемдүү жана так орнотуулар</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-speed.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">секунданын ичинде жеткирүү</h3>
+                <p class="feature__text">Ыкчам билдирүү жеткирүү</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-stats.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">Отчеттор жана аналитика</h3>
+                <p class="feature__text">Сиздин жеке эсебиңизде ыңгайлуу статистика</p>
+            </li>
+        </ul>
+
+        <div class="features__buttons">
+            <a href="registration.html" class="btn btn-cta">
+                <img src="../assets/images/features/icon-shield.svg" alt="" aria-hidden="true">
+                Каттоо
+            </a>
+            <a href="#speedTestWidget" class="btn btn-ghost btn-ghost--light" data-speed-test-trigger>
+                Бекер аракет кылып көрүңүз
+                <img class="features__button-arrow" src="../assets/images/features/icon-arrow.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CASES EXAMPLES ============ -->
+<section class="cases-ex" id="cases-ex">
+    <div class="container-xxl">
+        <h2 class="section-title">Биздин кардарлардын учурлары</h2>
+        <p class="cases-ex__lead">
+            Биз жөн гана SMS жөнөтпөйбүз – бизнестин өсүшүнө жардам беребиз.<br>
+            Бул жерде жакшы структураланган маалыматтык бюллетень конверсияны жана кирешени көбөйткөн мисалдар келтирилген.
+        </p>
+
+        <div class="cases-ex__list" tabindex="0" aria-label="Биздин кардарлардын учурлары">
+            <article class="case-ex">
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="7" y="8" width="22" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 14h12M12 18h8M12 22h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Банктар, МФУлар жана Кызматтар <span>(Чоң бизнес)</span></h3>
+                        <p class="case-ex__task"><span>Тапшырма:</span> Коопсуздук жана эскертмелер.</p>
+                    </div>
+                </header>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Сценарий:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Бюллетень:</strong>Жеке аккаунтуңузга кирүү же транзакцияны ырастоо үчүн бир жолку сырсөздөрдү (OTP) жөнөтүү.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Курал:</strong>Артыкчылыктуу жеткирүү менен түз API каналы (5-10 секундага чейин).</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Натыйжа:</strong>Кардарлардын жогорку ишеними жана коопсуздук талаптарына шайкештиги.</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="case-ex" data-cases-initial>
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M10 11h4l2 13h12l2-8H17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="18" cy="28" r="2" fill="currentColor"/><circle cx="28" cy="28" r="2" fill="currentColor"/><path d="M22 8a7 7 0 1 1-6.3 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 11v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Чекене жана электрондук соода <span>(Чакан жана орто бизнес)</span></h3>
+                        <p class="case-ex__task"><span>Тапшырма:</span> Кардарларды кайтарып, сатууну көбөйтүңүз.</p>
+                    </div>
+                </header>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Сценарий:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Бюллетень:</strong>"Биз сизди сагындык! Жекшембиге чейин "ДОС" промо-кодунун жардамы менен жаңы коллекцияга 15% арзандатуу."</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Курал:</strong>Каскаддык почта жөнөтүү. Алгач WhatsApp аркылуу жөнөтөбүз (товардын сүрөтү менен), ал эми 3 сааттын ичинде окуй электерге кыска смс жөнөтөбүз.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Натыйжа:</strong>Арзан мессенджерлердин жана конверсиянын жогорулашынын эсебинен бюджетти 40% га чейин үнөмдөө.</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="case-ex">
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M6 12h14v14H6V12zM20 16h7l5 4v6H20V16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="28" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="27" cy="28" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Логистика жана жеткирүү <span>(Орто бизнес)</span></h3>
+                        <p class="case-ex__task"><span>Тапшырма:</span> Заказдын абалы жөнүндө маалымат берүү.</p>
+                    </div>
+                </header>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Сценарий:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Бюллетень:</strong>«Сиздин №1234 буйрутмаңыз курьерге өткөрүлдү. Чабарман телефону: +996...»</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Курал:</strong>API аркылуу SMS билдирүүлөр.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Натыйжа:</strong>Колл-борбордун жүгүн азайтуу – кардарлар “менин заказым кайда?” деген суроо менен чалышпайт.</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        <div class="cases-ex__scrollbar" aria-hidden="true">
+            <span class="cases-ex__scrollbar-thumb"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="cta">
+    <div class="cta__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <div class="cta__inner">
+            <div class="cta__text">
+                <h2 class="cta__title">ошол эле натыйжаларды каалайсызбы?</h2>
+                <p class="cta__sub">Биз менен бизнесиңизди оптималдаштырууну баштаңыз!</p>
+            </div>
+            <div class="cta__buttons">
+                <a href="registration.html" class="btn btn-cta">
+                    <img class="cta__icon cta__icon--shield" src="../assets/images/cta-icon-shield.svg" alt="" aria-hidden="true">
+                    Каттоо
+                </a>
+                <a href="#speedTestWidget" class="btn btn-ghost btn-ghost--light" data-speed-test-trigger>
+                    Бекер аракет кылып көрүңүз
+                    <img class="cta__icon cta__icon--arrow" src="../assets/images/cta-icon-arrow.svg" alt="" aria-hidden="true">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">ООО "Никита Онлайн"</h3>
+                    <p class="footer__muted">КР ГАС лицензиясы 2015-жылдын 18-сентябрында № 15-1425-КР.</p>
+                    <h3 class="footer__company">ООО "Никита Мобайл"</h3>
+                    <p class="footer__sub">(2022-жылдын 15-апрелиндеги Никита Онлайн ЖЧК менен программалык-аппараттык платформаны ижарага алуу келишиминин негизинде)</p>
+                    <p class="footer__muted">КР ГАЗ №11-828-КР 21.04.2011-ж.</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Бишкек, ул. Шопокова 89, 5-кабат, 9-кабинет.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Никита Онлайн ЖЧК, Никита Мобайл ЖЧК, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Подвал">
+                <div class="footer__nav-primary">
+                    <a href="services.html">Шарттар жана баалар</a>
+                    <a href="technical.html">Техникалык мүмкүнчүлүктөр</a>
+                    <a href="security.html">Ишенимдүүлүк жана коопсуздук</a>
+                    <a href="faq.html">Суроолор жана жооптор</a>
+                    <a href="contacts.html">Байланыштар</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="agreement.html">Колдонуучу келишими</a>
+                    <a href="security.html#bezop">Купуялык саясаты</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Байланыш жана коммерциялык маселелер:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Техникалык колдоо:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js"></script>
+</body>
+</html>

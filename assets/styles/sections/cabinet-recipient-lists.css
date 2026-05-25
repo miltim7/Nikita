@@ -289,17 +289,24 @@
 }
 
 .cabinet-recipient-lists-filter__button--secondary {
-    width: 100px;
+    width: auto;
+    min-width: 100px;
     color: var(--color-header-orange);
     background: var(--color-bg);
     border: 1px solid var(--color-orange-50);
 }
 
 .cabinet-recipient-lists-filter__button--primary {
-    width: 108px;
+    width: auto;
+    min-width: 108px;
     color: var(--color-text-inverse);
     background: var(--color-header-orange);
     box-shadow: var(--shadow-figma-cta);
+}
+
+html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
+    flex-basis: 274px;
+    width: 274px;
 }
 
 .cabinet-recipient-lists__grid {
@@ -1214,11 +1221,13 @@
     }
 
     .cabinet-recipient-lists-filter__button--secondary {
-        width: 90px;
+        width: auto;
+        min-width: 90px;
     }
 
     .cabinet-recipient-lists-filter__button--primary {
-        width: 97px;
+        width: auto;
+        min-width: 97px;
     }
 
     .cabinet-recipient-lists__grid {
@@ -1508,6 +1517,11 @@
     .cabinet-recipient-lists-filter__buttons {
         width: 100%;
         flex: 0 0 auto;
+    }
+
+    html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
+        width: 100%;
+        flex-basis: auto;
     }
 
     .cabinet-recipient-lists-filter__button {

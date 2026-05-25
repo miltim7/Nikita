@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита - Суроолор жана жооптор</title>
+    <meta name="description" content="Келишим, баланс, операторлор, Жөнөтүүчү ID жана Никита почтасы жөнүндө көп берилүүчү суроолорго жооптор.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body class="page-faq">
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Кошумча навигация">
+                <a href="services.html" class="topbar__link">Шарттар жана баалар</a>
+                <a href="technical.html" class="topbar__link">Техникалык мүмкүнчүлүктөр</a>
+                <a href="security.html" class="topbar__link">Ишенимдүүлүк жана коопсуздук</a>
+                <a href="faq.html" class="topbar__link topbar__link--active">Суроолор жана жооптор</a>
+                <a href="contacts.html" class="topbar__link">Байланыштар</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Кирүү / Каттоо</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Никита - негизги">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-support.svg" alt=""></span>
+                        <span class="header__link-text">Байланыш<br>техникалык колдоого</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-chat.svg" alt=""></span>
+                        <span class="header__link-text">Байланыш<br>менеджер менен</span>
+                    </a>
+                </div>
+                <a href="#demo" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Демонстрацияны бекер колдонуп көрүңүз</span>
+                    <span class="header__cta-short">Демо</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Меню" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Башкы меню">
+        <a href="services.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt=""></span>
+            <span>Шарттар жана баалар</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt=""></span>
+            <span>Техникалык мүмкүнчүлүктөр</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt=""></span>
+            <span>Ишенимдүүлүк жана коопсуздук</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt=""></span>
+            <span>Суроолор жана жооптор</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt=""></span>
+            <span>Байланыштар</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+    <section class="faq-page" id="faq">
+        <div class="faq-page__breadcrumbs container-xxl" aria-label="нан күкүмдөрү">
+            <span>Башкы бет → </span><strong>Суроолор жана жооптор</strong>
+        </div>
+
+        <div class="faq-page__content container-xxl">
+            <h1 class="faq-page__title">Суроолор жана жооптор</h1>
+            <p class="faq-page__lead">
+                Бул бөлүмдө биз көп берилүүчү суроолорго жооптордун көбүн чогултууга аракет кылдык.<br>
+                Сураныч, байланышуудан мурун аларды кунт коюп окуп чыгыңыз <a href="contacts.html#support">колдоо кызматына.</a>
+            </p>
+
+            <div class="faq-list">
+                <details class="faq-item" id="faq001" open>
+                    <summary class="faq-item__summary">
+                        <span class="faq-item__question">
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                            <span class="faq-item__title">Кантип жазуу жүзүндөгү келишим түзүүгө болот</span>
+                        </span>
+                        <span class="faq-item__chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Жазуу жүзүндөгү келишим түзүү үчүн сиз өзүңүздүн маалыматыңызды биздин электрондук почта дарегибизге жөнөтүшүңүз же колдоо кызматына билдирүүңүз керек.<br>Сиз келишим менен тааныша аласыз (карап чыгуу үчүн стандарттуу келишимди жүктөп алыңыз) <a class="faq-answer__link" href="https://smspro.nikita.kg/kg/documents/dogovor-example.docx">бул жерде.</a></p>
+                            <p>Келишим толтурулгандан кийин 2 нуска сиз көрсөткөн дарекке жөнөтүлөт, ага кол коюлуп, бир нускасы кайра биздин почта дарегибизге жөнөтүлөт.</p>
+                            <p><strong>Биз милдеттүү келишимди талап кылбайт,</strong> бирок туура бухгалтердик отчетторду алуу үчүн келишим түзүү зарыл.<br>Келишимде ошондой эле жөнөтүүчүнүн атын (Sender ID) алмаштыруу менен билдирүүлөрдү жөнөтүү эрежелери жана спам болгон учурда даттанууларды кабыл алуу жоопкерчилиги көрсөтүлгөн. <strong>Кол коюлган келишимсиз мындай билдирүүлөрдү жөнөтүүчүнүн аты-жөнүн байланыш операторлору менен макулдашкандан кийин гана жөнөтө аласыз.</strong></p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="faq002">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Балансыңызды кантип толтуруу керек</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Уюмуңуздун формасына карабастан (жеке, юридикалык жак же жеке ишкана), сиз төмөнкү ыкмалардын каалаганын колдонуп биздин системада өз эсебиңизди толуктай аласыз:</p>
+                            <ul>
+                                <li><a class="faq-answer__link" href="services.html#payment-bank-panel">Накталай эмес төлөм</a> - юридикалык жактар ​​жана жеке ишкерлер үчүн сунушталган, бирок милдеттүү эмес төлөм ыкмасы. Төлөм эсепке каршы банктык которуу жолу менен жүргүзүлөт.</li>
+                                <li><a class="faq-answer__link" href="services.html#payment-card-panel">Банк карталары</a> - карта менен толуктоо үчүн, биздин веб-сайттагы өзүңүздүн жеке кабинетиңизге өтүңүз, Башкы бет → өз эсебиңизди толтуруңуз. Толуктоонун ылайыктуу түрүн тандап, толуктоонун суммасын көрсөтүңүз жана системанын андан аркы нускамаларын аткарыңыз.</li>
+                                <li><a class="faq-answer__link" href="services.html#payment-pay24-panel">Pay24 терминалдары аркылуу төлөө</a> - терминалдык менюдан бөлүмдү тандаңыз <strong>Башка кызматтар</strong>, кызматтардын тизмесинен табыңыз <strong>SMS жөнөтүү Никита Онлайн</strong>. Чоо-жайы катары биздин веб-сайтта катталууда көрсөткөн эл аралык форматтагы телефон номерин бериңиз.</li>
+                                <li><a class="faq-answer__link" href="services.html#payment-elsom-panel">ЭЛСОМ ​​электрондук капчыгы аркылуу төлөө</a> - жеке ЭЛСОМ ​​капчыгыңыз аркылуу төлөөдө "Башка кызматтар" бөлүмүнө кирип, жеткирүүчүлөрдүн тизмесинен тандоо керек. <strong>SMS жөнөтүү Никита Онлайн</strong>. Чоо-жайы катары биздин веб-сайтта катталууда көрсөткөн эл аралык форматтагы телефон номерин бериңиз.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq003">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Кайсы операторлор менен иштейсиз?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Биз Кыргызстандагы бардык GSM операторлору менен иштейбиз: <strong>Beeline, MegaCom, O!</strong> Сиздин операторуңузга билдирүүлөрдү жеткирүү мүмкүнчүлүгүн текшерүү үчүн биздин веб-сайттан акысыз тесттик билдирүү жөнөтүңүз. Россияга, Казакстанга жана башка КМШ өлкөлөрүнө жана дүйнөгө SMS жөнөтүү мүмкүнчүлүгүн менеджерден тактаңыз.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq004">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Кайсы өлкөлөргө билдирүү жөнөтсө болот?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Техникалык жактан алганда, биз дүйнөнүн каалаган өлкөсүнө SMS билдирүүлөрдү жөнөтө алабыз. Көптөгөн чет мамлекеттер үчүн транзиттик операторлордун каналдары колдонулат, ошондуктан бардык чет өлкөлүк операторлорго жеткирүүгө 100% кепилдик жок. Жакшыраак туруктуулук үчүн, ар бир өлкөнүн жергиликтүү операторлору менен байланышыңыз болушу керек, аны ошол өлкөгө көп трафиксиз табуу кыйын. Ал эми трафик олуттуу өскөн өлкөлөрдө биз жергиликтүү операторлордун туруктуу каналдарын бириктиребиз.</p>
+                            <p>Демейки боюнча, сиз өзүңүздүн аккаунтуңузду активдештиргениңизде Кыргызстандын уюлдук түйүнүнүн абоненттерине гана билдирүүлөрдү жөнөтүү мүмкүнчүлүгүңүз бар. КМШ өлкөлөрүнө, ошондой эле жакынкы жана алыскы чет өлкөлөргө SMS билдирүүлөрдү жөнөтүү мүмкүнчүлүгүн менеджерден тактаңыз.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq005">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Мен бир билдирүү жөнөтөм, бирок сумма менин эсебимден экиге эсептелинет</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Бир узун билдирүүнү бир нече SMSке бөлсө болот, алардын ар бири үчүн өзүнчө төлөм алынат. Бир SMS чейин камтышы мүмкүн <strong>70</strong> латын эмес тамгалар (мисалы, орус же кыргыз тилдеринде) же чейин <strong>160</strong> латын тамгалары менен гана белгилер. Узунураак билдирүүнү өткөрүү үчүн ал бир нече SMSке бөлүнөт жана ар бир SMSке атайын тема (UDH) кошулат, бул телефон кабыл алынган бөлүктөрдү бир узун билдирүүгө бириктирүүгө мүмкүндүк берет жана бул учурда ар бир SMSтин максималдуу узундугу болуп калат. <strong>67</strong> латын эмес жана үчүн белгилер <strong>153</strong> латын тамгалары үчүн.</p>
+                            <p>Кээ бир каармандар, мисалы, "<strong>№`</strong>" латынча эмес, ошондуктан мындай белгилерди камтыган билдирүүлөр латын эмес тамгалар менен билдирүүлөр катары коддолгон. Коддоштуруу үчүн ар дайым 2 символ колдонулган кээ бир атайын белгилер да бар: "<strong>{}[]^~\|€</strong>". Белгилердин саны, ошондой эле билдирүү бөлүнө турган бөлүктөрүнүн саны, жаңы катты түзүү үчүн баракчага билдирүүнүн текстин киргизүүдө автоматтык түрдө көрсөтүлөт.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq006">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Жөнөтүлгөн SMS билдирүүлөрдүн максималдуу узундугу канча</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Бир билдирүүнүн максималдуу узундугу (латын же латын эмес тамгалар менен) 800 белгини түзөт. Ошол эле учурда латын ЭМЕС тамгалар менен билдирүү жөнөтүү үчүн жабыштыруу үчүн SMSтин көбүрөөк саны талап кылынат жана ошого жараша баасы да жогору болот.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq007">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Мен веб-сайтымдан SMS таркатууну уюштура аламбы?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Ооба болот. Бул максатта, интеграция параметрлери HTTP жана SMTP протоколдорунун үстүнөн скрипттерди колдонуу менен берилет. Бул тууралуу кененирээк бөлүмдөн окуй аласыз <a class="faq-answer__link" href="technical.html#tech">Техникалык мүмкүнчүлүктөр</a>. Биз ошондой эле кардарларга системабыз аркылуу SMS билдирүүлөрдү жөнөтүү үчүн SMPP (Short Message Peer-to-Peer) протоколун колдонуу мүмкүнчүлүгүн беребиз.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq008">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Сиздин атыңызды SMS билдирүүлөрдү жөнөтүүчү катары кантип коюу керек</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Бардык жөнөтүүчүлөрдүн аттары сиздин жеке кабинетиңизге алдын ала катталып, текшерүүдөн жана байланыш операторлору менен макулдашуудан кийин кызматтын модератору тарабынан киргизилет. Жеке аккаунтуңуздагы "Менин профилим" өтмөгүндөгү "Жаңы ат кошуу" талаасына керектүү жөнөтүүчүнүн атын киргизиңиз. Анкетаны толтуруңуз <a class="faq-answer__link" href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls">жөнөтүүчүнүн аты-жөнүн бекитүү үчүн арыздар</a> жана биздин каалаган электрондук почтабызга жөнөтүңүз.</p>
+                            <p>Арыз толтурулгандан кийин биз аны байланыш операторлоруна бекитүү үчүн беребиз. Жөнөтүүчүнүн аты-жөнүн макулдашуу процесси 7-10 иш күнүнө чейин созулат.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq009">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Жөнөтүүчү ID колдонууга кандай чектөөлөр бар?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Жөнөтүүчү ID чоң жана кичине латын тамгаларын [A-Z,a-z], сандар [0-9], боштук [боюнча] жана кээ бир тыныш белгилерин гана камтышы мүмкүн: [!@#%*-+.]. Максималдуу узундук - 11 тамга же 14 сан.</p>
+                            <p>Жөнөтүүчү ID уникалдуу болушу керек жана Почта Кардарынын фирмалык аталышын, брендин, товардык белгини колдонуу укугун документтик түрдө ырастаган шартта, почталык кардардын фирмалык аталышын, брендин, кызмат көрсөтүүлөрүнүн, товарларынын жана иштеринин товардык белгисин так аныктоого тийиш.</p>
+                            <p>Тыюу салынган:</p>
+                            <ul>
+                                <li>жөнөтүүчүнүн аты катары кыска төлөнгөн номерлерди, билдирүүнү алуучунун номерин, ошондой эле операторлордун, башка интернет-ресурстардын, компаниялардын жана мамлекеттик уюмдардын аталыштарын көрсөтүүгө;</li>
+                                <li>башка бирөөнүн атынан билдирүүлөрдү жөнөтүү менен абоненттерди адаштыруу;</li>
+                                <li>бир эле жөнөтүүчүнүн атынан ар кандай юридикалык жактардын, жеке жактардын же жеке ишкерлердин кызматтарын/өнүмдөрүн/иштерин жарнамалоо жана/же жарнамалоо менен SMS-билдирүүлөрдү жөнөтүүгө;</li>
+                                <li>мыйзамдын талаптарына каршы келген, анын мазмуну социалдык моралдык-этикалык принциптерге туура келбеген (адамдын ар-намысына шек келтирген, зордук-зомбулукка, расалык же улуттук кастыкты үгүттөгөн сөздөрдү камтыган ж.б.) жөнөтүүчүнүн атын колдонууга.</li>
+                            </ul>
+                            <p>Кээ бир тыюу салынган опцияларды колдонуу максаттарын түшүндүргөндөн жана бул опциянын мыйзамдуулугун текшергенден кийин колдоо кызматы аркылуу активдештирүүгө болот.</p>
+                            <p>Кээ бир операторлор SMS билдирүүлөрүндө жөнөтүүчүнүн атын алмаштырууну колдобойт же санарип жөнөтүүчү ID'ге гана уруксат бериши мүмкүн.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq015">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Эл аралык жөнөтүүчү аты эмне</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Эл аралык жөнөтүүчү аттары төмөнкүлөрдү камтыйт:</p>
+                            <ul>
+                                <li>Эл аралык төлөм системалары (мисалы, Visa, MasterCard, AmExpress, Zolotaya Korona ж.б.), эл аралык электрондук капчыктар жана/же төлөм системалары (мисалы, WebMoney, Qiwi Wallet ж.б.), эл аралык электрондук төлөм иштетүү платформалары (мисалы, PayPal ж. ж.б.), эл аралык OTT тиркемелери (мисалы, Skype, Viber, WhatsApp ж.б.), эл аралык оюн Интернет кызматтары (мисалы, World of Tanks, Gameserver, mobitva.com ж.б.), эл аралык электрондук почта кызматтары жана/же файл хостинги жана/же издөө системалары (мисалы, Mail.Ru, Yahoo, Rambler.ru, Google, dropmefiles, ifolder.su жана ж.б.).</li>
+                                <li>Эл аралык онлайн брондоо системалары (мисалы, Booking, AirBnB ж.б.), чет өлкөлүк авиакомпаниялар (мисалы, Араб Банкы, AirBaltic ж.</li>
+                                <li>Сандардан гана турган алфавиттик аттар.</li>
+                                <li>Символдордон/сандардан/тамгалардан ж.б. турган алфавиттик-сандык аталыштар, алар айкалышканда эч кандай мааниси/мазмуну жок жана/же жөнөтүүчүнү аныктоого мүмкүн эмес.</li>
+                                <li>Жалпы аталыштарды/түшүнүктөрдү колдонгон тамга-сандык аттар, мисалы, "SMS", "Info" ж.б.</li>
+                                <li>Алфавиттик-сандык аталыштар, алар үчүн Оператор мындай алфавиттик аталыштын Оператордун өлкөсүнөн башка өлкөнүн домендик зонасынын веб-ресурсу менен байланышын тапкан.</li>
+                                <li>Алфавиттик-сандык аттар, SMS шлюздары аркылуу жөнөтүү үчүн колдонулган A2P SMS (мисалы, SMS-fly, TurboSMS, LetsAds, ePochta SMS ж.б.).</li>
+                                <li>Оператордун өлкөсүндө катталган мобилдик операторлорду кошпогондо, жазуусу уюлдук операторлордун аталыштарын камтыган тамга-сандык аталыштар.</li>
+                                <li>Оператор тарабынан Эл аралык алфавиттик-сандык аталыштар катары аныкталган башка алфавиттик-сандык аттар.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq-referral">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Реферал программасы кандай иштейт?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Жеке кабинетиңиздеги форма аркылуу smspro.nikita.kg дарегине кардарды чакырыңыз. Чакырылган кардарды каттоодон жана төлөгөндөн кийин, анын төлөмүнүн 2% бонусу кийинки жөнөтүүлөр үчүн балансыңызга чегерилет.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq010">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Массалык жарнамалык каттарга байланыштуу кандай эрежелер бар?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Кыргыз Республикасынын 1998-жылдын 24-декабрындагы № 155 «Жарнак жөнүндө» Мыйзамына ылайык (бүгүнкү күндөгү өзгөртүүлөр жана толуктоолор менен) СМС билдирүүлөрдү жөнөтүү, эгерде сиз өз кардарларыңыздан жөнөтүү үчүн алардын телефон номурларын колдонууга алдын ала макулдугун алган учурда гана мыйзамдуу болуп саналат. Болбосо, сиз жөнөткөн SMS мыйзамсыз болуп калат. Мында жарнак, эгерде жарнак таратуучусу мындай макулдук алынгандыгын далилдебесе, абоненттин же адресаттын алдын ала макулдугусуз таркатылды деп эсептелет.</p>
+                            <p>Ошондой эле интеллектуалдык менчик объектилерине автордук жана башка укуктарды коргоону, инсандын укуктарын, диний жана социалдык ынанымдарды, улуттук кадыр-баркты коргоону, Кыргыз Республикасынын аймагында аракеттенүүчү эл аралык укукту жөнгө салуучу ар кандай мыйзам ченемдери бар.</p>
+                            <p>Ошентип, төмөндөгүлөргө кат жөнөтүүгө тыюу салынат:</p>
+                            <ul>
+                                <li>Колдонуудагы мыйзамдарга карама-каршы келген билдирүүлөр.</li>
+                                <li>Коркутуу, кемсинтүү же опузалап талап кылууну камтыган билдирүүлөр.</li>
+                                <li>Абоненттерге алардын макулдугусуз жөнөтүлгөн жарнамалык билдирүүлөр (спам).</li>
+                                <li>Акы төлөнүүчү номерлерге SMS жөнөтүүгө үндөгөн билдирүүлөр.</li>
+                                <li>Абоненттерди адаштырган билдирүүлөр (башка бирөөнүн атынан жөнөтүлгөн).</li>
+                            </ul>
+                            <p>Сиздин SMS билдирүүлөрүңүздүн мыйзамдуулугун камсыз кылуунун эң оңой жолу - бул кардарларга анкета берүү, анкеталар толтурулгандан кийин алар жарнамалык билдирүүлөрдү алууга макулдук бере алышат. Эми мындай анкеталар, адатта, эсептик карталарды же эсептик купондорду алууда толтурулат. Албетте, анкеталар кардарларга SMS жөнөтүү аркылуу кабарлоону пландаштырып жатканда дайыма сакталышы керек.</p>
+                            <p>Сиз ошондой эле кардардын биринчи өтүнүчү боюнча, анын телефонуна SMS билдирүүлөрдү жөнөтүүнү токтоосуз токтотууга милдеттүү экениңизди унутпашыңыз керек.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq011">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Билдирүүлөрдү жөнөтүү үчүн абоненттик номерлер кандай форматта көрсөтүлүшү керек?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Телефондун каалаган форматын талдайбыз: +996..., 0 (555) ..., ж.б. Бирок биздин платформа дүйнө жүзүнө билдирүүлөрдү жөнөтө алгандыктан, абоненттик телефон номерлерин эл аралык форматта көрсөтүү максатка ылайыктуу жана эң жакшы. Башкача айтканда, абоненттик номер өлкөнүн кодун жана оператордун кодун камтууга тийиш. Мисалы, эл аралык форматта MegaCom абоненттик номери мындай болот: 996550123456.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq012">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Билдирүүгө каршы тигил же бул статус эмнени билдирет?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <ul>
+                                <li>"<strong>Жөнөтүлдү</strong>" - билдирүү оператордун SMS-борбору тарабынан иштеп чыгууга кабыл алынганын билдирет. Билдирүүнүн колдонуу мөөнөтү аяктагандан кийин (ар кандай операторлор үчүн бул мөөнөт 1 күндөн 7 күнгө чейин өзгөрүшү мүмкүн), эгерде абоненттин телефону өчүк болсо же ага жетүүгө мүмкүн эмес болсо, билдирүү "Жеткиндүү эмес" статусун алат.</li>
+                                <li>"<strong>Жеткирүү</strong>" - абоненттин мобилдик терминалына билдирүү ийгиликтүү жеткирилгендиги жөнүндө оператордон билдирүү келип түшкөндүгүн билдирет.</li>
+                                <li>"<strong>Жөнөтүлгөн жок</strong>" - көбүнчө, бул статус бул билдирүүнү жөнөтүү үчүн баланста каражат жетишсиз экенин билдирет. Бул ошондой эле төмөндөгүлөрдү билдириши мүмкүн: алуучунун телефон номери туура эмес форматта же бул оператор үчүн кабыл алынгыс сандарды камтыйт; системада көрсөтүлгөн алуучуга SMS билдирүүнү жөнөтүү маршруту табылган жок; билдирүү жараксыз текстти камтыйт же спам же спам чыпкалоочу тарабынан бөгөттөлгөн; (Жөнөтүүчү ID). Мындай билдирүүлөр үчүн акы алынбайт.</li>
+                                <li>"<strong>жеткирилген жок</strong>" - абоненттин мобилдик терминалына билдирүүнү жеткирүү мүмкүн эместиги жөнүндө оператордон билдирүү келип түшкөн. Мындай абал бир нече себептерден улам келип чыгышы мүмкүн: абоненттин номери оператордун маалымат базасында жок; телефон узак убакыттан бери өчүк же түйүндүн камтуусунан тышкары; абоненттин номери оператор тарабынан блоктолгон же бул билдирүү абоненттин өзү тарабынан блоктолгон; билдирүү күтүү режиминде. ж.б. "Жеткирилген жок" статусу бар билдирүүлөр оператордун SMS борбору тарабынан иштетилгендиктен төлөм алынат.</li>
+                                <li>"<strong>Четке кагылды</strong>" - билдирүү оператордун SMS-борбору тарабынан четке кагылды. Көпчүлүк учурларда транзиттик (кыйыр) операторлорго туташуу аркылуу SMS жөнөтүүдө билдирүүлөрдү жеткирүү көйгөйлөрү келип чыгат, алар аркылуу жеткирүү кепилденбейт, анткени кээ бир акыркы уюлдук операторлор транзиттик операторлордун маалымат каналдары аркылуу жөнөтүлгөн SMS каттарды өз тармактарына бөгөттөө үчүн спам чыпкаларын колдонушу мүмкүн. Ошондой эле, оператордун номери бөгөттөлгөн учурда, оператордун номери четке кагылган учурда пайда болушу мүмкүн. же аймак коду жок болгондуктан.</li>
+                                <li>"<strong>Белгисиз</strong>" - билдирүү оператордун SMS-борборуна жөнөтүлгөн, бирок оператор аны иштетүүгө кабыл алуу статусун алган эмес. Көпчүлүк учурларда, билдирүүнү жеткирүүдө көйгөйлөр транзиттик (кыйыр) операторлорго туташуу аркылуу SMS жөнөтүүдө пайда болот, алар аркылуу жеткирүү кепилденбейт. Абдан сейрек, обочолонгон учурлар көбүнчө техникалык иштердин жүрүшүндө пайда болушу мүмкүн. билдирүү акыркы статустардын бирин алат.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq013">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Эгерде бардык почта билдирүүлөрүн жөнөтүүгө каражат жетишсиз болсо, балансты толтургандан кийин SMS билдирүүлөр жөнөтүлөбү?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Эгерде кээ бир почта билдирүүлөрү жеке эсептеги баланстын жетишсиздигинен улам жөнөтүлбөй калса, анда мындай билдирүүлөр "Жөнөтүлгөн жок" статусун алышат. Бул статус акыркы болуп саналат жана бул статуска ээ билдирүүлөр баланс толтурулгандан кийин да автоматтык түрдө жөнөтүлбөйт. Аларды жөнөтүү үчүн "Отчеттор" → "Учурдагы мезгил" өтмөгүнө өтүп, жөнөтүүнүн аталышы боюнча чыпка орнотуп, "Жөнөтүлгөн жок" статусун тандап, "Excelге экспорттоону" аткарышыңыз керек. Андан кийин "Почта жөнөтүүлөрү" өтмөгүндө жаңы почта тизмесин түзүп, ага пайда болгон xls файлын жүктөшүңүз керек.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq014">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Мен сырсөзүмдү унутуп калдым, эмне кылышым керек?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Демейки шартта, Кардар беттин жогорку оң бурчундагы "Сырсөздү эстетип коюу" шилтемеси аркылуу өзүнүн логинди жана (же) паролду өз алдынча калыбына келтире алат. Сырсөз каттоо учурунда көрсөтүлгөн электрондук почтага жөнөтүлөт. Логин же электрондук почтаңыз эсиңизде жок болсо, кайрылыңыз <a class="faq-answer__link" href="contacts.html#support">сайтты колдоо кызматы</a>.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">ООО "Никита Онлайн"</h3>
+                    <p class="footer__muted">КР ГАС лицензиясы 2015-жылдын 18-сентябрында № 15-1425-КР.</p>
+                    <h3 class="footer__company">ООО "Никита Мобайл"</h3>
+                    <p class="footer__sub">(2022-жылдын 15-апрелиндеги Никита Онлайн ЖЧК менен программалык-аппараттык платформаны ижарага алуу келишиминин негизинде)</p>
+                    <p class="footer__muted">КР ГАЗ №11-828-КР 21.04.2011-ж.</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Бишкек, ул. Шопокова 89, 5-кабат, 9-кабинет.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Никита Онлайн ЖЧК, Никита Мобайл ЖЧК, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Подвал">
+                <div class="footer__nav-primary">
+                    <a href="services.html">Шарттар жана баалар</a>
+                    <a href="technical.html">Техникалык мүмкүнчүлүктөр</a>
+                    <a href="security.html">Ишенимдүүлүк жана коопсуздук</a>
+                    <a href="faq.html">Суроолор жана жооптор</a>
+                    <a href="contacts.html">Байланыштар</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="#terms">Колдонуучу келишими</a>
+                    <a href="#privacy">Купуялык саясаты</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Байланыш жана коммерциялык маселелер:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Техникалык колдоо:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js?v=payment-tabs"></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 const PHONE_DIGITS = 9;
+const SPEED_TEST_ICON = new URL('../../images/speed-test-icon.svg', import.meta.url).href;
 
 function formatPhone(value) {
     const digits = value.replace(/\D/g, '').slice(0, PHONE_DIGITS);
@@ -32,7 +33,7 @@ function renderWidget() {
         <div class="speed-test-widget__tab">
             <button class="speed-test-widget__tab-button" type="button" aria-controls="speedTestWidget" aria-expanded="false" data-speed-test-toggle>
                 <span class="speed-test-widget__tab-inner">
-                    <img class="speed-test-widget__tab-icon" src="assets/images/speed-test-icon.svg" alt="" aria-hidden="true">
+                    <img class="speed-test-widget__tab-icon" src="${SPEED_TEST_ICON}" alt="" aria-hidden="true">
                     <span class="speed-test-widget__tab-text">
                         <span class="speed-test-widget__tab-title">Отправить SMS</span>
                         <span class="speed-test-widget__tab-subtitle">Проверь скорость доставки</span>

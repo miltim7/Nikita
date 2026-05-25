@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - Templates</title>
+    <meta name="description" content="Nikita personal account message templates.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--templates" data-cabinet-current-section="templates">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Account navigation" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Expand menu" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Collapse menu</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Cabinet sections">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Home"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Home</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="My profile"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">My profile</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Newsletters"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Newsletters</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Lists</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API integration"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API integration</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Reports</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP service"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP service</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Templates" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Templates</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Terms and prices"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Terms and prices</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Technical capabilities"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Technical capabilities</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Reliability and safety"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Reliability and safety</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Questions and answers"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Questions and answers</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Contacts"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Contacts</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Subject">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Log out">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>SOM</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Technical support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita - main">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Contact<br>to technical support</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Contact<br>with the manager</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>SOM</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="My profile">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Konstantin</span>
+                                    <span class="cabinet-status cabinet-status--admin">Administrator</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ LLC “Organization</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="cabinet-user cabinet-user--demo cabinet-user--templates-demo" aria-label="Demo mode" role="button" tabindex="0" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="../assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">DEMO MODE</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>My office → </span><strong data-cabinet-current>Templates</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="templatesTitle">Templates</h1>
+            </div>
+
+            <nav class="cabinet-templates-tabs" aria-label="Template Sections">
+                <a class="cabinet-templates-tabs__item is-active" href="templates.html" aria-current="page" data-templates-tab="templates">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                    <span>Templates</span>
+                </a>
+                <a class="cabinet-templates-tabs__item" href="#rules" data-templates-tab="rules">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg>
+                    <span>Rules</span>
+                </a>
+                <a class="cabinet-templates-tabs__item" href="#testing" data-templates-tab="testing">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-template-testing"></use></svg>
+                    <span>Template testing</span>
+                </a>
+            </nav>
+        </div>
+
+        <main class="cabinet-main" data-cabinet-templates-root>
+            <section class="cabinet-templates cabinet-templates-panel" aria-labelledby="templatesTitle" data-cabinet-templates-page data-templates-panel="templates">
+                <div class="cabinet-templates__toolbar">
+                    <div class="cabinet-templates__sort">
+                        <button class="cabinet-templates__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-page-size-toggle data-desktop-value="10" data-mobile-value="50">
+                            <span>Show by</span>
+                            <span class="cabinet-templates__sort-value" data-templates-page-size-value>10</span>
+                            <span class="cabinet-templates__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                        </button>
+                        <div class="cabinet-templates__sort-list" role="listbox" aria-label="Number of templates per page" hidden data-templates-page-size-list>
+                            <button class="cabinet-templates__sort-option is-active" type="button" role="option" aria-selected="true" data-templates-page-size-option="10">10</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="20">20</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="30">30</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="50">50</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cabinet-templates__table-wrap">
+                    <div class="cabinet-templates__table-scroll" tabindex="0" aria-label="Template table" data-templates-table-scroll>
+                        <div class="cabinet-templates-table" role="table" aria-label="Templates">
+                            <div class="cabinet-templates-table__row cabinet-templates-table__row--head" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="columnheader"><span class="cabinet-templates-table__head-copy">Country<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="columnheader"><span class="cabinet-templates-table__head-copy">Sender's name<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="columnheader"><span class="cabinet-templates-table__head-copy">Traffic type<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="columnheader"><span class="cabinet-templates-table__head-copy">Status<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="columnheader">Text</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="columnheader"><span class="cabinet-templates-table__head-copy">Activation date<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Australia</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Service</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row cabinet-templates-table__row--tall" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Germany</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Advertising</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text cabinet-templates-table__cell--clamp" role="cell">An example of a large amount of content in a cell, display the first 3 lines, then hide the text behind an ellipsis...</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Kyrgyzstan</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Service</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Germany</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Service</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Italy</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Transactional</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Australia</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Advertising</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Kyrgyzstan</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Service</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Kyrgyzstan</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Service</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Example of content in a table</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Kyrgyzstan</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Advertising</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">China</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Sender - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Transactional</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Ready to use</strong></span><span class="cabinet-templates-status__note">Handle (optional)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Text</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-templates__scrollbar" aria-hidden="true" hidden data-templates-scrollbar>
+                        <span class="cabinet-templates__scrollbar-track"></span>
+                        <span class="cabinet-templates__scrollbar-thumb" data-templates-scrollbar-thumb></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cabinet-template-rules cabinet-templates-panel" aria-labelledby="templatesTitle" hidden data-templates-panel="rules">
+                <div class="cabinet-template-rules__grid">
+                    <article class="cabinet-template-rules-card cabinet-template-rules-card--compose">
+                        <h2 class="cabinet-template-rules-card__title">Rules for creating templates</h2>
+
+                        <div class="cabinet-template-rules-card__body">
+                            <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+
+                            <div class="cabinet-template-rules-card__step cabinet-template-rules-card__step--intro">
+                                <p>To create a new template, you need to download, fill out and send an application to <a href="mailto:names@nikita.kg">names@nikita.kg</a></p>
+                                <a class="cabinet-template-rules-card__download" href="#" aria-label="Download the application form for approval of transactional / service SMS templates">
+                                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-action-download"></use></svg>
+                                    <span>Application form for approval of transactional / service SMS templates</span>
+                                </a>
+                            </div>
+
+                            <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+
+                            <div class="cabinet-template-rules-card__step cabinet-template-rules-card__step--legend">
+                                <p class="cabinet-template-rules-card__lead">Designations:</p>
+                                <div class="cabinet-template-rules-card__copy-stack">
+                                    <p>Sign <strong>"X"</strong> in Latin means any one character</p>
+                                    <p>Sign <strong>“~~”</strong> in Latin denotes a sequence of any characters</p>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-template-rules-card__example">
+                                <p class="cabinet-template-rules-card__lead">Examples:</p>
+                                <div class="cabinet-template-rules-card__example-lines">
+                                    <p>1. Your login code: <strong>XXX</strong></p>
+                                    <p>2. Karta “<strong>XXX</strong>”: servis informirovaniya podkluchen.</p>
+                                    <p>3. Vash zakaz ID ~~ obrabotan na summu ~~ som, data vydachi <strong>XX.XX.XX</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cabinet-template-rules-card cabinet-template-rules-card--traffic">
+                        <h2 class="cabinet-template-rules-card__title">Rules for assigning templates to traffic types</h2>
+
+                        <div class="cabinet-template-rules-card__body">
+                            <section class="cabinet-template-rules-card__section">
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Transactional SMS:</h3>
+                                    <p>TO <strong>Transactional</strong> include SMS messages informing the Subscriber about the execution of cash flow operations on his account or about the impossibility of performing such an operation.</p>
+                                    <p>Under <strong>funds movement operation</strong> are understood:</p>
+                                    <ul>
+                                        <li>completed operation of crediting/receipt/withdrawal of funds reserve;</li>
+                                        <li>completed transaction of write-off/expense/transfer/reservation of funds;</li>
+                                        <li>payment of commission, accrual of interest on the deposit, conversion of funds into another currency;</li>
+                                        <li>cancellation or impossibility of performing the listed operations.</li>
+                                        <li>The Transaction Message Template must EXPLICITLY indicate the type of transaction, account number, and amount.</li>
+                                    </ul>
+                                </div>
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                            </section>
+
+                            <section class="cabinet-template-rules-card__section">
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Service SMS:</h3>
+                                    <p>A service message is considered to be a message informing the Subscriber about the status of the provision of service/customer services to him/her.</p>
+                                    <p>Under <strong>status of service provision</strong> is understood:</p>
+                                    <ul>
+                                        <li>One-time password (OTP);</li>
+                                        <li>Welcome message upon registration in the service;</li>
+                                        <li>Notifying the user about events affecting the terms of service provision (change of telephone number, provision of service, for example, increase in subscription fee);</li>
+                                        <li>Order/purchase confirmation;</li>
+                                        <li>Product delivery/return/exchange status;</li>
+                                        <li>Reminders about a planned event as part of the provision of a service (for example, about an appointment);</li>
+                                        <li>Informing about technical work/warnings about suspension/resumption of services;</li>
+                                        <li>Notifications about entry/exit/attempts to enter the customer self-service system;</li>
+                                        <li>Information about class schedules, current and final achievements, messages about internal routine or homework and other messages sent by educational institutions that do not contradict the rules for classifying Templates as Service;</li>
+                                        <li>Informing about the client’s debt and details of the agreement on the basis of which the client’s debt arose;</li>
+                                        <li>Informing about the conditions and repayment schedule of the client’s debt;</li>
+                                        <li>Informing the client about accruals/debits/expiration dates for points/coupon redemption in loyalty programs</li>
+                                        <li>Other Messages corresponding to the definition specified in clause 4.1 of these Special Conditions</li>
+                                    </ul>
+                                </div>
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                            </section>
+
+                            <section class="cabinet-template-rules-card__section">
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Promotional SMS:</h3>
+                                    <ul>
+                                        <li>All Messages that are not Transactional or Service Messages are considered Promotional Messages. At the same time, the collection of Templates for advertising traffic is not provided.</li>
+                                        <li>If the SMS text contains extra spaces at the beginning and/or end of the text, such SMS will be recognized by the platform as NOT matching the Template.</li>
+                                        <li>All National A2P SMS that do not comply with the Templates, as well as all cases of sending Service/Advertising/Transactional SMS messages in any mixed combination will also be classified as Advertising messages.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="cabinet-template-testing cabinet-templates-panel" aria-labelledby="templatesTitle" hidden data-templates-panel="testing" data-templates-testing>
+                <form class="cabinet-template-testing-card" action="#" data-templates-testing-form>
+                    <div class="cabinet-template-testing-card__fields">
+                        <div class="cabinet-template-testing-card__column">
+                            <div class="cabinet-template-testing-card__field">
+                                <span class="cabinet-template-testing-card__label">Country:</span>
+                                <span class="cabinet-template-testing-card__select" data-templates-testing-select>
+                                    <button class="cabinet-template-testing-card__input cabinet-template-testing-card__input--select" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-testing-select-toggle>
+                                        <span>Kyrgyzstan</span>
+                                        <svg class="cabinet-icon cabinet-template-testing-card__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                                    </button>
+                                    <span class="cabinet-template-testing-card__select-menu" role="listbox" hidden data-templates-testing-select-menu>
+                                        <button class="cabinet-template-testing-card__select-option" type="button" role="option" aria-selected="true">Kyrgyzstan</button>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="cabinet-template-testing-card__field">
+                                <span class="cabinet-template-testing-card__label">Sender's name:</span>
+                                <span class="cabinet-template-testing-card__select" data-templates-testing-select>
+                                    <button class="cabinet-template-testing-card__input cabinet-template-testing-card__input--select" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-testing-select-toggle>
+                                        <span>SMSPRO.KG</span>
+                                        <svg class="cabinet-icon cabinet-template-testing-card__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                                    </button>
+                                    <span class="cabinet-template-testing-card__select-menu" role="listbox" hidden data-templates-testing-select-menu>
+                                        <button class="cabinet-template-testing-card__select-option" type="button" role="option" aria-selected="true">SMSPRO.KG</button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-template-testing-card__field cabinet-template-testing-card__field--message">
+                            <span class="cabinet-template-testing-card__label">Message text:</span>
+                            <span class="cabinet-template-testing-card__textarea" role="textbox" aria-label="Message text">Your code is %code%</span>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-template-testing-card__actions">
+                        <button class="cabinet-template-testing-card__button cabinet-template-testing-card__button--secondary" type="button" data-templates-testing-clear>Clear form</button>
+                        <button class="cabinet-template-testing-card__button cabinet-template-testing-card__button--primary" type="button" data-templates-testing-show>Show result</button>
+                    </div>
+
+                    <div class="cabinet-template-testing-result" hidden data-templates-testing-result>
+                        <div class="cabinet-template-testing-result__item">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-template-advertising"></use></svg>
+                            <span class="cabinet-template-testing-result__copy">
+                                <span>Traffic type:</span>
+                                <strong>Advertising</strong>
+                            </span>
+                        </div>
+                        <div class="cabinet-template-testing-result__item">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                            <span class="cabinet-template-testing-result__copy">
+                                <span>Sample:</span>
+                                <strong>-</strong>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Nikita Online LLC,</span>
+                <span>Nikita Mobile LLC, 2014-2025</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">User Agreement</a> | <a href="security.html#bezop">Privacy Policy</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Account menu" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Subject">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Log out</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Close menu" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Account menu">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Home</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Newsletters</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Lists</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API integration</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Reports</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP service</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Templates</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Terms and prices</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Technical capabilities</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Reliability and safety</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Questions and answers</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Contacts</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Bottom navigation of the account">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Home</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Newsletters</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Lists</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API integration</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Reports</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP service</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-current="page">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Templates</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Menu</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

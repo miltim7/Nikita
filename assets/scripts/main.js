@@ -14,9 +14,13 @@ import { initPaymentTabs } from './modules/payment-tabs.js?v=payment-tabs';
 import { initSecurityTabs } from './modules/security-tabs.js';
 import { initFaqAccordion } from './modules/faq-accordion.js';
 import { initSpeedTestWidget } from './modules/speed-test-widget.js';
+import { initTopbarLanguageSelect } from './modules/topbar-language-select.js';
+import { initI18n } from './modules/i18n-runtime.js';
 
 function init() {
+    initI18n();
     initMobileMenu();
+    initTopbarLanguageSelect();
     initSpeedTestWidget();
     initHowTabs();
     initCasesCarousel();

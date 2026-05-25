@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - SMS, Telegram, WhatsApp, Viber mailings in Kyrgyzstan</title>
+    <meta name="description" content="Direct channels with Kyrgyz operators, international coverage and transparent prices. 0% commission. Replenishment from 100 soms.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body>
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Additional navigation">
+                <a href="services.html" class="topbar__link">Terms and prices</a>
+                <a href="technical.html" class="topbar__link">Technical capabilities</a>
+                <a href="security.html" class="topbar__link">Reliability and safety</a>
+                <a href="faq.html" class="topbar__link">Questions and answers</a>
+                <a href="contacts.html" class="topbar__link">Contacts</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Login / Register</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Nikita - main">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-support.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Contact<br>to technical support</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-chat.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Contact<br>with the manager</span>
+                    </a>
+                </div>
+                <a href="cabinet-demo.html" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Try the demo for free</span>
+                    <span class="header__cta-short">Demo</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Main menu">
+        <a href="services.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt="">
+            </span>
+            <span>Terms and prices</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt="">
+            </span>
+            <span>Technical capabilities</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt="">
+            </span>
+            <span>Reliability and safety</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt="">
+            </span>
+            <span>Questions and answers</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt="">
+            </span>
+            <span>Contacts</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <div class="hero__grid">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__title-main">Communicate with clients<br>where it is convenient for them:</span>
+                    <span class="hero__title-mobile">Communicate<br>with clients<br>where it is convenient for them:</span>
+                </h1>
+                <p class="hero__subtitle">SMS, Telegram, WhatsApp or Viber.</p>
+                <p class="hero__lead">
+                    Direct channels with KR operators,<br>
+                    international coverage and transparent price, 0% commission
+                </p>
+                <div class="hero__buttons">
+                    <a href="#speedTestWidget" class="btn btn-cta" data-speed-test-trigger>
+                        Try for free
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                            <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="technical.html#tech" class="btn btn-ghost">
+                        Get API
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+                            <path d="M1 7h17M12 1l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero__budget">
+                    <h2 class="hero__budget-title">Start with any budget:</h2>
+                    <p class="hero__budget-text">replenishment from 100 soms, money on the balance does not expire</p>
+                </div>
+            </div>
+            <div class="hero__media">
+                <picture>
+                    <source media="(max-width: 767.98px)" srcset="assets/images/hero-map-mobile.png">
+                    <source media="(max-width: 1199.98px)" srcset="assets/images/hero-map-tablet.png">
+                    <img src="../assets/images/hero-map-tablet.png" alt="" loading="eager" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why">
+    <div class="container-xxl">
+        <div class="why__grid">
+            <div class="why__content">
+                <h2 class="section-title">Why choose us</h2>
+                <p class="why__lead">
+                    <span class="text-accent">We help</span> hundreds of companies
+                    <span class="text-accent">inform your clients,</span>
+                    and we do it at a high level.
+                </p>
+
+                <ul class="why__list">
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-sms.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">The whole world is connected:</h3>
+                            <p class="why-card__text">Delivery of messages anywhere in the world at competitive rates.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-functions.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">Not only SMS:</h3>
+                            <p class="why-card__text">Cascade mailings (WhatsApp → Viber → SMS) for maximum coverage and savings.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-utilities.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">Ready integration:</h3>
+                            <p class="why-card__text">APIs and modules for CRM that allow you to automate the sending of codes (OTP) and notifications.</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-certificate.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">Everything is legal!</h3>
+                            <p class="why-card__text">We use only official message delivery channels</p>
+                        </div>
+                    </li>
+                    <li class="why-card">
+                        <span class="why-card__icon" aria-hidden="true"><img src="../assets/images/why/icon-like.svg" alt=""></span>
+                        <div>
+                            <h3 class="why-card__title">We value our reputation</h3>
+                            <p class="why-card__text">Therefore, we do not engage in SPAM or illegal mailings.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <aside class="why__phone" aria-label="Example of notifications on a smartphone">
+                <div class="why-phone">
+                    <div class="why-phone__inner">
+                        <span class="why-phone__notch" aria-hidden="true"></span>
+                        <ul class="why-phone__list">
+                            <li class="why-msg">
+                                <p class="why-msg__brand">BANK</p>
+                                <p class="why-msg__text">Aibek, 12,500 som which is igiliktuu atkaryldy.</p>
+                                <p class="why-msg__time">12:00</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">FOOD</p>
+                                <p class="why-msg__text">Oksana, sizdin buyrutmanyz 248 beruүgө dayar.</p>
+                                <p class="why-msg__time">14:46</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">STORE</p>
+                                <p class="why-msg__text">31-mayga chein bardyk kyzmattarga 20% arzandatuu!<br>Kenenireek koldonmodo.</p>
+                                <p class="why-msg__time">22:09</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand">TAXI</p>
+                                <p class="why-msg__text">Aidoochu sizdi kire beriste kүtүp zhatat.</p>
+                                <p class="why-msg__time">10:15</p>
+                            </li>
+                            <li class="why-msg">
+                                <p class="why-msg__brand why-msg__brand--ru">Sizdin kyzmat</p>
+                                <p class="why-msg__text">Sizdin yrastoo kodunuz: 7777<br>Bul koddu ech kim menen bolushpoңүz.</p>
+                                <p class="why-msg__time">22:13</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="why__partners" aria-label="Integrations">
+            <div class="why__partners-track">
+                <span class="why-partner why-partner--one-c"><img src="../assets/images/partners/logo-1c.svg" alt="1C"></span>
+                <span class="why-partner why-partner--amo"><img src="../assets/images/partners/logo-amocrm.png" alt="amoCRM"></span>
+                <span class="why-partner why-partner--open"><img src="../assets/images/partners/logo-opencart.svg" alt="opencart"></span>
+                <span class="why-partner why-partner--yclients"><img src="../assets/images/partners/logo-yclients.png" alt="yclients"></span>
+                <span class="why-partner why-partner--altegio"><img src="../assets/images/partners/logo-altegio.svg" alt="altegio"></span>
+                <span class="why-partner why-partner--bitrix"><img src="../assets/images/partners/logo-bitrix.svg" alt="Bitrix24"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how" data-active="api">
+    <div class="how__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">
+            <span class="how-title__line">Starting a newsletter -</span>
+            <span class="how-title__line">it's easy!</span>
+        </h2>
+        <p class="how__lead">How to send a newsletter to clients?</p>
+
+        <div class="how__tabs" role="tablist">
+            <button type="button" class="how-tab" role="tab" aria-selected="false" data-tab="cabinet">
+                <img class="how-tab__icon how-tab__icon--inactive" src="../assets/images/how/tab-cabinet.svg" alt="" aria-hidden="true">
+                <img class="how-tab__icon how-tab__icon--active" src="../assets/images/how/tab-cabinet-active.svg" alt="" aria-hidden="true">
+                From your personal account
+            </button>
+            <button type="button" class="how-tab is-active" role="tab" aria-selected="true" data-tab="api">
+                <img class="how-tab__icon how-tab__icon--inactive" src="../assets/images/how/tab-api-inactive.svg" alt="" aria-hidden="true">
+                <img class="how-tab__icon how-tab__icon--active" src="../assets/images/how/tab-api.svg" alt="" aria-hidden="true">
+                Via API
+            </button>
+        </div>
+        <p class="how__note" data-content="cabinet">
+            Setting up and launching mailings from your personal account<br>
+            does not require special knowledge and skills
+        </p>
+        <p class="how__note" data-content="api">
+            To launch a newsletter via API and integrate with your website or CRM<br>
+            you may need help from a programmer
+        </p>
+
+        <div class="how__steps" role="list">
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">01</span>
+                    <p class="how-step__text">Register<br>in 2 minutes<br>and top up your balance</p>
+                </div>
+                <div class="how-step__center">
+                    <span class="how-step__icon">
+                        <img src="../assets/images/how/icon-cabinet-list.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="../assets/images/how/icon-api.svg" alt="" aria-hidden="true" data-content="api">
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">01</span>
+                    <p class="how-step__text">Get an API key<br>and apply<br>in your program</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">02</span>
+                    <p class="how-step__text">Select the sender's name,<br>write the text<br>and select the sending time</p>
+                </div>
+                <div class="how-step__center">
+                    <span class="how-step__icon">
+                        <img src="../assets/images/how/icon-cabinet-card.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="../assets/images/how/icon-doc.svg" alt="" aria-hidden="true" data-content="api">
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">02</span>
+                    <p class="how-step__text">Read the documentation<br>choose one of the ready-made ones <br class="how-mobile-break">modules, classes<br>or write your own script</p>
+                </div>
+            </div>
+
+            <div class="how-step">
+                <div class="how-step__col how-step__col--left" data-content="cabinet">
+                    <span class="how-step__num">03</span>
+                    <p class="how-step__text">Ready!<br>Messages sent<br>to your clients!</p>
+                </div>
+                <div class="how-step__center how-step__center--last">
+                    <span class="how-step__icon">
+                        <img src="../assets/images/how/icon-cabinet-sms.svg" alt="" aria-hidden="true" data-content="cabinet">
+                        <img src="../assets/images/how/icon-sms.svg" alt="" aria-hidden="true" data-content="api">
+                    </span>
+                </div>
+                <div class="how-step__col how-step__col--right" data-content="api">
+                    <span class="how-step__num">03</span>
+                    <p class="how-step__text">Ready!<br>Send SMS from your <br class="how-mobile-break">programs<br>in less than 5 minutes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="how__cta">
+            <a href="registration.html" class="btn btn-cta">
+                Create a newsletter
+                <img src="../assets/images/how/cta-arrow.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section class="cases">
+    <div class="container-xxl">
+        <h2 class="section-title">Who do we benefit?</h2>
+        <p class="cases__lead">
+            For more than 25 years we have been helping banks, payment systems, online stores and thousands of companies around the world<br class="cases__lead-desktop-break">
+            inform your customers through mass mailings
+        </p>
+
+        <div class="cases__stage">
+            <div class="cases__carousel" tabindex="0" aria-label="Who do we benefit?">
+                <div class="cases__track">
+                <article class="case-card case-card--resto" data-mobile-start>
+                    <img class="case-card__photo" src="../assets/images/cases/resto.jpg" alt="Restaurants and cafes" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Restaurants and Cafes</h3>
+                        <p class="case-card__text">Reservations, promotions and reminders for regular guests.</p>
+                    </div>
+                </article>
+                <article class="case-card case-card--retail" data-mobile-active>
+                    <img class="case-card__photo" src="../assets/images/cases/retail.jpg" alt="Retail and E-commerce" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Retail and E-commerce</h3>
+                        <p class="case-card__text">Abandoned carts, order statuses and loyalty programs.</p>
+                    </div>
+                </article>
+                <article class="case-card case-card--logistics">
+                    <img class="case-card__photo" src="../assets/images/cases/logistics.jpg" alt="Logistics and delivery" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">Logistics and Delivery</h3>
+                        <p class="case-card__text">Parcel statuses, receipt codes and delivery notifications in real time.</p>
+                    </div>
+                </article>
+                <article class="case-card case-card--travel">
+                    <img class="case-card__photo" src="../assets/images/cases/travel.jpg" alt="International companies and the Travel industry" loading="lazy">
+                    <div class="case-card__body">
+                        <h3 class="case-card__title">International companies / Travel industry</h3>
+                        <p class="case-card__text">Booking confirmations, flight notifications and schedule changes.</p>
+                    </div>
+                </article>
+                </div>
+            </div>
+            <button type="button" class="cases__arrow cases__arrow--prev" aria-label="Back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M10.57 3.77 6.34 8l4.23 4.23M6.92 8h7.08" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button type="button" class="cases__arrow cases__arrow--next" aria-label="Forward">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M5.43 3.77 9.66 8l-4.23 4.23M9.08 8H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cases__dots" role="tablist" aria-label="Slides"></div>
+    </div>
+</section>
+
+<!-- ============ RECOMMEND ============ -->
+<section class="recommend" id="recommend">
+    <div class="recommend__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">We are recommended</h2>
+        <p class="recommend__lead">100,500 clients trust the quality of our service</p>
+    </div>
+    <div class="recommend__marquee" aria-hidden="true">
+        <ul class="recommend__track">
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--cnn">
+                <span class="recommend-logo recommend-logo--cnn"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--mobil">
+                <span class="recommend-logo recommend-logo--mobil"><img src="../assets/images/recommend/logo-sprite-a.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--pepsi">
+                <span class="recommend-logo recommend-logo--pepsi"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+            <li class="recommend-card recommend-card--amazon">
+                <span class="recommend-logo recommend-logo--amazon"><img src="../assets/images/recommend/logo-sprite-b.png" alt=""></span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+    <div class="container-xxl">
+        <h2 class="section-title">We are in numbers</h2>
+        <p class="stats__lead">Our effectiveness can be measured</p>
+        <ul class="stats__list">
+            <li class="stat">
+                <span class="stat__value stat__value--operators">
+                    <span class="stat__all-main">All</span>
+                    <span class="stat__all-label">operators</span>
+                </span>
+                <span class="stat__sub">Kyrgyzstan + near<br>and far abroad</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__pre">More</span>
+                    <span class="stat__main">20 years</span>
+                </span>
+                <span class="stat__sub">on the market<br>professional services</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__pre">More</span>
+                    <span class="stat__main">2&nbsp;000</span>
+                </span>
+                <span class="stat__sub">clients<br>trust us with their mailings</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__pre">More</span>
+                    <span class="stat__main">100&nbsp;000</span>
+                </span>
+                <span class="stat__sub">SMS<br>we ship every day</span>
+            </li>
+            <li class="stat">
+                <span class="stat__value">
+                    <span class="stat__main">99.9%</span>
+                    <span class="stat__pre">messages</span>
+                </span>
+                <span class="stat__sub">guaranteed to arrive<br>to the addressee</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section class="features" id="features">
+    <div class="features__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <h2 class="section-title section-title--light">
+            <span class="features-title__line">What will you get,</span>
+            <span class="features-title__line">choosing us</span>
+        </h2>
+        <p class="features__lead">
+            <span class="features-lead__line">Start sending SMS in 5 minutes</span>
+            <span class="features-lead__line">without concluding a contract</span>
+        </p>
+
+        <ul class="features__list">
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-license.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">License for communication services</h3>
+                <p class="feature__text">We work only within the framework of the law</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-economy.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">Cost control</h3>
+                <p class="feature__text">Flexible and clear settings</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-speed.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">Delivery in seconds</h3>
+                <p class="feature__text">Instant message delivery</p>
+            </li>
+            <li class="feature">
+                <span class="feature__icon"><img src="../assets/images/features/icon-stats.svg" alt="" aria-hidden="true"></span>
+                <h3 class="feature__title">Reports and analytics</h3>
+                <p class="feature__text">Convenient statistics in your personal account</p>
+            </li>
+        </ul>
+
+        <div class="features__buttons">
+            <a href="registration.html" class="btn btn-cta">
+                <img src="../assets/images/features/icon-shield.svg" alt="" aria-hidden="true">
+                Register
+            </a>
+            <a href="#speedTestWidget" class="btn btn-ghost btn-ghost--light" data-speed-test-trigger>
+                Try for free
+                <img class="features__button-arrow" src="../assets/images/features/icon-arrow.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CASES EXAMPLES ============ -->
+<section class="cases-ex" id="cases-ex">
+    <div class="container-xxl">
+        <h2 class="section-title">Cases of our clients</h2>
+        <p class="cases-ex__lead">
+            We don't just send SMS - we help businesses grow.<br>
+            Here are examples where a well-structured newsletter increased conversion and income.
+        </p>
+
+        <div class="cases-ex__list" tabindex="0" aria-label="Cases of our clients">
+            <article class="case-ex">
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="7" y="8" width="22" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 14h12M12 18h8M12 22h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Banks, MFOs and Services <span>(Big business)</span></h3>
+                        <p class="case-ex__task"><span>Task:</span> Security and notifications.</p>
+                    </div>
+                </header>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Scenario:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Newsletter:</strong>Sending one-time passwords (OTP) to log into your personal account or confirm a transaction.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Tool:</strong>Direct API channel with priority delivery (up to 5-10 seconds).</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Result:</strong>High customer trust and compliance with security requirements.</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="case-ex" data-cases-initial>
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M10 11h4l2 13h12l2-8H17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="18" cy="28" r="2" fill="currentColor"/><circle cx="28" cy="28" r="2" fill="currentColor"/><path d="M22 8a7 7 0 1 1-6.3 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 11v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Retail and E-commerce <span>(Small and medium business)</span></h3>
+                        <p class="case-ex__task"><span>Task:</span> Bring back customers and increase sales.</p>
+                    </div>
+                </header>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Scenario:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Newsletter:</strong>“We miss you! 15% discount on the new collection using the promo code "FRIEND" until Sunday."</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Tool:</strong>Cascade mailing. First we send it via WhatsApp (with a photo of the product), and to those who haven’t read it within 3 hours we send a short SMS.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Result:</strong>Budget savings of up to 40% due to cheap instant messengers and increased conversion.</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="case-ex">
+                <header class="case-ex__head">
+                    <span class="case-ex__icon"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M6 12h14v14H6V12zM20 16h7l5 4v6H20V16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="28" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="27" cy="28" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span>
+                    <div class="case-ex__intro">
+                        <h3 class="case-ex__title">Logistics and Delivery <span>(Medium business)</span></h3>
+                        <p class="case-ex__task"><span>Task:</span> Informing about the status of the order.</p>
+                    </div>
+                </header>
+                <div class="case-ex__body">
+                    <p class="case-ex__scenario">Scenario:</p>
+                    <ul class="case-ex__rows">
+                        <li class="case-ex__row case-ex__row--pink">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 5h14v11H8l-3 3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Newsletter:</strong>“Your order No. 1234 has been transferred to the courier. Courier phone: +996...”</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--green">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                            <div><strong>Tool:</strong>SMS notifications via API.</div>
+                        </li>
+                        <li class="case-ex__row case-ex__row--blue">
+                            <span class="case-ex__row-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h10v4a5 5 0 0 1-10 0V5zM9 19h6M12 14v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 7H4v2a3 3 0 0 0 3 3M17 7h3v2a3 3 0 0 1-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <div><strong>Result:</strong>Reducing the load on the call center - customers don’t call with the question “where is my order?”</div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        <div class="cases-ex__scrollbar" aria-hidden="true">
+            <span class="cases-ex__scrollbar-thumb"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="cta">
+    <div class="cta__bg" aria-hidden="true"></div>
+    <div class="container-xxl">
+        <div class="cta__inner">
+            <div class="cta__text">
+                <h2 class="cta__title">want the same results?</h2>
+                <p class="cta__sub">Start optimizing your business with us!</p>
+            </div>
+            <div class="cta__buttons">
+                <a href="registration.html" class="btn btn-cta">
+                    <img class="cta__icon cta__icon--shield" src="../assets/images/cta-icon-shield.svg" alt="" aria-hidden="true">
+                    Register
+                </a>
+                <a href="#speedTestWidget" class="btn btn-ghost btn-ghost--light" data-speed-test-trigger>
+                    Try for free
+                    <img class="cta__icon cta__icon--arrow" src="../assets/images/cta-icon-arrow.svg" alt="" aria-hidden="true">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">LLC "Nikita Online"</h3>
+                    <p class="footer__muted">License GAS KR No. 15-1425-KR dated September 18, 2015</p>
+                    <h3 class="footer__company">LLC "Nikita Mobile"</h3>
+                    <p class="footer__sub">(based on the lease agreement for the software and hardware platform with Nikita Online LLC dated April 15, 2022)</p>
+                    <p class="footer__muted">License GAS KR No. 11-828-KR dated 04/21/2011</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Bishkek, st. Shopokova 89, 5th floor, 9th room.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Nikita Online LLC, Nikita Mobile LLC, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Basement">
+                <div class="footer__nav-primary">
+                    <a href="services.html">Terms and prices</a>
+                    <a href="technical.html">Technical capabilities</a>
+                    <a href="security.html">Reliability and safety</a>
+                    <a href="faq.html">Questions and answers</a>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="agreement.html">User Agreement</a>
+                    <a href="security.html#bezop">Privacy Policy</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Connection and commercial issues:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Technical support:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js"></script>
+</body>
+</html>

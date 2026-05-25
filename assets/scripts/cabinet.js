@@ -14,8 +14,10 @@ import { initCabinetRecipientListsPage } from './modules/cabinet-recipient-lists
 import { initCabinetRegistrationPage } from './modules/cabinet-registration-page.js';
 import { initCabinetReportsPage } from './modules/cabinet-reports-page.js';
 import { initCabinetTemplatesPage } from './modules/cabinet-templates-page.js';
+import { initI18n } from './modules/i18n-runtime.js';
 
 function init() {
+    initI18n();
     initCabinetSidepanel();
     initCabinetTabbarModal();
     initCabinetNavigation();

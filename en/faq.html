@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - Questions and answers</title>
+    <meta name="description" content="Answers to frequently asked questions about the contract, balance, operators, Sender ID and Nikita mailings.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body class="page-faq">
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Additional navigation">
+                <a href="services.html" class="topbar__link">Terms and prices</a>
+                <a href="technical.html" class="topbar__link">Technical capabilities</a>
+                <a href="security.html" class="topbar__link">Reliability and safety</a>
+                <a href="faq.html" class="topbar__link topbar__link--active">Questions and answers</a>
+                <a href="contacts.html" class="topbar__link">Contacts</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Login / Register</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Nikita - main">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-support.svg" alt=""></span>
+                        <span class="header__link-text">Contact<br>to technical support</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-chat.svg" alt=""></span>
+                        <span class="header__link-text">Contact<br>with the manager</span>
+                    </a>
+                </div>
+                <a href="#demo" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Try the demo for free</span>
+                    <span class="header__cta-short">Demo</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Main menu">
+        <a href="services.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt=""></span>
+            <span>Terms and prices</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt=""></span>
+            <span>Technical capabilities</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt=""></span>
+            <span>Reliability and safety</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt=""></span>
+            <span>Questions and answers</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt=""></span>
+            <span>Contacts</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+    <section class="faq-page" id="faq">
+        <div class="faq-page__breadcrumbs container-xxl" aria-label="bread crumbs">
+            <span>Home → </span><strong>Questions and answers</strong>
+        </div>
+
+        <div class="faq-page__content container-xxl">
+            <h1 class="faq-page__title">Questions and answers</h1>
+            <p class="faq-page__lead">
+                In this section, we have tried to collect most of the answers to frequently asked questions.<br>
+                Please read them carefully before contacting <a href="contacts.html#support">to the support service.</a>
+            </p>
+
+            <div class="faq-list">
+                <details class="faq-item" id="faq001" open>
+                    <summary class="faq-item__summary">
+                        <span class="faq-item__question">
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                            <span class="faq-item__title">How to enter into a written contract</span>
+                        </span>
+                        <span class="faq-item__chevron" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>To conclude a written contract, you must send your details to our email address or report them to the support service.<br>You can familiarize yourself with the agreement (download a standard agreement for review) <a class="faq-answer__link" href="https://smspro.nikita.kg/kg/documents/dogovor-example.docx">here.</a></p>
+                            <p>After filling out the contract, 2 copies will be sent to the address specified by you, which must be signed and one copy sent back to our postal address.</p>
+                            <p><strong>We do not require a mandatory contract,</strong> but to obtain correct accounting reports, the conclusion of an agreement is necessary.<br>The agreement also lists the rules for sending messages with the substitution of the sender's name (Sender ID) and responsibility for receiving complaints in the event of spam. <strong>Without a signed contract, you can send such messages only after agreeing on the name of the sender with telecom operators.</strong></p>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="faq002">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">How to top up your balance</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Regardless of the form of your organization (individual, legal entity or private enterprise), you can top up your account in our system using any of the following methods:</p>
+                            <ul>
+                                <li><a class="faq-answer__link" href="services.html#payment-bank-panel">Cashless payment</a> - recommended, but not mandatory payment method for legal entities and individual entrepreneurs. Payment is made by bank transfer against the account.</li>
+                                <li><a class="faq-answer__link" href="services.html#payment-card-panel">Bank cards</a> - to top up with a card, go to your personal account on our website, Home tab → top up your account. Select the appropriate type of replenishment, indicate the replenishment amount and follow further instructions from the system.</li>
+                                <li><a class="faq-answer__link" href="services.html#payment-pay24-panel">Payment via Pay24 terminals</a> - select the section in the terminal menu <strong>Other services</strong>, find in the list of services <strong>SMS mailings Nikita Online</strong>. As details, please provide the phone number in international format that you provided when registering on our website.</li>
+                                <li><a class="faq-answer__link" href="services.html#payment-elsom-panel">Payment via ELSOM electronic wallet</a> - when paying through your personal ELSOM wallet, you must enter the "Other services" section and select from the list of suppliers <strong>SMS mailings Nikita Online</strong>. As details, please provide the phone number in international format that you provided when registering on our website.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq003">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Which operators do you work with?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>We work with all GSM operators in Kyrgyzstan: <strong>Beeline, MegaCom, O!</strong> To check the possibility of delivering messages to your operator, send a free test message from our website. The possibility of sending SMS to Russia, Kazakhstan and other CIS countries and the world, please check with the manager.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq004">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">To which countries can messages be sent?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Technically, we have the ability to send SMS messages to any country in the world. For many foreign countries, the channels of transit operators are used, so there is no 100% guarantee of delivery to all foreign operators. For better stability, you need to have a connection to local operators in each country, which is difficult to find without a lot of traffic to that particular country. And in those countries where traffic grows significantly, we connect more stable channels of local operators.</p>
+                            <p>By default, when you activate your account, you have the opportunity to send messages only to subscribers of cellular networks in Kyrgyzstan. Check with the manager for the possibility of sending SMS messages to the CIS countries, as well as to countries near and far abroad.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq005">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">I send one message, but the amount is debited from my account as for two</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>One long message can be divided into several SMS, for each of which a separate fee is charged. One SMS can contain up to <strong>70</strong> characters with non-Latin characters (for example, in Russian or Kyrgyz) or up to <strong>160</strong> characters with Latin letters only. To transmit a longer message, it is split into several SMS and a special header (UDH) is added to each SMS, allowing the phone to combine the received parts into one long message, and the maximum length of each SMS in this case becomes <strong>67</strong> characters for non-Latin and <strong>153</strong> for Latin letters.</p>
+                            <p>Some characters, for example, "<strong>№`</strong>" are not Latin, therefore messages containing such characters are encoded as messages with non-Latin characters. There are also some special characters for which 2 characters are always used for encoding: "<strong>{}[]^~\|€</strong>". The number of characters, as well as the number of parts into which the message will be divided, is automatically displayed when entering the text of the message on the page for creating a new mailing.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq006">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">What is the maximum length of SMS messages sent</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>The maximum length of one message (in Latin or non-Latin letters) is 800 characters. At the same time, sending a message with NON-Latin characters will require a larger number of SMS for gluing, and accordingly, the cost will be higher.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq007">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">Can I organize SMS distribution from my website?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Yes you can. For this purpose, integration options are provided using scripts over HTTP and SMTP protocols. You can read more about this in the section <a class="faq-answer__link" href="technical.html#tech">Technical capabilities</a>. We also provide clients with the opportunity to use the highly productive SMPP (Short Message Peer-to-Peer) protocol to send SMS messages through our system.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq008">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">How to set your name as the sender of SMS messages</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>All sender names are registered in advance in your personal account and are included by the service moderator after verification and agreement with telecom operators. Enter the required sender's name in the "Add a new name" field on the "My Profile" tab in your personal account. Fill out the form <a class="faq-answer__link" href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls">applications for approval of the sender's name</a> and send it to any of our e-mails.</p>
+                            <p>Once the application is completed, we will submit it to telecom operators for approval. The process of agreeing on the sender's name lasts from 7-10 business days.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq009">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">What are the restrictions on using Sender ID?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Sender ID can only contain capital and small Latin letters [A-Z,a-z], numbers [0-9], space [space] and some punctuation marks: [!@#%*-+.]. The maximum length is 11 letters or 14 numbers.</p>
+                            <p>Sender ID must be unique and accurately identify the Mailing Customer, his company name, brand, trademark of services, goods and works of the Mailing Customer, subject to documentary confirmation from the Mailing Customer of the rights to use the company name, brand, trademark.</p>
+                            <p>Forbidden:</p>
+                            <ul>
+                                <li>indicate as the sender's name short paid numbers, the number of the message recipient, as well as the names of operators, other Internet resources, companies and government organizations;</li>
+                                <li>mislead subscribers by sending messages on someone else’s behalf;</li>
+                                <li>send SMS messages from the same sender's name with information and/or advertising of services/products/works of different legal entities, individuals or individual entrepreneurs;</li>
+                                <li>use the name of the sender, which is contrary to the requirements of the law, its content does not comply with social moral and ethical principles (contains words that offend human dignity, promote violence, racial or national hatred, etc.).</li>
+                            </ul>
+                            <p>Some prohibited options can be activated through the support service after explaining the purposes of use and checking the legality of this option.</p>
+                            <p>Some operators may not support sender name substitution in SMS messages or may only allow a digital Sender ID.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq015">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">What is International Sender Name</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>International sender names include:</p>
+                            <ul>
+                                <li>Alphanumeric names that are used by international payment systems (for example, Visa, MasterCard, AmExpress, Zolotaya Korona, etc.), international electronic wallets and/or payment systems (for example, WebMoney, Qiwi Wallet, etc.), international electronic payment processing platforms (for example, PayPal, etc.), international social networks (for example, facebook, vkontakte, Google+, Odnoklassniki, Twitter, Instagram, Fotostrana, etc.), international OTT applications (for example, Skype, Viber, WhatsApp, etc.), international gaming Internet services (for example, World of Tanks, Gameserver, mobitva.com, etc.), international email services and/or file hosting and/or search engines (for example, Mail.Ru, Yahoo, Rambler.ru, Google, dropmefiles, ifolder.su, exfile.ru and etc.).</li>
+                                <li>Alphanumeric names that are used by international online booking systems (for example, Booking, AirBnB, etc.), foreign airlines (for example, Arab Bank, AirBaltic, and so on).</li>
+                                <li>Alphanumeric names, which consist only of numbers.</li>
+                                <li>Alphanumeric names that consist of symbols/numbers/letters, etc., which in combination have no meaning/content and/or make it impossible to identify the sender.</li>
+                                <li>Alphanumeric names that use common names/concepts, such as "SMS", "Info", etc.</li>
+                                <li>Alphanumeric names for which the Operator has discovered a connection of such an Alphanumeric name with a Web resource of a domain zone of a country other than the Operator’s country.</li>
+                                <li>Alphanumeric names, A2P SMS, which are used to send through SMS gateways (for example, SMS-fly, TurboSMS, LetsAds, ePochta SMS, etc.).</li>
+                                <li>Alphanumeric names, the spelling of which contains the names of Mobile Operators, except for those Mobile Operators that are registered in the Operator’s country.</li>
+                                <li>Other Alphanumeric names that are defined by the Operator as International Alphanumeric names.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq-referral">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">How does the referral program work?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>Invite a client to smspro.nikita.kg through the form in your personal account. After registration and payment of the invited client, a bonus of 2% of his payment is credited to your balance for subsequent mailings.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq010">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">What are the rules regarding mass advertising mailings?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>According to the Law of the Kyrgyz Republic “On Advertising” dated December 24, 1998 No. 155 (as amended and supplemented as of today), sending SMS messages is legal only if you have received the prior consent of your clients that you will use their phone numbers for sending. Otherwise, the SMS you send will be illegal. In this case, advertising is considered distributed without the prior consent of the subscriber or addressee, unless the advertising distributor proves that such consent was obtained.</p>
+                            <p>There are also various legislative provisions governing the protection of copyright and other rights to intellectual property, the protection of individual rights, religious and social beliefs, national dignity operating in the territory of the Kyrgyz Republic, and international law.</p>
+                            <p>Thus, the following are prohibited from mailing:</p>
+                            <ul>
+                                <li>Messages that are contrary to applicable law.</li>
+                                <li>Messages containing threats, insults or extortion.</li>
+                                <li>Advertising messages sent to subscribers without their consent (spam).</li>
+                                <li>Messages encouraging you to send SMS to paid numbers.</li>
+                                <li>Messages that mislead subscribers (sent on someone else's behalf).</li>
+                            </ul>
+                            <p>The easiest way to ensure the legality of your SMS mailings is to provide customers with questionnaires, upon completion of which they will be able to consent to receiving advertising messages. Now such questionnaires are usually filled out when receiving discount cards or discount coupons. Naturally, the questionnaires must be stored all the time while you plan to notify clients using SMS mailings.</p>
+                            <p>You also need to remember that upon the first request of the client, you are obliged to immediately stop sending SMS messages to his phone.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq011">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">In what format should subscriber numbers be specified for sending messages?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>We will analyze any phone format: +996..., 0 (555) ..., etc. But, since our platform can send messages all over the world, it is advisable and best to indicate subscriber phone numbers in an international format. That is, the subscriber number must contain the country code and operator code. For example, a MegaCom subscriber number in international format looks like this: 996550123456.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq012">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">What does this or that status opposite the message mean?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <ul>
+                                <li>"<strong>Sent</strong>" - means that the message has been accepted for processing by the operator's SMS center. After the message's lifetime expires (for different operators, this period can vary from 1 to 7 days), if the subscriber's phone is turned off or is out of reach, the message takes on the status "Not Delivered".</li>
+                                <li>"<strong>Delivered</strong>" - means that a report has been received from the operator about the successful delivery of a message to the subscriber's mobile terminal.</li>
+                                <li>"<strong>Not sent</strong>" - most often, this status means that there are not enough funds on the balance to send this message. It can also mean the following: the recipient's phone number is in an incorrect format or contains an unacceptable number of digits for this operator; a route for sending an SMS message to the specified recipient was not found in the system; the message contains invalid text or is blocked by a spam filter; the message contains an incorrect sender name (Sender ID). Such messages are not charged.</li>
+                                <li>"<strong>Not delivered</strong>" - a report was received from the operator about the impossibility of delivering a message to the subscriber's mobile terminal. This status can arise for several reasons: the subscriber's number is not in the operator's database; the phone has been turned off for a long time or is out of network coverage; the subscriber's number is blocked by the operator or the subscriber himself; the delivery time for this message has expired; the subscriber is in standby mode, etc. Messages with the status "Not Delivered" are charged because they were processed by the operator's SMS center.</li>
+                                <li>"<strong>Rejected</strong>" - the message was rejected by the operator's SMS center. In most cases, problems with message delivery arise when sending SMS through connections to transit (indirect) operators, delivery through which is not guaranteed due to the fact that some end mobile operators can use spam filters to block SMS mailings to their networks sent through the data channels of transit operators. Also, the "Rejected" status may occur if the subscriber's number is blocked by the operator itself, or due to non-existent area code.</li>
+                                <li>"<strong>Unknown</strong>" - the message was sent to the operator's SMS center, but the operator did not receive the status of accepting it for processing. In most cases, problems with message delivery arise when sending SMS through connections to transit (indirect) operators, delivery through which is not guaranteed. Very rare, isolated cases can most often arise during technical work on the equipment of the operators themselves or problems on communication lines. In this case, several attempts will be made to send the message, after which the message will take one of the final statuses.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq013">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">If there are not enough funds to send all mailing messages, will SMS messages be sent after replenishing the balance?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>If some of the mailing messages were not sent due to insufficient balance on the personal account, then such messages receive the status “Not Sent”. This status is final, and messages with this status will not be automatically sent even after the balance is replenished. To send them, you need to go to the "Reports" → "Current period" tab, set a filter by the name of the mailing, select the "Not sent" status and perform "Export to Excel". Then you need to create a new mailing list on the “Mail mailings” tab and upload the resulting xls file to it.</p>
+                        </div>
+                    </div>
+                </details>
+                <details class="faq-item" id="faq014">
+                    <summary class="faq-item__summary"><span class="faq-item__question"><span class="faq-item__icon" aria-hidden="true"></span><span class="faq-item__title">I forgot my password, what should I do?</span></span><span class="faq-item__chevron" aria-hidden="true"></span></summary>
+                    <div class="faq-item__body">
+                        <div class="faq-answer">
+                            <p>By default, the Client can independently recover his login and (or) password by using the “Remind password” link in the upper right corner of the page. The password will be sent to the e-mail specified during registration. If you do not remember your login or e-mail, please contact <a class="faq-answer__link" href="contacts.html#support">site support service</a>.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">LLC "Nikita Online"</h3>
+                    <p class="footer__muted">License GAS KR No. 15-1425-KR dated September 18, 2015</p>
+                    <h3 class="footer__company">LLC "Nikita Mobile"</h3>
+                    <p class="footer__sub">(based on the lease agreement for the software and hardware platform with Nikita Online LLC dated April 15, 2022)</p>
+                    <p class="footer__muted">License GAS KR No. 11-828-KR dated 04/21/2011</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Bishkek, st. Shopokova 89, 5th floor, 9th room.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Nikita Online LLC, Nikita Mobile LLC, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Basement">
+                <div class="footer__nav-primary">
+                    <a href="services.html">Terms and prices</a>
+                    <a href="technical.html">Technical capabilities</a>
+                    <a href="security.html">Reliability and safety</a>
+                    <a href="faq.html">Questions and answers</a>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="#terms">User Agreement</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Connection and commercial issues:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Technical support:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js?v=payment-tabs"></script>
+</body>
+</html>

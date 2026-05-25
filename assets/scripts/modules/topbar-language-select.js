@@ -3,9 +3,9 @@ import { closeModalLayer, openModalLayer } from './modal-transition.js';
 const ASSET_PATH = new URL('../../images/cabinet-modals/', import.meta.url).href;
 
 const LANGUAGES = [
-    { code: 'en', label: 'English', short: 'EN' },
-    { code: 'ky', label: '\u041a\u044b\u0440\u0433\u044b\u0437\u0447\u0430', short: 'KG' },
-    { code: 'ru', label: '\u0420\u0443\u0441\u0441\u043a\u0438\u0439', short: 'RU' },
+    { code: 'ru', short: 'RU', label: '\u0420\u0443\u0441\u0441\u043a\u0438\u0439' },
+    { code: 'ky', short: 'KG', label: '\u041a\u044b\u0440\u0433\u044b\u0437\u0447\u0430' },
+    { code: 'en', short: 'EN', label: 'English' },
 ];
 const POPOVER_LABELS = {
     ru: '\u0412\u044b\u0431\u043e\u0440 \u044f\u0437\u044b\u043a\u0430',
@@ -40,16 +40,16 @@ function getLocaleHref(code) {
 function createLanguagePopover() {
     const currentLocale = getCurrentLocale();
     const popover = document.createElement('div');
-    popover.className = 'cabinet-language-popover';
+    popover.className = 'topbar-language-popover';
     popover.hidden = true;
     popover.setAttribute('role', 'listbox');
     popover.setAttribute('aria-label', POPOVER_LABELS[currentLocale]);
-    popover.setAttribute('data-cabinet-language-popover', '');
+    popover.setAttribute('data-topbar-language-popover', '');
 
     popover.innerHTML = LANGUAGES.map((language) => `
-        <button class="cabinet-language-popover__item${language.code === currentLocale ? ' is-active' : ''}" type="button" role="option" data-cabinet-language-option="${language.code}" aria-selected="${language.code === currentLocale}">
-            <span class="cabinet-language-popover__flag cabinet-language-popover__flag--${language.code}" aria-hidden="true">
-                <img class="cabinet-language-popover__flag-img" src="${ASSET_PATH}flag-${language.code}.png" alt="">
+        <button class="topbar-language-popover__item${language.code === currentLocale ? ' is-active' : ''}" type="button" role="option" data-topbar-language-option="${language.code}" aria-selected="${language.code === currentLocale}">
+            <span class="topbar-language-popover__flag" aria-hidden="true">
+                <img src="${ASSET_PATH}flag-${language.code}.png" alt="">
             </span>
             <span>${language.label}</span>
         </button>
@@ -59,11 +59,24 @@ function createLanguagePopover() {
     return popover;
 }
 
-export function initCabinetLanguageSelect() {
-    const triggers = document.querySelectorAll('[data-cabinet-language-open]');
+function getTriggerLabel(trigger) {
+    return Array.from(trigger.children).find((child) => (
+        child.tagName === 'SPAN' && !child.classList.contains('topbar__flag')
+    ));
+}
+
+function setTriggerFlag(trigger, code) {
+    const flag = trigger.querySelector('.topbar__flag');
+    if (!flag) return;
+
+    flag.dataset.topbarLanguageFlag = code;
+}
+
+export function initTopbarLanguageSelect() {
+    const triggers = document.querySelectorAll('.topbar__lang');
     if (!triggers.length) return;
 
-    const popover = document.querySelector('[data-cabinet-language-popover]') || createLanguagePopover();
+    const popover = document.querySelector('[data-topbar-language-popover]') || createLanguagePopover();
     let activeTrigger = null;
 
     const setPosition = () => {
@@ -118,13 +131,14 @@ export function initCabinetLanguageSelect() {
         const language = LANGUAGES.find((item) => item.code === code);
         if (!language) return;
 
-        document.querySelectorAll('[data-cabinet-language-open]').forEach((trigger) => {
-            trigger.querySelector('[data-cabinet-language-label]').textContent = language.short;
-            trigger.querySelector('[data-cabinet-language-flag]').dataset.cabinetLanguageFlag = code;
+        triggers.forEach((trigger) => {
+            const label = getTriggerLabel(trigger);
+            if (label) label.textContent = language.short;
+            setTriggerFlag(trigger, code);
         });
 
-        popover.querySelectorAll('[data-cabinet-language-option]').forEach((option) => {
-            const isCurrent = option.dataset.cabinetLanguageOption === code;
+        popover.querySelectorAll('[data-topbar-language-option]').forEach((option) => {
+            const isCurrent = option.dataset.topbarLanguageOption === code;
             option.classList.toggle('is-active', isCurrent);
             option.setAttribute('aria-selected', String(isCurrent));
         });
@@ -162,16 +176,17 @@ export function initCabinetLanguageSelect() {
     });
 
     popover.addEventListener('click', (event) => {
-        const option = event.target.closest('[data-cabinet-language-option]');
+        const option = event.target.closest('[data-topbar-language-option]');
         if (!option) return;
 
         event.preventDefault();
-        const href = getLocaleHref(option.dataset.cabinetLanguageOption);
+        const href = getLocaleHref(option.dataset.topbarLanguageOption);
         if (href) {
             window.location.href = href;
             return;
         }
 
+        triggers.forEach((trigger) => trigger.setAttribute('aria-expanded', 'false'));
         closePopover(true);
     });
 }

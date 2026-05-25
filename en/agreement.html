@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita - User Agreement</title>
+    <meta name="description" content="Nikita personal account user agreement.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--agreement" data-cabinet-current-section="agreement">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Account navigation" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Expand menu" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Collapse menu</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Cabinet sections">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Home"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Home</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="My profile"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">My profile</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Newsletters"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Newsletters</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Lists</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API integration"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API integration</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Reports</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP service"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP service</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Templates</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Terms and prices"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Terms and prices</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Technical capabilities"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Technical capabilities</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Reliability and safety"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Reliability and safety</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Questions and answers"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Questions and answers</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Contacts"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Contacts</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Subject">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Log out">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Log out</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>SOM</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Technical support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="Manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Nikita - main">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Contact<br>to technical support</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Contact<br>with the manager</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Language" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Balance" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>SOM</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Notifications" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="My profile">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Konstantin</span>
+                                    <span class="cabinet-status cabinet-status--admin">Administrator</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ LLC “Organization</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>My office → </span><strong data-cabinet-current>User Agreement</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="agreementTitle">User Agreement</h1>
+            </div>
+        </div>
+
+        <main class="cabinet-main cabinet-agreement-main" aria-labelledby="agreementTitle">
+            <article class="cabinet-agreement">
+                <p class="cabinet-agreement__intro">By using this Service (hereinafter referred to as the “Service”), you confirm full agreement with all the terms of this Agreement with the user of the Service (hereinafter referred to as the “Agreement”). If you do not agree to the terms set out below, you must stop using the Service.</p>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">1. General provisions</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>1.1. This Agreement is a public offer in accordance with Article 39 of the Civil Code of the Kyrgyz Republic (KR), addressed to an unlimited number of persons. The person who checks the box “I agree with the terms of the offer agreement” during registration (hereinafter referred to as the CUSTOMER) confirms his agreement with all the conditions set out in this Agreement. In accordance with paragraph 1 of Article 399 of the Civil Code of the Kyrgyz Republic, registration and start of use of the Service is recognized as acceptance of this public offer.</p>
+                        <p>1.2. The validity period of this Agreement begins from the moment of its acceptance by the CUSTOMER. If a bilateral agreement is concluded between the CONTRACTOR and the CUSTOMER, the provisions of such a bilateral agreement will take precedence over the provisions of this Agreement for all clauses of the bilateral agreement and all annexes to it.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">2. Terms and definitions</h2>
+                    <p class="cabinet-agreement__subhead">Unless otherwise specified in this Agreement, terms and definitions have the following meanings:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>2.1. CONTRACTOR - Nikita Online LLC - an organization providing the CUSTOMER with services in the field of electrical communications (telematic services) in accordance with this Agreement on the basis of license GAS KR No. 13-1066-KR dated November 12, 2013.</p>
+                        <p>2.2. CUSTOMER – an individual or legal entity who has accepted the provisions of this Agreement in order to use the services (Service) of the CONTRACTOR in accordance with the provisions of the Agreement.</p>
+                        <p>2.3. Together, the CUSTOMER and CONTRACTOR are referred to as the Parties.</p>
+                        <p>2.4. Subscriber is a person who has a contractual relationship with the Operator.</p>
+                        <p>2.5. Operator – legal entity(ies) providing mobile radiotelephone communication services of the GSM standard.</p>
+                        <p>2.6. Mobile terminal – a mobile radiotelephone device used by the Subscriber in mobile radiotelephone networks of the GSM standard.</p>
+                        <p>2.7. SMS is a short text message containing information in digital text format, which is transmitted by the Operator using its network equipment to the Subscriber’s Mobile terminal. One SMS is an SMS up to 160 Latin characters in length, or up to 70 non-Latin characters in length, or each part of a concatenated message up to 140 bytes in size, or each binary message up to 140 bytes in size. The final fragments of concatenated text or binary messages that are less than 140 bytes in size are counted as separate messages.</p>
+                        <p>2.8. The System is the CONTRACTOR’s information system, a set of software and hardware tools and organizational measures that allows the CUSTOMER to register, generate, send, track the status and receive confirmation of SMS delivery, using the System’s WEB interface and API protocol, to control his account and statistics of transactions with SMS.</p>
+                        <p>2.9. Personal account – an account in the System reflecting the receipt and expenditure of funds of the CUSTOMER.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">3. Subject of the agreement</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>3.1. According to the terms of this Agreement, the CONTRACTOR provides, for a fee to the CUSTOMER, services for sending SMS to Subscribers through Operators by providing access to the System for a certain period in a certain volume in accordance with the current Tariffs published on the Service website at http://smspro.nikita.kg/prices.html, agreed upon by the Parties, and the Rules for the provision of services (Appendix No. 1) (hereinafter referred to as the Services), and the CUSTOMER pays for such services.</p>
+                        <p>3.2. All annexes to this Agreement are an integral part of this Agreement.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">4. Rights and obligations of the parties</h2>
+                    <p class="cabinet-agreement__subhead">4.1. The CONTRACTOR is obliged:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.1.1. Provide Services to the CUSTOMER in accordance with the Rules for the Provision of Services and Tariffs.</p>
+                        <p>4.1.2. Maintain the confidentiality of the CUSTOMER's information received from him during registration in the System and in the process of providing Services, except for cases provided for by the current legislation of the Kyrgyz Republic.</p>
+                    </div>
+                    <p class="cabinet-agreement__subhead">4.1. The CUSTOMER is obliged:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.2.1. Make payment for the Services provided in accordance with the current Tariffs.</p>
+                        <p>4.2.2. It is mandatory to obtain from the Subscriber, to whose phone it is planned to send an SMS with the CUSTOMER's information, consent to receive such messages in a form that can be presented to the Operator and leaves no doubt as unconditional evidence of the Subscriber's voluntariness to receive an SMS with the CUSTOMER's information.</p>
+                        <p>4.2.3. Do not send mass SMS messages in the period from 22:00:00 to 09:00:00 Bishkek time.</p>
+                        <p>4.2.4. Send SMS messages only to those Subscribers who have agreed to receive the relevant SMS messages.</p>
+                        <p>4.2.5. The CUSTOMER bears full responsibility for the content of the content and its contradiction to the legislation of the Kyrgyz Republic. Content must be consistent with social, moral and ethical principles. It is not allowed to send SMS messages that violate the general principles of humanity, as well as messages that offend human dignity, promote violence, racial or national hatred, violate public safety, the foundations of the constitutional order and state security, and the safety of humanity.</p>
+                        <p>4.2.6. Do not send SMS messages containing advertising or information about third parties, or about telecom operators, and any information about the Operator, as well as SMS messages containing false information, Spam, Fraud.</p>
+                        <p>4.2.7. If the CONTRACTOR requires that each SMS sent by the CUSTOMER contains information about the CUSTOMER, fulfill this requirement within 1 (one) business day.</p>
+                        <p>4.2.8. Comply with the Rules for the Provision of Services (Appendix No. 1).</p>
+                    </div>
+                    <p class="cabinet-agreement__subhead">4.3. The CONTRACTOR has the right:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.3.1. Unilaterally change the applicable Tariffs and Rules for the provision of Services (Appendix 1 to this Agreement) with prior notification by email to the CUSTOMER at least 3 (three) calendar days before such changes come into force, except for the case provided for in clause 4.3.2. agreement.</p>
+                        <p>4.3.1.1. If written objections from the CUSTOMER are not received before the new Tariffs or Rules for the provision of Services come into force, the CONTRACTOR continues to provide Services to the CUSTOMER under the new Tariffs or Rules for the provision of Services.</p>
+                        <p>4.3.1.2. If the CUSTOMER disagrees with the new Tariffs and (or) Rules for the provision of Services and notifies the CONTRACTOR about this within 3 (three) calendar days from the date of receipt of the new Tariffs and (or) Rules for the provision of Services, the CUSTOMER has the right</p>
+                        <p>4.3.1.2.1. Do not use the Services until the Tariffs and (or) Rules for the provision of Services are otherwise changed and the CUSTOMER is notified about this; or</p>
+                        <p>4.3.1.2.2. Terminate this Agreement by sending written notice to the CONTRACTOR. In this case, the CONTRACTOR returns to the CUSTOMER the cost of paid and unsent SMS. Refunds, in accordance with this clause of the Agreement, are carried out by the CONTRACTOR within 10 (Ten) business days from the date of receipt of written notice of termination of this Agreement.</p>
+                        <p>4.3.2. In the event of a change in tariffs for the CONTRACTOR by the Operator, the CONTRACTOR has the right to change the Tariffs unilaterally no less than 24 (twenty-four) hours in advance by notifying the CUSTOMER orally by telephone and (or) in writing by email. The CUSTOMER notifies the CONTRACTOR by email of his agreement or disagreement with the new Tariffs within 24 (twenty-four) hours from the date of receipt of information about the new Tariffs.</p>
+                        <p>4.3.2.1. If written objections from the CUSTOMER are not received before the new Tariffs enter into force, the CONTRACTOR continues to provide Services under the new Tariffs.</p>
+                        <p>4.3.2.2. In case of disagreement with the new Tariffs and notifying the CONTRACTOR about this within 24 (twenty-four) hours from the receipt of information about the new Tariffs, the CUSTOMER has the right:</p>
+                        <p>4.3.2.2.1. Do not use the Services until the Tariffs are changed otherwise and the CUSTOMER is notified of this; or</p>
+                        <p>4.3.2.2.2. Terminate this Agreement by sending written notice to the CONTRACTOR. In this case, the CONTRACTOR returns to the CUSTOMER the cost of paid and unsent SMS. Refunds, in accordance with this clause of the Agreement, are carried out by the CONTRACTOR within 10 (Ten) business days from the date of receipt of written notice of termination of this Agreement.</p>
+                        <p>4.3.3. If the CUSTOMER uses up the balance of funds on his Personal account (and if the CUSTOMER is provided with a credit limit, the credit limit is used up), stop providing Services to the CUSTOMER. The provision of Services is resumed after payment for the Services (and if the credit limit has been spent, upon payment for the Services and the amount of the credit limit) by the CUSTOMER in accordance with the Tariffs.</p>
+                        <p>4.3.4. Request from the CUSTOMER that all SMS messages sent by the CUSTOMER contain information about the CUSTOMER. The type of information (telephone, email, WEB or WAP site address) is agreed with the CONTRACTOR.</p>
+                        <p>4.3.5. Suspend the fulfillment of its obligations under this Agreement if the requirement provided for in clause 4.3.4. Agreement will not be fulfilled within the time limits established in clause 4.2.3. Agreements. The resumption of the provision of Services occurs within one business day after the CUSTOMER fulfills the above requirement and notifies the CONTRACTOR about this.</p>
+                    </div>
+                    <p class="cabinet-agreement__subhead">4.4. The CUSTOMER has the right:</p>
+                    <div class="cabinet-agreement__copy">
+                        <p>4.4.1. Require the CONTRACTOR to provide Services in accordance with the terms of this Agreement and the Rules for the Provision of Services (Appendix No. 1).</p>
+                        <p>4.4.2. Through the System, receive information about the status of SMS sent for sending.</p>
+                        <p>4.4.3. In any available way, bring to the attention of the Subscriber, the recipient of the SMS message, information about the possibility and method by which he can refuse to further receive SMS sent through the System.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">5. Price of services and payment procedure</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>5.1. The CUSTOMER pays for the Services provided under this Agreement in the manner and on the terms specified in this Agreement and in accordance with the tariffs.</p>
+                        <p>5.2. Payment for all Services provided to the CUSTOMER is made by payments in soms by replenishing the personal account in the CONTRACTOR's System through online payment systems available to the CUSTOMER on the System's website, which are the CONTRACTOR's agents for accepting payments.</p>
+                        <p>5.3. The CUSTOMER has the right to authorize a third party to fulfill the CUSTOMER’s monetary obligations under this Agreement, and the CONTRACTOR is obliged to accept such fulfillment. If such a third party (hereinafter referred to as the PAYER) fulfills the monetary obligations of the CUSTOMER on its own behalf, then in this case this third party will be considered to have entered into an agreement with the CUSTOMER, within the framework of which the PAYER assumes the obligation to fulfill the monetary obligations of the CUSTOMER to the CONTRACTOR in full, and the CONTRACTOR agrees to transfer the debt in favor of the PAYER in case of immediate execution THE PAYER of its monetary obligations to the CONTRACTOR or its paying agent.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">6. Personal data</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>6.1. Each of the Parties is the owner of an array of personal data, including those processed as part of the fulfillment of obligations under the Agreement. For the purposes of the Agreement, personal data means information that is such in accordance with the legislation of the Kyrgyz Republic and relates to employees, other representatives of the Parties, including those directly involved in the execution of the Agreement, and third parties whose data is transferred to the other Party.</p>
+                        <p>6.2. The transfer of personal data is not considered by the Parties as an order to process personal data.</p>
+                        <p>6.3. Each Party ensures the confidentiality of personal data received under the Agreement from the other Party, compliance with the requirements for the processing of personal data in accordance with the applicable legislation of the Kyrgyz Republic, and is responsible for taking all necessary legal, organizational and technical measures to protect personal data from unauthorized or accidental access to it, destruction, modification, blocking, copying, distribution of personal data, as well as from other unlawful actions with such data.</p>
+                        <p>6.4. Responsibility for the legality and reliability of the personal data provided by the Parties to each other for the purpose of fulfilling the Agreement, as well as for obtaining the consent of the subjects to transfer their personal data to the other Party in the manner prescribed by the legislation of the Kyrgyz Republic, rests with the Party transmitting the personal data.</p>
+                        <p>6.5. The Party that received personal data from the other Party does not undertake the obligation to inform the subjects whose personal data was transferred to it about the beginning of their processing, since the obligation to provide appropriate information upon obtaining consent to such a transfer lies with the Party that transferred the personal data.</p>
+                        <p>6.6. The Party receiving personal data has the right, in order to fulfill the Agreement, to the extent necessary for this purpose, to involve persons affiliated with such Party in the processing of the received personal data.</p>
+                        <p>6.7. At the same time, the Parties acknowledge that the Services provided through the SMSPRO.NIKITA.KG Service under this Agreement cannot be provided to Users who have not provided or have withdrawn their consent to the processing of their personal data in the manner prescribed by the legislation of the Kyrgyz Republic.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">7. Responsibility of the parties and dispute resolution procedure</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>7.1. The CUSTOMER agrees that the quality of service provision may be negatively affected by such factors as physical barriers preventing the propagation of radio waves, weather and atmospheric phenomena, cases of radio interference, as well as accidents in telecommunication networks and sites to which the CONTRACTOR is connected. The parties agreed that the CONTRACTOR is not responsible for the inadequate quality of services arising for the reasons listed in this paragraph.</p>
+                        <p>7.2. The CUSTOMER's claims to the Services provided are accepted by the CONTRACTOR for consideration in writing by email to the following addresses: info@nikita.kg, smspro@nikita.kg, no later than 3 business days from the moment the dispute arises. The period for consideration of the CUSTOMER's claims is no more than 14 (fourteen) working days.</p>
+                        <p>7.3. If the CUSTOMER makes a justified claim about the impossibility of using the CONTRACTOR'S Services due to the CONTRACTOR's fault, and confirmation of the circumstances specified by the CUSTOMER in the complaint, the CONTRACTOR returns the funds received from the CUSTOMER minus the cost of the sent SMS. Refunds are made within 10 days upon receipt of a written application from the CUSTOMER indicating the CUSTOMER's comprehensive identification data (passport of an individual or full details of a legal entity). The balance of unused funds is returned minus the amounts for payment for the Services that the CUSTOMER has used since the acceptance of this Agreement, as well as the amounts owed under the Agreement.</p>
+                        <p>7.4. The CONTRACTOR is not responsible for the content of SMS messages sent by the CUSTOMER using the System.</p>
+                        <p>7.5. When the CONTRACTOR receives information about the CUSTOMER's violation of clauses 7, clause 8, clause 9 of the Rules for the Provision of Services (Appendix No. 1), the CONTRACTOR immediately suspends the provision of Services, then within 24 hours notifies the CUSTOMER of the suspension of services and conducts an internal investigation with the involvement of the CUSTOMER.<br>If the fact of violation is confirmed, the CONTRACTOR has the right, at his choice:<br>- terminate this Agreement unilaterally by closing the CUSTOMER’s access to the System, charging the CUSTOMER a penalty in the amount of the cost of unsent SMS messages, and if the CUSTOMER used a credit limit - in the amount of double the cost of the credit limit;<br>- after consultations with the CUSTOMER, resume the provision of Services. In this case, the CONTRACTOR has the right to unilaterally change the terms of this Agreement and its Appendices.<br>If the fact of violation is not confirmed as a result of an internal investigation with the involvement of the CUSTOMER, then the CONTRACTOR resumes the provision of services.</p>
+                        <p>7.6. In case of violation by the CUSTOMER of clauses 4.2.3., 4.2.4., 4.2.5 and 4.2.6. Agreement The Local Partner pays the Operator a fine in the amount of 10,000 (ten thousand) soms for each SMS message sent with such a violation.</p>
+                        <p>7.7. In case of unauthorized use of the Alpha name, the CUSTOMER pays for all non-targeted traffic at the rate of 1 USD for 1 SMS, and also pays a fine in the amount of 20,000 soms for each SMS message sent with such a violation.</p>
+                        <p>7.8. The CUSTOMER undertakes to compensate, within fifteen days from the date of request, to the CONTRACTOR all damage caused by the CUSTOMER’s actions in the System and the provision of Services under this Agreement.</p>
+                        <p>7.9. The CUSTOMER undertakes to compensate the CONTRACTOR for losses caused by any payments that may be recovered from the CONTRACTOR due to violations by the CUSTOMER during the execution of this Agreement of the current legislation, including copyright and other rights to intellectual property of third parties, as well as due to claims to the accuracy and content of SMS sent using the System, subject to submission by the CONTRACTOR to the CUSTOMER of relevant documents indicating that the specified damage has been caused to the CONTRACTOR. The CUSTOMER undertakes to reimburse the CONTRACTOR for fines and legal fees in the event that the CONTRACTOR is brought to administrative or other liability by a government agency in connection with the CUSTOMER's actions in the System and the provision of services under this Agreement.</p>
+                        <p>7.10. The CONTRACTOR undertakes to compensate, within fifteen days from the date of the CUSTOMER's request, the actual damage caused to the latter by the incorrect operation of the CONTRACTOR's System, subject to the CUSTOMER providing written confirmation of such damage.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">8. Special conditions</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>8.1. The Customer has the right to involve third parties in fulfilling the obligations that are the subject of this Agreement, provided that these persons maintain confidentiality conditions.</p>
+                        <p>8.2. This Agreement, including all Exhibits, supersedes any other prior agreements, written or oral, relating to the subject matter of this Agreement.</p>
+                    </div>
+                </section>
+
+                <section class="cabinet-agreement__section">
+                    <h2 class="cabinet-agreement__heading">9. Details of the performer</h2>
+                    <dl class="cabinet-agreement__requisites">
+                        <div class="cabinet-agreement__requisite-row"><dt>Name:</dt><dd>LLC "Nikita Online"</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Taxpayer Identification Number: </dt><dd>02608201310139</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Legal address: </dt><dd>720073, Kyrgyz Republic, Bishkek, 5 microdistrict, building 80, apt. 40.</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Postal address: </dt><dd>720021, Kyrgyz Republic, Bishkek, st. Shopokova 89 (Mega-Comfort shopping center), 5th floor, 9th room.</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Bank: </dt><dd>CJSC "Kyrgyz Investment and Credit Bank"</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Current account: </dt><dd>1280016006829520</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>BIC: </dt><dd>128001</dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>E-mail: </dt><dd><a href="mailto:info@nikita.kg">info@nikita.kg</a></dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>Telephone: </dt><dd><a href="tel:+996312901661">+996 312 90-16-61</a></dd></div>
+                        <div class="cabinet-agreement__requisite-row"><dt>General manager: </dt><dd>Sydykov T.A.</dd></div>
+                    </dl>
+                </section>
+
+                <section class="cabinet-agreement__appendix">
+                    <h2 class="cabinet-agreement__heading">Appendix No. 1: Rules for the provision of services</h2>
+                    <div class="cabinet-agreement__copy">
+                        <p>1. Upon registration, the CUSTOMER receives an individual username and password that allows access to the protected area of ​​the CONTRACTOR’s system. At the CUSTOMER's request, access to the CONTRACTOR's system via API can be blocked for all IP addresses except those specified by the CUSTOMER.</p>
+                        <p>2. As the sender’s name in sent messages, the CUSTOMER can only use the mobile phone number specified and confirmed during registration in the System. Any additional name of the sender can be used only after its approval by the CONTRACTOR.</p>
+                        <p>3. The CONTRACTOR blocks the agreed sender name if there have been no SMS messages sent from the specified sender name in the last 3 months.</p>
+                        <p>4. The CONTRACTOR provides the Services paid for by the CUSTOMER. The transfer of information (SMS text, phone number, etc.) occurs from the CUSTOMER to the CONTRACTOR via the Internet. The transfer protocol is additionally agreed upon with the CUSTOMER.</p>
+                        <p>5. The CONTRACTOR also provides a technical support service, which operates only during business hours (10:00 – 19:00) and weekdays (5/7): by e-mail smspro@nikita.kg.</p>
+                        <p>6. Services are provided around the clock in the territory of the Kyrgyz Republic. The CONTRACTOR is not responsible for interruptions in the provision of Services related to maintenance work, routine maintenance, as well as for interruptions in the event of the following situations: power supply problems, fires, terrorist attacks and other situations. The CONTRACTOR informs the CUSTOMER about the scheduled technical work at least one calendar day in advance.</p>
+                        <p>7. The CUSTOMER must ensure the confidentiality of the password assigned to him. The CONTRACTOR is not liable to the CUSTOMER for any losses incurred by the CUSTOMER due to the loss of his password.</p>
+                        <p>8. The CUSTOMER undertakes to use the Service in accordance with the norms of the legislation of the Kyrgyz Republic on advertising and only to transmit information to Subscribers from whom consent has been obtained to receive such messages in a form that can be presented to the Operator and leaves no doubt as unconditional evidence of the Subscriber’s voluntariness to receive an SMS with the CUSTOMER’s information</p>
+                        <p>9. The CUSTOMER guarantees that the content of the Service complies with the norms of the current legislation of the Kyrgyz Republic, including the norms of laws on the protection of copyright and other rights to intellectual property, on advertising in force in the territory of the Kyrgyz Republic, legislation on the protection of individual rights, religious and social beliefs, national dignity, as well as generally recognized norms of international law.</p>
+                        <p>10. The CUSTOMER undertakes not to use the Service to distribute unsolicited information that is unnecessary to the recipient: in particular, the following actions are unacceptable:<br>• Mass mailing of SMS not previously agreed upon with recipients. Bulk mailing means both mailing to multiple recipients and multiple mailing to one recipient.<br>• Distribution of information to recipients who have previously expressed a clear reluctance to receive this information</p>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Nikita Online LLC,</span>
+                <span>Nikita Mobile LLC, 2014-2025</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html" aria-current="page">User Agreement</a> | <a href="security.html#bezop">Privacy Policy</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Account menu" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Subject">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Light theme" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Dark theme" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Log out</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Close menu" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Account menu">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Home</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Newsletters</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Lists</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API integration</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Reports</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP service</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider" href="templates.html" data-cabinet-nav data-section="templates"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Templates</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Terms and prices</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Technical capabilities</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Reliability and safety</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Questions and answers</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Contacts</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Bottom navigation of the account">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Home</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Newsletters</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Lists</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API integration</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Reports</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP service</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="templates.html" data-cabinet-nav data-section="templates">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Templates</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Menu</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>

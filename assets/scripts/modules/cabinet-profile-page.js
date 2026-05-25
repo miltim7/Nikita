@@ -1,5 +1,9 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
 
+const ICON_SPRITE = new URL('../../images/cabinet-icons.svg', import.meta.url).href;
+const CHEVRON_UP_ICON = new URL('../../images/cabinet-profile/chevron-up.svg', import.meta.url).href;
+const CHEVRON_DOWN_ICON = new URL('../../images/cabinet-profile/chevron-down.svg', import.meta.url).href;
+
 let profileToastTimer = null;
 let passwordModal = null;
 let activePasswordTrigger = null;
@@ -95,9 +99,7 @@ function setSectionExpanded(section, expanded, { animate = false } = {}) {
     if (toggle) toggle.setAttribute('aria-expanded', String(expanded));
     if (label) label.textContent = expanded ? 'Свернуть' : 'Развернуть';
     if (icon) {
-        icon.src = expanded
-            ? 'assets/images/cabinet-profile/chevron-up.svg'
-            : 'assets/images/cabinet-profile/chevron-down.svg';
+        icon.src = expanded ? CHEVRON_UP_ICON : CHEVRON_DOWN_ICON;
     }
 
     if (!panel) {
@@ -317,7 +319,7 @@ function createPasswordModal() {
             <div class="cabinet-profile-modal__head">
                 <h2 class="cabinet-profile-modal__title" id="profilePasswordModalTitle">Изменить пароль</h2>
                 <button class="cabinet-profile-modal__close" type="button" aria-label="Закрыть" data-profile-password-close>
-                    <svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-modal-close"></use></svg>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="${ICON_SPRITE}#icon-modal-close"></use></svg>
                 </button>
             </div>
             <form class="cabinet-profile-modal__form" data-profile-password-form>

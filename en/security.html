@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — Reliability and safety</title>
+    <meta name="description" content="Legality, technical reliability, data security and pricing policy of the Nikita SMS platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body class="page-security">
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Additional navigation">
+                <a href="services.html" class="topbar__link">Terms and prices</a>
+                <a href="technical.html" class="topbar__link">Technical capabilities</a>
+                <a href="security.html" class="topbar__link topbar__link--active">Reliability and safety</a>
+                <a href="faq.html" class="topbar__link">Questions and answers</a>
+                <a href="contacts.html" class="topbar__link">Contacts</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Login / Register</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Nikita - main">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-support.svg" alt=""></span>
+                        <span class="header__link-text">Contact<br>to technical support</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true"><img src="../assets/images/header-icon-chat.svg" alt=""></span>
+                        <span class="header__link-text">Contact<br>with the manager</span>
+                    </a>
+                </div>
+                <a href="contacts.html" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Try the demo for free</span>
+                    <span class="header__cta-short">Demo</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Main menu">
+        <a href="services.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt=""></span>
+            <span>Terms and prices</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt=""></span>
+            <span>Technical capabilities</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt=""></span>
+            <span>Reliability and safety</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt=""></span>
+            <span>Questions and answers</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true"><img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt=""></span>
+            <span>Contacts</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+    <section class="security-page" id="security">
+        <div class="security-page__breadcrumbs container-xxl" aria-label="bread crumbs">
+            <span>Home → </span><strong>Reliability and safety</strong>
+        </div>
+
+        <div class="security-page__head container-xxl">
+            <h1 class="security-page__title">reliability and safety</h1>
+            <nav class="security-tabs" aria-label="Reliability Sections" data-security-tabs>
+                <a href="#legal" class="security-tabs__item security-tabs__item--active" aria-current="true">Legality</a>
+                <a href="#tehnad" class="security-tabs__item">Reliability</a>
+                <a href="#bezop" class="security-tabs__item">Safety</a>
+                <a href="#udob" class="security-tabs__item">Convenience</a>
+                <a href="#prices" class="security-tabs__item">Pricing policy</a>
+                <a href="#finish" class="security-tabs__item">About the company</a>
+                <span class="security-tabs__fill" aria-hidden="true"></span>
+            </nav>
+        </div>
+
+        <div class="security-tabpanels">
+            <section class="security-tabpanel security-tabpanel--active">
+                <div class="security-stack">
+                    <section class="security-legality container-xxl" id="legal" aria-labelledby="security-legality-title">
+                        <div class="security-legality__copy">
+                            <h2 id="security-legality-title">legality</h2>
+                            <p>When choosing an SMS service provider, you cannot rely only on the proposed cost of SMS messages.<br>After all, by sending SMS messages you trust your partner with the contacts of your clients!<br>In addition, cheap SMS gateways are not always able to provide decent quality of service and full functionality.<br><br>Yes, having our own SMS platform we can truly offer <a class="security-inline-link text-blue" href="services.html">low prices for SMS mailings,</a> however, we advise you to also pay attention to our other advantages.</p>
+                            <p>By carrying out any mass mailings, you and I carry out activities strictly regulated by several laws of the Kyrgyz Republic, including the law on advertising and the law on communications, as well as the standards and requirements of cellular operators.<br><br><strong>We make every effort to act within the law.</strong></p>
+                            <p>We have the necessary <a class="security-inline-link text-blue" href="../assets/images/security/license-certificate.png" target="_blank" rel="noopener">license</a> for Telematic communication services, we work with contractors only under official contracts that reflect all legal requirements. We fight SPAM and fraud, i.e. We produce only the so-called "Address mailings".<br><br>And that is why for our clients we open the function of replacing the sender’s number only if there is a signed agreement.</p>
+                        </div>
+                        <aside class="security-license" aria-label="License LLC Nikita Online">
+                            <img class="security-license__image" src="../assets/images/security/license-certificate.png" alt="License LLC Nikita Online">
+                            <a class="security-license__zoom" href="../assets/images/security/license-certificate.png" target="_blank" rel="noopener" aria-label="Increase license">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+                                    <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+                                </svg>
+                            </a>
+                        </aside>
+                    </section>
+
+                    <section class="security-reliability" id="tehnad" aria-labelledby="security-reliability-title">
+                        <div class="security-reliability__inner container-xxl">
+                            <div class="security-reliability__head">
+                                <h2 id="security-reliability-title">Technical reliability</h2>
+                                <p>We have two serious advantages:</p>
+                            </div>
+                            <div class="security-reliability__cards security-reliability__cards--top">
+                                <article class="security-reliability-card">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--utilities" aria-hidden="true"></span>
+                                    <p>Own software and hardware base</p>
+                                </article>
+                                <article class="security-reliability-card">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--person" aria-hidden="true"></span>
+                                    <p>Technical staff with experience in creating provider systems with more than 10 years of experience.</p>
+                                </article>
+                            </div>
+                            <div class="security-reliability__note">
+                                <h3>From technical failures <br class="security-reliability__mobile-break">no one is immune.<br>But we tried to prepare <br class="security-reliability__mobile-break">to the main risks!</h3>
+                                <p>We have two serious advantages:</p>
+                            </div>
+                            <div class="security-reliability__cards">
+                                <article class="security-reliability-card security-reliability-card--risk">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--renew" aria-hidden="true"></span>
+                                    <div>
+                                        <h4>Reserve SMS delivery channels </h4>
+                                        <p>(in case of an accident on one of the channels, we will deliver your SMS message through another channel)</p>
+                                    </div>
+                                </article>
+                                <article class="security-reliability-card security-reliability-card--risk">
+                                    <span class="security-reliability-card__icon security-reliability-card__icon--settings" aria-hidden="true"></span>
+                                    <div>
+                                        <h4> Reserve servers and databases </h4>
+                                        <p>(in the event of an accident on the equipment or in the Data Center, we will activate backup equipment in an alternative data center. In this case, your data will be saved)</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="security-reliability__diagram-group">
+                                <div class="security-diagram-wrap">
+                                    <div class="security-diagram" aria-hidden="true"></div>
+                                </div>
+                                <a href="technical.html#architecture-title" class="btn btn-cta security-reliability__button">
+                                    <span>More about architecture</span>
+                                    <span class="security-reliability__button-arrow" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="security-convenience container-xxl" id="udob" aria-labelledby="security-convenience-title">
+                        <div class="security-convenience__intro">
+                            <h2 id="security-convenience-title">Convenience and automation of work</h2>
+                            <p>The ability to not only inform your clients via SMS, but also collect statistics, manage mailings and automate regular sendings.</p>
+                        </div>
+                        <div class="security-convenience__grid">
+                            <div class="security-capability-list">
+                                <h3>When sending mailings from our website, you will be able to:</h3>
+                                <div class="security-benefit-list">
+                                    <article class="security-benefit-card">
+                                        <span class="security-check" aria-hidden="true"></span>
+                                        <div><h4>Upload your customer database in Excel format. </h4><p>At the same time, we will analyze any phone format and +996... and 0 (555) ...<br>etc. And in case of erroneous numbers, we will provide you with a detailed error report.</p></div>
+                                    </article>
+                                    <article class="security-benefit-card">
+                                        <span class="security-check" aria-hidden="true"></span>
+                                        <div><h4>Repeat any previously sent mailing, changing only the text or list of recipients if necessary. </h4><p>Recipients can be filtered by gender and age.</p></div>
+                                    </article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Automatically insert the recipient's name into the SMS text</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Schedule a delayed mailing</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>Send out gradually so that subscribers receive your messages evenly over several hours</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>View delivery reports</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>View the history of sends to a specific phone number<br>and/or block the recipient</h4></article>
+                                    <article class="security-benefit-card"><span class="security-check" aria-hidden="true"></span><h4>View the history of financial settlements</h4></article>
+                                </div>
+                                <p class="security-capability-list__note">...And many other convenient and useful little things</p>
+                            </div>
+                            <aside class="security-integration">
+                                <h3>When integrated with our platform<br>you will receive:</h3>
+                                <div class="security-integration__list">
+                                    <p>Access to a convenient and thoughtful XML protocol</p>
+                                    <p>Access to WEB service (SOAP protocol, WSDL) for integration with 1C<br>and other automation systems.</p>
+                                    <p>Access to professional SMPP protocol</p>
+                                    <p>Ability to send SMS by simply sending an e-mail</p>
+                                    <p>2 options for receiving delivery reports<br>(event or on request)</p>
+                                    <p>Clear documentation and connection examples in JSP and PHP</p>
+                                </div>
+                                <div class="security-integration__downloads">
+                                    <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api.pdf">XML protocol</a>
+                                    <a href="https://smspro.nikita.kg/kg/documents/smpp-v3.4-issue1.2.pdf">SMPP protocol</a>
+                                    <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-email2sms-api.pdf">Email protocol</a>
+                                    <a href="http://smspro.nikita.kg/api/soap?wsdl">WSDL for WEB services</a>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="security-api-row">
+                            <h3>HTTP-XML-API connection examples:</h3>
+                            <div class="security-api-row__cards">
+                                <a href="https://smspro.nikita.kg/kg/documents/PHPexample.zip">In PHP</a>
+                                <a href="https://smspro.nikita.kg/kg/documents/JSPexample.zip">In Java</a>
+                                <a href="https://smspro.nikita.kg/kg/documents/PYexample.zip">In Python</a>
+                                <a href="https://smspro.nikita.kg/kg/documents/NJSexample.zip">On NodeJS</a>
+                            </div>
+                        </div>
+                        <section class="security-more" aria-labelledby="security-more-title">
+                            <h3 id="security-more-title">Besides</h3>
+                            <div class="security-more__grid">
+                                <article class="security-more__card">
+                                    <span class="security-more__icon security-more__icon--balance" aria-hidden="true"></span>
+                                    <div class="security-more__text">
+                                        <p><strong>We have developed a cost forecasting system!</strong></p>
+                                        <p>It is for you, depending on the dynamics of your mailings, that we will remind you in advance of the need to replenish your account at the right time.</p>
+                                    </div>
+                                </article>
+                                <article class="security-more__card">
+                                    <span class="security-more__icon security-more__icon--document" aria-hidden="true"></span>
+                                    <div class="security-more__text">
+                                        <p>Immediately after the end of the next month we <strong>We will automatically send a scan of a certified certificate of services performed for your accounting department,</strong> and you can create your next invoice yourself by pressing one button.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="security-data" id="bezop" aria-labelledby="security-data-title">
+                        <div class="security-data__inner container-xxl">
+                            <h2 id="security-data-title">Security of your data</h2>
+                            <p>Your website is deployed on a secure server using all necessary measures, including ours. To prevent third party access, we do not transfer your customer base to external contractors.</p>
+                            <a href="contacts.html#commercial" class="btn btn-cta security-data__button">Get security advice<span aria-hidden="true"></span></a>
+                        </div>
+                    </section>
+
+                    <section class="security-price container-xxl" id="prices" aria-labelledby="security-price-title">
+                        <div class="security-price__copy">
+                            <h2 id="security-price-title">Prices</h2>
+                            <p>In our experience, the cost of the service is a secondary criterion when choosing an SMS service provider - <strong>the quality of the service is much more important.</strong></p>
+                            <p>But, nevertheless, we can offer our clients prices below the market average and without sacrificing quality.<br><br>In addition, we are always ready to meet our customers and provide <strong>significant discounts</strong> for large and/or regular purchases of SMS services. <strong class="text-orange">Check with our managers about the possibility of a discount.</strong></p>
+                            <p>International ones include alphanumeric names that are used by international brands, payment systems, international electronic wallets and/or payment systems (for example, WebMoney, Qiwi Wallet, etc.), international social networks, international gaming Internet services, international email services, file hosting services, search engines (for example, Mail.Ru, Yahoo, Rambler.ru, Google, etc.).</p>
+                        </div>
+                        <aside class="security-price-card">
+                            <h3>For sent<span class="security-price-card__desktop-break"><br></span> or delivered?</h3>
+                            <p><strong>We count sent SMS messages.</strong> It’s more convenient for us because Each, even erroneous, SMS has its own cost for us.<span class="security-price-card__desktop-gap"><br><br></span> But it is important to know that the level of actual deliveries in our system is about <strong>99.9%!</strong></p>
+                            <p>If you try to send an SMS to an incorrect phone number (outside the acceptable range), we will not accept this SMS for sending and <strong>We won’t charge it.</strong></p>
+                        </aside>
+                    </section>
+
+                    <section class="security-company container-xxl" id="finish" aria-labelledby="security-company-title">
+                        <div class="security-company__box">
+                            <h2 id="security-company-title">About the company</h2>
+                            <p><strong>The Nikita company, from the beginning of 2006 to the present, is the leader in the mobile content market in Kyrgyzstan in the field of IVR and SMS services. </strong></p>
+                            <p>The company works with all mobile operators in the country: Alfa Telecom (TM MegaCom), Sky Mobile (TM Beeline), Nurtelecom (TM O!), Seven Mobile (TM Fonex), Sotel (TM Nexi).</p>
+                        </div>
+                    </section>
+
+                    <section class="security-company-services container-xxl" aria-labelledby="security-company-services-title">
+                        <h2 id="security-company-services-title">Currently, our company provides a number of information and entertainment services based on the following technologies:</h2>
+                        <div class="security-company-services__list">
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>SMS marketing/direct mailings</h3><p>Addressed mailings to GSM telecom operators. Among our clients: banks, credit organizations, shops, catering establishments, taxi services and a number of other clients;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>IVR, voice portal “Call!” </h3><p>(Pranks, Downloading melodies and applications, Dating, Anecdotes, Confessions, Congratulations, Voice Changer - Laugh Challenge, Background Music - Alibi, etc.);</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>SMS premium numbers - access to various digital content</h3><p>(games TankiOnline, WorldOfTanks, WorldOfWarShips, Worldofwarplanes, etc. videos, photos, etc.), to social networks Odnoklassniki, Mail.ru, Vkontakte, etc. (purchase of virtual currency, etc.). Interactive SMS projects on TV and Radio, etc.;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>SMS mobile marketing promotions </h3><p>with such trademarks as “Miracle” (dairy products), “Tea Piala”, “Mc-Coffee”, “Sobranie” (Gallagher); “WEST” (Reemtsma-Kyrgyzstan), TM “Vodoffka” (ArVin), Pepsi Cola, KitKat, Coca-Cola, Frima, Tea “Rakhmet”, “Baltika 7”, MacCoffee, etc.;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>JAVA, Android, iOS – applications</h3><p>(Map of routes in Bishkek, Kyrgyz-English-Russian dictionary, etc.);</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>RBT content</h3><p>Works by national, Russian and foreign performers;</p></div></article>
+                            <article class="security-company-card"><span class="security-check" aria-hidden="true"></span><div><h3>Nikita company also supplies all GSM operators in Kyrgyzstan with a software product: “GPRS/MMS/WAP auto settings”. </h3><p>Update of phone databases, at least once a month, automatic detection of phone model by IMEI code, etc. Thanks to this product, subscribers do not have problems setting up the Internet for a mobile terminal.</p></div></article>
+                        </div>
+                        <p class="security-company-services__note">Nikita provides exclusively licensed content, the distribution of which has permission from its copyright holders.</p>
+                    </section>
+                </div>
+            </section>
+
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">LLC "Nikita Online"</h3>
+                    <p class="footer__muted">License GAS KR No. 15-1425-KR dated September 18, 2015</p>
+                    <h3 class="footer__company">LLC "Nikita Mobile"</h3>
+                    <p class="footer__sub">(based on the lease agreement for the software and hardware platform with Nikita Online LLC dated April 15, 2022)</p>
+                    <p class="footer__muted">License GAS KR No. 11-828-KR dated 04/21/2011</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Bishkek, st. Shopokova 89, 5th floor, 9th room.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Nikita Online LLC, Nikita Mobile LLC, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Basement">
+                <div class="footer__nav-primary">
+                    <a href="services.html">Terms and prices</a>
+                    <a href="technical.html">Technical capabilities</a>
+                    <a href="security.html">Reliability and safety</a>
+                    <a href="faq.html">Questions and answers</a>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="services.html#contract">User Agreement</a>
+                    <a href="#bezop">Privacy Policy</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Connection and commercial issues:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Technical support:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js?v=security-tabs"></script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никита - Калыптар</title>
+    <meta name="description" content="Никита жеке аккаунтунун билдирүү үлгүлөрү.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/cabinet.css">
+</head>
+<body class="cabinet-page cabinet-page--templates" data-cabinet-current-section="templates">
+    <aside class="cabinet-sidepanel cabinet-sidepanel--full-short cabinet-page__sidepanel" aria-label="Каттоо эсебин багыттоо" data-cabinet-sidepanel>
+        <div class="cabinet-sidepanel__top cabinet-sidepanel__top--short">
+            <button class="cabinet-sidepanel__toggle cabinet-sidepanel__toggle--short" type="button" aria-label="Менюну жайыңыз" aria-expanded="false" data-cabinet-sidepanel-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-chevron"></use></svg>
+                <span class="cabinet-sidepanel__toggle-label">Менюну жыйыштыруу</span>
+            </button>
+        </div>
+        <nav class="cabinet-sidepanel__nav" aria-label="Кабинеттин бөлүмдөрү">
+            <a class="cabinet-sidepanel__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Үй"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Үй</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="Менин профилим"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">Менин профилим</span></a>
+            <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Маалымат бюллетендери"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Маалымат бюллетендери</span></a>
+            <a class="cabinet-sidepanel__item" href="lists.html" data-cabinet-nav data-section="lists" aria-label="Тизмелер"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Тизмелер</span></a>
+            <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API интеграциясы"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API интеграциясы</span></a>
+            <a class="cabinet-sidepanel__item" href="reports.html" data-cabinet-nav data-section="reports" aria-label="Отчеттор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span class="cabinet-sidepanel__item-label">Отчеттор</span></a>
+            <a class="cabinet-sidepanel__item" href="otp.html" data-cabinet-nav data-section="otp" aria-label="OTP кызматы"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span class="cabinet-sidepanel__item-label">OTP кызматы</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-label="Шаблондор" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span class="cabinet-sidepanel__item-label">Шаблондор</span></a>
+            <a class="cabinet-sidepanel__item" href="services.html" aria-label="Шарттар жана баалар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span class="cabinet-sidepanel__item-label">Шарттар жана баалар</span></a>
+            <a class="cabinet-sidepanel__item" href="technical.html" aria-label="Техникалык мүмкүнчүлүктөр"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span class="cabinet-sidepanel__item-label">Техникалык мүмкүнчүлүктөр</span></a>
+            <a class="cabinet-sidepanel__item" href="security.html" aria-label="Ишенимдүүлүк жана коопсуздук"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span class="cabinet-sidepanel__item-label">Ишенимдүүлүк жана коопсуздук</span></a>
+            <a class="cabinet-sidepanel__item" href="faq.html" aria-label="Суроолор жана жооптор"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span class="cabinet-sidepanel__item-label">Суроолор жана жооптор</span></a>
+            <a class="cabinet-sidepanel__item cabinet-sidepanel__item--divider" href="contacts.html" aria-label="Байланыштар"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span class="cabinet-sidepanel__item-label">Байланыштар</span></a>
+        </nav>
+        <div class="cabinet-sidepanel__bottom cabinet-sidepanel__bottom--full-short">
+            <div class="cabinet-sidepanel__theme" role="group" aria-label="Тема">
+                <button class="cabinet-sidepanel__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-sun" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                </button>
+                <button class="cabinet-sidepanel__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                    <svg class="cabinet-icon cabinet-sidepanel__theme-moon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                </button>
+            </div>
+            <button class="cabinet-sidepanel__logout" type="button" aria-label="Чыгыңыз">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                <span class="cabinet-sidepanel__logout-label">Чыгыңыз</span>
+            </button>
+        </div>
+    </aside>
+
+    <div class="cabinet-page__content">
+        <div class="cabinet-main-head">
+            <header class="cabinet-header">
+                <div class="cabinet-header__mobile-top">
+                    <div class="cabinet-header__mobile-controls">
+                        <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                            <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                            <span data-cabinet-language-label>RU</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                        <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                            <span class="cabinet-select__value">1 569.89</span>
+                            <span>сом</span>
+                            <svg class="cabinet-icon cabinet-icon--sm cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                        </button>
+                    </div>
+                    <div class="cabinet-header__mobile-tools">
+                        <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                        </button>
+                        <a class="cabinet-header__tool" href="cabinet.html#support" aria-label="Техникалык колдоо" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                        </a>
+                        <a class="cabinet-header__tool" href="#manager" aria-label="менеджер" data-cabinet-manager-open>
+                            <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cabinet-header__line">
+                    <a class="cabinet-header__logo" href="index.html" aria-label="Никита - негизги">
+                        <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+                    </a>
+
+                    <div class="cabinet-header__support">
+                        <a class="cabinet-header__support-link cabinet-header__support-link--support" href="cabinet.html#support" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-support"></use></svg>
+                            <span>Байланыш<br>техникалык колдоого</span>
+                        </a>
+                        <a class="cabinet-header__support-link cabinet-header__support-link--chat" href="#manager" data-cabinet-manager-open>
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chat"></use></svg>
+                            <span>Байланыш<br>менеджер менен</span>
+                        </a>
+                    </div>
+
+                    <div class="cabinet-header__right">
+                        <div class="cabinet-header__controls">
+                            <button class="cabinet-select" type="button" aria-label="Тил" data-cabinet-language-open>
+                                <span class="cabinet-select__flag" data-cabinet-language-flag="ru" aria-hidden="true"></span>
+                                <span data-cabinet-language-label>RU</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                            <button class="cabinet-select" type="button" aria-label="Баланс" data-cabinet-modal-open="payment-method">
+                                <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-header-wallet"></use></svg>
+                                <span class="cabinet-select__value">1 569.89</span>
+                                <span>сом</span>
+                                <svg class="cabinet-icon cabinet-select__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                            </button>
+                        </div>
+                        <div class="cabinet-header__tools">
+                            <button class="cabinet-header__tool" type="button" aria-label="Эскертмелер" data-cabinet-notifications-open>
+                                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-bell"></use></svg>
+                                <span class="cabinet-header__dot" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="Менин профилим">
+                            <span class="cabinet-avatar cabinet-user__avatar">
+                                <img src="../assets/images/cabinet-avatar.jpg" alt="">
+                            </span>
+                            <div class="cabinet-user__meta">
+                                <div class="cabinet-user__name-line">
+                                    <span class="cabinet-user__name">Константин</span>
+                                    <span class="cabinet-status cabinet-status--admin">Администратор</span>
+                                </div>
+                                <div class="cabinet-user__account">
+                                    <span>PM: <strong>4567</strong></span>
+                                    <span>/ ЖЧК “Уюм</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="cabinet-user cabinet-user--demo cabinet-user--templates-demo" aria-label="Демо режими" role="button" tabindex="0" data-cabinet-modal-open="demo-mode">
+                            <span class="cabinet-user__demo-avatar" aria-hidden="true">
+                                <svg class="cabinet-icon"><use href="../assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>
+                            </span>
+                            <span class="cabinet-status cabinet-status--demo">DEMO РЕЖИМ</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="cabinet-breadcrumbs">
+                <span>Менин кеңсем → </span><strong data-cabinet-current>Шаблондор</strong>
+            </div>
+
+            <div class="cabinet-page-title">
+                <h1 class="cabinet-page-title__text" id="templatesTitle">Шаблондор</h1>
+            </div>
+
+            <nav class="cabinet-templates-tabs" aria-label="Үлгү бөлүмдөрү">
+                <a class="cabinet-templates-tabs__item is-active" href="templates.html" aria-current="page" data-templates-tab="templates">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                    <span>Шаблондор</span>
+                </a>
+                <a class="cabinet-templates-tabs__item" href="#rules" data-templates-tab="rules">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg>
+                    <span>Эрежелер</span>
+                </a>
+                <a class="cabinet-templates-tabs__item" href="#testing" data-templates-tab="testing">
+                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-template-testing"></use></svg>
+                    <span>Үлгү тестирлөө</span>
+                </a>
+            </nav>
+        </div>
+
+        <main class="cabinet-main" data-cabinet-templates-root>
+            <section class="cabinet-templates cabinet-templates-panel" aria-labelledby="templatesTitle" data-cabinet-templates-page data-templates-panel="templates">
+                <div class="cabinet-templates__toolbar">
+                    <div class="cabinet-templates__sort">
+                        <button class="cabinet-templates__sort-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-page-size-toggle data-desktop-value="10" data-mobile-value="50">
+                            <span>Көрсөтүү</span>
+                            <span class="cabinet-templates__sort-value" data-templates-page-size-value>10</span>
+                            <span class="cabinet-templates__sort-icon" aria-hidden="true"><img src="../assets/images/cabinet-reports/chevron.svg" alt=""></span>
+                        </button>
+                        <div class="cabinet-templates__sort-list" role="listbox" aria-label="Бир беттеги шаблондордун саны" hidden data-templates-page-size-list>
+                            <button class="cabinet-templates__sort-option is-active" type="button" role="option" aria-selected="true" data-templates-page-size-option="10">10</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="20">20</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="30">30</button>
+                            <button class="cabinet-templates__sort-option" type="button" role="option" aria-selected="false" data-templates-page-size-option="50">50</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cabinet-templates__table-wrap">
+                    <div class="cabinet-templates__table-scroll" tabindex="0" aria-label="Үлгү таблицасы" data-templates-table-scroll>
+                        <div class="cabinet-templates-table" role="table" aria-label="Шаблондор">
+                            <div class="cabinet-templates-table__row cabinet-templates-table__row--head" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="columnheader"><span class="cabinet-templates-table__head-copy">Өлкө<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="columnheader"><span class="cabinet-templates-table__head-copy">Жөнөтүүчүнүн аты<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="columnheader"><span class="cabinet-templates-table__head-copy">Трафик түрү<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="columnheader"><span class="cabinet-templates-table__head-copy">Статус<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="columnheader">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="columnheader"><span class="cabinet-templates-table__head-copy">Активдештирүү күнү<span class="cabinet-templates-table__sort" aria-hidden="true"><svg class="cabinet-icon cabinet-icon--sm"><use href="../assets/images/cabinet-icons.svg#icon-table-sort"></use></svg></span></span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Австралия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Кызмат</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Таблицадагы мазмундун мисалы</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row cabinet-templates-table__row--tall" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Германия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Жарнама</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text cabinet-templates-table__cell--clamp" role="cell">Клеткадагы чоң көлөмдөгү мазмундун мисалы, биринчи 3 сапты көрсөтүңүз, андан кийин текстти эллипстин артына жашырыңыз...</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Кызмат</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Германия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Кызмат</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Таблицадагы мазмундун мисалы</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Италия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Транзакциялык</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Австралия</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Жарнама</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Таблицадагы мазмундун мисалы</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Кызмат</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Кызмат</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Таблицадагы мазмундун мисалы</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кыргызстан</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Жарнама</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                            <div class="cabinet-templates-table__row" role="row">
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--country" role="cell">Кытай</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--sender" role="cell">Жөнөтүүчү - 001</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--traffic" role="cell">Транзакциялык</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--status" role="cell"><span class="cabinet-templates-status"><span class="cabinet-templates-status__line"><span class="cabinet-templates-status__dot" aria-hidden="true"></span><strong>Колдонууга даяр</strong></span><span class="cabinet-templates-status__note">Туткасы (милдеттүү эмес)</span></span></div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--text" role="cell">Текст</div>
+                                <div class="cabinet-templates-table__cell cabinet-templates-table__cell--date" role="cell"><span>08.04.2025</span><span class="cabinet-templates-table__time">03:12:55</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-templates__scrollbar" aria-hidden="true" hidden data-templates-scrollbar>
+                        <span class="cabinet-templates__scrollbar-track"></span>
+                        <span class="cabinet-templates__scrollbar-thumb" data-templates-scrollbar-thumb></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cabinet-template-rules cabinet-templates-panel" aria-labelledby="templatesTitle" hidden data-templates-panel="rules">
+                <div class="cabinet-template-rules__grid">
+                    <article class="cabinet-template-rules-card cabinet-template-rules-card--compose">
+                        <h2 class="cabinet-template-rules-card__title">Калыптарды түзүү эрежелери</h2>
+
+                        <div class="cabinet-template-rules-card__body">
+                            <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+
+                            <div class="cabinet-template-rules-card__step cabinet-template-rules-card__step--intro">
+                                <p>Жаңы шаблон түзүү үчүн, сиз жүктөп алып, толтуруп, арыз жөнөтүшүңүз керек <a href="mailto:names@nikita.kg">names@nikita.kg</a></p>
+                                <a class="cabinet-template-rules-card__download" href="#" aria-label="Транзакциялык/кызматтык SMS шаблондорун бекитүү үчүн арыздын формасын жүктөп алыңыз">
+                                    <svg class="cabinet-icon cabinet-icon--sm" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-action-download"></use></svg>
+                                    <span>Транзакциялык/кызматтык SMS шаблондорун бекитүү үчүн арыздын формасы</span>
+                                </a>
+                            </div>
+
+                            <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+
+                            <div class="cabinet-template-rules-card__step cabinet-template-rules-card__step--legend">
+                                <p class="cabinet-template-rules-card__lead">Белгилери:</p>
+                                <div class="cabinet-template-rules-card__copy-stack">
+                                    <p>Кол коюу <strong>"X"</strong> латын тилинде кандайдыр бир белгини билдирет</p>
+                                    <p>Кол коюу <strong>“~~”</strong> латын тилинде ар кандай белгилердин ырааттуулугун билдирет</p>
+                                </div>
+                            </div>
+
+                            <div class="cabinet-template-rules-card__example">
+                                <p class="cabinet-template-rules-card__lead">Мисалдар:</p>
+                                <div class="cabinet-template-rules-card__example-lines">
+                                    <p>1. Логин кодуңуз: <strong>ХХХ</strong></p>
+                                    <p>2. Karta “<strong>XXX</strong>”: servis informirovaniya podkluchen.</p>
+                                    <p>3. Vash zakaz ID ~~ obrabotan na summu ~~ som, data vydachi <strong>XX.XX.XX</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cabinet-template-rules-card cabinet-template-rules-card--traffic">
+                        <h2 class="cabinet-template-rules-card__title">Трафиктин түрлөрүнө шаблондорду ыйгаруу эрежелери</h2>
+
+                        <div class="cabinet-template-rules-card__body">
+                            <section class="cabinet-template-rules-card__section">
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Транзакция SMS:</h3>
+                                    <p>TO <strong>Транзакциялык</strong> Абонентке анын эсеби боюнча акча каражаттарынын кыймылы боюнча операциялардын аткарылышы же мындай операцияны жүргүзүүнүн мүмкүн эместиги жөнүндө маалымдоочу SMS билдирүүлөрдү камтыйт.</p>
+                                    <p>Under <strong>каражаттардын кыймылы</strong> түшүнүлөт:</p>
+                                    <ul>
+                                        <li>резервдик каражаттарды кредиттөө/кабыл алуу/чыгарып алуу операциясы аяктаган;</li>
+                                        <li>акча каражаттарын эсептен чыгаруу/чыгаша/которуу/брондоо боюнча аяктаган операция;</li>
+                                        <li>комиссияны төлөө, депозит боюнча пайыздарды кошуу, акча каражаттарын башка валютага конвертациялоо;</li>
+                                        <li>саналып өткөн операцияларды жокко чыгаруу же аткаруу мүмкүн эместиги.</li>
+                                        <li>Транзакция билдирүү шаблону транзакциянын түрүн, эсептин номерин жана суммасын АЧЫК көрсөтүүгө тийиш.</li>
+                                    </ul>
+                                </div>
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                            </section>
+
+                            <section class="cabinet-template-rules-card__section">
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Кызмат SMS:</h3>
+                                    <p>Абонентке ага кызмат көрсөтүүнүн/кардардын кызмат көрсөтүүлөрүнүн абалы жөнүндө кабарлоочу билдирүү сервистик билдирүү болуп эсептелет.</p>
+                                    <p>Under <strong>кызмат көрсөтүүнүн абалы</strong> түшүнүлөт:</p>
+                                    <ul>
+                                        <li>Бир жолку сырсөз (OTP);</li>
+                                        <li>Кызматта катталгандан кийин саламдашуу билдирүүсү;</li>
+                                        <li>Кызмат көрсөтүү шарттарына таасир этүүчү окуялар жөнүндө колдонуучуга билдирүү (телефон номерин өзгөртүү, кызмат көрсөтүү, мисалы, абоненттик төлөмдүн көбөйүшү);</li>
+                                        <li>Буйрутманы/сатып алууну ырастоо;</li>
+                                        <li>Продукцияны жеткирүү/кайтаруу/алмашуу абалы;</li>
+                                        <li>Кызмат көрсөтүүнүн алкагында пландаштырылган иш-чара жөнүндө эскертүүлөр (мисалы, жолугушуу жөнүндө);</li>
+                                        <li>Техникалык иштер жөнүндө маалымат берүү/кызмат көрсөтүүнү токтотуу/кайра баштоо жөнүндө эскертүү;</li>
+                                        <li>Кирүү/чыгуу/кардардын өзүн-өзү тейлөө системасына кирүү аракети жөнүндө билдирүүлөр;</li>
+                                        <li>сабактардын расписаниелери, учурдагы жана жыйынтыктоочу жетишкендиктери, ички тартип же үй тапшырмасы жөнүндө билдирүүлөр жана билим берүү уюмдары тарабынан жөнөтүлгөн шаблондорду Кызмат катары классификациялоо эрежелерине карама-каршы келбеген башка билдирүүлөр жөнүндө маалымат;</li>
+                                        <li>кардардын карызы жана анын негизинде кардардын карызы пайда болгон келишимдин реквизиттери жөнүндө маалымат берүү;</li>
+                                        <li>Кардардын карызын төлөө шарттары жана графиги жөнүндө маалымат берүү;</li>
+                                        <li>Кардарга лоялдуулук программаларында упайлар/купондор үчүн чегерүүлөр/дебеттер/жарактуулук мөөнөтү жөнүндө маалымат берүү</li>
+                                        <li>Ушул Атайын шарттардын 4.1-пунктунда көрсөтүлгөн аныктамага туура келген башка билдирүүлөр</li>
+                                    </ul>
+                                </div>
+                                <span class="cabinet-template-rules-card__divider" aria-hidden="true"></span>
+                            </section>
+
+                            <section class="cabinet-template-rules-card__section">
+                                <div class="cabinet-template-rules-card__section-copy">
+                                    <h3>Жарнамалык SMS:</h3>
+                                    <ul>
+                                        <li>Транзакция же Кызмат билдирүүлөрү болбогон бардык билдирүүлөр Жарнамалык билдирүүлөр болуп эсептелет. Ошол эле учурда, жарнамалык трафик үчүн шаблондорду чогултуу каралган эмес.</li>
+                                        <li>Эгерде SMS тексти тексттин башында жана/же аягында кошумча боштуктарды камтыса, анда мындай SMS платформа тарабынан Үлгүгө туура келбейт деп таанылат.</li>
+                                        <li>Калыптарга туура келбеген бардык Улуттук A2P SMS, ошондой эле ар кандай аралаш айкалыштагы Кызматтык/Жарнамалык/Транзакциялык SMS билдирүүлөрдү жөнөтүүнүн бардык учурлары да Жарнамалык билдирүүлөр катары классификацияланат.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="cabinet-template-testing cabinet-templates-panel" aria-labelledby="templatesTitle" hidden data-templates-panel="testing" data-templates-testing>
+                <form class="cabinet-template-testing-card" action="#" data-templates-testing-form>
+                    <div class="cabinet-template-testing-card__fields">
+                        <div class="cabinet-template-testing-card__column">
+                            <div class="cabinet-template-testing-card__field">
+                                <span class="cabinet-template-testing-card__label">Өлкө:</span>
+                                <span class="cabinet-template-testing-card__select" data-templates-testing-select>
+                                    <button class="cabinet-template-testing-card__input cabinet-template-testing-card__input--select" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-testing-select-toggle>
+                                        <span>Кыргызстан</span>
+                                        <svg class="cabinet-icon cabinet-template-testing-card__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                                    </button>
+                                    <span class="cabinet-template-testing-card__select-menu" role="listbox" hidden data-templates-testing-select-menu>
+                                        <button class="cabinet-template-testing-card__select-option" type="button" role="option" aria-selected="true">Кыргызстан</button>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <div class="cabinet-template-testing-card__field">
+                                <span class="cabinet-template-testing-card__label">Жөнөтүүчүнүн аты-жөнү:</span>
+                                <span class="cabinet-template-testing-card__select" data-templates-testing-select>
+                                    <button class="cabinet-template-testing-card__input cabinet-template-testing-card__input--select" type="button" aria-haspopup="listbox" aria-expanded="false" data-templates-testing-select-toggle>
+                                        <span>SMSPRO.KG</span>
+                                        <svg class="cabinet-icon cabinet-template-testing-card__chevron" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-chevron"></use></svg>
+                                    </button>
+                                    <span class="cabinet-template-testing-card__select-menu" role="listbox" hidden data-templates-testing-select-menu>
+                                        <button class="cabinet-template-testing-card__select-option" type="button" role="option" aria-selected="true">SMSPRO.KG</button>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="cabinet-template-testing-card__field cabinet-template-testing-card__field--message">
+                            <span class="cabinet-template-testing-card__label">Билдирүү тексти:</span>
+                            <span class="cabinet-template-testing-card__textarea" role="textbox" aria-label="Билдирүү тексти">Сиздин кодуңуз – %code%</span>
+                        </div>
+                    </div>
+
+                    <div class="cabinet-template-testing-card__actions">
+                        <button class="cabinet-template-testing-card__button cabinet-template-testing-card__button--secondary" type="button" data-templates-testing-clear>Таза форма</button>
+                        <button class="cabinet-template-testing-card__button cabinet-template-testing-card__button--primary" type="button" data-templates-testing-show>Натыйжаны көрсөтүү</button>
+                    </div>
+
+                    <div class="cabinet-template-testing-result" hidden data-templates-testing-result>
+                        <div class="cabinet-template-testing-result__item">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-template-advertising"></use></svg>
+                            <span class="cabinet-template-testing-result__copy">
+                                <span>Трафик түрү:</span>
+                                <strong>Жарнама</strong>
+                            </span>
+                        </div>
+                        <div class="cabinet-template-testing-result__item">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                            <span class="cabinet-template-testing-result__copy">
+                                <span>Үлгү:</span>
+                                <strong>-</strong>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="cabinet-footer">
+            <p class="cabinet-footer__copyright">
+                <span>© Никита Онлайн ЖЧК,</span>
+                <span>«Никита Мобайл» ЖЧКсы, 2014-2025-жж</span>
+            </p>
+            <p class="cabinet-footer__legal">
+                <a href="agreement.html">Колдонуучу келишими</a> | <a href="security.html#bezop">Купуялык саясаты</a>
+            </p>
+            <a class="cabinet-footer__phone" href="tel:+996700892188">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-phone-footer"></use></svg>
+                <span>+996 (700) 892-188</span>
+            </a>
+        </footer>
+
+        <div class="cabinet-tabbar-modal" role="dialog" aria-label="Каттоо эсебинин менюсу" hidden data-cabinet-tabbar-modal>
+            <div class="cabinet-tabbar-modal__head">
+                <div class="cabinet-tabbar-modal__actions">
+                    <div class="cabinet-tabbar-modal__theme" role="group" aria-label="Тема">
+                        <button class="cabinet-tabbar-modal__theme-btn is-active" type="button" aria-label="Жарык тема" aria-pressed="true" data-cabinet-theme-button="light">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sun"></use></svg>
+                        </button>
+                        <button class="cabinet-tabbar-modal__theme-btn" type="button" aria-label="Караңгы тема" aria-pressed="false" data-cabinet-theme-button="dark">
+                            <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-moon"></use></svg>
+                        </button>
+                    </div>
+                    <button class="cabinet-tabbar-modal__logout" type="button">
+                        <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-logout"></use></svg>
+                        <span>Чыгыңыз</span>
+                    </button>
+                </div>
+                <button class="cabinet-tabbar-modal__close" type="button" aria-label="Менюну жабуу" data-cabinet-tabbar-close>
+                    <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-close"></use></svg>
+                </button>
+            </div>
+            <nav class="cabinet-tabbar-modal__nav" aria-label="Каттоо эсебинин менюсу">
+                <a class="cabinet-tabbar-modal__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span>Үй</span></a>
+                <a class="cabinet-tabbar-modal__item" href="mailings.html" data-cabinet-nav data-section="mailings"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span>Маалымат бюллетендери</span></a>
+                <a class="cabinet-tabbar-modal__item" href="lists.html" data-cabinet-nav data-section="lists"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span>Тизмелер</span></a>
+                <a class="cabinet-tabbar-modal__item" href="api.html" data-cabinet-nav data-section="api"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span>API интеграциясы</span></a>
+                <a class="cabinet-tabbar-modal__item" href="reports.html" data-cabinet-nav data-section="reports"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg><span>Отчеттор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="otp.html" data-cabinet-nav data-section="otp"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg><span>OTP кызматы</span></a>
+                <a class="cabinet-tabbar-modal__item cabinet-tabbar-modal__item--divider is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-current="page"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg><span>Шаблондор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="services.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-money"></use></svg><span>Шарттар жана баалар</span></a>
+                <a class="cabinet-tabbar-modal__item" href="technical.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-memory"></use></svg><span>Техникалык мүмкүнчүлүктөр</span></a>
+                <a class="cabinet-tabbar-modal__item" href="security.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-protect"></use></svg><span>Ишенимдүүлүк жана коопсуздук</span></a>
+                <a class="cabinet-tabbar-modal__item" href="faq.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-question"></use></svg><span>Суроолор жана жооптор</span></a>
+                <a class="cabinet-tabbar-modal__item" href="contacts.html"><svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-phone"></use></svg><span>Байланыштар</span></a>
+            </nav>
+        </div>
+
+        <nav class="cabinet-tabbar" aria-label="Каттоо эсебинин ылдыйкы навигациясы">
+            <a class="cabinet-tabbar__item" href="cabinet.html#dashboard" data-cabinet-nav data-section="dashboard">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg>
+                <span>Үй</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="mailings.html" data-cabinet-nav data-section="mailings">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-email"></use></svg>
+                <span>Маалымат бюллетендери</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="lists.html" data-cabinet-nav data-section="lists">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg>
+                <span>Тизмелер</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="api.html" data-cabinet-nav data-section="api">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg>
+                <span>API интеграциясы</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="reports.html" data-cabinet-nav data-section="reports">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-stats"></use></svg>
+                <span>Отчеттор</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet" href="otp.html" data-cabinet-nav data-section="otp">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-verify"></use></svg>
+                <span>OTP кызматы</span>
+            </a>
+            <a class="cabinet-tabbar__item cabinet-tabbar__item--tablet is-active" href="templates.html" data-cabinet-nav data-section="templates" aria-current="page">
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-template"></use></svg>
+                <span>Шаблондор</span>
+            </a>
+            <a class="cabinet-tabbar__item" href="#menu" aria-expanded="false" data-cabinet-tabbar-toggle>
+                <svg class="cabinet-icon" aria-hidden="true"><use href="../assets/images/cabinet-icons.svg#icon-nav-burger"></use></svg>
+                <span>Меню</span>
+            </a>
+        </nav>
+    </div>
+    <script type="module" src="../assets/scripts/cabinet.js"></script>
+</body>
+</html>
