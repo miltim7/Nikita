@@ -1439,14 +1439,14 @@
 .cabinet-tabbar-modal {
     position: fixed;
     right: var(--figma-container-px-tablet);
-    bottom: calc(var(--cabinet-tabbar-h) + 12px);
+    bottom: calc(var(--cabinet-tabbar-h) + var(--cabinet-tabbar-safe-bottom) + 12px);
     z-index: var(--z-dropdown);
     display: flex;
     flex-direction: column;
     width: 260px;
     max-width: calc(100vw - (var(--figma-container-px-mobile) * 2));
-    height: min(632px, calc(100dvh - var(--cabinet-tabbar-h) - 24px));
-    max-height: min(632px, calc(100dvh - var(--cabinet-tabbar-h) - 24px));
+    height: min(632px, calc(100dvh - var(--cabinet-tabbar-h) - var(--cabinet-tabbar-safe-bottom) - 24px));
+    max-height: min(632px, calc(100dvh - var(--cabinet-tabbar-h) - var(--cabinet-tabbar-safe-bottom) - 24px));
     overflow: hidden;
     border-radius: 12px;
     color: var(--color-black-100);
@@ -2127,7 +2127,7 @@
     .cabinet-tabbar-modal {
         left: var(--figma-container-px-mobile);
         right: var(--figma-container-px-mobile);
-        bottom: calc(var(--cabinet-tabbar-h) + 12px);
+        bottom: calc(var(--cabinet-tabbar-h) + var(--cabinet-tabbar-safe-bottom) + 12px);
         width: auto;
         max-width: none;
         transform-origin: center bottom;

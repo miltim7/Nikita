@@ -1193,17 +1193,6 @@
     flex: 1 1 0;
 }
 
-@media (min-width: 1200px) {
-    .cabinet-page--profile .cabinet-sidepanel__item--profile-current {
-        color: var(--color-text-inverse);
-        background: var(--color-header-blue);
-    }
-
-    .cabinet-page--profile .cabinet-sidepanel__item--profile-current .cabinet-sidepanel__item-label {
-        color: var(--color-text-inverse);
-    }
-}
-
 @media (min-width: 1200px) and (max-width: 1475.98px) {
     .cabinet-profile-title,
     .cabinet-profile-tabs {

@@ -16,7 +16,7 @@ const CABINET_SECTIONS = {
     support: { label: 'Техподдержка', icon: 'icon-support' },
     manager: { label: 'Менеджер', icon: 'icon-chat' },
     referral: { label: 'Реферальная программа', icon: 'icon-referral' },
-    profile: { label: 'Мой профиль', icon: 'icon-nav-widget' },
+    profile: { label: 'Мой профиль', icon: 'icon-header-login' },
     registration: { label: 'Регистрация', icon: 'icon-nav-widget' },
     notifications: { label: 'Уведомления', icon: 'icon-bell' },
     agreement: { label: 'Пользовательское соглашение', icon: 'icon-nav-docs' },

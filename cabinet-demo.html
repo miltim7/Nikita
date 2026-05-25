@@ -20,6 +20,7 @@
         </div>
         <nav class="cabinet-sidepanel__nav" aria-label="Разделы кабинета">
             <a class="cabinet-sidepanel__item is-active" href="#dashboard" data-cabinet-nav data-section="dashboard" aria-label="Главная"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-widget"></use></svg><span class="cabinet-sidepanel__item-label">Главная</span></a>
+            <a class="cabinet-sidepanel__item" href="profile.html" data-cabinet-nav data-section="profile" aria-label="Мой профиль"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-header-login"></use></svg><span class="cabinet-sidepanel__item-label">Мой профиль</span></a>
             <a class="cabinet-sidepanel__item" href="mailings.html" data-cabinet-nav data-section="mailings" aria-label="Рассылки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-email"></use></svg><span class="cabinet-sidepanel__item-label">Рассылки</span></a>
             <a class="cabinet-sidepanel__item" href="#lists" data-cabinet-nav data-section="lists" aria-label="Списки"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-docs"></use></svg><span class="cabinet-sidepanel__item-label">Списки</span></a>
             <a class="cabinet-sidepanel__item" href="api.html" data-cabinet-nav data-section="api" aria-label="API-интеграция"><svg class="cabinet-icon" aria-hidden="true"><use href="assets/images/cabinet-icons.svg#icon-nav-sliders"></use></svg><span class="cabinet-sidepanel__item-label">API-интеграция</span></a>
@@ -114,7 +115,7 @@
                                 <span class="cabinet-header__dot" aria-hidden="true"></span>
                             </button>
                         </div>
-                        <div class="cabinet-user cabinet-user--regular">
+                        <a class="cabinet-user cabinet-user--regular" href="profile.html" aria-label="Мой профиль">
                             <span class="cabinet-avatar cabinet-user__avatar">
                                 <img src="assets/images/cabinet-avatar.jpg" alt="">
                             </span>
@@ -128,7 +129,7 @@
                                     <span>/ ООО “Организация</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         <div class="cabinet-user cabinet-user--demo" aria-label="Демо-режим" role="button" tabindex="0" data-cabinet-modal-open="demo-mode">
                             <span class="cabinet-user__demo-avatar" aria-hidden="true">
                                 <svg class="cabinet-icon"><use href="assets/images/cabinet-icons.svg#icon-header-demo-avatar"></use></svg>

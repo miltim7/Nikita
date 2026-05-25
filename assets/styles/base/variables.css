@@ -256,6 +256,7 @@
     --cabinet-control-radius: 6px;
     --cabinet-input-radius: 4px;
     --cabinet-tabbar-h: 56px;
+    --cabinet-tabbar-safe-bottom: env(safe-area-inset-bottom, 0px);
     --cabinet-footer-bg: linear-gradient(90deg, var(--color-gray-5) 0%, var(--color-gray-5) 100%), #fff;
     --cabinet-dark-page-bg: #0D0D0D;
     --cabinet-dark-surface: #212020;
