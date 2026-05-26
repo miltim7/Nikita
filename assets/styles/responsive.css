@@ -64,7 +64,8 @@
         height: 13px;
     }
     .topbar__chevron,
-    .topbar__login img {
+    .topbar__login img,
+    .topbar__auth-button img {
         width: 16px;
         height: 16px;
     }
@@ -74,6 +75,18 @@
         height: 16px;
         gap: 6px;
         font-size: var(--fs-sm);
+    }
+    .topbar__auth {
+        gap: 4px;
+    }
+    .topbar__auth-button {
+        min-height: 24px;
+        padding: 4px 6px;
+        gap: 4px;
+        font-size: var(--fs-sm);
+    }
+    .topbar__auth-button img {
+        padding: 1.69px 3px 1.68px;
     }
 
     .header {
@@ -226,7 +239,8 @@
         height: 13px;
     }
     .topbar__chevron,
-    .topbar__login img {
+    .topbar__login img,
+    .topbar__auth-button img {
         width: 16px;
         height: 16px;
     }
@@ -241,6 +255,19 @@
         gap: 6px;
         font-size: var(--fs-sm);
         letter-spacing: var(--letter-spacing-normal);
+    }
+    .topbar__auth {
+        gap: 4px;
+    }
+    .topbar__auth-button {
+        min-height: 24px;
+        padding: 4px 6px;
+        gap: 4px;
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+    .topbar__auth-button img {
+        padding: 1.69px 3px 1.68px;
     }
 
     .header__inner {

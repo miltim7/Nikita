@@ -1,0 +1,283 @@
+/* ============================================================
+   PUBLIC AUTH MODAL
+   ============================================================ */
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: grid;
+    place-items: center;
+    padding: var(--space-6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-modal);
+}
+
+.auth-modal[hidden] {
+    display: none;
+}
+
+.auth-modal.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.auth-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(33, 32, 32, .48);
+}
+
+.auth-modal__dialog {
+    position: relative;
+    width: min(440px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-lg);
+    color: var(--color-header-black);
+    transform: translateY(10px) scale(.98);
+    transition: transform var(--transition-modal);
+}
+
+.auth-modal.is-open .auth-modal__dialog {
+    transform: translateY(0) scale(1);
+}
+
+.auth-modal__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+}
+
+.auth-modal__title {
+    margin: 0;
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-thin);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-transform: uppercase;
+}
+
+.auth-modal__lead {
+    margin: var(--space-2) 0 0;
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.auth-modal__close {
+    position: relative;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-xs);
+    background: var(--color-surface-blue-5);
+}
+
+.auth-modal__close::before,
+.auth-modal__close::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 9px;
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--color-header-blue);
+}
+
+.auth-modal__close::before {
+    transform: rotate(45deg);
+}
+
+.auth-modal__close::after {
+    transform: rotate(-45deg);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.auth-form[hidden] {
+    display: none;
+}
+
+.auth-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 44px;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--color-gray-20);
+    border-radius: var(--radius-xs);
+    color: var(--color-header-black);
+    background: var(--color-bg);
+    font: inherit;
+    outline: none;
+    transition:
+        border-color var(--transition-interactive),
+        box-shadow var(--transition-interactive);
+}
+
+.auth-form__input:focus {
+    border-color: var(--color-header-blue);
+    box-shadow: 0 0 0 3px var(--color-surface-blue-5);
+}
+
+.auth-form__message {
+    min-height: 17px;
+    color: var(--color-header-blue);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.auth-form__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.auth-form__submit,
+.auth-form__secondary,
+.auth-form__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 var(--space-4);
+    border: 1px solid transparent;
+    border-radius: var(--radius-xs);
+    font-size: var(--fs-base);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        border-color var(--transition-interactive),
+        box-shadow var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+.auth-form__submit {
+    color: var(--color-text-inverse);
+    background: var(--color-header-orange);
+    box-shadow: var(--shadow-figma-cta);
+    font-weight: var(--fw-light);
+}
+
+.auth-form__secondary,
+.auth-form__link {
+    color: var(--color-header-blue);
+    background: var(--color-surface-blue-5);
+    font-weight: var(--fw-light);
+}
+
+.auth-form__secondary:hover,
+.auth-form__secondary:focus-visible,
+.auth-form__link:hover,
+.auth-form__link:focus-visible {
+    border-color: var(--color-blue-20);
+    background: var(--color-surface-blue-10);
+    box-shadow: 0 6px 14px var(--color-surface-blue-10);
+    transform: translateY(-1px);
+}
+
+.auth-form__secondary:active,
+.auth-form__link:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.auth-form__register {
+    margin: 0;
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.auth-form__register a {
+    color: var(--color-header-blue);
+    font-weight: var(--fw-semibold);
+}
+
+.auth-form__options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.auth-form__radio {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: fit-content;
+    color: var(--color-black-80);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.auth-form__radio input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-header-blue);
+}
+
+@media (max-width: 767.98px) {
+    .auth-modal {
+        align-items: end;
+        padding: var(--space-4);
+    }
+
+    .auth-modal__dialog {
+        width: 100%;
+        padding: var(--space-5);
+    }
+
+    .auth-modal__title {
+        font-size: var(--fs-xl);
+    }
+
+    .auth-form__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .auth-form__submit,
+    .auth-form__secondary,
+    .auth-form__link {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .auth-modal,
+    .auth-modal__dialog {
+        transition: none;
+        transform: none;
+    }
+}

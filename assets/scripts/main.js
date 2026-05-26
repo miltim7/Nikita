@@ -16,9 +16,11 @@ import { initFaqAccordion } from './modules/faq-accordion.js';
 import { initSpeedTestWidget } from './modules/speed-test-widget.js';
 import { initTopbarLanguageSelect } from './modules/topbar-language-select.js';
 import { initI18n } from './modules/i18n-runtime.js';
+import { initPublicAuth } from './modules/public-auth.js';
 
 function init() {
     initI18n();
+    initPublicAuth();
     initMobileMenu();
     initTopbarLanguageSelect();
     initSpeedTestWidget();

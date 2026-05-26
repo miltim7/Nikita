@@ -121,6 +121,65 @@
 }
 .topbar__login:hover { color: var(--color-text-inverse); }
 
+.topbar__auth {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.topbar__auth-button {
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: var(--radius-xs);
+    color: var(--color-text-inverse);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.topbar__auth-button img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    box-sizing: border-box;
+    padding: 2.54px 4.5px 2.52px;
+}
+
+.topbar__auth-button--register {
+    border-left: 1px solid var(--color-white-20);
+    border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+}
+
+.topbar__auth-button:hover,
+.topbar__auth-button:focus-visible {
+    color: var(--color-text-inverse);
+    background: var(--interactive-hover-bg-inverse);
+}
+
+@media (max-width: 767.98px) {
+    .topbar__auth-button--register span {
+        display: none;
+    }
+
+    .topbar__auth-button--register::after {
+        content: "Рег.";
+    }
+
+    html[lang="en"] .topbar__auth-button--register::after {
+        content: "Reg.";
+    }
+
+    html[lang="ky"] .topbar__auth-button--register::after {
+        content: "Кат.";
+    }
+}
+
 .topbar-language-popover {
     position: fixed;
     z-index: var(--z-dropdown);

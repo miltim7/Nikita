@@ -11,6 +11,7 @@
 /* ---------------- components ---------------- */
 @import url('./components/cabinet-components.css');
 @import url('./components/cabinet-modal.css');
+@import url('./components/cabinet-datepicker.css');
 
 /* ---------------- sections ---------------- */
 @import url('./sections/cabinet-dashboard.css');
