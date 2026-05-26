@@ -192,6 +192,36 @@ function setInvalid(control, invalid) {
     }
 }
 
+function getStepperValue(value) {
+    if (!value) return '0';
+
+    return 'value' in value ? value.value.trim() : value.textContent.trim();
+}
+
+function setStepperValue(value, nextValue) {
+    if (!value) return;
+
+    const normalizedValue = String(nextValue);
+
+    if ('value' in value) {
+        value.value = normalizedValue;
+        return;
+    }
+
+    value.textContent = normalizedValue;
+}
+
+function normalizeStepperInput(input, min = 0) {
+    const rawValue = input.value.replace(/[^\d]/g, '');
+    input.value = rawValue;
+
+    if (rawValue === '') {
+        return;
+    }
+
+    input.value = String(Math.max(min, Number(rawValue) || 0));
+}
+
 function validateProfile(page) {
     const requiredFields = [
         ['organization', 'Введите название организации.'],
@@ -246,7 +276,7 @@ function getProfileState(page) {
 
     page.querySelectorAll('[data-profile-stepper-control]').forEach((control) => {
         const value = control.querySelector('[data-profile-stepper-value]');
-        steppers[control.dataset.profileStepperControl] = value?.textContent.trim() ?? '0';
+        steppers[control.dataset.profileStepperControl] = getStepperValue(value);
     });
 
     return { fields, switches, checkboxes, steppers };
@@ -274,7 +304,7 @@ function restoreProfileState(page, state) {
     Object.entries(state.steppers).forEach(([name, value]) => {
         const control = page.querySelector(`[data-profile-stepper-control="${name}"]`);
         const target = control?.querySelector('[data-profile-stepper-value]');
-        if (target) target.textContent = value;
+        setStepperValue(target, value);
     });
 }
 
@@ -454,6 +484,40 @@ function handleAltegioConnect(button) {
     button.setAttribute('aria-disabled', 'true');
     button.querySelector('span:last-child').textContent = 'Заявка отправлена';
     showProfileToast('Заявка на подключение Altegio отправлена.', 'success');
+}
+
+function initSmsActivation(page) {
+    const activation = page.querySelector('[data-profile-activation]');
+    const input = activation?.querySelector('[data-profile-activation-code]');
+    const submit = activation?.querySelector('[data-profile-activation-submit]');
+    const status = activation?.querySelector('[data-profile-activation-status]');
+
+    if (!activation || !input || !submit) return;
+
+    input.addEventListener('input', () => {
+        setInvalid(input, false);
+    });
+
+    submit.addEventListener('click', () => {
+        if (!input.value.trim()) {
+            setInvalid(input, true);
+            input.focus();
+            showProfileToast('Введите код активации.', 'warning');
+            return;
+        }
+
+        setInvalid(input, false);
+        activation.classList.add('is-activated');
+        input.disabled = true;
+        submit.disabled = true;
+
+        if (status) {
+            status.hidden = false;
+            showProfileToast(status.textContent.trim(), 'success');
+        } else {
+            showProfileToast('Бесплатные СМС активированы.', 'success');
+        }
+    });
 }
 
 function setActiveProfileTab(page, tabName) {
@@ -701,6 +765,7 @@ export function initCabinetProfilePage() {
     const shouldOpenSettings = params.get('state') === 'open' || window.location.hash === '#profile-open';
     let savedState = getProfileState(page);
 
+    initSmsActivation(page);
     setActiveProfileTab(page, initialTab);
 
     document.querySelectorAll('[data-profile-tab-button]').forEach((button) => {
@@ -784,13 +849,22 @@ export function initCabinetProfilePage() {
         const min = Number(stepper.dataset.min ?? 0);
         const step = Number(stepper.dataset.step ?? 1);
 
+        if (value && 'value' in value) {
+            value.addEventListener('input', () => normalizeStepperInput(value, min));
+            value.addEventListener('blur', () => {
+                if (value.value.trim() === '') {
+                    setStepperValue(value, min);
+                }
+            });
+        }
+
         stepper.addEventListener('click', (event) => {
             const button = event.target.closest('[data-profile-stepper-action]');
             if (!button || !value) return;
 
-            const current = Number(value.textContent.trim()) || 0;
+            const current = Number(getStepperValue(value)) || 0;
             const direction = button.dataset.profileStepperAction === 'increase' ? 1 : -1;
-            value.textContent = String(Math.max(min, current + direction * step));
+            setStepperValue(value, Math.max(min, current + direction * step));
         });
     });
 

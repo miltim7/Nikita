@@ -184,6 +184,15 @@
     align-items: flex-start;
     height: 120px;
     padding: 12px 8px;
+    overflow: auto;
+    text-overflow: clip;
+    resize: none;
+    white-space: normal;
+}
+
+.cabinet-template-testing-card__textarea::placeholder {
+    color: var(--color-black-50);
+    opacity: 1;
 }
 
 .cabinet-template-testing-card__select-menu {
@@ -780,6 +789,7 @@
 .cabinet-templates-tabs__item:focus-visible,
 .cabinet-template-rules-card__download:focus-visible,
 .cabinet-template-testing-card__input:focus-visible,
+.cabinet-template-testing-card__textarea:focus-visible,
 .cabinet-template-testing-card__button:focus-visible,
 .cabinet-template-testing-card__select-option:focus-visible {
     outline: none;

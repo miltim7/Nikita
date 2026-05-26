@@ -543,8 +543,19 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
 }
 
 .cabinet-reports__actions {
+    position: relative;
     gap: 10px;
     flex: 0 0 auto;
+    z-index: 3;
+}
+
+.cabinet-reports__action-control {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.cabinet-reports__action-control--export {
+    width: 135px;
 }
 
 .cabinet-reports__action {
@@ -575,6 +586,50 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
 
 .cabinet-reports__action--print {
     width: 95px;
+}
+
+.cabinet-reports__action-menu {
+    position: absolute;
+    z-index: var(--z-dropdown);
+    top: calc(100% + 2px);
+    left: 0;
+    overflow: hidden;
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-panel);
+}
+
+.cabinet-reports__action-menu[hidden] {
+    display: none;
+}
+
+.cabinet-reports__action-menu--export {
+    width: 142px;
+}
+
+.cabinet-reports__action-menu-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 36px;
+    padding: 8px 12px;
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-align: left;
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive);
+}
+
+.cabinet-reports__action-menu-item:hover,
+.cabinet-reports__action-menu-item:focus-visible {
+    color: var(--color-header-blue);
+    background: var(--color-surface-blue-5);
+    outline: none;
 }
 
 .cabinet-reports__action-icon img[src*="export"] {
@@ -1453,6 +1508,10 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
         width: 111px;
     }
 
+    .cabinet-reports__action-control--export {
+        width: 111px;
+    }
+
     .cabinet-reports__action--print {
         width: 80px;
     }
@@ -1948,6 +2007,21 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
         height: 36px;
         padding: var(--space-2);
         gap: 0;
+    }
+
+    .cabinet-reports__action-control--export {
+        width: 32px;
+        flex: 0 0 32px;
+    }
+
+    .cabinet-reports__action-menu--export {
+        width: 128px;
+    }
+
+    .cabinet-reports__action-menu-item {
+        min-height: 32px;
+        padding: 6px 10px;
+        font-size: var(--fs-sm);
     }
 
     .cabinet-reports__action-text,

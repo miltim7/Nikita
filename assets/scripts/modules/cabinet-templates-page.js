@@ -180,6 +180,7 @@ export function initCabinetTemplatesPage() {
     });
 
     testingClearButton?.addEventListener('click', () => {
+        testingForm?.reset();
         setTestingResult(false);
         closeTestingSelects();
     });

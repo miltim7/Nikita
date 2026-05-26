@@ -171,6 +171,20 @@
                 <div class="cabinet-profile__panel is-active" id="profileSettingsPanel" role="tabpanel" aria-labelledby="profileSettingsTab" data-profile-tab-panel="settings">
                 <div class="cabinet-profile__grid">
                     <section class="cabinet-profile-card cabinet-profile-personal" aria-labelledby="profilePersonalTitle">
+                        <section class="cabinet-profile-activation" aria-labelledby="profileActivationTitle" data-profile-activation>
+                            <h2 class="cabinet-profile-activation__title" id="profileActivationTitle">Активация бесплатных СМС</h2>
+                            <div class="cabinet-profile-activation__row">
+                                <label class="cabinet-profile-activation__field">
+                                    <span class="cabinet-profile-field__label">Код активации (отправлен в СМС):</span>
+                                    <input class="cabinet-profile-input cabinet-profile-activation__input" type="text" name="activation_code" inputmode="numeric" autocomplete="one-time-code" placeholder="Введите код" data-profile-activation-code>
+                                </label>
+                                <button class="cabinet-profile-activation__button" type="button" data-profile-activation-submit>Активировать</button>
+                            </div>
+                            <p class="cabinet-profile-activation__status" hidden data-profile-activation-status>Бесплатные СМС активированы.</p>
+                        </section>
+
+                        <div class="cabinet-profile-divider" aria-hidden="true"></div>
+
                         <h2 class="cabinet-profile-card__title" id="profilePersonalTitle">Личные данные</h2>
 
                         <form class="cabinet-profile-form" action="#" method="post">
@@ -287,7 +301,7 @@
                                     <span class="cabinet-profile-row__label">Пороговое значение баланса:</span>
                                     <span class="cabinet-profile-stepper" data-profile-stepper data-profile-stepper-control="balance_threshold" data-min="0" data-step="1">
                                         <button class="cabinet-profile-stepper__button" type="button" aria-label="Уменьшить пороговое значение баланса" data-profile-stepper-action="decrease"><img src="assets/images/cabinet-profile/minus.svg" alt=""></button>
-                                        <span class="cabinet-profile-stepper__value" data-profile-stepper-value>50</span>
+                                        <input class="cabinet-profile-stepper__value cabinet-profile-stepper__input" type="text" inputmode="numeric" pattern="[0-9]*" aria-label="Пороговое значение баланса" value="50" data-profile-stepper-value>
                                         <button class="cabinet-profile-stepper__button" type="button" aria-label="Увеличить пороговое значение баланса" data-profile-stepper-action="increase"><img src="assets/images/cabinet-profile/plus.svg" alt=""></button>
                                     </span>
                                 </div>

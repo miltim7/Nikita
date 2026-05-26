@@ -7,6 +7,7 @@ export function initCabinetReportsPage() {
     const filters = Array.from(page.querySelectorAll('[data-reports-filter]'));
     const filterToggles = Array.from(page.querySelectorAll('[data-reports-filter-toggle]'));
     const pageSizeControls = Array.from(page.querySelectorAll('[data-reports-page-size]'));
+    const actionControls = Array.from(page.querySelectorAll('[data-reports-action-control]'));
     const tableScrolls = Array.from(page.querySelectorAll('.cabinet-reports__table-scroll'));
     const responsiveSelects = Array.from(page.querySelectorAll('select[data-desktop-value][data-compact-value]'));
     const responsivePageSizeToggles = Array.from(page.querySelectorAll('[data-reports-page-size-toggle][data-desktop-value][data-mobile-value]'));
@@ -128,6 +129,24 @@ export function initCabinetReportsPage() {
         });
     };
 
+    const setActionMenuOpen = (control, open) => {
+        const toggle = control?.querySelector('[data-reports-action-toggle]');
+        const menu = control?.querySelector('[data-reports-action-menu]');
+        if (!toggle || !menu) return;
+
+        control.classList.toggle('is-open', open);
+        menu.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+    };
+
+    const closeActionMenus = (except = null) => {
+        actionControls.forEach((control) => {
+            if (control !== except) {
+                setActionMenuOpen(control, false);
+            }
+        });
+    };
+
     tabs.forEach((tab) => {
         tab.addEventListener('click', (event) => {
             const tabName = tab.dataset.reportsTab;
@@ -187,6 +206,7 @@ export function initCabinetReportsPage() {
 
         toggle?.addEventListener('click', (event) => {
             event.stopPropagation();
+            closeActionMenus();
             closePageSizeControls(control);
             setOpen(list?.hidden ?? true);
         });
@@ -210,6 +230,25 @@ export function initCabinetReportsPage() {
         });
     });
 
+    actionControls.forEach((control) => {
+        const toggle = control.querySelector('[data-reports-action-toggle]');
+        const menu = control.querySelector('[data-reports-action-menu]');
+
+        toggle?.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const shouldOpen = menu?.hidden ?? true;
+
+            closePageSizeControls();
+            closeActionMenus(control);
+            setActionMenuOpen(control, shouldOpen);
+        });
+
+        menu?.addEventListener('click', (event) => {
+            if (!event.target.closest('[role="menuitem"]')) return;
+            setActionMenuOpen(control, false);
+        });
+    });
+
     tableScrolls.forEach((tableScroll) => {
         tableScroll.addEventListener('scroll', updateScrollbars, { passive: true });
     });
@@ -223,12 +262,15 @@ export function initCabinetReportsPage() {
 
     document.addEventListener('click', (event) => {
         if (pageSizeControls.some((control) => control.contains(event.target))) return;
+        if (actionControls.some((control) => control.contains(event.target))) return;
         closePageSizeControls();
+        closeActionMenus();
     });
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
             closePageSizeControls();
+            closeActionMenus();
             setFilterOpen(false);
         }
     });
