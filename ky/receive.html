@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — SMS алуу</title>
+    <meta name="description" content="Кардарлардан кайтарым байланыш алуу жана автоматтык SMS-рассылкалар үчүн кыска SMS номерин ижарага алуу.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body class="page-services page-services--with-banner" data-default-service-tab="receive">
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Кошумча навигация">
+                <a href="#pricing" class="topbar__link topbar__link--active">Шарттар жана баалар</a>
+                <a href="technical.html" class="topbar__link">Техникалык мүмкүнчүлүктөр</a>
+                <a href="security.html" class="topbar__link">Ишенимдүүлүк жана коопсуздук</a>
+                <a href="faq.html" class="topbar__link">Суроолор жана жооптор</a>
+                <a href="contacts.html" class="topbar__link">Байланыштар</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Кирүү / Каттоо</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Никита - негизги">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-support.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Байланыш<br>техникалык колдоого</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-chat.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Байланыш<br>менеджер менен</span>
+                    </a>
+                </div>
+                <a href="contacts.html" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Демонстрацияны бекер колдонуп көрүңүз</span>
+                    <span class="header__cta-short">Демо</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Меню" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Башкы меню">
+        <a href="services.html" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt="">
+            </span>
+            <span>Шарттар жана баалар</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt="">
+            </span>
+            <span>Техникалык мүмкүнчүлүктөр</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt="">
+            </span>
+            <span>Ишенимдүүлүк жана коопсуздук</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt="">
+            </span>
+            <span>Суроолор жана жооптор</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt="">
+            </span>
+            <span>Байланыштар</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+
+<!-- ============ SERVICES PRICING ============ -->
+<section class="service-page" id="pricing">
+    <div class="service-page__breadcrumbs container-xxl" aria-label="нан күкүмдөрү">
+        <span>Башкы бет → </span><strong>Кызматтар жана баалар</strong>
+    </div>
+
+    <div class="service-page__banner container-xxl" aria-hidden="true">
+        <div class="service-page__banner-frame"></div>
+    </div>
+
+    <div class="service-page__head container-xxl">
+        <h1 class="service-page__title">Кызматтар жана баалар</h1>
+        <nav class="service-tabs" aria-label="Кызмат бөлүмдөрү" role="tablist" data-service-tabs>
+            <a href="#service-tab-sending" class="service-tabs__item" role="tab" id="service-tab-sending-control" aria-controls="service-tab-sending" aria-selected="false" tabindex="-1" data-service-tab="sending">SMS жөнөтүү</a>
+            <a href="#service-tab-receive" class="service-tabs__item service-tabs__item--active" role="tab" id="service-tab-receive-control" aria-controls="service-tab-receive" aria-selected="true" data-service-tab="receive">SMS алуу</a>
+            <a href="#service-tab-otp" class="service-tabs__item" role="tab" id="service-tab-otp-control" aria-controls="service-tab-otp" aria-selected="false" tabindex="-1" data-service-tab="otp">OTP кызматы</a>
+            <a href="#service-tab-flash" class="service-tabs__item" role="tab" id="service-tab-flash-control" aria-controls="service-tab-flash" aria-selected="false" tabindex="-1" data-service-tab="flash">Flash SMS</a>
+            <a href="#service-tab-payment" class="service-tabs__item" role="tab" id="service-tab-payment-control" aria-controls="service-tab-payment" aria-selected="false" tabindex="-1" data-service-tab="payment">Төлөм ыкмалары</a>
+        </nav>
+    </div>
+
+    <div class="service-tabpanels">
+        <div class="service-tabpanel" id="service-tab-sending" role="tabpanel" aria-labelledby="service-tab-sending-control" data-service-panel="sending" hidden>
+    <div class="service-intro container-xxl">
+        <div class="service-intro__copy">
+            <p>Beeline, MegaCom, О абоненттерине жөнөтүлгөн ар бир SMS билдирүүнүн баасы! биринчи төлөмдүн өлчөмүнөн (тарифти активдештирүү үчүн минималдуу төлөм) жана байланыш операторунан көз каранды.</p>
+            <p><strong>Ошентип, эсебиңизге канчалык көп салсаңыз, баасы ошончолук төмөн болот.</strong></p>
+        </div>
+        <div class="service-hints">
+            <article class="service-hint">
+                <span class="service-hint__icon service-hint__icon--like" aria-hidden="true"></span>
+                <p>Кошумча төлөмдөр жок. Баары <a class="service-hint__link" href="technical.html">техникалык мүмкүнчүлүктөр</a> толугу менен бардык тарифтерде жеткиликтүү.</p>
+            </article>
+            <article class="service-hint">
+                <span class="service-hint__icon service-hint__icon--wallet" aria-hidden="true"></span>
+                <p><strong>Салынган сумма "күйүп кетпейт".</strong> Каражатты каалаганча жумшаса болот.</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="service-rates container-xxl">
+        <table class="rates-table" aria-label="SMS жөнөтүү үчүн тарифтер">
+            <colgroup>
+                <col class="rates-table__operator">
+                <col class="rates-table__type">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">Баа</th>
+                    <th>Баштоо</th>
+                    <th>Optima</th>
+                    <th>Pro</th>
+                    <th>Кошумча</th>
+                </tr>
+                <tr>
+                    <th colspan="2">Биринчи төлөм (сом)</th>
+                    <th>5000ге чейин</th>
+                    <th>10 000ге чейин</th>
+                    <th>25 000ге чейин</th>
+                    <th>25 000ден ашык</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <th rowspan="3" scope="rowgroup">
+                        <span class="operator-logo operator-logo--mega"><img src="../assets/images/services/logo-mega-desktop.png" alt="MEGA"></span>
+                        <strong>MegaCom</strong>
+                        <small>«Альфа Телеком» ЖАК</small>
+                    </th>
+                    <td>Улуттук жөнөтүүчү аттары</td>
+                    <td>1,30</td><td>1,28</td><td>1,25</td>
+                    <td rowspan="3">Макулдашуу боюнча</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <td>Финансылык мекемелер үчүн</td>
+                    <td>2,16</td><td>2,13</td><td>2,07</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <td>Эл аралык жөнөтүүчү аттары</td>
+                    <td>25,34</td><td>24,92</td><td>24,49</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <th rowspan="4" scope="rowgroup">
+                        <span class="operator-logo operator-logo--beeline"><img src="../assets/images/services/logo-beeline-desktop.png" alt="Beeline"></span>
+                        <strong>Beeline</strong>
+                        <small>ОАО "Sky Mobile"</small>
+                    </th>
+                    <td>Транзакциялык билдирүүлөр</td>
+                    <td>1,45</td><td>1,42</td><td>1,39</td>
+                    <td rowspan="4">Макулдашуу боюнча</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Кызмат билдирүүлөрү</td>
+                    <td>1,67</td><td>1,64</td><td>1,60</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Жарнамалык билдирүүлөр</td>
+                    <td>3,04</td><td>2,99</td><td>2,91</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Эл аралык жөнөтүүчү аттары</td>
+                    <td>19,37</td><td>19,05</td><td>18,73</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--o">
+                    <th rowspan="2" scope="rowgroup">
+                        <span class="operator-logo operator-logo--o"><img src="../assets/images/services/logo-o-desktop.svg" alt="O!"></span>
+                        <strong>O!</strong>
+                        <small>ОАО «НУР Телеком»</small>
+                    </th>
+                    <td>Улуттук жөнөтүүчү аттары</td>
+                    <td>1,66</td><td>1,64</td><td>1,59</td>
+                    <td rowspan="2">Макулдашуу боюнча</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--o">
+                    <td>Эл аралык жөнөтүүчү аттары</td>
+                    <td>20,67</td><td>20,32</td><td>19,98</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="rates-mobile" aria-label="SMS жөнөтүү үчүн тарифтер">
+            <article class="rate-card rate-card--mega">
+                <h2><span class="operator-logo operator-logo--mega"><img src="../assets/images/services/logo-mega-desktop.png" alt="MEGA"></span><strong>MegaCom</strong><small>«Альфа Телеком» ЖАК</small></h2>
+                <div class="rate-card__plans"><span></span><b>Баштоо<small>5K чейин</small></b><b>Optima<small>10 миңге чейин</small></b><b>Pro<small>25 миңге чейин</small></b><b>Кошумча<small>25K +</small></b></div>
+                <div class="rate-card__row"><span>Улуттук жөнөтүүчү аттары</span><i>1,30</i><i>1,28</i><i>1,25</i><i data-span="true">Макулдашуу боюнча</i></div>
+                <div class="rate-card__row"><span>Финансылык мекемелер үчүн</span><i>2,16</i><i>2,13</i><i>2,07</i><i></i></div>
+                <div class="rate-card__row"><span>М/жөнөтүүчүлөрдүн популярдуу аттары</span><i>25,34</i><i>24,92</i><i>24,49</i><i></i></div>
+            </article>
+            <article class="rate-card rate-card--beeline">
+                <h2><span class="operator-logo operator-logo--beeline"><img src="../assets/images/services/logo-beeline-desktop.png" alt="Beeline"></span><strong>Beeline</strong><small>ОАО "Sky Mobile"</small></h2>
+                <div class="rate-card__plans"><span></span><b>Баштоо<small>5K чейин</small></b><b>Optima<small>10 миңге чейин</small></b><b>Pro<small>25 миңге чейин</small></b><b>Кошумча<small>25K +</small></b></div>
+                <div class="rate-card__row"><span>Транзакция билдирүүлөрү</span><i>1,45</i><i>1,42</i><i>1,39</i><i data-span="true">Макулдашуу боюнча</i></div>
+                <div class="rate-card__row"><span>Кызмат билдирүүлөрү</span><i>1,67</i><i>1,64</i><i>1,60</i><i></i></div>
+                <div class="rate-card__row"><span>Жарнамалык билдирүүлөр</span><i>3,04</i><i>2,99</i><i>2,91</i><i></i></div>
+                <div class="rate-card__row"><span>М/жөнөтүүчүлөрдүн популярдуу аттары</span><i>19,37</i><i>19,05</i><i>18,73</i><i></i></div>
+            </article>
+            <article class="rate-card rate-card--o">
+                <h2><span class="operator-logo operator-logo--o"><img src="../assets/images/services/logo-o-desktop.svg" alt="O!"></span><strong>O!</strong><small>ОАО «НУР Телеком»</small></h2>
+                <div class="rate-card__plans"><span></span><b>Баштоо<small>5K чейин</small></b><b>Optima<small>10 миңге чейин</small></b><b>Pro<small>25 миңге чейин</small></b><b>Кошумча<small>25K +</small></b></div>
+                <div class="rate-card__row"><span>Улуттук жөнөтүүчү аттары</span><i>1,66</i><i>1,64</i><i>1,59</i><i data-span="true">Макулдашуу боюнча</i></div>
+                <div class="rate-card__row"><span>М/жөнөтүүчүлөрдүн популярдуу аттары</span><i>20,67</i><i>20,32</i><i>19,98</i><i></i></div>
+            </article>
+        </div>
+    </div>
+
+    <div class="service-note container-xxl">
+        <p><a href="#pricing">[1]&nbsp;</a>Аккаунтту активдештиргенден кийин дароо кардар “Старт” тарифине кошулат.</p>
+        <p><a href="contacts.html#commercial">[2]&nbsp;</a>Сураныч, бааларды жана Россияга жана башка КМШ өлкөлөрүнө жана дүйнөгө жеткирүү жолдорун менеджерден тактаңыз.</p>
+        <p><a href="#payment">[3]&nbsp;</a>Баалар сом менен көрсөтүлүп, КНС жана сатуудан алынуучу салыктар камтылган. Баасы 2025-жылдын 1-сентябрынан тартып жарактуу.</p>
+    </div>
+
+    <section class="service-copy service-copy--with-aside container-xxl">
+        <div class="service-copy__text">
+            <h2>Улуттук жана эл аралык смс</h2>
+            <p class="service-copy__lead">Операторлор улуттук деп эсептеген жана регистрацияланган аталыштардан SMS билдирүүлөрдү жөнөтүү улуттук жөнөтүүчүнүн аттары үчүн тариф боюнча алынат. Калган бардык катталбаган ысымдар эл аралык болуп эсептелет жана мындай аталыштардан SMS билдирүүлөр жөнөтүүчүнүн эл аралык аттары үчүн тарифте алынат.</p>
+            <p>Эл аралык бренддер, төлөм системалары, эл аралык электрондук капчыктар жана/же төлөм системалары (мисалы, WebMoney, Qiwi Wallet ж.б.), эл аралык социалдык тармактар, эл аралык оюн интернет кызматтары, эл аралык электрондук почта кызматтары, файл хостинг кызматтары, издөө системалары (мисалы, Mail.Ru, Yahoo, Rambler.ru, Google ж.</p>
+        </div>
+        <aside class="service-actions">
+            <a href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls" class="service-action service-action--download" target="_blank" rel="noopener">Жүктөп алып, жөнөтүүчүнүн атын бекитүү үчүн анкетаны толтуруңуз</a>
+            <a href="faq.html#faq015" class="service-action service-action--info">Эл аралык жөнөтүүчү аттары жөнүндө көбүрөөк билүү</a>
+        </aside>
+    </section>
+
+    <section class="service-copy container-xxl">
+        <div class="service-copy__text">
+            <h2>Жөнөтүүчү аттары катталууда</h2>
+            <p class="service-copy__lead">Түрүнө, улуттук же эл аралык түрүнө карабастан, бардык жөнөтүүчү аттары катталууга тийиш.</p>
+            <p>Ар бир оператордо атын каттагандан кийин гана ошол оператордун абоненттерине катталган аталыштан SMS билдирүүлөрдү жөнөтүү мүмкүн болот.</p>
+            <p>Жөнөтүүчүнүн атын каттоо үчүн, сиз керек <a class="service-copy__link" href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls" target="_blank" rel="noopener">арыз толтуруу</a> жана электрондук почта аркылуу суроо-талап жөнөтүү <a class="service-copy__link" href="mailto:names@nikita.kg">names@nikita.kg</a>.</p>
+            <p>Улуттук трафиги бар кардарлар үчүн жаңы ысымдарды каттоо мөөнөтү 10 жумушчу күнгө чейин созулат.</p>
+        </div>
+    </section>
+
+    <section class="service-copy service-copy--features container-xxl">
+        <div class="service-copy__text">
+            <h2>Тарифтөө өзгөчөлүктөрү</h2>
+            <p class="service-copy__lead">Жөнөтүлгөн SMS билдирүүлөр үчүн эсеп коюу белгиленген тарифтик планга, жөнөтүүчүнүн аты-жөнүнө жана билдирүү бөлүктөрүнүн санына жараша болот. Туура эмес жөнөтүүлөр үчүн акы алынбайт.</p>
+            <div class="service-feature-list">
+                <p>Оператордо <strong>Beeline</strong> (Скай Мобайл ЖЧК) СМС билдирүүлөр да билдирүүлөрдүн түрүнө жараша төлөнөт, алар сервистик, транзакциялык жана жарнамалык болуп бөлүнөт. Бөлүштүрүү оператор менен мурда макулдашылган транзакциялык/кызматтык билдирүү шаблондоруна ылайык жүргүзүлөт.</p>
+                <article><h3>Операциялык (банктык) SMS:</h3><p>Операциялык билдирүүлөргө Абонентке анын эсебиндеги акча каражаттарынын кыймылын камтыган транзакциялар жөнүндө же мындай операцияны жүргүзүүнүн мүмкүн эместиги жөнүндө маалымдоочу SMS билдирүүлөр кирет. Кабардын шаблонунда транзакциянын түрү, эсептин номери жана суммасы ачык көрсөтүлүшү керек.</p></article>
+                <article><h3>Кызмат SMS:</h3><p>Кызматтык билдирүү – бул Абонентке кардардын кызмат көрсөтүүсүнүн/кызматынын абалы жөнүндө маалымдоочу, ошондой эле көрсөтүлгөн кызматтардын алкагындагы окуялар жана/же операциялар жөнүндө маалымат берүүчү билдирүү.</p></article>
+                <article><h3>Жарнамалык SMS:</h3><p>Жарнамалык SMS кызматтык жана транзакциялык SMS шаблондоруна кирбеген бардык билдирүүлөр болуп эсептелет.</p></article>
+                <article class="service-feature-list__card"><h3>Финансылык мекемелер үчүн тариф</h3><p>MegaCom (Альфа Телеком ЖАК) оператору менен финансы институттары жөнөткөн билдирүүлөр өзүнчө тариф боюнча төлөнөт. Финансылык кызматтарды көрсөтүүчү уюмдар (банктар, микрокредиттик компаниялар, ломбарддар) үчүн жөнөтүүчүлөрдүн аталыштарынын тизмеси оператор тарабынан белгиленет.</p></article>
+            </div>
+        </div>
+        <aside class="service-actions service-actions--single">
+            <a href="https://smspro.nikita.kg/kg/documents/templates-form.xls" class="service-action service-action--download" target="_blank" rel="noopener">Транзакциянын/кызматтын SMS шаблондорун бекитүү үчүн арыздын формасы</a>
+        </aside>
+    </section>
+
+    <section class="cooperation" id="contract">
+        <div class="cooperation__inner container-xxl">
+            <div class="cooperation__top">
+                <div>
+                    <h2>Кызматташуу шарттары</h2>
+                    <p>Биз репутациябызды баалайбыз, андыктан СПАМ же мыйзамсыз жөнөтүүлөр менен алектенбейбиз.</p>
+                </div>
+                <aside class="service-actions service-actions--contract">
+                    <a href="https://smspro.nikita.kg/kg/documents/dogovor-example.docx" class="service-action service-action--download">Стандарттык келишимди жүктөп алыңыз</a>
+                </aside>
+            </div>
+            <ol class="cooperation__list">
+                <li><span>01</span><p>Биздин шлюз аркылуу кат жөнөтүү менен кардар жоболор менен макул болот <strong class="cooperation__accent-muted">Колдонуучу келишими.</strong> Жөнөтүүчүнүн атын (Sender ID) алмаштыруу мүмкүнчүлүгү кардар жөнөтүүчүнүн атын операторлорго каттоого арыз бергенден кийин жана сервистин администратору тарабынан модерациялангандан кийин гана берилет. <strong>smspro.nikita.kg</strong></p></li>
+                <li><span>02</span><p>Туура бухгалтердик отчетторду алуу керек болсо, макулдашуу зарыл. Жазуу жүзүндөгү келишим түзүү үчүн юридикалык жактын же жеке ишкананын катталгандыгы тууралуу күбөлүк (же жеке жактар ​​үчүн паспорт) керек.</p></li>
+                <li><span>03</span><p>Жазуу жүзүндөгү келишимди түзүүдө төлөм формасы – <strong>накталай эмес төлөм.</strong> Кызматтарга төлөө тартиби - системадагы кардардын жеке эсебин толуктоо <strong>smspro.nikita.kg</strong> тарифке ылайык көрсөтүлгөн кызматтар үчүн акча каражаттарын кийин эсептен чыгаруу менен</p></li>
+                <li><span>04</span><p>Катталгандан кийин дароо кардардын тарифи кошулат <strong>"СТАРТ"</strong>. Кардар үчүн кат жөнөтүү жана эсепти толуктоо мүмкүнчүлүгү иштетилген <strong>кардардын телефон номерин ырастагандан кийин гана</strong></p></li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="payment-methods container-xxl" id="payment">
+        <h2>Төлөм ыкмалары</h2>
+        <p class="payment-methods__lead">Ыкчам акча депозити <span>0% дан комиссия менен!</span></p>
+        <div class="payment-methods__text">
+            <p>Баштоо үчүн сизге гана керек <a href="https://smspro.nikita.kg/kg/register.html">каттоо,</a> Андан кийин сиз дароо эсепти толуктап, 5 мүнөттүн ичинде иштей баштайсыз – менеджердин уруксатысыз да!</p>
+            <p>Сиз биздин системада өз эсебиңизди бир нече жол менен толуктай аласыз.</p>
+        </div>
+        <h3>Биз кабыл алабыз:</h3>
+        <ul class="payment-list">
+            <li><span class="payment-list__icon payment-list__icon--bank" aria-hidden="true"></span><strong>Накталай акчасыз<br>эсептөө</strong></li>
+            <li><span class="payment-list__icon payment-list__icon--card" aria-hidden="true"></span><strong>Банк иши<br>карталар</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--mbank"><img src="../assets/images/services/payment-mbank.png" alt="mbank"></span><strong>Мбанк аркылуу төлөө</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--elqr"><img src="../assets/images/services/payment-elqr-source.png" alt="ELQR"></span><strong>ELQR аркылуу төлөө</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--pay24"><img src="../assets/images/services/payment-pay24.png" alt="Pay24"></span><strong>Төлөм<br>Pay24 терминалдары аркылуу</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--elsom"><img src="../assets/images/services/payment-elsom-source.png" alt="ЭЛСОМ"></span><strong>аркылуу төлөө<br>электрондук капчык ЭЛСОМ</strong></li>
+        </ul>
+    </section>
+        </div>
+        <div class="service-tabpanel service-tabpanel--active" id="service-tab-receive" role="tabpanel" aria-labelledby="service-tab-receive-control" data-service-panel="receive">
+            <section class="receive-intro container-xxl">
+                <div class="receive-intro__copy">
+                    <h2>Кардарларыңыздан пикир керекпи?</h2>
+                    <p>Пикир билдирүү үчүн - Кыргызстандын бардык уюлдук операторлорунун абоненттеринен SMS-билдирүүлөрдү алуу, NIKITA кызматы <strong>"Кыска SMS номерин ижарага алуу."</strong></p>
+                </div>
+                <aside class="receive-alert">
+                    <span class="receive-alert__icon" aria-hidden="true"></span>
+                    <p>Сиз автоматтык түрдө SMS жөнөтө аласыз <strong>ижарага алынган номердин атынан.</strong></p>
+                </aside>
+            </section>
+
+            <section class="receive-rates container-xxl" aria-label="SMS кабыл алуу баасы">
+                <div class="receive-rates__table">
+                    <div class="receive-rates__row">
+                        <strong>Кардар үчүн кыска номерди ижарага алуу баасы</strong>
+                        <span>1000 сом/ай</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Кардар үчүн бир SMS билдирүүнүн баасы</strong>
+                        <span>1,00 сом.</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Ижарага алынган номердин түрү: төрт орундуу</strong>
+                        <span>7115</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Абонент үчүн SMS жөнөтүүнүн баасы</strong>
+                        <span>1,00 сом.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="receive-processing container-xxl">
+                <div class="receive-processing__copy">
+                    <h2>Сиз кабыл алынган SMS билдирүүлөрдү эки жол менен иштете аласыз:</h2>
+                    <ol>
+                        <li>SMSPRO.NIKITA.KG тутумунун WEB интерфейсинде SMS билдирүүлөрдү чыпкалоо жана Excelге жүктөө мүмкүнчүлүгү бар</li>
+                        <li>Кардар тарабынан кайра иштетүү үчүн SMS билдирүүлөрдү алыңыз <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api.pdf">HTTP(лар)/XML протоколу</a></li>
+                    </ol>
+                </div>
+                <aside class="service-actions receive-processing__actions">
+                    <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api.pdf" class="service-action service-action--download">XML API Сүрөттөмөсүн жүктөп алыңыз</a>
+                </aside>
+            </section>
+
+            <section class="receive-rent">
+                <div class="receive-rent__inner container-xxl">
+                    <div class="receive-rent__copy">
+                        <h2>Эгер тапшырма болсо</h2>
+                        <ul>
+                            <li>маркетинг кампаниясынын натыйжалуулугун баалоо</li>
+                            <li>сурамжылоо/добуш берүү</li>
+                            <li>заказдарды жана кардарлардын сунуштарын SMS аркылуу алуу</li>
+                            <li>"Досуңузга кайрылуу" сыяктуу көп баскычтуу маркетинг кампанияларын жүргүзүңүз</li>
+                        </ul>
+                        <p>анда "Кыска SMS номерди ижарага алуу" кызматы сиз үчүн!</p>
+                    </div>
+                    <aside class="receive-rent__note">
+                        <div class="receive-rent__note-inner">
+                            <p><span>*</span> Учурда «Кыска SMS номерди ижарага алуу» кызматын кошкондо, сиз үчүн 7115 гана номери жеткиликтүү болот.</p>
+                            <p><strong>Башка кыска номерди туташтыруу мүмкүнчүлүгүн менеджерден тактаңыз.</strong></p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="payment-methods payment-methods--receive container-xxl">
+                <h2>Төлөм ыкмалары</h2>
+                <p class="payment-methods__lead">Ыкчам акча депозити <span>0% дан комиссия менен!</span></p>
+                <div class="payment-methods__text">
+                    <p>Баштоо үчүн сизге гана керек <a href="https://smspro.nikita.kg/kg/register.html">каттоо,</a> Андан кийин сиз дароо эсепти толуктап, 5 мүнөттүн ичинде иштей баштайсыз – менеджердин уруксатысыз да!</p>
+                    <p>Сиз биздин системада өз эсебиңизди бир нече жол менен толуктай аласыз.</p>
+                </div>
+                <h3>Биз кабыл алабыз:</h3>
+                <ul class="payment-list">
+                    <li><span class="payment-list__icon payment-list__icon--bank" aria-hidden="true"></span><strong>Накталай акчасыз<br>эсептөө</strong></li>
+                    <li><span class="payment-list__icon payment-list__icon--card" aria-hidden="true"></span><strong>Банк иши<br>карталар</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--mbank"><img src="../assets/images/services/payment-mbank.png" alt="mbank"></span><strong>Мбанк аркылуу төлөө</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--elqr"><img src="../assets/images/services/payment-elqr-source.png" alt="ELQR"></span><strong>ELQR аркылуу төлөө</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--pay24"><img src="../assets/images/services/payment-pay24.png" alt="Pay24"></span><strong>Төлөм<br>Pay24 терминалдары аркылуу</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--elsom"><img src="../assets/images/services/payment-elsom-source.png" alt="ЭЛСОМ"></span><strong>аркылуу төлөө<br>электрондук капчык ЭЛСОМ</strong></li>
+                </ul>
+            </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-otp" role="tabpanel" aria-labelledby="service-tab-otp-control" data-service-panel="otp" hidden>
+            <section class="otp-intro container-xxl">
+                <div class="otp-copy">
+                    <h2>Бир жолку сырсөз деген эмне?</h2>
+                    <p class="otp-copy__text"><strong>Бир жолку сырсөз (OTP)</strong> – эки факторлуу аутентификациянын жөнөкөй жана ишенимдүү формасы.</p>
+                    <p class="otp-copy__text">Эки факторлуу аутентификация <strong>кошумча коопсуздук деңгээли,</strong> стандарттык паролдун кемчиликтерин жоюуга мүмкүндүк берет жана компанияңызды жана анын маалыматтарын коргоо үчүн зарыл.</p>
+                    <p class="otp-copy__text otp-copy__text--gap"><strong>Кызматыңызды жана колдонуучуларыңызды уруксатсыз аракеттерден коргоңуз.</strong></p>
+                    <p class="otp-copy__text">Бир жолку SMS коддору аркылуу кардарларды жана алардын аракеттерин текшериңиз.</p>
+                    <p class="otp-copy__text otp-copy__text--gap">Бир жолку SMS коду бизнеси Интернетке түздөн-түз байланыштуу жана чоң кардар базасы менен иштеген компаниялар үчүн эң сонун чечим болуп саналат.</p>
+                </div>
+                <div class="otp-copy">
+                    <h2>Кардардын авторизациясы кантип пайда болот?</h2>
+                    <p class="otp-copy__text">Эки кадамдуу текшерүү телефон номерин текшерүүгө негизделген. Бул убакыттын 99% иштей турган ишенимдүү жана кооптуу ыкма.</p>
+                    <p class="otp-copy__text">Бул түшүнүктүү жана <strong>колдонуучудан кошумча программалык камсыздоону орнотууну, атайын түзүлүштөрдү сатып алууну же татаал аракеттерди жасоону талап кылбайт.</strong></p>
+                    <ol>
+                        <li>Колдонуучу өзүнүн телефон номерин киргизет</li>
+                        <li>Биздин платформа ага бир жолку сырсөз менен SMS жөнөтөт</li>
+                        <li>Колдонуучу пароль менен SMS-билдирүү алат, андан кийин аны веб-сайтка же тиркемеге киргизет.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="otp-purpose">
+                <div class="otp-purpose__inner container-xxl">
+                    <h2>Бир жолку коддор эмне үчүн?</h2>
+                    <div class="otp-purpose__grid">
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--shield" aria-hidden="true"></span>
+                            <h3>Сиздин бизнесиңизди алдамчылардан коргоо</h3>
+                            <p>Кызматыңызды уруксатсыз аракеттерден коргоңуз, <br>каржылык жана репутациялык жоготуулар</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--bank" aria-hidden="true"></span>
+                            <h3>Банктар үчүн</h3>
+                            <p>Бир жолку сырсөздөрдү колдонуңуз <br>төлөмдү ырастоо жана транзакцияны аягына чыгаруу үчүн</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--cart" aria-hidden="true"></span>
+                            <h3>Чекене үчүн</h3>
+                            <p>Сатып алуучулардын эсептерин байланыштырыңыз <br>телефонго жана бонустук упайларды эсептен чыгарыңыз <br>бир жолку сырсөздөрдү колдонуу</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--transport" aria-hidden="true"></span>
+                            <h3>үчүн<br>жүргүнчүлөрдү ташуу</h3>
+                            <p>Орундарды ээлеп коюуну жана билеттерди төлөөнү ырастоо үчүн SMS коддорун жөнөтүңүз</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="otp-benefits container-xxl">
+                <div class="otp-task">
+                    <h2>SMS аркылуу авторизация<br>сыяктуу көйгөйлөрдү чечет:</h2>
+                    <div class="otp-benefit-list">
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--copy" aria-hidden="true"></span>
+                            <div>
+                                <h3>Дубликаттарды жок кылуу</h3>
+                                <p>Кайталанма каттоолорду же эсептерди жок кылуу (бир телефон номери = бир эсеп)</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--check" aria-hidden="true"></span>
+                            <div>
+                                <h3>Транзакциянын коопсуздугу</h3>
+                                <p>Бир жолку SMS сырсөз менен транзакцияны тастыктоо транзакциялардын ишенимдүүлүгүн жогорулатат</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--person" aria-hidden="true"></span>
+                            <div>
+                                <h3>Абонентти текшерүү</h3>
+                                <p>Киргизилген телефон бар, иштейт жана роботко эмес, колдонуучуга таандык</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--censor" aria-hidden="true"></span>
+                            <div>
+                                <h3>Спам чабуулдарынан коргоо</h3>
+                                <p>Эки факторлуу аутентификация спам чабуулдарынан сактайт</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--like" aria-hidden="true"></span>
+                            <div>
+                                <h3>Натыйжалардын негиздүүлүгүн жогорулатуу</h3>
+                                <p>Онлайн добуш берүүнүн катышуучуларын ырастоо алынган жыйынтыктардын ишенимдүүлүгүн жогорулатат</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="otp-factor">
+                    <h2>Артыкчылыктары <br>эки фактордук аутентификация</h2>
+                    <div class="otp-benefit-list">
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--star" aria-hidden="true"></span>
+                            <div>
+                                <h3>Уникалдуулук</h3>
+                                <p>Бир жолку билдирүүлөр ар бир колдонуучуга жана каалаган санариптик түзүлүштөн ар бир кирүү үчүн уникалдуу.</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--message" aria-hidden="true"></span>
+                            <div>
+                                <h3>SMS авторизациясы</h3>
+                                <p>Көпчүлүк кардарларга тааныш болуп калган бир жолку коддорду жөнөтүүнүн классикалык ыкмасы</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--mail" aria-hidden="true"></span>
+                            <div>
+                                <h3>SMS - максималдуу ачык тарифтерге ээ канал</h3>
+                                <p>Демек, кардар билдирүүнү алгандан кийин дароо көрөт. <br>Бул ийгиликтүү каттоолордун жана уруксаттардын жогорку пайызын камсыз кылат.</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--edit" aria-hidden="true"></span>
+                            <div>
+                                <h3>Сиздин колуңуз</h3>
+                                <p>Сиз ошондой эле алфавиттик-сандык жөнөтүүчү атын кошсоңуз болот, ошондо кардар билдирүүнү сиз жөнөткөнүңүзгө ишенет.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="otp-steps">
+                <div class="otp-steps__inner container-xxl">
+                    <div class="otp-steps__head">
+                        <h2>Сайттагы SMS аркылуу кантип авторизациялоо керек</h2>
+                        <p>Жөн гана биздин веб-сайтта катталып, жөнөтүүчүнүн аты-жөнүн бекитүү үчүн анкета толтуруңуз жана кол тамгаңызды алыңыз (Sender ID). <br class="otp-steps__desktop-break">Андан кийин бир нече жөнөкөй кадамдарды жасаңыз:</p>
+                    </div>
+                    <ol class="otp-steps__list">
+                        <li>
+                            <span>01</span>
+                            <p>Каттоо формасын веб-сайтыңызга жайгаштырыңыз, анда башка талаалардын арасында телефон номерин жана бир жолку сырсөздү киргизүү үчүн талаалар болушу керек.</p>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <p>Абонентке уникалдуу бир жолку кодду/паролду түзүү жана жөнөтүү биздин колдонуу менен ишке ашырылат</p>
+                            <a class="otp-api-link" href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-OTP-api.pdf"><span>OTP-API</span><span class="otp-api-link__icon" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <p>Абоненттин авторизациясы.<br><br>Абонент кабыл алынган кодду форма талаасына киргизет. Система тарабынан түзүлгөн коддор менен абонент киргизген коддордун дал келиши текшерилет.</p>
+                        </li>
+                        <li>
+                            <span>04</span>
+                            <p>Эгерде коддор дал келсе, анда кардарга анын жеке эсебине кирүү мүмкүнчүлүгү берилиши мүмкүн; эгерде алар дал келбесе, анда кардарга ката кабарын берип, сырсөздү кайра киргизүүнү суранышы керек.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-flash" role="tabpanel" aria-labelledby="service-tab-flash-control" data-service-panel="flash" hidden>
+            <section class="flash-intro container-xxl">
+                <div class="flash-intro__copy">
+                    <h2>Жаңы жарнамалык канал – Flash SMS</h2>
+                    <p><strong>Натыйжалуу жана максаттуу жарнама кирешени көбөйтүүнүн жана ашыкча чыгымдарды азайтуунун ачкычы болуп саналат.</strong></p>
+                    <p>Flash SMS – бул мобилдик телефондун экранында заматта көрсөтүлүүчү SMS билдирүү. Сиздин алуучулар сиздин билдирүүңүздү көрүү үчүн бир баскычты басуунун кереги жок жана билдирүүңүз байкалбай калбайт!</p>
+                </div>
+                <div class="flash-hints">
+                    <article class="flash-hint flash-hint--base">
+                        <span class="flash-hint__icon" aria-hidden="true"></span>
+                        <p>рынокто ири маалымат базасы: бизде бар <strong>болжол менен 3 000 000 Beeline абоненттери</strong> Кыргызстандын бардык жеринде!</p>
+                    </article>
+                    <article class="flash-hint flash-hint--growth">
+                        <span class="flash-hint__icon" aria-hidden="true"></span>
+                        <p>Flash SMS каналынын эффективдүүлүгү бул кардарларды сиз үчүн туруктуу кылат!</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="flash-ad">
+                <div class="flash-ad__inner container-xxl">
+                    <div class="flash-ad__preview">
+                        <h2>Мындай жарнама кандай көрүнөт?</h2>
+                        <ul class="flash-checklist" aria-label="Flash SMS өзгөчөлүктөрү">
+                            <li>Flash SMS билдирүү үнү менен телефондун экранында ачык түрдө пайда болот</li>
+                            <li>Чыкыла турган шилтеме</li>
+                            <li>Бардык уюлдук телефондордо иштейт</li>
+                            <li>Эгер текст пайдалуу жана пайдалуу болсо, аны сактай аласыз</li>
+                            <li>Жеткирүү отчету бар</li>
+                            <li>Кириллицада 70 белги, же латын тилинде 160 белги</li>
+                        </ul>
+                    </div>
+                    <div class="flash-segment">
+                        <h3>Биз абоненттерди бөлөбүз<br>так сокку үчүн <br class="flash-segment__desktop-break">максаттуу аудиторияга:</h3>
+                        <ul class="flash-segment__list">
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><path d="M18 32s10-9.4 10-18A10 10 0 0 0 8 14c0 8.6 10 18 10 18Z" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="14" r="3.5" stroke="currentColor" stroke-width="2"/></svg>
+                                </span>
+                                <span>Шаардын көчө деңгээлине чейин жайгашкан жери боюнча, ошондой эле аймак боюнча</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><rect x="7" y="9" width="22" height="18" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M23 18h6M11 14h10M11 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                                <span>Айына чыгашалардын деңгээли боюнча</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><path d="M11 9v18M18 9v18M25 9v18M8 14h6M15 22h6M22 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="14" r="2" fill="currentColor"/><circle cx="18" cy="22" r="2" fill="currentColor"/><circle cx="25" cy="17" r="2" fill="currentColor"/></svg>
+                                </span>
+                                <span>Керектөө профили боюнча (чалуулар, интернет) –<br>жаштар же улуулар</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><rect x="12" y="5" width="12" height="26" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M16 27h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                                <span>Түзмөктүн түрү боюнча - смартфон же өзгөчөлүк телефон<br>абоненттерге ыңгайлуу тилде</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flash-price container-xxl">
+                <div class="flash-price__table" role="table" aria-label="Flash SMSтин баасы">
+                    <div class="flash-price__row flash-price__row--head" role="row">
+                        <strong role="columnheader">Наркы* (көлөмү канчалык чоң болсо, баасы ошончолук төмөн):</strong>
+                    </div>
+                    <div class="flash-price__row flash-price__row--subhead" role="row">
+                        <strong role="columnheader">Flash SMS саны</strong>
+                        <strong role="columnheader">КНСти кошкондо наркы</strong>
+                    </div>
+                    <div class="flash-price__row" role="row"><span role="cell">10-4 999</span><span role="cell">1,30 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">5 000 - 9 999</span><span role="cell">1,19 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">10 000 - 49 999</span><span role="cell">1,08 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">50 000 - 99 999</span><span role="cell">1,03 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">100 000 - 299 999</span><span role="cell">0,94 сом</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">300 000 жана андан жогору</span><span role="cell">0,85 сом</span></div>
+                </div>
+                <div class="flash-price__notes">
+                    <p><span>*</span> Учурда Flash SMS билдирүүлөрдү жөнөтүү Beeline операторунун абоненттеринин телефондоруна гана мүмкүн</p>
+                    <p><span>*</span> Көлөмү бир нече тилди кошкондо, бир жарнамалык билдирүү үчүн эсептелет</p>
+                    <p><span>*</span> Ишти аяктагандыгы жөнүндө күбөлүк жеткирүү отчетуна ылайык берилет: Сиз жеткирилген билдирүүлөр үчүн гана төлөйсүз</p>
+                </div>
+            </section>
+
+            <section class="flash-audience">
+                <div class="flash-audience__inner container-xxl">
+                    <div class="flash-audience__copy">
+                        <h2>Жарнаманы ким алат?</h2>
+                        <p><strong>Жарнама алгысы келгендер гана, демек, алар ыраазы болот.<br>Каалоочулар – бул жарнаманы алуу үчүн атайын Beeline кызматына кошулган абоненттер.<br>Тактап айтканда:</strong></p>
+                        <ul class="flash-audience__list">
+                            <li>жигердүү уюлдук байланыштарды колдонуу;</li>
+                            <li>ар кандай сегменттердин пикир лидерлери;</li>
+                            <li>инерттүү эмес, кызыкдар жана жаңы нерселерди сынап көрүүгө даяр;</li>
+                            <li>колдонуучуларды да, интернет колдонуучуларды да чакыруу;</li>
+                            <li>өлкөнүн ар кайсы аймактарында жайгашкан;</li>
+                            <li>тергичтерден смартфондорго чейин ар кандай типтеги түзүлүштөр бар;</li>
+                            <li>ар кандай айлык чыгашалар менен, төмөндөн жогоруга чейин.</li>
+                        </ul>
+                    </div>
+                    <img class="flash-audience__image" src="../assets/images/services/flash-audience.png" alt="" aria-hidden="true">
+                </div>
+            </section>
+
+            <section class="flash-order">
+                <div class="flash-order__inner container-xxl">
+                    <div class="flash-order__head">
+                        <h2>Заказ процесси</h2>
+                        <ol class="flash-order__steps">
+                            <li><span>01</span><p>Сиз жыйынтыктаңыз <strong>макулдашуу</strong><br>"Никита Онлайндан"</p></li>
+                            <li><span>02</span><p>Заказ бериңиз<br>жана аны менеджерге тапшырыңыз</p></li>
+                            <li><span>03</span><p>Биз сегментация жасайбыз<br>жана сиздин атыңыздан жарнама жөнөтүңүз</p></li>
+                            <li><span>04</span><p>Сиз кабарды жеткирүү отчетунун негизинде ишти аяктагандыгы тууралуу күбөлүк аласыз</p></li>
+                            <li><span>05</span><p>Өз ара эсептешүүлөрдү жүргүзүү</p></li>
+                        </ol>
+                    </div>
+
+                    <div class="flash-cases">
+                        <article class="flash-case">
+                            <header class="flash-case__head">
+                                <h3>Мисал 1</h3>
+                                <p>Жергиликтуу булгаары бут кийимдерди чыгаруу боюнча ХХХ фирмасы<br>орточо жана орточо баалар менен</p>
+                            </header>
+                            <div class="flash-case__rows">
+                                <div class="flash-case-row flash-case-row--task">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-sms.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Тапшырма:</strong><span>Потенциалдуу кардарларыңызга ишке киргизүү жана ассортимент жөнүндө маалымат бериңиз</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--audience">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-followers.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Сунушка кызыккан абоненттер тандалып алынат:</strong><span>- орточо жана жогорку айлык чыгымдары бар абоненттер;<br>- Чоң шаарларда жашоо, мисалы. Ош жана Бишкек</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--send">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-speed.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Flash SMS - почта жөнөтүү</strong><span>Белгиленген абоненттерге веб-сайтка же социалдык баракчага шилтеме менен Flash SMS жөнөтүлөт</span></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="flash-case">
+                            <header class="flash-case__head">
+                                <h3>Мисал №2</h3>
+                                <p>Кафе ХХХ фастфуд,<br>кайсы көчөнүн кесилишинде жайгашкан. Советская/Токтогул</p>
+                            </header>
+                            <div class="flash-case__rows">
+                                <div class="flash-case-row flash-case-row--task">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-sms.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Тапшырма:</strong><span>Потенциалдуу кардарларыңызды тартыңыз</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--audience">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-followers.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Сунушка кызыккан абоненттер тандалып алынат:</strong><span>- Жаштар: Интернет колдонуучулар<br>- Айына орточо чыгымдар менен<br>- Көбүнчө Совет/Токтогул көчөлөрүнүн аянтында жайгашкан</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--send">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-speed.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Flash SMS - почта жөнөтүү</strong><span>Белгиленген абоненттерге веб-сайтка же социалдык баракчага шилтеме менен Flash SMS жөнөтүлөт</span></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-payment" role="tabpanel" aria-labelledby="service-tab-payment-control" data-service-panel="payment" hidden>
+            <section class="payment-tab" aria-labelledby="payment-tab-title">
+                <div class="payment-tab__intro container-xxl">
+                    <h2 class="payment-tab__title" id="payment-tab-title">Төлөм ыкмалары</h2>
+                    <p class="payment-tab__lead">Уюмуңуздун формасына карабастан (жеке, юридикалык жак же жеке ишкана), сиз төмөнкү ыкмалардын каалаганын колдонуп биздин системада өз эсебиңизди толуктай аласыз:</p>
+                </div>
+
+                <div class="payment-tab__content container-xxl">
+                    <div class="payment-tab__methods" role="tablist" aria-label="Толуктоо ыкмалары">
+                        <button class="payment-tab-card payment-tab-card--bank" type="button" role="tab" id="payment-bank-control" aria-selected="false" tabindex="-1" aria-controls="payment-bank-panel">
+                            <span class="payment-tab-card__icon payment-tab-card__icon--bank" aria-hidden="true"></span>
+                            <span class="payment-tab-card__text">Накталай эмес төлөм</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--active payment-tab-card--card" type="button" role="tab" id="payment-card-control" aria-selected="true" aria-controls="payment-card-panel">
+                            <span class="payment-tab-card__icon payment-tab-card__icon--card" aria-hidden="true"></span>
+                            <span class="payment-tab-card__text">Банк карталары</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--mbank" type="button" role="tab" id="payment-mbank-control" aria-selected="false" tabindex="-1" aria-controls="payment-mbank-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--mbank" aria-hidden="true">
+                                <img src="../assets/images/services/payment-mbank.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Мбанк аркылуу төлөө</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--elqr" type="button" role="tab" id="payment-elqr-control" aria-selected="false" tabindex="-1" aria-controls="payment-elqr-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--elqr" aria-hidden="true">
+                                <img src="../assets/images/services/payment-elqr-source.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">ELQR аркылуу төлөө</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--pay24" type="button" role="tab" id="payment-pay24-control" aria-selected="false" tabindex="-1" aria-controls="payment-pay24-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--pay24" aria-hidden="true">
+                                <img src="../assets/images/services/payment-pay24.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Төлөм <br>Pay24 терминалдары аркылуу</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--elsom" type="button" role="tab" id="payment-elsom-control" aria-selected="false" tabindex="-1" aria-controls="payment-elsom-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--elsom" aria-hidden="true">
+                                <img src="../assets/images/services/payment-elsom-source.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">ЭЛСОМ ​​электрондук капчыгы аркылуу төлөө</span>
+                        </button>
+                    </div>
+
+                    <article class="payment-tab__panel payment-card-panel" id="payment-card-panel" role="tabpanel" aria-labelledby="payment-card-control" data-payment-panel>
+                        <h3>Банк карталары</h3>
+                        <div class="payment-tab__copy payment-card-panel__copy">
+                            <p><strong>Банк картасы менен толуктоо – толуктоонун эң оңой жана эң пайдалуу жолу.</strong></p>
+                            <p>Биз бардык кеңири таралган төлөм системаларынан карталарды кабыл алабыз:</p>
+                            <div class="payment-card-logos" aria-label="Төлөм системалары">
+                                <span class="payment-card-logo payment-card-logo--visa">
+                                    <img src="../assets/images/services/payment-card-visa.svg" alt="Visa">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--mastercard">
+                                    <img src="../assets/images/services/payment-card-mastercard.svg" alt="MasterCard">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--maestro">
+                                    <img src="../assets/images/services/payment-card-maestro.svg" alt="Maestro">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--amex">
+                                    <img src="../assets/images/services/payment-card-amex.svg" alt="American Express">
+                                </span>
+                            </div>
+                            <p>Картаны толуктоо үчүн биздин веб-сайттагы жеке кабинетиңизге өтүңүз <strong>(Үй → эсепти толуктоо)</strong><br>Толуктоонун ылайыктуу түрүн тандап, толуктоонун суммасын көрсөтүңүз жана системанын андан аркы нускамаларын аткарыңыз.</p>
+                            <p class="payment-card-panel__commission"><strong>Картаны толтурууда комиссия – 0%</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-bank-panel" role="tabpanel" aria-labelledby="payment-bank-control" data-payment-panel hidden>
+                        <h3>Накталай эмес төлөм</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Юридикалык жана жеке жактар ​​үчүн сунушталган (бирок талап кылынбайт) төлөм ыкмасы.</strong></p>
+                            <p>Төлөм эсепке каршы банктык которуу жолу менен жүргүзүлөт. Эсеп-фактураны чыгаруу үчүн сизге керек:</p>
+                            <ol class="payment-tab__steps">
+                                <li><span class="payment-tab__link-text">Каттоо</span> жана «Никита Онлайн» ЖЧКсы менен жазуу жүзүндө келишим түзүшөт</li>
+                                <li>Каалаган суммага өзүңүздүн жеке кабинетиңизде эсебиңизди толуктоо үчүн онлайн заказ бериңиз<br><strong>(Жеке аккаунт → Башкы бет → Эсепти толуктоо)</strong></li>
+                            </ol>
+                            <div class="payment-tab__text-flow">
+                                <p>Эсеп-фактура жараяны талап кылынат <strong>бир нече секунд</strong> жетекчинин катышуусуз.</p>
+                                <p>Сиз дароо күбөлөндүрүлгөн документтин сканерленген көчүрмөсүн аласыз.</p>
+                                <p>Документтин түп нускасы кадимки почта аркылуу өзүнчө жеткирилет.</p>
+                            </div>
+                            <p>Балким <strong>тездетилген каттоо</strong> тастыкталган төлөм тапшырыгынын скандоосун бергенден кийин (келишим түзгөн кардарлар үчүн) системадагы сиздин эсебиңизге акча каражатын.</p>
+                            <p>Төлөө максатында сиз эсептин номерин жана “SMS кабарлоо кызматтары үчүн” деген сөздү көрсөтүшүңүз керек.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-mbank-panel" role="tabpanel" aria-labelledby="payment-mbank-control" data-payment-panel hidden>
+                        <h3>Мбанк аркылуу төлөө</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Mbank мобилдик тиркемеси аркылуу эсепти тез толтуруу.</strong></p>
+                            <p>Мбанк аркылуу эсепти толуктоо үчүн:</p>
+                            <ol class="payment-tab__steps">
+                                <li>Mbank тиркемесин ачыңыз</li>
+                                <li>"Төлөмдөр" бөлүмүнө өтүңүз</li>
+                                <li>Алуучуну тандоо "NIKITA"</li>
+                                <li>Толуктоо суммасын көрсөтүңүз</li>
+                                <li>Төлөмдү ырастоо</li>
+                            </ol>
+                            <p><strong>Комиссия: банк менен ырасталышы керек</strong></p>
+                            <p>Каражаттар сиздин эсебиңизге бир нече мүнөттүн ичинде түшөт.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-elqr-panel" role="tabpanel" aria-labelledby="payment-elqr-control" data-payment-panel hidden>
+                        <h3>ELQR аркылуу төлөө</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>ELQR системасы аркылуу заманбап төлөм ыкмасы.</strong></p>
+                            <p>ELQR – Кыргызстандагы тез төлөмдөрдүн бирдиктүү системасы.</p>
+                            <p>ELQR аркылуу аккаунтуңузду толуктоо үчүн:</p>
+                            <ol class="payment-tab__steps">
+                                <li>Банкыңыздын же төлөм кызматыңыздын мобилдик тиркемесин ачыңыз</li>
+                                <li>QR коду менен төлөө опциясын табыңыз</li>
+                                <li>NIKITA QR кодун сканерлеңиз же алуучунун маалыматын колдонуңуз</li>
+                                <li>Сумманы киргизип, төлөмдү ырастаңыз</li>
+                            </ol>
+                            <p><strong>Комиссия: 0%дан</strong></p>
+                            <p>Каражаттар заматта чегерилет.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-pay24-panel" role="tabpanel" aria-labelledby="payment-pay24-control" data-payment-panel hidden>
+                        <h3>Pay24 терминалдары аркылуу төлөө</h3>
+                        <div class="payment-tab__copy payment-tab__copy--pay24">
+                            <div class="payment-tab__group">
+                                <p><strong>Терминалда төлөм жүргүзүүдө сизге керек болот:</strong></p>
+                                <ol class="payment-tab__steps">
+                                    <li>Бөлүмдү тандоо <strong>Башка кызматтар → Программалар жана электрондук кызматтар</strong>, кызматтардын тизмесинен табыңыз <strong>SMS жөнөтүү Никита Онлайн</strong></li>
+                                    <li>Биздин веб-сайтта катталууда көрсөткөн эл аралык форматтагы телефон номерин көрсөтүңүз</li>
+                                </ol>
+                                <p class="payment-tab__accent">Pay24 терминалы аркылуу төлөөдө комиссия – 2%</p>
+                            </div>
+                            <div class="payment-tab__group payment-tab__group--tight">
+                                <p>Сиз ошондой эле веб-сайттагы "Мобилдик капчыктан" төлөмдөрдү жүргүзө аласыз <a href="https://pay24.asia" target="_blank" rel="noopener">pay24.asia</a>.</p>
+                                <p class="payment-tab__accent">Эч кандай комиссия алынбайт.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-elsom-panel" role="tabpanel" aria-labelledby="payment-elsom-control" data-payment-panel hidden>
+                        <h3>ЭЛСОМ ​​электрондук капчыгы аркылуу төлөө</h3>
+                        <div class="payment-tab__copy payment-tab__copy--elsom">
+                            <p><strong>ЭЛСОМ ​​электрондук капчыгы сизге каалаган жерде жана каалаган убакта, мобилдик тармактын же Интернеттин болушуна жараша бир нече ар кандай жолдор менен кызматтарга төлөөнүн ыңгайлуу жана жөнөкөй ыкмасын сунуштайт.</strong></p>
+                            <ol class="payment-tab__method-list">
+                                <li>
+                                    <span>USSD командалары аркылуу төлөө (Beeline, MegaCom абоненттери үчүн жеткиликтүү):</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Уюлдук телефонуңуздагы буйрукту териңиз <strong>*900#.</strong></li>
+                                        <li>Пайда болгон менюдан тандаңыз <strong>"Төлөмдөр/Коммерциялык кызматтар" → "Эсепти төлөө".</strong></li>
+                                        <li>Андан кийин "Башка" категориясын тандап, жеткирүүчүлөрдүн тизмесинен пунктту табыңыз <strong>"Nikita Online".</strong></li>
+                                        <li>Кириңиз <strong>жеке эсеп</strong> (биздин веб-сайтта катталууда сиз көрсөткөн эл аралык форматтагы телефон номери), төлөмдүн суммасын көрсөтүү жана төлөмдү ырастоо;</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>ELSOM мобилдик тиркемеси аркылуу төлөө:</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Сайттан ELSOM мобилдик тиркемесин жүктөп алып орнотуп алыңыз <a href="https://www.elsom.kg" target="_blank" rel="noopener">www.elsom.kg</a> (IOS жана Android платформалары үчүн жеткиликтүү).</li>
+                                        <li>Мобилдик тиркеме аркылуу төлөөдө сиз бөлүмгө киришиңиз керек <strong>"Башка кызматтар"</strong> жана жеткирүүчүлөрдүн тизмесинен тандоо <strong>"Nikita Online SMS жөнөтүүлөрү".</strong></li>
+                                        <li>Чоо-жайы катары биздин веб-сайтта катталууда көрсөткөн эл аралык форматтагы телефон номерин бериңиз.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>ЭЛСОМ ​​сайтындагы жеке капчык аркылуу төлөө:</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Сайтта жеке капчыгыңызды колдонуңуз <a href="https://www.elsom.kg" target="_blank" rel="noopener">www.elsom.kg</a></li>
+                                        <li>Жеке капчык аркылуу төлөөдө сиз бөлүмгө киришиңиз керек <strong>"Башка кызматтар"</strong> жана жеткирүүчүлөрдүн тизмесинен тандоо <strong>"Nikita Online SMS жөнөтүүлөрү".</strong></li>
+                                        <li>Чоо-жайы катары биздин веб-сайтта катталууда көрсөткөн эл аралык форматтагы телефон номерин бериңиз.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p class="payment-tab__accent">ЭЛСОМ ​​мобилдик капчыгы аркылуу төлөөдө комиссия алынбайт.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">ООО "Никита Онлайн"</h3>
+                    <p class="footer__muted">КР ГАС лицензиясы 2015-жылдын 18-сентябрында № 15-1425-КР.</p>
+                    <h3 class="footer__company">ООО "Никита Мобайл"</h3>
+                    <p class="footer__sub">(2022-жылдын 15-апрелиндеги Никита Онлайн ЖЧК менен программалык-аппараттык платформаны ижарага алуу келишиминин негизинде)</p>
+                    <p class="footer__muted">КР ГАЗ №11-828-КР 21.04.2011-ж.</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Бишкек, ул. Шопокова 89, 5-кабат, 9-кабинет.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Никита Онлайн ЖЧК, Никита Мобайл ЖЧК, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Подвал">
+                <div class="footer__nav-primary">
+                    <a href="#pricing">Шарттар жана баалар</a>
+                    <a href="technical.html">Техникалык мүмкүнчүлүктөр</a>
+                    <a href="security.html">Ишенимдүүлүк жана коопсуздук</a>
+                    <a href="faq.html">Суроолор жана жооптор</a>
+                    <a href="contacts.html">Байланыштар</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="agreement.html">Колдонуучу келишими</a>
+                    <a href="security.html#bezop">Купуялык саясаты</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Байланыш жана коммерциялык маселелер:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Техникалык колдоо:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Коомдук медиа">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js?v=payment-tabs"></script>
+</body>
+</html>

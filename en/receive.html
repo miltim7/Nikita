@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita — Receive SMS</title>
+    <meta name="description" content="Short SMS number rental for receiving customer feedback and running automated SMS campaigns.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body class="page-services page-services--with-banner" data-default-service-tab="receive">
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+    <div class="container-xxl">
+        <div class="topbar__inner">
+            <nav class="topbar__nav" aria-label="Additional navigation">
+                <a href="#pricing" class="topbar__link topbar__link--active">Terms and prices</a>
+                <a href="technical.html" class="topbar__link">Technical capabilities</a>
+                <a href="security.html" class="topbar__link">Reliability and safety</a>
+                <a href="faq.html" class="topbar__link">Questions and answers</a>
+                <a href="contacts.html" class="topbar__link">Contacts</a>
+            </nav>
+            <div class="topbar__side">
+                <button type="button" class="topbar__lang" aria-haspopup="listbox">
+                    <span class="topbar__flag" aria-hidden="true">
+                        <span class="topbar__flag-stripe topbar__flag-stripe--white"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--blue"></span>
+                        <span class="topbar__flag-stripe topbar__flag-stripe--red"></span>
+                    </span>
+                    <span>RU</span>
+                    <img class="topbar__chevron" src="../assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
+                </button>
+                <a href="registration.html" class="topbar__login">
+                    <img src="../assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                    <span>Login / Register</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+    <div class="container-xxl">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo" aria-label="Nikita - main">
+                <img src="../assets/images/logo-header.png" alt="Nikita" width="181" height="48">
+            </a>
+
+            <a href="tel:+996700892188" class="header__phone" aria-label="+996 (700) 892-188">
+                <span class="header__phone-icon" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.37 1.04-.25 1.15.38 2.39.59 3.66.59.55 0 .99.44.99.99V20c0 .55-.44 1-.99 1C11.12 21 3 12.88 3 2.99 3 2.44 3.45 2 4 2h3.5c.55 0 .99.44.99.99 0 1.27.2 2.51.59 3.66.11.36.03.75-.26 1.04l-2.2 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span>+996 (700) 892-188</span>
+            </a>
+
+            <div class="header__actions">
+                <div class="header__links">
+                    <a href="contacts.html#support" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-support.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Contact<br>to technical support</span>
+                    </a>
+                    <a href="contacts.html#commercial" class="header__link">
+                        <span class="header__link-icon" aria-hidden="true">
+                            <img src="../assets/images/header-icon-chat.svg" alt="">
+                        </span>
+                        <span class="header__link-text">Contact<br>with the manager</span>
+                    </a>
+                </div>
+                <a href="contacts.html" class="btn btn-cta header__cta">
+                    <img src="../assets/images/header-icon-demo.svg" alt="" aria-hidden="true">
+                    <span class="header__cta-text">Try the demo for free</span>
+                    <span class="header__cta-short">Demo</span>
+                </a>
+                <button type="button" class="header__burger" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mobile-menu__nav" aria-label="Main menu">
+        <a href="services.html" class="mobile-menu__link mobile-menu__link--active">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--money" src="../assets/images/mobile-menu/icon-money.svg" alt="">
+            </span>
+            <span>Terms and prices</span>
+        </a>
+        <a href="technical.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--memory" src="../assets/images/mobile-menu/icon-memory.svg" alt="">
+            </span>
+            <span>Technical capabilities</span>
+        </a>
+        <a href="security.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--protect" src="../assets/images/mobile-menu/icon-protect.svg" alt="">
+            </span>
+            <span>Reliability and safety</span>
+        </a>
+        <a href="faq.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--question" src="../assets/images/mobile-menu/icon-question.svg" alt="">
+            </span>
+            <span>Questions and answers</span>
+        </a>
+        <a href="contacts.html" class="mobile-menu__link">
+            <span class="mobile-menu__icon" aria-hidden="true">
+                <img class="mobile-menu__icon-img mobile-menu__icon-img--phone" src="../assets/images/mobile-menu/icon-phone.svg" alt="">
+            </span>
+            <span>Contacts</span>
+        </a>
+    </nav>
+</div>
+
+<main>
+
+<!-- ============ SERVICES PRICING ============ -->
+<section class="service-page" id="pricing">
+    <div class="service-page__breadcrumbs container-xxl" aria-label="bread crumbs">
+        <span>Home → </span><strong>Services and prices</strong>
+    </div>
+
+    <div class="service-page__banner container-xxl" aria-hidden="true">
+        <div class="service-page__banner-frame"></div>
+    </div>
+
+    <div class="service-page__head container-xxl">
+        <h1 class="service-page__title">Services and prices</h1>
+        <nav class="service-tabs" aria-label="Service sections" role="tablist" data-service-tabs>
+            <a href="#service-tab-sending" class="service-tabs__item" role="tab" id="service-tab-sending-control" aria-controls="service-tab-sending" aria-selected="false" tabindex="-1" data-service-tab="sending">Sending SMS</a>
+            <a href="#service-tab-receive" class="service-tabs__item service-tabs__item--active" role="tab" id="service-tab-receive-control" aria-controls="service-tab-receive" aria-selected="true" data-service-tab="receive">Receive SMS</a>
+            <a href="#service-tab-otp" class="service-tabs__item" role="tab" id="service-tab-otp-control" aria-controls="service-tab-otp" aria-selected="false" tabindex="-1" data-service-tab="otp">OTP Service</a>
+            <a href="#service-tab-flash" class="service-tabs__item" role="tab" id="service-tab-flash-control" aria-controls="service-tab-flash" aria-selected="false" tabindex="-1" data-service-tab="flash">Flash SMS</a>
+            <a href="#service-tab-payment" class="service-tabs__item" role="tab" id="service-tab-payment-control" aria-controls="service-tab-payment" aria-selected="false" tabindex="-1" data-service-tab="payment">Payment methods</a>
+        </nav>
+    </div>
+
+    <div class="service-tabpanels">
+        <div class="service-tabpanel" id="service-tab-sending" role="tabpanel" aria-labelledby="service-tab-sending-control" data-service-panel="sending" hidden>
+    <div class="service-intro container-xxl">
+        <div class="service-intro__copy">
+            <p>The cost of each SMS message sent to subscribers of Beeline, MegaCom, O! depends on the size of the first payment (the minimum payment to activate the tariff) and the telecom operator.</p>
+            <p><strong>Thus, the more you deposit into your account, the lower the cost.</strong></p>
+        </div>
+        <div class="service-hints">
+            <article class="service-hint">
+                <span class="service-hint__icon service-hint__icon--like" aria-hidden="true"></span>
+                <p>There are no additional fees. All <a class="service-hint__link" href="technical.html">technical capabilities</a> available in all tariffs in full.</p>
+            </article>
+            <article class="service-hint">
+                <span class="service-hint__icon service-hint__icon--wallet" aria-hidden="true"></span>
+                <p><strong>The deposited amount does not “burn out”.</strong> Funds can be spent as long as you like.</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="service-rates container-xxl">
+        <table class="rates-table" aria-label="Tariffs for sending SMS">
+            <colgroup>
+                <col class="rates-table__operator">
+                <col class="rates-table__type">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+                <col class="rates-table__plan">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">Rate</th>
+                    <th>Start</th>
+                    <th>Optima</th>
+                    <th>Pro</th>
+                    <th>Extra</th>
+                </tr>
+                <tr>
+                    <th colspan="2">First payment (KGS)</th>
+                    <th>up to 5,000</th>
+                    <th>up to 10,000</th>
+                    <th>up to 25,000</th>
+                    <th>more than 25,000</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <th rowspan="3" scope="rowgroup">
+                        <span class="operator-logo operator-logo--mega"><img src="../assets/images/services/logo-mega-desktop.png" alt="MEGA"></span>
+                        <strong>MegaCom</strong>
+                        <small>CJSC Alfa Telecom</small>
+                    </th>
+                    <td>National sender names</td>
+                    <td>1,30</td><td>1,28</td><td>1,25</td>
+                    <td rowspan="3">By agreement</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <td>For financial institutions</td>
+                    <td>2,16</td><td>2,13</td><td>2,07</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--mega">
+                    <td>International sender names</td>
+                    <td>25,34</td><td>24,92</td><td>24,49</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <th rowspan="4" scope="rowgroup">
+                        <span class="operator-logo operator-logo--beeline"><img src="../assets/images/services/logo-beeline-desktop.png" alt="Beeline"></span>
+                        <strong>Beeline</strong>
+                        <small>OJSC “Sky Mobile”</small>
+                    </th>
+                    <td>Transactional messages</td>
+                    <td>1,45</td><td>1,42</td><td>1,39</td>
+                    <td rowspan="4">By agreement</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Service messages</td>
+                    <td>1,67</td><td>1,64</td><td>1,60</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>Advertising messages</td>
+                    <td>3,04</td><td>2,99</td><td>2,91</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--beeline">
+                    <td>International sender names</td>
+                    <td>19,37</td><td>19,05</td><td>18,73</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--o">
+                    <th rowspan="2" scope="rowgroup">
+                        <span class="operator-logo operator-logo--o"><img src="../assets/images/services/logo-o-desktop.svg" alt="O!"></span>
+                        <strong>O!</strong>
+                        <small>OJSC “NUR Telecom”</small>
+                    </th>
+                    <td>National sender names</td>
+                    <td>1,66</td><td>1,64</td><td>1,59</td>
+                    <td rowspan="2">By agreement</td>
+                </tr>
+                <tr class="rates-table__group rates-table__group--o">
+                    <td>International sender names</td>
+                    <td>20,67</td><td>20,32</td><td>19,98</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="rates-mobile" aria-label="Tariffs for sending SMS">
+            <article class="rate-card rate-card--mega">
+                <h2><span class="operator-logo operator-logo--mega"><img src="../assets/images/services/logo-mega-desktop.png" alt="MEGA"></span><strong>MegaCom</strong><small>CJSC Alfa Telecom</small></h2>
+                <div class="rate-card__plans"><span></span><b>Start<small>up to 5K</small></b><b>Optima<small>up to 10K</small></b><b>Pro<small>up to 25K</small></b><b>Extra<small>25K +</small></b></div>
+                <div class="rate-card__row"><span>National sender names</span><i>1,30</i><i>1,28</i><i>1,25</i><i data-span="true">By agreement</i></div>
+                <div class="rate-card__row"><span>For financial institutions</span><i>2,16</i><i>2,13</i><i>2,07</i><i></i></div>
+                <div class="rate-card__row"><span>M/popular names of senders</span><i>25,34</i><i>24,92</i><i>24,49</i><i></i></div>
+            </article>
+            <article class="rate-card rate-card--beeline">
+                <h2><span class="operator-logo operator-logo--beeline"><img src="../assets/images/services/logo-beeline-desktop.png" alt="Beeline"></span><strong>Beeline</strong><small>OJSC “Sky Mobile”</small></h2>
+                <div class="rate-card__plans"><span></span><b>Start<small>up to 5K</small></b><b>Optima<small>up to 10K</small></b><b>Pro<small>up to 25K</small></b><b>Extra<small>25K +</small></b></div>
+                <div class="rate-card__row"><span>Transaction messages</span><i>1,45</i><i>1,42</i><i>1,39</i><i data-span="true">By agreement</i></div>
+                <div class="rate-card__row"><span>Service messages</span><i>1,67</i><i>1,64</i><i>1,60</i><i></i></div>
+                <div class="rate-card__row"><span>Advertising messages</span><i>3,04</i><i>2,99</i><i>2,91</i><i></i></div>
+                <div class="rate-card__row"><span>M/popular names of senders</span><i>19,37</i><i>19,05</i><i>18,73</i><i></i></div>
+            </article>
+            <article class="rate-card rate-card--o">
+                <h2><span class="operator-logo operator-logo--o"><img src="../assets/images/services/logo-o-desktop.svg" alt="O!"></span><strong>O!</strong><small>OJSC “NUR Telecom”</small></h2>
+                <div class="rate-card__plans"><span></span><b>Start<small>up to 5K</small></b><b>Optima<small>up to 10K</small></b><b>Pro<small>up to 25K</small></b><b>Extra<small>25K +</small></b></div>
+                <div class="rate-card__row"><span>National sender names</span><i>1,66</i><i>1,64</i><i>1,59</i><i data-span="true">By agreement</i></div>
+                <div class="rate-card__row"><span>M/popular names of senders</span><i>20,67</i><i>20,32</i><i>19,98</i><i></i></div>
+            </article>
+        </div>
+    </div>
+
+    <div class="service-note container-xxl">
+        <p><a href="#pricing">[1]&nbsp;</a>Immediately after activating the account, the client is connected to the “Start” tariff.</p>
+        <p><a href="contacts.html#commercial">[2]&nbsp;</a>Please check with the manager for prices and shipping options to Russia and other CIS countries and the world.</p>
+        <p><a href="#payment">[3]&nbsp;</a>Prices are indicated in soms and include VAT and sales taxes. Price valid from September 1, 2025.</p>
+    </div>
+
+    <section class="service-copy service-copy--with-aside container-xxl">
+        <div class="service-copy__text">
+            <h2>National and International sms</h2>
+            <p class="service-copy__lead">Sending SMS messages from names that operators consider national and register will be charged at the rates for national sender names. All other unregistered names will be considered international, and SMS messages from such names will be charged at the rates for international sender names.</p>
+            <p>International ones include alphanumeric names that are used by international brands, payment systems, international electronic wallets and/or payment systems (for example, WebMoney, Qiwi Wallet, etc.), international social networks, international gaming Internet services, international email services, file hosting services, search engines (for example, Mail.Ru, Yahoo, Rambler.ru, Google, etc.).</p>
+        </div>
+        <aside class="service-actions">
+            <a href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls" class="service-action service-action--download" target="_blank" rel="noopener">Download and fill out the application form for approval of the sender’s name</a>
+            <a href="faq.html#faq015" class="service-action service-action--info">Learn more about international sender names</a>
+        </aside>
+    </section>
+
+    <section class="service-copy container-xxl">
+        <div class="service-copy__text">
+            <h2>Registering sender names</h2>
+            <p class="service-copy__lead">Regardless of type, national or international, all sender names must be registered.</p>
+            <p>Only after registering a name with each operator will it be possible to send SMS messages to subscribers of a given operator from the registered name.</p>
+            <p>To register the sender's name, you must <a class="service-copy__link" href="https://smspro.nikita.kg/kg/documents/sender-id-form.xls" target="_blank" rel="noopener">fill out an application</a> and send a request by e-mail <a class="service-copy__link" href="mailto:names@nikita.kg">names@nikita.kg</a>.</p>
+            <p>The registration period for new names for clients with national traffic takes up to 10 working days.</p>
+        </div>
+    </section>
+
+    <section class="service-copy service-copy--features container-xxl">
+        <div class="service-copy__text">
+            <h2>Tariffing features</h2>
+            <p class="service-copy__lead">Billing for sent SMS messages depends on the established tariff plan, the name of the sender, and the number of message parts. Incorrect shipments are not charged.</p>
+            <div class="service-feature-list">
+                <p>At the operator <strong>Beeline</strong> (Sky Mobile LLC) SMS messages are also charged depending on the type of messages, which are divided into service, transactional and advertising. Distribution is carried out according to transactional/service message templates previously agreed with the operator.</p>
+                <article><h3>Transactional (banking) SMS:</h3><p>Transactional messages include SMS messages informing the Subscriber about transactions involving the movement of funds on his account or about the impossibility of performing such an operation. The message template must explicitly indicate the transaction type, account number and amount.</p></article>
+                <article><h3>Service SMS:</h3><p>A service message is a Message that informs the Subscriber about the status of the client’s service/service, as well as informing about events and/or operations within the framework of the services provided.</p></article>
+                <article><h3>Promotional SMS:</h3><p>Advertising SMS are considered all messages that do not fall under the templates of service and transactional SMS.</p></article>
+                <article class="service-feature-list__card"><h3>Tariff for financial institutions</h3><p>With the operator MegaCom (CJSC Alfa Telecom), messages sent by financial institutions are paid at a separate rate. The list of sender names for organizations providing financial services (banks, microcredit companies, pawnshops) is established by the operator.</p></article>
+            </div>
+        </div>
+        <aside class="service-actions service-actions--single">
+            <a href="https://smspro.nikita.kg/kg/documents/templates-form.xls" class="service-action service-action--download" target="_blank" rel="noopener">Application form for approval of transaction/service SMS templates</a>
+        </aside>
+    </section>
+
+    <section class="cooperation" id="contract">
+        <div class="cooperation__inner container-xxl">
+            <div class="cooperation__top">
+                <div>
+                    <h2>Terms of cooperation</h2>
+                    <p>We value our reputation, so we do not engage in SPAM or illegal mailings.</p>
+                </div>
+                <aside class="service-actions service-actions--contract">
+                    <a href="https://smspro.nikita.kg/kg/documents/dogovor-example.docx" class="service-action service-action--download">Download the standard contract</a>
+                </aside>
+            </div>
+            <ol class="cooperation__list">
+                <li><span>01</span><p>By sending mailings using our gateway, the client agrees with the provisions <strong class="cooperation__accent-muted">User Agreement.</strong> The ability to replace the sender's name (Sender ID) is provided only after the client submits an application to register the sender's name with operators and is moderated by the service administrator <strong>smspro.nikita.kg</strong></p></li>
+                <li><span>02</span><p>An agreement is necessary if you need to receive correct accounting reports. To conclude a written agreement, you must provide a certificate of registration of a legal entity or private enterprise (or a passport for individuals)</p></li>
+                <li><span>03</span><p>Form of payment when concluding a written agreement – <strong>cashless payment.</strong> Procedure for payment for services - replenishment of the client’s personal account in the system <strong>smspro.nikita.kg</strong> with subsequent debiting of funds for services provided in accordance with the tariff</p></li>
+                <li><span>04</span><p>Immediately after registration, the client’s tariff is activated <strong>"START"</strong>. The ability to send mailings and top up the account is activated for the client <strong>only after validating the client’s phone number</strong></p></li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="payment-methods container-xxl" id="payment">
+        <h2>Payment methods</h2>
+        <p class="payment-methods__lead">Instant funds deposit <span>with commission from 0%!</span></p>
+        <div class="payment-methods__text">
+            <p>To get started you only need <a href="https://smspro.nikita.kg/kg/register.html">registration,</a> after which you will be able to immediately top up your account and start working in just 5 minutes – even without approval from the manager!</p>
+            <p>You can top up your account in our system in several ways.</p>
+        </div>
+        <h3>We accept:</h3>
+        <ul class="payment-list">
+            <li><span class="payment-list__icon payment-list__icon--bank" aria-hidden="true"></span><strong>Cashless<br>calculation</strong></li>
+            <li><span class="payment-list__icon payment-list__icon--card" aria-hidden="true"></span><strong>Banking<br>cards</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--mbank"><img src="../assets/images/services/payment-mbank.png" alt="mbank"></span><strong>Payment via Mbank</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--elqr"><img src="../assets/images/services/payment-elqr-source.png" alt="ELQR"></span><strong>Payment via ELQR</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--pay24"><img src="../assets/images/services/payment-pay24.png" alt="Pay24"></span><strong>Payment<br>via Pay24 terminals</strong></li>
+            <li><span class="payment-list__brand payment-list__brand--elsom"><img src="../assets/images/services/payment-elsom-source.png" alt="ELSOM"></span><strong>Payment via<br>electronic wallet ELSOM</strong></li>
+        </ul>
+    </section>
+        </div>
+        <div class="service-tabpanel service-tabpanel--active" id="service-tab-receive" role="tabpanel" aria-labelledby="service-tab-receive-control" data-service-panel="receive">
+            <section class="receive-intro container-xxl">
+                <div class="receive-intro__copy">
+                    <h2>Need feedback from your clients?</h2>
+                    <p>To provide feedback - receiving SMS messages from subscribers of all mobile operators in Kyrgyzstan, NIKITA provides a service <strong>“Rent a short SMS number.”</strong></p>
+                </div>
+                <aside class="receive-alert">
+                    <span class="receive-alert__icon" aria-hidden="true"></span>
+                    <p>You will be able to carry out your automatic SMS mailings <strong>on behalf of the rented number.</strong></p>
+                </aside>
+            </section>
+
+            <section class="receive-rates container-xxl" aria-label="Cost of receiving SMS">
+                <div class="receive-rates__table">
+                    <div class="receive-rates__row">
+                        <strong>Cost of renting a short number for a client</strong>
+                        <span>1000 som/month</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Cost of receiving one SMS message for a client</strong>
+                        <span>1.00 som.</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Type of rented number: four-digit</strong>
+                        <span>7115</span>
+                    </div>
+                    <div class="receive-rates__row">
+                        <strong>Cost of sending SMS for a subscriber</strong>
+                        <span>1.00 som.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="receive-processing container-xxl">
+                <div class="receive-processing__copy">
+                    <h2>You can process received SMS messages in two ways:</h2>
+                    <ol>
+                        <li>In the WEB interface of the SMSPRO.NIKITA.KG system with the ability to filter and upload SMS messages to Excel</li>
+                        <li>Receive SMS messages for processing on the client side by <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api.pdf">HTTP(s)/XML protocol</a></li>
+                    </ol>
+                </div>
+                <aside class="service-actions receive-processing__actions">
+                    <a href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-XML-api.pdf" class="service-action service-action--download">Download XML API Description</a>
+                </aside>
+            </section>
+
+            <section class="receive-rent">
+                <div class="receive-rent__inner container-xxl">
+                    <div class="receive-rent__copy">
+                        <h2>If you have a task</h2>
+                        <ul>
+                            <li>evaluate the effectiveness of a marketing campaign</li>
+                            <li>conduct a survey/vote</li>
+                            <li>receive orders and customer offers via SMS</li>
+                            <li>carry out multi-stage marketing campaigns such as “refer a friend”</li>
+                        </ul>
+                        <p>then the “Rent a short SMS number” service is for you!</p>
+                    </div>
+                    <aside class="receive-rent__note">
+                        <div class="receive-rent__note-inner">
+                            <p><span>*</span> At the moment, when you activate the “Rent a short SMS number” service, only number 7115 will be available to you.</p>
+                            <p><strong>Check with the manager for the possibility of connecting another short number.</strong></p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="payment-methods payment-methods--receive container-xxl">
+                <h2>Payment methods</h2>
+                <p class="payment-methods__lead">Instant funds deposit <span>with commission from 0%!</span></p>
+                <div class="payment-methods__text">
+                    <p>To get started you only need <a href="https://smspro.nikita.kg/kg/register.html">registration,</a> after which you will be able to immediately top up your account and start working in just 5 minutes – even without approval from the manager!</p>
+                    <p>You can top up your account in our system in several ways.</p>
+                </div>
+                <h3>We accept:</h3>
+                <ul class="payment-list">
+                    <li><span class="payment-list__icon payment-list__icon--bank" aria-hidden="true"></span><strong>Cashless<br>calculation</strong></li>
+                    <li><span class="payment-list__icon payment-list__icon--card" aria-hidden="true"></span><strong>Banking<br>cards</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--mbank"><img src="../assets/images/services/payment-mbank.png" alt="mbank"></span><strong>Payment via Mbank</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--elqr"><img src="../assets/images/services/payment-elqr-source.png" alt="ELQR"></span><strong>Payment via ELQR</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--pay24"><img src="../assets/images/services/payment-pay24.png" alt="Pay24"></span><strong>Payment<br>via Pay24 terminals</strong></li>
+                    <li><span class="payment-list__brand payment-list__brand--elsom"><img src="../assets/images/services/payment-elsom-source.png" alt="ELSOM"></span><strong>Payment via<br>electronic wallet ELSOM</strong></li>
+                </ul>
+            </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-otp" role="tabpanel" aria-labelledby="service-tab-otp-control" data-service-panel="otp" hidden>
+            <section class="otp-intro container-xxl">
+                <div class="otp-copy">
+                    <h2>What is a one-time password?</h2>
+                    <p class="otp-copy__text"><strong>One Time Password (OTP)</strong> – a simple and reliable form of two-factor authentication.</p>
+                    <p class="otp-copy__text">Two-factor authentication is <strong>additional level of security,</strong> allowing you to eliminate the vulnerabilities of the standard password and is necessary to protect your company and its data.</p>
+                    <p class="otp-copy__text otp-copy__text--gap"><strong>Protect your service and users from unauthorized actions.</strong></p>
+                    <p class="otp-copy__text">Verify clients and their actions using one-time SMS codes.</p>
+                    <p class="otp-copy__text otp-copy__text--gap">A one-time SMS code is an excellent solution for companies whose business is directly related to the Internet and working with a large client base.</p>
+                </div>
+                <div class="otp-copy">
+                    <h2>How does client authorization occur?</h2>
+                    <p class="otp-copy__text">Two-step verification is based on phone number verification. This is a reliable and fail-safe method that will work 99% of the time.</p>
+                    <p class="otp-copy__text">It is clear and <strong>does not require the user to install additional software, purchase special devices, or perform complex actions.</strong></p>
+                    <ol>
+                        <li>The user enters their phone number</li>
+                        <li>Our platform sends him an SMS with a one-time password</li>
+                        <li>The user receives an SMS message with a password, after which he enters it on the website or application.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="otp-purpose">
+                <div class="otp-purpose__inner container-xxl">
+                    <h2>What are one-time codes for?</h2>
+                    <div class="otp-purpose__grid">
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--shield" aria-hidden="true"></span>
+                            <h3>Protecting your business from fraudsters</h3>
+                            <p>Protect your service from unauthorized actions, <br>financial and reputational losses</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--bank" aria-hidden="true"></span>
+                            <h3>For banks</h3>
+                            <p>Use one-time passwords <br>to confirm payment and complete the transaction</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--cart" aria-hidden="true"></span>
+                            <h3>For retail</h3>
+                            <p>Link buyer accounts <br>to the phone and write off bonus points <br>using one-time passwords</p>
+                        </article>
+                        <article class="otp-purpose-card">
+                            <span class="otp-icon otp-icon--transport" aria-hidden="true"></span>
+                            <h3>For<br>passenger transportation</h3>
+                            <p>Send SMS codes to confirm seat reservations and payment for tickets</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="otp-benefits container-xxl">
+                <div class="otp-task">
+                    <h2>Authorization via SMS<br>solves problems such as:</h2>
+                    <div class="otp-benefit-list">
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--copy" aria-hidden="true"></span>
+                            <div>
+                                <h3>Eliminating duplicates</h3>
+                                <p>Eliminate duplicate registrations or accounts (one phone number = one account)</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--check" aria-hidden="true"></span>
+                            <div>
+                                <h3>Transaction security</h3>
+                                <p>Transaction confirmation with a one-time SMS password increases the reliability of transactions</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--person" aria-hidden="true"></span>
+                            <div>
+                                <h3>Subscriber verification</h3>
+                                <p>The entered phone exists, works and belongs to the user, not the robot</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--censor" aria-hidden="true"></span>
+                            <div>
+                                <h3>Protection against spam attacks</h3>
+                                <p>Two-factor authentication prevents spam attacks</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card">
+                            <span class="otp-icon otp-icon--like" aria-hidden="true"></span>
+                            <div>
+                                <h3>Improving the validity of results</h3>
+                                <p>Confirmation of participants in online voting increases the reliability of the results obtained</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="otp-factor">
+                    <h2>Advantages <br>two-factor authentication</h2>
+                    <div class="otp-benefit-list">
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--star" aria-hidden="true"></span>
+                            <div>
+                                <h3>Uniqueness</h3>
+                                <p>One-time messages are unique to each user and each login from any digital device.</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--message" aria-hidden="true"></span>
+                            <div>
+                                <h3>SMS authorization</h3>
+                                <p>The classic method of sending one-time codes, which has become familiar to most clients</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--mail" aria-hidden="true"></span>
+                            <div>
+                                <h3>SMS is a channel with maximum open rates</h3>
+                                <p>Therefore, the client will see the message immediately after receiving it. <br>This will ensure a high percentage of successful registrations and authorizations.</p>
+                            </div>
+                        </article>
+                        <article class="otp-benefit-card otp-benefit-card--dark">
+                            <span class="otp-icon otp-icon--edit" aria-hidden="true"></span>
+                            <div>
+                                <h3>Your signature</h3>
+                                <p>You can also add your alphanumeric sender name so that the client is sure that it was you who sent the message.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="otp-steps">
+                <div class="otp-steps__inner container-xxl">
+                    <div class="otp-steps__head">
+                        <h2>How to authorize via SMS on a website</h2>
+                        <p>Just register on our website, fill out the application form for approval of the sender's name and receive your signature (Sender ID). <br class="otp-steps__desktop-break">Then follow a few simple steps:</p>
+                    </div>
+                    <ol class="otp-steps__list">
+                        <li>
+                            <span>01</span>
+                            <p>Place a registration form on your website, where, among other fields, there should be fields for entering a phone number and a one-time password.</p>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <p>Generation and sending of a unique one-time code/password to the subscriber is carried out using our</p>
+                            <a class="otp-api-link" href="https://smspro.nikita.kg/kg/documents/smspro.nikita.kg-OTP-api.pdf"><span>OTP-API</span><span class="otp-api-link__icon" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <p>Subscriber authorization.<br><br>The subscriber enters the received code into the form field. The match between the codes generated by the system and the codes entered by the subscriber is checked.</p>
+                        </li>
+                        <li>
+                            <span>04</span>
+                            <p>If the codes match, then the client can be given access to his personal account; if they do not match, then the client needs to be given an error message and asked to enter the password again.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-flash" role="tabpanel" aria-labelledby="service-tab-flash-control" data-service-panel="flash" hidden>
+            <section class="flash-intro container-xxl">
+                <div class="flash-intro__copy">
+                    <h2>New promotion channel – Flash SMS</h2>
+                    <p><strong>Effective and targeted advertising is the key to increasing income and reducing unnecessary costs.</strong></p>
+                    <p>Flash SMS is an SMS message that is instantly displayed on the mobile phone screen. Your recipients will not have to press a single button to view your message, and your message will not go unnoticed!</p>
+                </div>
+                <div class="flash-hints">
+                    <article class="flash-hint flash-hint--base">
+                        <span class="flash-hint__icon" aria-hidden="true"></span>
+                        <p>The largest database on the market: we have <strong>about 3,000,000 Beeline subscribers</strong> all over Kyrgyzstan!</p>
+                    </article>
+                    <article class="flash-hint flash-hint--growth">
+                        <span class="flash-hint__icon" aria-hidden="true"></span>
+                        <p>The effectiveness of the Flash SMS channel will make these clients permanent for you!</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="flash-ad">
+                <div class="flash-ad__inner container-xxl">
+                    <div class="flash-ad__preview">
+                        <h2>What does this kind of advertising look like?</h2>
+                        <ul class="flash-checklist" aria-label="Flash SMS Features">
+                            <li>Flash SMS appears in clear form on the phone screen with message sound</li>
+                            <li>Clickable link</li>
+                            <li>Works on all mobile phones</li>
+                            <li>You can save the text if it is useful and useful</li>
+                            <li>There is a delivery report</li>
+                            <li>70 characters in Cyrillic, or 160 characters in Latin</li>
+                        </ul>
+                    </div>
+                    <div class="flash-segment">
+                        <h3>We segment subscribers<br>for an accurate hit <br class="flash-segment__desktop-break">to the target audience:</h3>
+                        <ul class="flash-segment__list">
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><path d="M18 32s10-9.4 10-18A10 10 0 0 0 8 14c0 8.6 10 18 10 18Z" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="14" r="3.5" stroke="currentColor" stroke-width="2"/></svg>
+                                </span>
+                                <span>By location to city street level and also by region</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><rect x="7" y="9" width="22" height="18" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M23 18h6M11 14h10M11 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                                <span>By level of expenses per month</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><path d="M11 9v18M18 9v18M25 9v18M8 14h6M15 22h6M22 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="14" r="2" fill="currentColor"/><circle cx="18" cy="22" r="2" fill="currentColor"/><circle cx="25" cy="17" r="2" fill="currentColor"/></svg>
+                                </span>
+                                <span>By consumption profile (calls, internet) –<br>youth or older</span>
+                            </li>
+                            <li>
+                                <span class="flash-segment__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 36 36" fill="none"><rect x="12" y="5" width="12" height="26" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M16 27h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                                <span>By device type – smartphone or feature phone<br>in a language convenient for subscribers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="flash-price container-xxl">
+                <div class="flash-price__table" role="table" aria-label="Cost of Flash SMS">
+                    <div class="flash-price__row flash-price__row--head" role="row">
+                        <strong role="columnheader">Cost* (the larger the volume, the lower the price):</strong>
+                    </div>
+                    <div class="flash-price__row flash-price__row--subhead" role="row">
+                        <strong role="columnheader">Flash SMS quantity</strong>
+                        <strong role="columnheader">Cost including VAT</strong>
+                    </div>
+                    <div class="flash-price__row" role="row"><span role="cell">10-4 999</span><span role="cell">1.30 som</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">5 000 - 9 999</span><span role="cell">1.19 som</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">10 000 - 49 999</span><span role="cell">1.08 som</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">50 000 - 99 999</span><span role="cell">1.03 som</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">100 000 - 299 999</span><span role="cell">0.94 som</span></div>
+                    <div class="flash-price__row" role="row"><span role="cell">300,000 and above</span><span role="cell">0.85 som</span></div>
+                </div>
+                <div class="flash-price__notes">
+                    <p><span>*</span> At the moment, sending Flash SMS messages is only possible to the phones of subscribers of the operator Beeline</p>
+                    <p><span>*</span> Volume is calculated for one advertising message, including multiple languages</p>
+                    <p><span>*</span> The certificate of completion of work is provided according to the delivery report: You pay only for delivered messages</p>
+                </div>
+            </section>
+
+            <section class="flash-audience">
+                <div class="flash-audience__inner container-xxl">
+                    <div class="flash-audience__copy">
+                        <h2>Who will receive advertising?</h2>
+                        <p><strong>Only those who want to receive advertising, which means that they will be satisfied.<br>Willing subscribers are subscribers who have connected to a special Beeline service in order to receive advertising.<br>Namely:</strong></p>
+                        <ul class="flash-audience__list">
+                            <li>actively using cellular communications;</li>
+                            <li>opinion leaders of different segments;</li>
+                            <li>non-inert, interested and ready to try new things;</li>
+                            <li>both call users and Internet users;</li>
+                            <li>are located in different regions of the country;</li>
+                            <li>have different types of devices from dialers to smartphones;</li>
+                            <li>with different monthly expenses, from low to high.</li>
+                        </ul>
+                    </div>
+                    <img class="flash-audience__image" src="../assets/images/services/flash-audience.png" alt="" aria-hidden="true">
+                </div>
+            </section>
+
+            <section class="flash-order">
+                <div class="flash-order__inner container-xxl">
+                    <div class="flash-order__head">
+                        <h2>Order process</h2>
+                        <ol class="flash-order__steps">
+                            <li><span>01</span><p>You conclude <strong>agreement</strong><br>from "Nikita Online"</p></li>
+                            <li><span>02</span><p>Place an order<br>and hand it over to the manager</p></li>
+                            <li><span>03</span><p>We do segmentation<br>and send advertising on your behalf</p></li>
+                            <li><span>04</span><p>You receive a certificate of completion of work based on the message delivery report</p></li>
+                            <li><span>05</span><p>Carrying out mutual settlements</p></li>
+                        </ol>
+                    </div>
+
+                    <div class="flash-cases">
+                        <article class="flash-case">
+                            <header class="flash-case__head">
+                                <h3>Example 1</h3>
+                                <p>XXX company for the production of local leather shoes<br>with average and above average prices</p>
+                            </header>
+                            <div class="flash-case__rows">
+                                <div class="flash-case-row flash-case-row--task">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-sms.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Task:</strong><span>Inform your potential customers about the launch and assortment</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--audience">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-followers.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Subscribers who are interested in the offer are selected:</strong><span>- Subscribers with average and high monthly costs;<br>- Living in big cities e.g. Osh and Bishkek</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--send">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-speed.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Flash SMS - mailing</strong><span>Flash SMS is sent to specified subscribers with a link to a website or social page</span></div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="flash-case">
+                            <header class="flash-case__head">
+                                <h3>Example No. 2</h3>
+                                <p>Cafe XXX fast food,<br>which is located at the intersection of the street. Sovetskaya/Toktogul</p>
+                            </header>
+                            <div class="flash-case__rows">
+                                <div class="flash-case-row flash-case-row--task">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-sms.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Task:</strong><span>Attract your potential clients</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--audience">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-followers.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Subscribers who are interested in the offer are selected:</strong><span>- Youth: Internet users<br>- With average costs per month<br>- Often located in the square of Sovetskaya/Toktogul streets</span></div>
+                                </div>
+                                <div class="flash-case-row flash-case-row--send">
+                                    <span class="flash-case-row__icon"><img src="../assets/images/services/flash-icon-speed.svg" alt="" aria-hidden="true"></span>
+                                    <div><strong>Flash SMS - mailing</strong><span>Flash SMS is sent to specified subscribers with a link to a website or social page</span></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="service-tabpanel" id="service-tab-payment" role="tabpanel" aria-labelledby="service-tab-payment-control" data-service-panel="payment" hidden>
+            <section class="payment-tab" aria-labelledby="payment-tab-title">
+                <div class="payment-tab__intro container-xxl">
+                    <h2 class="payment-tab__title" id="payment-tab-title">Payment methods</h2>
+                    <p class="payment-tab__lead">Regardless of the form of your organization (individual, legal entity or private enterprise), you can top up your account in our system using any of the following methods:</p>
+                </div>
+
+                <div class="payment-tab__content container-xxl">
+                    <div class="payment-tab__methods" role="tablist" aria-label="Replenishment methods">
+                        <button class="payment-tab-card payment-tab-card--bank" type="button" role="tab" id="payment-bank-control" aria-selected="false" tabindex="-1" aria-controls="payment-bank-panel">
+                            <span class="payment-tab-card__icon payment-tab-card__icon--bank" aria-hidden="true"></span>
+                            <span class="payment-tab-card__text">Cashless payment</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--active payment-tab-card--card" type="button" role="tab" id="payment-card-control" aria-selected="true" aria-controls="payment-card-panel">
+                            <span class="payment-tab-card__icon payment-tab-card__icon--card" aria-hidden="true"></span>
+                            <span class="payment-tab-card__text">Bank cards</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--mbank" type="button" role="tab" id="payment-mbank-control" aria-selected="false" tabindex="-1" aria-controls="payment-mbank-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--mbank" aria-hidden="true">
+                                <img src="../assets/images/services/payment-mbank.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Payment via Mbank</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--elqr" type="button" role="tab" id="payment-elqr-control" aria-selected="false" tabindex="-1" aria-controls="payment-elqr-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--elqr" aria-hidden="true">
+                                <img src="../assets/images/services/payment-elqr-source.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Payment via ELQR</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--pay24" type="button" role="tab" id="payment-pay24-control" aria-selected="false" tabindex="-1" aria-controls="payment-pay24-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--pay24" aria-hidden="true">
+                                <img src="../assets/images/services/payment-pay24.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Payment <br>via Pay24 terminals</span>
+                        </button>
+                        <button class="payment-tab-card payment-tab-card--brand payment-tab-card--elsom" type="button" role="tab" id="payment-elsom-control" aria-selected="false" tabindex="-1" aria-controls="payment-elsom-panel">
+                            <span class="payment-tab-card__brand payment-tab-card__brand--elsom" aria-hidden="true">
+                                <img src="../assets/images/services/payment-elsom-source.png" alt="">
+                            </span>
+                            <span class="payment-tab-card__text">Payment via ELSOM electronic wallet</span>
+                        </button>
+                    </div>
+
+                    <article class="payment-tab__panel payment-card-panel" id="payment-card-panel" role="tabpanel" aria-labelledby="payment-card-control" data-payment-panel>
+                        <h3>Bank cards</h3>
+                        <div class="payment-tab__copy payment-card-panel__copy">
+                            <p><strong>Topping up with a bank card is the easiest and most profitable way to top up.</strong></p>
+                            <p>We accept cards from all the most common payment systems:</p>
+                            <div class="payment-card-logos" aria-label="Payment systems">
+                                <span class="payment-card-logo payment-card-logo--visa">
+                                    <img src="../assets/images/services/payment-card-visa.svg" alt="Visa">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--mastercard">
+                                    <img src="../assets/images/services/payment-card-mastercard.svg" alt="MasterCard">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--maestro">
+                                    <img src="../assets/images/services/payment-card-maestro.svg" alt="Maestro">
+                                </span>
+                                <span class="payment-card-logo payment-card-logo--amex">
+                                    <img src="../assets/images/services/payment-card-amex.svg" alt="American Express">
+                                </span>
+                            </div>
+                            <p>To top up your card, go to your personal account on our website <strong>(Home → top up account)</strong><br>Select the appropriate type of replenishment, indicate the replenishment amount and follow further instructions from the system.</p>
+                            <p class="payment-card-panel__commission"><strong>Commission when topping up with a card – 0%</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-bank-panel" role="tabpanel" aria-labelledby="payment-bank-control" data-payment-panel hidden>
+                        <h3>Cashless payment</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Recommended (but not required) payment method for legal entities and private individuals.</strong></p>
+                            <p>Payment is made by bank transfer against the account. To issue an invoice you need:</p>
+                            <ol class="payment-tab__steps">
+                                <li><span class="payment-tab__link-text">Register</span> and enter into a written agreement with Nikita Online LLC</li>
+                                <li>Place an online order to top up your account in your personal account for the desired amount<br><strong>(Personal account → Home → Top up account)</strong></li>
+                            </ol>
+                            <div class="payment-tab__text-flow">
+                                <p>The invoicing process takes <strong>a few seconds</strong> without the manager's participation.</p>
+                                <p>You immediately receive a scanned copy of the certified document.</p>
+                                <p>The original document is delivered separately by regular mail.</p>
+                            </div>
+                            <p>Maybe <strong>accelerated enrollment</strong> funds to your account in the system upon provision of a scan of a certified payment order (for clients who have entered into an agreement).</p>
+                            <p>In the purpose of payment, you must indicate the account number and the phrase “for SMS notification services.”</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-mbank-panel" role="tabpanel" aria-labelledby="payment-mbank-control" data-payment-panel hidden>
+                        <h3>Payment via Mbank</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>Quick account replenishment through the Mbank mobile application.</strong></p>
+                            <p>To top up your account via Mbank:</p>
+                            <ol class="payment-tab__steps">
+                                <li>Open the Mbank application</li>
+                                <li>Go to the "Payments" section</li>
+                                <li>Select recipient "NIKITA"</li>
+                                <li>Specify the replenishment amount</li>
+                                <li>Confirm payment</li>
+                            </ol>
+                            <p><strong>Commission: to be confirmed with the bank</strong></p>
+                            <p>Funds are credited to your account within a few minutes.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-elqr-panel" role="tabpanel" aria-labelledby="payment-elqr-control" data-payment-panel hidden>
+                        <h3>Payment via ELQR</h3>
+                        <div class="payment-tab__copy">
+                            <p><strong>A modern payment method through the ELQR system.</strong></p>
+                            <p>ELQR is a unified system of fast payments in Kyrgyzstan.</p>
+                            <p>To top up your account via ELQR:</p>
+                            <ol class="payment-tab__steps">
+                                <li>Open the mobile application of your bank or payment service</li>
+                                <li>Find the option to pay by QR code</li>
+                                <li>Scan the NIKITA QR code or use the recipient's details</li>
+                                <li>Enter the amount and confirm payment</li>
+                            </ol>
+                            <p><strong>Commission: from 0%</strong></p>
+                            <p>Funds are credited instantly.</p>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-pay24-panel" role="tabpanel" aria-labelledby="payment-pay24-control" data-payment-panel hidden>
+                        <h3>Payment via Pay24 terminals</h3>
+                        <div class="payment-tab__copy payment-tab__copy--pay24">
+                            <div class="payment-tab__group">
+                                <p><strong>When making a payment at the terminal you will need:</strong></p>
+                                <ol class="payment-tab__steps">
+                                    <li>Select section <strong>Other services → Programs and electronic services</strong>, find in the list of services <strong>SMS mailings Nikita Online</strong></li>
+                                    <li>Indicate the phone number in international format that you specified when registering on our website</li>
+                                </ol>
+                                <p class="payment-tab__accent">Commission when paying through the Pay24 terminal – 2%</p>
+                            </div>
+                            <div class="payment-tab__group payment-tab__group--tight">
+                                <p>You can also make payments from the "Mobile Wallet" on the website <a href="https://pay24.asia" target="_blank" rel="noopener">pay24.asia</a>.</p>
+                                <p class="payment-tab__accent">No commission is charged.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="payment-tab__panel" id="payment-elsom-panel" role="tabpanel" aria-labelledby="payment-elsom-control" data-payment-panel hidden>
+                        <h3>Payment via ELSOM electronic wallet</h3>
+                        <div class="payment-tab__copy payment-tab__copy--elsom">
+                            <p><strong>The ELSOM electronic wallet offers you a convenient and simple way to pay for services anywhere and at any time, in several different ways, subject to the availability of a mobile network or the Internet.</strong></p>
+                            <ol class="payment-tab__method-list">
+                                <li>
+                                    <span>Payment using USSD commands (available for Beeline, MegaCom subscribers):</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Dial the command on your mobile phone <strong>*900#.</strong></li>
+                                        <li>In the menu that appears, select <strong>"Payments/Commercial Services" → "Pay Bill".</strong></li>
+                                        <li>Then select the "Other" category and find the item in the list of suppliers <strong>"Nikita Online".</strong></li>
+                                        <li>Enter <strong>personal account</strong> (phone number in international format that you specified when registering on our website), indicate the payment amount and confirm payment;</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Payment using the ELSOM mobile application:</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Download and install the ELSOM mobile application from the website <a href="https://www.elsom.kg" target="_blank" rel="noopener">www.elsom.kg</a> (available for IOS and Android platforms).</li>
+                                        <li>When paying through a mobile application, you must enter the section <strong>"Other services"</strong> and select from a list of suppliers <strong>“Nikita Online SMS mailings”.</strong></li>
+                                        <li>As details, please provide the phone number in international format that you provided when registering on our website.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Payment through a personal wallet on the ELSOM website:</span>
+                                    <ul class="payment-tab__substeps">
+                                        <li>Use your personal wallet on the site <a href="https://www.elsom.kg" target="_blank" rel="noopener">www.elsom.kg</a></li>
+                                        <li>When paying through a personal wallet, you must enter the section <strong>"Other services"</strong> and select from a list of suppliers <strong>“Nikita Online SMS mailings”.</strong></li>
+                                        <li>As details, please provide the phone number in international format that you provided when registering on our website.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p class="payment-tab__accent">There is no commission when paying through the ELSOM mobile wallet.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacts">
+    <div class="container-xxl">
+        <div class="footer__grid">
+            <div class="footer__col footer__col--company">
+                <div class="footer__company-info">
+                    <h3 class="footer__company">LLC "Nikita Online"</h3>
+                    <p class="footer__muted">License GAS KR No. 15-1425-KR dated September 18, 2015</p>
+                    <h3 class="footer__company">LLC "Nikita Mobile"</h3>
+                    <p class="footer__sub">(based on the lease agreement for the software and hardware platform with Nikita Online LLC dated April 15, 2022)</p>
+                    <p class="footer__muted">License GAS KR No. 11-828-KR dated 04/21/2011</p>
+                    <p class="footer__address">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.17 7-12A7 7 0 0 0 5 9c0 5.83 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+                        <span>Bishkek, st. Shopokova 89, 5th floor, 9th room.</span>
+                    </p>
+                </div>
+                <p class="footer__copy">© Nikita Online LLC, Nikita Mobile LLC, 2014-2025</p>
+            </div>
+
+            <nav class="footer__col footer__col--nav" aria-label="Basement">
+                <div class="footer__nav-primary">
+                    <a href="#pricing">Terms and prices</a>
+                    <a href="technical.html">Technical capabilities</a>
+                    <a href="security.html">Reliability and safety</a>
+                    <a href="faq.html">Questions and answers</a>
+                    <a href="contacts.html">Contacts</a>
+                </div>
+                <div class="footer__nav-legal">
+                    <a href="agreement.html">User Agreement</a>
+                    <a href="security.html#bezop">Privacy Policy</a>
+                </div>
+            </nav>
+
+            <div class="footer__col footer__col--contacts">
+                <div class="footer-contact">
+                    <h4>Connection and commercial issues:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996700892188" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (700) 89-21-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996700892188" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Technical support:</h4>
+                    <div class="footer-contact__body">
+                        <a href="mailto:info@nikita.kg" class="footer-contact__row">
+                            <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>info@nikita.kg</span>
+                        </a>
+                        <div class="footer-contact__channels">
+                            <a href="tel:+996779377888" class="footer-contact__row footer-contact__row--phone">
+                                <svg class="footer-contact__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8.1 5.2 10 8.1 8.15 10c.97 2.17 2.67 3.87 4.85 4.85L14.9 13l2.9 1.9v2.67c0 .78-.63 1.43-1.42 1.43C9.1 19 5 14.9 5 7.62c0-.79.65-1.42 1.43-1.42H8.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>+996 (779) 37-78-88</span>
+                            </a>
+                            <div class="footer-contact__socials" aria-label="Social media">
+                                <a href="https://t.me/" class="footer-contact__social footer-contact__social--telegram" aria-label="Telegram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Z" fill="currentColor"/><path d="M17.62 7.28c.18-.74-.26-1.03-.89-.77L5.87 10.7c-.74.29-.73.7-.13.88l2.78.87 1.06 3.25c.13.37.07.51.42.51.27 0 .39-.12.54-.27l1.3-1.26 2.7 2c.5.27.86.13.98-.46l2.1-8.94Zm-8.66 4.97 6.45-4.07c.31-.18.6-.09.36.13l-5.22 4.7-.2 2.13-1.39-2.89Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                                <a href="https://wa.me/996779377888" class="footer-contact__social footer-contact__social--whatsapp" aria-label="WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.66 8.66 0 0 0-7.47 13.04l-.9 4.1 4.18-.88A8.67 8.67 0 1 0 12 3.2Z" fill="currentColor"/><path d="M8.86 7.62c-.2-.45-.42-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.1 2.81c.14.18 1.88 3.02 4.64 4.11 2.3.9 2.77.72 3.27.68.5-.05 1.62-.66 1.85-1.3.23-.63.23-1.18.16-1.3-.07-.1-.25-.17-.52-.31l-1.85-.9c-.27-.14-.47-.2-.67.13-.2.34-.77 1-.95 1.2-.18.2-.35.22-.65.08-.3-.14-1.25-.46-2.37-1.46-.88-.78-1.47-1.74-1.64-2.03-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52l-.9-1.71Z" fill="var(--color-text-inverse)"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="../assets/scripts/main.js?v=payment-tabs"></script>
+</body>
+</html>

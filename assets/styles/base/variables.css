@@ -86,6 +86,8 @@
     --color-surface-yellow-45: #FFF4D5;
     --color-surface-red-10:    rgba(247, 97, 97, .1);
     --color-blue-20:           rgba(12, 110, 191, .2);
+    --color-service-banner-blue: #CFE1FF;
+    --color-service-banner-mint: #EAF8FF;
     --color-gray-5:            rgba(132, 135, 140, .05);
     --color-gray-20:           rgba(132, 135, 140, .2);
     --color-gray-10:           rgba(132, 135, 140, .1);

@@ -36,6 +36,30 @@
     font-weight: var(--fw-light);
 }
 
+.page-services--with-banner .service-page {
+    background:
+        url('../../images/services/receive-page-bg-desktop.png'),
+        linear-gradient(180deg, rgba(255, 255, 255, .08) 0%, rgba(255, 255, 255, .78) 68%, var(--color-bg) 100%),
+        radial-gradient(circle at 6% 22%, rgba(255, 255, 255, .92) 0 1px, transparent 2px),
+        radial-gradient(circle at 88% 12%, rgba(255, 255, 255, .72) 0 2px, transparent 3px),
+        radial-gradient(circle at 16% 76%, rgba(255, 255, 255, .65) 0 2px, transparent 3px),
+        linear-gradient(115deg, var(--color-service-banner-blue) 0%, var(--color-service-banner-mint) 58%, var(--color-bg) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 780px;
+}
+
+.service-page__banner {
+    margin-top: 24px;
+}
+
+.service-page__banner-frame {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-figma-menu);
+}
+
 .service-page__head {
     margin-top: 24px;
 }
@@ -1596,6 +1620,21 @@
         font-size: var(--breadcrumb-fs-compact);
     }
 
+    .page-services--with-banner .service-page {
+        background-image:
+            url('../../images/services/receive-page-bg-tablet.png'),
+            linear-gradient(180deg, rgba(255, 255, 255, .08) 0%, rgba(255, 255, 255, .78) 68%, var(--color-bg) 100%),
+            radial-gradient(circle at 6% 22%, rgba(255, 255, 255, .92) 0 1px, transparent 2px),
+            radial-gradient(circle at 88% 12%, rgba(255, 255, 255, .72) 0 2px, transparent 3px),
+            radial-gradient(circle at 16% 76%, rgba(255, 255, 255, .65) 0 2px, transparent 3px),
+            linear-gradient(115deg, var(--color-service-banner-blue) 0%, var(--color-service-banner-mint) 58%, var(--color-bg) 100%);
+        background-size: 100% 620px;
+    }
+
+    .service-page__banner {
+        margin-top: 12px;
+    }
+
     .service-page__head {
         margin-top: 12px;
     }
@@ -2237,6 +2276,17 @@
     .service-page .container-xxl {
         max-width: 100%;
         padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .page-services--with-banner .service-page {
+        background-image:
+            url('../../images/services/receive-page-bg-mobile.png'),
+            linear-gradient(180deg, rgba(255, 255, 255, .08) 0%, rgba(255, 255, 255, .78) 68%, var(--color-bg) 100%),
+            radial-gradient(circle at 6% 22%, rgba(255, 255, 255, .92) 0 1px, transparent 2px),
+            radial-gradient(circle at 88% 12%, rgba(255, 255, 255, .72) 0 2px, transparent 3px),
+            radial-gradient(circle at 16% 76%, rgba(255, 255, 255, .65) 0 2px, transparent 3px),
+            linear-gradient(115deg, var(--color-service-banner-blue) 0%, var(--color-service-banner-mint) 58%, var(--color-bg) 100%);
+        background-size: 100% 720px;
     }
 
     .service-page__head {

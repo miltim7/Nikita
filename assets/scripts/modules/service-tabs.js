@@ -52,8 +52,10 @@ export function initServiceTabs() {
 
         return tabs.find(tab => tab.dataset.serviceTab === targetPanel.dataset.servicePanel) || null;
     };
+    const defaultTabKey = document.body?.dataset.defaultServiceTab;
+    const defaultTab = defaultTabKey ? tabs.find(tab => tab.dataset.serviceTab === defaultTabKey) : null;
     const activeFromHash = getTabFromHash();
-    setActiveTab(activeFromHash || tabs[0]);
+    setActiveTab(activeFromHash || defaultTab || tabs[0]);
     if (activeFromHash) {
         requestAnimationFrame(() => {
             const targetNode = getTargetFromHash();
