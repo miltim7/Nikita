@@ -16,7 +16,7 @@ export function initRecommendSlider() {
             return 331 + ((834 - viewportWidth) / 2);
         }
 
-        if (window.matchMedia('(max-width: 1199.98px)').matches) {
+        if (window.matchMedia('(max-width: 1023.98px)').matches) {
             return 439 - ((viewportWidth - 834) / 2);
         }
 

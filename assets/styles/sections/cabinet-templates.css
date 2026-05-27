@@ -835,7 +835,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .cabinet-page--templates .cabinet-header {
         height: var(--cabinet-header-desktop-user-h);
     }
@@ -872,7 +872,7 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1535.98px) {
+@media (min-width: 1024px) and (max-width: 1535.98px) {
     .cabinet-page--templates .cabinet-breadcrumbs,
     .cabinet-page--templates .cabinet-page-title,
     .cabinet-page--templates .cabinet-templates-tabs,
@@ -882,7 +882,7 @@
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-page--templates .cabinet-user--regular {
         display: flex;
     }
@@ -1014,7 +1014,7 @@
 
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
     .cabinet-page--templates .cabinet-main {
         padding-bottom: 18px;
     }

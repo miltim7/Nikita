@@ -1078,8 +1078,9 @@
     font-weight: var(--fw-semibold);
     line-height: var(--lh-tight);
     letter-spacing: var(--letter-spacing-normal);
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: normal;
+    hyphens: none;
 }
 
 .payment-tab__panel {
@@ -1578,13 +1579,13 @@
     transform: scaleX(-1);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .service-tabpanel[data-service-panel="otp"] .otp-steps {
         margin-bottom: -24px;
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .service-page .container-xxl {
         padding-inline: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
     }
@@ -1604,7 +1605,22 @@
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+    .service-rates {
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 6px;
+        scrollbar-width: thin;
+    }
+
+    .rates-table {
+        width: 1226px;
+        min-width: 1226px;
+    }
+}
+
+@media (max-width: 1023.98px) {
     .service-page {
         padding-top: 12px;
         padding-bottom: 0;
@@ -2252,7 +2268,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
     .service-copy--features {
         height: 499px;
         min-height: 499px;
@@ -3507,10 +3523,12 @@
 .flash-case-row span {
     display: block;
     min-width: 0;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .flash-intro {
         grid-template-columns: minmax(0, 1fr) 292px;
     }
@@ -3530,7 +3548,7 @@
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .flash-intro,
     .flash-ad,
     .flash-price,

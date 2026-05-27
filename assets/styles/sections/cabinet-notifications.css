@@ -373,11 +373,11 @@
 
 .cabinet-notifications__head-sort img {
     display: block;
-    width: 5.333px;
+    width: 8px;
     height: 6.667px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .cabinet-page--notifications .cabinet-main-head {
         gap: var(--space-3);
     }
@@ -388,14 +388,14 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .cabinet-page--notifications .cabinet-page-title {
         padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
         padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-notifications {
         gap: var(--space-0);
     }
@@ -497,14 +497,6 @@
         grid-template-columns: var(--cabinet-notifications-date-col-mobile) minmax(0, 1fr);
         height: auto;
         min-height: 36px;
-    }
-
-    .cabinet-notifications__row--desktop {
-        display: none;
-    }
-
-    .cabinet-notifications__row--mobile-only {
-        display: grid;
     }
 
     .cabinet-notifications__row--head {

@@ -303,6 +303,7 @@
 }
 
 .cabinet-mailings-filter__buttons {
+    align-self: flex-end;
     justify-content: flex-end;
     gap: var(--space-3);
     flex: 0 0 auto;
@@ -701,7 +702,7 @@
 
 .cabinet-mailings-table__sort img {
     display: block;
-    width: 5.333px;
+    width: 8px;
     height: 6.667px;
 }
 
@@ -777,21 +778,21 @@
     background: var(--color-header-blue);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .cabinet-page--mailings .cabinet-main {
         padding-top: var(--space-6);
         padding-bottom: var(--space-6);
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .cabinet-page--mailings .cabinet-page-title {
         padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
         padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-mailings {
         gap: var(--space-0);
     }
@@ -981,10 +982,6 @@
         grid-template-columns: 132px 122px 119px 110px 110px 110px 86px 90px;
     }
 
-    .cabinet-mailings-table__row--desktop-extra {
-        display: none;
-    }
-
     .cabinet-mailings-table__row--head {
         height: var(--cabinet-mailings-table-head-compact-h);
         min-height: 0;
@@ -1034,7 +1031,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
     .cabinet-mailings__grid {
         height: 466px;
     }
@@ -1191,7 +1188,7 @@
 
     .cabinet-mailings__toolbar {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 146px;
+        grid-template-columns: minmax(0, 1fr) 184px;
         align-items: center;
         gap: var(--space-3);
     }
@@ -1208,8 +1205,9 @@
 
     .cabinet-mailings__actions {
         gap: 6px;
-        flex: 0 0 146px;
-        width: 146px;
+        flex: 0 0 184px;
+        flex-wrap: nowrap;
+        width: 184px;
         margin-left: auto;
     }
 

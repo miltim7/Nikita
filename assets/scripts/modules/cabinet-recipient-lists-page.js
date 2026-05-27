@@ -1,4 +1,5 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
+import { syncHorizontalScrollbar } from './horizontal-scrollbar.js';
 
 const ROW_MORE_ICON = new URL('../../images/cabinet-recipient-lists/row-more-desktop.svg', import.meta.url).href;
 
@@ -165,8 +166,12 @@ export function initCabinetRecipientListsPage() {
         const phone = formData.get('phone')?.trim() || '+996 XXX - XXX - XXX';
         const birth = formData.get('birth')?.trim() || '30.12.2014';
         const gender = formData.get('gender') || 'М';
-        const name = formData.get('fullname')?.trim()
-            || `${formData.get('lastName')?.trim() || 'Фамилия'} ${formData.get('firstName')?.trim()?.charAt(0) || 'И'}...`;
+        const fallbackNameParts = [
+            formData.get('lastName')?.trim() || 'Фамилия',
+            formData.get('firstName')?.trim() || 'Имя',
+            formData.get('middleName')?.trim() || 'Отчество',
+        ];
+        const name = formData.get('fullname')?.trim() || fallbackNameParts.join(' ');
         const extra1 = formData.get('extra1')?.trim() || '256 984.40';
         const extra2 = formData.get('extra2')?.trim() || 'Значение 001';
         const extra3 = formData.get('extra3')?.trim() || 'Value-01';
@@ -197,15 +202,11 @@ export function initCabinetRecipientListsPage() {
     };
 
     const updateScrollbar = () => {
-        if (!tableScroll || !scrollbarThumb || !scrollbarKnob) return;
-
-        const maxScroll = tableScroll.scrollWidth - tableScroll.clientWidth;
-        const progress = maxScroll > 0 ? tableScroll.scrollLeft / maxScroll : 0;
-        const available = 62.5;
-        const offset = progress * available;
-
-        scrollbarThumb.style.left = `${offset}%`;
-        scrollbarKnob.style.left = `${offset}%`;
+        syncHorizontalScrollbar({
+            scrollElement: tableScroll,
+            thumbElement: scrollbarThumb,
+            knobElement: scrollbarKnob,
+        });
     };
 
     filterToggle?.addEventListener('click', () => {

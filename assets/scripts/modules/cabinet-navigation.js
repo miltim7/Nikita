@@ -99,6 +99,7 @@ export function initCabinetSidepanel() {
 
     const top = sidepanel.querySelector('.cabinet-sidepanel__top');
     const bottom = sidepanel.querySelector('.cabinet-sidepanel__bottom');
+    const isExpanded = () => sidepanel.classList.contains('cabinet-sidepanel--full');
 
     const setExpanded = (expanded) => {
         sidepanel.classList.toggle('cabinet-sidepanel--full', expanded);
@@ -118,10 +119,16 @@ export function initCabinetSidepanel() {
     };
 
     toggle.addEventListener('click', () => {
-        setExpanded(!sidepanel.classList.contains('cabinet-sidepanel--full'));
+        setExpanded(!isExpanded());
     });
 
-    setExpanded(sidepanel.classList.contains('cabinet-sidepanel--full'));
+    document.addEventListener('click', (event) => {
+        if (!isExpanded()) return;
+        if (sidepanel.contains(event.target)) return;
+        setExpanded(false);
+    });
+
+    setExpanded(isExpanded());
 }
 
 export function initCabinetTabbarModal() {

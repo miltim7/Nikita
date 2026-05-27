@@ -872,8 +872,8 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
 
 .cabinet-reports-table__sort img {
     display: block;
-    width: 5.333px;
-    height: 6.667px;
+    width: 8px;
+    height: 10px;
 }
 
 .cabinet-reports-status {
@@ -1054,7 +1054,7 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .cabinet-page--reports .cabinet-main {
         padding-top: var(--space-6);
         padding-bottom: var(--space-6);
@@ -1066,7 +1066,7 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1535.98px) {
+@media (min-width: 1024px) and (max-width: 1535.98px) {
     .cabinet-page--reports .cabinet-page-title,
     .cabinet-page--reports .cabinet-reports-tabs {
         padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
@@ -1226,7 +1226,7 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-reports-tabs {
         padding-inline: var(--figma-container-px-tablet);
     }
@@ -1650,7 +1650,7 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
     .cabinet-page--reports .cabinet-user--regular {
         display: none;
     }
@@ -1677,7 +1677,7 @@ html[lang="ky"] .cabinet-reports-filter__buttons {
     }
 }
 
-@media (min-width: 834px) and (max-width: 1199.98px) {
+@media (min-width: 834px) and (max-width: 1023.98px) {
     .cabinet-reports-table--periods {
         width: 100%;
         min-width: 0;

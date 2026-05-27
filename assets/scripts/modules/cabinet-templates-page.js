@@ -1,3 +1,5 @@
+import { syncHorizontalScrollbar } from './horizontal-scrollbar.js';
+
 export function initCabinetTemplatesPage() {
     const moduleRoot = document.querySelector('[data-cabinet-templates-root]');
     const root = moduleRoot?.querySelector('[data-cabinet-templates-page]') || document.querySelector('[data-cabinet-templates-page]');
@@ -53,24 +55,12 @@ export function initCabinetTemplatesPage() {
     };
 
     const syncScrollbar = () => {
-        if (!tableScroll || !scrollbarThumb) return;
-
-        const maxScroll = tableScroll.scrollWidth - tableScroll.clientWidth;
-        if (maxScroll <= 0) {
-            if (scrollbar) scrollbar.hidden = true;
-            scrollbarThumb.style.transform = 'translateX(0)';
-            return;
-        }
-
-        if (scrollbar) scrollbar.hidden = false;
-
-        const progress = tableScroll.scrollLeft / maxScroll;
-        const trackWidth = tableScroll.clientWidth;
-        const thumbWidth = trackWidth * 0.375;
-        const travel = Math.max(0, trackWidth - thumbWidth);
-
-        scrollbarThumb.style.width = '37.5%';
-        scrollbarThumb.style.transform = `translateX(${progress * travel}px)`;
+        syncHorizontalScrollbar({
+            scrollElement: tableScroll,
+            thumbElement: scrollbarThumb,
+            scrollbarElement: scrollbar,
+            hideWhenNoOverflow: true,
+        });
     };
 
     const getCurrentTab = () => {

@@ -9,6 +9,9 @@ let passwordModal = null;
 let activePasswordTrigger = null;
 let senderPopoverTimer = null;
 let activeSenderTrigger = null;
+let activeProfileHelpTrigger = null;
+let isProfileHelpPinned = false;
+let profileHelpCloseTimer = null;
 
 function getSwitchVisual(control) {
     if (control.classList.contains('cabinet-profile-switch')) return control;
@@ -51,15 +54,50 @@ function setHelpTooltipState(button, open) {
     if (!tooltip) return;
 
     tooltip.hidden = !open;
+    tooltip.classList.toggle('is-pinned', open && isProfileHelpPinned && activeProfileHelpTrigger === button);
     button.classList.toggle('is-active', open);
     button.setAttribute('aria-expanded', String(open));
 }
 
 function closeHelpTooltips(page, exceptButton = null) {
+    if (profileHelpCloseTimer) {
+        window.clearTimeout(profileHelpCloseTimer);
+        profileHelpCloseTimer = null;
+    }
+
     page.querySelectorAll('[data-profile-help]').forEach((button) => {
         if (button === exceptButton) return;
         setHelpTooltipState(button, false);
     });
+
+    if (!exceptButton) {
+        activeProfileHelpTrigger = null;
+        isProfileHelpPinned = false;
+    }
+}
+
+function openProfileHelpTooltip(page, button, { pinned = false } = {}) {
+    if (profileHelpCloseTimer) {
+        window.clearTimeout(profileHelpCloseTimer);
+        profileHelpCloseTimer = null;
+    }
+
+    activeProfileHelpTrigger = button;
+    isProfileHelpPinned = pinned;
+    closeHelpTooltips(page, button);
+    setHelpTooltipState(button, true);
+}
+
+function scheduleProfileHelpClose(page) {
+    if (profileHelpCloseTimer) {
+        window.clearTimeout(profileHelpCloseTimer);
+    }
+
+    if (isProfileHelpPinned) return;
+
+    profileHelpCloseTimer = window.setTimeout(() => {
+        closeHelpTooltips(page);
+    }, 120);
 }
 
 function updateSettingsExpandedState(settings) {
@@ -807,12 +845,37 @@ export function initCabinetProfilePage() {
     });
 
     page.querySelectorAll('[data-profile-help]').forEach((button) => {
+        const tooltip = getHelpTooltip(button);
+
+        button.addEventListener('mouseenter', () => {
+            if (isProfileHelpPinned && activeProfileHelpTrigger !== button) return;
+            openProfileHelpTooltip(page, button);
+        });
+
+        button.addEventListener('mouseleave', () => scheduleProfileHelpClose(page));
+        button.addEventListener('focus', () => {
+            if (isProfileHelpPinned && activeProfileHelpTrigger !== button) return;
+            openProfileHelpTooltip(page, button);
+        });
+        button.addEventListener('blur', () => scheduleProfileHelpClose(page));
+
+        tooltip?.addEventListener('mouseenter', () => {
+            if (profileHelpCloseTimer) {
+                window.clearTimeout(profileHelpCloseTimer);
+                profileHelpCloseTimer = null;
+            }
+        });
+        tooltip?.addEventListener('mouseleave', () => scheduleProfileHelpClose(page));
+
         button.addEventListener('click', (event) => {
             event.stopPropagation();
 
-            const shouldOpen = button.getAttribute('aria-expanded') !== 'true';
-            closeHelpTooltips(page, button);
-            setHelpTooltipState(button, shouldOpen);
+            if (activeProfileHelpTrigger === button && isProfileHelpPinned) {
+                closeHelpTooltips(page);
+                return;
+            }
+
+            openProfileHelpTooltip(page, button, { pinned: true });
         });
     });
 

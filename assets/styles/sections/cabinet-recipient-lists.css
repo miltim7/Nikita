@@ -866,9 +866,11 @@ html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
 
 .cabinet-recipient-lists-modal-select__value {
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .cabinet-recipient-lists-modal-select__chevron {
@@ -1049,7 +1051,7 @@ html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .cabinet-page--recipient-lists .cabinet-header {
         height: var(--cabinet-header-desktop-user-h);
     }
@@ -1065,7 +1067,7 @@ html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .cabinet-page--recipient-lists .cabinet-page-title {
         padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
         padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
@@ -1101,7 +1103,7 @@ html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-recipient-lists__title-full {
         display: none;
     }
@@ -1390,7 +1392,7 @@ html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
     .cabinet-recipient-lists__actions {
         width: 559px;
         flex: 0 0 559px;
@@ -1556,14 +1558,19 @@ html[lang="ky"] .cabinet-recipient-lists-filter__buttons {
 
     .cabinet-recipient-lists__actions {
         gap: 6px;
+        flex-wrap: nowrap;
         width: 184px;
         flex: 0 0 184px;
         margin-left: auto;
     }
 
-    .cabinet-recipient-lists__action {
+    .cabinet-recipient-lists__action,
+    .cabinet-recipient-lists__action--delete-selected,
+    .cabinet-recipient-lists__action--delete-list {
+        flex: 0 0 32px;
         width: 32px;
         height: 36px;
+        min-width: 0;
         padding: var(--space-2);
         gap: 0;
     }

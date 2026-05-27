@@ -652,7 +652,9 @@
     font-weight: var(--fw-light);
     line-height: var(--lh-tight);
     letter-spacing: var(--letter-spacing-normal);
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
 }
 
 .security-more__text p {
@@ -820,7 +822,7 @@
     letter-spacing: var(--letter-spacing-normal);
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .security-page .container-xxl,
     .security-reliability .container-xxl,
     .security-data .container-xxl {
@@ -837,7 +839,7 @@
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .security-page {
         padding-top: 12px;
     }

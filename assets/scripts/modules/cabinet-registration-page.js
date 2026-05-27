@@ -6,6 +6,8 @@ const VIEWPORT_PADDING = 12;
 
 let helpPopover = null;
 let activeHelpTrigger = null;
+let isHelpPinned = false;
+let helpCloseTimer = null;
 let activeActivationModalTrigger = null;
 
 function shouldShowSuccessView() {
@@ -72,6 +74,13 @@ function getHelpContent(button) {
     return hint?.innerHTML.trim() || '';
 }
 
+function clearHelpCloseTimer() {
+    if (!helpCloseTimer) return;
+
+    window.clearTimeout(helpCloseTimer);
+    helpCloseTimer = null;
+}
+
 function positionHelpPopover(button, popover) {
     const triggerRect = button.getBoundingClientRect();
     const popoverRect = popover.getBoundingClientRect();
@@ -91,6 +100,10 @@ function closeHelpPopover({ restoreFocus = false } = {}) {
     const popover = getHelpPopover();
     if (popover.hidden && !popover.classList.contains('is-open')) return;
 
+    clearHelpCloseTimer();
+    isHelpPinned = false;
+    popover.classList.remove('is-pinned');
+
     const trigger = activeHelpTrigger;
     activeHelpTrigger = null;
     trigger?.classList.remove('is-active');
@@ -105,9 +118,21 @@ function closeHelpPopover({ restoreFocus = false } = {}) {
     if (restoreFocus) trigger?.focus();
 }
 
-function openHelpPopover(button) {
+function scheduleHelpPopoverClose() {
+    clearHelpCloseTimer();
+
+    if (isHelpPinned) return;
+
+    helpCloseTimer = window.setTimeout(() => {
+        closeHelpPopover();
+    }, 120);
+}
+
+function openHelpPopover(button, { pinned = false } = {}) {
     const content = getHelpContent(button);
     if (!content) return;
+
+    clearHelpCloseTimer();
 
     const popover = getHelpPopover();
     const contentNode = popover.querySelector('[data-registration-help-content]');
@@ -118,10 +143,12 @@ function openHelpPopover(button) {
     }
 
     activeHelpTrigger = button;
+    isHelpPinned = pinned;
     contentNode.innerHTML = content;
     popover.hidden = false;
     positionHelpPopover(button, popover);
     openModalLayer(popover);
+    popover.classList.toggle('is-pinned', isHelpPinned);
 
     button.classList.add('is-active');
     button.setAttribute('aria-expanded', 'true');
@@ -143,20 +170,41 @@ function initHelpButtons(page) {
         button.setAttribute('aria-haspopup', 'dialog');
         button.setAttribute('aria-controls', POPOVER_ID);
 
+        button.addEventListener('mouseenter', () => {
+            if (isHelpPinned && activeHelpTrigger !== button) return;
+            openHelpPopover(button);
+        });
+
+        button.addEventListener('mouseleave', scheduleHelpPopoverClose);
+
+        button.addEventListener('focus', () => {
+            if (isHelpPinned && activeHelpTrigger !== button) return;
+            openHelpPopover(button);
+        });
+
+        button.addEventListener('blur', scheduleHelpPopoverClose);
+
         button.addEventListener('click', (event) => {
             event.stopPropagation();
 
-            if (activeHelpTrigger === button && button.getAttribute('aria-expanded') === 'true') {
+            if (activeHelpTrigger === button && isHelpPinned) {
                 closeHelpPopover();
                 return;
             }
 
-            openHelpPopover(button);
+            openHelpPopover(button, { pinned: true });
         });
     });
 
+    const popover = getHelpPopover();
+
+    popover.addEventListener('mouseenter', clearHelpCloseTimer);
+    popover.addEventListener('mouseleave', scheduleHelpPopoverClose);
+    popover.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
     document.addEventListener('click', (event) => {
-        const popover = getHelpPopover();
         if (popover.hidden) return;
         if (popover.contains(event.target) || activeHelpTrigger?.contains(event.target)) return;
 

@@ -133,7 +133,7 @@
     object-position: right center;
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .hero {
         min-height: 560px;
         padding: 86px 0 76px;

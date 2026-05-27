@@ -42,6 +42,20 @@ This is a large multi-page HTML/CSS/JS project based on Figma layouts. Keep the 
 - Every clickable button/control must have a simple hover/focus interaction: use an existing tokenized transition, a subtle transform/filter/background/border change, and avoid raw browser default outlines unless they match the design.
 - Similar or identical clickable elements across pages must reuse the same hover, focus, active-state, and animation behavior. Before adding or changing a hover effect, check existing matching controls and keep transitions, transforms, colors, shadows, and icon state behavior consistent unless Figma explicitly shows a different state.
 
+## Responsive Text And Content Fit Rules
+
+- Do not size text controls, dropdowns, popovers, table cells, tabs, chips, or modal actions so they only fit the current hardcoded copy. Treat labels as content that can change after implementation.
+- Prefer `min-width`, `max-width`, `min-height`, `flex: 1 1 auto`, `flex: 0 0 auto`, `flex-wrap`, `minmax(0, 1fr)`, content-aware `width: max-content`, and rows that can grow from `min-height` for text-bearing UI.
+- Do not use `overflow-wrap: anywhere`, `word-break: break-all`, or tiny fixed widths on labels, buttons, dropdown items, tabs, table headers, or modal actions. Normal words must not be split letter-by-letter or syllable-by-syllable just because the container is too narrow.
+- Use `overflow-wrap: break-word` only as a last-resort safety for genuinely long unbroken tokens such as URLs, hashes, or IDs. Ordinary localized labels should fit by growing the control, wrapping between words, moving to another row, or using horizontal scrolling for dense toolbars/tables.
+- Dropdown and popover menus must have a content-aware width with a viewport max (`max-width`), and short menu items must stay on one line. Do not make menu width smaller than the longest expected localized item.
+- Button and modal action rows must tolerate longer labels by using content-aware widths, wrapping between words where appropriate, and growing vertically from `min-height`; do not clip the label or require a width update when the copy changes.
+- Table headers and cells must not hide or split user-facing words by default. If a dense table cannot fit, keep horizontal scrolling and allow rows to grow instead of silently truncating content.
+- Structured table tokens such as dates, times, phone numbers, amounts, checkbox+label headers, sort-icon labels, and short statuses must stay on one line. Give those columns enough shared column width and let the table scroll horizontally instead of wrapping those tokens.
+- Grid/flex table layouts must use one shared column template for header and body rows. Do not let each row calculate columns independently with per-row `max-content` tracks if that can make header/body dividers drift out of alignment.
+- Horizontal table scrollbars must be reusable and data-driven: compute thumb length and travel from the table scroll container's `clientWidth`, `scrollWidth`, and `scrollLeft`; do not hardcode fixed thumb widths or travel percentages such as `37.5%` or `62.5%`.
+- During verification, inspect translated pages and temporarily test longer labels in dropdowns, modal buttons, tabs, table headers, and compact mobile controls. Any clipped, overlapped, or ellipsized user-facing text is a layout bug unless the Figma node explicitly requires truncation.
+
 ## Interaction Logic Rules
 
 - When implementing Figma forms and modals, implement the obvious behavior implied by the UI controls, not only the static layout: selects open, options can be selected, selected/active states update, links are clickable, and buttons with modal-flow meaning advance to the provided next state.

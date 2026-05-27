@@ -33,3 +33,710 @@
 
 /* ---------------- cabinet theme overrides ---------------- */
 @import url('./components/cabinet-theme.css');
+
+/* ---------------- content flow safeguards ---------------- */
+@import url('./components/content-flow.css');
+
+/* ---------------- compact desktop safeguards ---------------- */
+@media (min-width: 1024px) and (max-width: 1399.98px) {
+    .cabinet-header__line,
+    .cabinet-breadcrumbs,
+    .cabinet-main,
+    .cabinet-footer,
+    .cabinet-page-title,
+    .cabinet-profile-title,
+    .cabinet-profile-tabs,
+    .cabinet-templates-tabs,
+    .cabinet-reports-tabs {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .cabinet-header__line,
+    .cabinet-page--registration .cabinet-header__line,
+    .cabinet-page--templates .cabinet-header__line {
+        height: 64px;
+        min-height: 64px;
+        gap: 12px;
+    }
+
+    .cabinet-header__logo,
+    .cabinet-header__logo img {
+        width: 136px;
+        height: 36px;
+    }
+
+    .cabinet-header__support,
+    .cabinet-header__right,
+    .cabinet-header__tools {
+        gap: 12px;
+    }
+
+    .cabinet-header__controls {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .cabinet-header .cabinet-select {
+        min-height: 28px;
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-header .cabinet-select__flag {
+        width: 16px;
+        height: 12px;
+    }
+
+    .cabinet-header .cabinet-select__chevron,
+    .cabinet-header .cabinet-select > .cabinet-icon--sm:not(.cabinet-select__chevron),
+    .cabinet-header__tool {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cabinet-user {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .cabinet-user__avatar,
+    .cabinet-user__demo-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .cabinet-user__meta {
+        max-width: 112px;
+    }
+
+    .cabinet-user__name,
+    .cabinet-user__account {
+        overflow: visible;
+        max-width: 100%;
+        text-overflow: clip;
+        font-size: var(--fs-sm);
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .cabinet-user__account span,
+    .cabinet-user__account strong {
+        min-width: 0;
+        overflow: visible;
+        text-overflow: clip;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .cabinet-footer {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+    }
+
+    .cabinet-dashboard,
+    .cabinet-profile__grid,
+    .registration-layout {
+        gap: 16px;
+    }
+
+    .cabinet-quick {
+        flex-wrap: wrap;
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .cabinet-quick__title {
+        white-space: normal;
+    }
+
+    .cabinet-profile-password {
+        width: auto;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .cabinet-profile-password__options,
+    .cabinet-profile-password__option {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .cabinet-recipient-lists__toolbar,
+    .cabinet-reports__toolbar,
+    .cabinet-notifications__toolbar,
+    .cabinet-templates__toolbar {
+        height: auto;
+        min-height: 40px;
+        gap: var(--space-3);
+    }
+
+    .cabinet-recipient-lists__actions,
+    .cabinet-reports__actions,
+    .cabinet-notifications__actions,
+    .cabinet-templates__actions {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .cabinet-recipient-lists__sort-toggle,
+    .cabinet-recipient-lists__action,
+    .cabinet-reports__sort-toggle,
+    .cabinet-reports__action,
+    .cabinet-notifications__sort,
+    .cabinet-notifications__action,
+    .cabinet-templates__sort-toggle,
+    .cabinet-templates__action {
+        font-size: var(--fs-sm);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-recipient-lists__action,
+    .cabinet-reports__action,
+    .cabinet-notifications__action,
+    .cabinet-templates__action {
+        height: 36px;
+    }
+
+}
+
+@media (max-width: 767.98px) {
+    .cabinet-recipient-lists__toolbar {
+        grid-template-columns: minmax(0, 1fr) 188px;
+    }
+
+    .cabinet-recipient-lists__actions {
+        width: 188px;
+        flex: 0 0 188px;
+        flex-wrap: nowrap;
+    }
+
+    .cabinet-recipient-lists__action--delete-selected,
+    .cabinet-recipient-lists__action--delete-list {
+        width: 32px;
+        min-width: 0;
+        flex: 0 0 32px;
+    }
+
+    .cabinet-reports__toolbar {
+        grid-template-columns: minmax(0, 1fr) 70px;
+    }
+
+    .cabinet-reports__actions {
+        width: 70px;
+        flex: 0 0 70px;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+    }
+
+    .cabinet-reports__action,
+    .cabinet-reports__action-control--export {
+        width: 32px;
+        min-width: 0;
+        flex: 0 0 32px;
+    }
+}
+
+@media (max-width: 359.98px) {
+    .cabinet-recipient-lists__toolbar {
+        grid-template-columns: minmax(0, 1fr) 176px;
+    }
+
+    .cabinet-recipient-lists__actions {
+        width: 176px;
+        flex-basis: 176px;
+        gap: 4px;
+    }
+}
+
+/* Final cabinet control safeguards: never let filter fields and actions overlap. */
+@media (min-width: 768px) and (max-width: 1399.98px) {
+    .cabinet-recipient-lists-filter__details,
+    .cabinet-reports-filter__details,
+    .cabinet-reports-filter--periods .cabinet-reports-filter__details,
+    .cabinet-reports-filter--traffic .cabinet-reports-filter__details,
+    .cabinet-reports-filter--payments .cabinet-reports-filter__details {
+        height: auto;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .cabinet-recipient-lists-filter__fields,
+    .cabinet-reports-filter__fields,
+    .cabinet-reports-filter--periods .cabinet-reports-filter__fields,
+    .cabinet-reports-filter--traffic .cabinet-reports-filter__fields,
+    .cabinet-reports-filter--payments .cabinet-reports-filter__fields {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .cabinet-recipient-lists-filter__buttons,
+    .cabinet-reports-filter__buttons,
+    .cabinet-reports-filter--periods .cabinet-reports-filter__buttons,
+    .cabinet-reports-filter--traffic .cabinet-reports-filter__buttons,
+    .cabinet-reports-filter--payments .cabinet-reports-filter__buttons {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cabinet-recipient-lists-filter {
+        display: grid;
+        grid-template-columns: minmax(180px, 250px) max-content minmax(180px, 250px) minmax(230px, 1fr) auto;
+        align-items: end;
+        column-gap: clamp(10px, 1vw, var(--space-5));
+        row-gap: 0;
+        height: var(--cabinet-recipient-lists-filter-desktop-h);
+        min-height: var(--cabinet-recipient-lists-filter-desktop-h);
+        padding: var(--space-6) 30px;
+    }
+
+    .cabinet-recipient-lists-filter__top {
+        display: contents;
+        width: auto;
+        height: auto;
+    }
+
+    .cabinet-recipient-lists-filter__select {
+        grid-column: 1;
+        width: 100%;
+        flex: none;
+    }
+
+    .cabinet-recipient-lists-filter__blacklist {
+        grid-column: 2;
+        width: 154px;
+        flex: none;
+    }
+
+    .cabinet-recipient-lists-filter__select-toggle,
+    .cabinet-recipient-lists-filter__blacklist,
+    .cabinet-recipient-lists-filter__input,
+    .cabinet-recipient-lists-filter__button {
+        height: 40px;
+        font-size: var(--fs-base);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-recipient-lists-filter__details {
+        display: contents;
+        width: auto;
+        min-height: 0;
+        gap: 0;
+    }
+
+    .cabinet-recipient-lists-filter__fields {
+        display: contents;
+        width: auto;
+        max-width: none;
+        flex: none;
+        gap: 0;
+    }
+
+    .cabinet-recipient-lists-filter__field--name {
+        grid-column: 3;
+        width: auto;
+        min-width: 0;
+        flex: none;
+    }
+
+    .cabinet-recipient-lists-filter__field--description {
+        grid-column: 4;
+        width: auto;
+        min-width: 0;
+        flex: none;
+    }
+
+    .cabinet-recipient-lists-filter__label {
+        font-size: var(--fs-base);
+        letter-spacing: var(--letter-spacing-normal);
+    }
+
+    .cabinet-recipient-lists-filter__buttons {
+        grid-column: 5;
+        width: auto;
+        max-width: none;
+        flex: none;
+        flex-wrap: nowrap;
+        align-self: end;
+        justify-content: flex-end;
+    }
+
+    .cabinet-recipient-lists-filter__button--secondary {
+        min-width: 100px;
+    }
+
+    .cabinet-recipient-lists-filter__button--primary {
+        min-width: 108px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+    .cabinet-recipient-lists-filter {
+        grid-template-columns: minmax(140px, .9fr) 148px minmax(140px, .9fr) minmax(196px, 1.2fr) auto;
+        column-gap: 6px;
+        padding-inline: 12px;
+    }
+
+    .cabinet-recipient-lists-filter__select-toggle,
+    .cabinet-recipient-lists-filter__blacklist,
+    .cabinet-recipient-lists-filter__input,
+    .cabinet-recipient-lists-filter__button,
+    .cabinet-recipient-lists-filter__label {
+        font-size: var(--fs-sm);
+    }
+
+    .cabinet-recipient-lists-filter__blacklist {
+        width: 148px;
+        padding-inline: 6px;
+    }
+
+    .cabinet-recipient-lists-filter__buttons {
+        gap: 6px;
+    }
+
+    .cabinet-recipient-lists-filter__button--secondary {
+        min-width: 88px;
+        padding-inline: 10px;
+    }
+
+    .cabinet-recipient-lists-filter__button--primary {
+        min-width: 96px;
+        padding-inline: 10px;
+    }
+}
+
+/* Final reports actions safeguard: export and print must stay in one row on every tab. */
+.cabinet-reports__actions {
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Final table text safeguard: table content must remain visible, not ellipsized. */
+.cabinet-mailings-table__row,
+.cabinet-recipient-lists-table__row,
+.cabinet-reports-table__row,
+.cabinet-templates-table__row,
+.cabinet-mailing-source-table__row,
+.cabinet-mailing-file-table__row,
+.cabinet-mailing-message-table__row,
+.cabinet-profile-senders-table__row,
+.cabinet-notifications__row {
+    height: auto;
+}
+
+.cabinet-mailings-table__cell,
+.cabinet-recipient-lists-table__cell,
+.cabinet-reports-table__cell,
+.cabinet-templates-table__cell,
+.cabinet-mailing-source-table__cell,
+.cabinet-mailing-file-table__cell,
+.cabinet-mailing-message-table__cell,
+.cabinet-profile-senders-table__cell,
+.cabinet-notifications__cell {
+    height: auto;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
+}
+
+/* Final reports table system: every reports tab uses the same table behavior. */
+.cabinet-reports__table-scroll,
+.cabinet-reports__grid--periods .cabinet-reports__table-scroll,
+.cabinet-reports__grid--payments .cabinet-reports__table-scroll {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: var(--cabinet-control-radius);
+    box-shadow: var(--shadow-cabinet-table);
+    scrollbar-width: none;
+}
+
+.cabinet-reports__table-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.cabinet-reports-table {
+    --reports-table-w: var(--cabinet-reports-table-desktop-w);
+    --reports-table-row-h: var(--cabinet-reports-table-row-h);
+    --reports-table-head-h: var(--cabinet-reports-table-head-h);
+    --reports-table-cols: 100px 100px 60px minmax(240px, 1.8fr) 84px 110px 104px 120px 100px minmax(210px, 1.3fr);
+
+    display: flex;
+    flex-direction: column;
+    width: max(100%, var(--reports-table-w));
+    min-width: var(--reports-table-w);
+    max-width: none;
+    overflow: hidden;
+    border-radius: var(--cabinet-control-radius);
+    background: var(--color-bg);
+}
+
+.cabinet-reports-table--periods {
+    --reports-table-w: var(--cabinet-reports-periods-table-desktop-w);
+    --reports-table-row-h: var(--cabinet-reports-periods-table-row-desktop-h);
+    --reports-table-cols: 300px 180px 180px 180px 180px minmax(208px, 1fr);
+}
+
+.cabinet-reports-table--traffic {
+    --reports-table-w: var(--cabinet-reports-traffic-table-desktop-w);
+    --reports-table-row-h: var(--cabinet-reports-periods-table-row-desktop-h);
+    --reports-table-cols: 220px repeat(6, minmax(168px, 1fr));
+    --reports-table-group-cols: 220px repeat(3, minmax(336px, 1fr));
+}
+
+.cabinet-reports-table--payments {
+    --reports-table-w: var(--cabinet-reports-payments-table-desktop-w);
+    --reports-table-row-h: var(--cabinet-reports-periods-table-row-desktop-h);
+    --reports-table-cols: 300px minmax(464px, 1fr) minmax(464px, 1fr);
+}
+
+.cabinet-reports-table__row,
+.cabinet-reports-table--periods .cabinet-reports-table__row,
+.cabinet-reports-table--traffic .cabinet-reports-table__row,
+.cabinet-reports-table--payments .cabinet-reports-table__row {
+    display: grid;
+    grid-template-columns: var(--reports-table-cols);
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    min-height: var(--reports-table-row-h);
+    background: var(--color-bg);
+}
+
+.cabinet-reports-table__row--head,
+.cabinet-reports-table--periods .cabinet-reports-table__row--head,
+.cabinet-reports-table--payments .cabinet-reports-table__row--head,
+.cabinet-reports-table--traffic .cabinet-reports-table__row--traffic-title,
+.cabinet-reports-table--traffic .cabinet-reports-table__row--traffic-groups {
+    height: auto;
+    min-height: var(--reports-table-head-h);
+    background: var(--color-bg);
+}
+
+.cabinet-reports-table--traffic .cabinet-reports-table__row--traffic-title {
+    grid-template-columns: 1fr;
+    background: var(--color-gray-5);
+}
+
+.cabinet-reports-table--traffic .cabinet-reports-table__row--traffic-groups {
+    grid-template-columns: var(--reports-table-group-cols);
+}
+
+.cabinet-reports-table__row--tall {
+    min-height: var(--cabinet-reports-table-row-tall-h);
+}
+
+.cabinet-reports-table__row:nth-child(even):not(.cabinet-reports-table__row--head):not(.cabinet-reports-table__row--traffic-title):not(.cabinet-reports-table__row--traffic-groups) {
+    background: var(--color-gray-5);
+}
+
+.cabinet-reports-table__cell,
+.cabinet-reports-table--periods .cabinet-reports-table__cell,
+.cabinet-reports-table--traffic .cabinet-reports-table__cell,
+.cabinet-reports-table--payments .cabinet-reports-table__cell {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    min-height: var(--reports-table-row-h);
+    padding: 5px var(--space-2);
+    overflow: hidden;
+    color: var(--color-black-100);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-overflow: clip;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+    background: transparent;
+    border-bottom: 1px solid var(--color-gray-20);
+}
+
+.cabinet-reports-table__cell + .cabinet-reports-table__cell {
+    border-left: 1px solid var(--color-gray-20);
+}
+
+.cabinet-reports-table__row:last-child .cabinet-reports-table__cell {
+    border-bottom: 0;
+}
+
+.cabinet-reports-table--periods .cabinet-reports-table__row:last-child,
+.cabinet-reports-table--payments .cabinet-reports-table__row:last-child {
+    height: auto;
+    min-height: var(--reports-table-row-h);
+}
+
+.cabinet-reports-table--periods .cabinet-reports-table__row:last-child .cabinet-reports-table__cell,
+.cabinet-reports-table--payments .cabinet-reports-table__row:last-child .cabinet-reports-table__cell {
+    height: auto;
+    min-height: var(--reports-table-row-h);
+    padding-bottom: 5px;
+}
+
+.cabinet-reports-table--periods .cabinet-reports-table__row:last-child .cabinet-reports-table__cell--amount,
+.cabinet-reports-table--payments .cabinet-reports-table__row:last-child .cabinet-reports-table__cell--amount {
+    padding-right: var(--space-2);
+    overflow: hidden;
+}
+
+.cabinet-reports-table__row--head .cabinet-reports-table__cell,
+.cabinet-reports-table--periods .cabinet-reports-table__row--head .cabinet-reports-table__cell,
+.cabinet-reports-table--payments .cabinet-reports-table__row--head .cabinet-reports-table__cell,
+.cabinet-reports-table--traffic .cabinet-reports-table__row--traffic-title .cabinet-reports-table__cell,
+.cabinet-reports-table--traffic .cabinet-reports-table__row--traffic-groups .cabinet-reports-table__cell {
+    height: auto;
+    min-height: var(--reports-table-head-h);
+    padding-block: 4px;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    white-space: normal;
+}
+
+.cabinet-reports-table__head-copy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+}
+
+.cabinet-reports-table__row--head .cabinet-reports-table__sort,
+.cabinet-reports-table__sort {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    margin-left: 2px;
+}
+
+.cabinet-reports-table__sort img {
+    display: block;
+    width: 9px;
+    height: 9px;
+    object-fit: contain;
+}
+
+.cabinet-reports-table__cell--date,
+.cabinet-reports-table__cell--period,
+.cabinet-reports-table__cell--amount:not([role="columnheader"]) {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.cabinet-reports-table__cell--date,
+.cabinet-reports-table__cell--period,
+.cabinet-reports-table__cell--text,
+.cabinet-reports-table__cell--status:not([role="columnheader"]) {
+    justify-content: flex-start;
+}
+
+.cabinet-reports-table__cell--text {
+    white-space: normal;
+}
+
+.cabinet-reports-table__cell--amount:not([role="columnheader"]) {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.cabinet-reports-table__cell--status:not([role="columnheader"]) {
+    align-items: flex-start;
+    padding-top: 6px;
+}
+
+.cabinet-reports__scrollbar {
+    width: 100%;
+    max-width: 100%;
+}
+
+.cabinet-reports__scrollbar.is-scrollable {
+    display: block;
+}
+
+.cabinet-reports__scrollbar:not(.is-scrollable) {
+    display: none;
+}
+
+@media (max-width: 1023.98px) {
+    .cabinet-reports-table {
+        --reports-table-w: var(--cabinet-reports-table-compact-w);
+        --reports-table-cols: 90px 90px 50px 222px 86px 100px 100px 100px 100px 146px;
+    }
+
+    .cabinet-reports-table--periods {
+        --reports-table-w: var(--cabinet-reports-periods-table-tablet-w);
+        --reports-table-row-h: var(--cabinet-reports-periods-table-row-compact-h);
+        --reports-table-head-h: var(--cabinet-reports-table-head-h);
+        --reports-table-cols: 194px 100px 120px 120px 120px 100px;
+    }
+
+    .cabinet-reports-table--traffic {
+        --reports-table-w: var(--cabinet-reports-traffic-table-tablet-w);
+        --reports-table-row-h: var(--cabinet-reports-periods-table-row-compact-h);
+        --reports-table-cols: 154px repeat(6, minmax(100px, 1fr));
+        --reports-table-group-cols: 154px repeat(3, minmax(200px, 1fr));
+    }
+
+    .cabinet-reports-table--payments {
+        --reports-table-w: var(--cabinet-reports-payments-table-tablet-w);
+        --reports-table-row-h: var(--cabinet-reports-periods-table-row-compact-h);
+        --reports-table-cols: 220px repeat(2, minmax(267px, 1fr));
+    }
+
+    .cabinet-reports-table__row--head .cabinet-reports-table__cell,
+    .cabinet-reports-table__cell,
+    .cabinet-reports-table--periods .cabinet-reports-table__cell,
+    .cabinet-reports-table--traffic .cabinet-reports-table__cell,
+    .cabinet-reports-table--payments .cabinet-reports-table__cell {
+        font-size: var(--fs-sm);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .cabinet-reports-table--periods,
+    .cabinet-reports-table--traffic,
+    .cabinet-reports-table--payments {
+        --reports-table-w: var(--cabinet-reports-periods-table-tablet-w);
+    }
+
+    .cabinet-reports-table__cell,
+    .cabinet-reports-table--periods .cabinet-reports-table__cell,
+    .cabinet-reports-table--traffic .cabinet-reports-table__cell,
+    .cabinet-reports-table--payments .cabinet-reports-table__cell {
+        padding-inline: 7px;
+    }
+}

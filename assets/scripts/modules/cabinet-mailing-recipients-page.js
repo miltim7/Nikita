@@ -1,4 +1,5 @@
 import { closeModalLayer, openModalLayer } from './modal-transition.js';
+import { bindHorizontalScrollbarDrag, syncHorizontalScrollbar } from './horizontal-scrollbar.js';
 
 const MAP_SELECT_CHEVRON = new URL('../../images/cabinet-mailing-recipients/modal-select-chevron.svg', import.meta.url).href;
 const MAP_SELECT_CHEVRON_ACTIVE = new URL('../../images/cabinet-mailing-recipients/modal-select-chevron-active.svg', import.meta.url).href;
@@ -96,6 +97,19 @@ export function initCabinetMailingRecipientsPage() {
     const page = document.querySelector('[data-cabinet-mailing-recipients-page]');
     if (!page) return;
 
+    const resetPageHorizontalScroll = () => {
+        document.documentElement.scrollLeft = 0;
+        document.body.scrollLeft = 0;
+        window.scrollTo(0, window.scrollY);
+    };
+
+    const stabilizePageHorizontalScroll = () => {
+        resetPageHorizontalScroll();
+        [50, 150, 350, 700].forEach((delay) => {
+            window.setTimeout(resetPageHorizontalScroll, delay);
+        });
+    };
+
     const form = page.querySelector('[data-mailing-recipients-form]');
     const tabs = Array.from(page.querySelectorAll('[data-mailing-recipients-tab]'));
     const steps = Array.from(page.querySelectorAll('[data-mailing-create-step]'));
@@ -134,6 +148,10 @@ export function initCabinetMailingRecipientsPage() {
     const sourceCountBadge = page.querySelector('[data-mailing-source-count-badge]');
     const sourceRecipientCount = page.querySelector('[data-mailing-source-recipient-count]');
     const sourceMailingCount = page.querySelector('[data-mailing-source-mailing-count]');
+    const sourceTableScroll = sourcePanel?.querySelector('.cabinet-mailing-source-table');
+    const sourceTableSlider = page.querySelector('[data-mailing-source-table-slider]');
+    const sourceTableThumb = page.querySelector('[data-mailing-source-table-thumb]');
+    const sourceTableKnob = page.querySelector('[data-mailing-source-table-knob]');
     const listPanel = page.querySelector('[data-mailing-list-panel]');
     const listRows = Array.from(page.querySelectorAll('[data-mailing-list-row]'));
     const listChecks = Array.from(page.querySelectorAll('[data-mailing-list-row-check]'));
@@ -146,6 +164,10 @@ export function initCabinetMailingRecipientsPage() {
     const listCountBadge = page.querySelector('[data-mailing-list-count-badge]');
     const listRecipientCount = page.querySelector('[data-mailing-list-recipient-count]');
     const listsCount = page.querySelector('[data-mailing-list-count]');
+    const listTableScroll = listPanel?.querySelector('.cabinet-mailing-source-table');
+    const listTableSlider = page.querySelector('[data-mailing-list-table-slider]');
+    const listTableThumb = page.querySelector('[data-mailing-list-table-thumb]');
+    const listTableKnob = page.querySelector('[data-mailing-list-table-knob]');
     const filePanel = page.querySelector('[data-mailing-file-panel]');
     const fileInput = page.querySelector('[data-mailing-file-input]');
     const fileName = page.querySelector('[data-mailing-file-name]');
@@ -245,54 +267,60 @@ export function initCabinetMailingRecipientsPage() {
     const clampHours = (value) => Math.min(72, Math.max(1, Number.parseInt(value, 10) || 12));
 
     const updateTableSlider = () => {
-        if (!tableScroll || !tableSlider || !tableThumb) return;
-
-        const maxScroll = tableScroll.scrollWidth - tableScroll.clientWidth;
-        const trackWidth = tableSlider.clientWidth;
-        if (maxScroll <= 0 || trackWidth <= 0) {
-            tableThumb.style.width = '100%';
-            tableThumb.style.transform = 'translateY(-50%)';
-            return;
-        }
-
-        const thumbWidth = Math.max(40, (tableScroll.clientWidth / tableScroll.scrollWidth) * trackWidth);
-        const thumbLeft = (tableScroll.scrollLeft / maxScroll) * (trackWidth - thumbWidth);
-        tableThumb.style.width = `${thumbWidth}px`;
-        tableThumb.style.transform = `translate(${thumbLeft}px, -50%)`;
+        syncHorizontalScrollbar({
+            scrollElement: tableScroll,
+            thumbElement: tableThumb,
+            scrollbarElement: tableSlider,
+            useTransform: true,
+        });
     };
 
     const updateFileTableSlider = () => {
-        if (!fileTableScroll || !fileTableSlider || !fileTableThumb) return;
-
-        const maxScroll = fileTableScroll.scrollWidth - fileTableScroll.clientWidth;
-        const trackWidth = fileTableSlider.clientWidth;
-        if (maxScroll <= 0 || trackWidth <= 0) {
-            fileTableThumb.style.width = '100%';
-            fileTableThumb.style.transform = 'translateY(-50%)';
-            return;
-        }
-
-        const thumbWidth = Math.max(40, (fileTableScroll.clientWidth / fileTableScroll.scrollWidth) * trackWidth);
-        const thumbLeft = (fileTableScroll.scrollLeft / maxScroll) * (trackWidth - thumbWidth);
-        fileTableThumb.style.width = `${thumbWidth}px`;
-        fileTableThumb.style.transform = `translate(${thumbLeft}px, -50%)`;
+        syncHorizontalScrollbar({
+            scrollElement: fileTableScroll,
+            thumbElement: fileTableThumb,
+            scrollbarElement: fileTableSlider,
+            useTransform: true,
+        });
     };
 
     const updateMessageTableSlider = () => {
-        if (!messageTableScroll || !messageTableSlider || !messageTableThumb) return;
+        syncHorizontalScrollbar({
+            scrollElement: messageTableScroll,
+            thumbElement: messageTableThumb,
+            scrollbarElement: messageTableSlider,
+            useTransform: true,
+        });
+    };
 
-        const maxScroll = messageTableScroll.scrollWidth - messageTableScroll.clientWidth;
-        const trackWidth = messageTableSlider.clientWidth;
-        if (maxScroll <= 0 || trackWidth <= 0) {
-            messageTableThumb.style.width = '100%';
-            messageTableThumb.style.transform = 'translateY(-50%)';
-            return;
+    const updateSourceTableSlider = () => {
+        if (sourceTableSlider) {
+            sourceTableSlider.hidden = false;
         }
 
-        const thumbWidth = Math.max(40, (messageTableScroll.clientWidth / messageTableScroll.scrollWidth) * trackWidth);
-        const thumbLeft = (messageTableScroll.scrollLeft / maxScroll) * (trackWidth - thumbWidth);
-        messageTableThumb.style.width = `${thumbWidth}px`;
-        messageTableThumb.style.transform = `translate(${thumbLeft}px, -50%)`;
+        syncHorizontalScrollbar({
+            scrollElement: sourceTableScroll,
+            thumbElement: sourceTableThumb,
+            knobElement: sourceTableKnob,
+            scrollbarElement: sourceTableSlider,
+            hideWhenNoOverflow: true,
+            useTransform: true,
+        });
+    };
+
+    const updateListTableSlider = () => {
+        if (listTableSlider) {
+            listTableSlider.hidden = false;
+        }
+
+        syncHorizontalScrollbar({
+            scrollElement: listTableScroll,
+            thumbElement: listTableThumb,
+            knobElement: listTableKnob,
+            scrollbarElement: listTableSlider,
+            hideWhenNoOverflow: true,
+            useTransform: true,
+        });
     };
 
     const closeMessageRowMenu = () => {
@@ -905,8 +933,10 @@ export function initCabinetMailingRecipientsPage() {
             form?.classList.remove('is-selected');
             if (isSource) {
                 updateSourceCount();
+                window.requestAnimationFrame(updateSourceTableSlider);
             } else if (isList) {
                 updateListCount();
+                window.requestAnimationFrame(updateListTableSlider);
             } else if (isFile) {
                 updateFileTableSlider();
             }
@@ -1131,6 +1161,7 @@ export function initCabinetMailingRecipientsPage() {
     }, { passive: true });
 
     window.addEventListener('resize', () => {
+        resetPageHorizontalScroll();
         updateMessageTableSlider();
         closeMessageRowMenu();
     });
@@ -1212,8 +1243,28 @@ export function initCabinetMailingRecipientsPage() {
 
     tableScroll?.addEventListener('scroll', updateTableSlider, { passive: true });
     fileTableScroll?.addEventListener('scroll', updateFileTableSlider, { passive: true });
+    sourceTableScroll?.addEventListener('scroll', updateSourceTableSlider, { passive: true });
+    listTableScroll?.addEventListener('scroll', updateListTableSlider, { passive: true });
     window.addEventListener('resize', updateTableSlider);
     window.addEventListener('resize', updateFileTableSlider);
+    window.addEventListener('resize', updateSourceTableSlider);
+    window.addEventListener('resize', updateListTableSlider);
+    bindHorizontalScrollbarDrag({
+        scrollElement: sourceTableScroll,
+        thumbElement: sourceTableThumb,
+        knobElement: sourceTableKnob,
+        scrollbarElement: sourceTableSlider,
+        hideWhenNoOverflow: true,
+        useTransform: true,
+    });
+    bindHorizontalScrollbarDrag({
+        scrollElement: listTableScroll,
+        thumbElement: listTableThumb,
+        knobElement: listTableKnob,
+        scrollbarElement: listTableSlider,
+        hideWhenNoOverflow: true,
+        useTransform: true,
+    });
     mapSelects.forEach(ensureMapSelectMenu);
 
     const applySourceFilters = () => {
@@ -1230,6 +1281,7 @@ export function initCabinetMailingRecipientsPage() {
         });
 
         updateSourceCount();
+        window.requestAnimationFrame(updateSourceTableSlider);
     };
 
     const applyListFilters = () => {
@@ -1245,6 +1297,7 @@ export function initCabinetMailingRecipientsPage() {
         });
 
         updateListCount();
+        window.requestAnimationFrame(updateListTableSlider);
     };
 
     sourceChecks.forEach((check) => {
@@ -1280,6 +1333,7 @@ export function initCabinetMailingRecipientsPage() {
             row.hidden = false;
         });
         updateSourceCount();
+        window.requestAnimationFrame(updateSourceTableSlider);
     });
 
     listChecks.forEach((check) => {
@@ -1312,6 +1366,7 @@ export function initCabinetMailingRecipientsPage() {
             row.hidden = false;
         });
         updateListCount();
+        window.requestAnimationFrame(updateListTableSlider);
     });
 
     fileInput?.addEventListener('change', () => {
@@ -1561,4 +1616,6 @@ export function initCabinetMailingRecipientsPage() {
     if (window.location.hash === '#message') {
         setCreateStep('message');
     }
+
+    window.requestAnimationFrame(stabilizePageHorizontalScroll);
 }

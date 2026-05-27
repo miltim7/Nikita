@@ -8,7 +8,7 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .faq-page .container-xxl {
         padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
         padding-right: clamp(32px, calc(40px - (100vw - 1200px) * .02899), var(--figma-container-px-tablet));
@@ -32,9 +32,9 @@
 }
 
 /* ============================================================
-   COMPACT DESKTOP (1200-1279)
+   COMPACT DESKTOP (1024-1279)
    ============================================================ */
-@media (min-width: 1200px) and (max-width: 1279.98px) {
+@media (min-width: 1024px) and (max-width: 1279.98px) {
     .topbar {
         display: block;
         box-shadow: none;
@@ -138,9 +138,9 @@
 }
 
 /* ============================================================
-   TABLET (768 – 1199)
+   TABLET (768 - 1023)
    ============================================================ */
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .faq-page {
         padding-top: 12px;
         padding-bottom: 24px;
@@ -1475,7 +1475,7 @@
 }
 
 /* Why section: Figma pixel-perfect overrides */
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .why .container-xxl {
         max-width: 100%;
     }
@@ -1523,7 +1523,7 @@
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .why {
         min-height: 564px;
         padding: 0;
@@ -1958,7 +1958,7 @@
 }
 
 /* Audience carousel: Figma pixel-perfect overrides */
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cases {
         min-height: 461px;
         padding: 36px 0;
@@ -2087,14 +2087,14 @@
 }
 
 /* Technical page: Figma responsive overrides */
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .technical-page .container-xxl,
     .technical-architecture .container-xxl {
         padding-inline: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .technical-page {
         padding-top: 12px;
         padding-bottom: 167px;
@@ -2516,7 +2516,7 @@
 }
 
 /* Contacts page: Figma responsive overrides */
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .contacts-page .container-xxl {
         padding-inline: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
     }
@@ -2526,7 +2526,7 @@
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .contacts-page {
         padding: 12px 0 0;
     }

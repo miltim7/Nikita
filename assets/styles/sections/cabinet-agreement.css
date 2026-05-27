@@ -118,14 +118,14 @@
     font-weight: var(--fw-semibold);
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .cabinet-page--agreement .cabinet-page-title {
         padding-left: clamp(var(--figma-container-px-tablet), calc(var(--figma-container-px-tablet) + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
         padding-right: clamp(var(--figma-container-px-tablet), calc(var(--figma-container-px-tablet) + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-page--agreement .cabinet-main {
         padding-top: 0;
         padding-bottom: var(--space-4);

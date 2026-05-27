@@ -420,21 +420,51 @@ html:has(body.cabinet-page--mailing-create)::-webkit-scrollbar,
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .cabinet-page--mailing-create .cabinet-main {
         padding-top: var(--space-6);
         padding-bottom: var(--space-6);
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1475.98px) {
+@media (min-width: 1024px) and (max-width: 1475.98px) {
     .cabinet-page--mailing-create .cabinet-page-title {
         padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
         padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+    .cabinet-page--mailing-create .cabinet-page__content {
+        width: calc(100vw - var(--cabinet-sidepanel-w-short));
+        max-width: calc(100vw - var(--cabinet-sidepanel-w-short));
+        overflow-x: clip;
+    }
+
+    .cabinet-mailing-create__steps {
+        gap: var(--space-4);
+    }
+
+    .cabinet-mailing-create-step {
+        width: auto;
+        flex: 1 1 0;
+    }
+
+    .cabinet-mailing-create-step__number {
+        width: 56px;
+        flex-basis: 56px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1099.98px) {
+    .cabinet-page--mailing-create .cabinet-page__content {
+        width: calc(100vw - var(--cabinet-sidepanel-w-short) - 32px);
+        max-width: calc(100vw - var(--cabinet-sidepanel-w-short) - 32px);
+        margin-left: 32px;
+    }
+}
+
+@media (max-width: 1023.98px) {
     .cabinet-mailing-create {
         gap: var(--space-6);
     }

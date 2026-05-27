@@ -231,7 +231,7 @@ body.is-cabinet-modal-open {
     box-shadow: var(--shadow-figma-cta);
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-price-modal__dialog {
         gap: var(--space-4);
     }

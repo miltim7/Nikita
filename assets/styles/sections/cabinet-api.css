@@ -419,7 +419,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .cabinet-page--api .cabinet-header {
         height: var(--cabinet-header-desktop-user-h);
     }
@@ -437,7 +437,7 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1535.98px) {
+@media (min-width: 1024px) and (max-width: 1535.98px) {
     .cabinet-page--api .cabinet-breadcrumbs,
     .cabinet-page--api .cabinet-page-title,
     .cabinet-page--api .cabinet-main {
@@ -464,7 +464,7 @@
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1023.98px) {
     .cabinet-page--api .cabinet-page-title {
         padding-inline: var(--figma-container-px-tablet);
     }

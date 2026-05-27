@@ -327,6 +327,9 @@
     --cabinet-templates-table-head-h: 30px;
     --cabinet-templates-table-row-h: 36px;
     --cabinet-templates-table-row-tall-h: 54px;
+    --content-control-min-h: 40px;
+    --content-control-min-h-compact: 36px;
+    --content-popover-max-w: calc(100vw - (var(--figma-container-px-mobile) * 2));
 
     /* ============================================================
        Legacy aliases — keep existing BEM/components working.

@@ -1,3 +1,5 @@
+import { syncHorizontalScrollbar } from './horizontal-scrollbar.js';
+
 export function initCabinetReportsPage() {
     const page = document.querySelector('[data-cabinet-reports-page]');
     if (!page) return;
@@ -9,10 +11,15 @@ export function initCabinetReportsPage() {
     const pageSizeControls = Array.from(page.querySelectorAll('[data-reports-page-size]'));
     const actionControls = Array.from(page.querySelectorAll('[data-reports-action-control]'));
     const tableScrolls = Array.from(page.querySelectorAll('.cabinet-reports__table-scroll'));
+    const sidepanelSubitems = Array.from(document.querySelectorAll('.cabinet-sidepanel__subnav .cabinet-sidepanel__subitem'));
     const responsiveSelects = Array.from(page.querySelectorAll('select[data-desktop-value][data-compact-value]'));
     const responsivePageSizeToggles = Array.from(page.querySelectorAll('[data-reports-page-size-toggle][data-desktop-value][data-mobile-value]'));
 
     const supportedTabs = new Set(['current', 'periods', 'traffic', 'payments']);
+    const getTabFromUrl = (url) => {
+        const hash = url.hash.replace('#', '');
+        return supportedTabs.has(hash) ? hash : 'current';
+    };
 
     const getTabFromHash = () => {
         const hashTab = window.location.hash.replace('#', '');
@@ -26,27 +33,17 @@ export function initCabinetReportsPage() {
 
             const scrollbarThumb = panel?.querySelector('.cabinet-reports__scrollbar-thumb');
             const scrollbarKnob = panel?.querySelector('.cabinet-reports__scrollbar-knob');
-            if (!scrollbarThumb || !scrollbarKnob) return;
 
-            const maxScroll = tableScroll.scrollWidth - tableScroll.clientWidth;
-            const progress = maxScroll > 0 ? tableScroll.scrollLeft / maxScroll : 0;
-            const isMobilePeriods = window.matchMedia('(max-width: 767.98px)').matches
-                && panel?.dataset.reportsPanel === 'periods';
-            const visibleRatio = isMobilePeriods
-                ? 0.375
-                : (tableScroll.scrollWidth > 0 ? tableScroll.clientWidth / tableScroll.scrollWidth : 1);
-            const thumbWidth = Math.min(100, Math.max(18, visibleRatio * 100));
-            const available = Math.max(0, 100 - thumbWidth);
-            const offset = progress * available;
-
-            scrollbarThumb.style.width = `${thumbWidth}%`;
-            scrollbarThumb.style.left = `${offset}%`;
-            scrollbarKnob.style.left = `${offset}%`;
+            syncHorizontalScrollbar({
+                scrollElement: tableScroll,
+                thumbElement: scrollbarThumb,
+                knobElement: scrollbarKnob,
+            });
         });
     };
 
     const syncResponsiveDefaults = () => {
-        const isCompact = window.matchMedia('(max-width: 1199.98px)').matches;
+        const isCompact = window.matchMedia('(max-width: 1023.98px)').matches;
         const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
 
         responsiveSelects.forEach((select) => {
@@ -108,6 +105,18 @@ export function initCabinetReportsPage() {
 
             if (icon) {
                 icon.src = isCurrent ? icon.dataset.activeSrc : icon.dataset.inactiveSrc;
+            }
+        });
+
+        sidepanelSubitems.forEach((subitem) => {
+            const subitemTab = getTabFromUrl(new URL(subitem.getAttribute('href'), window.location.href));
+            const isCurrent = subitemTab === activeTab;
+
+            subitem.classList.toggle('is-current', isCurrent);
+            if (isCurrent) {
+                subitem.setAttribute('aria-current', 'page');
+            } else {
+                subitem.removeAttribute('aria-current');
             }
         });
 

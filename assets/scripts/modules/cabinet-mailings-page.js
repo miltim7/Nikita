@@ -1,3 +1,5 @@
+import { syncHorizontalScrollbar } from './horizontal-scrollbar.js';
+
 export function initCabinetMailingsPage() {
     const page = document.querySelector('[data-cabinet-mailings-page]');
     if (!page) return;
@@ -101,15 +103,11 @@ export function initCabinetMailingsPage() {
     });
 
     const updateScrollbar = () => {
-        if (!tableScroll || !scrollbarThumb || !scrollbarKnob) return;
-
-        const maxScroll = tableScroll.scrollWidth - tableScroll.clientWidth;
-        const progress = maxScroll > 0 ? tableScroll.scrollLeft / maxScroll : 0;
-        const available = 62.5;
-        const offset = progress * available;
-
-        scrollbarThumb.style.left = `${offset}%`;
-        scrollbarKnob.style.left = `${offset}%`;
+        syncHorizontalScrollbar({
+            scrollElement: tableScroll,
+            thumbElement: scrollbarThumb,
+            knobElement: scrollbarKnob,
+        });
     };
 
     tableScroll?.addEventListener('scroll', updateScrollbar, { passive: true });

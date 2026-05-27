@@ -12,16 +12,20 @@ export function initCabinetNotificationsPage() {
     const pageSizeList = page.querySelector('[data-notifications-page-size-list]');
     const pageSizeOptions = Array.from(page.querySelectorAll('[data-notifications-page-size-option]'));
 
+    const isVisible = (element) => Boolean(element?.getClientRects().length);
+    const getVisibleRowChecks = () => rowChecks.filter((checkbox) => isVisible(checkbox.closest('[data-notification-row]')));
+
     const updateSelectAll = () => {
         if (!selectAll) return;
 
-        const checkedCount = rowChecks.filter((checkbox) => checkbox.checked).length;
-        selectAll.checked = checkedCount === rowChecks.length && rowChecks.length > 0;
+        const visibleChecks = getVisibleRowChecks();
+        const checkedCount = visibleChecks.filter((checkbox) => checkbox.checked).length;
+        selectAll.checked = checkedCount === visibleChecks.length && visibleChecks.length > 0;
         selectAll.indeterminate = false;
     };
 
     selectAll?.addEventListener('change', () => {
-        rowChecks.forEach((checkbox) => {
+        getVisibleRowChecks().forEach((checkbox) => {
             checkbox.checked = selectAll.checked;
         });
         updateSelectAll();
@@ -32,14 +36,14 @@ export function initCabinetNotificationsPage() {
     });
 
     markRead?.addEventListener('click', () => {
-        rowChecks.forEach((checkbox) => {
+        getVisibleRowChecks().forEach((checkbox) => {
             checkbox.checked = false;
         });
         updateSelectAll();
     });
 
     deleteSelected?.addEventListener('click', () => {
-        rowChecks
+        getVisibleRowChecks()
             .filter((checkbox) => checkbox.checked)
             .forEach((checkbox) => {
                 checkbox.closest('[data-notification-row]')?.remove();
