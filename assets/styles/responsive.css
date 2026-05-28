@@ -1912,43 +1912,50 @@
     .why__partners {
         --why-partner-card-width: clamp(88px, 15vw, 115px);
         --why-partner-card-height: clamp(46px, 7.83vw, 60px);
+        --why-partner-shadow-bleed: 8px;
         width: 100vw;
         grid-template-columns: none;
         margin-inline: calc(50% - 50vw);
-        height: calc(var(--why-partner-card-height) + 72px);
-        padding: 56px var(--figma-container-px-mobile) 16px;
-        overflow-x: auto;
-        overflow-y: hidden;
+        height: calc(var(--why-partner-card-height) + 112px);
+        padding: 84px 0 20px;
+        overflow: hidden;
         background: #fff;
         box-shadow: 0 0 12px rgba(33, 32, 32, 0.2);
+        cursor: default;
+        user-select: auto;
+    }
+
+    .why .why__partners-title {
+        top: 16px;
+        width: calc(100% - 32px);
+    }
+
+    .why__partners-track {
+        position: relative;
+        left: 0;
+        justify-content: flex-start;
+        gap: 12px;
+        width: 100%;
+        height: calc(var(--why-partner-card-height) + var(--why-partner-shadow-bleed));
+        margin-inline: 0;
+        padding: calc(var(--why-partner-shadow-bleed) / 2) var(--figma-container-px-mobile);
+        overflow-x: auto;
+        overflow-y: hidden;
         -ms-overflow-style: none;
         scrollbar-width: none;
         scroll-padding-inline: var(--figma-container-px-mobile);
         touch-action: pan-y;
         cursor: grab;
         user-select: none;
+        transform: none;
     }
 
-    .why .why__partners-title {
-        top: 16px;
-        width: calc(100vw - 32px);
-    }
-
-    .why__partners::-webkit-scrollbar {
+    .why__partners-track::-webkit-scrollbar {
         display: none;
     }
 
-    .why__partners.is-dragging {
+    .why__partners-track.is-dragging {
         cursor: grabbing;
-    }
-
-    .why__partners-track {
-        position: relative;
-        left: 0;
-        flex: 0 0 auto;
-        gap: 12px;
-        margin-inline: auto;
-        transform: none;
     }
 
     .why-partner,

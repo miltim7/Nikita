@@ -1,8 +1,8 @@
 export function initPartnersSlider() {
-    const slider = document.querySelector('.why__partners');
-    const track = slider?.querySelector('.why__partners-track');
+    const root = document.querySelector('.why__partners');
+    const slider = root?.querySelector('.why__partners-track');
 
-    if (!slider || !track) return;
+    if (!root || !slider) return;
 
     const centerSlider = () => {
         if (!window.matchMedia('(max-width: 767.98px)').matches) {
@@ -53,7 +53,7 @@ export function initPartnersSlider() {
 
     slider.addEventListener('pointerup', stopDragging);
     slider.addEventListener('pointercancel', stopDragging);
-    track.querySelectorAll('img').forEach((image) => {
+    slider.querySelectorAll('img').forEach((image) => {
         if (!image.complete) image.addEventListener('load', scheduleCentering, { once: true });
         if (!image.complete) image.addEventListener('error', scheduleCentering, { once: true });
     });

@@ -13,6 +13,13 @@ This is a large multi-page HTML/CSS/JS project based on Figma layouts. Keep the 
 - Do not introduce hardcoded colors, shadows, radii, font weights, or repeated spacing values in section files when a token already exists.
 - Add missing project-wide tokens before using the same value in multiple sections.
 
+## Localization Rules
+
+- ALWAYS translate every new or changed user-facing content into all supported site languages: root Russian, `en/`, and `ky/`.
+- This includes page text, headings, meta titles/descriptions, alt text, aria labels, button states, JS-injected labels, validation/error/success messages, navigation labels, breadcrumbs, and modal/dropdown content.
+- When adding a new standalone page, create/update the localized copies at the same time and make language-switcher targets resolve to the same page in each locale.
+- Locale pages must link to pages in the same locale directory when that localized page exists; do not send users from `en/` or `ky/` back to the Russian root unless no localized target exists.
+
 ## Figma Pixel-Perfect Requirements
 
 - Copy absolutely everything from the provided Figma nodes: icons, SVG paths, images, colors, gradients, opacity, shadows, borders, radii, dimensions, x/y positioning, gaps, padding, margins, typography, line-height, letter-spacing, font weight, and responsive behavior.
