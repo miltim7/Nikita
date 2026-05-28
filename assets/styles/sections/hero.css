@@ -171,10 +171,10 @@
     }
     .hero__media {
         display: block;
-        width: min(820px, 58vw);
+        width: clamp(500px, calc(500px + (100vw - 1024px) * .562), 754px);
         height: auto;
         top: 50%;
-        right: clamp(-270px, -20vw, -150px);
+        right: clamp(14px, 1.35vw, 20px);
         transform: translateY(-50%);
     }
     .hero__media img {
