@@ -1977,11 +1977,44 @@ th.is-sortable.is-sorted-desc [class*="__head-sort"] {
     transform: translateY(0);
 }
 
+.cabinet-help-tooltip {
+    position: fixed;
+    z-index: var(--z-dropdown);
+    width: min(280px, calc(100vw - 24px));
+    padding: var(--space-2);
+    border: 1px solid var(--color-blue-20);
+    border-radius: var(--cabinet-control-radius);
+    color: var(--color-black-80);
+    background: var(--color-bg);
+    box-shadow: var(--shadow-cabinet-panel);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition:
+        opacity var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.cabinet-help-tooltip.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.cabinet-help-tooltip[hidden] {
+    display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .cabinet-tabbar-modal,
     .cabinet-manager-popover,
     .cabinet-language-popover,
-    .cabinet-notifications-popover {
+    .cabinet-notifications-popover,
+    .cabinet-help-tooltip {
         transition: none;
         transform: none;
     }

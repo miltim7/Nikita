@@ -378,6 +378,30 @@
     width: 24px;
     height: 24px;
     color: var(--cabinet-icon-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        filter var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+.cabinet-finance__help:hover,
+.cabinet-finance__help:focus-visible,
+.cabinet-finance__help.is-active {
+    color: var(--color-header-blue);
+    background: var(--color-surface-blue-10);
+    filter: saturate(1.2);
+}
+
+.cabinet-finance__help:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-surface-blue-5);
+}
+
+.cabinet-finance__help:active {
+    transform: scale(.96);
 }
 
 .cabinet-finance__mobile-break {

@@ -1168,12 +1168,19 @@
 .cabinet-profile-actions {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 12px;
     width: 100%;
 }
 
 .cabinet-profile-actions .cabinet-btn {
+    width: max-content;
+    max-width: 100%;
+    flex: 0 1 auto;
     line-height: var(--lh-tight);
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
 }
 
 .cabinet-profile-toast {
@@ -1700,8 +1707,9 @@
     }
 
     .cabinet-profile-actions .cabinet-btn {
-        flex: 1 1 0;
-        min-width: 0;
+        width: max-content;
+        max-width: 100%;
+        flex: 0 1 auto;
         padding-inline: 12px;
     }
 

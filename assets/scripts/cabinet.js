@@ -2,6 +2,7 @@ import { initCabinetNavigation, initCabinetSidepanel, initCabinetTabbarModal, in
 import { initCabinetActionModals } from './modules/cabinet-action-modals.js';
 import { initCabinetTableScrollbars } from './modules/cabinet-table-scrollbars.js';
 import { initCabinetDatepickers } from './modules/cabinet-datepicker.js';
+import { initCabinetHelpTooltips } from './modules/cabinet-help-tooltips.js';
 import { initCabinetLanguageSelect } from './modules/cabinet-language-select.js';
 import { initCabinetMailingCreatePage } from './modules/cabinet-mailing-create-page.js';
 import { initCabinetMailingRecipientsPage } from './modules/cabinet-mailing-recipients-page.js';
@@ -27,6 +28,7 @@ function init() {
     initCabinetNavigation();
     initCabinetActionModals();
     initCabinetDatepickers();
+    initCabinetHelpTooltips();
     initCabinetLanguageSelect();
     initCabinetMailingCreatePage();
     initCabinetMailingRecipientsPage();

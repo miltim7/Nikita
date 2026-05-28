@@ -518,32 +518,36 @@
     }
 
     .cabinet-api-flow__actions {
+        flex-wrap: wrap;
         gap: var(--space-3);
     }
 
     .cabinet-api-flow__button {
-        flex: 1 1 0;
-        width: auto;
+        width: max-content;
+        max-width: 100%;
         min-width: 0;
+        flex: 0 1 auto;
         padding: var(--space-2) 6px;
         font-size: var(--fs-sm);
-        text-align: left;
+        text-align: center;
         white-space: normal;
     }
 
     .cabinet-api-flow__button-copy {
-        display: flex;
-        flex-direction: column;
+        display: block;
         min-width: 0;
         line-height: var(--lh-tight);
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: normal;
     }
 
     .cabinet-api-flow__button-copy span {
-        display: block;
+        display: inline;
     }
 
     .cabinet-api-flow__button-copy span + span::before {
-        content: none;
+        content: " ";
     }
 
     .cabinet-api__aside {

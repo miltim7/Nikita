@@ -275,6 +275,11 @@ html:has(body.cabinet-page--mailing-create)::-webkit-scrollbar,
     height: 19px;
 }
 
+.cabinet-mailing-create-check__help.is-active {
+    background: var(--color-surface-blue-5);
+    transform: translateY(-1px);
+}
+
 .cabinet-mailing-create-check__tooltip {
     position: absolute;
     z-index: var(--z-dropdown);
@@ -403,7 +408,8 @@ html:has(body.cabinet-page--mailing-create)::-webkit-scrollbar,
         border-color: var(--color-header-blue-50);
     }
 
-    .cabinet-mailing-create-check__help:hover {
+    .cabinet-mailing-create-check__help:hover,
+    .cabinet-mailing-create-check__help.is-active {
         background: var(--color-surface-blue-5);
         transform: translateY(-1px);
     }

@@ -605,6 +605,9 @@ export function initCabinetActionModals() {
     let activeTrigger = null;
     let paymentNextTimer = null;
     let selectedPaymentTitle = 'Безналичный расчёт';
+    let activeSenderHelpButton = null;
+    let isSenderHelpPinned = false;
+    let senderHelpCloseTimer = null;
 
     const ensureModal = (id) => {
         if (!MODAL_TEMPLATES[id]) return null;
@@ -694,17 +697,48 @@ export function initCabinetActionModals() {
         });
     };
 
+    const clearSenderHelpCloseTimer = () => {
+        if (!senderHelpCloseTimer) return;
+        window.clearTimeout(senderHelpCloseTimer);
+        senderHelpCloseTimer = null;
+    };
+
     const closeSenderHelp = (root = activeModal, restoreFocus = false) => {
         const tooltip = root?.querySelector('[data-cabinet-sender-help-tooltip]:not([hidden])');
-        const button = root?.querySelector('[data-cabinet-sender-help]');
+        const button = activeSenderHelpButton || root?.querySelector('[data-cabinet-sender-help]');
         if (!tooltip || !button) return false;
 
+        clearSenderHelpCloseTimer();
+        isSenderHelpPinned = false;
+        activeSenderHelpButton = null;
         tooltip.hidden = true;
         tooltip.classList.remove('is-open');
         button.classList.remove('is-active');
         button.setAttribute('aria-expanded', 'false');
         if (restoreFocus) button.focus({ preventScroll: true });
         return true;
+    };
+
+    const openSenderHelp = (root, button, { pinned = false } = {}) => {
+        const tooltip = root?.querySelector('[data-cabinet-sender-help-tooltip]');
+        if (!tooltip || !button) return;
+
+        clearSenderHelpCloseTimer();
+        activeSenderHelpButton = button;
+        isSenderHelpPinned = pinned;
+        tooltip.hidden = false;
+        tooltip.classList.add('is-open');
+        button.classList.add('is-active');
+        button.setAttribute('aria-expanded', 'true');
+    };
+
+    const scheduleSenderHelpClose = (root) => {
+        clearSenderHelpCloseTimer();
+        if (isSenderHelpPinned) return;
+
+        senderHelpCloseTimer = window.setTimeout(() => {
+            closeSenderHelp(root);
+        }, 120);
     };
 
     const updateQuickCounter = (form) => {
@@ -803,6 +837,24 @@ export function initCabinetActionModals() {
     }
 
     function bindModal(modal) {
+        const senderHelpButton = modal.querySelector('[data-cabinet-sender-help]');
+        const senderHelpTooltip = modal.querySelector('[data-cabinet-sender-help-tooltip]');
+
+        if (senderHelpButton && senderHelpTooltip) {
+            senderHelpButton.addEventListener('mouseenter', () => {
+                if (isSenderHelpPinned && activeSenderHelpButton !== senderHelpButton) return;
+                openSenderHelp(modal, senderHelpButton);
+            });
+            senderHelpButton.addEventListener('mouseleave', () => scheduleSenderHelpClose(modal));
+            senderHelpButton.addEventListener('focus', () => {
+                if (isSenderHelpPinned && activeSenderHelpButton !== senderHelpButton) return;
+                openSenderHelp(modal, senderHelpButton);
+            });
+            senderHelpButton.addEventListener('blur', () => scheduleSenderHelpClose(modal));
+            senderHelpTooltip.addEventListener('mouseenter', clearSenderHelpCloseTimer);
+            senderHelpTooltip.addEventListener('mouseleave', () => scheduleSenderHelpClose(modal));
+        }
+
         modal.addEventListener('click', (event) => {
             const senderToggle = event.target.closest('[data-cabinet-sender-toggle]');
 
@@ -813,6 +865,7 @@ export function initCabinetActionModals() {
                 const menu = select?.querySelector('.cabinet-action-select__menu');
                 const shouldOpen = !select?.classList.contains('is-open');
 
+                closeSenderHelp(modal);
                 closeSenderSelects(modal, select);
                 select?.classList.toggle('is-open', shouldOpen);
                 senderToggle.setAttribute('aria-expanded', String(shouldOpen));
@@ -841,6 +894,7 @@ export function initCabinetActionModals() {
                     option.setAttribute('aria-selected', String(option === senderOption));
                 });
 
+                closeSenderHelp(modal);
                 closeSenderSelect(select);
                 toggle?.focus({ preventScroll: true });
                 return;
@@ -854,14 +908,7 @@ export function initCabinetActionModals() {
 
             if (senderHelp) {
                 event.preventDefault();
-                const tooltip = modal.querySelector('[data-cabinet-sender-help-tooltip]');
-                if (!tooltip) return;
-
-                const shouldOpen = tooltip.hidden;
-                tooltip.hidden = !shouldOpen;
-                tooltip.classList.toggle('is-open', shouldOpen);
-                senderHelp.classList.toggle('is-active', shouldOpen);
-                senderHelp.setAttribute('aria-expanded', String(shouldOpen));
+                openSenderHelp(modal, senderHelp, { pinned: true });
                 return;
             }
 

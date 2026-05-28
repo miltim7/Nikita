@@ -1955,6 +1955,11 @@ html[lang="ky"] .cabinet-mailing-source__filter-actions {
     height: 19px;
 }
 
+.cabinet-mailing-message__help.is-active {
+    background: var(--color-surface-blue-5);
+    transform: translateY(-1px);
+}
+
 .cabinet-mailing-message__settings {
     display: inline-flex;
     grid-column: 1 / -1;

@@ -869,12 +869,6 @@ export function initCabinetProfilePage() {
 
         button.addEventListener('click', (event) => {
             event.stopPropagation();
-
-            if (activeProfileHelpTrigger === button && isProfileHelpPinned) {
-                closeHelpTooltips(page);
-                return;
-            }
-
             openProfileHelpTooltip(page, button, { pinned: true });
         });
     });

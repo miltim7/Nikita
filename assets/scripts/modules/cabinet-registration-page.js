@@ -186,12 +186,6 @@ function initHelpButtons(page) {
 
         button.addEventListener('click', (event) => {
             event.stopPropagation();
-
-            if (activeHelpTrigger === button && isHelpPinned) {
-                closeHelpPopover();
-                return;
-            }
-
             openHelpPopover(button, { pinned: true });
         });
     });

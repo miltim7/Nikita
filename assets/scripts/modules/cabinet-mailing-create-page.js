@@ -33,6 +33,33 @@ export function initCabinetMailingCreatePage() {
     const status = page.querySelector('[data-mailing-create-status]');
     const helpButton = page.querySelector('[data-mailing-create-help]');
     const helpTooltip = page.querySelector('[data-mailing-create-help-tooltip]');
+    let isHelpPinned = false;
+    let helpCloseTimer = null;
+
+    const clearHelpCloseTimer = () => {
+        if (!helpCloseTimer) return;
+        window.clearTimeout(helpCloseTimer);
+        helpCloseTimer = null;
+    };
+
+    const setHelpTooltipOpen = (open, { pinned = false } = {}) => {
+        if (!helpTooltip || !helpButton) return;
+
+        clearHelpCloseTimer();
+        isHelpPinned = open && pinned;
+        helpTooltip.hidden = !open;
+        helpButton.classList.toggle('is-active', open);
+        helpButton.setAttribute('aria-expanded', String(open));
+    };
+
+    const scheduleHelpTooltipClose = () => {
+        clearHelpCloseTimer();
+        if (isHelpPinned) return;
+
+        helpCloseTimer = window.setTimeout(() => {
+            setHelpTooltipOpen(false);
+        }, 120);
+    };
 
     steps.forEach((step) => {
         step.addEventListener('click', () => {
@@ -58,28 +85,38 @@ export function initCabinetMailingCreatePage() {
     });
 
     helpButton?.setAttribute('aria-expanded', 'false');
+    helpButton?.addEventListener('mouseenter', () => {
+        if (isHelpPinned) return;
+        setHelpTooltipOpen(true);
+    });
+    helpButton?.addEventListener('mouseleave', scheduleHelpTooltipClose);
+    helpButton?.addEventListener('focus', () => {
+        if (isHelpPinned) return;
+        setHelpTooltipOpen(true);
+    });
+    helpButton?.addEventListener('blur', scheduleHelpTooltipClose);
     helpButton?.addEventListener('click', (event) => {
         event.stopPropagation();
-        if (!helpTooltip) return;
-
-        const isOpen = !helpTooltip.hidden;
-        helpTooltip.hidden = isOpen;
-        helpButton.setAttribute('aria-expanded', String(!isOpen));
+        document.dispatchEvent(new CustomEvent('cabinet:close-floating-help-tooltips'));
+        setHelpTooltipOpen(true, { pinned: true });
+    });
+    helpTooltip?.addEventListener('mouseenter', clearHelpCloseTimer);
+    helpTooltip?.addEventListener('mouseleave', scheduleHelpTooltipClose);
+    helpTooltip?.addEventListener('click', (event) => {
+        event.stopPropagation();
     });
 
     document.addEventListener('click', (event) => {
         if (!helpTooltip || helpTooltip.hidden) return;
         if (helpTooltip.contains(event.target) || helpButton?.contains(event.target)) return;
 
-        helpTooltip.hidden = true;
-        helpButton?.setAttribute('aria-expanded', 'false');
+        setHelpTooltipOpen(false);
     });
 
     document.addEventListener('keydown', (event) => {
         if (event.key !== 'Escape' || !helpTooltip || helpTooltip.hidden) return;
 
-        helpTooltip.hidden = true;
-        helpButton?.setAttribute('aria-expanded', 'false');
+        setHelpTooltipOpen(false);
         helpButton?.focus();
     });
 
