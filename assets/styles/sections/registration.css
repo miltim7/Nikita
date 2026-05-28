@@ -1,0 +1,167 @@
+/* ============================================================
+   PUBLIC REGISTRATION PAGE
+   ============================================================ */
+.page-registration {
+    background: var(--color-bg);
+    color: var(--color-header-black);
+    overflow-x: hidden;
+}
+
+body.is-cabinet-modal-open {
+    overflow: hidden;
+}
+
+.registration-page {
+    padding: 24px 0 64px;
+    background: var(--color-bg);
+}
+
+.registration-page .container-xxl {
+    padding-inline: var(--figma-container-px-desktop);
+}
+
+.registration-page__breadcrumbs {
+    display: flex;
+    align-items: center;
+    height: var(--breadcrumb-h-desktop);
+    color: var(--color-black-100);
+    font-size: var(--breadcrumb-fs-desktop);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    white-space: nowrap;
+}
+
+.registration-page__breadcrumbs span {
+    color: var(--color-black-50);
+}
+
+.registration-page__breadcrumbs strong {
+    color: var(--color-black-100);
+    font-weight: var(--fw-light);
+}
+
+.registration-page__content {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.registration-page .registration-layout {
+    margin-inline: auto;
+}
+
+@media (min-width: 1024px) and (max-width: 1475.98px) {
+    .registration-page .container-xxl {
+        padding-left: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+        padding-right: clamp(var(--figma-container-px-tablet), calc(40px + (100vw - 1200px) * .30435), var(--figma-container-px-desktop));
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .registration-page {
+        padding-top: 12px;
+        padding-bottom: 48px;
+    }
+
+    .registration-page .container-xxl {
+        max-width: 100%;
+        padding-inline: var(--figma-container-px-tablet);
+    }
+
+    .registration-page__breadcrumbs {
+        height: var(--breadcrumb-h-compact);
+        font-size: var(--breadcrumb-fs-compact);
+    }
+
+    .registration-page__content {
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .registration-page {
+        padding-bottom: 40px;
+    }
+
+    .registration-page .container-xxl {
+        width: 100%;
+        max-width: 100vw;
+        padding-inline: var(--figma-container-px-mobile);
+    }
+
+    .page-registration .topbar,
+    .page-registration .header,
+    .registration-page,
+    .page-registration .footer {
+        max-width: 100vw;
+        overflow-x: clip;
+    }
+
+    .page-registration .topbar__side,
+    .page-registration .topbar__auth,
+    .page-registration .header__actions,
+    .page-registration .registration-layout,
+    .page-registration .registration-card,
+    .page-registration .registration-field,
+    .page-registration .registration-field__control,
+    .page-registration .registration-input-wrap,
+    .page-registration .registration-actions,
+    .page-registration .registration-actions__buttons {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .page-registration .topbar__auth {
+        gap: 4px;
+    }
+
+    .page-registration .topbar__auth-button {
+        padding-inline: 6px;
+    }
+
+    .page-registration .header__inner {
+        gap: 8px;
+    }
+
+    .page-registration .header__actions {
+        flex: 0 1 auto;
+        gap: 6px;
+    }
+
+    .page-registration .header__links {
+        flex: 0 0 auto;
+        gap: 6px;
+    }
+
+    .page-registration .header__cta {
+        margin-left: 4px;
+        padding-inline: 12px;
+    }
+
+    .registration-page__content {
+        display: block;
+    }
+
+    .registration-page .registration-layout {
+        width: 100%;
+    }
+
+    .registration-page .registration-captcha {
+        flex-wrap: wrap;
+    }
+
+    .registration-page .registration-captcha__image {
+        width: min(128px, 42vw);
+        flex-basis: min(128px, 42vw);
+    }
+
+    .registration-page .registration-captcha .registration-input-wrap {
+        flex: 1 1 160px;
+        width: auto;
+    }
+
+    .registration-page .registration-actions__buttons {
+        flex-wrap: wrap;
+    }
+}

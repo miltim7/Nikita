@@ -3,6 +3,11 @@ import { closeModalLayer, openModalLayer } from './modal-transition.js';
 const POPOVER_ID = 'registrationHelpPopover';
 const SUCCESS_PARAM = 'success';
 const VIEWPORT_PADDING = 12;
+const HELP_POPOVER_LABELS = {
+    ru: 'Подсказка',
+    en: 'Hint',
+    ky: 'Кеңеш',
+};
 
 let helpPopover = null;
 let activeHelpTrigger = null;
@@ -52,12 +57,13 @@ function initRegistrationViews(page) {
 }
 
 function createHelpPopover() {
+    const locale = document.documentElement.lang || 'ru';
     const popover = document.createElement('div');
     popover.className = 'registration-help-popover';
     popover.id = POPOVER_ID;
     popover.hidden = true;
     popover.setAttribute('role', 'dialog');
-    popover.setAttribute('aria-label', 'Подсказка');
+    popover.setAttribute('aria-label', HELP_POPOVER_LABELS[locale] || HELP_POPOVER_LABELS.ru);
     popover.setAttribute('data-registration-help-popover', '');
     popover.innerHTML = '<div class="registration-help-popover__content" data-registration-help-content></div>';
     document.body.append(popover);
@@ -270,7 +276,7 @@ function initActivationModal(page) {
 }
 
 export function initCabinetRegistrationPage() {
-    const page = document.querySelector('.cabinet-page--registration');
+    const page = document.querySelector('.registration-page, .cabinet-page--registration');
     if (!page) return;
 
     initRegistrationViews(page);
