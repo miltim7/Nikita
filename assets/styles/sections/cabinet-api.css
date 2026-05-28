@@ -13,7 +13,7 @@
     align-items: flex-start;
     gap: 124px;
     width: 100%;
-    max-width: 1228px;
+    max-width: none;
     min-width: 0;
 }
 
@@ -434,6 +434,16 @@
         padding-top: 11px;
         padding-bottom: var(--space-3);
         overflow: hidden;
+    }
+
+    .cabinet-api-flow {
+        flex: 1 1 708px;
+        width: auto;
+    }
+
+    .cabinet-api__aside {
+        flex: 0 1 396px;
+        min-width: 340px;
     }
 }
 
