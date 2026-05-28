@@ -227,12 +227,26 @@
     left: 0;
     z-index: 5;
     width: 100vw;
-    height: 148px;
+    height: 204px;
     margin-inline: calc(50% - 50vw);
-    padding: 24px 0;
+    padding: 84px 0 20px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0 0 12px rgba(33, 32, 32, 0.2);
+}
+
+.why .why__partners-title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    z-index: 1;
+    width: min(calc(100vw - 32px), 700px);
+    margin: 0;
+    color: var(--c-blue);
+    text-align: center;
+    cursor: text;
+    user-select: text;
+    transform: translateX(-50%);
 }
 
 .why__partners-track {

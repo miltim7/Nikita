@@ -1804,11 +1804,15 @@
         width: 100vw;
         grid-template-columns: none;
         margin-inline: calc(50% - 50vw);
-        height: calc(92px + (100vw - 834px) * 0.08723);
-        padding: calc(16px + (100vw - 834px) * 0.01246) 0;
+        height: calc(140px + (100vw - 834px) * 0.09969);
+        padding: calc(64px + (100vw - 834px) * 0.03115) 0 calc(16px + (100vw - 834px) * 0.00623);
         overflow: hidden;
         background: #fff;
         box-shadow: 0 0 12px rgba(33, 32, 32, 0.2);
+    }
+
+    .why .why__partners-title {
+        top: calc(16px + (100vw - 834px) * 0.00623);
     }
 
     .why__partners-track {
@@ -1866,11 +1870,15 @@
         width: 100vw;
         grid-template-columns: none;
         margin-inline: calc(50% - 50vw);
-        height: 92px;
-        padding: 16px 0;
+        height: 140px;
+        padding: 64px 0 16px;
         overflow: hidden;
         background: #fff;
         box-shadow: 0 0 12px rgba(33, 32, 32, 0.2);
+    }
+
+    .why .why__partners-title {
+        top: 16px;
     }
 
     .why__partners-track {
@@ -1907,8 +1915,8 @@
         width: 100vw;
         grid-template-columns: none;
         margin-inline: calc(50% - 50vw);
-        height: clamp(78px, 12vw, 92px);
-        padding: 16px var(--figma-container-px-mobile);
+        height: calc(var(--why-partner-card-height) + 72px);
+        padding: 56px var(--figma-container-px-mobile) 16px;
         overflow-x: auto;
         overflow-y: hidden;
         background: #fff;
@@ -1919,6 +1927,11 @@
         touch-action: pan-y;
         cursor: grab;
         user-select: none;
+    }
+
+    .why .why__partners-title {
+        top: 16px;
+        width: calc(100vw - 32px);
     }
 
     .why__partners::-webkit-scrollbar {
