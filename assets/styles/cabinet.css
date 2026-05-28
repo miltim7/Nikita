@@ -37,6 +37,23 @@
 /* ---------------- content flow safeguards ---------------- */
 @import url('./components/content-flow.css');
 
+/* ---------------- cabinet-only browser scale ---------------- */
+body.cabinet-page {
+    min-height: var(--cabinet-page-scale-viewport-h);
+    min-height: var(--cabinet-page-scale-viewport-dvh);
+    zoom: var(--cabinet-page-scale);
+}
+
+body.cabinet-page .cabinet-page__content {
+    min-height: var(--cabinet-page-scale-viewport-h);
+    min-height: var(--cabinet-page-scale-viewport-dvh);
+}
+
+body.cabinet-page .cabinet-page__sidepanel {
+    height: var(--cabinet-page-scale-viewport-h);
+    height: var(--cabinet-page-scale-viewport-dvh);
+}
+
 /* ---------------- compact desktop safeguards ---------------- */
 @media (min-width: 1024px) and (max-width: 1399.98px) {
     .cabinet-header__line,

@@ -272,6 +272,9 @@
     --cabinet-dark-text-disabled: rgba(255, 255, 255, .2);
     --cabinet-dark-overlay: rgba(0, 0, 0, .72);
     --cabinet-dark-focus: rgba(117, 195, 255, .28);
+    --cabinet-page-scale: .9;
+    --cabinet-page-scale-viewport-h: 111.111111vh;
+    --cabinet-page-scale-viewport-dvh: 111.111111dvh;
     --cabinet-lh-tertiary: 10px;
     --cabinet-lh-status: 12px;
     --cabinet-lh-secondary: 14px;
