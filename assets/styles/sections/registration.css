@@ -120,25 +120,6 @@ body.is-cabinet-modal-open {
         padding-inline: 6px;
     }
 
-    .page-registration .header__inner {
-        gap: 8px;
-    }
-
-    .page-registration .header__actions {
-        flex: 0 1 auto;
-        gap: 6px;
-    }
-
-    .page-registration .header__links {
-        flex: 0 0 auto;
-        gap: 6px;
-    }
-
-    .page-registration .header__cta {
-        margin-left: 4px;
-        padding-inline: 12px;
-    }
-
     .registration-page__content {
         display: block;
     }

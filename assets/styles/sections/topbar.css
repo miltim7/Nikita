@@ -163,6 +163,27 @@
 }
 
 @media (max-width: 767.98px) {
+    .topbar__auth {
+        gap: 4px;
+    }
+
+    .topbar__auth-button {
+        min-height: 24px;
+        padding: 4px 6px;
+        gap: 4px;
+        font-size: var(--fs-sm);
+    }
+
+    .topbar__auth-button--login {
+        width: 24px;
+        padding-inline: 4px;
+        gap: 0;
+    }
+
+    .topbar__auth-button--login span {
+        display: none;
+    }
+
     .topbar__auth-button--register span {
         display: none;
     }

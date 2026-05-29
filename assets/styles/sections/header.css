@@ -71,7 +71,10 @@
     padding: 2.5px 2.69px 3.35px;
 }
 .header__cta {
+    flex: 0 0 auto;
+    box-sizing: border-box;
     height: 40px;
+    min-width: max-content;
     padding: 0 16px;
     gap: 6px;
     margin-left: 0;

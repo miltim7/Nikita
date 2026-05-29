@@ -316,8 +316,8 @@
     .header__link:nth-child(2) .header__link-icon img {
         padding: 1.67px 1.8px 2.23px;
     }
-    .header__cta-text { display: inline; }
-    .header__cta-short { display: none; }
+    .header__cta-text { display: none; }
+    .header__cta-short { display: inline; }
     .header__cta {
         height: 32px;
         width: auto;
@@ -825,10 +825,18 @@
     .btn { height: 52px; font-size: 15px; padding: 0 22px; }
 
     .topbar .container-xxl { padding-inline: var(--figma-container-px-mobile); }
+    .topbar__login {
+        width: 24px;
+        justify-content: center;
+        gap: 0;
+    }
+    .topbar__login span {
+        display: none;
+    }
 
     .header__inner {
         min-height: 52px;
-        gap: 16px;
+        gap: 8px;
         padding-block: 8px;
     }
     .header__logo {
@@ -840,12 +848,15 @@
         height: 36px;
     }
     .header__actions {
-        gap: 8px;
+        flex: 0 1 auto;
+        min-width: 0;
+        gap: 6px;
     }
     .header__links {
-        display: flex;
+        display: none;
         align-items: center;
-        gap: 8px;
+        flex: 0 0 auto;
+        gap: 6px;
     }
     .header__link {
         gap: 0;
@@ -865,8 +876,8 @@
     .header__link-text { display: none; }
     .header__cta {
         height: 32px;
-        margin-left: 8px;
-        padding: 0 16px;
+        margin-left: 4px;
+        padding: 0 12px;
         font-size: var(--fs-sm);
     }
     .header__cta-text { display: none; }
