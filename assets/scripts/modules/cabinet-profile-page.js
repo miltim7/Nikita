@@ -37,9 +37,29 @@ function isSwitchOn(control) {
     return Boolean(getSwitchVisual(control)?.classList.contains('is-on'));
 }
 
-function setCheckboxState(button, checked) {
-    button.classList.toggle('is-checked', checked);
-    button.setAttribute('aria-checked', String(checked));
+function getProfileCheckboxInput(control) {
+    return control.matches('input[type="checkbox"]')
+        ? control
+        : control.querySelector('input[type="checkbox"]');
+}
+
+function getProfileCheckboxVisual(control) {
+    return control.closest('.cabinet-profile-checkbox') || control;
+}
+
+function setCheckboxState(control, checked) {
+    const input = getProfileCheckboxInput(control);
+    const visual = getProfileCheckboxVisual(control);
+
+    if (input) {
+        input.checked = checked;
+    }
+
+    visual.classList.toggle('is-checked', checked);
+
+    if (!input && control.hasAttribute('aria-checked')) {
+        control.setAttribute('aria-checked', String(checked));
+    }
 }
 
 function getHelpTooltip(button) {
@@ -309,7 +329,10 @@ function getProfileState(page) {
     });
 
     page.querySelectorAll('[data-profile-checkbox-control]').forEach((control) => {
-        checkboxes[control.dataset.profileCheckboxControl] = control.classList.contains('is-checked');
+        const input = getProfileCheckboxInput(control);
+        checkboxes[control.dataset.profileCheckboxControl] = input
+            ? input.checked
+            : control.classList.contains('is-checked');
     });
 
     page.querySelectorAll('[data-profile-stepper-control]').forEach((control) => {
@@ -837,10 +860,23 @@ export function initCabinetProfilePage() {
         });
     });
 
-    page.querySelectorAll('[data-profile-checkbox]').forEach((button) => {
-        setCheckboxState(button, button.classList.contains('is-checked'));
-        button.addEventListener('click', () => {
-            setCheckboxState(button, !button.classList.contains('is-checked'));
+    page.querySelectorAll('[data-profile-checkbox]').forEach((control) => {
+        const input = getProfileCheckboxInput(control);
+        const initialChecked = input
+            ? input.checked
+            : control.classList.contains('is-checked');
+
+        setCheckboxState(control, initialChecked);
+
+        if (input) {
+            input.addEventListener('change', () => {
+                setCheckboxState(control, input.checked);
+            });
+            return;
+        }
+
+        control.addEventListener('click', () => {
+            setCheckboxState(control, !control.classList.contains('is-checked'));
         });
     });
 

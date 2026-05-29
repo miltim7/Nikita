@@ -1795,7 +1795,7 @@ html[lang="ky"] .cabinet-mailing-source__filter-actions {
 
 .cabinet-mailing-message-check__input:checked + .cabinet-mailing-message-check__box {
     border-color: var(--color-header-blue);
-    background-color: var(--color-surface-blue-5);
+    background-color: var(--color-header-blue);
     background-image: url('../../images/cabinet-mailing-create/checkbox-check.svg');
     background-repeat: no-repeat;
     background-position: center;
