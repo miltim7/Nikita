@@ -54,16 +54,30 @@ body.cabinet-page .cabinet-page__sidepanel {
     height: var(--cabinet-page-scale-viewport-dvh);
 }
 
-@media (max-width: 1023.98px) {
-    body.cabinet-page--reports {
-        min-height: 100vh;
-        min-height: 100dvh;
-        zoom: 1;
+@media (max-width: 767.98px) {
+    body.cabinet-page .cabinet-page__content,
+    body.cabinet-page .cabinet-main-head,
+    body.cabinet-page .cabinet-header,
+    body.cabinet-page .cabinet-header__mobile-top,
+    body.cabinet-page .cabinet-header__line,
+    body.cabinet-page .cabinet-main,
+    body.cabinet-page .cabinet-tabbar {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
     }
 
-    body.cabinet-page--reports .cabinet-page__content {
-        min-height: 100vh;
-        min-height: 100dvh;
+    body.cabinet-page .cabinet-mailings,
+    body.cabinet-page .cabinet-recipient-lists,
+    body.cabinet-page .cabinet-api,
+    body.cabinet-page .cabinet-otp,
+    body.cabinet-page .cabinet-otp-form,
+    body.cabinet-page .cabinet-templates,
+    body.cabinet-page .cabinet-notifications {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0;
     }
 }
 
