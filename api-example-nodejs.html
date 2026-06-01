@@ -32,10 +32,15 @@
                     <span>RU</span>
                     <img class="topbar__chevron" src="assets/images/header-icon-chevron.svg" alt="" aria-hidden="true">
                 </button>
-                <a href="registration.html" class="topbar__login">
-                    <img src="assets/images/header-icon-login.svg" alt="" aria-hidden="true">
-                    <span>Войти&nbsp;/&nbsp;Зарегистрироваться</span>
-                </a>
+                <div class="topbar__auth">
+                    <button class="topbar__auth-button topbar__auth-button--login" type="button" data-auth-open>
+                        <img src="assets/images/header-icon-login.svg" alt="" aria-hidden="true">
+                        <span>Войти</span>
+                    </button>
+                    <a class="topbar__auth-button topbar__auth-button--register" href="registration.html">
+                        <span>Регистрация</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

@@ -114,6 +114,26 @@ function createAuthControls(sourceLink, labels) {
     return group;
 }
 
+function getAuthControls(labels) {
+    const existingControls = document.querySelector('.topbar__auth');
+    if (existingControls) {
+        const registerHref = existingControls
+            .querySelector('.topbar__auth-button--register[href]')
+            ?.getAttribute('href') || 'registration.html';
+
+        return { controls: existingControls, registerHref };
+    }
+
+    const sourceLink = document.querySelector('.topbar__login');
+    if (!sourceLink) return null;
+
+    const registerHref = sourceLink.getAttribute('href') || 'registration.html';
+    return {
+        controls: createAuthControls(sourceLink, labels),
+        registerHref,
+    };
+}
+
 function createAuthModal(labels, registerHref) {
     const modal = document.createElement('div');
     modal.className = 'auth-modal';
@@ -175,12 +195,11 @@ function createAuthModal(labels, registerHref) {
 }
 
 export function initPublicAuth() {
-    const sourceLink = document.querySelector('.topbar__login');
-    if (!sourceLink) return;
-
     const labels = LABELS[getCurrentLocale()] || LABELS.ru;
-    const registerHref = sourceLink.getAttribute('href') || 'registration.html';
-    const controls = createAuthControls(sourceLink, labels);
+    const authControls = getAuthControls(labels);
+    if (!authControls) return;
+
+    const { controls, registerHref } = authControls;
     const modal = createAuthModal(labels, registerHref);
     const dialog = modal.querySelector('.auth-modal__dialog');
     const title = modal.querySelector('[id="authModalTitle"]');
