@@ -2553,7 +2553,10 @@
     }
 
     .contacts-map {
-        min-width: 620px;
+        --contacts-map-fluid-w: clamp(532px, calc(532px + (100vw - 1024px) * .61947), 812px);
+        flex-basis: var(--contacts-map-fluid-w);
+        width: var(--contacts-map-fluid-w);
+        min-width: 0;
     }
 }
 
