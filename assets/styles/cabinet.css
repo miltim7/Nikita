@@ -38,6 +38,18 @@
 @import url('./components/content-flow.css');
 
 /* ---------------- cabinet-only browser scale ---------------- */
+html.no-css-zoom {
+    --cabinet-page-scale-viewport-h: 100vh;
+    --cabinet-page-scale-viewport-dvh: 100dvh;
+}
+
+@supports not (zoom: 1) {
+    :root {
+        --cabinet-page-scale-viewport-h: 100vh;
+        --cabinet-page-scale-viewport-dvh: 100dvh;
+    }
+}
+
 body.cabinet-page {
     min-height: var(--cabinet-page-scale-viewport-h);
     min-height: var(--cabinet-page-scale-viewport-dvh);
@@ -96,12 +108,15 @@ body.cabinet-page .cabinet-page__sidepanel {
         padding-right: 32px;
     }
 
-    .cabinet-header__line,
-    .cabinet-page--registration .cabinet-header__line,
-    .cabinet-page--templates .cabinet-header__line {
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-header__line {
         height: 64px;
         min-height: 64px;
         gap: 12px;
+    }
+
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-header {
+        height: 64px;
+        min-height: 64px;
     }
 
     .cabinet-header__logo,
@@ -151,28 +166,65 @@ body.cabinet-page .cabinet-page__sidepanel {
     }
 
     .cabinet-user__meta {
-        max-width: 112px;
+        width: 170px;
+        max-width: 170px;
+        gap: 2px;
+        overflow: hidden;
+    }
+
+    .cabinet-user__name-line {
+        width: 100%;
+        flex-direction: row;
+        gap: 6px;
+        flex-wrap: nowrap;
+        overflow: hidden;
     }
 
     .cabinet-user__name,
     .cabinet-user__account {
-        overflow: visible;
+        overflow: hidden;
         max-width: 100%;
-        text-overflow: clip;
+        text-overflow: ellipsis;
         font-size: var(--fs-sm);
-        white-space: normal;
-        overflow-wrap: break-word;
+        white-space: nowrap;
+        overflow-wrap: normal;
         word-break: normal;
+    }
+
+    .cabinet-user__name {
+        flex: 1 1 auto;
+    }
+
+    .cabinet-header .cabinet-status--admin {
+        flex: 0 0 auto;
+        padding: 3px 5px;
+    }
+
+    .cabinet-user__account {
+        width: 100%;
+        flex-wrap: nowrap;
     }
 
     .cabinet-user__account span,
     .cabinet-user__account strong {
         min-width: 0;
-        overflow: visible;
-        text-overflow: clip;
+        overflow: hidden;
+        text-overflow: ellipsis;
         white-space: normal;
-        overflow-wrap: break-word;
+        overflow-wrap: normal;
         word-break: normal;
+    }
+
+    .cabinet-user__account span {
+        white-space: nowrap;
+    }
+
+    .cabinet-user__account span:first-child {
+        flex: 0 0 auto;
+    }
+
+    .cabinet-user__account span:last-child {
+        flex: 1 1 auto;
     }
 
     .cabinet-footer {
@@ -800,5 +852,120 @@ body.cabinet-page .cabinet-page__sidepanel {
 
     .cabinet-reports-table--payments .cabinet-reports-table__head-copy {
         gap: 2px;
+    }
+}
+
+/* ---------------- cabinet header normalization ---------------- */
+@media (min-width: 1400px) {
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header,
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header .cabinet-header__line {
+        height: var(--cabinet-header-desktop-user-h);
+        min-height: var(--cabinet-header-desktop-user-h);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1399.98px) {
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header,
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header .cabinet-header__line {
+        height: 64px;
+        min-height: 64px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header,
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header .cabinet-header__line {
+        height: var(--cabinet-header-tablet-user-h);
+        min-height: var(--cabinet-header-tablet-user-h);
+    }
+}
+
+@media (max-width: 767.98px) {
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header {
+        height: var(--cabinet-header-mobile-user-h);
+        min-height: var(--cabinet-header-mobile-user-h);
+    }
+
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header .cabinet-header__mobile-top {
+        height: var(--cabinet-header-menu-compact-h);
+        min-height: var(--cabinet-header-menu-compact-h);
+    }
+
+    body.cabinet-page:not(.cabinet-page--demo) .cabinet-main-head > .cabinet-header .cabinet-header__line {
+        height: var(--cabinet-header-line-mobile-user-h);
+        min-height: var(--cabinet-header-line-mobile-user-h);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1399.98px) {
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user {
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__avatar,
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__demo-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__meta {
+        width: 170px;
+        max-width: 170px;
+        gap: 2px;
+        overflow: hidden;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__name-line {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__name,
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__account {
+        max-width: 100%;
+        overflow: hidden;
+        font-size: var(--fs-sm);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__name {
+        flex: 1 1 auto;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-status--admin {
+        flex: 0 0 auto;
+        padding: 3px 5px;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__account {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__account span,
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__account strong {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__account span:first-child {
+        flex: 0 0 auto;
+    }
+
+    body.cabinet-page .cabinet-main-head > .cabinet-header .cabinet-user__account span:last-child {
+        flex: 1 1 auto;
     }
 }
