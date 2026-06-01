@@ -54,6 +54,19 @@ body.cabinet-page .cabinet-page__sidepanel {
     height: var(--cabinet-page-scale-viewport-dvh);
 }
 
+@media (max-width: 1023.98px) {
+    body.cabinet-page--reports {
+        min-height: 100vh;
+        min-height: 100dvh;
+        zoom: 1;
+    }
+
+    body.cabinet-page--reports .cabinet-page__content {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+}
+
 /* ---------------- compact desktop safeguards ---------------- */
 @media (min-width: 1024px) and (max-width: 1399.98px) {
     .cabinet-header__line,
@@ -729,9 +742,9 @@ body.cabinet-page .cabinet-page__sidepanel {
     }
 
     .cabinet-reports-table--payments {
-        --reports-table-w: var(--cabinet-reports-payments-table-tablet-w);
+        --reports-table-w: 100%;
         --reports-table-row-h: var(--cabinet-reports-periods-table-row-compact-h);
-        --reports-table-cols: 220px repeat(2, minmax(267px, 1fr));
+        --reports-table-cols: minmax(200px, .9fr) minmax(220px, 1fr) minmax(220px, 1fr);
     }
 
     .cabinet-reports-table__row--head .cabinet-reports-table__cell,
@@ -744,10 +757,19 @@ body.cabinet-page .cabinet-page__sidepanel {
 }
 
 @media (max-width: 767.98px) {
+    .cabinet-reports-table:not(.cabinet-reports-table--periods):not(.cabinet-reports-table--traffic):not(.cabinet-reports-table--payments) {
+        --reports-table-w: var(--cabinet-reports-table-mobile-w);
+        --reports-table-cols: 76px 70px 42px 160px 48px 64px 64px 72px 64px 94px;
+    }
+
     .cabinet-reports-table--periods,
-    .cabinet-reports-table--traffic,
-    .cabinet-reports-table--payments {
+    .cabinet-reports-table--traffic {
         --reports-table-w: var(--cabinet-reports-periods-table-tablet-w);
+    }
+
+    .cabinet-reports-table--payments {
+        --reports-table-w: 398px;
+        --reports-table-cols: minmax(170px, 1.15fr) minmax(112px, .95fr) minmax(116px, 1fr);
     }
 
     .cabinet-reports-table__cell,
@@ -755,5 +777,14 @@ body.cabinet-page .cabinet-page__sidepanel {
     .cabinet-reports-table--traffic .cabinet-reports-table__cell,
     .cabinet-reports-table--payments .cabinet-reports-table__cell {
         padding-inline: 7px;
+    }
+
+    .cabinet-reports-table--payments .cabinet-reports-table__row--head .cabinet-reports-table__cell {
+        padding-inline: 4px;
+        font-size: 10px;
+    }
+
+    .cabinet-reports-table--payments .cabinet-reports-table__head-copy {
+        gap: 2px;
     }
 }
