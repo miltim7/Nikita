@@ -164,7 +164,8 @@
 
 @media (max-width: 767.98px) {
     .topbar__auth {
-        gap: 4px;
+        gap: 0;
+        flex: 0 0 auto;
     }
 
     .topbar__auth-button {
@@ -175,29 +176,7 @@
     }
 
     .topbar__auth-button--login {
-        width: 24px;
-        padding-inline: 4px;
-        gap: 0;
-    }
-
-    .topbar__auth-button--login span {
-        display: none;
-    }
-
-    .topbar__auth-button--register span {
-        display: none;
-    }
-
-    .topbar__auth-button--register::after {
-        content: "Рег.";
-    }
-
-    html[lang="en"] .topbar__auth-button--register::after {
-        content: "Reg.";
-    }
-
-    html[lang="ky"] .topbar__auth-button--register::after {
-        content: "Кат.";
+        padding-left: 4px;
     }
 }
 
