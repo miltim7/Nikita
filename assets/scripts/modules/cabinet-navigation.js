@@ -219,6 +219,7 @@ export function initCabinetThemeToggle() {
         const currentTheme = normalizeTheme(theme);
         document.body.dataset.cabinetTheme = currentTheme;
         document.documentElement.dataset.cabinetTheme = currentTheme;
+        document.documentElement.style.colorScheme = currentTheme;
         syncButtons(currentTheme);
 
         if (persist) {
