@@ -512,6 +512,121 @@ body.cabinet-page .cabinet-page__sidepanel {
     }
 }
 
+/* Final cabinet filter control normalization: fields and actions share one baseline height. */
+:is(
+    .cabinet-mailings-filter__search-button,
+    .cabinet-mailings-filter__button,
+    .cabinet-mailings-filter__date-input,
+    .cabinet-mailings-filter__select-wrap,
+    .cabinet-recipient-lists-filter__select-toggle,
+    .cabinet-recipient-lists-filter__blacklist,
+    .cabinet-recipient-lists-filter__input,
+    .cabinet-recipient-lists-filter__button,
+    .cabinet-reports-filter__search-button,
+    .cabinet-reports-filter__button,
+    .cabinet-reports-filter__date-input,
+    .cabinet-reports-filter__select-wrap
+) {
+    height: var(--content-control-min-h);
+    min-height: var(--content-control-min-h);
+}
+
+:is(
+    .cabinet-mailings-filter__search-button,
+    .cabinet-mailings-filter__button,
+    .cabinet-recipient-lists-filter__blacklist,
+    .cabinet-recipient-lists-filter__button,
+    .cabinet-reports-filter__search-button,
+    .cabinet-reports-filter__button
+) {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.cabinet-mailings-filter__button--secondary,
+.cabinet-reports-filter__button--secondary {
+    min-width: 100px;
+}
+
+.cabinet-mailings-filter__button--primary,
+.cabinet-reports-filter__button--primary {
+    min-width: 102px;
+}
+
+.cabinet-recipient-lists-filter__button--secondary {
+    min-width: 100px;
+}
+
+.cabinet-recipient-lists-filter__button--primary {
+    min-width: 108px;
+}
+
+@media (max-width: 1023.98px) {
+    :is(
+        .cabinet-mailings-filter__search-button,
+        .cabinet-mailings-filter__button,
+        .cabinet-mailings-filter__date-input,
+        .cabinet-mailings-filter__select-wrap,
+        .cabinet-recipient-lists-filter__select-toggle,
+        .cabinet-recipient-lists-filter__blacklist,
+        .cabinet-recipient-lists-filter__input,
+        .cabinet-recipient-lists-filter__button,
+        .cabinet-reports-filter__search-button,
+        .cabinet-reports-filter__button,
+        .cabinet-reports-filter__date-input,
+        .cabinet-reports-filter__select-wrap
+    ) {
+        height: var(--content-control-min-h-compact);
+        min-height: var(--content-control-min-h-compact);
+    }
+
+    .cabinet-mailings-filter__button--secondary,
+    .cabinet-recipient-lists-filter__button--secondary,
+    .cabinet-reports-filter__button--secondary {
+        min-width: 90px;
+    }
+
+    .cabinet-mailings-filter__button--primary {
+        min-width: 92px;
+    }
+
+    .cabinet-recipient-lists-filter__button--primary,
+    .cabinet-reports-filter__button--primary {
+        min-width: 97px;
+    }
+
+    html[lang="ky"] :is(
+        .cabinet-mailings-filter__buttons,
+        .cabinet-recipient-lists-filter__buttons,
+        .cabinet-reports-filter__buttons,
+        .cabinet-reports-filter--periods .cabinet-reports-filter__buttons,
+        .cabinet-reports-filter--traffic .cabinet-reports-filter__buttons,
+        .cabinet-reports-filter--payments .cabinet-reports-filter__buttons
+    ) {
+        width: 100%;
+        flex: 0 0 100%;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :is(
+        .cabinet-mailings-filter__search-button,
+        .cabinet-mailings-filter__button,
+        .cabinet-recipient-lists-filter__blacklist,
+        .cabinet-recipient-lists-filter__button,
+        .cabinet-reports-filter__search-button,
+        .cabinet-reports-filter__button
+    ) {
+        height: auto;
+        min-height: var(--content-control-min-h-compact);
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+}
+
 /* Final reports actions safeguard: export and print must stay in one row on every tab. */
 .cabinet-reports__actions {
     flex-wrap: nowrap;
