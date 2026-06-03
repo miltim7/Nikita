@@ -3889,7 +3889,7 @@ body.is-cabinet-modal-open {
 .cabinet-payment-method__icon {
     width: 36px;
     height: 36px;
-    color: var(--color-gray-100);
+    color: var(--color-header-blue);
 }
 
 .cabinet-payment-method__logo {
@@ -3897,20 +3897,6 @@ body.is-cabinet-modal-open {
     max-width: 81px;
     max-height: 36px;
     object-fit: contain;
-}
-
-.cabinet-payment-method__card:not(.is-active) .cabinet-payment-method__logo {
-    filter: grayscale(1);
-    opacity: .72;
-}
-
-.cabinet-payment-method__card.is-active .cabinet-payment-method__icon {
-    color: var(--color-header-blue);
-}
-
-.cabinet-payment-method__card.is-active .cabinet-payment-method__logo {
-    filter: none;
-    opacity: 1;
 }
 
 .cabinet-payment-phone,
