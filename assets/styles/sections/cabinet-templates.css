@@ -785,7 +785,57 @@
     background: var(--color-header-blue);
 }
 
+.cabinet-templates-pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    width: 234px;
+    height: 24px;
+    margin-top: 24px;
+}
+
+.cabinet-templates-pagination__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    border-radius: var(--cabinet-input-radius);
+    color: var(--color-black-100);
+    background: var(--color-bg);
+    box-shadow: 0 0 4px var(--color-black-10);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-light);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    text-decoration: none;
+    transition:
+        color var(--transition-interactive),
+        background-color var(--transition-interactive),
+        border-color var(--transition-interactive),
+        box-shadow var(--transition-interactive),
+        transform var(--transition-fast);
+}
+
+.cabinet-templates-pagination__item.is-active {
+    color: var(--color-text-inverse);
+    background: var(--color-header-blue);
+}
+
+.cabinet-templates-pagination__item--dots {
+    box-shadow: none;
+}
+
+.cabinet-templates-pagination__item--arrow img {
+    display: block;
+    width: 10.269px;
+    height: 7.538px;
+}
+
 .cabinet-templates__sort-toggle:focus-visible,
+.cabinet-templates-pagination__item:focus-visible,
 .cabinet-templates-tabs__item:focus-visible,
 .cabinet-template-rules-card__download:focus-visible,
 .cabinet-template-testing-card__input:focus-visible,
@@ -804,6 +854,11 @@
 
     .cabinet-templates__sort-toggle:hover {
         color: var(--color-header-blue);
+    }
+
+    .cabinet-templates-pagination__item:not(.is-active, .cabinet-templates-pagination__item--dots):hover {
+        color: var(--color-header-blue);
+        transform: translateY(-1px);
     }
 
     .cabinet-template-rules-card__download:hover {
@@ -983,6 +1038,11 @@
         letter-spacing: .02em;
     }
 
+    .cabinet-templates-pagination {
+        height: 48px;
+        align-items: flex-end;
+    }
+
     .cabinet-templates-table {
         width: max(100%, var(--cabinet-templates-table-compact-w));
         min-width: var(--cabinet-templates-table-compact-w);
@@ -1150,6 +1210,12 @@
         justify-content: space-between;
         gap: 12px;
         width: 100%;
+    }
+
+    .cabinet-templates-pagination {
+        height: 40px;
+        align-items: flex-end;
+        margin-top: 12px;
     }
 }
 

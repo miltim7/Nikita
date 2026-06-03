@@ -23,7 +23,9 @@ function getCurrentLocale() {
 function getCurrentPageName() {
     const segments = window.location.pathname.split('/').filter(Boolean);
     const last = segments.at(-1);
-    return last && last.endsWith('.html') ? last : 'index.html';
+
+    if (!last || last === 'en' || last === 'ky') return 'index.html';
+    return last.endsWith('.html') ? last : `${last}.html`;
 }
 
 function getLocaleHref(code) {
